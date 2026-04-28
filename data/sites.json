@@ -16,7 +16,7 @@
         "color": "blue",
         "products": [
             {"name": "Lampadina LED Smart Oumida", "text": "Dimmerabile con controllo app, 9W equivalente a 90W, temperatura colore regolabile 2700K-6500K. Controllo vocale compatibile.", "category": "Illuminazione", "link": "https://www.amazon.it/Oumida-Inteligente-Dimmerabile-Equivalente-2700K-6500K/dp/B0FPQWLSBW?th=1&linkCode=ll2&tag=l0c39-21"},
-            {"name": "Presa WiFi Intelligente", "text": "Monitora i consumi e programma l'accensione dei tuoi elettrodomestici.", "category": "Gadget", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Presa Intelligente SONOFF S61s", "text": "Smart plug WiFi compatibile Alexa e Google Home. Monitoraggio consumi energia, timer programmabili, protezione sovraccarico 3840W.", "category": "Gadget", "link": "https://www.amazon.it/SONOFF-S61s-Presa-Intelligente-3840W/dp/B0FT27DDS6?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
