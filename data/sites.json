@@ -185,8 +185,8 @@
         "description": "Altoparlanti e cuffie per i veri amanti del suono.",
         "color": "orange",
         "products": [
-            {"name": "Speaker Bluetooth Impermeabile", "text": "Porta la tua musica in piscina o sotto la doccia.", "category": "Audio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
-            {"name": "Auricolari Noise Cancelling", "text": "Isolati dal mondo e goditi ogni nota in totale silenzio.", "category": "Audio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Speaker Bluetooth UOHHBOE 15W Impermeabile", "text": "Cassa portatile potente 15W, impermeabile, abbinamento TWS. Bluetooth 5.3, 15 ore autonomia, 30m distanza connessione. Luce LED, AUX e TF. Ideale per viaggi, outdoor e feste.", "category": "Audio", "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&h=400&fit=crop", "link": "https://www.amazon.it/UOHHBOE-Impermeabile-Altoparlante-Abbinamento-Connessione/dp/B0DV3NR5WN?linkCode=ll2&tag=l0c39-21"},
+            {"name": "Cuffie Bluetooth Sport 5.4 HiFi", "text": "Auricolari Bluetooth 5.4 HiFi stereo con cancellazione rumore mic. 50 ore autonomia, ricarica rapida USB-C, IP7 impermeabile. Ideali per running, palestra e sport.", "category": "Audio", "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Bluetooth-Auricolari-Cancellazione-Cuffiette-Impermeabil/dp/B0FY366C5D?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -195,8 +195,8 @@
         "description": "Per chi ama ancora il piacere della carta e penna.",
         "color": "lime",
         "products": [
-            {"name": "Taccuino puntinato Premium", "text": "Carta di alta qualità perfetta per il Bullet Journaling.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
-            {"name": "Set Penne Fineliner", "text": "Tratto preciso e colori brillanti per i tuoi appunti.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Diario WEMATE in Pelle A5 Vintage", "text": "Diario in pelle PU A5 con blocco 240 pagine. Vintage organizer e pianificatore per uomini e donne. Dimensioni 8.6x5.8in, ideale per journaling e planning.", "category": "Ufficio", "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop", "link": "https://www.amazon.it/WEMATE-Vintage-Organizzatore-Pianificatore-8-6x5-8in/dp/B0BWHCLJH7?linkCode=ll2&tag=l0c39-21"},
+            {"name": "Penna Multifunzione Waldstrom 9 in 1", "text": "Penna multitool con 9 strumenti integrati e luce LED. Ideale per uso quotidiano e outdoor. Penna a sfera con luce in elegante confezione regalo. Perfetta per uomini.", "category": "Ufficio", "image": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Waldstrom-MS1407-Penna-multifunzione/dp/B0BC8RV5BN?linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -205,8 +205,8 @@
         "description": "Accessori per degustare i tuoi vini preferiti al meglio.",
         "color": "red",
         "products": [
-            {"name": "Cavatappi Elettrico", "text": "Apri ogni bottiglia senza sforzo in pochi secondi.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
-            {"name": "Decanter in Cristallo", "text": "Ossigena i tuoi vini rossi per esaltarne ogni sfumatura.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Cavatappi Elettrico GHB USB Ricaricabile", "text": "Apribottiglie elettrico professionale USB ricaricabile. Include tagliacarte, versatore, tappo di tenuta e tappo per vuoto. Regalo perfetto per uomini, papà e amanti del vino.", "category": "Cucina", "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&h=400&fit=crop", "link": "https://www.amazon.it/GHB-Ricaricabile-Apribottiglie-Professionale-Inossidabile/dp/B0BB5R5KDX?th=1&linkCode=ll2&tag=l0c39-21"},
+            {"name": "Decanter Krosno Essence Collection 750ml", "text": "Decanter vino angolato 750ml in cristallo alta qualità, realizzato a mano. Design elegante obliquo ideale per aerazione vino rosso. Artigianato europeo.", "category": "Cucina", "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Krosno-Collection-realizzato-laerazione-artigianato/dp/B0CX9FM2Q4?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
