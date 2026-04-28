@@ -105,8 +105,8 @@
         "description": "Crea la tua spa personale in bagno.",
         "color": "teal",
         "products": [
-            {"name": "Diffusore Oli Essenziali", "text": "Aromaterapia e umidificazione per un ambiente rilassante.", "category": "Benessere", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
-            {"name": "Cuscino Massaggiante Shiatsu", "text": "Allevia le tensioni muscolari dopo una lunga giornata di lavoro.", "category": "Benessere", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Diffusore Oli Essenziali SALKING", "text": "Diffusore ad ultrasuoni per aromaterapia, umidificatore con luce LED. Silenzioso, autonomia fino a 10 ore. Ideale per casa e ufficio.", "category": "Benessere", "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&h=400&fit=crop", "link": "https://www.amazon.it/SALKING-Diffusore-Essenziali-Ultrasuoni-Aromaterapia/dp/B0CP9GZC6Q?th=1&linkCode=ll2&tag=l0c39-21"},
+            {"name": "Massaggiatore Cervicale K2", "text": "Massaggiatore elettrico per collo, schiena e spalle. Shiatsu profondo con funzione calore, 3 livelli intensità. Ideale per cervicali e tensioni muscolari.", "category": "Benessere", "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop", "link": "https://www.amazon.it/K2-STORE-Massaggiatore-Cervicale-Compatibile/dp/B0DV5NGVTK?linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -115,8 +115,8 @@
         "description": "Strumenti di precisione per i tuoi progetti di casa.",
         "color": "zinc",
         "products": [
-            {"name": "Trapano Avvitatore a Batteria", "text": "Potenza e versatilità per ogni tipo di foratura e avvitamento.", "category": "Brico", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
-            {"name": "Set Cacciaviti di Precisione", "text": "Indispensabile per riparazioni elettroniche e piccoli lavori.", "category": "Brico", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Trapano Avvitatore BLACK+DECKER 18V", "text": "Trapano avvitatore a batteria 18V, coppia massima 37 Nm, 10 posizioni di frizione. Luce LED integrata, batteria 1.5 Ah e caricabatterie inclusi.", "category": "Brico", "image": "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=400&fit=crop", "link": "https://www.amazon.it/gp/aw/d/B07N8YLLG7?th=1&linkCode=ll2&tag=l0c39-21"},
+            {"name": "Set Cacciaviti Precisione JOREST 40Pcs", "text": "Kit professionale 40 pezzi con Torx, Triwing, Phillips, Flathead. Ideale per Switch, PS4, Xbox, PC, laptop, occhiali, orologi. Acciaio S2 ad alta resistenza.", "category": "Brico", "image": "https://images.unsplash.com/photo-1581092921461-eab62e97a782?w=600&h=400&fit=crop", "link": "https://www.amazon.it/gp/aw/d/B09FFCGLHK?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -135,8 +135,8 @@
         "description": "Mantenere la tua auto come nuova non è mai stato così facile.",
         "color": "slate",
         "products": [
-            {"name": "Aspirapolvere Portatile 12V", "text": "Raggiungi ogni angolo dell'abitacolo con facilità.", "category": "Auto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
-            {"name": "Kit Lucidatura Fari", "text": "Ripristina la trasparenza e la sicurezza dei tuoi proiettori.", "category": "Auto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Aspirapolvere Portatile BLACK+DECKER dustbuster 12V", "text": "Aspirapolvere portatile per auto con cavo 12V. Design compatto, potente aspirazione, contenitore trasparente. Ideale per pulire sedili, tappetini e interni.", "category": "Auto", "image": "https://images.unsplash.com/photo-1605515298946-d062f2e9da53?w=600&h=400&fit=crop", "link": "https://www.amazon.it/BLACK-DECKER-dustbuster-Aspirapolvere-ADV1200-XJ/dp/B017COMWTS?linkCode=ll2&tag=l0c39-21"},
+            {"name": "Kit Rinnova Fari ATG", "text": "Kit lucidatura fari auto con polimero liquido. Ripristina fari opachi e ingialliti, migliora visibilità e sicurezza. Include tutto il necessario.", "category": "Auto", "image": "https://images.unsplash.com/photo-1605515298946-d062f2e9da53?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Rinnova-Lucidatura-Polimero-Liquido-Prodotti/dp/B01MZH5LVR?linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -155,8 +155,8 @@
         "description": "Trova il tuo equilibrio interiore.",
         "color": "violet",
         "products": [
-            {"name": "Blocchi Yoga in Sughero", "text": "Supporto naturale e stabile per le tue asana più difficili.", "category": "Sport", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
-            {"name": "Campana Tibetana", "text": "Suoni armonici per facilitare la meditazione profonda.", "category": "Benessere", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Blocchi Yoga BACKLAxx in Sughero 100% Naturale", "text": "Mattoncini yoga ecologici e delicati sulla pelle. Antiscivolo, ideali per stretching, pilates e meditazione. 100% sughero naturale sostenibile.", "category": "Sport", "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop", "link": "https://www.amazon.it/BACKLAxx-Mattoncini-Blocco-Yoga-Antiscivolo-Meditazione/dp/B08TPCT3PD?linkCode=ll2&tag=l0c39-21"},
+            {"name": "Campana Tibetana Silent Mind Himalaya", "text": "Campana tibetana dell'Himalaya con splendidi disegni New Bronze Mantra. Suoni armonici profondi per meditazione, mindfulness e rilassamento.", "category": "Benessere", "image": "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=600&h=400&fit=crop", "link": "https://www.amazon.it/gp/aw/d/B071RDPW8Z?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -175,8 +175,8 @@
         "description": "Proteggi ciò che ami con le migliori tecnologie.",
         "color": "red",
         "products": [
-            {"name": "Telecamera WiFi da Esterno", "text": "Visione notturna e avvisi di movimento sul tuo telefono.", "category": "Sicurezza", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
-            {"name": "Serratura Intelligente Bluetooth", "text": "Gestisci gli accessi di casa senza bisogno di chiavi fisiche.", "category": "Sicurezza", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Telecamera Esterno Reolink Duo 3 PoE 16MP", "text": "Telecamera PoE con doppio obiettivo panoramico 180°. Rilevamento uomo/veicolo/animale, audio bidirezionale, faretti, registrazione continua 24/7.", "category": "Sicurezza", "image": "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?w=600&h=400&fit=crop", "link": "https://www.amazon.it/gp/aw/d/B0CM34VG3X?linkCode=ll2&tag=l0c39-21"},
+            {"name": "SwitchBot Hub 2 Smart Home", "text": "Hub intelligente con termometro, igrometro e telecomando IR. Collega SwitchBot alla rete Wi-Fi, compatibile con Alexa e Google Assistant per controllo vocale.", "category": "Sicurezza", "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop", "link": "https://www.amazon.it/gp/aw/d/B0BM8VS13P?linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
