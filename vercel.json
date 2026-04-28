@@ -1,0 +1,209 @@
+{
+  "buildCommand": null,
+  "outputDirectory": "output",
+  "devCommand": null,
+  "installCommand": null,
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/site_1/:path*",
+      "destination": "/site_1/index.html"
+    },
+    {
+      "source": "/site_2/:path*",
+      "destination": "/site_2/index.html"
+    },
+    {
+      "source": "/site_3/:path*",
+      "destination": "/site_3/index.html"
+    },
+    {
+      "source": "/site_4/:path*",
+      "destination": "/site_4/index.html"
+    },
+    {
+      "source": "/site_5/:path*",
+      "destination": "/site_5/index.html"
+    },
+    {
+      "source": "/site_6/:path*",
+      "destination": "/site_6/index.html"
+    },
+    {
+      "source": "/site_7/:path*",
+      "destination": "/site_7/index.html"
+    },
+    {
+      "source": "/site_8/:path*",
+      "destination": "/site_8/index.html"
+    },
+    {
+      "source": "/site_9/:path*",
+      "destination": "/site_9/index.html"
+    },
+    {
+      "source": "/site_10/:path*",
+      "destination": "/site_10/index.html"
+    },
+    {
+      "source": "/site_11/:path*",
+      "destination": "/site_11/index.html"
+    },
+    {
+      "source": "/site_12/:path*",
+      "destination": "/site_12/index.html"
+    },
+    {
+      "source": "/site_13/:path*",
+      "destination": "/site_13/index.html"
+    },
+    {
+      "source": "/site_14/:path*",
+      "destination": "/site_14/index.html"
+    },
+    {
+      "source": "/site_15/:path*",
+      "destination": "/site_15/index.html"
+    },
+    {
+      "source": "/site_16/:path*",
+      "destination": "/site_16/index.html"
+    },
+    {
+      "source": "/site_17/:path*",
+      "destination": "/site_17/index.html"
+    },
+    {
+      "source": "/site_18/:path*",
+      "destination": "/site_18/index.html"
+    },
+    {
+      "source": "/site_19/:path*",
+      "destination": "/site_19/index.html"
+    },
+    {
+      "source": "/site_20/:path*",
+      "destination": "/site_20/index.html"
+    },
+    {
+      "source": "/site_21/:path*",
+      "destination": "/site_21/index.html"
+    },
+    {
+      "source": "/site_22/:path*",
+      "destination": "/site_22/index.html"
+    },
+    {
+      "source": "/site_23/:path*",
+      "destination": "/site_23/index.html"
+    },
+    {
+      "source": "/site_24/:path*",
+      "destination": "/site_24/index.html"
+    },
+    {
+      "source": "/site_25/:path*",
+      "destination": "/site_25/index.html"
+    },
+    {
+      "source": "/site_26/:path*",
+      "destination": "/site_26/index.html"
+    },
+    {
+      "source": "/site_27/:path*",
+      "destination": "/site_27/index.html"
+    },
+    {
+      "source": "/site_28/:path*",
+      "destination": "/site_28/index.html"
+    },
+    {
+      "source": "/site_29/:path*",
+      "destination": "/site_29/index.html"
+    },
+    {
+      "source": "/site_30/:path*",
+      "destination": "/site_30/index.html"
+    },
+    {
+      "source": "/site_31/:path*",
+      "destination": "/site_31/index.html"
+    },
+    {
+      "source": "/site_32/:path*",
+      "destination": "/site_32/index.html"
+    },
+    {
+      "source": "/site_33/:path*",
+      "destination": "/site_33/index.html"
+    },
+    {
+      "source": "/site_34/:path*",
+      "destination": "/site_34/index.html"
+    },
+    {
+      "source": "/site_35/:path*",
+      "destination": "/site_35/index.html"
+    },
+    {
+      "source": "/site_36/:path*",
+      "destination": "/site_36/index.html"
+    },
+    {
+      "source": "/site_37/:path*",
+      "destination": "/site_37/index.html"
+    },
+    {
+      "source": "/site_38/:path*",
+      "destination": "/site_38/index.html"
+    },
+    {
+      "source": "/site_39/:path*",
+      "destination": "/site_39/index.html"
+    },
+    {
+      "source": "/site_40/:path*",
+      "destination": "/site_40/index.html"
+    },
+    {
+      "source": "/site_41/:path*",
+      "destination": "/site_41/index.html"
+    },
+    {
+      "source": "/site_42/:path*",
+      "destination": "/site_42/index.html"
+    },
+    {
+      "source": "/site_43/:path*",
+      "destination": "/site_43/index.html"
+    },
+    {
+      "source": "/site_44/:path*",
+      "destination": "/site_44/index.html"
+    },
+    {
+      "source": "/site_45/:path*",
+      "destination": "/site_45/index.html"
+    },
+    {
+      "source": "/site_46/:path*",
+      "destination": "/site_46/index.html"
+    },
+    {
+      "source": "/site_47/:path*",
+      "destination": "/site_47/index.html"
+    },
+    {
+      "source": "/site_48/:path*",
+      "destination": "/site_48/index.html"
+    },
+    {
+      "source": "/site_49/:path*",
+      "destination": "/site_49/index.html"
+    },
+    {
+      "source": "/site_50/:path*",
+      "destination": "/site_50/index.html"
+    }
+  ]
+}
