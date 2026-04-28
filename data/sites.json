@@ -65,7 +65,7 @@
         "description": "I migliori accessori per il benessere dei tuoi amici a quattro zampe.",
         "color": "purple",
         "products": [
-            {"name": "Distributore Cibo Automatico", "text": "Pianifica i pasti del tuo animale anche quando non sei a casa.", "category": "Animali", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Distributore Cibo Automatico PUPPY KITTY", "text": "Dispenser smart con registratore vocale, programmazione fino a 6 pasti al giorno, 3L capacità. Monitora la nutrizione del tuo pet.", "category": "Animali", "link": "https://www.amazon.it/PUPPY-KITTY-Distributore-Automatico-Registrazione/dp/B0DJVHYDNJ?th=1&linkCode=ll2&tag=l0c39-21"},
             {"name": "Fontanella d'Acqua Filtrata", "text": "Acqua sempre fresca e pulita per incentivare l'idratazione.", "category": "Animali", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
         ]
     },
@@ -125,7 +125,7 @@
         "description": "Equipaggiamento per le tue avventure nella natura.",
         "color": "emerald",
         "products": [
-            {"name": "Lanterna LED Ricaricabile", "text": "Luce potente e duratura per le tue notti sotto le stelle.", "category": "Outdoor", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Lanterna LED da Campeggio Ricaricabile", "text": "Luce impermeabile portatile con 4 modalità illuminazione. Ricaricabile USB, ideale per campeggio, escursionismo e outdoor.", "category": "Outdoor", "link": "https://www.amazon.it/Campeggio-Ricaricabile-Portatile-Impermeabile-Escursionismo/dp/B0GCF3G4X2?linkCode=ll2&tag=l0c39-21"},
             {"name": "Sacco a Pelo Termico", "text": "Comfort assicurato anche con le temperature più rigide.", "category": "Outdoor", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
         ]
     },
@@ -145,8 +145,8 @@
         "description": "Soluzioni moderne per il lavaggio e la cura dei capi.",
         "color": "sky",
         "products": [
-            {"name": "Levapelucchi Elettrico", "text": "Ridona vita ai tuoi maglioni preferiti in pochi secondi.", "category": "Casa", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
-            {"name": "Stendibiancheria Verticale", "text": "Massimizza lo spazio in casa per asciugare il bucato.", "category": "Casa", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Levapelucchi Elettrico", "text": "Rimuove pelucchi e nodi da tutti i tessuti. 3 livelli di intensità, motore potente e silenzioso. Ideale per vestiti, divani e tappeti.", "category": "Casa", "link": "https://www.amazon.it/gp/aw/d/B0F93ZJY16?linkCode=ll2&tag=l0c39-21"},
+            {"name": "Stendibiancheria Verticale", "text": "Stendibiancheria a torre compatta con 20 metri di stenditoio. Ideale per interni e balconi piccoli. Ruote per facile spostamento.", "category": "Casa", "link": "https://www.amazon.it/gp/aw/d/B0BS1PDVMR?linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
