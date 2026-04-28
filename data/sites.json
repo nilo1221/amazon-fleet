@@ -1,0 +1,502 @@
+[
+    {
+        "id": 1,
+        "title": "Cucina Moderna & Tech",
+        "description": "I migliori gadget per rendere la tua cucina intelligente e funzionale.",
+        "color": "orange",
+        "products": [
+            {"name": "Friggitrice ad Aria Pro", "text": "Cucina sano senza rinunciare al gusto. Tecnologia a circolazione d'aria calda.", "category": "Elettrodomestici", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Robot da Cucina Smart", "text": "Tutto in uno: trita, impasta e cuoce. Il compagno perfetto per ogni ricetta.", "category": "Elettrodomestici", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Smart Home & Domotica",
+        "description": "Rendi la tua casa intelligente con le ultime novità tech.",
+        "color": "blue",
+        "products": [
+            {"name": "Lampadine Smart RGB", "text": "Controlla l'atmosfera di casa tua direttamente dallo smartphone.", "category": "Illuminazione", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Presa WiFi Intelligente", "text": "Monitora i consumi e programma l'accensione dei tuoi elettrodomestici.", "category": "Gadget", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Home Gym Essentials",
+        "description": "Tutto l'occorrente per un allenamento professionale e sicuro direttamente a casa tua.",
+        "color": "red",
+        "products": [
+            {"name": "Manubri in Neoprene Amazon Basics", "text": "Presa sicura e confortevole per i tuoi allenamenti a casa. Ideali per tonificare braccia e spalle.", "category": "Sport", "link": "https://www.amazon.it/AmazonBasics-NPDBP2KG-Coppia-manubri-neoprene/dp/B078XXP3RH?tag=l0c39-21"},
+            {"name": "Lifting Straps Professionali Fitgriff", "text": "Supporto massimo per la tua presa durante gli esercizi di trazione. Imbottitura premium per il massimo comfort.", "category": "Sport", "link": "https://www.amazon.it/Fitgriff%C2%AE-Straps-Palestra-Imbottito-Professionali/dp/B01F2OGJQM?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Giardinaggio Urbano",
+        "description": "Crea il tuo angolo verde anche in città.",
+        "color": "green",
+        "products": [
+            {"name": "Kit Idroponico Indoor", "text": "Coltiva erbe aromatiche fresche tutto l'anno direttamente in cucina.", "category": "Giardino", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Set Attrezzi Ergonomici", "text": "Tutto il necessario per prenderti cura delle tue piante senza fatica.", "category": "Giardino", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Ufficio Produttivo",
+        "description": "Configura il tuo workspace per la massima efficienza.",
+        "color": "indigo",
+        "products": [
+            {"name": "Supporto Laptop Ventilato", "text": "Migliora la postura e raffredda il tuo computer durante le ore di lavoro.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Organizer da Scrivania", "text": "Mantieni tutto in ordine e a portata di mano per non perdere la concentrazione.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Fotografia Mobile",
+        "description": "Scatta foto professionali con il tuo smartphone.",
+        "color": "yellow",
+        "products": [
+            {"name": "Treppiede con Telecomando", "text": "Stabilità perfetta per foto di gruppo e video di alta qualità.", "category": "Foto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Lenti Clip-on 4 in 1", "text": "Macro, Grandangolo e Fish-eye per esplorare nuovi stili fotografici.", "category": "Foto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Pet Care Intelligente",
+        "description": "I migliori accessori per il benessere dei tuoi amici a quattro zampe.",
+        "color": "purple",
+        "products": [
+            {"name": "Distributore Cibo Automatico", "text": "Pianifica i pasti del tuo animale anche quando non sei a casa.", "category": "Animali", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Fontanella d'Acqua Filtrata", "text": "Acqua sempre fresca e pulita per incentivare l'idratazione.", "category": "Animali", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Cura della Macchina da Caffè",
+        "description": "I migliori prodotti per la manutenzione e la pulizia della tua macchina da caffè.",
+        "color": "amber",
+        "products": [
+            {"name": "Decalcificante Universale Purivita", "text": "Soluzione professionale per la pulizia profonda di macchine da caffè automatiche e manuali.", "category": "Cucina", "link": "https://www.amazon.it/Purivita-Decalcificante-universale-macchine-automatiche/dp/B0C4FHBPRT?tag=l0c39-21"},
+            {"name": "Kit di Pulizia Completo", "text": "Tutto il necessario per mantenere l'aroma del tuo caffè sempre perfetto.", "category": "Cucina", "link": "https://www.amazon.it/Purivita-Decalcificante-universale-macchine-automatiche/dp/B0C4FHBPRT?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Elite Gaming Gear",
+        "description": "Porta la tua esperienza di gioco al livello successivo con il meglio dell'hardware.",
+        "color": "pink",
+        "products": [
+            {"name": "PC Gaming Greed Mk2", "text": "Potenza pura per il gaming estremo. Supporto Raytracing e prestazioni incredibili per ogni titolo AAA.", "category": "Gaming", "link": "https://www.amazon.it/Greed-Mk2-Computer-calcolatrice-Raytracing/dp/B0C1C9GNR9?tag=l0c39-21"},
+            {"name": "Monitor Gaming 144Hz", "text": "Fluidità assoluta per i tuoi giochi competitivi. Non perdere mai un frame.", "category": "Gaming", "link": "https://www.amazon.it/Greed-Mk2-Computer-calcolatrice-Raytracing/dp/B0C1C9GNR9?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Viaggi Organizzati",
+        "description": "Gadget indispensabili per chi è sempre in movimento.",
+        "color": "cyan",
+        "products": [
+            {"name": "Zaino Bagaglio a Mano 40x20x25", "text": "Perfetto per Ryanair e le compagnie low-cost. Compatto, resistente e capiente per i tuoi weekend fuori porta.", "category": "Viaggi", "link": "https://www.amazon.it/Bagaglio-40x20x25-Ryanair-Viaggio-Trekking/dp/B0BVQ5518V?tag=l0c39-21"},
+            {"name": "Zaino Bagaglio a Mano 40x20x25", "text": "Compatto e leggero, ideale per evitare costi aggiuntivi con Ryanair e EasyJet.", "category": "Viaggi", "link": "https://www.amazon.it/Bagaglio-40x20x25-Ryanair-Viaggio-Trekking/dp/B0BVQ5518V?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Benessere & Relax",
+        "description": "Crea la tua spa personale in bagno.",
+        "color": "teal",
+        "products": [
+            {"name": "Diffusore Oli Essenziali", "text": "Aromaterapia e umidificazione per un ambiente rilassante.", "category": "Benessere", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Cuscino Massaggiante Shiatsu", "text": "Allevia le tensioni muscolari dopo una lunga giornata di lavoro.", "category": "Benessere", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Brico & Fai da Te",
+        "description": "Strumenti di precisione per i tuoi progetti di casa.",
+        "color": "zinc",
+        "products": [
+            {"name": "Trapano Avvitatore a Batteria", "text": "Potenza e versatilità per ogni tipo di foratura e avvitamento.", "category": "Brico", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Set Cacciaviti di Precisione", "text": "Indispensabile per riparazioni elettroniche e piccoli lavori.", "category": "Brico", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Outdoor & Camping",
+        "description": "Equipaggiamento per le tue avventure nella natura.",
+        "color": "emerald",
+        "products": [
+            {"name": "Lanterna LED Ricaricabile", "text": "Luce potente e duratura per le tue notti sotto le stelle.", "category": "Outdoor", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Sacco a Pelo Termico", "text": "Comfort assicurato anche con le temperature più rigide.", "category": "Outdoor", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Cura della Auto",
+        "description": "Mantenere la tua auto come nuova non è mai stato così facile.",
+        "color": "slate",
+        "products": [
+            {"name": "Aspirapolvere Portatile 12V", "text": "Raggiungi ogni angolo dell'abitacolo con facilità.", "category": "Auto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Kit Lucidatura Fari", "text": "Ripristina la trasparenza e la sicurezza dei tuoi proiettori.", "category": "Auto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Smart Laundry",
+        "description": "Soluzioni moderne per il lavaggio e la cura dei capi.",
+        "color": "sky",
+        "products": [
+            {"name": "Levapelucchi Elettrico", "text": "Ridona vita ai tuoi maglioni preferiti in pochi secondi.", "category": "Casa", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Stendibiancheria Verticale", "text": "Massimizza lo spazio in casa per asciugare il bucato.", "category": "Casa", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Yoga & Mindfulness",
+        "description": "Trova il tuo equilibrio interiore.",
+        "color": "violet",
+        "products": [
+            {"name": "Blocchi Yoga in Sughero", "text": "Supporto naturale e stabile per le tue asana più difficili.", "category": "Sport", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Campana Tibetana", "text": "Suoni armonici per facilitare la meditazione profonda.", "category": "Benessere", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Postazione Mini PC Potente",
+        "description": "Scopri come ottimizzare il tuo spazio con la potenza del Mini PC Blackview.",
+        "color": "rose",
+        "products": [
+            {"name": "Mini PC Blackview MP50", "text": "Potenza incredibile in dimensioni compatte. Ideale per ufficio, coding e intrattenimento domestico.", "category": "Tech", "link": "https://www.amazon.it/Blackview-Completo%E3%80%91-MP50-Tastiera-Computer/dp/B0FL27V4QP?tag=l0c39-21"},
+            {"name": "Kit Tastiera e Mouse Wireless", "text": "Il compagno perfetto per il tuo nuovo Mini PC, per una scrivania senza cavi.", "category": "Tech", "link": "https://www.amazon.it/Blackview-Completo%E3%80%91-MP50-Tastiera-Computer/dp/B0FL27V4QP?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Sicurezza Domestica",
+        "description": "Proteggi ciò che ami con le migliori tecnologie.",
+        "color": "red",
+        "products": [
+            {"name": "Telecamera WiFi da Esterno", "text": "Visione notturna e avvisi di movimento sul tuo telefono.", "category": "Sicurezza", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Serratura Intelligente Bluetooth", "text": "Gestisci gli accessi di casa senza bisogno di chiavi fisiche.", "category": "Sicurezza", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Musica ovunque",
+        "description": "Altoparlanti e cuffie per i veri amanti del suono.",
+        "color": "orange",
+        "products": [
+            {"name": "Speaker Bluetooth Impermeabile", "text": "Porta la tua musica in piscina o sotto la doccia.", "category": "Audio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Auricolari Noise Cancelling", "text": "Isolati dal mondo e goditi ogni nota in totale silenzio.", "category": "Audio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Scrittura & Cancelleria",
+        "description": "Per chi ama ancora il piacere della carta e penna.",
+        "color": "lime",
+        "products": [
+            {"name": "Taccuino puntinato Premium", "text": "Carta di alta qualità perfetta per il Bullet Journaling.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Set Penne Fineliner", "text": "Tratto preciso e colori brillanti per i tuoi appunti.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Vini & Sommelier",
+        "description": "Accessori per degustare i tuoi vini preferiti al meglio.",
+        "color": "red",
+        "products": [
+            {"name": "Cavatappi Elettrico", "text": "Apri ogni bottiglia senza sforzo in pochi secondi.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Decanter in Cristallo", "text": "Ossigena i tuoi vini rossi per esaltarne ogni sfumatura.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Sicurezza Bici & Scooter",
+        "description": "Proteggi il tuo mezzo con i migliori sistemi antifurto certificati.",
+        "color": "emerald",
+        "products": [
+            {"name": "Lucchetto Bici GRIFEMA GA1201", "text": "Massima sicurezza per la tua bicicletta o scooter. Acciaio ultra resistente e design anti-taglio.", "category": "Sport", "link": "https://www.amazon.it/GRIFEMA-GA1201-12-Lucchetto-bicicletta-biciclette/dp/B0C3YMHJ3R?tag=l0c39-21"},
+            {"name": "Cavo in Acciaio Rivestito", "text": "Complemento ideale per fissare anche le ruote o il casco in totale sicurezza.", "category": "Sport", "link": "https://www.amazon.it/GRIFEMA-GA1201-12-Lucchetto-bicicletta-biciclette/dp/B0C3YMHJ3R?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Beauty Tech",
+        "description": "La tecnologia al servizio della tua bellezza quotidiana.",
+        "color": "fuchsia",
+        "products": [
+            {"name": "Spazzola Viso Sonica", "text": "Pulizia profonda dei pori per una pelle sempre radiosa.", "category": "Bellezza", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Specchio Trucco con LED", "text": "Illuminazione naturale regolabile per un make-up perfetto.", "category": "Bellezza", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Setup Desktop Potente",
+        "description": "I migliori componenti per un ufficio moderno e una postazione da urlo.",
+        "color": "blue",
+        "products": [
+            {"name": "Mini PC Blackview MP50", "text": "Potenza incredibile in dimensioni compatte. Ideale per ufficio, coding e intrattenimento domestico.", "category": "Tech", "link": "https://www.amazon.it/Blackview-Completo%E3%80%91-MP50-Tastiera-Computer/dp/B0FL27V4QP?tag=l0c39-21"},
+            {"name": "Monitor Curvo 27 Pollici", "text": "Immersività totale per il tuo lavoro e il tuo tempo libero.", "category": "Tech", "link": "https://www.amazon.it/Blackview-Completo%E3%80%91-MP50-Tastiera-Computer/dp/B0FL27V4QP?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Elettronica per Bambini",
+        "description": "Gadget educativi e divertenti per i più piccoli.",
+        "color": "yellow",
+        "products": [
+            {"name": "Tablet Educativo", "text": "App sicure e preinstallate per imparare giocando.", "category": "Kids", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Macchina Fotografica Bimbi", "text": "Resistente agli urti e facile da usare per piccoli fotografi.", "category": "Kids", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Grilling & BBQ",
+        "description": "Diventa il re della griglia nel tuo giardino.",
+        "color": "orange",
+        "products": [
+            {"name": "Termometro Carne Wireless", "text": "Controlla la cottura perfetta direttamente dal tuo smartphone.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Set Utensili in Acciaio", "text": "Tutto il necessario per gestire ogni tipo di carne sulla brace.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Podcast Ready",
+        "description": "Attrezzatura per lanciare il tuo show audio.",
+        "color": "indigo",
+        "products": [
+            {"name": "Braccio per Microfono", "text": "Posizionamento flessibile e stabile per il tuo set audio.", "category": "Audio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Pannelli Fonoassorbenti", "text": "Migliora l'acustica della tua stanza eliminando il riverbero.", "category": "Audio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Bio-Hacking Casa",
+        "description": "Ottimizza il tuo ambiente per la massima salute.",
+        "color": "teal",
+        "products": [
+            {"name": "Monitor Qualità Aria", "text": "Rileva CO2 e polveri sottili per respirare sempre aria pulita.", "category": "Salute", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Filtro Doccia Anticalcare", "text": "Pelle e capelli più sani grazie all'acqua purificata.", "category": "Salute", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Smart Lighting",
+        "description": "Illumina i tuoi spazi con intelligenza.",
+        "color": "amber",
+        "products": [
+            {"name": "Striscia LED Sincronizzata", "text": "Luci che seguono il ritmo della musica o dei tuoi film.", "category": "Casa", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Lampada da Tavolo touch", "text": "Design minimal con regolazione dell'intensità e del colore.", "category": "Casa", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Escursionismo Leggero",
+        "description": "Zaini e accessori per trekking senza pesi inutili.",
+        "color": "green",
+        "products": [
+            {"name": "Zaino Trekking 20L", "text": "Leggero, traspirante e con scomparto per sacca idrica.", "category": "Outdoor", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Bastoncini in Carbonio", "text": "Riduci lo sforzo sulle ginocchia durante le tue camminate.", "category": "Outdoor", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Smart Cleaning",
+        "description": "La tecnologia che pulisce casa per te.",
+        "color": "blue",
+        "products": [
+            {"name": "Robot Aspirapolvere", "text": "Mappatura laser e svuotamento automatico per una pulizia totale.", "category": "Casa", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Lava-vetri Magnetico", "text": "Pulisci entrambi i lati della finestra in una sola passata.", "category": "Casa", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Home Cinema",
+        "description": "L'esperienza del grande schermo nel tuo salotto.",
+        "color": "purple",
+        "products": [
+            {"name": "Mini Proiettore Full HD", "text": "Portatile e potente per serate cinema ovunque tu sia.", "category": "Video", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Soundbar con Subwoofer", "text": "Bassi profondi e dialoghi chiari per un audio coinvolgente.", "category": "Video", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Colazione Perfetta",
+        "description": "Inizia la giornata con il piede giusto.",
+        "color": "orange",
+        "products": [
+            {"name": "Tostapane con Pinze", "text": "Toast dorati e croccanti in pochi minuti ogni mattina.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Spremiagrumi Elettrico", "text": "Spremute fresche senza fatica per una carica di vitamine.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Modellismo 3D",
+        "description": "Dai vita alle tue idee con la stampa 3D.",
+        "color": "zinc",
+        "products": [
+            {"name": "Stampante 3D entry-level", "text": "Facile da montare e usare per i tuoi primi progetti.", "category": "Tech", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Set Filamenti PLA Colorati", "text": "Materiali di alta qualità per stampe resistenti e vivaci.", "category": "Tech", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Cura del Verde Indoor",
+        "description": "Piante rigogliose anche senza il pollice verde.",
+        "color": "emerald",
+        "products": [
+            {"name": "Vasi Auto-irriganti", "text": "Le tue piante prendono l'acqua di cui hanno bisogno quando serve.", "category": "Giardino", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Misuratore Umidità Terreno", "text": "Non sbagliare mai più il momento di innaffiare.", "category": "Giardino", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 36,
+        "title": "Work from Bed",
+        "description": "Comfort estremo per lavorare da dove vuoi.",
+        "color": "indigo",
+        "products": [
+            {"name": "Tavolino da Letto Pieghevole", "text": "Supporto stabile per laptop con spazio per il mouse.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Cuscino Lombare Ergonomico", "text": "Supporto perfetto per schiena e collo durante il relax.", "category": "Casa", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 37,
+        "title": "Auto Connessa",
+        "description": "Upgrade tecnologici per la tua vecchia auto.",
+        "color": "cyan",
+        "products": [
+            {"name": "Adattatore Bluetooth Aux", "text": "Streaming musicale e chiamate vivavoce in un attimo.", "category": "Auto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Supporto Smartphone Magnetico", "text": "Aggancio rapido e sicuro per usare il navigatore.", "category": "Auto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 38,
+        "title": "Bakery a Casa",
+        "description": "Il profumo del pane appena sfornato.",
+        "color": "amber",
+        "products": [
+            {"name": "Macchina del Pane", "text": "Impasta, lievita e cuoce automaticamente per te.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Pietra Refrattaria Pizza", "text": "Ottieni croste croccanti come nel forno a legna.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 39,
+        "title": "Nuoto & Piscina",
+        "description": "Accessori per migliorare le tue performance in acqua.",
+        "color": "blue",
+        "products": [
+            {"name": "Occhialini Anti-appannamento", "text": "Visione chiara e idrodinamica per i tuoi allenamenti.", "category": "Sport", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Cuffia in Silicone ergonomica", "text": "Massimo comfort e protezione per i tuoi capelli.", "category": "Sport", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 40,
+        "title": "Smart Storage",
+        "description": "Recupera spazio in modo intelligente.",
+        "color": "slate",
+        "products": [
+            {"name": "Sacchi Sottovuoto Vestiti", "text": "Riduci il volume dei tuoi capi stagionali del 75%.", "category": "Casa", "link": "https://www.amazon.it/AmazonBasics-Sacchetti-sottovuoto-misura-confezione/dp/B07RSCPH4N?tag=l0c39-21"},
+            {"name": "Scaffale Salva-spazio Bagno", "text": "Sfrutta ogni centimetro sopra i tuoi sanitari.", "category": "Casa", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 41,
+        "title": "Gaming Portatile",
+        "description": "Divertimento assicurato in viaggio.",
+        "color": "red",
+        "products": [
+            {"name": "Custodia Rigida Switch", "text": "Protezione totale per la tua console e i tuoi giochi.", "category": "Gaming", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Controller Bluetooth mobile", "text": "Trasforma il tuo smartphone in una vera console.", "category": "Gaming", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 42,
+        "title": "Digital Detox",
+        "description": "Prodotti per staccare la spina e rigenerarsi.",
+        "color": "green",
+        "products": [
+            {"name": "Cassa Temporizzata", "text": "Chiudi il telefono e concentrati su quello che conta.", "category": "Benessere", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Libro da Colorare Adulti", "text": "Riduci lo stress stimolando la tua creatività.", "category": "Benessere", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 43,
+        "title": "Vlogging Tools",
+        "description": "Porta i tuoi video al livello successivo.",
+        "color": "pink",
+        "products": [
+            {"name": "Ring Light con Cavalletto", "text": "Illuminazione uniforme per eliminare le ombre dal viso.", "category": "Foto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Microfono Lavalier Wireless", "text": "Audio pulito senza l'ingombro di cavi visibili.", "category": "Foto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 44,
+        "title": "Tè & Infusi",
+        "description": "Il rituale del tè perfetto.",
+        "color": "emerald",
+        "products": [
+            {"name": "Bollitore Temperatura Regolabile", "text": "Scalda l'acqua alla temperatura ideale per ogni tipo di tè.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Infusore in Acciaio Inox", "text": "Design moderno per infondere le tue foglie preferite.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 45,
+        "title": "Running Essentials",
+        "description": "Tutto quello che ti serve per correre meglio.",
+        "color": "yellow",
+        "products": [
+            {"name": "Cintura Running porta-oggetti", "text": "Porta chiavi e telefono senza che ballino durante la corsa.", "category": "Sport", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Calze a Compressione", "text": "Migliora la circolazione e riduci il tempo di recupero.", "category": "Sport", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 46,
+        "title": "Smart Wallet",
+        "description": "Portafogli minimali e sicuri.",
+        "color": "zinc",
+        "products": [
+            {"name": "Portacarte in Alluminio RFID", "text": "Proteggi le tue carte dal furto di dati digitali.", "category": "Accessori", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Portafoglio Sottile in Pelle", "text": "Eleganza e praticità senza ingombro in tasca.", "category": "Accessori", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 47,
+        "title": "Sleep Optimization",
+        "description": "Dormi meglio per vivere meglio.",
+        "color": "indigo",
+        "products": [
+            {"name": "Mascherina per Dormire 3D", "text": "Buio totale senza pressione sugli occhi per un sonno profondo.", "category": "Salute", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Sveglia a Simulazione Alba", "text": "Svegliati dolcemente con la luce che aumenta gradualmente.", "category": "Salute", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 48,
+        "title": "Cocktail Night",
+        "description": "Prepara drink professionali a casa tua.",
+        "color": "rose",
+        "products": [
+            {"name": "Set Shaker Professionale", "text": "Tutto il necessario per miscelare i tuoi cocktail preferiti.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Stampi Ghiaccio Grandi", "text": "Sfere o cubi giganti per drink che non si diluiscono.", "category": "Cucina", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 49,
+        "title": "Baby Monitoring",
+        "description": "Tranquillità per te, sicurezza per il tuo bambino.",
+        "color": "sky",
+        "products": [
+            {"name": "Baby Monitor Video HD", "text": "Guarda e ascolta il tuo piccolo in ogni momento.", "category": "Kids", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Termometro Bagnetto Digitale", "text": "Assicurati che l'acqua sia sempre alla temperatura giusta.", "category": "Kids", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    },
+    {
+        "id": 50,
+        "title": "Desk Setup Zen",
+        "description": "Minimalismo e pace sulla tua scrivania.",
+        "color": "teal",
+        "products": [
+            {"name": "Sottomano in Feltro", "text": "Superficie calda e morbida per un comfort di scrittura superiore.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Supporto Cuffie in Legno", "text": "Design naturale per tenere in ordine le tue cuffie.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+        ]
+    }
+]
