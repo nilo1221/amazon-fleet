@@ -5,8 +5,8 @@
         "description": "I migliori gadget per rendere la tua cucina intelligente e funzionale.",
         "color": "orange",
         "products": [
-            {"name": "Friggitrice ad Aria COSORI", "text": "7,5L XXL con 10 funzioni, controllo preciso temperatura, cestello antiaderente e 65 ricette. Cottura sana con 90% meno grassi.", "category": "Elettrodomestici", "link": "https://www.amazon.it/COSORI-Friggitrice-Rivestimento-Resistenza-CAF-DC113S/dp/B0DPPT99LJ?th=1&linkCode=ll2&tag=l0c39-21"},
-            {"name": "Robot da Cucina Tefal PrepCook", "text": "5 programmi automatici, impasta, trita, cuoce e soffrigge. 4.5L capacità, 10 accessori inclusi. Il tuo chef personale.", "category": "Elettrodomestici", "link": "https://www.amazon.it/Robot-cucina-Tefal-PrepCook-Generica/dp/B0BVTY5MLH?th=1&linkCode=ll2&tag=l0c39-21"}
+            {"name": "Friggitrice ad Aria COSORI", "text": "7,5L XXL con 10 funzioni, controllo preciso temperatura, cestello antiaderente e 65 ricette. Cottura sana con 90% meno grassi.", "category": "Elettrodomestici", "image": "https://images.unsplash.com/photo-1626147116986-4601771470a6?w=600&h=400&fit=crop", "link": "https://www.amazon.it/COSORI-Friggitrice-Rivestimento-Resistenza-CAF-DC113S/dp/B0DPPT99LJ?th=1&linkCode=ll2&tag=l0c39-21"},
+            {"name": "Robot da Cucina Tefal PrepCook", "text": "5 programmi automatici, impasta, trita, cuoce e soffrigge. 4.5L capacità, 10 accessori inclusi. Il tuo chef personale.", "category": "Elettrodomestici", "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Robot-cucina-Tefal-PrepCook-Generica/dp/B0BVTY5MLH?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -15,8 +15,8 @@
         "description": "Rendi la tua casa intelligente con le ultime novità tech.",
         "color": "blue",
         "products": [
-            {"name": "Lampadina LED Smart Oumida", "text": "Dimmerabile con controllo app, 9W equivalente a 90W, temperatura colore regolabile 2700K-6500K. Controllo vocale compatibile.", "category": "Illuminazione", "link": "https://www.amazon.it/Oumida-Inteligente-Dimmerabile-Equivalente-2700K-6500K/dp/B0FPQWLSBW?th=1&linkCode=ll2&tag=l0c39-21"},
-            {"name": "Presa Intelligente SONOFF S61s", "text": "Smart plug WiFi compatibile Alexa e Google Home. Monitoraggio consumi energia, timer programmabili, protezione sovraccarico 3840W.", "category": "Gadget", "link": "https://www.amazon.it/SONOFF-S61s-Presa-Intelligente-3840W/dp/B0FT27DDS6?th=1&linkCode=ll2&tag=l0c39-21"}
+            {"name": "Lampadina LED Smart Oumida", "text": "Dimmerabile con controllo app, 9W equivalente a 90W, temperatura colore regolabile 2700K-6500K. Controllo vocale compatibile.", "category": "Illuminazione", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Oumida-Inteligente-Dimmerabile-Equivalente-2700K-6500K/dp/B0FPQWLSBW?th=1&linkCode=ll2&tag=l0c39-21"},
+            {"name": "Presa Intelligente SONOFF S61s", "text": "Smart plug WiFi compatibile Alexa e Google Home. Monitoraggio consumi energia, timer programmabili, protezione sovraccarico 3840W.", "category": "Gadget", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop", "link": "https://www.amazon.it/SONOFF-S61s-Presa-Intelligente-3840W/dp/B0FT27DDS6?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -25,8 +25,8 @@
         "description": "Tutto l'occorrente per un allenamento professionale e sicuro direttamente a casa tua.",
         "color": "red",
         "products": [
-            {"name": "Manubri in Neoprene Amazon Basics", "text": "Presa sicura e confortevole per i tuoi allenamenti a casa. Ideali per tonificare braccia e spalle.", "category": "Sport", "link": "https://www.amazon.it/AmazonBasics-NPDBP2KG-Coppia-manubri-neoprene/dp/B078XXP3RH?tag=l0c39-21"},
-            {"name": "Lifting Straps Professionali Fitgriff", "text": "Supporto massimo per la tua presa durante gli esercizi di trazione. Imbottitura premium per il massimo comfort.", "category": "Sport", "link": "https://www.amazon.it/Fitgriff%C2%AE-Straps-Palestra-Imbottito-Professionali/dp/B01F2OGJQM?tag=l0c39-21"}
+            {"name": "Manubri in Neoprene Amazon Basics", "text": "Presa sicura e confortevole per i tuoi allenamenti a casa. Ideali per tonificare braccia e spalle.", "category": "Sport", "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&h=400&fit=crop", "link": "https://www.amazon.it/AmazonBasics-NPDBP2KG-Coppia-manubri-neoprene/dp/B078XXP3RH?tag=l0c39-21"},
+            {"name": "Lifting Straps Professionali Fitgriff", "text": "Supporto massimo per la tua presa durante gli esercizi di trazione. Imbottitura premium per il massimo comfort.", "category": "Sport", "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Fitgriff%C2%AE-Straps-Palestra-Imbottito-Professionali/dp/B01F2OGJQM?tag=l0c39-21"}
         ]
     },
     {
@@ -35,8 +35,8 @@
         "description": "Crea il tuo angolo verde anche in città.",
         "color": "green",
         "products": [
-            {"name": "Kit Idroponico Intelligente", "text": "Sistema aeroponico automatico con LED full spectrum. Coltiva fino a 12 piante contemporaneamente. App di controllo smart.", "category": "Giardino", "link": "https://www.amazon.it/Idroponica-Intelligente-Tecnologia-Aeroponica-Coltivazione/dp/B0FDKRG58D?linkCode=ll2&tag=l0c39-21"},
-            {"name": "Set Attrezzi da Giardinaggio FLORA GUARD", "text": "10 pezzi in alluminio resistente con manici ergonomici antiscivolo. Include vanga, rastrello, trapiantatore e borsa per il trasporto.", "category": "Giardino", "link": "https://www.amazon.it/FLORA-GUARD-Attrezzi-Giardinaggio-Trapiantatore/dp/B09B2HM2SR?th=1&linkCode=ll2&tag=l0c39-21"}
+            {"name": "Kit Idroponico Intelligente", "text": "Sistema aeroponico automatico con LED full spectrum. Coltiva fino a 12 piante contemporaneamente. App di controllo smart.", "category": "Giardino", "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Idroponica-Intelligente-Tecnologia-Aeroponica-Coltivazione/dp/B0FDKRG58D?linkCode=ll2&tag=l0c39-21"},
+            {"name": "Set Attrezzi da Giardinaggio FLORA GUARD", "text": "10 pezzi in alluminio resistente con manici ergonomici antiscivolo. Include vanga, rastrello, trapiantatore e borsa per il trasporto.", "category": "Giardino", "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop", "link": "https://www.amazon.it/FLORA-GUARD-Attrezzi-Giardinaggio-Trapiantatore/dp/B09B2HM2SR?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -45,7 +45,7 @@
         "description": "Configura il tuo workspace per la massima efficienza.",
         "color": "indigo",
         "products": [
-            {"name": "Supporto Laptop MMOBIEL", "text": "Stand portatile in alluminio regolabile in altezza e angolazione. Ventilazione ottimale, compatibile con laptop 10-17 pollici.", "category": "Ufficio", "link": "https://www.amazon.it/MMOBIEL-Supporto-Portatile-Universale-Compatibile/dp/B0C9R6QTDQ?th=1&linkCode=ll2&tag=l0c39-21"},
+            {"name": "Supporto Laptop MMOBIEL", "text": "Stand portatile in alluminio regolabile in altezza e angolazione. Ventilazione ottimale, compatibile con laptop 10-17 pollici.", "category": "Ufficio", "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=400&fit=crop", "link": "https://www.amazon.it/MMOBIEL-Supporto-Portatile-Universale-Compatibile/dp/B0C9R6QTDQ?th=1&linkCode=ll2&tag=l0c39-21"},
             {"name": "Organizer da Scrivania", "text": "Mantieni tutto in ordine e a portata di mano per non perdere la concentrazione.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
         ]
     },
@@ -55,7 +55,7 @@
         "description": "Scatta foto professionali con il tuo smartphone.",
         "color": "yellow",
         "products": [
-            {"name": "Treppiede Video SMALLRIG 186cm", "text": "Treppiede professionale in lega di alluminio con testa fluida, spargitore di livello e piastra sgancio rapido. Carico massimo 8kg per DSLR e videocamere.", "category": "Foto", "link": "https://www.amazon.it/gp/aw/d/B09WVBXZF9?linkCode=ll2&tag=l0c39-21"},
+            {"name": "Treppiede Video SMALLRIG 186cm", "text": "Treppiede professionale in lega di alluminio con testa fluida, spargitore di livello e piastra sgancio rapido. Carico massimo 8kg per DSLR e videocamere.", "category": "Foto", "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop", "link": "https://www.amazon.it/gp/aw/d/B09WVBXZF9?linkCode=ll2&tag=l0c39-21"},
             {"name": "Lenti Clip-on 4 in 1", "text": "Macro, Grandangolo e Fish-eye per esplorare nuovi stili fotografici.", "category": "Foto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
         ]
     },
@@ -65,7 +65,7 @@
         "description": "I migliori accessori per il benessere dei tuoi amici a quattro zampe.",
         "color": "purple",
         "products": [
-            {"name": "Distributore Cibo Automatico PUPPY KITTY", "text": "Dispenser smart con registratore vocale, programmazione fino a 6 pasti al giorno, 3L capacità. Monitora la nutrizione del tuo pet.", "category": "Animali", "link": "https://www.amazon.it/PUPPY-KITTY-Distributore-Automatico-Registrazione/dp/B0DJVHYDNJ?th=1&linkCode=ll2&tag=l0c39-21"},
+            {"name": "Distributore Cibo Automatico PUPPY KITTY", "text": "Dispenser smart con registratore vocale, programmazione fino a 6 pasti al giorno, 3L capacità. Monitora la nutrizione del tuo pet.", "category": "Animali", "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=400&fit=crop", "link": "https://www.amazon.it/PUPPY-KITTY-Distributore-Automatico-Registrazione/dp/B0DJVHYDNJ?th=1&linkCode=ll2&tag=l0c39-21"},
             {"name": "Fontanella d'Acqua Filtrata", "text": "Acqua sempre fresca e pulita per incentivare l'idratazione.", "category": "Animali", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
         ]
     },
@@ -75,7 +75,7 @@
         "description": "I migliori prodotti per la manutenzione e la pulizia della tua macchina da caffè.",
         "color": "amber",
         "products": [
-            {"name": "Decalcificante Universale Purivita", "text": "Soluzione professionale per la pulizia profonda di macchine da caffè automatiche e manuali.", "category": "Cucina", "link": "https://www.amazon.it/Purivita-Decalcificante-universale-macchine-automatiche/dp/B0C4FHBPRT?tag=l0c39-21"},
+            {"name": "Decalcificante Universale Purivita", "text": "Soluzione professionale per la pulizia profonda di macchine da caffè automatiche e manuali.", "category": "Cucina", "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Purivita-Decalcificante-universale-macchine-automatiche/dp/B0C4FHBPRT?tag=l0c39-21"},
             {"name": "Kit di Pulizia Completo", "text": "Tutto il necessario per mantenere l'aroma del tuo caffè sempre perfetto.", "category": "Cucina", "link": "https://www.amazon.it/Purivita-Decalcificante-universale-macchine-automatiche/dp/B0C4FHBPRT?tag=l0c39-21"}
         ]
     },
@@ -85,8 +85,8 @@
         "description": "Porta la tua esperienza di gioco al livello successivo con il meglio dell'hardware.",
         "color": "pink",
         "products": [
-            {"name": "PC Gaming Greed Mk2", "text": "Potenza pura per il gaming estremo. Supporto Raytracing e prestazioni incredibili per ogni titolo AAA.", "category": "Gaming", "link": "https://www.amazon.it/Greed-Mk2-Computer-calcolatrice-Raytracing/dp/B0C1C9GNR9?tag=l0c39-21"},
-            {"name": "Supporto Cuffie in Legno SHUOSUO", "text": "Elegante stand universale per cuffie gaming. Design in legno compatibile con tutte le marche: Sony, Bose, Sennheiser, Razer.", "category": "Gaming", "link": "https://www.amazon.it/SHUOSUO-Supporto-stoccaggio-compatibile-Sennheiser/dp/B0D268R35T?linkCode=ll2&tag=l0c39-21"}
+            {"name": "PC Gaming Greed Mk2", "text": "Potenza pura per il gaming estremo. Supporto Raytracing e prestazioni incredibili per ogni titolo AAA.", "category": "Gaming", "image": "https://images.unsplash.com/photo-1587202372634-32705e3e568e?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Greed-Mk2-Computer-calcolatrice-Raytracing/dp/B0C1C9GNR9?tag=l0c39-21"},
+            {"name": "Supporto Cuffie in Legno SHUOSUO", "text": "Elegante stand universale per cuffie gaming. Design in legno compatibile con tutte le marche: Sony, Bose, Sennheiser, Razer.", "category": "Gaming", "image": "https://images.unsplash.com/photo-1612444530582-fc69183d4c10?w=600&h=400&fit=crop", "link": "https://www.amazon.it/SHUOSUO-Supporto-stoccaggio-compatibile-Sennheiser/dp/B0D268R35T?linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -95,8 +95,8 @@
         "description": "Gadget indispensabili per chi è sempre in movimento.",
         "color": "cyan",
         "products": [
-            {"name": "Zaino Bagaglio a Mano 40x20x25", "text": "Perfetto per Ryanair e le compagnie low-cost. Compatto, resistente e capiente per i tuoi weekend fuori porta.", "category": "Viaggi", "link": "https://www.amazon.it/Bagaglio-40x20x25-Ryanair-Viaggio-Trekking/dp/B0BVQ5518V?tag=l0c39-21"},
-            {"name": "Zaino Trekking 20L Terra Peak", "text": "Ideale per hiking e avventure outdoor. Leggero, resistente all'acqua e comparto idratazione integrato.", "category": "Viaggi", "link": "https://www.amazon.it/Terra-Peak-Active-hiking-piccolo/dp/B092W249YL?th=1&linkCode=ll2&tag=l0c39-21"}
+            {"name": "Zaino Bagaglio a Mano 40x20x25", "text": "Perfetto per Ryanair e le compagnie low-cost. Compatto, resistente e capiente per i tuoi weekend fuori porta.", "category": "Viaggi", "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Bagaglio-40x20x25-Ryanair-Viaggio-Trekking/dp/B0BVQ5518V?tag=l0c39-21"},
+            {"name": "Zaino Trekking 20L Terra Peak", "text": "Ideale per hiking e avventure outdoor. Leggero, resistente all'acqua e comparto idratazione integrato.", "category": "Viaggi", "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Terra-Peak-Active-hiking-piccolo/dp/B092W249YL?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -145,8 +145,8 @@
         "description": "Soluzioni moderne per il lavaggio e la cura dei capi.",
         "color": "sky",
         "products": [
-            {"name": "Levapelucchi Elettrico", "text": "Rimuove pelucchi e nodi da tutti i tessuti. 3 livelli di intensità, motore potente e silenzioso. Ideale per vestiti, divani e tappeti.", "category": "Casa", "link": "https://www.amazon.it/gp/aw/d/B0F93ZJY16?linkCode=ll2&tag=l0c39-21"},
-            {"name": "Stendibiancheria Verticale", "text": "Stendibiancheria a torre compatta con 20 metri di stenditoio. Ideale per interni e balconi piccoli. Ruote per facile spostamento.", "category": "Casa", "link": "https://www.amazon.it/gp/aw/d/B0BS1PDVMR?linkCode=ll2&tag=l0c39-21"}
+            {"name": "Levapelucchi Elettrico", "text": "Rimuove pelucchi e nodi da tutti i tessuti. 3 livelli di intensità, motore potente e silenzioso. Ideale per vestiti, divani e tappeti.", "category": "Casa", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop", "link": "https://www.amazon.it/gp/aw/d/B0F93ZJY16?linkCode=ll2&tag=l0c39-21"},
+            {"name": "Stendibiancheria Verticale", "text": "Stendibiancheria a torre compatta con 20 metri di stenditoio. Ideale per interni e balconi piccoli. Ruote per facile spostamento.", "category": "Casa", "image": "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&h=400&fit=crop", "link": "https://www.amazon.it/gp/aw/d/B0BS1PDVMR?linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
