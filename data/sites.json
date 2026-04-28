@@ -35,8 +35,8 @@
         "description": "Crea il tuo angolo verde anche in città.",
         "color": "green",
         "products": [
-            {"name": "Kit Idroponico Indoor", "text": "Coltiva erbe aromatiche fresche tutto l'anno direttamente in cucina.", "category": "Giardino", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
-            {"name": "Set Attrezzi Ergonomici", "text": "Tutto il necessario per prenderti cura delle tue piante senza fatica.", "category": "Giardino", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Kit Idroponico Intelligente", "text": "Sistema aeroponico automatico con LED full spectrum. Coltiva fino a 12 piante contemporaneamente. App di controllo smart.", "category": "Giardino", "link": "https://www.amazon.it/Idroponica-Intelligente-Tecnologia-Aeroponica-Coltivazione/dp/B0FDKRG58D?linkCode=ll2&tag=l0c39-21"},
+            {"name": "Set Attrezzi da Giardinaggio FLORA GUARD", "text": "10 pezzi in alluminio resistente con manici ergonomici antiscivolo. Include vanga, rastrello, trapiantatore e borsa per il trasporto.", "category": "Giardino", "link": "https://www.amazon.it/FLORA-GUARD-Attrezzi-Giardinaggio-Trapiantatore/dp/B09B2HM2SR?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -45,7 +45,7 @@
         "description": "Configura il tuo workspace per la massima efficienza.",
         "color": "indigo",
         "products": [
-            {"name": "Supporto Laptop Ventilato", "text": "Migliora la postura e raffredda il tuo computer durante le ore di lavoro.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Supporto Laptop MMOBIEL", "text": "Stand portatile in alluminio regolabile in altezza e angolazione. Ventilazione ottimale, compatibile con laptop 10-17 pollici.", "category": "Ufficio", "link": "https://www.amazon.it/MMOBIEL-Supporto-Portatile-Universale-Compatibile/dp/B0C9R6QTDQ?th=1&linkCode=ll2&tag=l0c39-21"},
             {"name": "Organizer da Scrivania", "text": "Mantieni tutto in ordine e a portata di mano per non perdere la concentrazione.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
         ]
     },
