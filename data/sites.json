@@ -5,7 +5,7 @@
         "description": "I migliori gadget per rendere la tua cucina intelligente e funzionale.",
         "color": "orange",
         "products": [
-            {"name": "Friggitrice ad Aria Pro", "text": "Cucina sano senza rinunciare al gusto. Tecnologia a circolazione d'aria calda.", "category": "Elettrodomestici", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Friggitrice ad Aria COSORI", "text": "7,5L XXL con 10 funzioni, controllo preciso temperatura, cestello antiaderente e 65 ricette. Cottura sana con 90% meno grassi.", "category": "Elettrodomestici", "link": "https://www.amazon.it/COSORI-Friggitrice-Rivestimento-Resistenza-CAF-DC113S/dp/B0DPPT99LJ?th=1&linkCode=ll2&tag=l0c39-21"},
             {"name": "Robot da Cucina Smart", "text": "Tutto in uno: trita, impasta e cuoce. Il compagno perfetto per ogni ricetta.", "category": "Elettrodomestici", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
         ]
     },
