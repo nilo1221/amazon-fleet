@@ -15,7 +15,7 @@
         "description": "Rendi la tua casa intelligente con le ultime novità tech.",
         "color": "blue",
         "products": [
-            {"name": "Lampadine Smart RGB", "text": "Controlla l'atmosfera di casa tua direttamente dallo smartphone.", "category": "Illuminazione", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"},
+            {"name": "Lampadina LED Smart Oumida", "text": "Dimmerabile con controllo app, 9W equivalente a 90W, temperatura colore regolabile 2700K-6500K. Controllo vocale compatibile.", "category": "Illuminazione", "link": "https://www.amazon.it/Oumida-Inteligente-Dimmerabile-Equivalente-2700K-6500K/dp/B0FPQWLSBW?th=1&linkCode=ll2&tag=l0c39-21"},
             {"name": "Presa WiFi Intelligente", "text": "Monitora i consumi e programma l'accensione dei tuoi elettrodomestici.", "category": "Gadget", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
         ]
     },
@@ -86,7 +86,7 @@
         "color": "pink",
         "products": [
             {"name": "PC Gaming Greed Mk2", "text": "Potenza pura per il gaming estremo. Supporto Raytracing e prestazioni incredibili per ogni titolo AAA.", "category": "Gaming", "link": "https://www.amazon.it/Greed-Mk2-Computer-calcolatrice-Raytracing/dp/B0C1C9GNR9?tag=l0c39-21"},
-            {"name": "Monitor Gaming 144Hz", "text": "Fluidità assoluta per i tuoi giochi competitivi. Non perdere mai un frame.", "category": "Gaming", "link": "https://www.amazon.it/Greed-Mk2-Computer-calcolatrice-Raytracing/dp/B0C1C9GNR9?tag=l0c39-21"}
+            {"name": "Supporto Cuffie in Legno SHUOSUO", "text": "Elegante stand universale per cuffie gaming. Design in legno compatibile con tutte le marche: Sony, Bose, Sennheiser, Razer.", "category": "Gaming", "link": "https://www.amazon.it/SHUOSUO-Supporto-stoccaggio-compatibile-Sennheiser/dp/B0D268R35T?linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -96,7 +96,7 @@
         "color": "cyan",
         "products": [
             {"name": "Zaino Bagaglio a Mano 40x20x25", "text": "Perfetto per Ryanair e le compagnie low-cost. Compatto, resistente e capiente per i tuoi weekend fuori porta.", "category": "Viaggi", "link": "https://www.amazon.it/Bagaglio-40x20x25-Ryanair-Viaggio-Trekking/dp/B0BVQ5518V?tag=l0c39-21"},
-            {"name": "Zaino Bagaglio a Mano 40x20x25", "text": "Compatto e leggero, ideale per evitare costi aggiuntivi con Ryanair e EasyJet.", "category": "Viaggi", "link": "https://www.amazon.it/Bagaglio-40x20x25-Ryanair-Viaggio-Trekking/dp/B0BVQ5518V?tag=l0c39-21"}
+            {"name": "Zaino Trekking 20L Terra Peak", "text": "Ideale per hiking e avventure outdoor. Leggero, resistente all'acqua e comparto idratazione integrato.", "category": "Viaggi", "link": "https://www.amazon.it/Terra-Peak-Active-hiking-piccolo/dp/B092W249YL?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
