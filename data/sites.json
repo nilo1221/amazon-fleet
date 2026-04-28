@@ -46,7 +46,7 @@
         "color": "indigo",
         "products": [
             {"name": "Supporto Laptop MMOBIEL", "text": "Stand portatile in alluminio regolabile in altezza e angolazione. Ventilazione ottimale, compatibile con laptop 10-17 pollici.", "category": "Ufficio", "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=400&fit=crop", "link": "https://www.amazon.it/MMOBIEL-Supporto-Portatile-Universale-Compatibile/dp/B0C9R6QTDQ?th=1&linkCode=ll2&tag=l0c39-21"},
-            {"name": "Organizer da Scrivania", "text": "Mantieni tutto in ordine e a portata di mano per non perdere la concentrazione.", "category": "Ufficio", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Organizer da Scrivania", "text": "Mantieni tutto in ordine e a portata di mano per non perdere la concentrazione.", "category": "Ufficio", "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=400&fit=crop", "link": "https://www.amazon.it/dp/B08BHZNC2W?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -56,7 +56,7 @@
         "color": "yellow",
         "products": [
             {"name": "Treppiede Video SMALLRIG 186cm", "text": "Treppiede professionale in lega di alluminio con testa fluida, spargitore di livello e piastra sgancio rapido. Carico massimo 8kg per DSLR e videocamere.", "category": "Foto", "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop", "link": "https://www.amazon.it/gp/aw/d/B09WVBXZF9?linkCode=ll2&tag=l0c39-21"},
-            {"name": "Lenti Clip-on 4 in 1", "text": "Macro, Grandangolo e Fish-eye per esplorare nuovi stili fotografici.", "category": "Foto", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Occhiali da Lettura LUFF con Lenti d'Ingrandimento", "text": "Occhiali multifunzione 4 in 1: lettura, ingrandimento, lente di ingrandimento rimovibile. Ideali per lettura dettagliata e hobby di precisione.", "category": "Foto", "image": "https://images.unsplash.com/photo-1590422749897-3d1a7f4e7322?w=600&h=400&fit=crop", "link": "https://www.amazon.it/LUFF-Occhiali-lettura-occhiali-dingrandimento/dp/B0CL2336NR?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -66,7 +66,7 @@
         "color": "purple",
         "products": [
             {"name": "Distributore Cibo Automatico PUPPY KITTY", "text": "Dispenser smart con registratore vocale, programmazione fino a 6 pasti al giorno, 3L capacità. Monitora la nutrizione del tuo pet.", "category": "Animali", "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=400&fit=crop", "link": "https://www.amazon.it/PUPPY-KITTY-Distributore-Automatico-Registrazione/dp/B0DJVHYDNJ?th=1&linkCode=ll2&tag=l0c39-21"},
-            {"name": "Fontanella d'Acqua Filtrata", "text": "Acqua sempre fresca e pulita per incentivare l'idratazione.", "category": "Animali", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Fontanella per Gatti senza Fili Ricaricabile", "text": "Fontanella automatica wireless con filtro a carboni attivi. Pompa silenziosa, capacità 2L, ricaricabile USB. Acqua fresca e pulita sempre disponibile.", "category": "Animali", "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=400&fit=crop", "link": "https://www.amazon.it/Fontanella-Gatti-senza-Fili-Ricaricabile/dp/B0FND4DZZY?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
@@ -126,7 +126,7 @@
         "color": "emerald",
         "products": [
             {"name": "Lanterna LED da Campeggio Ricaricabile", "text": "Luce impermeabile portatile con 4 modalità illuminazione. Ricaricabile USB, ideale per campeggio, escursionismo e outdoor.", "category": "Outdoor", "link": "https://www.amazon.it/Campeggio-Ricaricabile-Portatile-Impermeabile-Escursionismo/dp/B0GCF3G4X2?linkCode=ll2&tag=l0c39-21"},
-            {"name": "Sacco a Pelo Termico", "text": "Comfort assicurato anche con le temperature più rigide.", "category": "Outdoor", "link": "https://www.amazon.it/dp/B08PC5Z3X6?tag=l0c39-21"}
+            {"name": "Sacco a Pelo Invernale QEZER -20°C", "text": "Sacco a pelo termico 1560g, comfort estremo fino a -20°C. Ideale per campeggio, escursioni e trekking. Impermeabile e traspirante.", "category": "Outdoor", "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&h=400&fit=crop", "link": "https://www.amazon.it/QEZER-invernale-20%E2%84%83%E3%80%901560g%E3%80%91caldo-campeggio-escursioni/dp/B0CXPPNL5C?th=1&linkCode=ll2&tag=l0c39-21"}
         ]
     },
     {
