@@ -8,52 +8,205 @@
     <!-- Analytics Placeholder -->
     <script async src="https://analytics.umami.is/script.js" data-website-id="YOUR_ID_HERE"></script>
     <style>
-        .product-card:hover { transform: translateY(-5px); }
+        .product-card:hover { transform: translateY(-8px) scale(1.02); }
+        .search-input:focus { box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .category-badge { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background: rgba(255,255,255,0.9); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+        .product-image { background: linear-gradient(45deg, #f3f4f6, #e5e7eb); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-    <header class="bg-white border-b py-8 mb-12 text-center shadow-sm">
-        <h1 class="text-4xl font-extrabold tracking-tight text-red-600">Vini & Sommelier</h1>
-        <p class="text-gray-500 mt-3 text-lg">Accessori per degustare i tuoi vini preferiti al meglio.</p>
+    <!-- Barra di Ricerca Globale -->
+    <div class="gradient-bg text-white py-4 px-6 shadow-lg sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="relative">
+                <input 
+                    type="text" 
+                    id="searchInput"
+                    placeholder="🔍 Cerca prodotti, categorie... (es: friggitrice, gaming, cucina)"
+                    class="search-input w-full px-6 py-4 rounded-2xl text-gray-800 text-lg font-medium bg-white/95 backdrop-blur-sm border-0 focus:outline-none transition-all"
+                >
+                <div id="searchResults" class="absolute top-full mt-2 w-full bg-white rounded-2xl shadow-2xl hidden max-h-96 overflow-y-auto"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-white border-b py-12 mb-12 text-center shadow-sm fade-in">
+        <h1 class="text-5xl font-extrabold tracking-tight text-red-600 mb-4">Vini & Sommelier</h1>
+        <p class="text-gray-500 text-xl max-w-2xl mx-auto leading-relaxed">Accessori per degustare i tuoi vini preferiti al meglio.</p>
+        <div class="mt-6 flex justify-center gap-3 flex-wrap">
+            <span class="category-badge bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold">
+                2 Prodotti Selezionati
+            </span>
+            <span class="category-badge bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
+                ✓ Spedizione Amazon
+            </span>
+        </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 grid gap-10 md:grid-cols-2">
+    <main class="max-w-6xl mx-auto px-6 grid gap-8 md:grid-cols-2 fade-in">
         
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 product-card transition-all duration-300">
-            <div class="bg-gray-100 h-56 rounded-xl mb-6 flex items-center justify-center text-gray-400 overflow-hidden">
+        <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 product-card transition-all duration-500 hover:shadow-2xl">
+            <!-- Immagine Prodotto -->
+            <div class="product-image h-64 rounded-2xl mb-6 flex items-center justify-center text-gray-500 overflow-hidden relative">
                 
-                <span class="text-sm font-medium uppercase tracking-wider text-gray-500">Cucina</span>
+                <div class="text-center">
+                    <div class="text-4xl mb-3">🛍️</div>
+                    <span class="text-lg font-bold uppercase tracking-wider text-gray-600">Cucina</span>
+                </div>
                 
+                <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                    Cucina
+                </div>
             </div>
-            <h2 class="text-2xl font-bold mb-3 text-gray-800">Cavatappi Elettrico GHB USB Ricaricabile</h2>
-            <p class="text-gray-600 mb-6 leading-relaxed">Apribottiglie elettrico professionale USB ricaricabile. Include tagliacarte, versatore, tappo di tenuta e tappo per vuoto. Regalo perfetto per uomini, papà e amanti del vino.</p>
-            <a href="https://www.amazon.it/GHB-Ricaricabile-Apribottiglie-Professionale-Inossidabile/dp/B0BB5R5KDX?th=1&linkCode=ll2&tag=l0c39-21" rel="noreferrer" class="block w-full bg-red-500 hover:bg-red-600 text-white text-center py-3 rounded-xl font-bold text-lg transition-colors">
-                Scopri su Amazon
-            </a>
+            
+            <!-- Contenuto Prodotto -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-gray-800 leading-tight">Cavatappi Elettrico GHB USB Ricaricabile</h2>
+                <p class="text-gray-600 leading-relaxed text-lg">Apribottiglie elettrico professionale USB ricaricabile. Include tagliacarte, versatore, tappo di tenuta e tappo per vuoto. Regalo perfetto per uomini, papà e amanti del vino.</p>
+                
+                <!-- Badge Features -->
+                <div class="flex gap-2 flex-wrap">
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-xs font-semibold">
+                        ✓ Disponibilità Immediata
+                    </span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-semibold">
+                        ✓ Spedizione Prime
+                    </span>
+                    <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-lg text-xs font-semibold">
+                        ✓ Garanzia Amazon
+                    </span>
+                </div>
+                
+                <!-- Pulsante Amazon -->
+                <a href="https://www.amazon.it/GHB-Ricaricabile-Apribottiglie-Professionale-Inossidabile/dp/B0BB5R5KDX?th=1&linkCode=ll2&tag=l0c39-21" rel="noreferrer" class="block w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-center py-4 rounded-2xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+                    🛒 Compra su Amazon
+                </a>
+            </div>
         </div>
         
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 product-card transition-all duration-300">
-            <div class="bg-gray-100 h-56 rounded-xl mb-6 flex items-center justify-center text-gray-400 overflow-hidden">
+        <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 product-card transition-all duration-500 hover:shadow-2xl">
+            <!-- Immagine Prodotto -->
+            <div class="product-image h-64 rounded-2xl mb-6 flex items-center justify-center text-gray-500 overflow-hidden relative">
                 
-                <span class="text-sm font-medium uppercase tracking-wider text-gray-500">Cucina</span>
+                <div class="text-center">
+                    <div class="text-4xl mb-3">🛍️</div>
+                    <span class="text-lg font-bold uppercase tracking-wider text-gray-600">Cucina</span>
+                </div>
                 
+                <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                    Cucina
+                </div>
             </div>
-            <h2 class="text-2xl font-bold mb-3 text-gray-800">Decanter Krosno Essence Collection 750ml</h2>
-            <p class="text-gray-600 mb-6 leading-relaxed">Decanter vino angolato 750ml in cristallo alta qualità, realizzato a mano. Design elegante obliquo ideale per aerazione vino rosso. Artigianato europeo.</p>
-            <a href="https://www.amazon.it/Krosno-Collection-realizzato-laerazione-artigianato/dp/B0CX9FM2Q4?th=1&linkCode=ll2&tag=l0c39-21" rel="noreferrer" class="block w-full bg-red-500 hover:bg-red-600 text-white text-center py-3 rounded-xl font-bold text-lg transition-colors">
-                Scopri su Amazon
-            </a>
+            
+            <!-- Contenuto Prodotto -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-gray-800 leading-tight">Decanter Krosno Essence Collection 750ml</h2>
+                <p class="text-gray-600 leading-relaxed text-lg">Decanter vino angolato 750ml in cristallo alta qualità, realizzato a mano. Design elegante obliquo ideale per aerazione vino rosso. Artigianato europeo.</p>
+                
+                <!-- Badge Features -->
+                <div class="flex gap-2 flex-wrap">
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-xs font-semibold">
+                        ✓ Disponibilità Immediata
+                    </span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-semibold">
+                        ✓ Spedizione Prime
+                    </span>
+                    <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-lg text-xs font-semibold">
+                        ✓ Garanzia Amazon
+                    </span>
+                </div>
+                
+                <!-- Pulsante Amazon -->
+                <a href="https://www.amazon.it/Krosno-Collection-realizzato-laerazione-artigianato/dp/B0CX9FM2Q4?th=1&linkCode=ll2&tag=l0c39-21" rel="noreferrer" class="block w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-center py-4 rounded-2xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+                    🛒 Compra su Amazon
+                </a>
+            </div>
         </div>
         
     </main>
 
-    <footer class="mt-24 py-12 border-t bg-white text-center text-sm text-gray-400 px-6">
-        <div class="max-w-3xl mx-auto">
-            <p class="mb-6 italic leading-relaxed">"In qualità di Affiliato Amazon, ricevo un guadagno per ciascun acquisto idoneo. Questo sito partecipa al Programma Affiliazione Amazon EU, un programma di affiliazione che consente ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.it."</p>
-            <p class="font-medium">&copy; 2026 Vini & Sommelier - Recensioni e Consigli indipendenti.</p>
+    <footer class="mt-24 py-16 border-t bg-gradient-to-br from-gray-50 to-gray-100 text-center text-gray-600 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">🛍️ Vini & Sommelier</h3>
+                <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                    Scopri i migliori prodotti selezionati per te. Ogni articolo è stato testato e approvato per garantirti la migliore esperienza d'acquisto su Amazon.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-white p-4 rounded-xl shadow-sm">
+                    <div class="text-2xl mb-2">🚚</div>
+                    <div class="text-sm font-semibold">Spedizione Veloce</div>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm">
+                    <div class="text-2xl mb-2">🛡️</div>
+                    <div class="text-sm font-semibold">Garanzia Amazon</div>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm">
+                    <div class="text-2xl mb-2">⭐</div>
+                    <div class="text-sm font-semibold">Prodotti Top</div>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm">
+                    <div class="text-2xl mb-2">💰</div>
+                    <div class="text-sm font-semibold">Prezzi Minimi</div>
+                </div>
+            </div>
+            
+            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl mb-6">
+                <p class="text-sm leading-relaxed text-gray-600">
+                    <strong>Disclaimer Affiliazione:</strong> In qualità di Affiliato Amazon, ricevo un guadagno per ciascun acquisto idoneo. 
+                    Questo sito partecipa al Programma Affiliazione Amazon EU, un programma che consente ai siti di percepire una commissione 
+                    pubblicitaria pubblicizzando e fornendo link al sito Amazon.it.
+                </p>
+            </div>
+            
+            <p class="text-sm font-medium text-gray-500">
+                &copy; 2026 Vini & Sommelier - Tutti i diritti riservati | Powered by Amazon Associates
+            </p>
         </div>
     </footer>
+
+    <!-- JavaScript per Ricerca -->
+    <script>
+        // Ricerca semplice con placeholder
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const resultsDiv = document.getElementById('searchResults');
+            
+            if (searchInput && resultsDiv) {
+                searchInput.addEventListener('input', function(e) {
+                    const query = e.target.value.trim();
+                    
+                    if (query.length < 2) {
+                        resultsDiv.classList.add('hidden');
+                        return;
+                    }
+                    
+                    // Mostra placeholder per ricerca
+                    resultsDiv.innerHTML = `
+                        <div class="p-6 text-center text-gray-500">
+                            <div class="text-2xl mb-2">�</div>
+                            <p>Cerca "${query}" nei prodotti...</p>
+                            <p class="text-sm mt-2">Usa i link qui sotto per navigare</p>
+                        </div>
+                    `;
+                    resultsDiv.classList.remove('hidden');
+                });
+                
+                // Chiudi risultati quando si clicca fuori
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('#searchInput') && !e.target.closest('#searchResults')) {
+                        resultsDiv.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
