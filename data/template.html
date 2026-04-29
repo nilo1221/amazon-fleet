@@ -3,7 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    <title>{{title}} | Migliori Prodotti Amazon 2026 | Recensioni e Offerte</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{description}}. Scopri i migliori prodotti su Amazon con recensioni dettagliate, offerte esclusive e confronti prezzi. Acquisti sicuri con spedizione Prime.">
+    <meta name="keywords" content="{{title}}, amazon, prodotti, recensioni, offerte, acquisti, spedizione prime, migliori prezzi">
+    <meta name="author" content="Smart Choices Guide">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-choices-guide.vercel.app/">
+    <meta property="og:title" content="{{title}} | Migliori Prodotti Amazon">
+    <meta property="og:description" content="{{description}}. Scopri offerte esclusive e recensioni dettagliate.">
+    <meta property="og:image" content="https://smart-choices-guide.vercel.app/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://smart-choices-guide.vercel.app/">
+    <meta property="twitter:title" content="{{title}} | Amazon Products">
+    <meta property="twitter:description" content="{{description}}. Prodotti top con recensioni.">
+    <meta property="twitter:image" content="https://smart-choices-guide.vercel.app/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-choices-guide.vercel.app/">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "{{title}}",
+      "description": "{{description}}",
+      "url": "https://smart-choices-guide.vercel.app/",
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": "{{products|length}}",
+        "itemListElement": [
+          {% for product in products %}
+          {
+            "@type": "Product",
+            "position": "{{loop.index}}",
+            "name": "{{product.name}}",
+            "description": "{{product.text}}",
+            "url": "{{product.link}}"
+          }{% if not loop.last %},{% endif %}
+          {% endfor %}
+        ]
+      }
+    }
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Analytics Placeholder -->
     <script async src="https://analytics.umami.is/script.js" data-website-id="YOUR_ID_HERE"></script>
