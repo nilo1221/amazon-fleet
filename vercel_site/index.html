@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Choices Guide - Le Migliori Guide di Acquisto</title>
+    <meta name="description" content="Scopri le migliori guide specializzate per ogni categoria di prodotti Amazon.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #FF6B35;
+            --secondary-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 50%, #FFB800 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        
+        .site-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+        
+        .site-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            background: white;
+        }
+        
+        .site-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .site-header {
+            padding: 30px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .site-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .site-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .site-content {
+            padding: 30px;
+        }
+        
+        .badge-category {
+            background: linear-gradient(45deg, #FF6B35, #FF9500);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .site-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .site-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .site-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--secondary-color);
+            border-radius: 10px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .btn-site {
+            background: linear-gradient(45deg, var(--primary-color), #FF9500);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .btn-site:hover {
+            background: linear-gradient(45deg, #FF5722, var(--primary-color));
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+        
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .site-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Smart Choices Guide</h1>
+            <p class="lead mb-4">Scopri le migliori guide specializzate per ogni categoria di prodotti Amazon</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="badge-category">
+                            <i class="fas fa-star me-1"></i>12 Siti Specializzati
+                        </span>
+                        <span class="badge-category">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="badge-category">
+                            <i class="fas fa-shield-alt me-1"></i>Prodotti Verificati
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sites Section -->
+    <section id="sites" class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-5 fw-bold mb-4">
+                    <i class="fas fa-th-large me-3"></i>
+                    Esplora le Nostre Guide
+                </h2>
+                <p class="lead text-muted">
+                    Scopri siti specializzati per ogni categoria di prodotti
+                </p>
+            </div>
+        </div>
+        
+        <div class="site-grid" id="sitesGrid">
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #FF8C42, #eb782e);">
+                    <div class="site-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Cucina Moderna & Tech</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Elettrodomestici
+                    </span>
+                    <h4 class="site-title">Cucina Moderna & Tech</h4>
+                    <p class="site-description">I migliori gadget per rendere la tua cucina intelligente e funzionale.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_1/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #0984E3, #0070cf);">
+                    <div class="site-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Smart Home & Domotica</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Illuminazione
+                    </span>
+                    <h4 class="site-title">Smart Home & Domotica</h4>
+                    <p class="site-description">Rendi la tua casa intelligente con le ultime novità tech.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_2/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #E74C3C, #FF6B35);">
+                    <div class="site-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Fitness Casa</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Sport
+                    </span>
+                    <h4 class="site-title">Fitness Casa</h4>
+                    <p class="site-description">Tutto l'occorrente per un allenamento professionale e sicuro direttamente a casa tua.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_3/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #27AE60, #2ECC71);">
+                    <div class="site-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Giardinaggio Urbano</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Giardino
+                    </span>
+                    <h4 class="site-title">Giardinaggio Urbano</h4>
+                    <p class="site-description">Crea il tuo angolo verde anche in città.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_4/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #5D6D7E, #34495E);">
+                    <div class="site-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Ufficio Produttivo</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Ufficio
+                    </span>
+                    <h4 class="site-title">Ufficio & Lavoro</h4>
+                    <p class="site-description">Tutto l'occorrente per un ufficio efficiente e produttivo.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_5/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #8E44AD, #9B59B6);">
+                    <div class="site-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Fotografia Mobile</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Foto
+                    </span>
+                    <h4 class="site-title">Fotografia Mobile</h4>
+                    <p class="site-description">Scatta foto professionali con il tuo smartphone.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_6/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #E67E22, #27AE60);">
+                    <div class="site-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>Pet Care Intelligente</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Animali
+                    </span>
+                    <h4 class="site-title">Pet Care Intelligente</h4>
+                    <p class="site-description">I migliori accessori per il benessere dei tuoi amici a quattro zampe.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_7/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #8B4513, #A0522D);">
+                    <div class="site-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Cura della Macchina da Caffè</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Caffè & Tè
+                    </span>
+                    <h4 class="site-title">Cucina Caffè</h4>
+                    <p class="site-description">Le migliori macchine per caffè espresso, cappuccini e bevande calde. Dalle moka classiche alle superautomatiche moderne.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">1</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_8/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #6C5CE7, #9D4EDD);">
+                    <div class="site-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Elite Gaming Gear</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Gaming
+                    </span>
+                    <h4 class="site-title">Elite Gaming Gear</h4>
+                    <p class="site-description">Porta la tua esperienza di gioco al livello successivo con il meglio dell'hardware.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_9/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #3498DB, #2980B9);">
+                    <div class="site-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Viaggi Organizzati</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Viaggi
+                    </span>
+                    <h4 class="site-title">Viaggi Organizzati</h4>
+                    <p class="site-description">Gadget indispensabili per chi è sempre in movimento.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_10/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #3498DB, #2980B9);">
+                    <div class="site-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Libri & E-Reader</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Kindle
+                    </span>
+                    <h4 class="site-title">Libri & E-Reader</h4>
+                    <p class="site-description">I migliori Kindle, audiolibri e accessori per la tua esperienza di lettura digitale.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_11/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #E91E63, #9B59B6);">
+                    <div class="site-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Bellezza & Skincare</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Skincare
+                    </span>
+                    <h4 class="site-title">Bellezza & Skincare</h4>
+                    <p class="site-description">I migliori prodotti skincare, makeup e accessori per la tua beauty routine.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_12/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #2C3E50, #000000);">
+                    <div class="site-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Moda Economica</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Abbigliamento
+                    </span>
+                    <h4 class="site-title">Moda Economica</h4>
+                    <p class="site-description">I migliori capi di moda trendy a prezzi accessibili. Abbigliamento e accessori per uno stile unico senza spendere una fortuna.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_13/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #E91E63, #FFD700);">
+                    <div class="site-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Oggetti per Casa & Decorazione</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Casa & Decorazione
+                    </span>
+                    <h4 class="site-title">Oggetti per Casa & Decorazione</h4>
+                    <p class="site-description">Oggetti per Casa & Decorazione - Quadri, Stampe, Oggetti Decorativi. I migliori prodotti per abbellire la tua casa con quadri moderni, stampe d'arte e oggetti decorativi di design.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_14/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-card">
+                <div class="site-header" style="background: linear-gradient(45deg, #3498DB, #2ECC71);">
+                    <div class="site-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Viaggi Economici</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Viaggi Low-Cost
+                    </span>
+                    <h4 class="site-title">Viaggi Economici</h4>
+                    <p class="site-description">I migliori zaini e bagagli per viaggi economici. Zaini Ryanair, bagagli a mano e accessori per viaggiare low-cost.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.5⭐</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Spedizione</div>
+                        </div>
+                    </div>
+                    
+                    <a href="site_15/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <div class="feature-box">
+                    <i class="fas fa-star fa-3x mb-3 text-warning"></i>
+                    <h4>Prodotti Selezionati</h4>
+                    <p>Solo i migliori prodotti con recensioni verificate</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="feature-box">
+                    <i class="fas fa-shipping-fast fa-3x mb-3 text-info"></i>
+                    <h4>Spedizione Gratuita</h4>
+                    <p>Tutti i prodotti con spedizione Prime gratuita</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="feature-box">
+                    <i class="fas fa-shield-alt fa-3x mb-3 text-success"></i>
+                    <h4>Acquisti Sicuri</h4>
+                    <p>Acquisti protetti tramite Amazon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function showLoading() {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').style.display = 'none';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

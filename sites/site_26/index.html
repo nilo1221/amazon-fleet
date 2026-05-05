@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grilling & BBQ - Smart Choices Guide</title>
+    <meta name="description" content="Diventa il re della griglia nel tuo giardino.">
+    <meta name="keywords" content="amazon, prodotti, recensioni, grilling & bbq">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #FF8C42;
+            --secondary-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), #2c3e50);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .btn-amazon {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-amazon:hover {
+            background-color: #ff7700;
+            transform: scale(1.05);
+        }
+        
+        .category-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Grilling & BBQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Grilling & BBQ</h1>
+            <p class="lead mb-4">Diventa il re della griglia nel tuo giardino.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-8 mx-auto mb-4">
+                <div class="product-card card">
+                    <div class="card-body p-0">
+                        <img src="site_26_product_1.png" alt="Termometro Carne Wi-Fi Meatmeet" class="product-image">
+                        <div class="p-4">
+                            <h3 class="card-title fw-bold">Termometro Carne Wi-Fi Meatmeet</h3>
+                            <span class="category-badge mb-3 d-inline-block">
+                                Cucina
+                            </span>
+                            <p class="card-text text-muted">Sonda wireless a lungo raggio per forno, grill, friggitrice ad aria, barbecue. Doppi sensori, IP67 impermeabile. Controlla la cottura perfetta dal tuo smartphone.</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/gp/aw/d/B0F2DJ4ZWM?linkCode=ll2&tag=l0c39-21" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Scopri su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-8 mx-auto mb-4">
+                <div class="product-card card">
+                    <div class="card-body p-0">
+                        <img src="site_26_product_2.png" alt="Set Posate KARL HAUSMANN 72 Pezzi 12 Persone" class="product-image">
+                        <div class="p-4">
+                            <h3 class="card-title fw-bold">Set Posate KARL HAUSMANN 72 Pezzi 12 Persone</h3>
+                            <span class="category-badge mb-3 d-inline-block">
+                                Cucina
+                            </span>
+                            <p class="card-text text-muted">Set posate 72 pezzi in acciaio inox 18/0 per 12 persone, con valigetta. Include coltelli, forchette, cucchiai e posate da servizio. Lucido, lavabili in lavastoviglie.</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/KARL-HAUSMANN-Posate-Acciaio-Inox/dp/B0C5XH1WVW?linkCode=ll2&tag=l0c39-21" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Scopri su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+            <div class="mt-3">
+                <a href="../index.html" class="text-white me-3">
+                    <i class="fas fa-home me-1"></i>Torna alla Home
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Analytics e Performance -->
+    <script>
+        // Lazy loading per immagini
+        document.addEventListener('DOMContentLoaded', function() {{
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {{
+                img.loading = 'lazy';
+            }});
+        }});
+        
+        // Tracciamento click Amazon
+        document.querySelectorAll('.btn-amazon').forEach(btn => {{
+            btn.addEventListener('click', function() {{
+                console.log('Click Amazon:', this.href);
+                // Qui puoi aggiungere Google Analytics o altri tracker
+            }});
+        }});
+    </script>
+</body>
+</html>

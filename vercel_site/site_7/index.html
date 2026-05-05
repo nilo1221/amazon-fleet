@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Intelligente - Smart Choices Guide</title>
+    <meta name="description" content="I migliori accessori per il benessere dei tuoi amici a quattro zampe.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #E67E22;
+            --secondary-color: #f8f9fa;
+            --accent-color: #FF6B35;
+            --success-color: #27AE60;
+            --warm-color: #F39C12;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #E67E22 0%, #F39C12 50%, #27AE60 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(230, 126, 34, 0.3);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            margin-bottom: 30px;
+            background: white;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(230, 126, 34, 0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 100%);
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #FF5722 0%, #FF6B35 100%);
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+        }
+        
+        .no-images {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .no-images i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Pet Care Intelligente</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Pet Care Intelligente</h1>
+            <p class="lead mb-4">I migliori accessori per il benessere dei tuoi amici a quattro zampe.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <h3 class="card-title fw-bold">Mewaii Peluche Gatto Giocattolo</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Pet Care
+                        </span>
+                        <p class="card-text text-muted">Mewaii Peluche Gatto Giocattolo - Peluche di alta qualità perfetto per abbracci e regali. Design adorabile con materiali morbidissimi e sicuri. Ideale per bambini e adulti, perfetto come regalo di compleanno. Facile da pulire, resistente e durevole. Dimensioni perfette per coccole e confort.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Mewaii-Peluche-Giocattolo-Abbraccio-Compleanno/dp/B0D8KB7B85?crid=2KJMCQ3LJT8HB&dib=eyJ2IjoiMSJ9.mo1IOA6fN-j1XYNq0FtwNQ3aouL4NmhajFOuLM-LMCjPTDyjwH8004pfgIlJYWa_rfUEGF6VSlmkTqHodJMNWv_17XEYYx8RyfstGNtEQKJpAPS0WhAQ-mz35ChVsqHGFoIr8pa9oki5jLig4GrsKQVAvyxZGsDVZXzKzRW5P4s-Qrq2bfIkw6Ik0Jmn7-8qBY6y5CONrmZLi5X4rCd6g64F5G64HyLoGpeZ54aokiMx3t6UneeE9cQP1FoGO9tabUX9FrN0KmEqycOXSjSaOjxYo7cPvj6RYdv7W52a6u0.IQoEnYMTEOg_p_gG459xVhJSbur-v_BaSwuUuR-Kml8&dib_tag=se&keywords=gatto%2Bpeluche&qid=1777898104&sprefix=gatt%2Caps%2C161&sr=8-1-spons&aref=QqMR8STFkS&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=79c734f76c899355a45b5ccd063befc1&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Amazon
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <h3 class="card-title fw-bold">Fontanella per Gatti senza Fili Ricaricabile</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Accessori Gatti
+                        </span>
+                        <p class="card-text text-muted">Fontanella per Gatti senza Fili Ricaricabile - Fontanella intelligente con acqua corrente per idratazione continua. Design silenzioso, batteria ricaricabile di lunga durata. Sistema di filtrazione a 3 stadi per acqua pulita e fresca. Capacità 2L, perfetta per 1-2 gatti. Facile da pulire, senza fili, portatile ovunque.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Fontanella-Gatti-senza-Fili-Ricaricabile/dp/B0FND4DZZY?crid=UVM7IEKV0S47&dib=eyJ2IjoiMSJ9.io0GoqqTxJUPa5vMBUOnynGVNTGP2hTt2o8eZtCQrwKAwt0tqJDgDFoCx_foZDJXqF9YyLIb0EkBqiGzqX-YM3iDO-WQvTEDrqdDv9JKsTLVaF40RNHhQUfCzVr4z1or9OaS8ETeFmAl7PP55Ov94WAeSzhx2WJGKoXU0LtDHBSuDNkdv_xvHnD-f8CIl4DqLfoU_Alp8I0x_qYySfEb4NDDQoPFZ4-AA6faE5Uvsy-jIRpAYQl-iVUjI0xMqkLKo45EWwN6npp1SnsQWbC9ukD4Ea4y2nkwqKgSopv4BfQ.v3RrlAq9fhgH974EurkZhKS-EvAwSgBrGEe4kxQFwks&dib_tag=se&keywords=gatti%2Baccessori&qid=1777898230&sprefix=gatti%2B%2B%2B%2Caps%2C135&sr=8-2-spons&aref=SHGKSShSKZ&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=3dc65170088ae51a451c2569713d68cb&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Amazon
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+            <div class="mt-3">
+                <a href="../index.html" class="text-white me-3">
+                    <i class="fas fa-home me-1"></i>Torna alla Home
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

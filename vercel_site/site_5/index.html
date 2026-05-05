@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ufficio Produttivo - Smart Choices Guide</title>
+    <meta name="description" content="Configura il tuo workspace per la massima efficienza.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #5D6D7E;
+            --secondary-color: #f8f9fa;
+            --accent-color: #FF6B35;
+            --success-color: #28A745;
+            --professional-color: #2C3E50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #2C3E50 0%, #5D6D7E 50%, #FF6B35 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(44, 62, 80, 0.3);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            margin-bottom: 30px;
+            background: white;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(93, 109, 126, 0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 100%);
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #FF5722 0%, #FF6B35 100%);
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #5D6D7E 0%, #85929E 100%);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(93, 109, 126, 0.3);
+        }
+        
+        .no-images {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .no-images i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Ufficio Produttivo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Ufficio Produttivo</h1>
+            <p class="lead mb-4">Configura il tuo workspace per la massima efficienza.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <h3 class="card-title fw-bold">Multipresa Interruttori Indipendenti Salvaspazio Sovratensione</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Elettronica Ufficio
+                        </span>
+                        <p class="card-text text-muted">Multipresa con interruttori indipendenti, design salvaspazio, protezione da sovratensione. Ideale per ufficio e casa, permette di collegare più dispositivi contemporaneamente con controllo individuale. Protezione avanzata da sovratensione per sicurezza dei tuoi dispositivi. Design compatto e moderno.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Multipresa-Interruttori-Indipendenti-Salvaspazio-Sovratensione/dp/B0DBZY7T1V?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZQ8HUJ0XYNS1&dib=eyJ2IjoiMSJ9.Es9U-zdZ_r3VAQXcZ30ZhFV_9bKjevhLazkd7_YKOhEwVKbPL7WamqeAavpgIE5_EYB_zKap4Xt4Iv_ApviyI_9H8q8ApHbIze0ZVclD8k4110oPnhbN_gKydGqU81lRbkul_VXQpHC4Wa_sJzdhH0e-aiWbwAlo0rLiLA3AvhpsDARarFVkBAAkJUy7PQepDnM2fqdsrer6X-28lMcTvfywPHPT7kvofLSgwmajrmF33IgmdW93t9y1_Va6nzvUoA8CyypDerJthzJ6Ekqx-Juf2RVqT6UorVgoeiqOI6U.k4eisNFSm_n9bt-TODDmfTgnJVySBfVVxYBc1Ig1ajE&dib_tag=se&keywords=ufficio&qid=1777895583&sprefix=ufficio%2Caps%2C291&sr=8-4&th=1&linkCode=ll2&tag=l0c39-21&linkId=fd3f763939280e8fbdda36f011d65c28&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Amazon
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <h3 class="card-title fw-bold">NEWYES Cartellina conferenze Portafoglio</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Accessori Ufficio
+                        </span>
+                        <p class="card-text text-muted">NEWYES Cartellina conferenze Portafoglio - Cartellina professionale per conferenze e riunioni. Design elegante con scomparti multipli per documenti, penne e accessori. Materiale di alta qualità resistente all'acqua. Perfetta per professionisti che necessitano di organizzazione efficiente durante presentazioni e incontri di lavoro.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/NEWYES-Cartellina-conferenze-Portafoglio-portafoglio/dp/B09KNB5P3G?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&content-id=amzn1.sym.95ba151b-8273-4002-ad46-a207e6eca9cf%3Aamzn1.sym.95ba151b-8273-4002-ad46-a207e6eca9cf&crid=ZQ8HUJ0XYNS1&cv_ct_cx=ufficio&keywords=ufficio&pd_rd_i=B09KNB5P3G&pd_rd_r=00612ac7-a9e2-4f78-b30b-ceb5950cabca&pd_rd_w=NSi6j&pd_rd_wg=4Fb4C&pf_rd_p=95ba151b-8273-4002-ad46-a207e6eca9cf&pf_rd_r=3S2RRSFFBB7PB55K73HS&qid=1777895583&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=ufficio%2Caps%2C291&sr=1-1-50840d04-82cc-4adf-b6cc-9f330c77868e-spons&aref=00LzaQTc2b&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=l0c39-21&linkId=2b40a072902c4d8ef69c43ef0143f52a&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Amazon
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+            <div class="mt-3">
+                <a href="../index.html" class="text-white me-3">
+                    <i class="fas fa-home me-1"></i>Torna alla Home
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
