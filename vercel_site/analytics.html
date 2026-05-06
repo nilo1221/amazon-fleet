@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Analytics - Smart Choices Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .dashboard-header {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 100%);
+            color: white;
+            padding: 30px 0;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FF6B35;
+        }
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .site-row {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .site-row:last-child {
+            border-bottom: none;
+        }
+        .site-name {
+            font-weight: 600;
+        }
+        .product-count {
+            background: #FF6B35;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="container">
+            <h1 class="fw-bold"><i class="fas fa-chart-line me-3"></i>Dashboard Analytics</h1>
+            <p class="mb-0">Statistiche complete del sito Smart Choices Guide</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Summary Stats -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="stat-card text-center">
+                    <div class="stat-number">21</div>
+                    <div class="stat-label">Siti Totali</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card text-center">
+                    <div class="stat-number">218</div>
+                    <div class="stat-label">Prodotti Totali</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card text-center">
+                    <div class="stat-number">327</div>
+                    <div class="stat-label">Clic Amazon (Apr-Mag)</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card text-center">
+                    <div class="stat-number">0%</div>
+                    <div class="stat-label">Conversione</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row 1 -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="chart-container">
+                    <h3 class="chart-title"><i class="fas fa-boxes me-2"></i>Prodotti per Sito</h3>
+                    <canvas id="productsChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="chart-container">
+                    <h3 class="chart-title"><i class="fas fa-mouse-pointer me-2"></i>Clic per Categoria Amazon</h3>
+                    <canvas id="clicksChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row 2 -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="chart-container">
+                    <h3 class="chart-title"><i class="fas fa-tags me-2"></i>Distribuzione Categorie</h3>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="chart-container">
+                    <h3 class="chart-title"><i class="fas fa-chart-bar me-2"></i>Traffico Giornaliero</h3>
+                    <canvas id="trafficChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Site Table -->
+        <div class="chart-container">
+            <h3 class="chart-title"><i class="fas fa-list me-2"></i>Dettaglio Prodotti per Sito</h3>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Sito</th>
+                            <th>Categoria</th>
+                            <th>Prodotti</th>
+                            <th>Stato</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="site-name">site_1 - Cucina Moderna</td>
+                            <td>Elettrodomestici</td>
+                            <td><span class="product-count">12</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_2 - Smart Home</td>
+                            <td>Illuminazione</td>
+                            <td><span class="product-count">8</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_3 - Fitness Casa</td>
+                            <td>Sport</td>
+                            <td><span class="product-count">14</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_4 - Giardinaggio Urbano</td>
+                            <td>Giardino</td>
+                            <td><span class="product-count">4</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_5 - Ufficio Produttivo</td>
+                            <td>Ufficio</td>
+                            <td><span class="product-count">8</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_6 - Fotografia Mobile</td>
+                            <td>Foto</td>
+                            <td><span class="product-count">4</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_7 - Pet Care Intelligente</td>
+                            <td>Animali</td>
+                            <td><span class="product-count">4</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_8 - Cucina Caffè</td>
+                            <td>Caffè & Tè</td>
+                            <td><span class="product-count">9</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_9 - Elite Gaming Gear</td>
+                            <td>Gaming</td>
+                            <td><span class="product-count">13</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_10 - Viaggi Organizzati</td>
+                            <td>Viaggi</td>
+                            <td><span class="product-count">9</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_11 - Abbigliamento Cinema & TV</td>
+                            <td>Cinema & TV</td>
+                            <td><span class="product-count">17</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_12 - Libri & E-Reader</td>
+                            <td>Kindle</td>
+                            <td><span class="product-count">8</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_13 - Bellezza & Skincare</td>
+                            <td>Skincare</td>
+                            <td><span class="product-count">11</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_14 - Benessere & Relax</td>
+                            <td>Benessere</td>
+                            <td><span class="product-count">5</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_15 - Viaggi Economici</td>
+                            <td>Viaggi Low-Cost</td>
+                            <td><span class="product-count">3</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_16 - Moda Donna</td>
+                            <td>Abbigliamento Lusso</td>
+                            <td><span class="product-count">9</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_17 - Moda Uomo</td>
+                            <td>Moda Maschile</td>
+                            <td><span class="product-count">22</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_18 - Accessori Moda</td>
+                            <td>Accessori</td>
+                            <td><span class="product-count">12</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_19 - Oggetti Casa & Decor</td>
+                            <td>Casa & Decorazione</td>
+                            <td><span class="product-count">7</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_20 - Smartphone & Tech</td>
+                            <td>Tech</td>
+                            <td><span class="product-count">8</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                        <tr>
+                            <td class="site-name">site_21 - Viaggi Economici 2</td>
+                            <td>Viaggi Low-Cost</td>
+                            <td><span class="product-count">7</span></td>
+                            <td><i class="fas fa-check-circle text-success"></i> OK</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Amazon Traffic Summary -->
+        <div class="chart-container">
+            <h3 class="chart-title"><i class="fab fa-amazon me-2"></i>Riepilogo Traffico Amazon (29 Apr - 2 Mag 2026)</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-2"><strong>Totale Clic:</strong> 327</p>
+                    <p class="mb-2"><strong>Conversione:</strong> 0%</p>
+                    <p class="mb-2"><strong>Guadagni:</strong> €0,00</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-2"><strong>Top Categoria:</strong> Unknown (75 clic)</p>
+                    <p class="mb-2"><strong>Seconda:</strong> Cucina (57 clic)</p>
+                    <p class="mb-2"><strong>Terza:</strong> Abbigliamento (45 clic)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center py-4">
+            <p class="text-muted">Dashboard privata - Smart Choices Guide</p>
+            <p class="text-muted small">Ultimo aggiornamento: 6 Maggio 2026</p>
+        </div>
+    </div>
+
+    <script>
+        // Products per Site Chart
+        const productsCtx = document.getElementById('productsChart').getContext('2d');
+        new Chart(productsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['site_1', 'site_2', 'site_3', 'site_4', 'site_5', 'site_6', 'site_7', 'site_8', 'site_9', 'site_10', 'site_11', 'site_12', 'site_13', 'site_14', 'site_15', 'site_16', 'site_17', 'site_18', 'site_19', 'site_20', 'site_21'],
+                datasets: [{
+                    label: 'Prodotti',
+                    data: [12, 8, 14, 4, 8, 4, 4, 9, 13, 9, 17, 8, 11, 5, 3, 9, 22, 12, 7, 8, 7],
+                    backgroundColor: 'rgba(255, 107, 53, 0.8)',
+                    borderColor: 'rgba(255, 107, 53, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Clicks per Category Chart
+        const clicksCtx = document.getElementById('clicksChart').getContext('2d');
+        new Chart(clicksCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Unknown', 'Cucina', 'Abbigliamento', 'Casa', 'Sport', 'Fai da te', 'Computer', 'Valigeria', 'Foto', 'Salute', 'Animali'],
+                datasets: [{
+                    label: 'Clic',
+                    data: [75, 57, 45, 32, 26, 22, 21, 18, 13, 11, 10],
+                    backgroundColor: [
+                        'rgba(255, 107, 53, 0.8)',
+                        'rgba(255, 159, 64, 0.8)',
+                        'rgba(255, 205, 86, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(153, 102, 255, 0.8)',
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(199, 199, 199, 0.8)',
+                        'rgba(83, 102, 255, 0.8)',
+                        'rgba(40, 167, 69, 0.8)',
+                        'rgba(255, 193, 7, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Category Distribution Chart
+        const categoryCtx = document.getElementById('categoryChart').getContext('2d');
+        new Chart(categoryCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Moda', 'Tech', 'Casa', 'Sport', 'Viaggi', 'Benessere', 'Altro'],
+                datasets: [{
+                    label: 'Siti',
+                    data: [3, 3, 3, 1, 2, 2, 10],
+                    backgroundColor: [
+                        'rgba(255, 107, 53, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(255, 205, 86, 0.8)',
+                        'rgba(153, 102, 255, 0.8)',
+                        'rgba(40, 167, 69, 0.8)',
+                        'rgba(199, 199, 199, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Traffic Daily Chart
+        const trafficCtx = document.getElementById('trafficChart').getContext('2d');
+        new Chart(trafficCtx, {
+            type: 'line',
+            data: {
+                labels: ['29 Apr', '30 Apr', '1 Mag', '2 Mag', '4 Mag'],
+                datasets: [{
+                    label: 'Clic',
+                    data: [178, 89, 19, 12, 29],
+                    borderColor: 'rgba(255, 107, 53, 1)',
+                    backgroundColor: 'rgba(255, 107, 53, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
