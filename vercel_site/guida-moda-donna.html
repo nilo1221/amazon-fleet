@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida Moda Donna - Smart Choices Guide</title>
+    <meta name="description" content="Trova i migliori capi di moda femminile lussuosa a prezzi accessibili. Abiti, blazer, camicie e altro.">
+    <meta name="keywords" content="moda donna, abiti, blazer, camicie, leggings, maglioni">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #f8f9fa;
+            --accent-color: #D4AF37;
+            --success-color: #28A745;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #D4AF37 100%);
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 40px;
+        }
+        
+        .problem-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .solution-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+        
+        .btn-warning {
+            background: var(--accent-color);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-warning:hover {
+            background: #b8962e;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-shopping-bag me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guida-cucina.html">
+                            <i class="fas fa-utensils me-1"></i>Guida Cucina
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guida-smart-home.html">
+                            <i class="fas fa-home me-1"></i>Guida Smart Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guida-gaming.html">
+                            <i class="fas fa-gamepad me-1"></i>Guida Gaming
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guida-viaggi.html">
+                            <i class="fas fa-plane me-1"></i>Guida Viaggi
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="guida-moda-donna.html">
+                            <i class="fas fa-female me-1"></i>Guida Moda Donna
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-4">
+                <i class="fas fa-tshirt me-3"></i>Guida Moda Donna
+            </h1>
+            <p class="lead mb-4">Trova i migliori capi di moda femminile lussuosa a prezzi accessibili</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="mb-4">Ogni occasione ha il suo outfit. Scegli il prodotto che risolve il tuo problema specifico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- Problema 1: Vestirsi elegante per eventi -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-gem text-warning me-2"></i>Vuoi vestirsi elegante per eventi?</h2>
+            <p class="text-muted mb-4">Hai bisogno di un abito elegante per cerimonie o eventi speciali?</p>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Qualità Prezzo Top: VALORIALUXE Abito Cerimonia Lungo in Tulle</h5>
+                <p class="mb-3">Abito cerimonia lungo in tulle con balze. Elegante. Marchio VALORIALUXE qualità.</p>
+                <a href="https://www.amazon.it/VALORIALUXE-Cerimonia-Cut-out-Frontale-Spalline/dp/B0F83KJQF2?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=FG2Y5C83NDVC&dib=eyJ2IjoiMSJ9.c_7eaCMvdWgM5C2yrT7wBaZvoSbat6fDoZ9R6rbZ5LEatrtascb_D4IRSZOt5Yy7CS-Q-IXWmG3SoGC_88Bt7k7E8dlbMqx77oIN2k-_U9QZn5Kw3xfzf1hKDIo3uYZtMUz7jtZXF_B7kKgTI8OnOe0Qdty2sw4XvxzPxD7Hnz5S_bHhAjJa0t_0SYs02irsPzh0zOM2p3d3XMAmQGZhD674894KXYmKeI5VxYBpQZM_JXPYXc0VTlUUBKC7dot673vGe8eM3amSp79NR9JxPLqn8qpqKh51Oo1NYECOxWo.11LM3bgiJ-e6kPJ8sQQIuJElcFSBKykRkz4o9XlcB7o&dib_tag=se&keywords=Abito%2Blungo%2Btulle%2Bbalze%2Bcorallo&qid=1778011815&sprefix=abito%2Blungo%2Btulle%2Bbalze%2Bcorallo%2Caps%2C118&sr=8-2&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=577dd4b3293eb8f7564397f20326f8f8&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-check text-info me-2"></i>Medio: Sukiglam Abito Asimmetrico Monospalla</h5>
+                <p class="mb-3">Abito asimmetrico monospalla increspato. Moderno. Marchio Sukiglam.</p>
+                <a href="https://www.amazon.it/Sukiglam-Asimmetrico-Monospalla-Increspato-Discoteca/dp/B0FDWWMV2B?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1FDX6LF9HX3UI&dib=eyJ2IjoiMSJ9.5aPNcHZHuTAHb0W_mT2ir1f2IPHuJjkqNyHP_85DPFppLGznLgYzEKrmDlCMq39231Z54CeSHrGRIk63GpAAWP4FWWCPZdUCVg0z5kSWd_xh8j8EavquE6s0JaS-1skmFd1AhqFqNZjA3OJgzPO9ftdeEdDWU_GEtnL0syJrn7O08Oh-jM3OWg5ZQuc0pMSN75ftaAFjcG-nYy1J0wIsSHE7Kj5qnbtGKgP6NRHOz3BfEW-quklC1OwwZv2LXLfoh5yM8z0QHT8Uch5H7KDuY5uTFZbcuth9lKlJEpOnIO0.0TX6EkjeEGhxWOYHtNiG1LqIGXiwhhlqsOPBC9su0fI&dib_tag=se&keywords=mini%2Bdress%2Bdrappeggiato%2Basimmetrico&qid=1778011448&sprefix=mini%2Bdress%2Bdrappeggiato%2Basimmetrico%2Caps%2C119&sr=8-4&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=293f0dc3597499e04bc9b8677fcbf87d&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-dollar-sign text-success me-2"></i>Low Budget: Mogidol Abito Estivo in Raso</h5>
+                <p class="mb-3">Abito estivo in raso con spalline sottili. Economico. Marchio Mogidol.</p>
+                <a href="https://www.amazon.it/Mogidol-Spaghetti-Backless-Elegante-Increspato/dp/B0DFBFHJ73?mcid=63f1d693d4883dc8ac317b27690ee92f&hvadid=806043719409&hvpos=&hvnetw=g&hvrand=17805402772812636057&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2328179563331&hvocijid=17805402772812636057-B0CXDD79DZ-&hvexpln=0&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c542172460d4a07f316c3b9e34820879&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+        </div>
+
+        <!-- Problema 2: Vestirsi comodo per il tempo libero -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-couch text-warning me-2"></i>Vuoi vestirsi comodo per il tempo libero?</h2>
+            <p class="text-muted mb-4">Cerchi capi comodi per rilassarti a casa o uscire casual?</p>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Qualità Prezzo Top: Amropi Set Felpa Foderata + Pantaloni Jogging</h5>
+                <p class="mb-3">Set felpa foderata + pantaloni jogging. Comodo. Marchio Amropi.</p>
+                <a href="https://www.amazon.it/amropi-Foderato-Pullover-Pantaloni-Jogging/dp/B0BNT9TSQL?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&aref=uJVMiM8vEC&content-id=amzn1.sym.dfdb39a7-e98b-4667-8017-e39a2a492092%3Aamzn1.sym.dfdb39a7-e98b-4667-8017-e39a2a492092&crid=TLXSA0V0LBID&cv_ct_cx=Jeans%2BBlu%2BScuro%2B%28Dark%2BWash%29%3A%2Bdonna&keywords=Jeans%2BBlu%2BScuro%2B%28Dark%2BWash%29%3A%2Bdonna&pd_rd_i=B0BNT9TSQL&pd_rd_r=d4ca3099-f5be-4602-b7ba-f9ea746e66c5&pd_rd_w=knTpu&pd_rd_wg=mMJ22&pf_rd_p=dfdb39a7-e98b-4667-8017-e39a2a492092&pf_rd_r=3820DQ3ZDZSXFA4RHNNP&qid=1777999042&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=jeans%2Bblu%2Bscuro%2Bdark%2Bwash%2Bdonna%2Caps%2C278&sr=1-1-07652b71-81e3-41f8-9097-e46726928fb7&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=a14a18eeee5bf13812ece5294ee59c8b&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-check text-info me-2"></i>Medio: Amazon Essentials Leggings Stretch</h5>
+                <p class="mb-3">Leggings stretch. Comodi. Marchio Amazon Essentials affidabile.</p>
+                <a href="https://www.amazon.it/Amazon-Essentials-Stretch-Leggings-Produttore/dp/B07CM82KSB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TLXSA0V0LBID&dib=eyJ2IjoiMSJ9.89SJEuvmO2Q8I2sxYaQpqr40ClRsAk7hBtevz0MllIUUeiBwhzLcFOPO6r9_DgKieLIuUZuYeOq0r7o9KoySfdzBtmEItjYsWqMvX4haKkx8ECkg0tgHU9N77_t370xkzPn4kx5dX7caoWbNfsozg4EUL-Ui0oT1aLBUyoXUpjOA4P6L7DsIqzO7K31CcC27Y6hqc0sX_42Xz4x-4qKdknW4MvysQ5kgR8_hA47xfE6pTm5PE-qM4Ac66KaP8Q92uKrLQbbQh1E_T7iO5SjO82Mj_NUNVXl1dr-5rFWMzAo._YXX34PhhsKKGvxsKX1lA2Kkeg0-i8Sy0iPc1YWIBro&dib_tag=se&keywords=Jeans%2BBlu%2BScuro%2B%28Dark%2BWash%29%3A%2Bdonna&qid=1777999042&sprefix=jeans%2Bblu%2Bscuro%2Bdark%2Bwash%2Bdonna%2Caps%2C278&sr=8-6&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=add568f2b7f7c98aad25b6ddf23d9423&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-dollar-sign text-success me-2"></i>Low Budget: Beauty Women Maglione Invernale Elegante</h5>
+                <p class="mb-3">Maglione invernale elegante. Caldo. Economico. Marchio Beauty Women.</p>
+                <a href="https://www.amazon.it/Beauty-Women-Maglione-Invernale-Elegante/dp/B0G4BCHCPM?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3RYQLNSC5Y6JG&dib=eyJ2IjoiMSJ9.GUeyrDoAcEVgi1UBCf_cRdewi0lqLRQWaiDPavb91xvAzZ7p9VT8taktw73g2L5wuuDPm2OhrQHK6LGmB1G2Rjb7oLwRDynqLNLb_j9qSybaR1KtGIXqwAu6G407D0usXgsmVnR7d1yJ6R1wCVYGKDBjXK_5LFIEMuulU6dWJIf522LWRlCWsExLE3x5MfT2ALA-rBrE_vi_JoCdbJo6HVCaprDDDn4JyRVmj5MIr4wnnERfQIcRTaVQnRPfoxFVGycEeLxvLzyWYzEP35Vz5a6-xhMikbzn0xky25-PdBA.kh3CXT8J7fcCLMESB29slL2emsgcPEcggx1hoNBE0cE&dib_tag=se&keywords=abiti%2Bfemminili&qid=1777991370&sprefix=abiti%2Bfemminili%2Caps%2C174&sr=8-2-spons&aref=jbaWWzV1w6&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=7113ae0da44a4c19bd8580230e70ed8d&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+        </div>
+
+        <!-- Problema 3: Vestirsi professionale per lavoro -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-briefcase text-warning me-2"></i>Vuoi vestirsi professionale per lavoro?</h2>
+            <p class="text-muted mb-4">Hai bisogno di capi professionali per il lavoro o incontri formali?</p>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Qualità Prezzo Top: LIAOPUFUS Blazer Slim Fit Maniche Lunghe</h5>
+                <p class="mb-3">Blazer slim fit maniche lunghe. Professionale. Marchio LIAOPUFUS.</p>
+                <a href="https://www.amazon.it/LIAOPUFUS-Maniche-Risvolto-Business-Classico/dp/B0CHVHR9QK?crid=2A7X3584H8G8P&dib=eyJ2IjoiMSJ9.ZBQb1tqmRVvleTx-aybsFG6ylOP4Hx_74RMdlc-qq08ToDCaxFMz38u4JihBhJsCTSPQPjcyI8_h4WrpEewKnj2xQBvB2HsPQKC3hsIOzxafSKCM4_Zw_7ONAkSAbxGTRx19mbdlI03D6F-j-e2anj9j4EPXLsL8S-yGGUPIPYO_IzQqKN5seSN0lQRhWObW3e53vm9oJpmqO_o-O0tpnny9CmaWWoR5zNUW7-Pxm_YFX8eeXtsyeloFhnxLmrUxIS8djNLjgsTXHEeHzKe0v784MgHOWSH1TmSijNbwWoU.F2prRCqAzaSezGfgzos2Na5FNF6_QWHsaEyrQL_lu9o&dib_tag=se&keywords=blazer%2Bnero%2Bslim%2Bfit%2Bdonna&qid=1777997980&sprefix=Blazer%2BNero%2BSlim%2BFit%2Caps%2C225&sr=8-1&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c077cdd16d0a4638b4c7f991f08f383a&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-check text-info me-2"></i>Medio: Shownicer Camicia Lino Donna</h5>
+                <p class="mb-3">Camicia lino donna. Fresca. Marchio Shownicer.</p>
+                <a href="https://www.amazon.it/shownicer-Camicia-Maglietta-Camicetta-Leggera/dp/B0F8N14NCR?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AT1K7PDVGUTB&dib=eyJ2IjoiMSJ9.hgnYzImNAf4119L8gf0DXX9EbJ2zRG-3_SM_4pPwOuC8d2w3UGSSI3OF4azIet9YHWnpJRBE8JWztDOWFp2fygM771sWOTSeJ9B8F6SdZZT2NHuUYQtMrWqZC8tK3E7nfaakvdVKtEV31hk5Ob_rEf-x3xjtxkSJ09HNYBR_CkS6TctvX3g-Xe_8xjpjA5zO92PiYXG655Zko7hYp6NSO3OX0qydyu-CRkBf4fQpDsm_ZzUvfNFO7edO_en3lBPkMf6SBdV6SuIZLlY0jXgXPVsBl21xfG0xmGGc-2I0bF4.64lTDPIA_9X-EI_mE4BsQmPrSSkmBKJTf4Vjb2LgLS0&dib_tag=se&keywords=Camicia%2BBlu%2Bin%2BLino%2Bdonna&qid=1777998456&sprefix=camicia%2Bblu%2Bin%2Blino%2Bdonna%2Caps%2C126&sr=8-5&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c270ad902f8e23cd79a0eb25dd79c208&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-dollar-sign text-success me-2"></i>Low Budget: CMTOP Abito Donna Girocollo</h5>
+                <p class="mb-3">Abito donna girocollo. Versatile. Economico. Marchio CMTOP.</p>
+                <a href="https://www.amazon.it/CMTOP-Girocollo-Elastica-Spiaggia-Eleganti/dp/B0DPJPV1M8?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3RYQLNSC5Y6JG&dib=eyJ2IjoiMSJ9.GUeyrDoAcEVgi1UBCf_cRdewi0lqLRQWaiDPavb91xvAzZ7p9VT8aktw73g2L5wuuDPm2OhrQHK6LGmB1G2Rjb7oLwRDynqLNLb_j9qSybaR1KtGIXqwAu6G407D0usXgsmVnR7d1yJ6R1wCVYGKDBjXK_5LFIEMuulU6dWJIf522LWRlCWsExLE3x5MfT2ALA-rBrE_vi_JoCdbJo6HVCaprDDDn4JyRVmj5MIr4wnnERfQIcRTaVQnRPfoxFVGycEeLxvLzyWYzEP35Vz5a6-xhMikbzn0xky25-PdBA.kh3CXT8J7fcCLMESB29slL2emsgcPEcggx1hoNBE0cE&dib_tag=se&keywords=abiti%2Bfemminili&qid=1777991370&sprefix=abiti%2Bfemminili%2Caps%2C174&sr=8-1-spons&aref=uHPunD8bjD&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0cac7799b2e7d44ec654b54c70df06dc&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+        </div>
+
+        <!-- Problema 4: Vestirsi per l'estate -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-sun text-warning me-2"></i>Vuoi vestirsi per l'estate?</h2>
+            <p class="text-muted mb-4">Cerchi capi freschi e leggeri per la stagione calda?</p>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Qualità Prezzo Top: Enmain Abito Donna Maniche Corte</h5>
+                <p class="mb-3">Abito donna maniche corte. Fresco. Marchio Enmain.</p>
+                <a href="https://www.amazon.it/Enmain-Maniche-T-Shirt-Lunghezza-Ginocchio/dp/B0D3PL6MPQ?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3RYQLNSC5Y6JG&dib=eyJ2IjoiMSJ9.GUeyrDoAcEVgi1UBCf_cRdewi0lqLRQWaiDPavb91xvAzZ7p9VT8taktw73g2L5wuuDPm2OhrQHK6LGmB1G2Rjb7oLwRDynqLNLb_j9qSybaR1KtGIXqwAu6G407D0usXgsmVnR7d1yJ6R1wCVYGKDBjXK_5LFIEMuulU6dWJIf522LWRlCWsExLE3x5MfT2ALA-rBrE_vi_JoCdbJo6HVCaprDDDn4JyRVmj5MIr4wnnERfQIcRTaVQnRPfoxFVGycEeLxvLzyWYzEP35Vz5a6-xhMikbzn0xky25-PdBA.kh3CXT8J7fcCLMESB29slL2emsgcPEcggx1hoNBE0cE&dib_tag=se&keywords=abiti%2Bfemminili&qid=1777991370&sprefix=abiti%2Bfemminili%2Caps%2C174&sr=8-6&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=1a39441b3d2e461c8fff4451f278f9a4&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+        </div>
+
+        <!-- Conclusione -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-check-circle text-success me-2"></i>Trova la Tua Soluzione</h2>
+            <p class="text-muted mb-4">Ogni problema ha la sua soluzione. Scegli il prodotto che risolve il tuo problema specifico.</p>
+            
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong>Consiglio:</strong> Valuta il tuo budget e le tue esigenze specifiche prima di scegliere. I prodotti Top offrono qualità premium, i prodotti Low Budget sono perfetti per iniziare.
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
