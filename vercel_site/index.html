@@ -29,6 +29,10 @@
             margin-bottom: 40px;
         }
         
+        .site-card.hidden {
+            display: none;
+        }
+        
         .site-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -88,10 +92,36 @@
             color: white;
             padding: 5px 15px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.85em;
             font-weight: 600;
             display: inline-block;
             margin-bottom: 15px;
+        }
+        
+        .btn-filter {
+            background: white;
+            border: 2px solid #e0e0e0;
+            color: #333;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-filter:hover {
+            background: #FF6B35;
+            border-color: #FF6B35;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+        
+        .btn-filter.active {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 100%);
+            border-color: #FF6B35;
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
         }
         
         .site-title {
@@ -325,7 +355,7 @@
 
     <!-- Sites Section -->
     <section id="sites" class="container">
-        <div class="row mb-5">
+        <div class="row mb-4">
             <div class="col-12 text-center">
                 <h2 class="display-5 fw-bold mb-4">
                     <i class="fas fa-th-large me-3"></i>
@@ -334,6 +364,38 @@
                 <p class="lead text-muted">
                     Scopri siti specializzati per ogni categoria di prodotti
                 </p>
+            </div>
+        </div>
+        
+        <!-- Category Filters -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <button class="btn btn-filter active" data-filter="all">
+                        <i class="fas fa-globe me-2"></i>Tutti
+                    </button>
+                    <button class="btn btn-filter" data-filter="Sport">
+                        <i class="fas fa-running me-2"></i>Sport
+                    </button>
+                    <button class="btn btn-filter" data-filter="Tech">
+                        <i class="fas fa-laptop me-2"></i>Tech
+                    </button>
+                    <button class="btn btn-filter" data-filter="Casa">
+                        <i class="fas fa-home me-2"></i>Casa
+                    </button>
+                    <button class="btn btn-filter" data-filter="Moda">
+                        <i class="fas fa-tshirt me-2"></i>Moda
+                    </button>
+                    <button class="btn btn-filter" data-filter="Viaggi">
+                        <i class="fas fa-plane me-2"></i>Viaggi
+                    </button>
+                    <button class="btn btn-filter" data-filter="Benessere">
+                        <i class="fas fa-spa me-2"></i>Benessere
+                    </button>
+                    <button class="btn btn-filter" data-filter="Ufficio">
+                        <i class="fas fa-briefcase me-2"></i>Ufficio
+                    </button>
+                </div>
             </div>
         </div>
         
@@ -1055,6 +1117,57 @@
                 document.getElementById('loadingOverlay').style.display = 'none';
             }, 1500);
         }
+        
+        // Category Filter Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.btn-filter');
+            const siteCards = document.querySelectorAll('.site-card');
+            
+            // Add data-category to site cards based on badge-category
+            siteCards.forEach(card => {
+                const badge = card.querySelector('.badge-category');
+                if (badge) {
+                    const category = badge.textContent.trim();
+                    // Map categories to filter groups
+                    let filterGroup = 'all';
+                    if (category === 'Sport') filterGroup = 'Sport';
+                    else if (category === 'Tech' || category === 'Gaming' || category === 'Foto' || category === 'Kindle' || category === 'Illuminazione') filterGroup = 'Tech';
+                    else if (category === 'Elettrodomestici' || category === 'Caffè & Tè' || category === 'Casa & Decorazione') filterGroup = 'Casa';
+                    else if (category === 'Cinema & TV' || category === 'Abbigliamento Lusso' || category === 'Moda Maschile' || category === 'Accessori' || category === 'Skincare') filterGroup = 'Moda';
+                    else if (category === 'Viaggi' || category === 'Viaggi Low-Cost') filterGroup = 'Viaggi';
+                    else if (category === 'Benessere' || category === 'Outdoor' || category === 'Giardino' || category === 'Animali') filterGroup = 'Benessere';
+                    else if (category === 'Ufficio') filterGroup = 'Ufficio';
+                    
+                    card.setAttribute('data-category', filterGroup);
+                }
+            });
+            
+            // Filter button click handlers
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide site cards based on filter
+                    siteCards.forEach(card => {
+                        if (filterValue === 'all') {
+                            card.classList.remove('hidden');
+                        } else {
+                            const cardCategory = card.getAttribute('data-category');
+                            if (cardCategory === filterValue) {
+                                card.classList.remove('hidden');
+                            } else {
+                                card.classList.add('hidden');
+                            }
+                        }
+                    });
+                });
+            });
+        });
     </script>
 </body>
 </html>
