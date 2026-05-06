@@ -211,28 +211,67 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-4">Smart Choices Guide</h1>
-            <p class="lead mb-4">Scopri le migliori guide specializzate per ogni categoria di prodotti Amazon</p>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="d-flex justify-content-center gap-3">
-                        <span class="badge-category">
-                            <i class="fas fa-star me-1"></i>12 Siti Specializzati
+            <div class="mb-4">
+                <span class="badge bg-white text-warning fw-bold px-4 py-2 rounded-pill shadow-lg">
+                    <i class="fas fa-bolt me-2"></i>Le Migliori Guide di Acquisto 2026
+                </span>
+            </div>
+            <h1 class="display-3 fw-bold mb-4 animate-fade-in">
+                Scopri i Prodotti che
+                <span class="d-block text-warning animate-pulse">Valgono Ogni Centesimo</span>
+            </h1>
+            <p class="lead mb-5 fs-4">
+                Guide specializzate Amazon per acquisti intelligenti. Niente sprechi, solo qualità.
+            </p>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10">
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <span class="badge bg-white text-dark px-4 py-3 rounded-pill shadow-lg fw-bold">
+                            <i class="fas fa-check-circle text-success me-2"></i>100% Prodotti Verificati
                         </span>
-                        <span class="badge-category">
-                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        <span class="badge bg-white text-dark px-4 py-3 rounded-pill shadow-lg fw-bold">
+                            <i class="fas fa-truck text-primary me-2"></i>Spedizione Prime
                         </span>
-                        <span class="badge-category">
-                            <i class="fas fa-shield-alt me-1"></i>Prodotti Verificati
+                        <span class="badge bg-white text-dark px-4 py-3 rounded-pill shadow-lg fw-bold">
+                            <i class="fas fa-star text-warning me-2"></i>12 Siti Specializzati
                         </span>
                     </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <a href="#prodotti-piu-cercati" class="btn btn-light btn-lg fw-bold text-primary px-5 py-3 rounded-pill shadow-lg hover-lift">
+                        <i class="fas fa-shopping-bag me-2"></i>Scopri i Prodotti Top
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <style>
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .animate-pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+            transition: all 0.3s ease;
+        }
+    </style>
+
     <!-- Prodotti Più Cercati Section -->
-    <section class="container my-5">
+    <section id="prodotti-piu-cercati" class="container my-5">
         <div class="row mb-4">
             <div class="col-12 text-center">
                 <h2 class="display-5 fw-bold mb-3">
