@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guida: Come Scegliere i Migliori Gadget per Cucina Intelligente - Smart Choices Guide</title>
-    <meta name="description" content="Guida completa per scegliere i migliori gadget per cucina intelligente. Consigli su coltelli, frullatori, friggitrici ad aria e altro.">
+    <title>Guida: Risolvi i Problemi in Cucina - Smart Choices Guide</title>
+    <meta name="description" content="Hai problemi in cucina? Ecco le soluzioni. Friggitrici ad aria, coltelli, frullatori - trova il prodotto perfetto per le tue esigenze.">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
             box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
         }
         
-        .guide-section {
+        .problem-section {
             background: white;
             border-radius: 20px;
             padding: 40px;
@@ -39,19 +39,17 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.08);
         }
         
-        .tip-card {
+        .solution-card {
             background: #fff8f0;
             border-left: 4px solid var(--primary-color);
-            padding: 20px;
+            padding: 25px;
             margin-bottom: 20px;
             border-radius: 10px;
         }
         
-        .product-category {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
+        .solution-card h5 {
+            color: var(--primary-color);
+            font-weight: bold;
         }
         
         .btn-back {
@@ -67,6 +65,14 @@
         .btn-back:hover {
             background: var(--accent-color);
             transform: scale(1.05);
+        }
+        
+        .badge-option {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -90,6 +96,11 @@
                             <i class="fas fa-gift me-1"></i>Servizi Amazon
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="guida-cucina.html">
+                            <i class="fas fa-book me-1"></i>Guide
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -98,13 +109,13 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-4">Guida Completa: Cucina Intelligente</h1>
-            <p class="lead mb-4">Come scegliere i migliori gadget per rendere la tua cucina moderna e funzionale</p>
+            <h1 class="display-4 fw-bold mb-4">Hai Problemi in Cucina?</h1>
+            <p class="lead mb-4">Ecco le soluzioni. Trova il prodotto perfetto per le tue esigenze.</p>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
                         <span class="badge bg-white text-warning fw-bold px-4 py-2 rounded-pill">
-                            <i class="fas fa-lightbulb me-2"></i>Consigli Esperti
+                            <i class="fas fa-lightbulb me-2"></i>Soluzioni Pratiche
                         </span>
                         <span class="badge bg-white text-warning fw-bold px-4 py-2 rounded-pill">
                             <i class="fas fa-check-circle me-2"></i>Prodotti Verificati
@@ -120,108 +131,80 @@
             <i class="fas fa-arrow-left me-2"></i>Torna alla Home
         </a>
 
-        <!-- Introduzione -->
-        <div class="guide-section">
-            <h2 class="fw-bold mb-4"><i class="fas fa-info-circle text-warning me-2"></i>Perché una cucina intelligente?</h2>
-            <p class="text-muted mb-4">Una cucina intelligente non è solo una questione di estetica, ma di funzionalità e risparmio di tempo. I giusti gadget possono trasformare la tua esperienza in cucina, rendendo ogni preparazione più veloce, precisa e piacevole.</p>
+        <!-- Problema 1: Cottura sana -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-fire-burner text-warning me-2"></i>Sei stanco di cuocere tutto con troppo grasso?</h2>
+            <p class="text-muted mb-4">Vuoi mangiare sano senza rinunciare al gusto dei fritti croccanti?</p>
             
-            <div class="tip-card">
-                <h5 class="fw-bold mb-2"><i class="fas fa-star text-warning me-2"></i>Vantaggi principali:</h5>
-                <ul class="mb-0">
-                    <li><strong>Risparmio tempo:</strong> Preparazioni più veloci e automatizzate</li>
-                    <li><strong>Consumi ridotti:</strong> Elettrodomestici efficienti risparmiano energia</li>
-                    <li><strong>Risultati migliori:</strong> Cotture uniformi e precise</li>
-                    <li><strong>Facilità d'uso:</strong> Design ergonomico e intuitivo</li>
-                </ul>
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Qualità Prezzo Top: COSORI Turbo Blaze 6L</h5>
+                <p class="mb-3">Rapporto qualità prezzo eccellente. Cibi croccanti con fino all'85% meno grassi. 12 programmi preimpostati per ogni ricetta. Perfetto per famiglie fino a 4 persone.</p>
+                <a href="https://www.amazon.it/COSORI-Friggitrice-Tecnologia-Automatica-Ingredienti/dp/B0DX1GQK9J?tag=l0c39-21" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-dollar-sign text-success me-2"></i>Low Budget: COSORI Tower Pro Smart 10.8L</h5>
+                <p class="mb-3">Fai tutto con questo modello. Doppio cestello per cuocere più pietanze insieme. Rivestimento ceramico No PFAS. 7 funzioni, 50+ ricette online. Ottimo rapporto qualità prezzo.</p>
+                <a href="site_1/index.html" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-piggy-bank text-info me-2"></i>Risparmio ma Qualità: Philips Airfryer Premium XXL 7.3L</h5>
+                <p class="mb-3">Risparmi energia ma cuoci alla perfezione. Capacità XXL per famiglie numerose, fino a 1.4kg di patatine. Tecnologia Rapid Air per cottura uniforme. App NutriU per ricette personalizzate.</p>
+                <a href="site_1/index.html" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
             </div>
         </div>
 
-        <!-- Coltelli -->
-        <div class="product-category">
-            <h3 class="fw-bold mb-4"><i class="fas fa-cut text-danger me-2"></i>1. Coltelli Professionali</h3>
-            <p class="text-muted mb-4">I coltelli sono lo strumento più importante in cucina. Un buon set di coltelli fa la differenza tra tagliare con fatica e tagliare con precisione.</p>
+        <!-- Problema 2: Taglio preciso -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-cut text-danger me-2"></i>Fai fatica a tagliare con precisione?</h2>
+            <p class="text-muted mb-4">I tuoi coltelli non tagliano bene? Stanca la mano dopo pochi minuti?</p>
             
-            <div class="tip-card">
-                <h5 class="fw-bold mb-2"><i class="fas fa-check text-success me-2"></i>Cosa cercare:</h5>
-                <ul class="mb-0">
-                    <li><strong>Materiale:</strong> Acciaio inox ad alta resistenza per lame che restano affilate</li>
-                    <li><strong>Impugnatura:</strong> Ergonomica per non affaticare la mano</li>
-                    <li><strong>Set completo:</strong> Almeno coltello da chef, pane, santoku, utility e pelapatate</li>
-                    <li><strong>Blocco:</strong> Design elegante e sicuro per riporli</li>
-                </ul>
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Qualità Prezzo Top: Amazon Basics 14-Piece Knife Block Set</h5>
+                <p class="mb-3">Set completo di 14 coltelli professionali. Lame in acciaio inox affilate che restano taglienti più a lungo. Impugnature ergonomiche per tagliare senza fatica, anche per ore.</p>
+                <a href="site_1/index.html" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
             </div>
             
-            <div class="alert alert-warning">
-                <i class="fas fa-exclamation-triangle me-2"></i>
-                <strong>Consiglio:</strong> Un set di 14 coltelli copre tutte le esigenze, dalla preparazione base al taglio professionale.
-            </div>
-        </div>
-
-        <!-- Frullatori -->
-        <div class="product-category">
-            <h3 class="fw-bold mb-4"><i class="fas fa-blender text-info me-2"></i>2. Frullatori Immersione</h3>
-            <p class="text-muted mb-4">I frullatori a immersione sono versatili e facili da usare. Perfetti per zuppe, salse, smoothie e molto altro.</p>
-            
-            <div class="tip-card">
-                <h5 class="fw-bold mb-2"><i class="fas fa-check text-success me-2"></i>Caratteristiche essenziali:</h5>
-                <ul class="mb-0">
-                    <li><strong>Numero di lame:</strong> 6 lame in acciaio inox per risultati professionali</li>
-                    <li><strong>Velocità:</strong> Almeno 6 velocità regolabili per ogni tipo di preparazione</li>
-                    <li><strong>Potenza:</strong> Motore potente per tritare anche ingredienti duri</li>
-                    <li><strong>Ergonomia:</strong> Impugnatura comoda che non stanca</li>
-                </ul>
-            </div>
-            
-            <div class="alert alert-info">
-                <i class="fas fa-lightbulb me-2"></i>
-                <strong>Uso consigliato:</strong> Ideale per zuppe cremose, salse vellutate, smoothie nutrienti e tritare verdure.
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-tools text-success me-2"></i>Mantieni i coltelli affilati: MITSUMOTO SAKARI Affilacoltelli</h5>
+                <p class="mb-3">Sistema 2 stadi per mantenere le lame affilate. Funziona per coltelli, forbici e altri strumenti. Design compatto e facile da usare. Risparmia comprando nuovi coltelli.</p>
+                <a href="site_1/index.html" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
             </div>
         </div>
 
-        <!-- Friggitrici ad Aria -->
-        <div class="product-category">
-            <h3 class="fw-bold mb-4"><i class="fas fa-fire-burner text-warning me-2"></i>3. Friggitrici ad Aria</h3>
-            <p class="text-muted mb-4">Le friggitrici ad aria sono rivoluzionarie: cibi croccanti con fino all'85% meno grassi rispetto alla frittura tradizionale.</p>
+        <!-- Problema 3: Preparazioni veloci -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-blender text-info me-2"></i>Vuoi preparazioni veloci senza sforzo?</h2>
+            <p class="text-muted mb-4">Stanco di passare ore a preparare zuppe, salse e smoothie?</p>
             
-            <div class="tip-card">
-                <h5 class="fw-bold mb-2"><i class="fas fa-check text-success me-2"></i>Perché scegliere una friggitrice ad aria:</h5>
-                <ul class="mb-0">
-                    <li><strong>Salute:</strong> Fritti croccanti con molto meno grasso</li>
-                    <li><strong>Capacità:</strong> 6L perfetta per famiglie fino a 4 persone</li>
-                    <li><strong>Programmi:</strong> Almeno 12 programmi preimpostati per facilità d'uso</li>
-                    <li><strong>Tecnologia:</strong> Riscaldamento rapido per risparmiare tempo</li>
-                </ul>
-            </div>
-            
-            <div class="alert alert-success">
-                <i class="fas fa-heart me-2"></i>
-                <strong>Beneficio:</strong> Mangia sano senza rinunciare al gusto. Patatine, ali di pollo e fritti croccanti con meno grassi.
-            </div>
-        </div>
-
-        <!-- Organizzazione -->
-        <div class="product-category">
-            <h3 class="fw-bold mb-4"><i class="fas fa-boxes text-secondary me-2"></i>4. Organizzazione Spazio</h3>
-            <p class="text-muted mb-4">L'organizzazione è fondamentale in cucina. Gli accessori giusti ti fanno risparmiare tempo e stress.</p>
-            
-            <div class="tip-card">
-                <h5 class="fw-bold mb-2"><i class="fas fa-check text-success me-2"></i>Accessori utili:</h5>
-                <ul class="mb-0">
-                    <li><strong>Portaspezie:</strong> Salvaspazio per frigo e dispensa</li>
-                    <li><strong>Affilacoltelli:</strong> Sistema 2 stadi per mantenere lame affilate</li>
-                    <li><strong>Termometro Bluetooth:</strong> Monitoraggio wireless per cotture perfette</li>
-                </ul>
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-bolt text-warning me-2"></i>Qualità Prezzo Top: Bonsenkitchen Frullatore Immersione</h5>
+                <p class="mb-3">6 lame in acciaio inox per risultati professionali. 6 velocità regolabili per ogni ricetta. Prepara zuppe cremose, salse vellutate e smoothie in secondi. Design ergonomico che non stanca.</p>
+                <a href="site_1/index.html" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
             </div>
         </div>
 
         <!-- Conclusione -->
-        <div class="guide-section">
-            <h2 class="fw-bold mb-4"><i class="fas fa-check-circle text-success me-2"></i>Conclusione</h2>
-            <p class="text-muted mb-4">Investire in gadget di qualità per la tua cucina è un investimento nella tua qualità di vita. I prodotti giusti ti fanno risparmiare tempo, migliorano i risultati e rendono cucinare un piacere.</p>
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-check-circle text-success me-2"></i>Trova la Tua Soluzione</h2>
+            <p class="text-muted mb-4">Ogni problema ha la sua soluzione. Scegli il prodotto che risolve il tuo problema specifico.</p>
             
             <div class="alert alert-primary">
-                <h5 class="fw-bold mb-2"><i class="fas fa-gift me-2"></i>Pronto a trasformare la tua cucina?</h5>
-                <p class="mb-3">Scopri i prodotti selezionati per una cucina intelligente nel nostro sito.</p>
+                <h5 class="fw-bold mb-2"><i class="fas fa-shopping-bag me-2"></i>Pronto a risolvere i tuoi problemi in cucina?</h5>
+                <p class="mb-3">Scopri tutti i prodotti per cucina intelligente nel nostro sito.</p>
                 <a href="site_1/index.html" class="btn btn-warning fw-bold">
                     <i class="fab fa-amazon me-2"></i>Scopri i Prodotti Cucina
                 </a>
