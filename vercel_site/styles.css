@@ -83,7 +83,7 @@ body {
 }
 
 .badge-category {
-    background: linear-gradient(45deg, #1E3A8A, #3B82F6);
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-medium));
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -105,16 +105,16 @@ body {
 }
 
 .btn-filter:hover {
-    background: #1E3A8A;
-    border-color: #1E3A8A;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
 }
 
 .btn-filter.active {
-    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
-    border-color: #1E3A8A;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-medium) 100%);
+    border-color: var(--primary-color);
     color: white;
     box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
 }
