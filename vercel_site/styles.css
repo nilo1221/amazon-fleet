@@ -250,6 +250,137 @@ body {
     to { transform: rotate(360deg); }
 }
 
+/* Scroll animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Scroll-triggered animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animations for grids */
+.site-grid .site-card:nth-child(1) { animation-delay: 0.1s; }
+.site-grid .site-card:nth-child(2) { animation-delay: 0.2s; }
+.site-grid .site-card:nth-child(3) { animation-delay: 0.3s; }
+.site-grid .site-card:nth-child(4) { animation-delay: 0.4s; }
+.site-grid .site-card:nth-child(5) { animation-delay: 0.5s; }
+.site-grid .site-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Enhanced micro-interactions */
+.badge-category {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.badge-category:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.4);
+}
+
+/* Icon animations */
+.site-icon {
+    transition: all 0.3s ease;
+}
+
+.site-card:hover .site-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Skeleton loader */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced button animations */
+.btn-amazon {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-amazon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-amazon:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Card shine effect */
+.site-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+    pointer-events: none;
+}
+
+.site-card:hover::before {
+    left: 100%;
+}
+
 .no-images {
     text-align: center;
     padding: 60px 20px;
