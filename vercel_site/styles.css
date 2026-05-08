@@ -1,15 +1,8 @@
 /* Smart Choices Guide - Shared CSS */
-
-:root {
-    --primary-color: #1E3A8A;
-    --primary-medium: #3B82F6;
-    --accent-color: #F59E0B;
-    --secondary-color: #f8f9fa;
-}
+/* Common styles only - NO specific colors */
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--secondary-color);
 }
 
 /* Animations */
