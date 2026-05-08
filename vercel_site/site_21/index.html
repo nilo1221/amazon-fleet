@@ -6,22 +6,23 @@
     <title>Accessori Moda - Smart Choices Guide</title>
     <meta name="description" content="I migliori accessori moda uomo e donna a prezzi accessibili. Occhiali, cinture, gioielli e molto altro.">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="../styles.css">
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link href="../styles.css" rel="stylesheet">
+    </noscript>
     
     <style>
         :root {
             --primary-color: #FF5722;
             --secondary-color: #FFF3E0;
-            --accent-color: #FF7043;
-            --success-color: #28A745;
-            --fashion-color: #6C5CE7;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--secondary-color);
             padding-top: 70px;
         }
@@ -29,54 +30,9 @@
         .hero-section {
             background: linear-gradient(135deg, #6C5CE7 0%, #A29BFE 50%, #FD79A8 100%);
             color: white;
-            padding: 80px 0;
+            padding: 100px 0;
             margin-bottom: 40px;
             box-shadow: 0 4px 20px rgba(108, 92, 231, 0.3);
-        }
-        
-        .product-card {
-            border: none;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            overflow: hidden;
-            margin-bottom: 30px;
-            background: white;
-            padding-top: 20px;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-6px) scale(1.01);
-            box-shadow: 0 15px 35px rgba(255, 87, 34, 0.15);
-        }
-        
-        .category-badge {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        
-        .btn-amazon {
-            background: linear-gradient(135deg, #FF9900, #FFAD33);
-            border: none;
-            color: #232F3E;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .btn-amazon:hover {
-            background: linear-gradient(135deg, #FFAD33, #FF9900);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(255, 153, 0, 0.3);
-            color: #232F3E;
         }
     </style>
 </head>
