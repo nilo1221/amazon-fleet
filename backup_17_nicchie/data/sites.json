@@ -1,0 +1,1002 @@
+[
+    {
+        "id": 1,
+        "title": "Cucina Moderna & Tech",
+        "description": "I migliori gadget per rendere la tua cucina intelligente e funzionale.",
+        "color": "orange",
+        "products": [
+            {
+                "name": "Friggitrice ad Aria COSORI",
+                "text": "7,5L XXL con 10 funzioni, controllo preciso temperatura, cestello antiaderente e 65 ricette. Cottura sana con 90% meno grassi.",
+                "category": "Elettrodomestici",
+                "link": "https://www.amazon.it/COSORI-Friggitrice-Rivestimento-Resistenza-CAF-DC113S/dp/B0DPPT99LJ?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Robot da Cucina Tefal PrepCook",
+                "text": "5 programmi automatici, impasta, trita, cuoce e soffrigge. 4.5L capacità, 10 accessori inclusi. Il tuo chef personale.",
+                "category": "Elettrodomestici",
+                "link": "https://www.amazon.it/Robot-cucina-Tefal-PrepCook-Generica/dp/B0BVTY5MLH?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Smart Home & Domotica",
+        "description": "Rendi la tua casa intelligente con le ultime novità tech.",
+        "color": "blue",
+        "products": [
+            {
+                "name": "Lampadina LED Smart Oumida",
+                "text": "Dimmerabile con controllo app, 9W equivalente a 90W, temperatura colore regolabile 2700K-6500K. Controllo vocale compatibile.",
+                "category": "Illuminazione",
+                "link": "https://www.amazon.it/Oumida-Inteligente-Dimmerabile-Equivalente-2700K-6500K/dp/B0FPQWLSBW?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Presa Intelligente SONOFF S61s",
+                "text": "Smart plug WiFi compatibile Alexa e Google Home. Monitoraggio consumi energia, timer programmabili, protezione sovraccarico 3840W.",
+                "category": "Gadget",
+                "link": "https://www.amazon.it/SONOFF-S61s-Presa-Intelligente-3840W/dp/B0FT27DDS6?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Home Gym Essentials",
+        "description": "Tutto l'occorrente per un allenamento professionale e sicuro direttamente a casa tua.",
+        "color": "red",
+        "products": [
+            {
+                "name": "Manubri in Neoprene Amazon Basics",
+                "text": "Presa sicura e confortevole per i tuoi allenamenti a casa. Ideali per tonificare braccia e spalle.",
+                "category": "Sport",
+                "link": "https://www.amazon.it/AmazonBasics-NPDBP2KG-Coppia-manubri-neoprene/dp/B078XXP3RH?tag=l0c39-21"
+            },
+            {
+                "name": "Lifting Straps Professionali Fitgriff",
+                "text": "Supporto massimo per la tua presa durante gli esercizi di trazione. Imbottitura premium per il massimo comfort.",
+                "category": "Sport",
+                "link": "https://www.amazon.it/Fitgriff%C2%AE-Straps-Palestra-Imbottito-Professionali/dp/B01F2OGJQM?tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Giardinaggio Urbano",
+        "description": "Crea il tuo angolo verde anche in città.",
+        "color": "green",
+        "products": [
+            {
+                "name": "Kit Idroponico Intelligente",
+                "text": "Sistema aeroponico automatico con LED full spectrum. Coltiva fino a 12 piante contemporaneamente. App di controllo smart.",
+                "category": "Giardino",
+                "link": "https://www.amazon.it/Idroponica-Intelligente-Tecnologia-Aeroponica-Coltivazione/dp/B0FDKRG58D?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Set Attrezzi da Giardinaggio FLORA GUARD",
+                "text": "10 pezzi in alluminio resistente con manici ergonomici antiscivolo. Include vanga, rastrello, trapiantatore e borsa per il trasporto.",
+                "category": "Giardino",
+                "link": "https://www.amazon.it/FLORA-GUARD-Attrezzi-Giardinaggio-Trapiantatore/dp/B09B2HM2SR?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Ufficio Produttivo",
+        "description": "Configura il tuo workspace per la massima efficienza.",
+        "color": "indigo",
+        "products": [
+            {
+                "name": "Supporto Laptop MMOBIEL",
+                "text": "Stand portatile in alluminio regolabile in altezza e angolazione. Ventilazione ottimale, compatibile con laptop 10-17 pollici.",
+                "category": "Ufficio",
+                "link": "https://www.amazon.it/MMOBIEL-Supporto-Portatile-Universale-Compatibile/dp/B0C9R6QTDQ?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Organizer da Scrivania",
+                "text": "Mantieni tutto in ordine e a portata di mano per non perdere la concentrazione.",
+                "category": "Ufficio",
+                "link": "https://www.amazon.it/dp/B08BHZNC2W?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Fotografia Mobile",
+        "description": "Scatta foto professionali con il tuo smartphone.",
+        "color": "yellow",
+        "products": [
+            {
+                "name": "Treppiede Video SMALLRIG 186cm",
+                "text": "Treppiede professionale in lega di alluminio con testa fluida, spargitore di livello e piastra sgancio rapido. Carico massimo 8kg per DSLR e videocamere.",
+                "category": "Foto",
+                "link": "https://www.amazon.it/gp/aw/d/B09WVBXZF9?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Occhiali da Lettura LUFF con Lenti d'Ingrandimento",
+                "text": "Occhiali multifunzione 4 in 1: lettura, ingrandimento, lente di ingrandimento rimovibile. Ideali per lettura dettagliata e hobby di precisione.",
+                "category": "Foto",
+                "link": "https://www.amazon.it/LUFF-Occhiali-lettura-occhiali-dingrandimento/dp/B0CL2336NR?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Pet Care Intelligente",
+        "description": "I migliori accessori per il benessere dei tuoi amici a quattro zampe.",
+        "color": "purple",
+        "products": [
+            {
+                "name": "Distributore Cibo Automatico PUPPY KITTY",
+                "text": "Dispenser smart con registratore vocale, programmazione fino a 6 pasti al giorno, 3L capacità. Monitora la nutrizione del tuo pet.",
+                "category": "Animali",
+                "link": "https://www.amazon.it/PUPPY-KITTY-Distributore-Automatico-Registrazione/dp/B0DJVHYDNJ?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Fontanella per Gatti senza Fili Ricaricabile",
+                "text": "Fontanella automatica wireless con filtro a carboni attivi. Pompa silenziosa, capacità 2L, ricaricabile USB. Acqua fresca e pulita sempre disponibile.",
+                "category": "Animali",
+                "link": "https://www.amazon.it/Fontanella-Gatti-senza-Fili-Ricaricabile/dp/B0FND4DZZY?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Cura della Macchina da Caffè",
+        "description": "I migliori prodotti per la manutenzione e la pulizia della tua macchina da caffè.",
+        "color": "amber",
+        "products": [
+            {
+                "name": "Decalcificante Universale Purivita",
+                "text": "Soluzione professionale per la pulizia profonda di macchine da caffè automatiche e manuali.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/Purivita-Decalcificante-universale-macchine-automatiche/dp/B0C4FHBPRT?tag=l0c39-21"
+            },
+            {
+                "name": "Kit di Pulizia Completo",
+                "text": "Tutto il necessario per mantenere l'aroma del tuo caffè sempre perfetto.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/Purivita-Decalcificante-universale-macchine-automatiche/dp/B0C4FHBPRT?tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Elite Gaming Gear",
+        "description": "Porta la tua esperienza di gioco al livello successivo con il meglio dell'hardware.",
+        "color": "pink",
+        "products": [
+            {
+                "name": "PC Gaming Greed Mk2",
+                "text": "Potenza pura per il gaming estremo. Supporto Raytracing e prestazioni incredibili per ogni titolo AAA.",
+                "category": "Gaming",
+                "link": "https://www.amazon.it/Greed-Mk2-Computer-calcolatrice-Raytracing/dp/B0C1C9GNR9?tag=l0c39-21"
+            },
+            {
+                "name": "Supporto Cuffie in Legno SHUOSUO",
+                "text": "Elegante stand universale per cuffie gaming. Design in legno compatibile con tutte le marche: Sony, Bose, Sennheiser, Razer.",
+                "category": "Gaming",
+                "link": "https://www.amazon.it/SHUOSUO-Supporto-stoccaggio-compatibile-Sennheiser/dp/B0D268R35T?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Viaggi Organizzati",
+        "description": "Gadget indispensabili per chi è sempre in movimento.",
+        "color": "cyan",
+        "products": [
+            {
+                "name": "Zaino Bagaglio a Mano 40x20x25",
+                "text": "Perfetto per Ryanair e le compagnie low-cost. Compatto, resistente e capiente per i tuoi weekend fuori porta.",
+                "category": "Viaggi",
+                "link": "https://www.amazon.it/Bagaglio-40x20x25-Ryanair-Viaggio-Trekking/dp/B0BVQ5518V?tag=l0c39-21"
+            },
+            {
+                "name": "Zaino Trekking 20L Terra Peak",
+                "text": "Ideale per hiking e avventure outdoor. Leggero, resistente all'acqua e comparto idratazione integrato.",
+                "category": "Viaggi",
+                "link": "https://www.amazon.it/Terra-Peak-Active-hiking-piccolo/dp/B092W249YL?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Benessere & Relax",
+        "description": "Crea la tua spa personale in bagno.",
+        "color": "teal",
+        "products": [
+            {
+                "name": "Diffusore Oli Essenziali SALKING",
+                "text": "Diffusore ad ultrasuoni per aromaterapia, umidificatore con luce LED. Silenzioso, autonomia fino a 10 ore. Ideale per casa e ufficio.",
+                "category": "Benessere",
+                "link": "https://www.amazon.it/SALKING-Diffusore-Essenziali-Ultrasuoni-Aromaterapia/dp/B0CP9GZC6Q?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Massaggiatore Cervicale K2",
+                "text": "Massaggiatore elettrico per collo, schiena e spalle. Shiatsu profondo con funzione calore, 3 livelli intensità. Ideale per cervicali e tensioni muscolari.",
+                "category": "Benessere",
+                "link": "https://www.amazon.it/K2-STORE-Massaggiatore-Cervicale-Compatibile/dp/B0DV5NGVTK?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Brico & Fai da Te",
+        "description": "Strumenti di precisione per i tuoi progetti di casa.",
+        "color": "zinc",
+        "products": [
+            {
+                "name": "Trapano Avvitatore BLACK+DECKER 18V",
+                "text": "Trapano avvitatore a batteria 18V, coppia massima 37 Nm, 10 posizioni di frizione. Luce LED integrata, batteria 1.5 Ah e caricabatterie inclusi.",
+                "category": "Brico",
+                "link": "https://www.amazon.it/gp/aw/d/B07N8YLLG7?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Set Cacciaviti Precisione JOREST 40Pcs",
+                "text": "Kit professionale 40 pezzi con Torx, Triwing, Phillips, Flathead. Ideale per Switch, PS4, Xbox, PC, laptop, occhiali, orologi. Acciaio S2 ad alta resistenza.",
+                "category": "Brico",
+                "link": "https://www.amazon.it/gp/aw/d/B09FFCGLHK?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Outdoor & Camping",
+        "description": "Equipaggiamento per le tue avventure nella natura.",
+        "color": "emerald",
+        "products": [
+            {
+                "name": "Lanterna LED da Campeggio Ricaricabile",
+                "text": "Luce impermeabile portatile con 4 modalità illuminazione. Ricaricabile USB, ideale per campeggio, escursionismo e outdoor.",
+                "category": "Outdoor",
+                "link": "https://www.amazon.it/Campeggio-Ricaricabile-Portatile-Impermeabile-Escursionismo/dp/B0GCF3G4X2?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Sacco a Pelo Invernale QEZER -20°C",
+                "text": "Sacco a pelo termico 1560g, comfort estremo fino a -20°C. Ideale per campeggio, escursioni e trekking. Impermeabile e traspirante.",
+                "category": "Outdoor",
+                "link": "https://www.amazon.it/QEZER-invernale-20%E2%84%83%E3%80%901560g%E3%80%91caldo-campeggio-escursioni/dp/B0CXPPNL5C?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Cura della Auto",
+        "description": "Mantenere la tua auto come nuova non è mai stato così facile.",
+        "color": "slate",
+        "products": [
+            {
+                "name": "Aspirapolvere Portatile BLACK+DECKER dustbuster 12V",
+                "text": "Aspirapolvere portatile per auto con cavo 12V. Design compatto, potente aspirazione, contenitore trasparente. Ideale per pulire sedili, tappetini e interni.",
+                "category": "Auto",
+                "link": "https://www.amazon.it/BLACK-DECKER-dustbuster-Aspirapolvere-ADV1200-XJ/dp/B017COMWTS?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Kit Rinnova Fari ATG",
+                "text": "Kit lucidatura fari auto con polimero liquido. Ripristina fari opachi e ingialliti, migliora visibilità e sicurezza. Include tutto il necessario.",
+                "category": "Auto",
+                "link": "https://www.amazon.it/Rinnova-Lucidatura-Polimero-Liquido-Prodotti/dp/B01MZH5LVR?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Smart Laundry",
+        "description": "Soluzioni moderne per il lavaggio e la cura dei capi.",
+        "color": "sky",
+        "products": [
+            {
+                "name": "Levapelucchi Elettrico",
+                "text": "Rimuove pelucchi e nodi da tutti i tessuti. 3 livelli di intensità, motore potente e silenzioso. Ideale per vestiti, divani e tappeti.",
+                "category": "Casa",
+                "link": "https://www.amazon.it/gp/aw/d/B0F93ZJY16?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Stendibiancheria Verticale",
+                "text": "Stendibiancheria a torre compatta con 20 metri di stenditoio. Ideale per interni e balconi piccoli. Ruote per facile spostamento.",
+                "category": "Casa",
+                "link": "https://www.amazon.it/gp/aw/d/B0BS1PDVMR?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Yoga & Mindfulness",
+        "description": "Trova il tuo equilibrio interiore.",
+        "color": "violet",
+        "products": [
+            {
+                "name": "Blocchi Yoga BACKLAxx in Sughero 100% Naturale",
+                "text": "Mattoncini yoga ecologici e delicati sulla pelle. Antiscivolo, ideali per stretching, pilates e meditazione. 100% sughero naturale sostenibile.",
+                "category": "Sport",
+                "link": "https://www.amazon.it/BACKLAxx-Mattoncini-Blocco-Yoga-Antiscivolo-Meditazione/dp/B08TPCT3PD?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Campana Tibetana Silent Mind Himalaya",
+                "text": "Campana tibetana dell'Himalaya con splendidi disegni New Bronze Mantra. Suoni armonici profondi per meditazione, mindfulness e rilassamento.",
+                "category": "Benessere",
+                "link": "https://www.amazon.it/gp/aw/d/B071RDPW8Z?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Postazione Mini PC Potente",
+        "description": "Scopri come ottimizzare il tuo spazio con la potenza del Mini PC Blackview.",
+        "color": "rose",
+        "products": [
+            {
+                "name": "Mini PC Blackview MP50",
+                "text": "Potenza incredibile in dimensioni compatte. Ideale per ufficio, coding e intrattenimento domestico.",
+                "category": "Tech",
+                "link": "https://www.amazon.it/Blackview-Completo%E3%80%91-MP50-Tastiera-Computer/dp/B0FL27V4QP?tag=l0c39-21"
+            },
+            {
+                "name": "Kit Tastiera e Mouse Wireless",
+                "text": "Il compagno perfetto per il tuo nuovo Mini PC, per una scrivania senza cavi.",
+                "category": "Tech",
+                "link": "https://www.amazon.it/Blackview-Completo%E3%80%91-MP50-Tastiera-Computer/dp/B0FL27V4QP?tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Sicurezza Domestica",
+        "description": "Proteggi ciò che ami con le migliori tecnologie.",
+        "color": "red",
+        "products": [
+            {
+                "name": "Telecamera Esterno Reolink Duo 3 PoE 16MP",
+                "text": "Telecamera PoE con doppio obiettivo panoramico 180°. Rilevamento uomo/veicolo/animale, audio bidirezionale, faretti, registrazione continua 24/7.",
+                "category": "Sicurezza",
+                "link": "https://www.amazon.it/gp/aw/d/B0CM34VG3X?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "SwitchBot Hub 2 Smart Home",
+                "text": "Hub intelligente con termometro, igrometro e telecomando IR. Collega SwitchBot alla rete Wi-Fi, compatibile con Alexa e Google Assistant per controllo vocale.",
+                "category": "Sicurezza",
+                "link": "https://www.amazon.it/gp/aw/d/B0BM8VS13P?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Musica ovunque",
+        "description": "Altoparlanti e cuffie per i veri amanti del suono.",
+        "color": "orange",
+        "products": [
+            {
+                "name": "Speaker Bluetooth UOHHBOE 15W Impermeabile",
+                "text": "Cassa portatile potente 15W, impermeabile, abbinamento TWS. Bluetooth 5.3, 15 ore autonomia, 30m distanza connessione. Luce LED, AUX e TF. Ideale per viaggi, outdoor e feste.",
+                "category": "Audio",
+                "link": "https://www.amazon.it/UOHHBOE-Impermeabile-Altoparlante-Abbinamento-Connessione/dp/B0DV3NR5WN?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Cuffie Bluetooth Sport 5.4 HiFi",
+                "text": "Auricolari Bluetooth 5.4 HiFi stereo con cancellazione rumore mic. 50 ore autonomia, ricarica rapida USB-C, IP7 impermeabile. Ideali per running, palestra e sport.",
+                "category": "Audio",
+                "link": "https://www.amazon.it/Bluetooth-Auricolari-Cancellazione-Cuffiette-Impermeabil/dp/B0FY366C5D?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Scrittura & Cancelleria",
+        "description": "Per chi ama ancora il piacere della carta e penna.",
+        "color": "lime",
+        "products": [
+            {
+                "name": "Diario WEMATE in Pelle A5 Vintage",
+                "text": "Diario in pelle PU A5 con blocco 240 pagine. Vintage organizer e pianificatore per uomini e donne. Dimensioni 8.6x5.8in, ideale per journaling e planning.",
+                "category": "Ufficio",
+                "link": "https://www.amazon.it/WEMATE-Vintage-Organizzatore-Pianificatore-8-6x5-8in/dp/B0BWHCLJH7?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Penna Multifunzione Waldstrom 9 in 1",
+                "text": "Penna multitool con 9 strumenti integrati e luce LED. Ideale per uso quotidiano e outdoor. Penna a sfera con luce in elegante confezione regalo. Perfetta per uomini.",
+                "category": "Ufficio",
+                "link": "https://www.amazon.it/Waldstrom-MS1407-Penna-multifunzione/dp/B0BC8RV5BN?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Vini & Sommelier",
+        "description": "Accessori per degustare i tuoi vini preferiti al meglio.",
+        "color": "red",
+        "products": [
+            {
+                "name": "Cavatappi Elettrico GHB USB Ricaricabile",
+                "text": "Apribottiglie elettrico professionale USB ricaricabile. Include tagliacarte, versatore, tappo di tenuta e tappo per vuoto. Regalo perfetto per uomini, papà e amanti del vino.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/GHB-Ricaricabile-Apribottiglie-Professionale-Inossidabile/dp/B0BB5R5KDX?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Decanter Krosno Essence Collection 750ml",
+                "text": "Decanter vino angolato 750ml in cristallo alta qualità, realizzato a mano. Design elegante obliquo ideale per aerazione vino rosso. Artigianato europeo.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/Krosno-Collection-realizzato-laerazione-artigianato/dp/B0CX9FM2Q4?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Sicurezza Bici & Scooter",
+        "description": "Proteggi il tuo mezzo con i migliori sistemi antifurto certificati.",
+        "color": "emerald",
+        "products": [
+            {
+                "name": "Lucchetto Bici GRIFEMA GA1201",
+                "text": "Massima sicurezza per la tua bicicletta o scooter. Acciaio ultra resistente e design anti-taglio.",
+                "category": "Sport",
+                "link": "https://www.amazon.it/GRIFEMA-GA1201-12-Lucchetto-bicicletta-biciclette/dp/B0C3YMHJ3R?tag=l0c39-21"
+            },
+            {
+                "name": "Cavo in Acciaio Rivestito",
+                "text": "Complemento ideale per fissare anche le ruote o il casco in totale sicurezza.",
+                "category": "Sport",
+                "link": "https://www.amazon.it/GRIFEMA-GA1201-12-Lucchetto-bicicletta-biciclette/dp/B0C3YMHJ3R?tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Beauty Tech",
+        "description": "La tecnologia al servizio della tua bellezza quotidiana.",
+        "color": "fuchsia",
+        "products": [
+            {
+                "name": "Spazzola Viso SUNMAY Sonica con Ioni",
+                "text": "Spazzola viso sonica e dispositivo tonificante facciale. Funzione di ioni positivi e negativi per pulizia profonda e massaggio viso.",
+                "category": "Bellezza",
+                "link": "https://www.amazon.it/SUNMAY-Spazzola-Dispositivo-Tonificare-Massaggiatore/dp/B085Y1K8PM?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Specchio Trucco LED 80x62cm con 17 Lampadine",
+                "text": "Specchio trucco con luci e 3 modalità luce. 80x62cm, durevole, con 17 lampadine LED. Illuminazione naturale regolabile per make-up perfetto.",
+                "category": "Bellezza",
+                "link": "https://www.amazon.it/Ereousa-Specchio-modalit%C3%A0-Durevole-Lampadine/dp/B0D76W6KFX?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Setup Desktop Potente",
+        "description": "I migliori componenti per un ufficio moderno e una postazione da urlo.",
+        "color": "blue",
+        "products": [
+            {
+                "name": "Mini PC FIREBAT Ryzen 7 7735HS",
+                "text": "Mini PC da gioco Ryzen 7 7735HS 8C/16T fino a 4.75GHz 54W, Radeon 680M. USB-C, WiFi 6/BT 5.2/2.5G LAN, RAM LPDDR5, SSD 512GB. Ideale per studenti, casa, ufficio.",
+                "category": "Tech",
+                "link": "https://www.amazon.it/FIREBAT-computer-compatto-studenti-negozio%E3%80%90A6%E3%80%91/dp/B0GGY5F4BV?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "ASUS TUF Gaming VG27WQ3B Monitor Curvo 27\" QHD",
+                "text": "Monitor curvo 27\" Quad HD VA 2560x1440, 0.5ms GTG, 180Hz. Tecnologia Extreme Low Motion Blur, FreeSync, 90% DCI-P3. Ideale per gaming e lavoro.",
+                "category": "Tech",
+                "link": "https://www.amazon.it/ASUS-VG27WQ3B-2560x1440-Tecnologia-FreeSync/dp/B09KZM4X1L?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Elettronica per Bambini",
+        "description": "Gadget educativi e divertenti per i più piccoli.",
+        "color": "yellow",
+        "products": [
+            {
+                "name": "Mio Tab Pro 10 Liscianigiochi Hi Tech Educativo",
+                "text": "Tablet educativo per bambini con app sicure e preinstallate per imparare giocando. Schermo 10 pollici, contenuti didattici, design kid-friendly.",
+                "category": "Kids",
+                "link": "https://www.amazon.it/Liscianigiochi-Tech-Educativo-Mio-Tab/dp/B0D6NHZZZZ?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Macchina Fotografica Bambini 3.5\" HD 1080P",
+                "text": "Fotocamera per bambini con schermo 3.5\", 360° obiettivo zoom rotante, 1080P HD, selfie, flash LED, scheda SD 32GB. Regalo per bambini 3-12 anni. Resistente agli urti.",
+                "category": "Kids",
+                "link": "https://www.amazon.it/Macchina-Fotografica-Bambini-Obiettivo-Fotocamera/dp/B0D4TP5VNV?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Grilling & BBQ",
+        "description": "Diventa il re della griglia nel tuo giardino.",
+        "color": "orange",
+        "products": [
+            {
+                "name": "Termometro Carne Wi-Fi Meatmeet",
+                "text": "Sonda wireless a lungo raggio per forno, grill, friggitrice ad aria, barbecue. Doppi sensori, IP67 impermeabile. Controlla la cottura perfetta dal tuo smartphone.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/gp/aw/d/B0F2DJ4ZWM?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Set Posate KARL HAUSMANN 72 Pezzi 12 Persone",
+                "text": "Set posate 72 pezzi in acciaio inox 18/0 per 12 persone, con valigetta. Include coltelli, forchette, cucchiai e posate da servizio. Lucido, lavabili in lavastoviglie.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/KARL-HAUSMANN-Posate-Acciaio-Inox/dp/B0C5XH1WVW?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Podcast Ready",
+        "description": "Attrezzatura per lanciare il tuo show audio.",
+        "color": "indigo",
+        "products": [
+            {
+                "name": "Braccio per Microfono NEEWER a Sospensione",
+                "text": "Supporto per microfono con braccio a forbice a sospensione. Adattatore vite 3/8\" a 5/8\", fascette per cavi, carico massimo 1.5kg. Posizionamento flessibile e stabile.",
+                "category": "Audio",
+                "link": "https://www.amazon.it/Microfono-Supporto-Sospensione-Adattatore-Fascette/dp/B00DY1F2CS?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Pannelli Fonoassorbenti TecTake Set 2pz Effetto Legno",
+                "text": "Set 2 pannelli acustici fonoassorbenti decorativi effetto legno rovere chiaro. Per pareti e soffitto, design moderno. Migliora l'acustica eliminando il riverbero.",
+                "category": "Audio",
+                "link": "https://www.amazon.it/TecTake%C2%AE-Pannelli-Acustici-Fonoassorbenti-Decorativi/dp/B0D83GK992?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Bio-Hacking Casa",
+        "description": "Ottimizza il tuo ambiente per la massima salute.",
+        "color": "teal",
+        "products": [
+            {
+                "name": "Amazon Smart Air Quality Monitor",
+                "text": "Sistema di monitoraggio della qualità dell'aria Amazon. Rileva CO2 e polveri sottili. Conosci la qualità dell'aria in tempo reale, compatibile con Alexa.",
+                "category": "Salute",
+                "link": "https://www.amazon.it/amazon-smart-air-quality-monitor-conosci-la-qualita-dell%E2%80%99aria/dp/B08X2V3T2B?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Filtro Doccia Ibergrif M91010",
+                "text": "Filtro doccia per acqua dura con cartuccia sostituibile. Rimuove cloro e metalli pesanti. Pelle e capelli più sani grazie all'acqua purificata.",
+                "category": "Salute",
+                "link": "https://www.amazon.it/Ibergrif-M91010-cartuccia-sostituibile-rimuovere/dp/B0F6213VH1?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Smart Lighting",
+        "description": "Illumina i tuoi spazi con intelligenza.",
+        "color": "amber",
+        "products": [
+            {
+                "name": "Striscia LED Realky 20M RGB Bluetooth",
+                "text": "Striscia LED 20M RGB, Bluetooth APP controllato. Multicolor, sincronizza con la musica. Per camera, feste, cucina, gaming room. Classe efficienza energetica A.",
+                "category": "Casa",
+                "link": "https://www.amazon.it/Striscia-Bluetooth-Controllato-Multicolor-Sincronizza/dp/B0CG1CMS3T?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Lampada da Tavolo HYMZP LED 5000mAh",
+                "text": "Lampada da tavolo senza fili ricaricabile 5000mAh, LED eye-protect. Dimmerabile, in metallo, per sala da pranzo, camera da letto, outdoor. Design minimal.",
+                "category": "Casa",
+                "link": "https://www.amazon.it/HYMZP-Ricaricabile-Scrivania-Alluminio-Allaperto/dp/B08394CRC3?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Escursionismo Leggero",
+        "description": "Zaini e accessori per trekking senza pesi inutili.",
+        "color": "green",
+        "products": [
+            {
+                "name": "Zaino Trekking Terra Peak 20L ACTIVE",
+                "text": "Zaino da trekking 20 litri per uomo e donna. Ergonomico, impermeabile, ventilazione posteriore traspirante. Ideale per escursionismo, viaggio e montagna.",
+                "category": "Outdoor",
+                "link": "https://www.amazon.it/Terra-Peak-Active-hiking-piccolo/dp/B092W249YL?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Bastoncini OKHEALING Carbonio T800 Pieghevoli",
+                "text": "Bastoncini da trekking pieghevoli a 5 sezioni, leggeri e resistenti. Fibra di carbonio T800 ad alta resistenza, impugnatura dritta. Ideali per escursioni, trekking e alpinismo.",
+                "category": "Outdoor",
+                "link": "https://www.amazon.it/Bastoncini-pieghevoli-resistenti-resistenza-impugnatura/dp/B0DHZ54BRP?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Smart Cleaning",
+        "description": "La tecnologia che pulisce casa per te.",
+        "color": "blue",
+        "products": [
+            {
+                "name": "Robot Aspirapolvere Roborock Saros 10R",
+                "text": "Robot aspirapolvere 7.98cm, antigroviglio, telaio AdaptiLift. Rimozione automatica dei moci, pulizia angoli e bordi. Stazione multifunzionale 4.0, Hello Rocky.",
+                "category": "Casa",
+                "link": "https://www.amazon.it/gp/aw/d/B0DJ3284BS?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Robot Pulitore SOKEQTW Aspira e Lava",
+                "text": "Robot pulitore e aspirapolvere pavimenti. Aspira e lava, rilevamento ostacoli, adatto per tappeti e pavimenti in legno. Auto boost sui tappeti, funzionamento silenzioso.",
+                "category": "Casa",
+                "link": "https://www.amazon.it/SOKEQTW-Pulitore-Pavimenti-Aspirapolvere-Rilevamento/dp/B0G48G35ZM?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Home Cinema",
+        "description": "L'esperienza del grande schermo nel tuo salotto.",
+        "color": "purple",
+        "products": [
+            {
+                "name": "Proiettore 4K Google TV Compatibile Netflix",
+                "text": "Videoproiettore 4K con Google TV compatibile Netflix. Auto focus e 6D keystone, focale corta, portatile WiFi Bluetooth. Rotabile per home cinema casa e esterno.",
+                "category": "Video",
+                "link": "https://www.amazon.it/Proiettore-4K%E3%80%90Google-Compatibile-Netflix%E3%80%91Videoproiettore-Proiettori/dp/B0GD6VVTT2?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "ULTIMEA 7.1 Soundbar TV 460W Dolby Atmos",
+                "text": "Soundbar 7.1 460W compatibile Dolby Atmos, controllo APP. 4 altoparlanti surround cablati, sistema audio home theater surround con subwoofer wireless 6.5\". Poseidon D80.",
+                "category": "Video",
+                "link": "https://www.amazon.it/ULTIMEA-Soundbar-Controllo-Altoparlanti-Subwoofer/dp/B0DCGF1RBF?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Colazione Perfetta",
+        "description": "Inizia la giornata con il piede giusto.",
+        "color": "orange",
+        "products": [
+            {
+                "name": "Tostapane Keenstone con Pinze Retro 2 Fette",
+                "text": "Tostapane retro a 2 fette extra larghe in acciaio inox. 6 livelli di doratura, funzioni riscaldamento e scongelamento. Per toast farciti, vassoio raccoglibriciole.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/Keenstone-Tostapane-riscaldamento-scongelamento-raccoglibriciole/dp/B0GDFLKQV6?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Spremiagrumi Elettrico LEBENLANG 600W",
+                "text": "Spremiagrumi elettrico 600W con cono in acciaio inox senza BPA. Spremi agrumi elettronico professionale, spremuta arancia citrus juicer. Spremi arance automatico melograno piccolo.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/LEBENLANG-Spremiagrumi-elettrico-alta-succo/dp/B0957K4GHW?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Modellismo 3D",
+        "description": "Dai vita alle tue idee con la stampa 3D.",
+        "color": "zinc",
+        "products": [
+            {
+                "name": "Stampante 3D FLASHFORGE Adventurer 5M",
+                "text": "Stampante 3D con calibrazione automatica, auto stampa, metallo core XY. Struttura stampa precisa, manutenzione facile. Max 600mm/s, tutto metallo.",
+                "category": "Tech",
+                "link": "https://www.amazon.it/FLASHFORGE-Calibrazione-Auto-Tutto-Metallo-Manutenzione/dp/B0DMNJ57RG?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "KRETRUM 28 Colori Filamento Penna 3D PLA 1.75mm",
+                "text": "Set 28 colori filamento penna 3D PLA 1.75mm. Compatibile con MYNT3D SCRIB3D, penna qualsiasi colore. 3M totale 276 piede, contiene filamento glow e sparkly.",
+                "category": "Tech",
+                "link": "https://www.amazon.it/Kretrum-Filamento-filamento-fluorescente-compatibile/dp/B0CQY2NNDW?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Cura del Verde Indoor",
+        "description": "Piante rigogliose anche senza il pollice verde.",
+        "color": "emerald",
+        "products": [
+            {
+                "name": "GiDeli Vaso Autoirrigante con Livello Acqua",
+                "text": "Vaso con sistema auto-irrigazione e indicatore livello acqua. Vasi per fiori che proteggono da traboccamenti e decomposizione. Vaso per piante che fa crescere.",
+                "category": "Giardino",
+                "link": "https://www.amazon.it/GiDeli-Vaso-autoirrigante-auto-irrigazione-decomposizione/dp/B0GS2HDPLM?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "BURMONG Misuratore PH Terreno 4 in 1",
+                "text": "Igrometro piante con umidità/pH/temperatura/luce solare. Sensore umidità terreno per giardinaggio, prato, agricoltura, piante da esterno. 4 in 1.",
+                "category": "Giardino",
+                "link": "https://www.amazon.it/BURMONG-Misuratore-Temperatura-Giardinaggio-Agricoltura/dp/B0GCB56LRX?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "title": "Work from Bed",
+        "description": "Comfort estremo per lavorare da dove vuoi.",
+        "color": "indigo",
+        "products": [
+            {
+                "name": "Tavolino da Letto unycos Pieghevole 60x40x26cm",
+                "text": "Tavolino da letto pieghevole 60x40x26cm. Vassoio da colazione con supporto laptop fino a 17.3\", leggio per tablet e libri, porta bicchiere.",
+                "category": "Ufficio",
+                "link": "https://www.amazon.it/unycos-Pieghevole-Salvaspazio-Multifunzione-Resistente/dp/B0BR5VQLZJ?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Travel Ease Cuscino Lombare Ergonomico",
+                "text": "Supporto per schiena in schiuma di memoria per seggiolino auto sedia ufficio. Schienale con rivestimento antistatico e doppie cinghie regolabili. Nero.",
+                "category": "Casa",
+                "link": "https://www.amazon.it/Travel-Ease-Ergonomico-Rivestimento-Antistatico/dp/B096RRKV2Y?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "title": "Auto Connessa",
+        "description": "Upgrade tecnologici per la tua vecchia auto.",
+        "color": "cyan",
+        "products": [
+            {
+                "name": "HORJOR Ricevitore Bluetooth Mini Adattatore",
+                "text": "Adattatore Bluetooth jack 3.5mm per chiamate in vivavoce. Cuffie cablate, altoparlanti auto. Streaming musicale e chiamate in un attimo.",
+                "category": "Auto",
+                "link": "https://www.amazon.it/Adattatore-Bluetooth-ricevitore-Altoparlante-connessione/dp/B0B9R5YR7W?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Lamicall Supporto Telefono Auto MagSafe 360°",
+                "text": "Supporto telefono auto per MagSafe con ventosa sottovuoto e 24X N55. 360° rotazione, portacellulare auto per cruscotto/parabrezza. Supporto magnetico per iPhone 17/16/15/14 e altri smartphone.",
+                "category": "Auto",
+                "link": "https://www.amazon.it/Lamicall-Supporto-Telefono-Auto-MagSafe/dp/B0FMD7BTKC?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "title": "Bakery a Casa",
+        "description": "Il profumo del pane appena sfornato.",
+        "color": "amber",
+        "products": [
+            {
+                "name": "Macchina del Pane TZS First Austria 850W",
+                "text": "Macchina del pane 850W per pane da 900g e 1350g. 14 programmi automatici, doratura regolabile, timer e funzione mantenimento calore.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/TZS-First-Austria-multifunzione-mantenimento/dp/B0CJ1V9CQ2?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Barbecook Pietra Naturale per Pizza 43x35x1.2cm",
+                "text": "Pietra per pizza in argilla refrattaria. Pietra per pizza al barbecue, accessori per barbecue. Dimensioni 43x35x1.2cm. Ottieni croste croccanti come nel forno a legna.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/Barbecook-Naturale-refrattaria-Barbecue-Accessori/dp/B00R1C4B1E?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "title": "Nuoto & Piscina",
+        "description": "Accessori per migliorare le tue performance in acqua.",
+        "color": "blue",
+        "products": [
+            {
+                "name": "Occhialini Nuoto SwimmerShop Tipo Svedesi",
+                "text": "Occhialini piscina con bordo in gomma, anti appannamento. Gommati, protezione UV. Modello Svedesi per nuotatori professionisti.",
+                "category": "Sport",
+                "link": "https://www.amazon.it/SwimmerShop-Occhialini-Nuoto-Tipo-Svedesi/dp/B0DXVZFZX9?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "ARENA Cuffia Nuoto Unisex Classico Silicone",
+                "text": "Cuffia nuoto unisex classico in silicone. Protezione per capelli, comfort ergonomico. Ideale per nuoto professionale e ricreazione.",
+                "category": "Sport",
+                "link": "https://www.amazon.it/Arena-Classic-Silicone-Cuffia-Unisex/dp/B0079JHHOW?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "title": "Smart Storage",
+        "description": "Recupera spazio in modo intelligente.",
+        "color": "slate",
+        "products": [
+            {
+                "name": "Vacbird Sacchetti Sottovuoto Con Pompa",
+                "text": "Sacchetti sottovuoto vestiti senza fili con pompa. 10 pezzi: 4*40x54cm, 4*47x64cm, 2*54x74cm. Buste salvaspazio. Ideali per viaggiare e organizzare bagagli.",
+                "category": "Casa",
+                "link": "https://www.amazon.it/Vacbird-Sacchetti-Sottovuoto-Vestiti-Salvaspazio/dp/B0F6MRCZ1H?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Scaffale Bagno 3 Mensole Ripiano Mobile",
+                "text": "Scaffale bagno 3 mensole ripiano mobile sopra lavatrice lavanderia. Salvaspazio ripiani per appoggio organizer da parete per detersivi sapone. Metallo 152x65x25cm, bianco.",
+                "category": "Casa",
+                "link": "https://www.amazon.it/Superiore-Lavatrice-Lavanderia-Salvaspazio-Organizer/dp/B0D9YJYTQC?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "title": "Gaming Portatile",
+        "description": "Divertimento assicurato in viaggio.",
+        "color": "red",
+        "products": [
+            {
+                "name": "Lmcpa Custodia Switch Duro con Borsa da Viaggio",
+                "text": "Custodia rigida per console Nintendo Switch 2025, borsa da viaggio con 10 cartucce di gioco. PC custodia rigida portatile protettiva per console Switch 2025 e accessori. Nero.",
+                "category": "Gaming",
+                "link": "https://www.amazon.it/Lmcpa-Custodia-Portatile-Protettiva-Accessori/dp/B0DSD1Y38B?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "UPERFECT Monitor Portatile Wireless 8000mAh 15.6\"",
+                "text": "Monitor portatile 15.6\" IPS FHD 125% sRGB display mobile schermo. Custodia/tastiera per PC/laptop/phone/console. Supporto AirPlay/Miracast. Classe efficienza energetica A.",
+                "category": "Tech",
+                "link": "https://www.amazon.it/UPPERFECT-Portatile-Wireless-Batteria-Custodia/dp/B0G25DSCPJ?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "title": "Digital Detox",
+        "description": "Prodotti per staccare la spina e rigenerarsi.",
+        "color": "green",
+        "products": [
+            {
+                "name": "Sonkir Cassa Temporizzata Bluetooth 5.0",
+                "text": "Cassa temporizzata Bluetooth 5.0 con bassi stereo 3D Hi-Fi mani libere. Batteria integrata 1500mAh, supporto TF card. Blu.",
+                "category": "Benessere",
+                "link": "https://www.amazon.it/Sonkir-portatile-Altoparlante-altoparlante-riproduzione/dp/B07T52Y487?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Spunti di Crescita da Colorare Adulti",
+                "text": "Libro da colorare per adulti e ragazzi con 40 affermazioni positive e di consapevolezza. Copertina flessibile. Data uscita: 17 novembre 2025.",
+                "category": "Benessere",
+                "link": "https://www.amazon.it/Spunti-crescita-colorare-affermazioni-consapevolezza/dp/B0G2RBC846?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "title": "Vlogging Tools",
+        "description": "Porta i tuoi video al livello successivo.",
+        "color": "pink",
+        "products": [
+            {
+                "name": "UPhitnis 12\" Ring Light Staffa Triangolare",
+                "text": "Luce per selfie 12\" con staffa triangolare 63\". Luce ad anello LED 3 modalità illuminazione con 10 luminosità. Per trucco, fotografia, YouTube e video selfie.",
+                "category": "Foto",
+                "link": "https://www.amazon.it/UPhitnis-Triangolare-Illuminazione-luminosit%C3%A0-Fotografia/dp/B09SPSVQFN?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "TONOR Microfono Radio Wireless UHF Metallo",
+                "text": "Microfono radio wireless UHF professionale dinamico doppio. Sistema microfoni senza fili, set per karaoke, feste, DJ, chiesa, matrimonio. Portata 60m, argento.",
+                "category": "Foto",
+                "link": "https://www.amazon.it/gp/aw/d/B07RKN9FF6?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "title": "Tè & Infusi",
+        "description": "Il rituale del tè perfetto.",
+        "color": "emerald",
+        "products": [
+            {
+                "name": "Amazon Basics Bollitore Elettrico Vetro",
+                "text": "Bollitore elettrico in vetro con base 360°. Design elegante per tavola. Resistenza nascosta, manico ergonomico. Ideale per tè e tisane.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/Amazon-Basics-Bollitore-elettrico-vetro/dp/B07KPTB56T?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Infusore Acciaio Inox con Pallina",
+                "text": "Infusore in acciaio inox con pallina per tè. Design moderno per infondere le tue foglie preferite. Facile da pulire, ideale per tè e tisane.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/acciaio-colino-pallina-piacere-ottimale/dp/B0BW4L3STN?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "title": "Running Essentials",
+        "description": "Tutto quello che ti serve per correre meglio.",
+        "color": "yellow",
+        "products": [
+            {
+                "name": "Fitgriff Marsupio Running Porta Cellulare",
+                "text": "Cintura jogging per sportivo e camminata per uomo e donna. Porta cellulare corsa per ogni telefono. Marsupio running con tasche multiple.",
+                "category": "Sport",
+                "link": "https://www.amazon.it/Fitgriff%C2%AE-Marsupio-Sportivo-Cintura-Corsa/dp/B07WH7JH6W?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Calze Compressione Graduata Uomo Donna",
+                "text": "Calzini medicali a compressione graduata. Uomo e donna, cotone biologico al 60%. Migliora circolazione e riduci tempo di recupero.",
+                "category": "Sport",
+                "link": "https://www.amazon.it/Compressione-Graduata-Calzini-Medicali-Biologico/dp/B0D15GQVRM?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "title": "Smart Wallet",
+        "description": "Portafogli minimali e sicuri.",
+        "color": "zinc",
+        "products": [
+            {
+                "name": "GUGGIARI Porta Carte Credito Uomo Pelle",
+                "text": "Portacarte RFID in alluminio con porta monete e tasca cortesia. Chiusura magnetica, portafoglio uomo slim in pelle. Forest.",
+                "category": "Accessori",
+                "link": "https://www.amazon.it/GUGGIARI%C2%AE-Porta-Carte-Credito-Pelle/dp/B0C4LT7RZN?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Bronzi Portafoglio Uomo Slim Piccolo",
+                "text": "Portafoglio uomo slim piccolo, portacarte uomo donna portatessere. Porta carte di credito, portafogli mini con protezione RFID e portamonete. Brand italiano.",
+                "category": "Accessori",
+                "link": "https://www.amazon.it/gp/aw/d/B085NVD5RJ?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "title": "Sleep Optimization",
+        "description": "Dormi meglio per vivere meglio.",
+        "color": "indigo",
+        "products": [
+            {
+                "name": "MyHalos Mascherina per Dormire 3D",
+                "text": "Maschera per sogni lucidi e notte, copri occhi e benda per dormire adulti. Sleeping mask per viaggio e relax. Design 3D comfort.",
+                "category": "Salute",
+                "link": "https://www.amazon.it/MyHalos%C2%AE-Mascherina-per-Dormire-Seta/dp/B09CZ68WV3?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Charmofun Sveglia da Comodino Simulazione Alba",
+                "text": "Sveglia da comodino con simulazione alba, 37 suoni rilassanti. Doppia clock e snooze, sunrise alarm clock con telecomando. Ideale per dormiglioni e bambini.",
+                "category": "Salute",
+                "link": "https://www.amazon.it/Charmofun-Simulazione-Rilassanti-Telecomando-Dormiglioni/dp/B0FVWQ7Z6T?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "title": "Cocktail Night",
+        "description": "Prepara drink professionali a casa tua.",
+        "color": "rose",
+        "products": [
+            {
+                "name": "Cinnani Boston Cocktail Shaker Set 20 Pezzi",
+                "text": "Set cocktail professionale con supporto acrilico. Barman set completo, shaker per cocktail in acciaio inox. Tutto il necessario per miscelare i tuoi cocktail preferiti.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/Cinnani-Professionale-Cocktail-Soporte-Professionale-set-Cocktail-Inox-Shaker/dp/B0CKH6LGJW?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Grande Stampi Cubetti Ghiaccio Silicone 6cm",
+                "text": "Stampi per cubetti ghiaccio silicone per cocktail whisky. Set di 4 con coperchio a imbuto 2-in-1. Stampo ghiaccio grande da 6cm, forme ghiaccio rotondo. Facile rilascio.",
+                "category": "Cucina",
+                "link": "https://www.amazon.it/Grande-cubetti-ghiaccio-silicone-cocktail/dp/B0CXYLWBYM?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "title": "Camping Adventures",
+        "description": "Tutto l'essenziale per escursioni e campeggio all'aperto.",
+        "color": "green",
+        "products": [
+            {
+                "name": "FEELWORLD F5PROX Monitor Campo Touch 1600Nit",
+                "text": "Monitor da campo fotocamera con schermo touch 1600Nit 5.5 pollici 4K HDMI. Per DSLR videocamera, con borsa F750, ingresso Type C, 3DLUT, focus peaking, istogrammo.",
+                "category": "Foto",
+                "link": "https://www.amazon.it/gp/aw/d/B0D6Y7QDSQ?linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Lepro Lampada da Campeggio Ricaricabile 1000LM",
+                "text": "Lanterna campeggio super luminosa 1000LM, luce portatile impermeabile. 4 modalità dimmerabili, luce esterna per escursionismo, pesca, emergenza, tenda. Classe efficienza energetica A+.",
+                "category": "Outdoor",
+                "link": "https://www.amazon.it/dp/B015ZFKLNK?th=1&linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "title": "Desk Setup Zen",
+        "description": "Minimalismo e pace sulla tua scrivania.",
+        "color": "teal",
+        "products": [
+            {
+                "name": "MIQIO Sottomano in Feltro Sostenibile 68x33cm",
+                "text": "Sottomano in feltro sostenibile per tavoli in legno senza gommatura, certificato Oekotex. Tappetino da scrivania in bottiglie di PET riciclate, grigio scuro, 68x33cm.",
+                "category": "Ufficio",
+                "link": "https://www.amazon.it/Sottomano-sostenibile-gommatura-certificato-tappetino/dp/B0B72DZ5B4?th=1&linkCode=ll2&tag=l0c39-21"
+            },
+            {
+                "name": "Avantree Supporto Cuffie Metallo Silicone",
+                "text": "Supporto per cuffie in metallo e silicone. Supporto headset stand con ferma, design moderno per tenere in ordine le tue cuffie sulla scrivania.",
+                "category": "Ufficio",
+                "link": "https://www.amazon.it/dp/B01A09KCJ4?linkCode=ll2&tag=l0c39-21"
+            }
+        ]
+    }
+]

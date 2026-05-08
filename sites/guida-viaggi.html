@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida Viaggi Organizzati - Smart Choices Guide</title>
+    <meta name="description" content="Trova i migliori prodotti per viaggiare organizzato e sicuro. Valigie, accessori e gadget per ogni tipo di viaggio.">
+    <meta name="keywords" content="viaggi organizzati, valigia, accessori viaggio, bagaglio, cofanetto esperienze">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2980B9;
+            --secondary-color: #3498DB;
+            --accent-color: #FF6B35;
+            --success-color: #28A745;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #2980B9 0%, #3498DB 50%, #FF6B35 100%);
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 40px;
+        }
+        
+        .problem-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .solution-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+        }
+        
+        .btn-warning {
+            background: var(--accent-color);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-warning:hover {
+            background: #e55a2b;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-plane me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bounty.html">
+                            <i class="fas fa-gift me-1"></i>Servizi Amazon
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tutte-le-guide.html">
+                            <i class="fas fa-book me-1"></i>Tutte le Guide
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-4">
+                <i class="fas fa-plane-departure me-3"></i>Guida Viaggi Organizzati
+            </h1>
+            <p class="lead mb-4">Trova i migliori prodotti per viaggiare organizzato e sicuro</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="mb-4">Ogni viaggio ha le sue esigenze. Scegli il prodotto che risolve il tuo problema specifico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- Problema 1: Viaggiare con bagaglio sicuro -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-suitcase-rolling text-primary me-2"></i>Vuoi viaggiare con bagaglio sicuro?</h2>
+            <p class="text-muted mb-4">Il tuo bagaglio non è sicuro o ben organizzato?</p>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Qualità Prezzo Top: Shavont Valigia Silenziosa con Serratura</h5>
+                <p class="mb-3">Valigia silenziosa con serratura TSA. Resistente. Capiente. Marchio Shavont qualità.</p>
+                <a href="https://www.amazon.it/Shavont-Silenziose-Serratura-Integrata-Compagnie/dp/B0GVMZ5HY9?crid=O2R6XRFEIASC&dib=eyJ2IjoiMSJ9.NL4YmqOLSJL8dzeLAFTLvd7vRk-_ClB0HlCNPNlwKDHenOjeKm07ODEyVc1QfIj7iOsGpsRQnTfNmSQDUnTFPtr-9gp3s0WHSvS5Yfk68IQxy8fX8Te-kRmRAoMPVc2NdK1XgocthDfmGwVxZeRlgtATM8vATrlZKO7KNCMIIiyMEXSA7Pp35irrRFnrFdQzMqKy0Ttwm3iRzf05SPSJuqzbeK_V6DP9jXcGu8xD3wf9xsTJ2dMqorQTH3BzNM7UDf7LmEGFun-K1kATrwSz-9q94A72tLvuXI-FIYLha3Y.mxj_gkaniijOXWjH6lT9J733XeJqkqzyfsctchaa2Cc&dib_tag=se&keywords=valigia&qid=1777898017&sprefix=valig%2Caps%2C141&sr=8-10&th=1&linkCode=ll2&tag=l0c39-21&linkId=dbe9e4e04b8462805b9e3c1bb0984df7&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-check text-info me-2"></i>Medio: FAVIAN Organizer Elettronico Viaggio</h5>
+                <p class="mb-3">Organizer elettronico viaggio. Comparti multipli. Porta documenti. Marchio FAVIAN affidabile.</p>
+                <a href="https://www.amazon.it/FAVIAN-Organizer-Elettronico-Viaggio-Strati/dp/B0FMS5M2R4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1LTZULHI809C7&dib=eyJ2IjoiMSJ9.bZS3jpRQ5buLwn1OArsXOK490BjNOHf23yxoWyetCIcig3FSChcBZeD4mm6_qyEOAYCgYwlBKurKz4_7P0MXtMuQMmNJ2OxU7-Xe5flcquj-LksWQtok6dToCCLu2wz4lsaxtaM7PdjNYkPWORsN3WAfROmR4Mi-7kofgr-7nTUrQhvKUX4nyLZoc1qiWkVAm7h1cgnqkhsnaFBG9QzShpBJTY0oSfCLo8m-nIedVztjcft9Axj_aIGrw2bkzWHIWYsl_k0s7AbU4dNUED6_Aco5POy-SQ0d9wuHGjMehNc.lctDylc3L3TeFTRe8gxOPQgnyKGXkJr1vuchBj_OCPY&dib_tag=se&keywords=gadget%2Bper%2Bviaggio&qid=1778008156&sprefix=gadget%2Bper%2Bviaggi%2Caps%2C298&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=a70bdd7460cc034beea09e9ba48e3739&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-dollar-sign text-success me-2"></i>Low Budget: Sacchetti Sottovuoto Professionali</h5>
+                <p class="mb-3">Sacchetti sottovuoto professionali. Risparmio spazio. Economici. Marchio professionale.</p>
+                <a href="https://www.amazon.it/Sacchetti-Sottovuoto-Professionali-Riutilizzabili-Salvaspazio/dp/B0DLB8RPTG?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1LTZULHI809C7&dib=eyJ2IjoiMSJ9.bZS3jpRQ5buLwn1OArsXOK490BjNOHf23yxoWyetCIcig3FSChcBZeD4mm6_qyEOAYCgYwlBKurKz4_7P0MXtMuQMmNJ2OxU7-Xe5flcquj-LksWQtok6dToCCLu2wz4lsaxtaM7PdjNYkPWORsN3WAfROmR4Mi-7kofgr-7nTUrQhvKUX4nyLZoc1qiWkVAm7h1cgnqkhsnaFBG9QzShpBJTY0oSfCLo8m-nIedVztjcft9Axj_aIGrw2bkzWHIWYsl_k0s7AbU4dNUED6_Aco5POy-SQ0d9wuHGjMehNc.lctDylc3L3TeFTRe8gxOPQgnyKGXkJr1vuchBj_OCPY&dib_tag=se&keywords=gadget%2Bper%2Bviaggio&qid=1778008156&sprefix=gadget%2Bper%2Bviaggi%2Caps%2C298&sr=8-22&th=1&linkCode=ll2&tag=l0c39-21&linkId=cc2fe5a9de593bb4ad7f30b821f5416b&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold
+                </a>
+            </div>
+        </div>
+
+        <!-- Problema 2: Restare connesso durante i viaggi -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-plug text-primary me-2"></i>Vuoi restare connesso durante i viaggi?</h2>
+            <p class="text-muted mb-4">Non riesci a caricare i dispositivi o usare le prese estere?</p>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Qualità Prezzo Top: Adattatore Universale Worldwide</h5>
+                <p class="mb-3">Adattatore universale worldwide. 150+ paesi. USB multiple. Marchio affidabile.</p>
+                <a href="https://www.amazon.it/Adattatore-universale-Worldwide-telefoni-cellulari/dp/B0FH6LYHQN?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1LTZULHI809C7&dib=eyJ2IjoiMSJ9.bZS3jpRQ5buLwn1OArsXOK490BjNOHf23yxoWyetCIcig3FSChcBZeD4mm6_qyEOAYCgYwlBKurKz4_7P0MXtMuQMmNJ2OxU7-Xe5flcquj-LksWQtok6dToCCLu2wz4lsaxtaM7PdjNYkPWORsN3WAfROmR4Mi-7kofgr-7nTUrQhvKUX4nyLZoc1qiWkVAm7h1cgnqkhsnaFBG9QzShpBJTY0oSfCLo8m-nIedVztjcft9Axj_aIGrw2bkzWHIWYsl_k0s7AbU4dNUED6_Aco5POy-SQ0d9wuHGjMehNc.lctDylc3L3TeFTRe8gxOPQgnyKGXkJr1vuchBj_OCPY&dib_tag=se&keywords=gadget%2Bper%2Bviaggio&qid=1778008156&sprefix=gadget%2Bper%2Bviaggi%2Caps%2C298&sr=8-3-spons&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&aref=Fu2yMyjgTM&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=152ffe64057deb0d42136e680fa77f89&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-dollar-sign text-success me-2"></i>Low Budget: Ventilatore Regolabile Ricaricabile</h5>
+                <p class="mb-3">Ventilatore regolabile ricaricabile. USB. Portatile. Economico. Marchio affidabile.</p>
+                <a href="https://www.amazon.it/Ventilatore-Regolabile-Ricaricabile-ventilatore-Campeggio-Bianco/dp/B0DYS2XCTP?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1LTZULHI809C7&dib=eyJ2IjoiMSJ9.bZS3jpRQ5buLwn1OArsXOK490BjNOHf23yxoWyetCIcig3FSChcBZeD4mm6_qyEOAYCgYwlBKurKz4_7P0MXtMuQMmNJ2OxU7-Xe5flcquj-LksWQtok6dToCCLu2wz4lsaxtaM7PdjNYkPWORsN3WAfROmR4Mi-7kofgr-7nTUrQhvKUX4nyLZoc1qiWkVAm7h1cgnqkhsnaFBG9QzShpBJTY0oSfCLo8m-nIedVztjcft9Axj_aIGrw2bkzWHIWYsl_k0s7AbU4dNUED6_Aco5POy-SQ0d9wuHGjMehNc.lctDylc3L3TeFTRe8gxOPQgnyKGXkJr1vuchBj_OCPY&dib_tag=se&keywords=gadget%2Bper%2Bviaggio&qid=1778008156&sprefix=gadget%2Bper%2Bviaggi%2Caps%2C298&sr=8-18-spons&aref=0OiuyMrf6t&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=bdcc9f1ad590ee4abf8282ec343b0995&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold
+                </a>
+            </div>
+        </div>
+
+        <!-- Problema 3: Vivere esperienze indimenticabili -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-gift text-primary me-2"></i>Vuoi vivere esperienze indimenticabili?</h2>
+            <p class="text-muted mb-4">Non sai cosa regalare o vivere esperienze speciali?</p>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Qualità Prezzo Top: SMARTBOX Cofanetto Originale Esperienze</h5>
+                <p class="mb-3">Cofanetto originale esperienze. 100+ attività. 1 anno validità. Marchio SMARTBOX.</p>
+                <a href="https://www.amazon.it/SMARTBOX-Cofanetto-originale-Esperienze-unattivit%C3%A0/dp/B07X34HMH3?dib=eyJ2IjoiMSJ9.8Jotp5x51KQKCyVbY0UZINhP1j9kss3BdZ0R_ZNStxrUGi5N1V-63BkJFVhbj4Nnfj9Cs1CR-GkNd82RRF0e2AF-XhEFU8Zvk4NtkEXOpgTpPtDQjds1q_vUqQV61i32rZCZZpxmkzcmizyw-BDkrEzk8-qPuWVK13bx6F95bzbn9gNSpoj7OD9sip3RxKyCspqxyIRemUpASS38BlqUJLhqCzJSGQHSSRaqRC7COztAaI4z8dvs9g0hdG3fvlzaiBSuogJ9JCMg_6k9iU_nLQ4D409zz6Bs3tulgHjSjjU.x3Wwq9qpL51hT-zbIGmPwGDccBxTWmgSUqS3c2KLm_M&dib_tag=se&keywords=Offerte%2BViaggi%2BLast%2BMinute%2BViaggi%2BE%2BPacchetti%2BVacanze%2BLow&qid=1778008049&sr=8-55&th=1&linkCode=ll2&tag=l0c39-21&linkId=6fd76e83107723c3563deee4e601b39c&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold">
+                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                </a>
+            </div>
+        </div>
+
+        <!-- Problema 4: Viaggiare comodamente -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-bed text-primary me-2"></i>Vuoi viaggiare comodamente?</h2>
+            <p class="text-muted mb-4">Hai mal di schiena o collo durante i viaggi?</p>
+            
+            <div class="solution-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Qualità Prezzo Top: Cirorld Cuscino Cervicale Regolabile</h5>
+                <p class="mb-3">Cuscino cervicale regolabile. Memory foam. Portatile. Marchio Cirorld qualità.</p>
+                <a href="https://www.amazon.it/Cirorld-Regolabile-Cervicale-auricolari-Trasporto/dp/B0CYPZBKV7?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1LTZULHI809C7&dib=eyJ2IjoiMSJ9.bZS3jpRQ5buLwn1OArsXOK490BjNOHf23yxoWyetCIcig3FSChcBZeD4mm6_qyEOAYCgYwlBKurKz4_7P0MXtMuQMmNJ2OxU7-Xe5flcquj-LksWQtok6dToCCLu2wz4lsaxtaM7PdjNYkPWORsN3WAfROmR4Mi-7kofgr-7nTUrQhvKUX4nyLZoc1qiWkVAm7h1cgnqkhsnaFBG9QzShpBJTY0oSfCLo8m-nIedVztjcft9Axj_aIGrw2bkzWHIWYsl_k0s7AbU4dNUED6_Aco5POy-SQ0d9wuHGjMehNc.lctDylc3L3TeFTRe8gxOPQgnyKGXkJr1vuchBj_OCPY&dib_tag=se&keywords=gadget%2Bper%2Bviaggio&qid=1778008156&sprefix=gadget%2Bper%2Bviaggi%2Caps%2C298&sr=8-10&th=1&linkCode=ll2&tag=l0c39-21&linkId=acbd9d4d41ddea50e07043fe5f854dbe&ref_=as_li_ss_tl" target="_blank" class="btn btn-warning fw-bold
+                </a>
+            </div>
+        </div>
+
+        <!-- Conclusione -->
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-check-circle text-success me-2"></i>Trova la Tua Soluzione</h2>
+            <p class="text-muted mb-4">Ogni problema ha la sua soluzione. Scegli il prodotto che risolve il tuo problema specifico.</p>
+            
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong>Consiglio:</strong> Valuta il tuo budget e le tue esigenze specifiche prima di scegliere. I prodotti Top offrono qualità premium, i prodotti Low Budget sono perfetti per iniziare.
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
