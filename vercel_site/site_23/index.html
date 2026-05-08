@@ -20,13 +20,9 @@
         :root {
             --primary-color: #00cec9;
             --secondary-color: #E0F7FA;
-            --accent-color: #0984E3;
-            --success-color: #28A745;
-            --energy-color: #F39C12;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--secondary-color);
             padding-top: 70px;
         }
@@ -38,72 +34,6 @@
             margin-bottom: 40px;
             box-shadow: 0 4px 20px rgba(0, 206, 201, 0.3);
         }
-        
-        .product-card {
-            border: none;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            overflow: hidden;
-            margin-bottom: 30px;
-            background: white;
-            padding-top: 20px;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-6px) scale(1.01);
-            box-shadow: 0 15px 35px rgba(0, 206, 201, 0.15);
-        }
-        
-        .product-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px 15px 0 0;
-        }
-        
-        .btn-amazon {
-            background: linear-gradient(135deg, #00cec9 0%, #0984E3 100%);
-            color: white;
-            border: none;
-            padding: 18px 45px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(0, 206, 201, 0.5);
-        }
-        
-        .btn-amazon:hover {
-            background: linear-gradient(135deg, #0984E3 0%, #6C5CE7 100%);
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(9, 132, 227, 0.7);
-        }
-        
-        .category-badge {
-            background: linear-gradient(135deg, #00cec9 0%, #0984E3 100%);
-            color: white;
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(0, 206, 201, 0.3);
-        }
-        
-        .no-images {
-            text-align: center;
-            padding: 60px 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .no-images i {
-            font-size: 4rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
     </style>
 </head>
 <body>
