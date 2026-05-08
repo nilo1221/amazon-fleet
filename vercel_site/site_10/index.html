@@ -6,22 +6,23 @@
     <title>Viaggi Organizzati - Smart Choices Guide</title>
     <meta name="description" content="Gadget indispensabili per chi è sempre in movimento.">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="../styles.css">
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link href="../styles.css" rel="stylesheet">
+    </noscript>
     
     <style>
         :root {
             --primary-color: #2980B9;
             --secondary-color: #E3F2FD;
-            --accent-color: #3498DB;
-            --success-color: #28A745;
-            --travel-color: #2980B9;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--secondary-color);
             padding-top: 70px;
         }
@@ -29,73 +30,9 @@
         .hero-section {
             background: linear-gradient(135deg, #2980B9 0%, #3498DB 50%, #FF6B35 100%);
             color: white;
-            padding: 80px 0;
-            margin-bottom: 40px;
+            padding: 100px 0;
+            margin-bottom: 60px;
             box-shadow: 0 4px 20px rgba(41, 128, 185, 0.3);
-        }
-        
-        .product-card {
-            border: none;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            overflow: hidden;
-            margin-bottom: 30px;
-            background: white;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-6px) scale(1.01);
-            box-shadow: 0 15px 35px rgba(41, 128, 185, 0.15);
-        }
-        
-        .product-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px 15px 0 0;
-        }
-        
-        .btn-amazon {
-            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 100%);
-            color: white;
-            border: none;
-            padding: 18px 45px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
-        }
-        
-        .btn-amazon:hover {
-            background: linear-gradient(135deg, #FF5722 0%, #FF6B35 100%);
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.7);
-        }
-        
-        .category-badge {
-            background: linear-gradient(135deg, #3498DB 0%, #5DADE2 100%);
-            color: white;
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
-        }
-        
-        .no-images {
-            text-align: center;
-            padding: 60px 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .no-images i {
-            font-size: 4rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
         }
     </style>
 </head>
