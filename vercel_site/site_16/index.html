@@ -6,22 +6,23 @@
     <title>Smartphone & Tech - Smart Choices Guide</title>
     <meta name="description" content="I migliori smartphone e accessori tech con recensioni e offerte esclusive.">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="../styles.css">
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link href="../styles.css" rel="stylesheet">
+    </noscript>
     
     <style>
         :root {
             --primary-color: #2ECC71;
             --secondary-color: #E8F5E9;
-            --accent-color: #27AE60;
-            --success-color: #10b981;
-            --trust-color: #0056b3;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--secondary-color);
             padding-top: 70px;
         }
@@ -31,56 +32,6 @@
             color: white;
             padding: 80px 0;
             margin-bottom: 40px;
-        }
-        
-        .product-card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            margin-bottom: 30px;
-            padding-top: 20px;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-6px) scale(1.01);
-            box-shadow: 0 15px 35px rgba(46, 204, 113, 0.15);
-        }
-        
-        .btn-amazon {
-            background: linear-gradient(45deg, #ff9900, #ff6600);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-amazon:hover {
-            background: linear-gradient(45deg, #ff6600, #ff9900);
-            transform: scale(1.05);
-        }
-        
-        .category-badge {
-            background: var(--primary-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        
-        .feature-icon {
-            color: var(--success-color);
-            margin-right: 10px;
-        }
-        
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--success-color);
         }
     </style>
 </head>
