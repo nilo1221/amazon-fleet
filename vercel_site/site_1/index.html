@@ -6,6 +6,65 @@
     <title>Cucina Moderna & Tech - Smart Choices Guide</title>
     <meta name="description" content="I migliori gadget per rendere la tua cucina intelligente e funzionale.">
     
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYTD10EV8T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CYTD10EV8T');
+    </script>
+    
+    <!-- Event Tracking Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track CTA clicks
+            document.querySelectorAll('a[href*="amazon.it"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    gtag('event', 'click', {
+                        'event_category': 'CTA',
+                        'event_label': 'Amazon Link',
+                        'value': 1
+                    });
+                });
+            });
+            
+            // Track scroll depth
+            let scrollTracked = {25: false, 50: false, 75: false, 100: false};
+            window.addEventListener('scroll', function() {
+                const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+                
+                if (scrollPercent >= 25 && !scrollTracked[25]) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '25% Scroll', 'value': 25});
+                    scrollTracked[25] = true;
+                }
+                if (scrollPercent >= 50 && !scrollTracked[50]) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '50% Scroll', 'value': 50});
+                    scrollTracked[50] = true;
+                }
+                if (scrollPercent >= 75 && !scrollTracked[75]) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '75% Scroll', 'value': 75});
+                    scrollTracked[75] = true;
+                }
+                if (scrollPercent >= 100 && !scrollTracked[100]) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '100% Scroll', 'value': 100});
+                    scrollTracked[100] = true;
+                }
+            });
+            
+            // Track time on page (every 30 seconds)
+            let timeOnPage = 0;
+            setInterval(function() {
+                timeOnPage += 30;
+                gtag('event', 'timing_complete', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Time on Page',
+                    'value': timeOnPage
+                });
+            }, 30000);
+        });
+    </script>
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -13,9 +72,9 @@
     
     <style>
         :root {
-            --primary-color: #FF6B35;
-            --secondary-color: #f8f9fa;
-            --accent-color: #FF9500;
+            --primary-color: #4A90E2;
+            --secondary-color: #FFF8E1;
+            --accent-color: #357ABD;
             --success-color: #28A745;
             --trust-color: #0056b3;
         }
@@ -23,6 +82,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--secondary-color);
+            padding-top: 70px;
         }
         
         .hero-section {
@@ -44,8 +104,8 @@
         }
         
         .product-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15);
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.15);
         }
         
         .product-image {
@@ -172,13 +232,10 @@
                             <div class="col-md-6">
                             </div>
                             <div class="col-md-6 text-end">
-                                <div class="mb-2">
-                                    <i class="fas fa-star-half-alt text-warning"></i>
-                                </div>
                             </div>
                         </div>
                         
-                        <p class="card-text text-muted mb-4"><strong>Taglia come uno chef professionale.</strong> Set completo di 14 coltelli per ogni esigenza di cucina. Risparmia tempo e taglia con precisione ogni volta. Lame in acciaio inox affilate che restano taglienti più a lungo. Impugnature ergonomiche per tagliare senza fatica, anche per ore.</p>
+                        <p class="card-text text-muted mb-4"><strong>Taglia come uno chef professionale.</strong> Set completo di 14 coltelli per ogni esigenza di cucina. Risparmia tempo e taglia con precisione ogni volta. Lame in acciaio inox affilate che restano taglienti più a lungo. Impugnature ergonomiche per tagliare senza fatica, anche per ore. <strong>Ideal per chi cucina ogni giorno e vuole risultati professionali.</strong></p>
                         
                         <div class="mb-4">
                             <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
@@ -219,7 +276,7 @@
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
                             <a href="https://www.amazon.it/Amazon-Basics-14-Piece-Knife-Block/dp/B00R3Z49G6?adgrpid=71918728474&dib=eyJ2IjoiMSJ9.HeeJ_8TvPYcUHwPkTExQBnlM_s9imGa8ZLy59K5N3jEMPULKx0jdwkHtLQ1REHm80Vdt13h3mhOFPEczXFAe9cCJ8PZwwSRtpd1joP1sL0Rb430MAVwijFgLEE-gNCAVwhyMAFKcooWE-bm8Op-Wd75mkzNyjLBnZuG-2DEct_7J6JJtlvgdtMvUcBgt0qC9aRAErQ_m8qvWeeB_X5WyiG9U7HYq7O0Xur64iuYxS4rcL2ptSp_Wm3eofa4fS5BCwTmV9ip9FoLztuwY2tIpvieWR_Bgu5UERm9f0fP4A4I.lSB6IjPpSBRADph-FSCPkFhliKae8bMXfXJHt6zJhPs&dib_tag=se&hvadid=343499019552&hvdev=c&hvexpln=0&hvlocphy=9190900&hvnetw=g&hvocijid=6768069318496106532--&hvqmt=e&hvrand=6768069318496106532&hvtargid=kwd-320279418868&hydadcr=29093_1755272&keywords=cucina%2Bamazon&mcid=88cc2e582fef3f50add4d3ca23df35a0&qid=1777897138&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=feb5159c3f3e9e7a0c140a4354f9ecf5&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
-                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                <i class="fab fa-amazon me-2"></i>Vedi prezzo su Amazon
                             </a>
                         </div>
                     </div>
@@ -240,13 +297,10 @@
                             <div class="col-md-6">
                             </div>
                             <div class="col-md-6 text-end">
-                                <div class="mb-2">
-                                    <i class="fas fa-star-half-alt text-warning"></i>
-                                </div>
                             </div>
                         </div>
                         
-                        <p class="card-text text-muted mb-4">Prodotto professionale per cucina di alta qualità. Design moderno e funzionale, perfetto per ogni esigenza culinaria. Materiale resistente e durevole, facile da pulire e mantenere. Ideale per chef professionisti e appassionati di cucina.</p>
+                        <p class="card-text text-muted mb-4"><strong>Prodotto professionale per cucina di alta qualità.</strong> Design moderno e funzionale, perfetto per ogni esigenza culinaria. Materiale resistente e durevole, facile da pulire e mantenere. <strong>Ideale per chef professionisti e appassionati di cucina che vogliono risultati eccellenti ogni giorno.</strong></p>
                         
                         <div class="mb-4">
                             <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
@@ -287,7 +341,7 @@
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
                             <a href="https://www.amazon.it/dp/B0D981M5ZQ?psc=1&pd_rd_i=B0D981M5ZQ&pd_rd_w=J0wVo&content-id=amzn1.sym.27357f71-bd5d-4a5b-ba8c-4ad04b414c62&pf_rd_p=27357f71-bd5d-4a5b-ba8c-4ad04b414c62&pf_rd_r=154CS88T5629WBZ0K48H&pd_rd_wg=hXTmy&pd_rd_r=4133be0f-8adf-45ff-b082-58481e9fd6a4&aref=Tgyz5eIe83&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&linkCode=ll2&tag=l0c39-21&linkId=957f8b9b23cbd01d20c30710e0f9b2de&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
-                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                <i class="fab fa-amazon me-2"></i>Vedi prezzo su Amazon
                             </a>
                         </div>
                     </div>
@@ -308,13 +362,10 @@
                             <div class="col-md-6">
                             </div>
                             <div class="col-md-6 text-end">
-                                <div class="mb-2">
-                                    <i class="fas fa-star-half-alt text-warning"></i>
-                                </div>
                             </div>
                         </div>
                         
-                        <p class="card-text text-muted mb-4">MITSUMOTO SAKARI Affilacoltelli Professionale Multifunzionale. Sistema di affilatura a 2 stadi per coltelli, forbici e altri strumenti. Design compatto e portatile. Adatto per tutti i tipi di lame. Facile da usare e sicuro. Materiale di alta qualità.</p>
+                        <p class="card-text text-muted mb-4"><strong>MITSUMOTO SAKARI Affilacoltelli Professionale Multifunzionale.</strong> Sistema di affilatura a 2 stadi per coltelli, forbici e altri strumenti. Design compatto e portatile. <strong>Adatto per tutti i tipi di lame. Facile da usare e sicuro. Materiale di alta qualità per risultati professionali a casa tua.</strong></p>
                         
                         <div class="mb-4">
                             <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
@@ -355,7 +406,7 @@
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
                             <a href="https://www.amazon.it/MITSUMOTO-SAKARI-Affilacoltelli-Professionale-Multifunzionale/dp/B09XDT7ZJB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=YFOH57WYRAAF&dib=eyJ2IjoiMSJ9.s69G-4F7KrOxAdkevc9dou0Vlknzwcb45PJxNTQ-yzAqrd0kE_lcoIyHVpjCN9dprflsx2chM6eg0kpp4GGFvLk2ZxKf7yF172YVX4MYjzo1NKYyKvYe8jXg2ARK_vCjkVp8Jeqf8I0ti1RizK3Xd7HeoEWLUvbXBQJmcvIwfJF34ncxfErOk6YSpOc8vxKCQEEquogaUuZdbJcPFFWmtMKnuPc5ar3NbooaPS_SHR3O1lgsSFvxaq0V25FNewm_aFQYYZ1HRmRiEieEH-KueZ57ZXhqNB1Y3wNVazRPvBo.haQ0sDCy932JDVcOU_0lts4drg-jsDuU_CKe4RcREbo&dib_tag=se&keywords=cucina&qid=1778008414&sprefix=cucina%2Caps%2C163&sr=8-3-spons&aref=ps8DujlEbn&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=211b5c5062c50b4d7cb9bc1623928a6d&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
-                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                <i class="fab fa-amazon me-2"></i>Vedi prezzo su Amazon
                             </a>
                         </div>
                     </div>
@@ -376,13 +427,10 @@
                             <div class="col-md-6">
                             </div>
                             <div class="col-md-6 text-end">
-                                <div class="mb-2">
-                                    <i class="fas fa-star-half-alt text-warning"></i>
-                                </div>
                             </div>
                         </div>
                         
-                        <p class="card-text text-muted mb-4">Hecef Coltelli da Cucina a Manico Vuoto Set di 5 Pezzi. Coltello in acciaio inossidabile lucidato avanzato. Set di coltelli da cuoco professionale con lama affilata. Rivestimento antiaderente nero e impugnatura ergonomica retrò.</p>
+                        <p class="card-text text-muted mb-4"><strong>Hecef Coltelli da Cucina a Manico Vuoto Set di 5 Pezzi.</strong> Coltello in acciaio inossidabile lucidato avanzato. Set di coltelli da cuoco professionale con lama affilata. <strong>Rivestimento antiaderente nero e impugnatura ergonomica retrò per tagli precisi e confortevoli. Perfetto per chef professionisti e appassionati.</strong></p>
                         
                         <div class="mb-4">
                             <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
@@ -423,7 +471,7 @@
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
                             <a href="https://www.amazon.it/hecef-Coltelli-Coltello-Inossidabile-Professionale/dp/B087CX21PN?mcid=0af6ca8f5aa63327b23b824160eeb14c&hvadid=700890057289&hvpos=&hvnetw=g&hvrand=17078890465600233366&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-930322494638&hvocijid=17078890465600233366-B087CX21PN-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=da4430a35c18c3c69f4ad34935723243&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
-                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                <i class="fab fa-amazon me-2"></i>Vedi prezzo su Amazon
                             </a>
                         </div>
                     </div>
@@ -444,13 +492,10 @@
                             <div class="col-md-6">
                             </div>
                             <div class="col-md-6 text-end">
-                                <div class="mb-2">
-                                    <i class="fas fa-star-half-alt text-warning"></i>
-                                </div>
                             </div>
                         </div>
                         
-                        <p class="card-text text-muted mb-4"><strong>Crea smoothie perfetti in secondi.</strong> Frullatore potente con 6 lame in acciaio inox per risultati professionali. Prepara zuppe cremose, salse vellutate e smoothie nutrienti senza sforzo. 6 velocità regolabili per ogni ricetta. Design ergonomico che non stanca la mano. Facile da pulire - più tempo per goderti i tuoi piatti.</p>
+                        <p class="card-text text-muted mb-4"><strong>Crea smoothie perfetti in secondi.</strong> Frullatore potente con 6 lame in acciaio inox per risultati professionali. Prepara zuppe cremose, salse vellutate e smoothie nutrienti senza sforzo. <strong>6 velocità regolabili per ogni ricetta. Design ergonomico che non stanca la mano. Facile da pulire - più tempo per goderti i tuoi piatti.</strong></p>
                         
                         <div class="mb-4">
                             <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
@@ -491,7 +536,7 @@
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
                             <a href="https://www.amazon.it/Frullatore-Immersione-Multifunzione-Bonsenkitchen-Regolabili/dp/B09SHN8F2Y?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=YFOH57WYRAAF&dib=eyJ2IjoiMSJ9.s69G-4F7KrOxAdkevc9dou0Vlknzwcb45PJxNTQ-yzAqrd0kE_lcoIyHVpjCN9dprflsx2chM6eg0kpp4GGFvLk2ZxKf7yF172YVX4MYjzo1NKYyKvYe8jXg2ARK_vCjkVp8Jeqf8I0ti1RizK3Xd7HeoEWLUvbXBQJmcvIwfJF34ncxfErOk6YSpOc8vxKCQEEquogaUuZdbJcPFFWmtMKnuPc5ar3NbooaPS_SHR3O1lgsSFvxaq0V25FNewm_aFQYYZ1HRmRiEieEH-KueZ57ZXhqNB1Y3wNVazRPvBo.haQ0sDCy932JDVcOU_0lts4drg-jsDuU_CKe4RcREbo&dib_tag=se&keywords=cucina&qid=1778008414&sprefix=cucina%2Caps%2C163&sr=8-7&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ce2ed571b66b82e3676607b273face2&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
-                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                <i class="fab fa-amazon me-2"></i>Vedi prezzo su Amazon
                             </a>
                         </div>
                     </div>
@@ -512,13 +557,10 @@
                             <div class="col-md-6">
                             </div>
                             <div class="col-md-6 text-end">
-                                <div class="mb-2">
-                                    <i class="fas fa-star-half-alt text-warning"></i>
-                                </div>
                             </div>
                         </div>
                         
-                        <p class="card-text text-muted mb-4"><strong>400W potenza affidabile.</strong> Impugnatura ergonomica per uso confortevole. Piede anti-schizzi per pulizia facile. Leggero e compatto. Marchio Bosch qualità tedesca.</p>
+                        <p class="card-text text-muted mb-4"><strong>400W potenza affidabile.</strong> Impugnatura ergonomica per uso confortevole. Piede anti-schizzi per pulizia facile. Leggero e compatto. <strong>Marchio Bosch qualità tedesca. Perfetto per chi cerca affidabilità e durata nel tempo.</strong></p>
                         
                         <div class="mb-4">
                             <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
@@ -559,7 +601,7 @@
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
                             <a href="https://www.amazon.it/Bosch-Frullatore-Immersione-MSM24100-Impugnatura/dp/B01FZAVFB2?mcid=5435a2b7e2423f13ae7995c237ffdddc&hvadid=700789413798&hvpos=&hvnetw=g&hvrand=4664976799502394951&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-422763004981&hvocijid=4664976799502394951-B01FZAVFB2-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ae49896a4c29dd6c7bc0bd7b59e409d&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
-                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                <i class="fab fa-amazon me-2"></i>Vedi prezzo su Amazon
                             </a>
                         </div>
                     </div>

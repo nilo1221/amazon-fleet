@@ -6,6 +6,61 @@
     <title>Smart Home & Domotica - Smart Choices Guide</title>
     <meta name="description" content="Rendi la tua casa intelligente con le ultime novità tech.">
     
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYTD10EV8T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CYTD10EV8T');
+    </script>
+    
+    <!-- Event Tracking Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href*="amazon.it"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    gtag('event', 'click', {
+                        'event_category': 'CTA',
+                        'event_label': 'Amazon Link',
+                        'value': 1
+                    });
+                });
+            });
+            
+            let scrollTracked = {25: false, 50: false, 75: false, 100: false};
+            window.addEventListener('scroll', function() {
+                const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+                if (scrollPercent >= 25 && !scrollTracked[25]) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '25% Scroll', 'value': 25});
+                    scrollTracked[25] = true;
+                }
+                if (scrollPercent >= 50 && !scrollTracked[50]) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '50% Scroll', 'value': 50});
+                    scrollTracked[50] = true;
+                }
+                if (scrollPercent >= 75 && !scrollTracked[75]) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '75% Scroll', 'value': 75});
+                    scrollTracked[75] = true;
+                }
+                if (scrollPercent >= 100 && !scrollTracked[100]) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '100% Scroll', 'value': 100});
+                    scrollTracked[100] = true;
+                }
+            });
+            
+            let timeOnPage = 0;
+            setInterval(function() {
+                timeOnPage += 30;
+                gtag('event', 'timing_complete', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Time on Page',
+                    'value': timeOnPage
+                });
+            }, 30000);
+        });
+    </script>
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -13,9 +68,9 @@
     
     <style>
         :root {
-            --primary-color: #00B894;
-            --secondary-color: #f8f9fa;
-            --accent-color: #00CEC9;
+            --primary-color: #9B59B6;
+            --secondary-color: #F3E5F5;
+            --accent-color: #8E44AD;
             --success-color: #00B894;
             --trust-color: #FF6B35;
         }
@@ -23,6 +78,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--secondary-color);
+            padding-top: 70px;
         }
         
         .hero-section {
@@ -44,8 +100,8 @@
         }
         
         .product-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 184, 148, 0.15);
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 15px 35px rgba(142, 68, 173, 0.15);
         }
         
         .product-image {
