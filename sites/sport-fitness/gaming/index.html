@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming - Sport & Fitness - Smart Choices Guide</title>
+    <meta name="description" content="I migliori prodotti per gaming.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #6C5CE7;
+            --secondary-color: #f8f9fa;
+            --accent-color: #FF6B35;
+            --success-color: #00D9FF;
+            --gaming-color: #9D4EDD;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #6C5CE7 0%, #9D4EDD 50%, #FF6B35 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(108, 92, 231, 0.3);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            margin-bottom: 30px;
+            background: white;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(108, 92, 231, 0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 100%);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #FF5722 0%, #FF6B35 100%);
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.7);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #6C5CE7 0%, #9D4EDD 100%);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(108, 92, 231, 0.3);
+        }
+        
+        .no-images {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .no-images i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Sport & Fitness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Gaming</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Gaming</h1>
+            <p class="lead mb-4">I migliori prodotti per gaming.</p>
+
+            <!-- Trust Banner -->
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-desktop fa-4x text-primary"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">MSI Monitor Gaming G255F</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Gaming Monitor
+                        </span>
+                        <p class="card-text text-muted">MSI Monitor Gaming G255F - 24.5" Full HD 1920x1080, 170Hz refresh rate, 1ms response time. Pannello IPS con Adaptive Sync, anti-flicker, HDR Ready. Design gaming con cornici ultra sottili, perfetto per gaming competitivo e streaming. Colori vividi e fluidi massimi per esperienza immersiva.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/MSI-G255F-1920x1080-Adaptive-Anti-flickr/dp/B0CPM45WF7?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=35WKNR5X9VQ1C&dib=eyJ2IjoiMSJ9.CEYKvsqfqUt9qe9oCFHNWJchYnc0IwRFWfZLLfZ2gHBvIbGFx2NwJ_hFy7My9Tb91cLLE7E_3wwp3pzRc3MW7QyLxslJK_mwNRWD4L4E7GlU0vnoxREvdFy59QUytBf1XwEBRXjG4XqC4ZubUi_zPa8VcHdWssrcXLEyYfApJ8tyFSgJR7MROTAMjGCMb7wakqHSvd2qK7kjod3vZ4_ONOBmIuugeKI4O3ChiZpGKPuNyLX6z4BPu2A3WVyVHLry_GQxpm1qZdPDP2gHxC9vtOIQf4slRG0s5KSAtYNh6ek.zVySrRolhqMb3_WkXh4zVPEc_eAVd72whNXgE3fnjlM&dib_tag=se&keywords=gaming+pc&qid=1777897756&sprefix=gaming+pc%2Caps%2C268&sr=8-58&linkCode=ll2&tag=l0c39-21&linkId=a0070679f86d991fd56e052f851d04a8&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Amazon
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-desktop fa-4x text-success"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">Vibox Gaming PC Ryzen</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Gaming PC
+                        </span>
+                        <p class="card-text text-muted">Vibox Gaming PC Ryzen - Processore AMD Ryzen, scheda grafica dedicata, 16GB RAM DDR4, SSD veloce. Case gaming con illuminazione RGB, Windows 10 preinstallato. Potenza per gaming 1080p/1440p, streaming e lavoro. Design elegante bianco, perfetto per setup gaming professionale.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Vibox-Gaming-Ryzen-Windows-Bianco/dp/B0F3JFPYPB?content-id=amzn1.sym.7b21bc1e-c34e-4c30-a298-61b1155df26d%3Aamzn1.sym.7b21bc1e-c34e-4c30-a298-61b1155df26d&dib=eyJ2IjoiMSJ9.zFPQtsCUu7oCCVyk1KsqdLRngA3qVib1W2CQ2-MpbVSumCQtpC87coe-lcOXvvAiffYwoPXX1sZhQ02tYYv-DVGgCS4nzntlgH3jAiFmU5T9D7JT_M47TZi3FzlxPv-iyQy-YVRlsn9iXXbQFzoaRAvlxt3e-Fj054fXRhsf1V2varqou8p7M5OAwSPh-m5J7kSpwFY9XeAs30lWy2_hVqvcYCw6QEhz51neZYuQGrLa5aXLIDVo85dpeKXxedlAZ3j91LjA_a-Dv0Kb_RuRjNjMUZK0jyMyI1RgriGfKk0.0xVLX__vDuxsLOLQZJfGY0mUzPn3XjSmlCvu50NCQQE&dib_tag=se&keywords=pc%2Bgaming&pd_rd_r=ac71ae8d-2abd-4022-b553-4a3c50b71c69&pd_rd_w=bTnhQ&pd_rd_wg=rEwcg&qid=1777897860&sr=8-9&ufe=app_do%3Aamzn1.fos.49a700e5-ae68-4d96-966a-89ca65497504&th=1&linkCode=ll2&tag=l0c39-21&linkId=a7b5e3e24dc98972d68cdfc5f1367040&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Amazon
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ozeino Cuffie Gaming Wireless -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-headset fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Ozeino Cuffie Gaming Wireless</h3>
+                        <span class="category-badge mb-3">Cuffie Gaming</span>
+                        <p class="text-muted">
+                            Cuffie Gaming Wireless per PC/Ps5/Ps4, 2,4GHz Wireless+5.3 Bluetooth.
+                            Cuffie con Microfono 7.1 Qualità Audio Senza Perdita di Bassa Latenza.
+                            Durata di Oltre 30+ Ore.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/Wireless-Bluetooth-Microfono-Qualit%C3%A0-Perdita/dp/B0CSFRYL7C?dib=eyJ2IjoiMSJ9.k9jJjxr_TPUcBmjILmStmDH4T8rG90mV2aSuIbaOLMvoWpEW080Nd5Rgi8ABbQd9p6ysELQqCH08c92aW_ImbMVSOCX3uNi8bTWCRhgqsk_RuXud4iCWnhm3_wnxX_k1GRVHk5s4MdbOf-PpNoAQ_q1aIqLwJH6Zm0Z9qecs5WewlsA61_ObpmLLL1bE_fsOuVcuJ6eWh2MyE-Z-YeZARaciPmgVCO1BULWtBvTdnbo.Mish9DdDxXRDJstKkaw5y8tiYmstvSKLHnn_9kXYY64&dib_tag=se&qid=1778017759&refinements=p_36%3A490263031&s=videogames&sr=1-1&th=1&linkCode=ll2&tag=l0c39-21&linkId=bc120fc3245b3ea6114aed01a4b15b3f&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ozeino Cuffie Gaming RGB -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-headphones fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Ozeino Cuffie Gaming RGB</h3>
+                        <span class="category-badge mb-3">Cuffie Gaming</span>
+                        <p class="text-muted">
+                            Cuffie Gaming con Microfono Morbido, Suono Surround Chiaro.
+                            Cuffie Regolabili Leggere e Comode con Luce RGB.
+                            Compatibili con PS5 PS4 PC Xbox One/X/S Switch Tablet.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/Cuffie-Gaming-Microfono-Stereo-Controllo/dp/B09L89MBVV?dib=eyJ2IjoiMSJ9.k9jJjxr_TPUcBmjILmStmDH4T8rG90mV2aSuIbaOLMvoWpEW080Nd5Rgi8ABbQd9p6ysELQqCH08c92aW_ImbMVSOCX3uNi8bTWCRhgqsk_RuXud4iCWnhm3_wnxX_k1GRVHk5s4MdbOf-PpNoAQ_q1aIqLwJH6Zm0Z9qecs5WewlsA61_ObpmLLL1bE_fsOuVcuJ6eWh2MyE-Z-YeZARaciPmgVCO1BULWtBvTdnbo.Mish9DdDxXRDJstKkaw5y8tiYmstvSKLHnn_9kXYY64&dib_tag=se&qid=1778017759&refinements=p_36%3A490263031&s=videogames&sr=1-6&th=1&linkCode=ll2&tag=l0c39-21&linkId=b6e4d29462633e65a533cfe51233d157&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avantree Ensemble Cuffie TV -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-tv fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Avantree Ensemble Cuffie TV</h3>
+                        <span class="category-badge mb-3">Cuffie TV</span>
+                        <p class="text-muted">
+                            Cuffie TV Senza Fili Wireless per Anziani con Clear Voice.
+                            Base di Ricarica, Configurazione Facile, 35h di Autonomia.
+                            Design Confortevole, Compatibili con Ottico/AUX e TV Bluetooth.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/gp/aw/d/B08629PFFQ?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=2fa73821909bb739e65985cce7f1a7de&hsa_cr_id=0&qid=1778017829&sr=1-2-1ee1b2e4-01d1-4cd0-b737-4c27ebfc8105&aref=IhwqXwikTP&pd_rd_w=NV6sW&content-id=amzn1.sym.0372d96f-3871-4b23-b69f-450b14810943%3Aamzn1.sym.0372d96f-3871-4b23-b69f-450b14810943&pf_rd_p=0372d96f-3871-4b23-b69f-450b14810943&pf_rd_r=YQDNQCQMHEHNRQ64XHE3&pd_rd_wg=6OASu&pd_rd_r=3b17e371-5853-4ac0-b514-eeddcd8f2fa6&linkCode=ll2&tag=l0c39-21&linkId=6f86df2541b9bebc851bfeda56aa9406&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logitech G213 Prodigy -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-keyboard fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Logitech G213 Prodigy Gaming</h3>
+                        <span class="category-badge mb-3">Tastiera Gaming</span>
+                        <p class="text-muted">
+                            Logitech G213 Prodigy Gaming Keyboard con retroilluminazione RGB.
+                            Tastiera gaming resistente all'acqua con tasti silenziosi.
+                            Perfetta per gaming e lavoro quotidiano.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/Logitech-G213-Prodigy-Gaming-Keyboard/dp/B07W6GVS5C?dib=eyJ2IjoiMSJ9.P33rwpHtFStYlAmcuq8ohun-ifDR614PvwSIDIBQh0oAgru1yKp0Y4ZeLT0XvsiPQ8P0cX7o_6qWrVGgiDNnYWBzviSh0VAOnh4-JzWaNoZKw2iuoeZQTSAhK4uVjeH8nUlyVepU037eJKT-F2aRfcq_Xjrvek-MIaiGBQsBiYfqVmewz7FwpLcwa-hdKZjDXsi7adEsvJJi0N7-AogDKggo0z65WzIFrZQgOJ3M7I4.vvKiLH37KeEnrNxQv--zsVwioSFq2UVmqzvwau-htSc&dib_tag=se&qid=1778017873&refinements=p_36%3A490263031&s=videogames&sr=1-1&th=1&linkCode=ll2&tag=l0c39-21&linkId=99d86bc1745391ffca7e2205753338ef&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GXTrust 871 Zora Tastiera Meccanica -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-keyboard fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">GXTrust 871 Zora Meccanica</h3>
+                        <span class="category-badge mb-3">Tastiera Meccanica</span>
+                        <p class="text-muted">
+                            Tastiera Meccanica 100% Layout Italiano QWERTY Retroilluminata RGB.
+                            Tasti Huano Lineari, Anti-Ghosting con N-Key Rollover.
+                            Tastiera Gaming con Filo USB per PC e Laptop.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/Trust-Tastiera-Meccanica-Retroilluminata-Anti-Ghosting/dp/B0DQVHP2WH?dib=eyJ2IjoiMSJ9.P33rwpHtFStYlAmcuq8ohun-ifDR614PvwSIDIBQh0oAgru1yKp0Y4ZeLT0XvsiPQ8P0cX7o_6qWrVGgiDNnYWBzviSh0VAOnh4-JzWaNoZKw2iuoeZQTSAhK4uVjeH8nUlyVepU037eJKT-F2aRfcq_Xjrvek-MIaiGBQsBiYfqVmewz7FwpLcwa-hdKZjDXsi7adEsvJJi0N7-AogDKggo0z65WzIFrZQgOJ3M7I4.vvKiLH37KeEnrNxQv--zsVwioSFq2UVmqzvwau-htSc&dib_tag=se&qid=1778017873&refinements=p_36%3A490263031&s=videogames&sr=1-3&th=1&linkCode=ll2&tag=l0c39-21&linkId=5a23551f7f06e758fe81a2f48323b9c2&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPOMAKER WIN60 HE -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-keyboard fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">EPOMAKER WIN60 HE Magnetica</h3>
+                        <span class="category-badge mb-3">Tastiera Gaming</span>
+                        <p class="text-muted">
+                            60% Tastiera Magnetica Cablata con Azionamento Regolabile.
+                            Frequenza di Polling di 8000Hz, Interruttori a Effetto Hall.
+                            Hot-swap, ottimizzata per Giochi FPS.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/EPOMAKER-WIN60-HE-Azionamento-Interruttori/dp/B0DSFPVSHT?dib=eyJ2IjoiMSJ9.P33rwpHtFStYlAmcuq8ohun-ifDR614PvwSIDIBQh0oAgru1yKp0Y4ZeLT0XvsiPQ8P0cX7o_6qWrVGgiDNnYWBzviSh0VAOnh4-JzWaNoZKw2iuoeZQTSAhK4uVjeH8nUlyVepU037eJKT-F2aRfcq_Xjrvek-MIaiGBQsBiYfqVmewz7FwpLcwa-hdKZjDXsi7adEsvJJi0N7-AogDKggo0z65WzIFrZQgOJ3M7I4.vvKiLH37KeEnrNxQv--zsVwioSFq2UVmqzvwau-htSc&dib_tag=se&qid=1778017873&refinements=p_36%3A490263031&s=videogames&sr=1-8&linkCode=ll2&tag=l0c39-21&linkId=e76e39bb4630dbfca5c22ecb96e1b8d9&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logitech Wave Keys -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-keyboard fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Logitech Wave Keys Ergonomica</h3>
+                        <span class="category-badge mb-3">Tastiera Ergonomica</span>
+                        <p class="text-muted">
+                            Tastiera wireless ergonomica con supporto per i polsi imbottito.
+                            Digitazione comoda, Easy-Switch, Bluetooth e Logi Bolt.
+                            Compatibile con Windows/Mac - Grafite.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/Logitech-Ergonomica-Imbottito-Digitazione-Easy-Switch/dp/B0CHJZC1YT?dib=eyJ2IjoiMSJ9.QEPcqIt9A0yNofRHjyficla2qz_zG3uPo6kc3hrevbDnYjaChFDfwhaO6fPyYNs18rqsFvPAf2y0WRlF-K1DBtEdYw7EEs0_jIsfPzBcDzXlk4L-zAYTB6Z9rlGS8cEkYnfoUhmPhijQISWo78bMJ8jVH6MAgrH8FrncarCR5o5zPnPenCuZE73zse_dSGvzN6EJ04KelWQyozv_dUTP1aHK8WyDORcg1cTlWzyoZohqQRHE_VJSBq-_8e1jDIBz8xPumWEQ-ODt0S04xaJ4jK2QeQP_Uq-TO3afLpruIzs.-jnkpV3Lgo0iIDI_6t-nunlBZgZz-1R20Hk2jzM0Ds4&dib_tag=se&qid=1778017954&refinements=p_36%3A1631634031&s=pc&sr=1-2&ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&th=1&linkCode=ll2&tag=l0c39-21&linkId=5aa6f91b4ed8b4d42626322b7923037a&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SSD Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-hdd fa-4x text-primary"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">Samsung 970 EVO Plus SSD 1TB NVMe M.2</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            SSD Gaming
+                        </span>
+                        <p class="card-text text-muted">Samsung 970 EVO Plus SSD 1TB NVMe M.2 - Velocità di lettura fino a 3.500 MB/s, scrittura fino a 3.300 MB/s. Tecnologia V-NAND 3-bit MLC, interfaccia PCIe NVMe Gen 3. Perfetto per gaming, editing video e carichi di lavoro intensi. Compatibile con PC desktop e laptop, ottimizzato per Windows.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Samsung-MZ-V7S1T0BW-Unit%C3%A0-PLUS-Arancione/dp/B07MBQPQ62?th=1&linkCode=ll2&tag=l0c39-21&linkId=b763f6eb809741631bebb537d1af0782&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-hdd fa-4x text-primary"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">WD Black SN850X SSD 1TB NVMe M.2</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            SSD Gaming
+                        </span>
+                        <p class="card-text text-muted">WD Black SN850X SSD 1TB NVMe M.2 Gen 4 - Velocità di lettura fino a 7.300 MB/s, scrittura fino a 6.300 MB/s. Design gaming con dissipatore di calore, perfetto per PlayStation 5 e PC gaming ad alte prestazioni. Cache SLC dinamica, tecnologia 3D NAND, compatibile con PCIe Gen 4.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/WD_BLACK-Interno-velocit%C3%A0-scrittura-Prestazioni/dp/B0B7CKVCCV?mcid=888d8b4ce8b03986ab3849d66f1062e7&hvadid=700902625141&hvpos=&hvnetw=g&hvrand=10457417852729816499&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1729729168453&hvocijid=10457417852729816499-B0B7CKVCCV-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=345694116578e5d6a86f5071dafa4eff&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Mouse Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-mouse fa-4x text-primary"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">Logitech G502 Lightspeed Wireless</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Mouse Gaming
+                        </span>
+                        <p class="card-text text-muted">Logitech G502 Lightspeed Wireless - Wireless HERO 25K sensor, 25.600 DPI, 11 pulsanti programmabili, RGB LIGHTSYNC, 60h batteria. Marchio Logitech qualità. Ergonomico, peso regolabile, perfetto per gaming competitivo.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Logitech-G502-Lightspeed-Wireless-Lightsync/dp/B07QKC4WWD?mcid=9805ea97ad553d298b869eafe699dd3d&hvadid=700813659358&hvpos=&hvnetw=g&hvrand=17366854546323660876&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-749874961600&hvocijid=17366854546323660876-B07QKC4WWD-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=53bc5a82916d77f9c8f0f70b400cbf3d&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Mouse Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-mouse fa-4x text-success"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">Razer DeathAdder Essential</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Mouse Gaming
+                        </span>
+                        <p class="card-text text-muted">Razer DeathAdder Essential - 6.400 DPI, 5 pulsanti programmabili, ergonomico, design classico. Marchio Razer affidabile. Perfetto per gaming, sensore ottico preciso, compatibile con Razer Synapse.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Razer-DeathAdder-Essential-essenziale-sensore/dp/B092R5MCB3?mcid=b339f1fa54c632069402bc15331fe6e4&hvadid=700790378073&hvpos=&hvnetw=g&hvrand=17152808515394588193&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1363770907123&hvocijid=17152808515394588193-B092R5MCB3-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=1b32d94d6fc3b1cc750a1b8b4d8f4ca1&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Mouse Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-mouse fa-4x text-warning"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">Gaming Programmabili Illuminazione Multicolore</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Mouse Gaming
+                        </span>
+                        <p class="card-text text-muted">Gaming Programmabili Illuminazione Multicolore Portatile - 2.400 DPI, 6 pulsanti, illuminazione RGB, portatile. Economico, buono per iniziare. Perfetto per gaming entry-level, design compatto.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Gaming-Programmabili-Illuminazione-Multicolore-Portatile/dp/B0F63Y63B4?pd_rd_w=zColJ&content-id=amzn1.sym.1f3c1772-ccf5-4aa2-abc0-5bb5851fb447&pf_rd_p=1f3c1772-ccf5-4aa2-abc0-5bb5851fb447&pf_rd_r=KZ1EVMTEFT862FG745YG&pd_rd_wg=6klcG&pd_rd_r=e1e1a187-6f3a-4b37-837b-1af4f04dc94a&pd_rd_i=B0F63Y63B4&th=1&linkCode=ll2&tag=l0c39-21&linkId=af90e2b97eb7d51e3183643bcaff9524&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Cuffie Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-headphones fa-4x text-primary"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">HyperX Cloud II</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Cuffie Gaming
+                        </span>
+                        <p class="card-text text-muted">HyperX Cloud II - 7.1 surround, audio cristallino, microfono rimovibile, comfort elevato. Marchio HyperX qualità. Perfetto per gaming competitivo e streaming.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/HyperX-Cloud-Cuffie-Gaming-Mobile/dp/B00SAYCVTQ?mcid=c659dba90f523f5ca09a82b25c56a3e6&hvadid=700813659493&hvpos=&hvnetw=g&hvrand=12981572348516290815&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-381707145357&hvocijid=12981572348516290815-B00SAYCXWG-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=4e8af65a5e14abb66fa2f74389a0d44c&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Cuffie Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-headphones fa-4x text-success"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">Razer Kraken</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Cuffie Gaming
+                        </span>
+                        <p class="card-text text-muted">Razer Kraken - 7.1 surround, audio potente, microfono cardioide pieghevole, leggero. Marchio Razer affidabile. Perfetto per gaming e comunicazioni.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Razer-Kraken-microfono-cardioide-pieghevole/dp/B07RMSM477?th=1&linkCode=ll2&tag=l0c39-21&linkId=f02d101053afc051b80846a206ae3efd&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Cuffie Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-headphones fa-4x text-warning"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">Trust Gaming</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Cuffie Gaming
+                        </span>
+                        <p class="card-text text-muted">Trust Gaming - Stereo, microfono, over-ear, illuminazione LED. Economico, buono per iniziare. Marchio Trust. Perfetto per gaming entry-level.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Trust-Gaming-Leggere-Microfono-Over-Ear/dp/B0DGT23T9F?th=1&linkCode=ll2&tag=l0c39-21&linkId=fa86f6e3b7fb1b1097e05f6ad161602a&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Router Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-wifi fa-4x text-primary"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">ASUS GT-AXE11000</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Router Gaming
+                        </span>
+                        <p class="card-text text-muted">ASUS GT-AXE11000 - Tri-band 11000 Mbps, Gaming Acceleration, QoS gaming, WiFi 6E, Ethernet 10G. Marchio ASUS ROG qualità. Perfetto per gaming senza lag.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/ASUS-GT-AXE11000-Ethernet-Sicurezza-Dispositivi/dp/B09Q67CYMC?mcid=621c1ee6a4033ed5bb2b31db55a5e9ba&hvadid=700813659490&hvpos=&hvnetw=g&hvrand=3222656381519133428&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1627260007868&hvocijid=3222656381519133428-B09Q67CYMC-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=9e0f061013ba7c4c032be94ad458d3d1&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Router Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-wifi fa-4x text-success"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">TP-Link Archer AX72 Pro</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Router Gaming
+                        </span>
+                        <p class="card-text text-muted">TP-Link Archer AX72 Pro - Dual-band 5400 Mbps, WiFi 6, Gaming prioritization, stabile. Marchio TP-Link affidabile. Perfetto per gaming e streaming.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/TP-Link-Archer-AX72-Pro-AX5400Mbps/dp/B0BNYSG686?pd_rd_w=p6rge&content-id=amzn1.sym.deb055ce-ac58-4c38-8939-8e74c8af4666&pf_rd_p=deb055ce-ac58-4c38-8939-8e74c8af4666&pf_rd_r=XDH5ZVP9DXYXNCV8XBJK&pd_rd_wg=b1kDj&pd_rd_r=8578216c-1ca3-4a81-9536-00f1f72b9fd4&pd_rd_i=B0BNYSG686&th=1&linkCode=ll2&tag=l0c39-21&linkId=e06f6d84bce3def467efbfd7d1959d1b&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Router Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-wifi fa-4x text-warning"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">TP-Link AC1200 Archer C6</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Router Gaming
+                        </span>
+                        <p class="card-text text-muted">TP-Link AC1200 Archer C6 - Dual-band 1200 Mbps, AC1200, economico, buono per gaming base. Marchio TP-Link. Perfetto per gaming entry-level.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/TP-Link-AC1200-Dual-Band-Wi-Fi-Router/dp/B08GDC3534?adgrpid=80626244399&dib=eyJ2IjoiMSJ9.rs0CgWqWePIGcmu0jbTsxP12f_d8Dv-lVoHHLQqv51lYMhBotSn6lUgi00k86CkC9dgBVW0NL9I5TCcK_cCvhrj6s9QLwfJnh-Iau7vuhISKPT5hk7jIiQ3I2Rqbr7FmLOvX8nBQq0Sm9xys3mhwhIzra8Ehxp3oKOljTZiL1dRgKGSgkCNMScSX9lGBpU_G2_irCXVBUg7GpC9XACtutogbSSZF8SoFRcJcdMyE-UHtBYKCXPFKuoY7Lm-qEahOhgxojImK9PZb4bEU9s24KRr688AnRBRTjf2bpNZYO2Q.TZG5T_-qH1A-Z_bWr4IoAaYRPiuvdjQTqVSHye00Ae0Ae0&dib_tag=se&hvadid=393313878681&hvdev=c&hvexpln=0&hvlocphy=9190900&hvnetw=g&hvocijid=865265985451915568--&hvqmt=b&hvrand=865265985451915568&hvtargid=kwd-302503295271&hydadcr=27238_1766959&keywords=tp-link%2Barcher%2Bc6&mcid=33045eaf077930b6bcc9d7e24a625b63&qid=1778104718&sr=8-1&th=1&linkCode=ll2&tag=l0c39-21&linkId=f8648fd8806f76590f51e0a71e52524c&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Monitor Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-desktop fa-4x text-primary"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">ASUS FreeSync</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Monitor Gaming
+                        </span>
+                        <p class="card-text text-muted">ASUS FreeSync - 27" 1440p 240Hz, FreeSync Premium, Overdrive variabile, DisplayHDR. Marchio ASUS qualità. Perfetto per gaming competitivo.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/ASUS-FreeSync-Overdrive-variabile-DisplayHDR/dp/B0BXY85B9F?th=1&linkCode=ll2&tag=l0c39-21&linkId=5dcd7bed07961bba92290e9f07ada8d2&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Monitor Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-desktop fa-4x text-success"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">LG UltraGear</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Monitor Gaming
+                        </span>
+                        <p class="card-text text-muted">LG UltraGear - 27" 1440p 165Hz, G-Sync Compatible, FreeSync, IPS. Marchio LG affidabile. Perfetto per gaming e streaming.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/LG-UltraGear-2560x1440-Compatible-FreeSync/dp/B0CZ3KVP23?mcid=acf44f5271d63fb68c4a82171d39808c&hvadid=700813659487&hvpos=&hvnetw=g&hvrand=7332863540818994681&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2362347970506&hvocijid=7332863540818994681-B0CZ3KVP23-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=f715360a17aa11adfadda1ccbf2ac3f4&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Tastiera Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-keyboard fa-4x text-primary"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">Corsair Tastiera magnetica meccanica</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Tastiera Gaming
+                        </span>
+                        <p class="card-text text-muted">Corsair Tastiera magnetica meccanica - Meccanica magnetica, RGB programmabile, 6 macro keys, Wrist rest. Marchio Corsair qualità. Perfetto per gaming professionale.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Corsair-Tastiera-magnetica-meccanica-cablata/dp/B0D83TJ5RB?pd_rd_w=LIGGs&content-id=amzn1.sym.deb055ce-ac58-4c38-8939-8e74c8af4666&pf_rd_p=deb055ce-ac58-4c38-8939-8e74c8af4666&pf_rd_r=0XKAHCJNT78GTB7TH3EG&pd_rd_wg=5hCpu&pd_rd_r=503f352e-8b3c-4dca-912c-2933ff391f7b&pd_rd_i=B0D83TJ5RB&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c1da6c474449fb6e0b3b26542cf72ad4&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Tastiera Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-keyboard fa-4x text-success"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">Razer BlackWidow Green Switch</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Tastiera Gaming
+                        </span>
+                        <p class="card-text text-muted">Razer BlackWidow Green Switch - Meccanica Razer Green, RGB, ergonomica, durable. Marchio Razer affidabile. Perfetto per gaming e lavoro.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Razer-BlackWidow-Green-Switch-interruttori/dp/B0C6MJGRSP?mcid=94713db3966d30d790c2523d57edca8f&hvadid=711050895070&hvpos=&hvnetw=g&hvrand=13769018999092458833&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2270730354227&hvocijid=13769018999092458833-B0C6MJGRSP-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=dfe44a8eea673b7a91f20eafd80fdc60&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Tastiera Gaming -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-keyboard fa-4x text-warning"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">Redragon meccanica Bluetooth</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Tastiera Gaming
+                        </span>
+                        <p class="card-text text-muted">Redragon meccanica Bluetooth - Meccanica Bluetooth, interruttori cellulari, RGB compatta, economica. Marchio Redragon. Perfetto per gaming entry-level.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Redragon-meccanica-Bluetooth-interruttori-cellulare/dp/B08YNJJX6R?mcid=a763343a1b6c3e00bcf23fc1f4a700fa&hvadid=711050895070&hvpos=&hvnetw=g&hvrand=2038805915022087496&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1349524218412&hvocijid=2038805915022087496-B08YNJJX6R-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=17562bdf772cee7d7223bf56caecaac0&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+            <div class="mt-3">
+                <a href="../index.html" class="text-white me-3">
+                    <i class="fas fa-arrow-left me-1"></i>Torna a Sport & Fitness
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
