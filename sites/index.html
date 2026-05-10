@@ -1272,6 +1272,59 @@
                 });
             });
         });
+
+        // GA4 Event Tracking
+        // Track Amazon product clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track all Amazon links
+            const amazonLinks = document.querySelectorAll('a[href*="amazon"]');
+            amazonLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const productName = this.textContent.trim() || 'Amazon Product';
+                    const url = this.href;
+                    gtag('event', 'product_click', {
+                        'product_name': productName,
+                        'product_url': url,
+                        'event_category': 'ecommerce',
+                        'event_label': productName
+                    });
+                });
+            });
+
+            // Track category navigation
+            const categoryLinks = document.querySelectorAll('a[href*="/sites/"]');
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const category = this.textContent.trim() || 'Category';
+                    const url = this.href;
+                    gtag('event', 'category_click', {
+                        'category_name': category,
+                        'category_url': url,
+                        'event_category': 'navigation',
+                        'event_label': category
+                    });
+                });
+            });
+
+            // Track filter clicks
+            const filterButtons = document.querySelectorAll('.btn-filter');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const filterValue = this.getAttribute('data-filter');
+                    gtag('event', 'filter_click', {
+                        'filter_value': filterValue,
+                        'event_category': 'navigation',
+                        'event_label': filterValue
+                    });
+                });
+            });
+
+            // Set user ID if available (for future use)
+            gtag('set', 'user_properties', {
+                'user_type': 'visitor',
+                'page_type': 'home'
+            });
+        });
     </script>
 </body>
 </html>
