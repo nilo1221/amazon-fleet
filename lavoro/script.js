@@ -9,6 +9,39 @@ function showLoading() {
     }
 }
 
+// Bootstrap 5 Dropdown Submenu Support
+document.addEventListener('DOMContentLoaded', function() {
+    // Enable dropdown submenus in Bootstrap 5
+    const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+    
+    dropdownSubmenus.forEach(function(submenu) {
+        const toggle = submenu.querySelector('.dropdown-toggle');
+        const menu = submenu.querySelector('.dropdown-menu');
+        
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Close other open submenus
+            document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(openMenu) {
+                if (openMenu !== menu) {
+                    openMenu.classList.remove('show');
+                }
+            });
+            
+            // Toggle current submenu
+            menu.classList.toggle('show');
+        });
+        
+        // Close submenu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!submenu.contains(e.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    });
+});
+
 // Category Filter Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.btn-filter');
