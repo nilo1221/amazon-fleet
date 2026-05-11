@@ -41,236 +41,59 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     </noscript>
     
-    <style>
-        :root {
-            --primary-color: #FF6B35;
-            --secondary-color: #f8f9fa;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--secondary-color);
-        }
-        
-        .hero-section {
-            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 50%, #FFB800 100%);
-            color: white;
-            padding: 80px 0;
-            margin-bottom: 40px;
-        }
-        
-        .site-card.hidden {
-            display: none;
-        }
-        
-        .site-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            padding: 20px 0;
-        }
-        
-        .site-card {
-            border: none;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            overflow: hidden;
-            background: white;
-        }
-        
-        .site-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-        
-        .site-header {
-            padding: 30px;
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .site-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            animation: shimmer 3s infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-        
-        .site-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .site-content {
-            padding: 30px;
-        }
-        
-        .badge-category {
-            background: linear-gradient(45deg, #FF6B35, #FF9500);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        
-        .btn-filter {
-            background: white;
-            border: 2px solid #e0e0e0;
-            color: #333;
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .btn-filter:hover {
-            background: #FF6B35;
-            border-color: #FF6B35;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
-        }
-        
-        .btn-filter.active {
-            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 100%);
-            border-color: #FF6B35;
-            color: white;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-        }
-        
-        .site-title {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .site-description {
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        
-        .site-stats {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-            padding: 15px;
-            background: var(--secondary-color);
-            border-radius: 10px;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: #666;
-        }
-        
-        .btn-site {
-            background: linear-gradient(45deg, var(--primary-color), #FF9500);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            width: 100%;
-            text-align: center;
-        }
-        
-        .btn-site:hover {
-            background: linear-gradient(45deg, #FF5722, var(--primary-color));
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-        }
-        
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-        
-        .loading-spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #f3f3f;
-            border-top: 5px solid var(--primary-color);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        @media (max-width: 768px) {
-            .site-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-                padding: 10px 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Navigazione principale">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-shopping-cart me-2"></i>
+            <a class="navbar-brand" href="index.html" aria-label="Smart Choices Guide - Home">
+                <i class="fas fa-shopping-cart me-2" aria-hidden="true"></i>
                 Smart Choices Guide
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="#" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                            <i class="fas fa-th-large me-1" aria-hidden="true"></i>Categorie
+                        </a>
+                        <ul class="dropdown-menu" aria-label="Menu categorie">
+                            <li><a class="dropdown-item" href="casa-cucina/index.html"><i class="fas fa-home me-2" aria-hidden="true"></i>Casa & Cucina</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Sottocategorie Cucina</h6></li>
+                            <li><a class="dropdown-item" href="site_1/index.html"><i class="fas fa-fire-burner me-2" aria-hidden="true"></i>Friggitrici ad Aria</a></li>
+                            <li><a class="dropdown-item" href="site_1/index.html"><i class="fas fa-coffee me-2" aria-hidden="true"></i>Macchine per Caffè</a></li>
+                            <li><a class="dropdown-item" href="site_1/index.html"><i class="fas fa-blender me-2" aria-hidden="true"></i>Robot da Cucina</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="tech-elettronica/index.html"><i class="fas fa-laptop me-2" aria-hidden="true"></i>Tech & Elettronica</a></li>
+                            <li><a class="dropdown-item" href="moda-abbigliamento/index.html"><i class="fas fa-tshirt me-2" aria-hidden="true"></i>Moda & Abbigliamento</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Sottocategorie Moda</h6></li>
+                            <li><a class="dropdown-item" href="site_17/index.html"><i class="fas fa-film me-2" aria-hidden="true"></i>Cinema & TV</a></li>
+                            <li><a class="dropdown-item" href="site_17/index.html"><i class="fas fa-tv me-2" aria-hidden="true"></i>Serie TV</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="sport/index.html"><i class="fas fa-running me-2" aria-hidden="true"></i>Sport</a></li>
+                            <li><a class="dropdown-item" href="viaggi-outdoor/index.html"><i class="fas fa-plane me-2" aria-hidden="true"></i>Viaggi & Outdoor</a></li>
+                            <li><a class="dropdown-item" href="giardino-esterni/index.html"><i class="fas fa-tree me-2" aria-hidden="true"></i>Giardino & Esterni</a></li>
+                            <li><a class="dropdown-item" href="benessere-cura-personale/index.html"><i class="fas fa-spa me-2" aria-hidden="true"></i>Benessere & Cura Personale</a></li>
+                            <li><a class="dropdown-item" href="pet-care/index.html"><i class="fas fa-paw me-2" aria-hidden="true"></i>Pet Care</a></li>
+                            <li><a class="dropdown-item" href="sostenibilita-eco-friendly/index.html"><i class="fas fa-leaf me-2" aria-hidden="true"></i>Sostenibilità & Eco-Friendly</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="bounty.html">
-                            <i class="fas fa-gift me-1"></i>Servizi Amazon
+                            <i class="fas fa-gift me-1" aria-hidden="true"></i>Servizi Amazon
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tutte-le-guide.html">
-                            <i class="fas fa-book me-1"></i>Tutte le Guide
+                            <i class="fas fa-book me-1" aria-hidden="true"></i>Tutte le Guide
                         </a>
                     </li>
                 </ul>
@@ -279,73 +102,357 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" aria-labelledby="hero-title">
         <div class="container text-center">
             <div class="mb-4">
                 <span class="badge bg-white text-warning fw-bold px-4 py-2 rounded-pill shadow-lg">
-                    <i class="fas fa-bolt me-2"></i>Le Migliori Guide di Acquisto 2026
+                    <i class="fas fa-bolt me-2" aria-hidden="true"></i>Le Migliori Guide di Acquisto 2026
                 </span>
             </div>
-            <h1 class="display-3 fw-bold mb-4 animate-fade-in">
+            <h1 id="hero-title" class="display-3 fw-bold mb-4 animate-fade-in">
                 Scopri i Prodotti che
                 <span class="d-block text-warning animate-pulse">Valgono Ogni Centesimo</span>
             </h1>
             <p class="lead mb-5 fs-4">
-                Guide specializzate Amazon per acquisti intelligenti. Niente sprechi, solo qualità.
+                Guide specializzate Amazon per acquisti intelligenti. Recensioni dettagliate, confronti prezzi e prodotti verificati per ogni categoria.
             </p>
             <div class="row justify-content-center mb-5">
                 <div class="col-md-10">
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
                         <span class="badge bg-white text-dark px-4 py-3 rounded-pill shadow-lg fw-bold">
-                            <i class="fas fa-check-circle text-success me-2"></i>100% Prodotti Verificati
+                            <i class="fas fa-check-circle text-success me-2" aria-hidden="true"></i>Prodotti Verificati
                         </span>
                         <span class="badge bg-white text-dark px-4 py-3 rounded-pill shadow-lg fw-bold">
-                            <i class="fas fa-truck text-primary me-2"></i>Spedizione Prime
+                            <i class="fas fa-truck text-primary me-2" aria-hidden="true"></i>Spedizione Prime
                         </span>
                         <span class="badge bg-white text-dark px-4 py-3 rounded-pill shadow-lg fw-bold">
-                            <i class="fas fa-star text-warning me-2"></i>21 Siti Specializzati
+                            <i class="fas fa-star text-warning me-2" aria-hidden="true"></i>22 Categorie
                         </span>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-4">
                 <div class="col-md-6">
-                    <a href="#prodotti-piu-cercati" class="btn btn-light btn-lg fw-bold text-primary px-5 py-3 rounded-pill shadow-lg hover-lift">
-                        <i class="fas fa-shopping-bag me-2"></i>Scopri i Prodotti Top
+                    <a href="#tendenze" class="btn btn-light btn-lg fw-bold text-primary px-5 py-3 rounded-pill shadow-lg hover-lift">
+                        <i class="fas fa-chart-line me-2" aria-hidden="true"></i>Vedi Categorie in Tendenza
                     </a>
+                </div>
+            </div>
+            
+            <!-- Hero Dynamic Banner -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <div class="alert alert-info border-0 shadow-lg" style="border-radius: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fas fa-fire-burner fa-2x me-3"></i>
+                            <div class="text-start">
+                                <h5 class="fw-bold mb-1">🔥 Cucina in Tendenza</h5>
+                                <p class="mb-0 small">Friggitrici ad aria, robot da cucina e macchine per caffè</p>
+                            </div>
+                            <a href="site_1/index.html" class="btn btn-light text-primary fw-bold ms-3">
+                                <i class="fas fa-arrow-right me-1"></i>Vedi
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <style>
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        .animate-pulse {
-            animation: pulse 2s ease-in-out infinite;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease-out;
-        }
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
-            transition: all 0.3s ease;
-        }
-    </style>
 
-    <!-- Prodotti Più Cercati Section -->
-    <section id="prodotti-piu-cercati" class="container my-5">
+    <!-- Categorie in Tendenza Section -->
+    <section class="container my-5" aria-labelledby="tendenze-title">
         <div class="row mb-4">
             <div class="col-12 text-center">
-                <h2 class="display-5 fw-bold mb-3">
-                    <i class="fas fa-fire text-danger me-3"></i>
+                <h2 id="tendenze-title" class="display-5 fw-bold mb-3">
+                    <i class="fas fa-chart-line text-success me-3" aria-hidden="true"></i>
+                    Categorie in Tendenza
+                </h2>
+                <p class="lead text-muted">Le categorie più cercate dai nostri visitatori</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-lg h-100" style="border-radius: 15px; background: linear-gradient(135deg, #FF8C42 0%, #eb782e 100%); color: white;">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-utensils fa-2x me-3"></i>
+                            <div>
+                                <h4 class="fw-bold mb-0">Cucina & Elettrodomestici</h4>
+                                <span class="badge bg-warning text-dark mt-1">🔥 Più Cercata</span>
+                            </div>
+                        </div>
+                        <p class="mb-3">Friggitrici ad aria, robot da cucina, macchine per caffè e molto altro</p>
+                        <a href="site_1/index.html" class="btn btn-light text-primary fw-bold w-100">
+                            <i class="fas fa-arrow-right me-2"></i>Esplora Cucina
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card border-0 shadow-lg h-100" style="border-radius: 15px; background: linear-gradient(135deg, #6B46C1 0%, #9333EA 100%); color: white;">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-film fa-2x me-3"></i>
+                            <div>
+                                <h4 class="fw-bold mb-0">Abbigliamento Cinema & TV</h4>
+                                <span class="badge bg-info text-white mt-1">⭐ In Tendenza</span>
+                            </div>
+                        </div>
+                        <p class="mb-3">Magliette e accessori ispirati alle serie TV più amate</p>
+                        <a href="site_17/index.html" class="btn btn-light text-primary fw-bold w-100">
+                            <i class="fas fa-arrow-right me-2"></i>Esplora Moda
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prodotti Consigliati Section -->
+    <section class="container my-5" aria-labelledby="consigliati-title">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 id="consigliati-title" class="display-5 fw-bold mb-3">
+                    <i class="fas fa-star text-warning me-3" aria-hidden="true"></i>
+                    Prodotti Consigliati
+                </h2>
+                <p class="lead text-muted">Le nostre scelte migliori per ogni categoria</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="card border-0 shadow-sm h-100 text-center" style="border-radius: 15px;">
+                    <div class="card-body p-3">
+                        <i class="fas fa-fire-burner fa-3x text-danger mb-3"></i>
+                        <h5 class="fw-bold">Friggitrici ad Aria</h5>
+                        <p class="text-muted small mb-3">Cucina sana e veloce</p>
+                        <a href="site_1/index.html" class="btn btn-outline-primary btn-sm fw-bold">
+                            <i class="fas fa-arrow-right me-1"></i>Vedi
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6">
+                <div class="card border-0 shadow-sm h-100 text-center" style="border-radius: 15px;">
+                    <div class="card-body p-3">
+                        <i class="fas fa-film fa-3x text-primary mb-3"></i>
+                        <h5 class="fw-bold">Serie TV</h5>
+                        <p class="text-muted small mb-3">Abbigliamento Cinema & TV</p>
+                        <a href="site_17/index.html" class="btn btn-outline-primary btn-sm fw-bold">
+                            <i class="fas fa-arrow-right me-1"></i>Vedi
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6">
+                <div class="card border-0 shadow-sm h-100 text-center" style="border-radius: 15px;">
+                    <div class="card-body p-3">
+                        <i class="fas fa-hdd fa-3x text-success mb-3"></i>
+                        <h5 class="fw-bold">SSD Gaming</h5>
+                        <p class="text-muted small mb-3">Prestazioni elevate</p>
+                        <a href="site_9/index.html" class="btn btn-outline-primary btn-sm fw-bold">
+                            <i class="fas fa-arrow-right me-1"></i>Vedi
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6">
+                <div class="card border-0 shadow-sm h-100 text-center" style="border-radius: 15px;">
+                    <div class="card-body p-3">
+                        <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                        <h5 class="fw-bold">Sostenibilità</h5>
+                        <p class="text-muted small mb-3">Eco-Friendly</p>
+                        <a href="sostenibilita-eco-friendly/index.html" class="btn btn-outline-primary btn-sm fw-bold">
+                            <i class="fas fa-arrow-right me-1"></i>Vedi
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Promozionali Section -->
+    <section class="container my-5" aria-labelledby="banner-title">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 id="banner-title" class="display-5 fw-bold mb-3">
+                    <i class="fas fa-tags text-primary me-3" aria-hidden="true"></i>
+                    Offerte Speciali
+                </h2>
+                <p class="lead text-muted">Scopri le migliori offerte per ogni categoria</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-lg h-100" style="border-radius: 15px; background: linear-gradient(135deg, #FF8C42 0%, #eb782e 100%); color: white; cursor: pointer;">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <h4 class="fw-bold mb-2">Offerte Cucina</h4>
+                                <p class="mb-0">Friggitrici ad aria, robot da cucina e molto altro</p>
+                            </div>
+                            <i class="fas fa-fire-burner fa-3x opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card border-0 shadow-lg h-100" style="border-radius: 15px; background: linear-gradient(135deg, #6B46C1 0%, #9333EA 100%); color: white; cursor: pointer;">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <h4 class="fw-bold mb-2">Nuovi Arrivi Moda</h4>
+                                <p class="mb-0">Abbigliamento Cinema & TV e serie TV popolari</p>
+                            </div>
+                            <i class="fas fa-film fa-3x opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carosello Prodotti in Evidenza Section -->
+    <section class="container my-5" aria-labelledby="carosello-title">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 id="carosello-title" class="display-5 fw-bold mb-3">
+                    <i class="fas fa-star text-warning me-3" aria-hidden="true"></i>
+                    Prodotti in Evidenza
+                </h2>
+                <p class="lead text-muted">I prodotti più apprezzati dai nostri visitatori</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-2 col-sm-4 col-6">
+                <div class="card border-0 shadow-sm h-100 text-center" style="border-radius: 10px;">
+                    <div class="card-body p-2">
+                        <i class="fas fa-fire-burner fa-2x text-danger mb-2"></i>
+                        <h6 class="fw-bold small">Friggitrici</h6>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2 col-sm-4 col-6">
+                <div class="card border-0 shadow-sm h-100 text-center" style="border-radius: 10px;">
+                    <div class="card-body p-2">
+                        <i class="fas fa-film fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold small">Serie TV</h6>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2 col-sm-4 col-6">
+                <div class="card border-0 shadow-sm h-100 text-center" style="border-radius: 10px;">
+                    <div class="card-body p-2">
+                        <i class="fas fa-hdd fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold small">SSD</h6>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2 col-sm-4 col-6">
+                <div class="card border-0 shadow-sm h-100 text-center" style="border-radius: 10px;">
+                    <div class="card-body p-2">
+                        <i class="fas fa-leaf fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold small">Eco</h6>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2 col-sm-4 col-6">
+                <div class="card border-0 shadow-sm h-100 text-center" style="border-radius: 10px;">
+                    <div class="card-body p-2">
+                        <i class="fas fa-lightbulb fa-2x text-warning mb-2"></i>
+                        <h6 class="fw-bold small">Smart Home</h6>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2 col-sm-4 col-6">
+                <div class="card border-0 shadow-sm h-100 text-center" style="border-radius: 10px;">
+                    <div class="card-body p-2">
+                        <i class="fas fa-running fa-2x text-info mb-2"></i>
+                        <h6 class="fw-bold small">Fitness</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ultimi Aggiornamenti Section -->
+    <section class="container my-5" aria-labelledby="aggiornamenti-title">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 id="aggiornamenti-title" class="display-5 fw-bold mb-3">
+                    <i class="fas fa-clock text-info me-3" aria-hidden="true"></i>
+                    Ultimi Aggiornamenti
+                </h2>
+                <p class="lead text-muted">Le categorie aggiornate di recente</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 15px;">
+                    <div class="card-body p-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-leaf fa-2x text-success me-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-0">Sostenibilità & Eco-Friendly</h5>
+                                <small class="text-muted">Nuova categoria</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 15px;">
+                    <div class="card-body p-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-film fa-2x text-primary me-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-0">Abbigliamento Cinema & TV</h5>
+                                <small class="text-muted">Nuovi prodotti aggiunti</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 15px;">
+                    <div class="card-body p-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-fire-burner fa-2x text-danger me-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-0">Cucina Moderna & Tech</h5>
+                                <small class="text-muted">Aggiornato recentemente</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prodotti Più Cercati Section -->
+    <section id="prodotti-piu-cercati" class="container my-5" aria-labelledby="prodotti-title">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 id="prodotti-title" class="display-5 fw-bold mb-3">
+                    <i class="fas fa-fire text-danger me-3" aria-hidden="true"></i>
                     Prodotti Più Cercati
                 </h2>
                 <p class="lead text-muted">I prodotti più cliccati dai nostri visitatori</p>
@@ -394,11 +501,11 @@
     </section>
 
     <!-- Sites Section -->
-    <section id="sites" class="container">
+    <section id="sites" class="container" aria-labelledby="sites-title">
         <div class="row mb-4">
             <div class="col-12 text-center">
-                <h2 class="display-5 fw-bold mb-4">
-                    <i class="fas fa-th-large me-3"></i>
+                <h2 id="sites-title" class="display-5 fw-bold mb-4">
+                    <i class="fas fa-th-large me-3" aria-hidden="true"></i>
                     Esplora le Nostre Guide
                 </h2>
                 <p class="lead text-muted">
@@ -410,50 +517,50 @@
         <!-- Category Filters -->
         <div class="row mb-4">
             <div class="col-12">
-                <div class="d-flex flex-wrap justify-content-center gap-2">
-                    <button class="btn btn-filter active" data-filter="all">
-                        <i class="fas fa-globe me-2"></i>Tutti
+                <div class="d-flex flex-wrap justify-content-center gap-2" role="group" aria-label="Filtri categorie">
+                    <button class="btn btn-filter active" data-filter="all" aria-pressed="true">
+                        <i class="fas fa-globe me-2" aria-hidden="true"></i>Tutti
                     </button>
-                    <button class="btn btn-filter" data-filter="Sport">
-                        <i class="fas fa-running me-2"></i>Sport
+                    <button class="btn btn-filter" data-filter="Sport" aria-pressed="false">
+                        <i class="fas fa-running me-2" aria-hidden="true"></i>Sport
                     </button>
-                    <button class="btn btn-filter" data-filter="Tech">
-                        <i class="fas fa-laptop me-2"></i>Tech
+                    <button class="btn btn-filter" data-filter="Tech" aria-pressed="false">
+                        <i class="fas fa-laptop me-2" aria-hidden="true"></i>Tech
                     </button>
-                    <button class="btn btn-filter" data-filter="Casa">
-                        <i class="fas fa-home me-2"></i>Casa
+                    <button class="btn btn-filter" data-filter="Casa" aria-pressed="false">
+                        <i class="fas fa-home me-2" aria-hidden="true"></i>Casa
                     </button>
-                    <button class="btn btn-filter" data-filter="Moda">
-                        <i class="fas fa-tshirt me-2"></i>Moda
+                    <button class="btn btn-filter" data-filter="Moda" aria-pressed="false">
+                        <i class="fas fa-tshirt me-2" aria-hidden="true"></i>Moda
                     </button>
-                    <button class="btn btn-filter" data-filter="Viaggi">
-                        <i class="fas fa-plane me-2"></i>Viaggi
+                    <button class="btn btn-filter" data-filter="Viaggi" aria-pressed="false">
+                        <i class="fas fa-plane me-2" aria-hidden="true"></i>Viaggi
                     </button>
-                    <button class="btn btn-filter" data-filter="Benessere">
-                        <i class="fas fa-spa me-2"></i>Benessere
+                    <button class="btn btn-filter" data-filter="Benessere" aria-pressed="false">
+                        <i class="fas fa-spa me-2" aria-hidden="true"></i>Benessere
                     </button>
-                    <button class="btn btn-filter" data-filter="Ufficio">
-                        <i class="fas fa-briefcase me-2"></i>Ufficio
+                    <button class="btn btn-filter" data-filter="Ufficio" aria-pressed="false">
+                        <i class="fas fa-briefcase me-2" aria-hidden="true"></i>Ufficio
                     </button>
                 </div>
             </div>
         </div>
         
-        <div class="site-grid" id="sitesGrid">
+        <div class="site-grid" id="sitesGrid" aria-label="Lista guide specializzate">
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-1-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #FF8C42, #eb782e);">
                     <div class="site-icon">
-                        <i class="fas fa-utensils"></i>
+                        <i class="fas fa-utensils" aria-hidden="true"></i>
                     </div>
-                    <h3>Cucina Moderna & Tech</h3>
+                    <h3 id="card-1-title">Cucina Moderna & Tech</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
                         Elettrodomestici
                     </span>
                     <h4 class="site-title">Cucina Moderna & Tech</h4>
-                    <p class="site-description">I migliori gadget per rendere la tua cucina intelligente e funzionale.</p>
+                    <p class="site-description">Friggitrici ad aria, robot da cucina, macchine per caffè e i migliori elettrodomestici per una cucina intelligente.</p>
                     
                     <div class="site-stats">
                         <div class="stat-item">
@@ -466,25 +573,32 @@
                         </div>
                     </div>
                     
+                    <div class="mt-3">
+                        <small class="text-muted d-block mb-2">Prodotti Popolari:</small>
+                        <a href="site_1/index.html#philips" class="badge bg-light text-dark text-decoration-none me-1 mb-1">Philips</a>
+                        <a href="site_1/index.html#instant" class="badge bg-light text-dark text-decoration-none me-1 mb-1">Instant Pot</a>
+                        <a href="site_1/index.html#cosori" class="badge bg-light text-dark text-decoration-none mb-1">Cosori</a>
+                    </div>
+                    
                     <a href="site_1/index.html" class="btn-site" onclick="showLoading()">
                         <i class="fas fa-arrow-right me-2"></i>Esplora Sito
                     </a>
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-2-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #0984E3, #0070cf);">
                     <div class="site-icon">
-                        <i class="fas fa-box"></i>
+                        <i class="fas fa-box" aria-hidden="true"></i>
                     </div>
-                    <h3>Smart Home & Domotica</h3>
+                    <h3 id="card-2-title">Smart Home & Domotica</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
                         Illuminazione
                     </span>
                     <h4 class="site-title">Smart Home & Domotica</h4>
-                    <p class="site-description">Rendi la tua casa intelligente con le ultime novità tech.</p>
+                    <p class="site-description">Luci smart, termostati intelligenti, telecamere di sicurezza e sistemi domotici per automatizzare la tua casa.</p>
                     
                     <div class="site-stats">
                         <div class="stat-item">
@@ -497,6 +611,13 @@
                         </div>
                     </div>
                     
+                    <div class="mt-3">
+                        <small class="text-muted d-block mb-2">Prodotti Popolari:</small>
+                        <a href="site_2/index.html#philips" class="badge bg-light text-dark text-decoration-none me-1 mb-1">Philips Hue</a>
+                        <a href="site_2/index.html#tp-link" class="badge bg-light text-dark text-decoration-none me-1 mb-1">TP-Link</a>
+                        <a href="site_2/index.html#ring" class="badge bg-light text-dark text-decoration-none mb-1">Ring</a>
+                    </div>
+                    
                     <a href="site_2/index.html" class="btn-site" onclick="showLoading()">
                         <i class="fas fa-arrow-right me-2"></i>Esplora Sito
                     </a>
@@ -504,7 +625,7 @@
             </div>
 
             <div class="site-card">
-                <div class="site-header" style="background: linear-gradient(45deg, #E74C3C, #FF6B35);">
+                <div class="site-header" style="background: linear-gradient(45deg, #E67E22, #D35400);">
                     <div class="site-icon">
                         <i class="fas fa-dumbbell"></i>
                     </div>
@@ -534,12 +655,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-4-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #27AE60, #2ECC71);">
                     <div class="site-icon">
-                        <i class="fas fa-seedling"></i>
+                        <i class="fas fa-seedling" aria-hidden="true"></i>
                     </div>
-                    <h3>Giardinaggio Urbano</h3>
+                    <h3 id="card-4-title">Giardinaggio Urbano</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -565,12 +686,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-5-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #5D6D7E, #34495E);">
                     <div class="site-icon">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
                     </div>
-                    <h3>Ufficio Produttivo</h3>
+                    <h3 id="card-5-title">Ufficio Produttivo</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -596,12 +717,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-6-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #8E44AD, #9B59B6);">
                     <div class="site-icon">
-                        <i class="fas fa-camera"></i>
+                        <i class="fas fa-camera" aria-hidden="true"></i>
                     </div>
-                    <h3>Fotografia Mobile</h3>
+                    <h3 id="card-6-title">Fotografia Mobile</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -627,12 +748,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-7-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #E67E22, #27AE60);">
                     <div class="site-icon">
-                        <i class="fas fa-paw"></i>
+                        <i class="fas fa-paw" aria-hidden="true"></i>
                     </div>
-                    <h3>Pet Care Intelligente</h3>
+                    <h3 id="card-7-title">Pet Care Intelligente</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -658,12 +779,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-8-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #8B4513, #A0522D);">
                     <div class="site-icon">
-                        <i class="fas fa-coffee"></i>
+                        <i class="fas fa-coffee" aria-hidden="true"></i>
                     </div>
-                    <h3>Cura della Macchina da Caffè</h3>
+                    <h3 id="card-8-title">Cura della Macchina da Caffè</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -689,12 +810,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-9-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #6C5CE7, #9D4EDD);">
                     <div class="site-icon">
-                        <i class="fas fa-gamepad"></i>
+                        <i class="fas fa-gamepad" aria-hidden="true"></i>
                     </div>
-                    <h3>Elite Gaming Gear</h3>
+                    <h3 id="card-9-title">Elite Gaming Gear</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -720,12 +841,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-10-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #3498DB, #2980B9);">
                     <div class="site-icon">
-                        <i class="fas fa-plane"></i>
+                        <i class="fas fa-plane" aria-hidden="true"></i>
                     </div>
-                    <h3>Viaggi Organizzati</h3>
+                    <h3 id="card-10-title">Viaggi Organizzati</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -751,19 +872,19 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-11-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #6B46C1, #9333EA);">
                     <div class="site-icon">
-                        <i class="fas fa-film"></i>
+                        <i class="fas fa-film" aria-hidden="true"></i>
                     </div>
-                    <h3>Abbigliamento Cinema & TV</h3>
+                    <h3 id="card-11-title">Abbigliamento Cinema & TV</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
                         Cinema & TV
                     </span>
                     <h4 class="site-title">Abbigliamento Cinema & TV</h4>
-                    <p class="site-description">Ispirato alle serie TV più amate. Abbigliamento e accessori ispirati ai personaggi de "Le Ali del Sogno".</p>
+                    <p class="site-description">Magliette e accessori ispirati alle serie TV più amate: The Boys, Squid Game, Wednesday e altri popolari.</p>
                     
                     <div class="site-stats">
                         <div class="stat-item">
@@ -776,18 +897,25 @@
                         </div>
                     </div>
                     
+                    <div class="mt-3">
+                        <small class="text-muted d-block mb-2">Serie TV Popolari:</small>
+                        <a href="site_17/index.html#boys" class="badge bg-light text-dark text-decoration-none me-1 mb-1">The Boys</a>
+                        <a href="site_17/index.html#squid" class="badge bg-light text-dark text-decoration-none me-1 mb-1">Squid Game</a>
+                        <a href="site_17/index.html#wednesday" class="badge bg-light text-dark text-decoration-none mb-1">Wednesday</a>
+                    </div>
+                    
                     <a href="site_17/index.html" class="btn-site" onclick="showLoading()">
                         <i class="fas fa-arrow-right me-2"></i>Esplora Sito
                     </a>
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-12-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #3498DB, #2980B9);">
                     <div class="site-icon">
-                        <i class="fas fa-book"></i>
+                        <i class="fas fa-book" aria-hidden="true"></i>
                     </div>
-                    <h3>Libri & E-Reader</h3>
+                    <h3 id="card-12-title">Libri & E-Reader</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -813,12 +941,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-13-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #E91E63, #9B59B6);">
                     <div class="site-icon">
-                        <i class="fas fa-spa"></i>
+                        <i class="fas fa-spa" aria-hidden="true"></i>
                     </div>
-                    <h3>Bellezza & Skincare</h3>
+                    <h3 id="card-13-title">Bellezza & Skincare</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -844,12 +972,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-14-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #0984E3, #2c3e50);">
                     <div class="site-icon">
-                        <i class="fas fa-campground"></i>
+                        <i class="fas fa-campground" aria-hidden="true"></i>
                     </div>
-                    <h3>Outdoor & Camping</h3>
+                    <h3 id="card-14-title">Outdoor & Camping</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -875,12 +1003,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-15-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #0a0a0a, #D4AF37);">
                     <div class="site-icon">
-                        <i class="fas fa-gem"></i>
+                        <i class="fas fa-gem" aria-hidden="true"></i>
                     </div>
-                    <h3>Moda Donna</h3>
+                    <h3 id="card-15-title">Moda Donna</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -906,12 +1034,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
-                <div class="site-header" style="background: linear-gradient(45deg, #2980B9, #FF6B35);">
+            <div class="site-card" role="article" aria-labelledby="card-16-title">
+                <div class="site-header" style="background: linear-gradient(45deg, #3498DB, #2980B9);">
                     <div class="site-icon">
-                        <i class="fas fa-spa"></i>
+                        <i class="fas fa-spa" aria-hidden="true"></i>
                     </div>
-                    <h3>Benessere & Relax</h3>
+                    <h3 id="card-16-title">Benessere & Relax</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -937,12 +1065,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-17-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #2C3E50, #3498DB);">
                     <div class="site-icon">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-user-tie" aria-hidden="true"></i>
                     </div>
-                    <h3>Moda Uomo</h3>
+                    <h3 id="card-17-title">Moda Uomo</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -968,12 +1096,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-18-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #6C5CE7, #FD79A8);">
                     <div class="site-icon">
-                        <i class="fas fa-glasses"></i>
+                        <i class="fas fa-glasses" aria-hidden="true"></i>
                     </div>
-                    <h3>Accessori Moda</h3>
+                    <h3 id="card-18-title">Accessori Moda</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -999,12 +1127,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-19-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #E91E63, #FFD700);">
                     <div class="site-icon">
-                        <i class="fas fa-gem"></i>
+                        <i class="fas fa-gem" aria-hidden="true"></i>
                     </div>
-                    <h3>Oggetti per Casa & Decorazione</h3>
+                    <h3 id="card-19-title">Oggetti per Casa & Decorazione</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -1030,12 +1158,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-20-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #3498DB, #2ECC71);">
                     <div class="site-icon">
-                        <i class="fas fa-plane"></i>
+                        <i class="fas fa-plane" aria-hidden="true"></i>
                     </div>
-                    <h3>Viaggi Economici</h3>
+                    <h3 id="card-20-title">Viaggi Economici</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -1061,12 +1189,12 @@
                 </div>
             </div>
 
-            <div class="site-card">
+            <div class="site-card" role="article" aria-labelledby="card-21-title">
                 <div class="site-header" style="background: linear-gradient(45deg, #667eea, #764ba2);">
                     <div class="site-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                     </div>
-                    <h3>Smartphone & Tech</h3>
+                    <h3 id="card-21-title">Smartphone & Tech</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
@@ -1095,25 +1223,25 @@
     </section>
 
     <!-- Features Section -->
-    <section class="container py-5">
+    <section class="container py-5" aria-labelledby="features-title">
         <div class="row">
             <div class="col-md-4 text-center mb-4">
                 <div class="feature-box">
-                    <i class="fas fa-star fa-3x mb-3 text-warning"></i>
+                    <i class="fas fa-star fa-3x mb-3 text-warning" aria-hidden="true"></i>
                     <h4>Prodotti Selezionati</h4>
                     <p>Solo i migliori prodotti con recensioni verificate</p>
                 </div>
             </div>
             <div class="col-md-4 text-center mb-4">
                 <div class="feature-box">
-                    <i class="fas fa-shipping-fast fa-3x mb-3 text-info"></i>
+                    <i class="fas fa-shipping-fast fa-3x mb-3 text-info" aria-hidden="true"></i>
                     <h4>Spedizione Gratuita</h4>
                     <p>Tutti i prodotti con spedizione Prime gratuita</p>
                 </div>
             </div>
             <div class="col-md-4 text-center mb-4">
                 <div class="feature-box">
-                    <i class="fas fa-shield-alt fa-3x mb-3 text-success"></i>
+                    <i class="fas fa-shield-alt fa-3x mb-3 text-success" aria-hidden="true"></i>
                     <h4>Acquisti Sicuri</h4>
                     <p>Acquisti protetti tramite Amazon</p>
                 </div>
@@ -1122,12 +1250,44 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
+    <footer class="bg-dark text-white py-5" role="contentinfo">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-4">
-                    <h5 class="fw-bold mb-3 text-center"><i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide</h5>
+                    <h5 class="fw-bold mb-3 text-center"><i class="fas fa-shopping-cart me-2" aria-hidden="true"></i>Smart Choices Guide</h5>
                     <p class="text-muted text-center">La tua guida per acquisti intelligenti. Recensioni, confronti e offerte esclusive per ogni categoria di prodotti.</p>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Categorie Popolari</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="site_1/index.html" class="text-muted text-decoration-none"><i class="fas fa-fire-burner me-2" aria-hidden="true"></i>Cucina & Elettrodomestici</a></li>
+                        <li class="mb-2"><a href="site_17/index.html" class="text-muted text-decoration-none"><i class="fas fa-film me-2" aria-hidden="true"></i>Abbigliamento Cinema & TV</a></li>
+                        <li class="mb-2"><a href="site_9/index.html" class="text-muted text-decoration-none"><i class="fas fa-hdd me-2" aria-hidden="true"></i>SSD Gaming</a></li>
+                        <li class="mb-2"><a href="sostenibilita-eco-friendly/index.html" class="text-muted text-decoration-none"><i class="fas fa-leaf me-2" aria-hidden="true"></i>Sostenibilità & Eco-Friendly</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Altre Categorie</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="site_2/index.html" class="text-muted text-decoration-none"><i class="fas fa-box me-2" aria-hidden="true"></i>Smart Home & Domotica</a></li>
+                        <li class="mb-2"><a href="site_10/index.html" class="text-muted text-decoration-none"><i class="fas fa-dumbbell me-2" aria-hidden="true"></i>Fitness Casa</a></li>
+                        <li class="mb-2"><a href="site_11/index.html" class="text-muted text-decoration-none"><i class="fas fa-book me-2" aria-hidden="true"></i>Libri & E-Reader</a></li>
+                        <li class="mb-2"><a href="site_14/index.html" class="text-muted text-decoration-none"><i class="fas fa-plane me-2" aria-hidden="true"></i>Viaggi & Turismo</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Link Utili</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="tutte-le-guide.html" class="text-muted text-decoration-none"><i class="fas fa-book me-2" aria-hidden="true"></i>Tutte le Guide</a></li>
+                        <li class="mb-2"><a href="bounty.html" class="text-muted text-decoration-none"><i class="fas fa-gift me-2" aria-hidden="true"></i>Servizi Amazon</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none"><i class="fas fa-info-circle me-2" aria-hidden="true"></i>Chi Siamo</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none"><i class="fas fa-envelope me-2" aria-hidden="true"></i>Contatti</a></li>
+                    </ul>
                 </div>
             </div>
             
@@ -1136,7 +1296,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="amazon-disclaimer bg-dark bg-opacity-50 p-3 rounded">
-                        <p class="mb-2 text-warning fw-bold"><i class="fab fa-amazon me-2"></i>Disclaimer Amazon Associates</p>
+                        <p class="mb-2 text-warning fw-bold"><i class="fab fa-amazon me-2" aria-hidden="true"></i>Disclaimer Amazon Associates</p>
                         <p class="text-muted small mb-0">In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche. Qualsiasi prezzo e informazioni sulla disponibilità visualizzati sul sito Amazon al momento dell'acquisto si applicheranno all'acquisto di questo prodotto. Questo sito è partecipante al Programma Affiliazione Amazon EU, un programma di affiliazione che permette ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.</p>
                     </div>
                 </div>
@@ -1147,7 +1307,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <p class="mb-2">
-                        <i class="fas fa-shopping-cart me-2"></i>
+                        <i class="fas fa-shopping-cart me-2" aria-hidden="true"></i>
                         Smart Choices Guide - La tua guida per acquisti intelligenti
                     </p>
                     <p class="text-muted small mb-3">
@@ -1155,10 +1315,10 @@
                     </p>
                     <div class="mt-3">
                         <a href="bounty.html" class="btn btn-outline-warning btn-sm me-2">
-                            <i class="fas fa-gift me-2"></i>Servizi Amazon
+                            <i class="fas fa-gift me-2" aria-hidden="true"></i>Servizi Amazon
                         </a>
                         <a href="#" class="btn btn-outline-primary btn-sm">
-                            <i class="fas fa-tshirt me-2"></i>Prodotti
+                            <i class="fas fa-tshirt me-2" aria-hidden="true"></i>Prodotti
                         </a>
                     </div>
                 </div>
@@ -1172,66 +1332,9 @@
     </div>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     
-    <script>
-        function showLoading() {
-            document.getElementById('loadingOverlay').style.display = 'flex';
-            setTimeout(() => {
-                document.getElementById('loadingOverlay').style.display = 'none';
-            }, 1500);
-        }
-        
-        // Category Filter Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.btn-filter');
-            const siteCards = document.querySelectorAll('.site-card');
-            
-            // Add data-category to site cards based on badge-category
-            siteCards.forEach(card => {
-                const badge = card.querySelector('.badge-category');
-                if (badge) {
-                    const category = badge.textContent.trim();
-                    // Map categories to filter groups
-                    let filterGroup = 'all';
-                    if (category === 'Sport') filterGroup = 'Sport';
-                    else if (category === 'Tech' || category === 'Gaming' || category === 'Foto' || category === 'Kindle' || category === 'Illuminazione') filterGroup = 'Tech';
-                    else if (category === 'Elettrodomestici' || category === 'Caffè & Tè' || category === 'Casa & Decorazione') filterGroup = 'Casa';
-                    else if (category === 'Cinema & TV' || category === 'Abbigliamento Lusso' || category === 'Moda Maschile' || category === 'Accessori' || category === 'Skincare') filterGroup = 'Moda';
-                    else if (category === 'Viaggi' || category === 'Viaggi Low-Cost') filterGroup = 'Viaggi';
-                    else if (category === 'Benessere' || category === 'Outdoor' || category === 'Giardino' || category === 'Animali') filterGroup = 'Benessere';
-                    else if (category === 'Ufficio') filterGroup = 'Ufficio';
-                    
-                    card.setAttribute('data-category', filterGroup);
-                }
-            });
-            
-            // Filter button click handlers
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    // Show/hide site cards based on filter
-                    siteCards.forEach(card => {
-                        if (filterValue === 'all') {
-                            card.classList.remove('hidden');
-                        } else {
-                            const cardCategory = card.getAttribute('data-category');
-                            if (cardCategory === filterValue) {
-                                card.classList.remove('hidden');
-                            } else {
-                                card.classList.add('hidden');
-                            }
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
 </body>
 </html>
