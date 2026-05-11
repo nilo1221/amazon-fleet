@@ -1,6 +1,6 @@
 {
   "buildCommand": "echo 'No build needed'",
-  "outputDirectory": "sites",
+  "outputDirectory": "lavoro",
   "installCommand": "echo 'No install needed'",
   "framework": null
 }
