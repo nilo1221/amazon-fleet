@@ -14,21 +14,38 @@
     
     <style>
         :root {
-            --primary-color: #6C63FF;
-            --secondary-color: #FF6584;
-            --success-color: #4CAF50;
+            --primary-color: #3498DB;
+            --primary-dark: #2980B9;
+            --primary-darker: #1A5276;
+            --secondary-color: #f8f9fa;
+            --text-color: #212529;
+            --border-color: #e0e0e0;
         }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
         }
         
         .hero-section {
-            background: linear-gradient(135deg, #6C63FF 0%, #FF6584 100%);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%);
             color: white;
-            padding: 60px 0;
+            padding: 80px 0;
             margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .guide-card {
@@ -36,15 +53,27 @@
             border-radius: 15px;
             padding: 30px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
             transition: all 0.3s ease;
-            border-left: 4px solid var(--primary-color);
+            border: 1px solid var(--border-color);
             height: 100%;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards;
         }
         
         .guide-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(108, 99, 255, 0.2);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+            border-color: var(--primary-color);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
         
         .guide-icon {
@@ -53,19 +82,21 @@
             color: var(--primary-color);
         }
         
-        .btn-guide {
+        .btn-primary-custom {
             background: var(--primary-color);
             border: none;
             padding: 10px 25px;
-            border-radius: 25px;
-            font-weight: bold;
+            border-radius: 20px;
+            font-weight: 500;
             transition: all 0.3s ease;
             width: 100%;
+            color: white;
         }
         
-        .btn-guide:hover {
-            background: #5a52d5;
-            transform: scale(1.02);
+        .btn-primary-custom:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
         }
         
         .category-badge {
@@ -77,10 +108,53 @@
         }
         
         footer {
-            background: #2c3e50;
+            background: var(--primary-darker);
             color: white;
-            padding: 30px 0;
-            margin-top: 60px;
+            padding: 35px 0;
+            margin-top: 50px;
+        }
+        
+        /* Nested Dropdown Styles */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: -1px;
+            border-radius: 0 6px 6px 6px;
+            display: none;
+        }
+
+        .dropdown-submenu:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-item.dropdown-toggle::after {
+            float: right;
+            margin-top: 6px;
+            border-top: 0.3em solid;
+            border-right: 0.3em solid transparent;
+            border-bottom: 0;
+            border-left: 0.3em solid transparent;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 991px) {
+            .dropdown-submenu .dropdown-menu {
+                position: static;
+                left: 0;
+                margin-left: 0;
+                margin-top: 0;
+                border-radius: 0;
+                padding-left: 20px;
+            }
+            
+            .dropdown-submenu .dropdown-menu {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -97,7 +171,49 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-th-large me-1"></i>Categorie
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-home me-2"></i>Casa</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="site_1/index.html"><i class="fas fa-fire-burner me-2"></i>Cucina & Elettrodomestici</a></li>
+                                    <li><a class="dropdown-item" href="site_2/index.html"><i class="fas fa-box me-2"></i>Smart Home & Domotica</a></li>
+                                    <li><a class="dropdown-item" href="site_4/index.html"><i class="fas fa-tree me-2"></i>Giardinaggio Urbano</a></li>
+                                    <li><a class="dropdown-item" href="site_7/index.html"><i class="fas fa-paw me-2"></i>Pet Care Intelligente</a></li>
+                                    <li><a class="dropdown-item" href="site_8/index.html"><i class="fas fa-coffee me-2"></i>Cura Macchina Caffè</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-running me-2"></i>Sport</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="site_3/index.html"><i class="fas fa-dumbbell me-2"></i>Fitness Casa</a></li>
+                                    <li><a class="dropdown-item" href="site_13/index.html"><i class="fas fa-campground me-2"></i>Outdoor & Camping</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-laptop me-2"></i>Tech</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="site_6/index.html"><i class="fas fa-camera me-2"></i>Fotografia Mobile</a></li>
+                                    <li><a class="dropdown-item" href="site_9/index.html"><i class="fas fa-hdd me-2"></i>Elite Gaming Gear</a></li>
+                                    <li><a class="dropdown-item" href="site_10/index.html"><i class="fas fa-laptop me-2"></i>Tech</a></li>
+                                    <li><a class="dropdown-item" href="site_11/index.html"><i class="fas fa-book me-2"></i>Libri & E-Reader</a></li>
+                                    <li><a class="dropdown-item" href="site_16/index.html"><i class="fas fa-mobile-alt me-2"></i>Smartphone & Tech</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-tshirt me-2"></i>Moda</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="site_14/index.html"><i class="fas fa-gem me-2"></i>Viaggi</a></li>
+                                    <li><a class="dropdown-item" href="site_15/index.html"><i class="fas fa-plane me-2"></i>Turismo</a></li>
+                                    <li><a class="dropdown-item" href="site_21/index.html"><i class="fas fa-glasses me-2"></i>Accessori Moda</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="bounty.html">
@@ -105,7 +221,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="tutte-le-guide.html">Tutte le Guide</a>
+                        <a class="nav-link active" href="tutte-le-guide.html">
+                            <i class="fas fa-book me-1"></i>Tutte le Guide
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -131,7 +249,7 @@
                         <h5 class="fw-bold mb-2">Guida Cucina</h5>
                         <span class="category-badge mb-3 d-inline-block">Casa</span>
                         <p class="text-muted mb-4">Soluzioni per la tua cucina</p>
-                        <a href="guida-cucina.html" class="btn btn-guide text-white">
+                        <a href="guida-cucina.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>
@@ -146,7 +264,7 @@
                         <h5 class="fw-bold mb-2">Guida Smart Home</h5>
                         <span class="category-badge mb-3 d-inline-block">Casa</span>
                         <p class="text-muted mb-4">Casa intelligente</p>
-                        <a href="guida-smart-home.html" class="btn btn-guide text-white">
+                        <a href="guida-smart-home.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>
@@ -161,7 +279,7 @@
                         <h5 class="fw-bold mb-2">Guida Gaming</h5>
                         <span class="category-badge mb-3 d-inline-block">Intrattenimento</span>
                         <p class="text-muted mb-4">Gaming di alto livello</p>
-                        <a href="guida-gaming.html" class="btn btn-guide text-white">
+                        <a href="guida-gaming.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>
@@ -176,7 +294,7 @@
                         <h5 class="fw-bold mb-2">Guida Viaggi</h5>
                         <span class="category-badge mb-3 d-inline-block">Viaggi</span>
                         <p class="text-muted mb-4">Organizza il tuo viaggio</p>
-                        <a href="guida-viaggi.html" class="btn btn-guide text-white">
+                        <a href="guida-viaggi.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>
@@ -191,7 +309,7 @@
                         <h5 class="fw-bold mb-2">Guida Cinema & TV</h5>
                         <span class="category-badge mb-3 d-inline-block">Intrattenimento</span>
                         <p class="text-muted mb-4">Stile cinematografico</p>
-                        <a href="guida-cinema-tv.html" class="btn btn-guide text-white">
+                        <a href="guida-cinema-tv.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>
@@ -206,7 +324,7 @@
                         <h5 class="fw-bold mb-2">Guida Benessere</h5>
                         <span class="category-badge mb-3 d-inline-block">Relax</span>
                         <p class="text-muted mb-4">Benessere quotidiano</p>
-                        <a href="guida-benessere-relax.html" class="btn btn-guide text-white">
+                        <a href="guida-benessere-relax.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>
@@ -221,7 +339,7 @@
                         <h5 class="fw-bold mb-2">Guida Pet Care</h5>
                         <span class="category-badge mb-3 d-inline-block">Animali</span>
                         <p class="text-muted mb-4">Accessori intelligenti</p>
-                        <a href="guida-pet-care.html" class="btn btn-guide text-white">
+                        <a href="guida-pet-care.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>
@@ -236,7 +354,7 @@
                         <h5 class="fw-bold mb-2">Abbinamenti Moda Uomo</h5>
                         <span class="category-badge mb-3 d-inline-block">Abbinamenti</span>
                         <p class="text-muted mb-4">Outfit completi uomo</p>
-                        <a href="guida-moda-uomo-abbinamenti.html" class="btn btn-guide text-white">
+                        <a href="guida-moda-uomo-abbinamenti.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>
@@ -251,7 +369,7 @@
                         <h5 class="fw-bold mb-2">Guida Accessori</h5>
                         <span class="category-badge mb-3 d-inline-block">Moda</span>
                         <p class="text-muted mb-4">Accessori essenziali</p>
-                        <a href="guida-accessori-moda.html" class="btn btn-guide text-white">
+                        <a href="guida-accessori-moda.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>
@@ -266,7 +384,7 @@
                         <h5 class="fw-bold mb-2">Abbinamenti Moda Donna</h5>
                         <span class="category-badge mb-3 d-inline-block">Abbinamenti</span>
                         <p class="text-muted mb-4">Outfit completi donna</p>
-                        <a href="guida-moda-donna-abbinamenti.html" class="btn btn-guide text-white">
+                        <a href="guida-moda-donna-abbinamenti.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>
@@ -281,7 +399,7 @@
                         <h5 class="fw-bold mb-2">Abbinamenti Cinema & TV</h5>
                         <span class="category-badge mb-3 d-inline-block">Abbinamenti</span>
                         <p class="text-muted mb-4">Look da serie TV</p>
-                        <a href="guida-cinema-tv-abbinamenti.html" class="btn btn-guide text-white">
+                        <a href="guida-cinema-tv-abbinamenti.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>
@@ -296,7 +414,7 @@
                         <h5 class="fw-bold mb-2">Abbinamenti Cross-Site</h5>
                         <span class="category-badge mb-3 d-inline-block">Abbinamenti</span>
                         <p class="text-muted mb-4">Mix di prodotti diversi</p>
-                        <a href="guida-abbinamenti-cross-site.html" class="btn btn-guide text-white">
+                        <a href="guida-abbinamenti-cross-site.html" class="btn btn-primary-custom">
                             <i class="fas fa-arrow-right me-2"></i>Scopri
                         </a>
                     </div>

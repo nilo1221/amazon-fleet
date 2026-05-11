@@ -1,8 +1,0 @@
-# Netlify Redirects
-# NON reindirizzare link Amazon - lasciali uscire!
-
-# Reindirizza solo le pagine interne che non esistono
-/site_* /index.html 200
-
-# MA NON toccare i link esterni!
-# Lascia che i link Amazon escano liberamente
