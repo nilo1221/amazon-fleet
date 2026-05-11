@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benessere & Relax - Smart Choices Guide</title>
+    <meta name="description" content="Crea la tua spa personale in bagno.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #3498DB;
+            --secondary-color: #f8f9fa;
+            --accent-color: #FF6B35;
+            --success-color: #27AE60;
+            --reading-color: #2980B9;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #2980B9 0%, #3498DB 50%, #FF6B35 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(41, 128, 185, 0.3);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            margin-bottom: 30px;
+            background: white;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 100%);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #2980B9 0%, #3498DB 100%);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+        }
+        
+        .no-images {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .no-images i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Benessere & Relax</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Benessere & Relax</h1>
+            <p class="lead mb-4">Crea la tua spa personale in bagno.</p>
+
+            <!-- Trust Banner -->
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-spa me-1"></i>Integratori Benessere
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">Natura Prime Passiflora Rilassamento</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Integratore naturale a base di Passiflora per il rilassamento e il benessere mentale. 
+                                Formula naturale per ridurre stress e ansia, favorire il sonno e migliorare la qualità della vita.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Ingrediente:</strong> Passiflora naturale
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Benefici:</strong> Rilassamento e riduzione stress
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Sonno:</strong> Favorisce il riposo notturno
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formula:</strong> 100% naturale
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Qualità:</strong> Certificato Natura Prime
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/Natura-Prime-Passiflora-Rilassamento-Trattamento/dp/B0CGXG1VW9?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=35GH6D0YUWX6W&dib=eyJ2IjoiMSJ9.HPe3U6jlF_G6orOjk5bGCoXtp6ZtDgaMIqKclhMATdDgIiu9RdNXwb8Z0AqjvahD81LiZ2YKshOuOa9djnHsPWlVFQltpGs6FC_dbuXofxuDoDE9w6HLCtxAd_Qj0pIQatIH4YtRe808To-76dQgcIPCxx4OLVHYKA3KTKgsFNLT6lyS8r5x6rHjcEVIbqSJWWY9xPwfsa851PDu6-fnjCLzWPZ6q_PJtmMtlGhtVw3omzWcaMimXVX4EmilP4uZOYX2PFfgEoe7T-up0sUVHUt3b80rws1-zF4OhP8MT8Y.X0vB3THYZ929Oiw9gY1OuzzQElQlh8C8tbBCHhHHP1c&dib_tag=se&keywords=benessere+e+relax&qid=1777990237&sprefix=benessere+e+relax%2Caps%2C169&sr=8-4-spons&aref=ZE6fF4zQlR&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=b2c151a6effcbe072c30ebf812304400&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Secondo Prodotto -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-snowflake me-1"></i>Bellezza Invernale
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">Beauty Women Maglione Invernale Elegante</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Maglione invernale beauty donna, elegante e termico. 
+                                Perfetto per proteggere dal freddo con stile, design moderno e materiali di qualità.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Design:</strong> Elegante e moderno
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Material:</strong> Tessuto beauty termico
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Protezione:</strong> Massima dal freddo
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Stile:</strong> Versatile e femminile
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Occasioni:</strong> Uso quotidiano e serate eleganti
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/Beauty-Women-Maglione-Invernale-Elegante/dp/B0G4BCHCPM?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3RYQLNSC5Y6JG&dib=eyJ2IjoiMSJ9.GUeyrDoAcEVgi1UBCf_cRdewi0lqLRQWaiDPavb91xvAzZ7p9VT8taktw73g2L5wuuDPm2OhrQHK6LGmB1G2Rjb7oLwRDynqLNLb_j9qSybaR1KtGIXqwAu6G407D0usXgsmVnR7d1yJ6R1wCVYGKDBjXK_5LFIEMuulU6dWJIf522LWRlCWsExLE3x5MfT2ALA-rBrE_vi_JoCdbJo6HVCaprDDDn4JyRVmj5MIr4wnnERfQIcRTaVQnRPfoxFVGycEeLxvLzyWYzEP35Vz5a6-xhMikbzn0xky25-PdBA.kh3CXT8J7fcCLMESB29slL2emsgcPEcggx1hoNBE0cE&dib_tag=se&keywords=abiti%2Bfemminili&qid=1777991370&sprefix=abiti%2Bfemminili%2Caps%2C174&sr=8-2-spons&aref=jbaWWzV1w6&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=e97334de36e36d684e5148335f0c516f&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Terzo Prodotto -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-leaf me-1"></i>Aromaterapia
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">HIQILI 100ml Olio Essenziale Lavanda</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Olio essenziale lavanda 100% puro non diluito, grado terapeutico per diffusore aromaterapico in camera. 
+                                Allevia lo stress, migliora la qualità del sonno con contagocce in vetro.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Purezza:</strong> 100% puro non diluito
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Grado:</strong> Terapeutico
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Utilizzo:</strong> Diffusore aromaterapico
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Benefici:</strong> Allevia stress, migliora sonno
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Accessorio:</strong> Contagocce in vetro incluso
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/gp/aw/d/B0CQJX4NZS?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=c65138b22d95c98e4aa2b02294fc7e73&hsa_cr_id=0&qid=1777997014&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=i0eR1ZjflV&pd_rd_w=7dKtK&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=6JDH1V1W67886TKMZH3C&pd_rd_wg=hDMKf&pd_rd_r=8924c940-0386-4553-8b71-dec31eaee129&th=1&linkCode=ll2&tag=l0c39-21&linkId=48655c3c0ee4e5ead60b5f4563201e59&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quarto Prodotto -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-spa me-1"></i>Skincare
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">12 Tipi Maschera Viso Idratante in Tessuto</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                12 tipi x 25ml maschera viso idratante in tessuto, maschera facciale coreana per skin care. 
+                                Maschera nutriente per la cura della pelle con formula idratante avanzata.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Quantità:</strong> 12 maschere x 25ml
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Material:</strong> Tessuto di qualità
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Tipo:</strong> Maschera facciale coreana
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Benefici:</strong> Idratazione profonda
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Uso:</strong> Skin care professionale
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/Maschera-Idratante-Tessuto-facciale-Nutriente/dp/B0D2R4DST1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2NHTYX02GO09T&dib=eyJ2IjoiMSJ9.fn7jCNMKuOCjzjPZEVZYq8tSzNfi1Kf-K6N-sNg_5BWQ9Ph5UgPfNcd107IGDL3qfweg2nbtja8ZWcCDQqo2H0hFf4O9EdF6YO3_xx38sUYxTU2xnggYUixZsF5SunCJG3vizDRefuY8kK7ED0PkGbg0RJ0Z5cE6AeGHbo8piWomVod9i5wXtBroWx0RI5o-mQS3nigGkD9En51qPk2a3mQx3ojhokZUeoZy6WbnaIyo1g1b_j5W_P4F9akvAlPjCbnwb4-DtUJrysq8YrsKP5sJUxuU0bXWF_57oHb6H-M.El1BVXYzHuDMhIBeEmcYIgz86qH2hXqeOhl4JKzNP9o&dib_tag=se&keywords=Maschere+viso&qid=1777997144&s=beauty&sprefix=maschere+viso%2Cbeauty%2C230&sr=1-6&linkCode=ll2&tag=l0c39-21&linkId=cd629ac073e92b26fa49c3369053fd90&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quinto Prodotto -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-bath me-1"></i>Sali da Bagno
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">Corine Farme Natural Anti-Stress Vaniglia</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Sali da bagno naturali anti-stress alla vaniglia. Crea la tua spa personale in casa con 
+                                ingredienti naturali per il relax e il benessere mentale.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formula:</strong> 100% naturale
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Profumo:</strong> Vaniglia rilassante
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Effetto:</strong> Anti-stress
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Uso:</strong> Bagno rilassante
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Benefici:</strong> Relax profondo
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/Corine-Farme-Natural-Anti-Stress-vaniglia/dp/B004T322KU?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=130E9ZJXOGXHT&dib=eyJ2IjoiMSJ9.l4ZvTmv4xUqC5b8gOZ367qjkfXs07i851sdGcAByx22eFFn8W6YXAS3wPGuHpWiMReilbcFRCJ8mHNPWg3ciXtaH2QpQDWO_yrHQhP9IzxRUwnAGAmWCzWNlhB9BMsVWwhR-1MIgLjxLs_QEJ3G2txCVWRRtAZ1VOV0Uqk2MepfJ0Qo3QlWCuNXTUAoPQeMnP7zWxeOcyoNG249oIYvQVqcNvNV08xAsdLqtOpfKjdoh3zc7aXjv7kSwaQaYmw4IYcSe1bVVuPyl1ju9ss_dKCbEhzHBbYhfvMyUvQq4zz0.HoVUoPpNsjlithdeL5V27pPs69gOSPfeiLA1eXktW0o&dib_tag=se&keywords=Sali%2Bda%2Bbagno&qid=1777997620&s=beauty&sprefix=sali%2Bda%2Bbagno%2B%2Cbeauty%2C169&sr=1-6&th=1&linkCode=ll2&tag=l0c39-21&linkId=592e62d6b52283b7be3efd4fb46f03e8&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+            <div class="mt-3">
+                <a href="../index.html" class="text-white me-3">
+                    <i class="fas fa-home me-1"></i>Torna alla Home
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech & Elettronica - Smart Choices Guide</title>
+    <meta name="description" content="I migliori prodotti tech ed elettronica.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #f8f9fa;
+            --accent-color: #0056b3;
+            --success-color: #28A745;
+            --trust-color: #0056b3;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #007BFF 0%, #0056b3 50%, #003366 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3);
+        }
+        
+        .category-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            margin-bottom: 30px;
+            background: white;
+            cursor: pointer;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 123, 255, 0.15);
+        }
+        
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .category-icon.ufficio {
+            background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+        }
+        
+        .category-icon.fotografia {
+            background: linear-gradient(135deg, #00BCD4 0%, #0097A7 100%);
+        }
+        
+        .category-icon.smartphone {
+            background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+        }
+        
+        .category-icon.libri {
+            background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%);
+        }
+        
+        .category-icon.giochipc {
+            background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);
+        }
+        
+        .category-icon.gaming {
+            background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%);
+        }
+        
+        .btn-category {
+            background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .btn-category:hover {
+            background: linear-gradient(135deg, #2980B9 0%, #1A5276 100%);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.5);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #28A745 0%, #34CE57 100%);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Tech & Elettronica</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Tech & Elettronica</h1>
+            <p class="lead mb-4">I migliori prodotti tech ed elettronica.</p>
+            
+            <!-- Trust Banner -->
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Ufficio Produttivo -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card card p-4 text-center">
+                        <div class="category-icon ufficio">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Ufficio Produttivo</h4>
+                        <p class="text-muted mb-4">Prodotti per ufficio</p>
+                        <a href="ufficio-produttivo/index.html" class="btn btn-category">
+                            <i class="fas fa-arrow-right me-2"></i>Esplora
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Fotografia Mobile -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card card p-4 text-center">
+                        <div class="category-icon fotografia">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Fotografia Mobile</h4>
+                        <p class="text-muted mb-4">Prodotti fotografia</p>
+                        <a href="fotografia-mobile/index.html" class="btn btn-category">
+                            <i class="fas fa-arrow-right me-2"></i>Esplora
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Smartphone & Tech -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card card p-4 text-center">
+                        <div class="category-icon smartphone">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Smartphone & Tech</h4>
+                        <p class="text-muted mb-4">Prodotti smartphone</p>
+                        <a href="smartphone-tech/index.html" class="btn btn-category">
+                            <i class="fas fa-arrow-right me-2"></i>Esplora
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Libri & E-Reader -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card card p-4 text-center">
+                        <div class="category-icon libri">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Libri & E-Reader</h4>
+                        <p class="text-muted mb-4">Prodotti libri</p>
+                        <a href="libri-ereader/index.html" class="btn btn-category">
+                            <i class="fas fa-arrow-right me-2"></i>Esplora
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Giochi PC -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card card p-4 text-center">
+                        <div class="category-icon smartphone">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Giochi PC</h4>
+                        <p class="text-muted mb-4">Giochi PC</p>
+                        <a href="giochi-pc/index.html" class="btn btn-category">
+                            <i class="fas fa-arrow-right me-2"></i>Esplora
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Gaming -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card card p-4 text-center">
+                        <div class="category-icon smartphone">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Gaming</h4>
+                        <p class="text-muted mb-4">Periferiche e accessori gaming</p>
+                        <a href="gaming/index.html" class="btn btn-category">
+                            <i class="fas fa-arrow-right me-2"></i>Esplora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Tutti i prodotti sono disponibili su Amazon. I link sono affiliati.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
