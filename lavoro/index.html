@@ -232,7 +232,7 @@
         <!-- Category Filters -->
         <div class="row mb-4">
             <div class="col-12">
-                <div class="d-flex flex-wrap justify-content-center gap-2" role="group" aria-label="Filtri categorie">
+                <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" role="group" aria-label="Filtri categorie">
                     <button class="btn btn-filter active" data-filter="all" aria-pressed="true">
                         <i class="fas fa-globe me-2" aria-hidden="true"></i>Tutti
                     </button>
@@ -258,12 +258,25 @@
                         <i class="fas fa-briefcase me-2" aria-hidden="true"></i>Ufficio
                     </button>
                 </div>
+                
+                <!-- Search Bar -->
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="fas fa-search text-muted"></i>
+                            </span>
+                            <input type="text" id="searchInput" class="form-control border-start-0" placeholder="Cerca categorie o prodotti..." aria-label="Cerca">
+                            <button class="btn btn-primary" id="searchBtn" type="button">Cerca</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
         <div class="site-grid" id="sitesGrid" aria-label="Lista guide specializzate">
 
-            <div class="site-card" role="article" aria-labelledby="card-1-title">
+            <div class="site-card" role="article" aria-labelledby="card-1-title" data-category="Casa">
                 <div class="site-header" style="background: linear-gradient(45deg, #FF8C42, #eb782e);">
                     <div class="site-icon">
                         <i class="fas fa-utensils" aria-hidden="true"></i>
@@ -1091,5 +1104,124 @@
     
     <!-- Product Counts Update Script -->
     <script src="update-product-counts.js" defer></script>
+    
+    <!-- Search and Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Assegna categorie alle card in base al contenuto
+            const siteCards = document.querySelectorAll('.site-card');
+            const categoryMapping = {
+                'Cucina': 'Casa',
+                'Smart Home': 'Tech',
+                'Domotica': 'Tech',
+                'Fitness': 'Sport',
+                'Giardinaggio': 'Casa',
+                'Ufficio': 'Ufficio',
+                'Fotografia': 'Tech',
+                'Pet Care': 'Casa',
+                'Caffè': 'Casa',
+                'Gaming': 'Tech',
+                'Tech': 'Tech',
+                'Libri': 'Benessere',
+                'Benessere': 'Benessere',
+                'Spa': 'Benessere',
+                'Outdoor': 'Viaggi',
+                'Camping': 'Viaggi',
+                'Decorazione': 'Casa',
+                'Viaggi': 'Viaggi',
+                'Smartphone': 'Tech',
+                'Cinema': 'Moda',
+                'TV': 'Moda',
+                'Moda': 'Moda',
+                'Accessori': 'Moda'
+            };
+            
+            siteCards.forEach(card => {
+                const title = card.querySelector('.site-title, h3')?.textContent.toLowerCase() || '';
+                const description = card.querySelector('.site-description')?.textContent.toLowerCase() || '';
+                const content = title + ' ' + description;
+                
+                let category = 'Casa'; // default
+                for (const [keyword, cat] of Object.entries(categoryMapping)) {
+                    if (content.toLowerCase().includes(keyword.toLowerCase())) {
+                        category = cat;
+                        break;
+                    }
+                }
+                card.dataset.category = category;
+            });
+            
+            // Funzionalità di filtri
+            const filterButtons = document.querySelectorAll('.btn-filter');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    // Aggiorna stato attivo
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-pressed', 'false');
+                    });
+                    this.classList.add('active');
+                    this.setAttribute('aria-pressed', 'true');
+                    
+                    // Filtra le card
+                    siteCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeIn 0.3s ease-in';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    
+                    // Reset ricerca quando si cambia filtro
+                    document.getElementById('searchInput').value = '';
+                });
+            });
+            
+            // Funzionalità di ricerca
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            
+            function performSearch() {
+                const query = searchInput.value.toLowerCase().trim();
+                
+                siteCards.forEach(card => {
+                    const title = card.querySelector('.site-title, h3')?.textContent.toLowerCase() || '';
+                    const description = card.querySelector('.site-description')?.textContent.toLowerCase() || '';
+                    const badges = Array.from(card.querySelectorAll('.badge')).map(b => b.textContent.toLowerCase()).join(' ');
+                    const content = title + ' ' + description + ' ' + badges;
+                    
+                    if (query === '' || content.includes(query)) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeIn 0.3s ease-in';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Reset filtri quando si cerca
+                if (query !== '') {
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-pressed', 'false');
+                    });
+                    document.querySelector('[data-filter="all"]').classList.add('active');
+                    document.querySelector('[data-filter="all"]').setAttribute('aria-pressed', 'true');
+                }
+            }
+            
+            searchBtn.addEventListener('click', performSearch);
+            searchInput.addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                } else {
+                    // Ricerca in tempo reale
+                    performSearch();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
