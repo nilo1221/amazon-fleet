@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerca Prodotti - Smart Choices Guide</title>
+    <meta name="description" content="Cerca prodotti Amazon su Smart Choices Guide. Trova friggitrici, smartphone, accessori e molto altro.">
+    <meta name="keywords" content="cerca prodotti, ricerca Amazon, friggitrici, smartphone, accessori">
+    <meta name="author" content="Smart Choices Guide">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Header -->
+    <section class="hero-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px 0;">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold text-white mb-4">
+                <i class="fas fa-search me-3"></i>Cerca Prodotti
+            </h1>
+            <p class="lead text-white-50 mb-5">
+                Trova i migliori prodotti Amazon tra tutte le nostre categorie
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-white border-end-0">
+                            <i class="fas fa-search text-muted"></i>
+                        </span>
+                        <input type="text" id="searchInput" class="form-control border-start-0" placeholder="Cerca prodotti (es: friggitrice, smartphone, t-shirt)..." aria-label="Cerca prodotti">
+                        <button class="btn btn-primary" id="searchBtn" type="button">Cerca</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="fw-bold mb-4" id="resultsTitle">
+                    <i class="fas fa-list me-2"></i>Risultati
+                </h2>
+                <p class="text-muted mb-4" id="resultsCount">
+                    Inserisci una parola chiave per cercare tra i prodotti
+                </p>
+                
+                <div id="searchResults" class="row">
+                    <!-- I risultati verranno caricati qui dinamicamente -->
+                </div>
+                
+                <div id="noResults" class="alert alert-info d-none">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Nessun prodotto trovato. Prova con altre parole chiave.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Products Index -->
+    <script src="products-index.js"></script>
+    
+    <!-- Search Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            const searchResults = document.getElementById('searchResults');
+            const resultsTitle = document.getElementById('resultsTitle');
+            const resultsCount = document.getElementById('resultsCount');
+            const noResults = document.getElementById('noResults');
+            
+            // Controlla se c'è una query nell'URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const queryParam = urlParams.get('q');
+            
+            if (queryParam) {
+                searchInput.value = queryParam;
+                performSearch(queryParam);
+            }
+            
+            function performSearch(query) {
+                const results = searchProducts(query);
+                displayResults(results, query);
+            }
+            
+            function displayResults(results, query) {
+                searchResults.innerHTML = '';
+                
+                if (results.length === 0) {
+                    resultsTitle.innerHTML = '<i class="fas fa-search me-2"></i>Nessun risultato';
+                    resultsCount.textContent = `Nessun prodotto trovato per "${query}"`;
+                    noResults.classList.remove('d-none');
+                    return;
+                }
+                
+                resultsTitle.innerHTML = `<i class="fas fa-search me-2"></i>Risultati per "${query}"`;
+                resultsCount.textContent = `${results.length} prodotto/i trovato/i`;
+                noResults.classList.add('d-none');
+                
+                results.forEach((product, index) => {
+                    const col = document.createElement('div');
+                    col.className = 'col-md-6 col-lg-4 mb-4';
+                    col.innerHTML = `
+                        <div class="card h-100 border-0 shadow-sm" style="animation: fadeIn 0.3s ease-in ${index * 0.1}s both;">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">${product.category}</span>
+                                <h5 class="card-title fw-bold mb-2">${product.title}</h5>
+                                <p class="card-text text-muted small mb-3">
+                                    <i class="fas fa-tag me-1"></i>Keywords: ${product.keywords}
+                                </p>
+                                <a href="${product.site}/index.html" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-arrow-right me-2"></i>Vedi Categoria
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    searchResults.appendChild(col);
+                });
+            }
+            
+            searchBtn.addEventListener('click', function() {
+                const query = searchInput.value.trim();
+                if (query) {
+                    performSearch(query);
+                    // Aggiorna URL
+                    const newUrl = new URL(window.location);
+                    newUrl.searchParams.set('q', query);
+                    window.history.pushState({}, '', newUrl);
+                }
+            });
+            
+            searchInput.addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        performSearch(query);
+                        const newUrl = new URL(window.location);
+                        newUrl.searchParams.set('q', query);
+                        window.history.pushState({}, '', newUrl);
+                    }
+                }
+            });
+            
+            // Focus automatico sull'input
+            searchInput.focus();
+        });
+    </script>
+    
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+</html>
