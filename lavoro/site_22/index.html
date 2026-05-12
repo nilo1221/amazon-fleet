@@ -44,6 +44,21 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
         
+        .product-card-new {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+            border: 2px solid #ff6b6b;
+            animation: pulse-bg 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-bg {
+            0%, 100% {
+                background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+            }
+            50% {
+                background: linear-gradient(135deg, #ffe8e8 0%, #ffe0e0 100%);
+            }
+        }
+        
         .btn-amazon {
             background: linear-gradient(45deg, #6B46C1, #9333EA);
             color: white;
@@ -307,7 +322,7 @@
             <div class="row">
                 <!-- Inception Blu-Ray -->
                 <div class="col-md-4">
-                    <div class="product-card card mb-4">
+                    <div class="product-card card mb-4 product-card-new">
                         <div class="card-body p-4">
                             <span class="category-badge mb-3 d-inline-block">
                                 <i class="fas fa-film me-1"></i>DVD & Blu-ray
@@ -328,7 +343,7 @@
                 </div>
                 <!-- Gran Torino Blu-ray -->
                 <div class="col-md-4">
-                    <div class="product-card card mb-4">
+                    <div class="product-card card mb-4 product-card-new">
                         <div class="card-body p-4">
                             <span class="category-badge mb-3 d-inline-block">
                                 <i class="fas fa-film me-1"></i>DVD & Blu-ray
@@ -349,7 +364,7 @@
                 </div>
                 <!-- Interstellar 4K UHD Blu-Ray -->
                 <div class="col-md-4">
-                    <div class="product-card card mb-4">
+                    <div class="product-card card mb-4 product-card-new">
                         <div class="card-body p-4">
                             <span class="category-badge mb-3 d-inline-block">
                                 <i class="fas fa-film me-1"></i>DVD & Blu-ray
@@ -372,7 +387,7 @@
             <div class="row">
                 <!-- Il Gladiatore 4K UHD Blu-Ray -->
                 <div class="col-md-4">
-                    <div class="product-card card mb-4">
+                    <div class="product-card card mb-4 product-card-new">
                         <div class="card-body p-4">
                             <span class="category-badge mb-3 d-inline-block">
                                 <i class="fas fa-film me-1"></i>DVD & Blu-ray
