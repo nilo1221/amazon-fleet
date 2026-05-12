@@ -29,6 +29,9 @@ site_to_category = {
     'site_22': 'DVD & Blu-ray'
 }
 
+# Parole chiave per riconoscere prodotti di abbigliamento
+clothing_keywords = ['maglione', 'camicia', 'abito', 'blazer', 'pantaloni', 'gonna', 't-shirt', 'jeans', 'felpa', 'leggings', 'vestito', 'giacca', 'cappotto', 'soprabito', 'scarpe', 'borsa']
+
 # Funzione per estrarre keywords dal titolo
 def extract_keywords(title):
     # Rimuovi parole comuni e mantieni parole chiave
@@ -59,6 +62,19 @@ for site_dir in sorted(os.listdir('.')):
                 if title and title != 'Prodotto':  # Escludi titoli vuoti o generici
                     category = site_to_category.get(site_dir, 'Altro')
                     keywords = extract_keywords(title)
+                    
+                    # Riconoscimento intelligente della categoria per abbigliamento
+                    title_lower = title.lower()
+                    if any(keyword in title_lower for keyword in clothing_keywords):
+                        if site_dir == 'site_18':
+                            category = 'Moda Donna'
+                        elif site_dir == 'site_20':
+                            category = 'Moda Uomo'
+                        elif site_dir == 'site_17':
+                            category = 'Cinema & TV'
+                        elif site_dir == 'site_19':
+                            # Se è in site_19 ma è abbigliamento, assegna a Moda Donna
+                            category = 'Moda Donna'
                     
                     products.append({
                         'title': title,
