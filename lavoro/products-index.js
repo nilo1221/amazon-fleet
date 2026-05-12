@@ -92,7 +92,6 @@ const productsIndex = [
     { title: "Mogidol Abito Estivo in Raso con Spalline Sottili", category: "Moda Donna", site: "site_18", keywords: "mogidol abito estivo raso spalline sottili" },
     { title: "Sukiglam Abito Asimmetrico Monospalla Increspato", category: "Moda Donna", site: "site_18", keywords: "sukiglam abito asimmetrico monospalla increspato" },
     { title: "VALORIALUXE Abito Cerimonia Lungo in Tulle con Balze", category: "Moda Donna", site: "site_18", keywords: "valorialuxe abito cerimonia lungo tulle balze" },
-    { title: "Beauty Women Maglione Invernale Elegante", category: "Moda Donna", site: "site_18", keywords: "beauty women maglione invernale elegante" },
     { title: "Natura Prime Passiflora Rilassamento", category: "Benessere & Relax", site: "site_19", keywords: "natura prime passiflora rilassamento" },
     { title: "HIQILI 100ml Olio Essenziale Lavanda", category: "Benessere & Relax", site: "site_19", keywords: "hiqili 100ml olio essenziale lavanda" },
     { title: "12 Tipi Maschera Viso Idratante in Tessuto", category: "Benessere & Relax", site: "site_19", keywords: "tipi maschera viso idratante tessuto" },
