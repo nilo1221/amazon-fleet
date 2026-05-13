@@ -35,11 +35,11 @@ async function updateProductCounts() {
                 const response = await fetch(`${site}/index.html`);
                 const html = await response.text();
                 
-                // Conta i product-card nel HTML
+                // Conta i prodotti con link Amazon nel HTML
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, 'text/html');
-                const productCards = doc.querySelectorAll('.product-card');
-                const count = productCards.length;
+                const amazonLinks = doc.querySelectorAll('a[href*="amazon.it"]');
+                const count = amazonLinks.length;
                 
                 // Aggiorna la card
                 const card = document.getElementById(cardId);
