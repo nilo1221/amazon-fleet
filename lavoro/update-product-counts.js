@@ -1,6 +1,21 @@
 // Script per aggiornare automaticamente i numeri dei prodotti nelle card
 async function updateProductCounts() {
     try {
+        // Cache dei conteggi (salva in localStorage)
+        const cacheKey = 'productCountsCache';
+        const cacheTime = 5 * 60 * 1000; // 5 minuti
+        const cachedData = localStorage.getItem(cacheKey);
+        
+        if (cachedData) {
+            const { timestamp, counts } = JSON.parse(cachedData);
+            if (Date.now() - timestamp < cacheTime) {
+                // Usa cache se ancora valida
+                updateCards(counts);
+                console.log('Numeri prodotti caricati dalla cache');
+                return;
+            }
+        }
+        
         // Mappa tra site_ e l'ID della card corrispondente
         const siteToCard = {
             'site_1': 'card-1',
@@ -29,8 +44,12 @@ async function updateProductCounts() {
             'site_24': 'card-24'
         };
         
-        // Aggiorna ogni card contando i prodotti direttamente dal sito
-        for (const [site, cardId] of Object.entries(siteToCard)) {
+        // Mostra loading visivo
+        const statNumbers = document.querySelectorAll('.stat-number');
+        statNumbers.forEach(el => el.textContent = '...');
+        
+        // Carica tutti i siti in parallelo
+        const promises = Object.entries(siteToCard).map(async ([site, cardId]) => {
             try {
                 const response = await fetch(`${site}/index.html`);
                 const html = await response.text();
@@ -41,22 +60,47 @@ async function updateProductCounts() {
                 const amazonLinks = doc.querySelectorAll('a[href*="amazon.it"]');
                 const count = amazonLinks.length;
                 
-                // Aggiorna la card
-                const card = document.getElementById(cardId);
-                if (card) {
-                    const statNumber = card.closest('.site-card').querySelector('.stat-number');
-                    if (statNumber) {
-                        statNumber.textContent = count;
-                    }
-                }
+                return { cardId, count };
             } catch (error) {
                 console.error(`Errore durante il caricamento di ${site}:`, error);
+                return { cardId, count: 0 };
             }
-        }
+        });
+        
+        // Attendi tutti i caricamenti in parallelo
+        const results = await Promise.all(promises);
+        
+        // Converti risultati in oggetto
+        const counts = {};
+        results.forEach(({ cardId, count }) => {
+            counts[cardId] = count;
+        });
+        
+        // Aggiorna le card
+        updateCards(counts);
+        
+        // Salva in cache
+        localStorage.setItem(cacheKey, JSON.stringify({
+            timestamp: Date.now(),
+            counts
+        }));
         
         console.log('Numeri prodotti aggiornati con successo!');
     } catch (error) {
         console.error('Errore durante l\'aggiornamento dei numeri prodotti:', error);
+    }
+}
+
+// Funzione per aggiornare le card con i conteggi
+function updateCards(counts) {
+    for (const [cardId, count] of Object.entries(counts)) {
+        const card = document.getElementById(cardId);
+        if (card) {
+            const statNumber = card.closest('.site-card').querySelector('.stat-number');
+            if (statNumber) {
+                statNumber.textContent = count;
+            }
+        }
     }
 }
 
