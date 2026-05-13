@@ -49,6 +49,32 @@ body {
     overflow: hidden;
 }
 
+/* Gradient classes for site headers */
+.site-header-cucina { background: linear-gradient(45deg, #FF8C42, #eb782e); }
+.site-header-smarthome { background: linear-gradient(45deg, #0984E3, #0070cf); }
+.site-header-fitness { background: linear-gradient(45deg, #E67E22, #D35400); }
+.site-header-giardino { background: linear-gradient(45deg, #27AE60, #2ECC71); }
+.site-header-ufficio { background: linear-gradient(45deg, #5D6D7E, #34495E); }
+.site-header-foto { background: linear-gradient(45deg, #3498DB, #2980B9); }
+.site-header-pet { background: linear-gradient(45deg, #E67E22, #27AE60); }
+.site-header-caffe { background: linear-gradient(45deg, #8B4513, #A0522D); }
+.site-header-gaming { background: linear-gradient(45deg, #6C5CE7, #9D4EDD); }
+.site-header-viaggi { background: linear-gradient(45deg, #3498DB, #2980B9); }
+.site-header-cinema { background: linear-gradient(45deg, #6B46C1, #9333EA); }
+.site-header-libri { background: linear-gradient(45deg, #3498DB, #2980B9); }
+.site-header-bellezza { background: linear-gradient(45deg, #E91E63, #3498DB); }
+.site-header-outdoor { background: linear-gradient(45deg, #0984E3, #2c3e50); }
+.site-header-mare { background: linear-gradient(45deg, #0984E3, #00B894); }
+.site-header-moda-donna { background: linear-gradient(45deg, #0a0a0a, #D4AF37); }
+.site-header-benessere { background: linear-gradient(45deg, #3498DB, #2980B9); }
+.site-header-profumi { background: linear-gradient(45deg, #E91E63, #9C27B0); }
+.site-header-moda-uomo { background: linear-gradient(45deg, #2C3E50, #3498DB); }
+.site-header-accessori { background: linear-gradient(45deg, #6C5CE7, #FD79A8); }
+.site-header-arredamento { background: linear-gradient(45deg, #E91E63, #FFD700); }
+.site-header-viaggi-vacanze { background: linear-gradient(45deg, #3498DB, #2ECC71); }
+.site-header-smartphone { background: linear-gradient(45deg, #667eea, #764ba2); }
+.site-header-dvd { background: linear-gradient(45deg, #9B59B6, #8E44AD); }
+
 /* Bootstrap 5 Dropdown Submenu CSS */
 .dropdown-submenu {
     position: relative;
