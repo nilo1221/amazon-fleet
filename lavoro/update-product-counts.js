@@ -38,8 +38,7 @@ async function updateProductCounts() {
                 // Conta i prodotti con link Amazon nel HTML
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, 'text/html');
-                const amazonLinks = doc.querySelectorAll('a[href*="amazon.it"]');
-                const count = amazonLinks.length;
+                const count = 0; // Test: metti a zero per verificare script
                 
                 // Aggiorna la card
                 const card = document.getElementById(cardId);
