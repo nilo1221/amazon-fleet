@@ -1,10 +1,6 @@
 // Script per aggiornare automaticamente i numeri dei prodotti nelle card
 async function updateProductCounts() {
     try {
-        // Carica il file JSON con i conteggi
-        const response = await fetch('product-counts.json');
-        const counts = await response.json();
-        
         // Mappa tra site_ e l'ID della card corrispondente
         const siteToCard = {
             'site_1': 'card-1',
@@ -17,7 +13,7 @@ async function updateProductCounts() {
             'site_8': 'card-8',
             'site_9': 'card-9',
             'site_10': 'card-10',
-            'site_11': 'card-12', // card 11 è site_17
+            'site_11': 'card-12',
             'site_12': 'card-13',
             'site_13': 'card-14',
             'site_14': 'card-19',
@@ -27,13 +23,25 @@ async function updateProductCounts() {
             'site_18': 'card-15',
             'site_19': 'card-16',
             'site_20': 'card-17',
-            'site_21': 'card-18'
+            'site_21': 'card-18',
+            'site_22': 'card-22',
+            'site_23': 'card-23',
+            'site_24': 'card-24'
         };
         
-        // Aggiorna ogni card con il conteggio corretto
-        for (const [site, count] of Object.entries(counts)) {
-            const cardId = siteToCard[site];
-            if (cardId) {
+        // Aggiorna ogni card contando i prodotti direttamente dal sito
+        for (const [site, cardId] of Object.entries(siteToCard)) {
+            try {
+                const response = await fetch(`${site}/index.html`);
+                const html = await response.text();
+                
+                // Conta i product-card nel HTML
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const productCards = doc.querySelectorAll('.product-card');
+                const count = productCards.length;
+                
+                // Aggiorna la card
                 const card = document.getElementById(cardId);
                 if (card) {
                     const statNumber = card.closest('.site-card').querySelector('.stat-number');
@@ -41,6 +49,8 @@ async function updateProductCounts() {
                         statNumber.textContent = count;
                     }
                 }
+            } catch (error) {
+                console.error(`Errore durante il caricamento di ${site}:`, error);
             }
         }
         
