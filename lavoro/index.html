@@ -44,45 +44,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Google Translate Widget -->
-    <div id="google_translate_element" style="display: none;"></div>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'it',
-                includedLanguages: 'en,es,fr,de,it,pt,ru,ja,ko,zh-CN,ar,hi,tr,pl,nl,sv,da,no,fi,el,cs,ro,hu,bg,sk,sl,hr,sr,mt,lv,lt,et,uk,be,kk,hy,az,ka,mk,al,sq,sr,bs,me,fo,is',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Navigazione principale">
         <div class="container">
-            <!-- Language Selector -->
-            <div class="d-flex align-items-center me-3">
-                <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-globe me-1"></i>
-                    <span id="currentLang">IT</span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('es')">Español</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">Français</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('de')">Deutsch</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('pt')">Português</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('ru')">Русский</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('zh-CN')">中文</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('ja')">日本語</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('ko')">한국어</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">العربية</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('hi')">हिन्दी</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('it')">Italiano</a></li>
-                </ul>
-            </div>
-            
             <a class="navbar-brand" href="index.html" aria-label="Smart Choices Guide - Home">
                 <i class="fas fa-shopping-cart me-2" aria-hidden="true"></i>
                 Smart Choices Guide
@@ -914,20 +878,6 @@
     
     <!-- Filter Script -->
     <script>
-        function changeLanguage(lang) {
-            // Wait for Google Translate to be ready
-            setTimeout(function() {
-                const selectElement = document.querySelector('.goog-te-combo');
-                if (selectElement) {
-                    selectElement.value = lang;
-                    selectElement.dispatchEvent(new Event('change'));
-                }
-                
-                // Update current language display
-                document.getElementById('currentLang').textContent = lang.toUpperCase();
-            }, 500);
-        }
-
         document.addEventListener('DOMContentLoaded', function() {
             // Assegna categorie alle card in base al contenuto
             const siteCards = document.querySelectorAll('.site-card');
