@@ -1,0 +1,328 @@
+/* Main Styles */
+:root {
+    --primary-color: #3498DB;
+    --secondary-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--secondary-color);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #3498DB 0%, #2980B9 50%, #1A5276 100%);
+    color: white;
+    padding: 80px 0;
+    margin-bottom: 40px;
+}
+
+.site-card.hidden {
+    display: none;
+}
+
+.site-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.site-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    background: white;
+}
+
+.site-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.site-header {
+    padding: 30px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient classes for site headers */
+.site-header-cucina { background: linear-gradient(45deg, #FF8C42, #eb782e); }
+.site-header-smarthome { background: linear-gradient(45deg, #0984E3, #0070cf); }
+.site-header-fitness { background: linear-gradient(45deg, #E67E22, #D35400); }
+.site-header-giardino { background: linear-gradient(45deg, #27AE60, #2ECC71); }
+.site-header-ufficio { background: linear-gradient(45deg, #5D6D7E, #34495E); }
+.site-header-foto { background: linear-gradient(45deg, #3498DB, #2980B9); }
+.site-header-pet { background: linear-gradient(45deg, #E67E22, #27AE60); }
+.site-header-caffe { background: linear-gradient(45deg, #8B4513, #A0522D); }
+.site-header-gaming { background: linear-gradient(45deg, #6C5CE7, #9D4EDD); }
+.site-header-viaggi { background: linear-gradient(45deg, #3498DB, #2980B9); }
+.site-header-cinema { background: linear-gradient(45deg, #6B46C1, #9333EA); }
+.site-header-libri { background: linear-gradient(45deg, #3498DB, #2980B9); }
+.site-header-bellezza { background: linear-gradient(45deg, #E91E63, #3498DB); }
+.site-header-outdoor { background: linear-gradient(45deg, #0984E3, #2c3e50); }
+.site-header-mare { background: linear-gradient(45deg, #0984E3, #00B894); }
+.site-header-moda-donna { background: linear-gradient(45deg, #0a0a0a, #D4AF37); }
+.site-header-benessere { background: linear-gradient(45deg, #3498DB, #2980B9); }
+.site-header-profumi { background: linear-gradient(45deg, #E91E63, #9C27B0); }
+.site-header-moda-uomo { background: linear-gradient(45deg, #2C3E50, #3498DB); }
+.site-header-accessori { background: linear-gradient(45deg, #6C5CE7, #FD79A8); }
+.site-header-arredamento { background: linear-gradient(45deg, #E91E63, #FFD700); }
+.site-header-viaggi-vacanze { background: linear-gradient(45deg, #3498DB, #2ECC71); }
+.site-header-smartphone { background: linear-gradient(45deg, #667eea, #764ba2); }
+.site-header-dvd { background: linear-gradient(45deg, #9B59B6, #8E44AD); }
+
+/* Bootstrap 5 Dropdown Submenu CSS */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-top: 0;
+    margin-left: 0.25rem;
+    border-radius: 0.375rem;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-submenu .dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-submenu > .dropdown-item {
+    position: relative;
+    padding-right: 2rem;
+}
+
+.dropdown-submenu > .dropdown-item::after {
+    content: "\f054";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+/* Mobile responsive - submenu sotto su mobile */
+@media (max-width: 991px) {
+    .dropdown-submenu .dropdown-menu {
+        position: static;
+        left: 0;
+        margin-left: 0;
+        margin-top: 0;
+        border-radius: 0;
+        padding-left: 1.5rem;
+        min-width: 100%;
+    }
+    
+    .dropdown-submenu .dropdown-menu {
+        display: block;
+    }
+}
+
+.site-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
+    animation: shimmer 5s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.site-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.site-content {
+    padding: 30px;
+}
+
+.badge-category {
+    background: linear-gradient(45deg, #3498DB, #2980B9);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.btn-filter {
+    background: white;
+    border: 2px solid #e0e0e0;
+    color: #333;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.btn-filter:hover {
+    background: #3498DB;
+    border-color: #3498DB;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-filter.active {
+    background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+    border-color: #3498DB;
+    color: white;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
+.site-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.site-description {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.site-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.btn-site {
+    background: linear-gradient(45deg, var(--primary-color), #FF9500);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-site:hover {
+    background: linear-gradient(45deg, #FF5722, var(--primary-color));
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .site-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px 0;
+    }
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.9; }
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+    transition: all 0.3s ease;
+}
+
+/* Feature Box */
+.feature-box {
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Amazon Disclaimer */
+.amazon-disclaimer {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #FF9900;
+}

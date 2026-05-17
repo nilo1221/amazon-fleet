@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor & Camping - Viaggi & Outdoor - Smart Choices Guide</title>
+    <meta name="description" content="I migliori prodotti outdoor.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0984E3;
+            --secondary-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), #2c3e50);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .btn-amazon {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-amazon:hover {
+            background-color: #ff7700;
+            transform: scale(1.05);
+        }
+        
+        .category-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .no-images {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .no-images i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Viaggi & Outdoor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Outdoor & Camping</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Outdoor & Camping</h1>
+            <p class="lead mb-4">I migliori prodotti outdoor.</p>
+
+            <!-- Trust Banner -->
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <div class="row">
+            <!-- Prodotto 1: Pannello Solare -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-solar-panel fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">ELECOM NESTOUT - Pannello Solare Portatile</h3>
+                        <span class="category-badge mb-3">Energia Solare</span>
+                        <p class="text-muted">
+                            Pannello solare portatile da 28W con doppia porta USB-A. 
+                            Nylon resistente all'acqua, pieghevole e ultraleggero. 
+                            Perfetto per campeggio e ricarica dispositivi all'aperto.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/ELECOM-NESTOUT-USB-caricabatterie-generazione/dp/B09TKD9KSJ?crid=27OTJENPHN7S1&dib=eyJ2IjoiMSJ9.2Ko-s3mEQFXxZLkNpOB--f2j4GJNKhavBVb1i0-xpi9Aj5kiJVbcIH3GVzZvUlw_t8ziUz5ECm0yYAw8cl9PXnRr-7iCY-ZZJvQTUWPkYOZ3XcypoL8HmROz3re_m4gESN-SG2an3YJoeoTZJ5siMmhcVhW_9E02T4YiYDGBlzc79VnJLpOikOo_NrFJBNmsg9EXOoD8aL4tz9P2kVjjQIXl9sYDw0SbAJQaHXqYKXbCb5r8QYfW39u2DZksg2YP7muRg-dvZJw9hQnrVJNMvECfqRpYqRXokBwr5l1_nQM.V_ZKxZgZQAYezySRzfxL-_RDZBC937cofno97LCKNug&dib_tag=se&keywords=outdoor&qid=1777984536&sprefix=outdo%2Caps%2C331&sr=8-2-spons&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&aref=NQLqvwYxaL&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=b018b38d91cdd8909c562148b36b0cde&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prodotto 2: Power Bank -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-battery-full fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">NESTOUT Portable Charger - Power Bank Outdoor</h3>
+                        <span class="category-badge mb-3">Energia Portatile</span>
+                        <p class="text-muted">
+                            Power bank da 5000mAh con USB-C 15W fast charging. 
+                            Waterproof IP67 e shockproof, design resistente per hiking, 
+                            travel e camping. Colore beige outdoor.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/NESTOUT-Portable-Charging-Waterproof-Shockproof/dp/B0CVN9Y1BF?crid=27OTJENPHN7S1&dib=eyJ2IjoiMSJ9.2Ko-s3mEQFXxZLkNpOB--f2j4GJNKhavBVb1i0-xpi9Aj5kiJVbcIH3GVzZvUlw_t8ziUz5ECm0yYAw8cl9PXnRr-7iCY-ZZJvQTUWPkYOZ3XcypoL8HmROz3re_m4gESN-SG2an3YJoeoTZJ5siMmhcVhW_9E02T4YiYDGBlzc79VnJLpOikOo_NrFJBNmsg9EXOoD8aL4tz9P2kVjjQIXl9sYDw0SbAJQaHXqYKXbCb5r8QYfW39u2DZksg2YP7muRg-dvZJw9hQnrVJNMvECfqRpYqRXokBwr5l1_nQM.V_ZKxZgZQAYezySRzfxL-_RDZBC937cofno97LCKNug&dib_tag=se&keywords=outdoor&qid=1777984536&sprefix=outdo%2Caps%2C331&sr=8-3-spons&aref=WtJzpiaozM&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=95f4519ecc67b60cf166ac6e1a0ed1ce&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prodotto 3: Gilet Multitasca -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-vest fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Cexiakong Gilett da Uomo Multitasca</h3>
+                        <span class="category-badge mb-3">Abbigliamento Outdoor</span>
+                        <p class="text-muted">
+                            Gilett da uomo casual per attività all'aperto, in cotone leggero e traspirante.
+                            Design multi-tasca pratico per il tempo libero, trekking e escursioni.
+                            Nero, taglia L.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/Cexiakong-attivit%C3%A0-allaperto-traspirante-multi-tasca/dp/B0DKBLPWM2?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2KRSG8RTIX75I&dib=eyJ2IjoiMSJ9.hlx1tAzqG-EBtszNA8zKT5W31Mi_GxzyZkEY6vlCTi3uXfcsQlJj5IAAqbaq6k0JA9HoPvm3poY6SY5_B8vTxRlV1uYePg0efO3dgV6afXHIuzupA0CQQU3WMlsbBqYz1Gy3v8IlwXG46EQeeMdpm8fBtVs-WLtyydQ9QK4uve1Dt43mm3uCw12y0Fz-FWczA9GUwyhlzzyIaECa1QpU10ruVWPwPWgzxBtDfw_1tMm0j-AsdWeRxxq2vt4RXx5HAdzklPaFtQucESvXPaX3tpF468OshrJa4PB_wfo3aMg.TwuT6qKsuzwQGEuD7T03KQ51w_K-M_jGo4BJPH7jfEU&dib_tag=se&keywords=Il%2BGilet%2BMultitasche%2Belegante&qid=1778012360&sprefix=il%2Bgilet%2Bmultitasche%2Belegante%2Caps%2C129&sr=8-27&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=3761583359212b50ac2b9b721b655189&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prodotto 4: Antizanzare Elettrica -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-bug fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Antizanzare Elettrica per Uccisione</h3>
+                        <span class="category-badge mb-3">Protezione Outdoor</span>
+                        <p class="text-muted">
+                            Antizanzare elettrica con repellente integrato per uccisione zanzare.
+                            Perfetta per campeggio, giardino e attività all'aperto.
+                            Protezione efficace contro insetti volanti, design portatile e facile da usare.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/Antizanzare-Elettrica-Uccisione-Repellente-repellente/dp/B0GS5CVTLK?pd_rd_w=JvxwP&content-id=amzn1.sym.bf16da9e-571e-4ac0-b567-e688486f9ff2&pf_rd_p=bf16da9e-571e-4ac0-b567-e688486f9ff2&pf_rd_r=SYPDDR78EZ01RZK482XP&pd_rd_wg=MgY5W&pd_rd_r=bf979260-1ed0-44e0-980e-667fc4259a47&pd_rd_i=B0GS5CVTLK&psc=1&linkCode=ll2&tag=l0c39-21&linkId=dacaa8bb5da82c4ddfc776b580a06fe4&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FE Active Tenda Campeggio -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-campground fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">FE Active Tenda Campeggio con Zanzariera</h3>
+                        <span class="category-badge mb-3">Tenda Escursionismo</span>
+                        <p class="text-muted">
+                            Tenda da campeggio con zanzariera integrata, impermeabile e resistente. 
+                            Ideale per escursionismo e campeggio leggero. Design compatto per trasporto facile.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/FE-Active-zanzariera-Impermeabile-Escursionismo/dp/B07QV3MQTT?&linkCode=ll2&tag=l0c39-21&linkId=aab7aeba98e2fe34f5bbfd458b27fb66&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outsunny Tenda Campeggio -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-home fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Outsunny Tenda Campeggio Impermeabile</h3>
+                        <span class="category-badge mb-3">Tenda 100x100x185</span>
+                        <p class="text-muted">
+                            Tenda da campeggio impermeabile in poliestere con doppio ingresso. 
+                            Dimensioni 100x100x185 cm, ideale per campeggio familiare e attività outdoor.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/Outsunny-Impermeabile-Ingresso-Poliestere-100x100x185/dp/B0DZ5PWRJC?dib=eyJ2IjoiMSJ9.eJXW-mMKMgt9Dz0AtNkpAHiP5C6H5var-kkGjzsXf0CBwupWgqCKnSQ6GTdAV-9sDZflnoWnwUuW0pHRSHvgezX8-CSt1IL5g18kT8hoOHpMBVnxSX2lnoyKrUunZfRb-t3ZJp9GEA27ag7p0pmHUvdjeatzzdSUQUyl8ygDQpiPmyNUQDppvvHXbOSOLv6hmq6tbC8SQbxdmLgrVBcUsgc_6IRBy8MhMoaQ-ChkhxUaMtOTzw3XZdh3MOe4xjlz6QZMczle07BDlLftj0bveZqHcPiM9ZqDa8fXaYZ4ZWs.a4Fofu3z5Rz4g2SB1oUX0ersit5nAvMZiqtTjSnX6rE&dib_tag=se&qid=1778016285&refinements=p_36%3A490263031&s=sports&sr=1-4&th=1&linkCode=ll2&tag=l0c39-21&linkId=19a5b5c1001c7f4e7d11da63bb29cf14&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRIZAND Tenda Spiaggia -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-umbrella-beach fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">TRIZAND Tenda Spiaggia Impermeabile</h3>
+                        <span class="category-badge mb-3">Tenda Spiaggia</span>
+                        <p class="text-muted">
+                            Tenda da spiaggia impermeabile con facile trasporto. 
+                            Design portatile, ideale per mare, piscina e attività all'aperto.
+                            Protezione UV e resistente agli agenti atmosferici.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/TRIZAND-spiaggia-trasporto-impermeabile-23492/dp/B0CTPTR99X?pd_rd_w=metuQ&content-id=amzn1.sym.3a84fb8b-d4d6-4483-8fd7-0000cb59ea5a&pf_rd_p=3a84fb8b-d4d6-4483-8fd7-0000cb59ea5a&pf_rd_r=GGEPG1FNR1KN3JY8PSWJ&pd_rd_wg=I3y7l&pd_rd_r=22330237-b6e0-4094-8318-91b0a5a9328f&pd_rd_i=B0CTPTR99X&linkCode=ll2&tag=l0c39-21&linkId=4940199de276b89a5b47db92baef10dd&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tenda Doccia Solare -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-shower fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Tenda Doccia Solare Portatile</h3>
+                        <span class="category-badge mb-3">Tenda Doccia 230x67</span>
+                        <p class="text-muted">
+                            Tenda da doccia solare portatile, impermeabile, antivento e resistente ai raggi UV.
+                            Tessuto Oxford resistente, per giardino, esterno e piscina. Dimensioni 230 x 67 cm.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/portatile-impermeabile-antivento-resistente-giardino/dp/B0G4VNFR3B?pd_rd_w=metuQ&content-id=amzn1.sym.3a84fb8b-d4d6-4483-8fd7-0000cb59ea5a&pf_rd_p=3a84fb8b-d4d6-4483-8fd7-0000cb59ea5a&pf_rd_r=GGEPG1FNR1KN3JY8PSWJ&pd_rd_wg=I3y7l&pd_rd_r=22330237-b6e0-4094-8318-91b0a5a9328f&pd_rd_i=B0G4VNFR3B&linkCode=ll2&tag=l0c39-21&linkId=dcc9659e50ea29cef8af6c01833e8f22&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brunner Tenda Campeggio -->
+            <div class="col-lg-6 mb-4">
+                <div class="product-card">
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-campground fa-4x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Brunner Tenda Campeggio 3000</h3>
+                        <span class="category-badge mb-3">Tenda Camping</span>
+                        <p class="text-muted">
+                            Tenda da campeggio adatta per Camping 3000. 
+                            Design robusto e resistente, ideale per lunghe permanenze in campeggio.
+                            Facile da montare e trasportare.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Disponibile su Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.it/Brunner-Tenda-adatta-Camping-3000/dp/B07NZSV33G?pd_rd_w=SrERZ&content-id=amzn1.sym.424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_p=424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_r=GGEPG1FNR1KN3JY8PSWJ&pd_rd_wg=I3y7l&pd_rd_r=22330237-b6e0-4094-8318-91b0a5a9328f&pd_rd_i=B07NZSV33G&linkCode=ll2&tag=l0c39-21&linkId=e8c40ee5fe6fd040865a21fd39e20126&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+            <div class="mt-3">
+                <a href="../index.html" class="text-white me-3">
+                    <i class="fas fa-arrow-left me-1"></i>Torna a Viaggi & Outdoor
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

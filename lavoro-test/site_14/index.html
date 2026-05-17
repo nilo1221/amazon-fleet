@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arredamento Casa - Smart Choices Guide</title>
+    <meta name="description" content="Mobili, accessori e complementi d'arredo per rendere la tua casa accogliente e stilosa.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #E91E63;
+            --secondary-color: #f8f9fa;
+            --accent-color: #FFD700;
+            --success-color: #28A745;
+            --valigeria-color: #E91E63;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #E91E63 0%, #FFD700 50%, #FFB800 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(233, 30, 99, 0.3);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            margin-bottom: 30px;
+            background: white;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(233, 30, 99, 0.3);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF9500 100%);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #FF5722 0%, #FF6B35 100%);
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.7);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #28A745 0%, #34CE57 100%);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+        }
+        
+        .no-images {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .no-images i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Arredamento Casa</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Arredamento Casa</h1>
+            <p class="lead mb-4">Mobili, accessori e complementi d'arredo per rendere la tua casa accogliente e stilosa.</p>
+
+            <!-- Trust Banner -->
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+            <!-- Primo Prodotto -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge mb-3 d-inline-block">
+                                <i class="fas fa-tv me-1"></i>Supporto TV
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">Perlegear Supporto Girevole Estendibile Resistente</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Supporto TV girevole ed estendibile Perlegear, compatibile con TV da 32-70 pollici. 
+                                Design robusto in acciaio, capacità di carico fino a 40kg. Perfetto per salotto e camera da letto.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Compatibilità:</strong> TV da 32-70 pollici (VESA 100x100-400x400)
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Capacità:</strong> Fino a 40kg di carico
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Girevole:</strong> Rotazione ±60° per ottimizzare l'angolazione
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Estendibile:</strong> Braccio estendibile per avvicinare la TV
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Materiale:</strong> Acciaio resistente di alta qualità
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Installazione:</strong> Facile con kit incluso
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/Perlegear-Supporto-Girevole-Estendibile-Resistente/dp/B01MZ6ZYU1?pd_rd_w=O9WRF&content-id=amzn1.sym.4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_p=4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_r=S05ZYPPE66GT7JD4NYZM&pd_rd_wg=C8AM8&pd_rd_r=afffc529-d17d-45ba-98a3-3d6933c44ffc&pd_rd_i=B01MZ6ZYU1&th=1&linkCode=ll2&tag=l0c39-21&linkId=8865dfefe07014d9be278973c30f2f08&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quinto Prodotto -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge mb-3 d-inline-block">
+                                <i class="fas fa-bed me-1"></i>Protezione Materasso
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">Utopia Bedding Protettore Impermeabile Ipoallergenico</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Protettore materasso Utopia Bedding impermeabile e ipoallergenico. 
+                                Tessuto morbido e traspirante, protegge da liquidi, allergeni e acari. Lavabile in lavatrice.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Impermeabile:</strong> Barriera contro liquidi e sudore
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Ipoallergenico:</strong> Protezione da acari e allergeni
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Tessuto:</strong> Morbido al tatto, silenzioso
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Traspirante:</strong> Mantiene il materasso fresco
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Lavabile:</strong> Lavatrice fino a 60°C
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Taglie:</strong> Disponibile in tutte le dimensioni standard
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/Utopia-Bedding-Protettore-Impermeabile-Ipoallergenico/dp/B0BRCRFP3L?pd_rd_w=O9WRF&content-id=amzn1.sym.4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_p=4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_r=S05ZYPPE66GT7JD4NYZM&pd_rd_wg=C8AM8&pd_rd_r=afffc529-d17d-45ba-98a3-3d6933c44ffc&pd_rd_i=B0BRCRFP3L&th=1&linkCode=ll2&tag=l0c39-21&linkId=40b4254033ca96dc729cf1731c7d81d9&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sesto Prodotto -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge mb-3 d-inline-block">
+                                <i class="fas fa-sun me-1"></i>Prendisole
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">SONGMICS Pieghevoli Prendisole Poggiatesta Regolabile</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Prendisole pieghevoli SONGMICS con poggiatesta regolabile e tela in textilene. 
+                                Design ergonomico, struttura in acciaio resistente. Perfetto per giardino, piscina e terrazza.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Pieghevole:</strong> Facile da riporre e trasportare
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Poggiatesta:</strong> Regolabile in 4 posizioni
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Tessuto:</strong> Textilene resistente ai raggi UV
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Struttura:</strong> Acciaio verniciato antiruggine
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Capacità:</strong> Fino a 120kg di carico
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Versatilità:</strong> Giardino, piscina, terrazza, spiaggia
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/SONGMICS-Pieghevoli-Prendisole-Poggiatesta-Regolabile/dp/B0FZG73LS1?pd_rd_w=Gqoze&content-id=amzn1.sym.7df8515a-b6ea-489f-99c4-dc8ee9c9a18c&pf_rd_p=7df8515a-b6ea-489f-99c4-dc8ee9c9a18c&pf_rd_r=S05ZYPPE66GT7JD4NYZM&pd_rd_wg=C8AM8&pd_rd_r=afffc529-d17d-45ba-98a3-3d6933c44ffc&pd_rd_i=B0FZG73LS1&th=1&linkCode=ll2&tag=l0c39-21&linkId=8f3ae8813f6c8866bd02937c9742cfb0&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Settimo Prodotto -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge mb-3 d-inline-block">
+                                <i class="fas fa-shoe-prints me-1"></i>Scarpiera
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">SONGMICS Scarpiera Organizer Impilabile</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Scarpiera organizer SONGMICS impilabile con 10 ripiani. 
+                                Design salvaspazio, struttura in metallo robusto. Perfetta per ingresso, guardaroba e ripostiglio.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Capacità:</strong> 10 ripiani per circa 20 paia di scarpe
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Impilabile:</strong> Design salvaspazio verticale
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Struttura:</strong> Metallo robusto con finitura antiruggine
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Ripiani:</strong> Tubi metallici resistenti
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Montaggio:</strong> Facile, senza attrezzi complessi
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Versatilità:</strong> Scarpe, borse, accessori
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/SONGMICS-Scarpiera-Organizer-Impilabile-LSA113BH01/dp/B0G6YC15LZ?pd_rd_w=Gqoze&content-id=amzn1.sym.7df8515a-b6ea-489f-99c4-dc8ee9c9a18c&pf_rd_p=7df8515a-b6ea-489f-99c4-dc8ee9c9a18c&pf_rd_r=S05ZYPPE66GT7JD4NYZM&pd_rd_wg=C8AM8&pd_rd_r=afffc529-d17d-45ba-98a3-3d6933c44ffc&pd_rd_i=B0G6YC15LZ&th=1&linkCode=ll2&tag=l0c39-21&linkId=2535ae7e863f70cc8c7663a27d85cba4&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ottavo Prodotto -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge mb-3 d-inline-block">
+                                <i class="fas fa-box me-1"></i>Baule
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">Keter Baule marrone resina 116.7x44.7x57</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Baule Keter in resina marrone, impermeabile e resistente. 
+                                Capacità 340 litri, ideale per giardino, terrazza e balcone. Perfetto per attrezzi e cuscini.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Capacità:</strong> 340 litri di spazio
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Materiale:</strong> Resina polipropilene resistente
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Impermeabile:</strong> Protegge da pioggia e umidità
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Design:</strong> Elegante effetto legno
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Manutenzione:</strong> Facile da pulire
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Versatilità:</strong> Giardino, terrazza, balcone, garage
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/Keter-Baule-marrone-resina-116-7x44-7x57/dp/B0798DVXTX?pd_rd_w=vLesp&content-id=amzn1.sym.424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_p=424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_r=S05ZYPPE66GT7JD4NYZM&pd_rd_wg=C8AM8&pd_rd_r=afffc529-d17d-45ba-98a3-3d6933c44ffc&pd_rd_i=B0798DVXTX&th=1&linkCode=ll2&tag=l0c39-21&linkId=6646c030bb7242e03c8047c013608be0&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bosch Set 60 Pezzi X-Line -->
+    <div class="col-lg-8 mx-auto mt-4">
+        <div class="product-card card">
+            <div class="card-body p-4">
+                <div class="text-center mb-4">
+                    <i class="fas fa-tools fa-4x text-warning"></i>
+                </div>
+                <h3 class="card-title fw-bold">Bosch Set Da 60 Pezzi Di Punte E Bit Avvitamento In Titanio X-Line</h3>
+                <span class="category-badge mb-3 d-inline-block">
+                    Attrezzi Fai da Te
+                </span>
+                <p class="card-text text-muted">Bosch Set Da 60 Pezzi Di Punte E Bit Avvitamento In Titanio X-Line (per Legno, Pietra E Metallo, Accessori Trapano) - <strong>Set completo per tutte le lavorazioni.</strong> Include punte per legno, pietra e metallo, bit avvitamento e accessori trapano. Rivestimento in titanio per maggiore durata e resistenza all'usura.</p>
+                
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <div>
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span class="text-success">Prodotto disponibile</span>
+                    </div>
+                    <a href="https://www.amazon.it/dp/B002UHKASS?m=a11il2pnwyju7h&th=1&linkCode=ll2&tag=l0c39-21&linkId=14ca3d962281ff9a90f76ce60cf71571&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                        <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bosch Set 103 Pezzi V-Line -->
+    <div class="col-lg-8 mx-auto mt-4">
+        <div class="product-card card">
+            <div class="card-body p-4">
+                <div class="text-center mb-4">
+                    <i class="fas fa-tools fa-4x text-warning"></i>
+                </div>
+                <h3 class="card-title fw-bold">Bosch Set Da 103 Pezzi Di Punte E Bit V-Line In Titanio</h3>
+                <span class="category-badge mb-3 d-inline-block">
+                    Attrezzi Fai da Te
+                </span>
+                <p class="card-text text-muted">Bosch Set Da 103 Pezzi Di Punte E Bit V-Line In Titanio, Per Legno, Pietra E Metallo - <strong>Set professionale completo.</strong> 103 pezzi per tutte le lavorazioni: punte per legno, pietra e metallo, bit avvitamento di tutti i tipi. Rivestimento in titanio per massima durata e prestazioni elevate.</p>
+                
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <div>
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span class="text-success">Prodotto disponibile</span>
+                    </div>
+                    <a href="https://www.amazon.it/Bosch-V-Line-Titanio-Pietra-Metallo/dp/B01GULTSSW?pd_rd_w=H2nOX&content-id=amzn1.sym.3500584f-b13b-4add-9b2c-0f560876b507&pf_rd_p=3500584f-b13b-4add-9b2c-0f560876b507&pf_rd_r=39PC2XVFF5X7QT8D8BWB&pd_rd_wg=Ce4fe&pd_rd_r=0d42b759-7d45-4ba6-8bd6-2e1731c995a2&pd_rd_i=B01GULTSSW&th=1&linkCode=ll2&tag=l0c39-21&linkId=31b1c42b708ca5b2fb5fe6e83105bb4c&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                        <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                    </a>
+                </div>
+            </div>
+            
+            <!-- wolfcraft Cartucce vuote -->
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card card">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-tools fa-4x text-warning"></i>
+                        </div>
+                        <h3 class="card-title fw-bold">wolfcraft Cartucce vuote 310 ml, 3 pezzi</h3>
+                        <span class="category-badge mb-3 d-inline-block">
+                            Bricolage & Fai da Te
+                        </span>
+                        <p class="card-text text-muted">wolfcraft Cartucce vuote 310 ml, 3 pezzi - <strong>Per stucchi miscelati autonomamente.</strong> Richiudibili con tappo di chiusura, pratiche per lavori di bricolage e riparazioni domestiche.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span class="text-success">Prodotto disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B01LWM9P83?psc=1&m=a11il2pnwyju7h&linkCode=ll2&tag=l0c39-21&linkId=8e70238249b984314a66aa56cf66c0ae&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+            <div class="mt-3">
+                <a href="../index.html" class="text-white me-3">
+                    <i class="fas fa-home me-1"></i>Torna alla Home
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

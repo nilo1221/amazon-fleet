@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida Abbinamenti Cross-Site - Smart Choices Guide</title>
+    <meta name="description" content="I migliori abbinamenti combinando prodotti da diverse categorie. Look completi con capi coordinati cross-site.">
+    <meta name="keywords" content="abbinamenti cross-site, outfit completi, moda uomo, moda donna, accessori">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #3498DB;
+            --primary-dark: #2980B9;
+            --primary-darker: #1A5276;
+            --secondary-color: #f8f9fa;
+            --text-color: #212529;
+            --border-color: #e0e0e0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .outfit-section {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        
+        .outfit-section:hover {
+            box-shadow: 0 5px 25px rgba(52, 152, 219, 0.15);
+            transform: translateY(-3px);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .outfit-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .outfit-card:hover {
+            border-color: var(--primary-color);
+            background: white;
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.1);
+        }
+        
+        .item-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .item-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+        
+        .item-list li:hover {
+            padding-left: 5px;
+            color: var(--primary-color);
+        }
+        
+        .item-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .badge-site {
+            background: var(--primary-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            margin-left: 8px;
+            font-weight: 500;
+        }
+        
+        .btn-primary-custom {
+            background: var(--primary-color);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 3px;
+            color: white;
+        }
+        
+        .btn-primary-custom:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        footer {
+            background: var(--primary-darker);
+            color: white;
+            padding: 35px 0;
+            margin-top: 50px;
+        }
+        
+        /* Nested Dropdown Styles */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: -1px;
+            border-radius: 0 6px 6px 6px;
+            display: none;
+        }
+
+        .dropdown-submenu:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-item.dropdown-toggle::after {
+            float: right;
+            margin-top: 6px;
+            border-top: 0.3em solid;
+            border-right: 0.3em solid transparent;
+            border-bottom: 0;
+            border-left: 0.3em solid transparent;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 991px) {
+            .dropdown-submenu .dropdown-menu {
+                position: static;
+                left: 0;
+                margin-left: 0;
+                margin-top: 0;
+                border-radius: 0;
+                padding-left: 20px;
+            }
+            
+            .dropdown-submenu .dropdown-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-palette me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-th-large me-1"></i>Categorie
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-home me-2"></i>Casa</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="site_1/index.html"><i class="fas fa-fire-burner me-2"></i>Cucina & Elettrodomestici</a></li>
+                                    <li><a class="dropdown-item" href="site_2/index.html"><i class="fas fa-box me-2"></i>Smart Home & Domotica</a></li>
+                                    <li><a class="dropdown-item" href="site_4/index.html"><i class="fas fa-tree me-2"></i>Giardinaggio Urbano</a></li>
+                                    <li><a class="dropdown-item" href="site_7/index.html"><i class="fas fa-paw me-2"></i>Pet Care Intelligente</a></li>
+                                    <li><a class="dropdown-item" href="site_8/index.html"><i class="fas fa-coffee me-2"></i>Cura Macchina Caffè</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-running me-2"></i>Sport</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="site_3/index.html"><i class="fas fa-dumbbell me-2"></i>Fitness Casa</a></li>
+                                    <li><a class="dropdown-item" href="site_13/index.html"><i class="fas fa-campground me-2"></i>Outdoor & Camping</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-laptop me-2"></i>Tech</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="site_6/index.html"><i class="fas fa-camera me-2"></i>Fotografia Mobile</a></li>
+                                    <li><a class="dropdown-item" href="site_9/index.html"><i class="fas fa-hdd me-2"></i>Elite Gaming Gear</a></li>
+                                    <li><a class="dropdown-item" href="site_10/index.html"><i class="fas fa-laptop me-2"></i>Tech</a></li>
+                                    <li><a class="dropdown-item" href="site_11/index.html"><i class="fas fa-book me-2"></i>Libri & E-Reader</a></li>
+                                    <li><a class="dropdown-item" href="site_16/index.html"><i class="fas fa-mobile-alt me-2"></i>Smartphone & Tech</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-tshirt me-2"></i>Moda</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="site_14/index.html"><i class="fas fa-gem me-2"></i>Viaggi</a></li>
+                                    <li><a class="dropdown-item" href="site_15/index.html"><i class="fas fa-plane me-2"></i>Turismo</a></li>
+                                    <li><a class="dropdown-item" href="site_21/index.html"><i class="fas fa-glasses me-2"></i>Accessori Moda</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bounty.html">
+                            <i class="fas fa-gift me-1"></i>Servizi Amazon
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tutte-le-guide.html">
+                            <i class="fas fa-book me-1"></i>Tutte le Guide
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-4">
+                <i class="fas fa-palette me-3"></i>Guida Abbinamenti Cross-Site
+            </h1>
+            <p class="lead mb-4">I migliori look combinando prodotti da diverse categorie</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="mb-4">Abbinamenti intelligenti che combinano capi e accessori da siti diversi per creare outfit completi e coordinati.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- Abbinamento 1: Look Uomo Elegante -->
+        <div class="outfit-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-user-tie text-warning me-2"></i>Look Uomo Elegante</h2>
+            <p class="text-muted mb-4">Abbinamento elegante per occasioni formali, combinando prodotti da siti diversi.</p>
+            
+            <div class="outfit-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Outfit Completo: Blazer + Camicia + Jeans + Cintura</h5>
+                <ul class="item-list">
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Blazer:</strong> Allthemen Blazer Nero Slim Fit <span class="badge-site">site_20</span></li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Camicia:</strong> COOFANDY Camicia Uomo Maniche Corte <span class="badge-site">site_14</span></li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Jeans:</strong> Jack & Jones Jeans Slim Fit Denim <span class="badge-site">site_20</span></li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Cintura:</strong> TEAMMAO Cintura in Pelle Uomo <span class="badge-site">site_20</span></li>
+                </ul>
+                <div class="mt-4">
+                    <a href="https://www.amazon.it/Allthemen-Bottone-Elegante-Formale-Business/dp/B0CX8WCS8L?dib=eyJ2IjoiMSJ9.pXGpd8eGKNBu9JH7tNU1HRuYICdw0UO-OZxgGiSVsLnqOp6413fkb66KnvWZvkQb3WTw8pjEa0pmeqdHa2eTw94DyUKgRTy23lb6pBk__uy4BiuppBEzh7ITXGaHXxMM6v-xtqAiI5Xradkv5YUw-YI0BsAAS3MQE3c142XEK5ruywi_gdMMKYwfDDtLAG4CE7hP6nmsQViNIyDJJzFt3nIDFlJa2ykzq4KVRgOoleB1q33-8rIkpsa8Dcz_Rbh6I35_0mQkOdt2G_XtRYOSlsDhYZ1WD-TQ4WQ1fBzLzSQ.h5zhYhtiQHrse8MDq-vHrB0bDbLGAVzVxz3mK4xZFVY&dib_tag=se&keywords=Blazer%2BNero%2BSlim%2BFit%3A&qid=1777997800&sr=8-1-spons&aref=qqumikZL4E&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=37239596727bec80ee7d77176e76ca0e&ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Blazer
+                    </a>
+                    <a href="https://www.amazon.it/COOFANDY-Camicia-Maniche-vestibilit%C3%A0%20Regolare/dp/B0CNXF4YP2?pf_rd_p=1f777985-7575-47d3-acb9-88abdd58b028&pf_rd_r=25RR7HEGZPBR2N6Z3QVQ&sr=1-2-822a5a31-b989-4f18-8d1c-fa9e1e670123&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=12580acd2227e0e9c45f867fd27943f1&ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Camicia
+                    </a>
+                    <a href="https://www.amazon.it/JACK-JONES-Jeans-Slim-Denim/dp/B07NRXZ3KX?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=7K1VMILXCR7H&dib=eyJ2IjoiMSJ9.m7SEkK2O_oQR3kZ9D8jFjFsN5qVedSTPnRRCuI8AM-Elq4ek7pERtu52fx1qB2KChD5XgXjtlTcupS-qutIVuseoBcWcpgq6x3LMhDP0upiH5EqBfdOrydJhQ77O1itkmxFhF4bIpZSv2KYNTm4B1_SObRfSVvlARVEb8kEFxjYY9yuP6xG93-xZRU1Yt-zG7AyPJAk_kyy3a-Io13IQHrAhy3nSaUxoRnQQah0LzLP5gkzjfMolnAoPSIoO1O3RLtcCN4896std_n9ju_mTJV8njfETz6EGhlZwLp0bOyE.llnrV9zYNKoka9trTJzgmSSyNp168u5sRa0Bdz-edNc&dib_tag=se&keywords=Jeans%2BBlu%2BScuro%2B%28Dark%2BWash%29%3A&qid=1777998848&sprefix=jeans%2Bblu%2Bscuro%2Bdark%2Bwash%2B%2Caps%2C165&sr=8-20&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=1b9f0337724d9d21fd51a3e3dc5dc7f9&ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Jeans
+                    </a>
+                    <a href="https://www.amazon.it/TEAMMAO-Cintura-110CM-200CM-Larghezza-Cinture/dp/B0C9Z4DMC2?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=MORYJ8UGYI1H&dib=eyJ2IjoiMSJ9.Nhke-35zS2xdBMUHZ79fvsAk4IZZ1PTT4pk0KxD13bsL6-WLEtWuL0Y_ZsTdR_WktdJEwnhF8f99Abbz8cDmT9egW3hEUUkgIeCieIBWUAhztS1LIytHn9IJ-yYQe0kYYfDtmLGWaqa3Ne-T6cxOCjai_xzLRwKNoAmpq8_2HKnaNV9m2negBAGq289ZUC0sbWH5NFKyvIOGxjn4ib1Q6Ymye2jNXiylksSsED3JmfFZVTBP5SpbVf-j0IyxYBLWPZwk4L0kvelYbxzy3QRDbUGgesQX3NylHnFLXvO4aT0.UZkQ5E0ecPcFmj-KS__RRwuA6tX4kWLN8kEDLSSH01I&dib_tag=se&keywords=Cintura%2Bin%2BPelle%2BMarrone%3A&qid=1777999288&sprefix=cintura%2Bin%2Bpelle%2Bmarrone%2B%2Caps%2C140&sr=8-1-spons&aref=UhKq3FvSkv&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=b031de9312d3684b70631b193c3a3153&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Cintura
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abbinamento 2: Look Uomo Casual -->
+        <div class="outfit-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-user text-warning me-2"></i>Look Uomo Casual</h2>
+            <p class="text-muted mb-4">Abbinamento casual per tutti i giorni, combinando prodotti da siti diversi.</p>
+            
+            <div class="outfit-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Outfit Completo: Camicia + Jeans + Orologio</h5>
+                <ul class="item-list">
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Camicia:</strong> Runcati Camicia Lino Maniche Corte <span class="badge-site">site_20</span></li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Jeans:</strong> Carrera Jeans <span class="badge-site">site_20</span></li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Orologio:</strong> Orologio Militare Analogico <span class="badge-site">site_14</span></li>
+                </ul>
+                <div class="mt-4">
+                    <a href="https://www.amazon.it/Runcati-Camicia-maniche-vestibilit%C3%A0-spiaggia/dp/B0G647JKZR?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3J9QM753UM0CO&dib=eyJ2IjoiMSJ9.Ey04z7wtRVl-7-PmtQ-YKR9SugcFJgWcBG5wbZU5-XrcFncZZ_9PhjvCReJoYq-LbAugVyARDpRghRhzLGeLC3jngCyWqeB6q4wU2Rusu6Q6Q3Za203DGGgpuTYVVsOkoB39uOAYG66CI3Pkc4BZv--uck1iDrqpf3eNmBlZmiBnyPMl7CdhACSokmxTSWTP_6rTHozQQ7-moVC1YtIxXa5JNOrXxW6GW9otgyirpDk1McHOdFr9ztJ05gh-ckJlaLujhanhbtsmyuU1IutrOpY3iXyyE1DxgsFRw5YgDHI.IA8GmyJADGVkpbVXXjqqzPGXCX6tjmQMK3eniTb0Ij0&dib_tag=se&keywords=Camicia%2BBlu%2Bin%2BLino%2Bo%2BCotone%3A&qid=1777998357&sprefix=camicia%2Bblu%2Bin%2Blino%2Bo%2Bcotone%2B%2Caps%2C177&sr=8-1-spons&aref=ckTLiYFGJ1&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=e96f7ff48a2119958be663b3aa9f9d10&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Camicia Lino
+                    </a>
+                    <a href="https://www.amazon.it/Carrera-Jeans-000700_01021-50IT-34USA/dp/B01N03NHZ8?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=7K1VMILXCR7H&dib=eyJ2IjoiMSJ9.m7SEkK2O_oQR3kZ9D8jFjFsN5qVedSTPnRRCuI8AM-Elq4ek7pERtu52fx1qB2KChD5XgXjtlTcupS-qutIVuseoBcWcpgq6x3LMhDP0upiH5EqBfdOrydJhQ77O1itkmxFhF4bIpZSv2KYNTm4B1_SObRfSVvlARVEb8kEFxjYY9yuP6xG93-xZRU1Yt-zG7AyPJAk_kyy3a-Io13IQHrAhy3nSaUxoRnQQah0LzLP5gkzjfMolnAoPSIoO1O3RLtcCN4896std_n9ju_mTJV8njfETz6EGhlZwLp0bOyE.llnrV9zYNKoka9trTJzgmSSyNp168u5sRa0Bdz-edNc&dib_tag=se&keywords=Jeans%2BBlu%2BScuro%2B%28Dark%2BWash%29%3A&qid=1777998848&sprefix=jeans%2Bblu%2Bscuro%2Bdark%2Bwash%2B%2Caps%2C165&sr=8-5&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=644fcfbd3d5fba2ac829baebcfad53c4&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Jeans
+                    </a>
+                    <a href="https://www.amazon.it/Orologio-Militare-Analogici-Impermeabili-Cinturino/dp/B0DK2SD6XN?pf_rd_p=1f777985-7575-47d3-acb9-88abdd58b028&pf_rd_r=25RR7HEGZPBR2N6Z3QVQ&sr=1-7-822a5a31-b989-4f18-8d1c-fa9e1e670123&th=1&linkCode=ll2&tag=l0c39-21&linkId=9d72c16c03bbb3263e98db74c12e65c1&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Orologio
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abbinamento 3: Look Donna Elegante -->
+        <div class="outfit-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-user-circle text-warning me-2"></i>Look Donna Elegante</h2>
+            <p class="text-muted mb-4">Abbinamento elegante per occasioni speciali, combinando prodotti da siti diversi.</p>
+            
+            <div class="outfit-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Outfit Completo: Abito + Blazer + Occhiali</h5>
+                <ul class="item-list">
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Abito:</strong> CMTOP Abito Donna Girocollo <span class="badge-site">site_18</span></li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Blazer:</strong> LIAOPUFUS Blazer Slim Fit <span class="badge-site">site_18</span></li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Occhiali:</strong> ZENOTTIC Occhiali da Sole Geometrici <span class="badge-site">site_21</span></li>
+                </ul>
+                <div class="mt-4">
+                    <a href="https://www.amazon.it/CMTOP-Girocollo-Elastica-Spiaggia-Eleganti/dp/B0DPJPV1M8?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3RYQLNSC5Y6JG&dib=eyJ2IjoiMSJ9.GUeyrDoAcEVgi1UBCf_cRdewi0lqLRQWaiDPavb91xvAzZ7p9VT8taktw73g2L5wuuDPm2OhrQHK6LGmB1G2Rjb7oLwRDynqLNLb_j9qSybaR1KtGIXqwAu6G407D0usXgsmVnR7d1yJ6R1wCVYGKDBjXK_5LFIEMuulU6dWJIf522LWRlCWsExLE3x5MfT2ALA-rBrE_vi_JoCdbJo6HVCaprDDDn4JyRVmj5MIr4wnnERfQIcRTaVQnRPfoxFVGycEeLxvLzyWYzEP35Vz5a6-xhMikbzn0xky25-PdBA.kh3CXT8J7fcCLMESB29slL2emsgcPEcggx1hoNBE0cE&dib_tag=se&keywords=abiti%2Bfemminili&qid=1777991370&sprefix=abiti%2Bfemminili%2Caps%2C174&sr=8-1-spons&aref=uHPunD8bjD&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0cac7799b2e7d44ec654b54c70df06dc&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Abito
+                    </a>
+                    <a href="https://www.amazon.it/LIAOPUFUS-Maniche-Risvolto-Business-Classico/dp/B0CHVHR9QK?crid=2A7X3584H8G8P&dib=eyJ2IjoiMSJ9.ZBQb1tqmRVvleTx-aybsFG6ylOP4Hx_74RMdlc-qq08ToDCaxFMz38u4JihBhJsCTSPQPjcyI8_h4WrpEewKnj2xQBvB2HsPQKC3hsIOzxafSKCM4_Zw_7ONAkSAbxGTRx19mbdlI03D6F-j-e2anj9j4EPXLsL8S-yGGUPIPYO_IzQqKN5seSN0lQRhWObW3e53vm9oJpmqO_o-O0tpnny9CmaWWoR5zNUW7-Pxm_YFX8eeXtsyeloFhnxLmrUxIS8djNLjgsTXHEeHzKe0v784MgHOWSH1TmSijNbwWoU.F2prRCqAzaSezGfgzos2Na5FNF6_QWHsaEyrQL_lu9o&dib_tag=se&keywords=blazer%2Bnero%2Bslim%2Bfit%2Bdonna&qid=1777997980&sprefix=Blazer%2BNero%2BSlim%2BFit%2Caps%2C225&sr=8-1&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c077cdd16d0a4638b4c7f991f08f383a&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Blazer
+                    </a>
+                    <a href="https://www.amazon.it/ZENOTTIC-Occhiali-Geometrici-Polarizzati-Protezione/dp/B0DPJPV1M8?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3RYQLNSC5Y6JG&dib=eyJ2IjoiMSJ9.GUeyrDoAcEVgi1UBCf_cRdewi0lqLRQWaiDPavb91xvAzZ7p9VT8taktw73g2L5wuuDPm2OhrQHK6LGmB1G2Rjb7oLwRDynqLNLb_j9qSybaR1KtGIXqwAu6G407D0usXgsmVnR7d1yJ6R1wCVYGKDBjXK_5LFIEMuulU6dWJIf522LWRlCWsExLE3x5MfT2ALA-rBrE_vi_JoCdbJo6HVCaprDDDn4JyRVmj5MIr4wnnERfQIcRTaVQnRPfoxFVGycEeLxvLzyWYzEP35Vz5a6-xhMikbzn0xky25-PdBA.kh3CXT8J7fcCLMESB29slL2emsgcPEcggx1hoNBE0cE&dib_tag=se&keywords=occhiali%2Bda%2Bsole&sprefix=occhiali%2Bda%2Bsole%2Caps%2C174&sr=8-1-spons&aref=uHPunD8bjD&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0cac7799b2e7d44ec654b54c70df06dc&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Occhiali
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abbinamento 4: Look Donna Casual -->
+        <div class="outfit-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-female text-warning me-2"></i>Look Donna Casual</h2>
+            <p class="text-muted mb-4">Abbinamento casual per tutti i giorni, combinando prodotti da siti diversi.</p>
+            
+            <div class="outfit-card">
+                <h5 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Outfit Completo: Camicia + Leggings + Bracciale</h5>
+                <ul class="item-list">
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Camicia:</strong> Shownicer Camicia Lino Donna <span class="badge-site">site_18</span></li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Leggings:</strong> Amazon Essentials Leggings Stretch <span class="badge-site">site_18</span></li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i><strong>Bracciale:</strong> FaithHeart Bracciale a Catena <span class="badge-site">site_21</span></li>
+                </ul>
+                <div class="mt-4">
+                    <a href="https://www.amazon.it/shownicer-Camicia-Maglietta-Camicetta-Leggera/dp/B0F8N14NCR?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AT1K7PDVGUTB&dib=eyJ2IjoiMSJ9.hgnYzImNAf4119L8gf0DXX9EbJ2zRG-3_SM_4pPwOuC8d2w3UGSSI3OF4azIet9YHWnpJRBE8JWztDOWFp2fygM771sWOTSeJ9B8F6SdZZT2NHuUYQtMrWqZC8tK3E7nfaakvdVKtEV31hk5Ob_rEf-x3xjtxkSJ09HNYBR_CkS6TctvX3g-Xe_8xjpjA5zO92PiYXG655Zko7hYp6NSO3OX0qydyu-CRkBf4fQpDsm_ZzUvfNFO7edO_en3lBPkMf6SBdV6SuIZLlY0jXgXPVsBl21xfG0xmGGc-2I0bF4.64lTDPIA_9X-EI_mE4BsQmPrSSkmBKJTf4Vjb2LgLS0&dib_tag=se&keywords=Camicia%2BBlu%2Bin%2BLino%2Bdonna&qid=1777998456&sprefix=camicia%2Bblu%2Bin%2Blino%2Bdonna%2Caps%2C126&sr=8-5&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c270ad902f8e23cd79a0eb25dd79c208&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Camicia Lino
+                    </a>
+                    <a href="https://www.amazon.it/Amazon-Essentials-Stretch-Leggings-Produttore/dp/B07CM82KSB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TLXSA0V0LBID&dib=eyJ2IjoiMSJ9.89SJEuvmO2Q8I2sxYaQpqr40ClRsAk7hBtevz0MllIUUeiBwhzLcFOPO6r9_DgKieLIuUZuYeOq0r7o9KoySfdzBtmEItjYsWqMvX4haKkx8ECkg0tgHU9N77_t370xkzPn4kx5dX7caoWbNfsozg4EUL-Ui0oT1aLBUyoXUpjOA4P6L7DsIqzO7K31CcC27Y6hqc0sX_42Xz4x-4qKdknW4MvysQ5kgR8_hA47xfE6pTm5PE-qM4Ac66KaP8Q92uKrLQbbQh1E_T7iO5SjO82Mj_NUNVXl1dr-5rFWMzAo._YXX34PhhsKKGvxsKX1lA2Kkeg0-i8Sy0iPc1YWIBro&dib_tag=se&keywords=Jeans%2BBlu%2BScuro%2B%28Dark%2BWash%29%3A%2Bdonna&qid=1777999042&sprefix=jeans%2Bblu%2Bscuro%2Bdark%2Bwash%2Bdonna%2Caps%2C278&sr=8-6&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=add568f2b7f7c98aad25b6ddf23d9423&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Leggings
+                    </a>
+                    <a href="https://www.amazon.it/FaithHeart-Bracciale-Catena-Regolabile-Acciaio/dp/B0DFBFHJ73?mcid=63f1d693d4883dc8ac317b27690ee92f&hvadid=806043719409&hvpos=&hvnetw=g&hvrand=17805402772812636057&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2328179563331&hvocijid=17805402772812636057-B0CXDD79DZ-&hvexpln=0&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c542172460d4a07f316c3b9e34820879&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-primary-custom">
+                        <i class="fab fa-amazon me-2"></i>Bracciale
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusione -->
+        <div class="outfit-section">
+            <h2 class="fw-bold mb-4"><i class="fas fa-check-circle text-success me-2"></i>Mix & Match</h2>
+            <p class="text-muted mb-4">Scegli gli abbinamenti che preferisci e mixa i capi tra i vari look per creare il tuo stile personale.</p>
+            
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong>Consiglio:</strong> Gli abbinamenti cross-site ti permettono di combinare prodotti da categorie diverse per creare outfit unici. Ogni badge indica da quale sito proviene il prodotto.
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /sites/
+Disallow: /analytics.html
+Disallow: /.well-known/
+
+Sitemap: https://amazon-fleet.vercel.app/sitemap.xml
+
+# Amazon Affiliate Bot
+User-agent: Amazonbot
+Allow: /

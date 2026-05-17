@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida Libri & E-Reader - Smart Choices Guide</title>
+    <meta name="description" content="I migliori Kindle, eBook digitali, audiolibri e accessori per la tua esperienza di lettura digitale.">
+    <meta name="keywords" content="kindle, ebook, audiolibri, e-reader, libri digitali, lettura">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2980B9;
+            --secondary-color: #f8f9fa;
+            --accent-color: #FF9500;
+            --success-color: #27AE60;
+            --reading-color: #8B4513;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #8B4513 0%, #2980B9 50%, #FF9500 100%);
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 40px;
+        }
+        
+        .problem-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .solution-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(255, 149, 0, 0.2);
+        }
+        
+        .btn-warning {
+            background: var(--accent-color);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-warning:hover {
+            background: #e68500;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-book-reader me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bounty.html">
+                            <i class="fas fa-gift me-1"></i>Servizi Amazon
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tutte-le-guide.html">
+                            <i class="fas fa-list me-1"></i>Tutte le Guide
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">
+                <i class="fas fa-book-reader me-3"></i>Guida Libri & E-Reader
+            </h1>
+            <p class="lead mb-4">Scopri i migliori Kindle, eBook digitali, audiolibri e accessori per la tua esperienza di lettura digitale</p>
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="badge bg-light text-dark">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="badge bg-light text-dark">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="badge bg-light text-dark">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="container">
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4">
+                <i class="fas fa-question-circle text-warning me-2"></i>Perché Scegliere Libri & E-Reader?
+            </h2>
+            <p class="text-muted mb-4">
+                La lettura digitale offre numerosi vantaggi: portabilità, accesso a migliaia di libri in un solo dispositivo, 
+                personalizzazione della lettura e accesso istantaneo ai tuoi autori preferiti.
+            </p>
+            
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="text-center">
+                        <i class="fas fa-feather-alt fa-3x mb-3" style="color: var(--primary-color);"></i>
+                        <h5 class="fw-bold">Portabilità</h5>
+                        <p class="text-muted small">Porta migliaia di libri ovunque</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="text-center">
+                        <i class="fas fa-adjust fa-3x mb-3" style="color: var(--primary-color);"></i>
+                        <h5 class="fw-bold">Personalizzazione</h5>
+                        <p class="text-muted small">Regola font, dimensioni e luminosità</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="text-center">
+                        <i class="fas fa-bolt fa-3x mb-3" style="color: var(--primary-color);"></i>
+                        <h5 class="fw-bold">Accesso Istantaneo</h5>
+                        <p class="text-muted small">Scarica e leggi in pochi secondi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- eBook Kindle Section -->
+    <section class="container">
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4">
+                <i class="fas fa-book text-warning me-2"></i>eBook Kindle Più Venduti
+            </h2>
+            <p class="text-muted mb-4">
+                I migliori eBook Kindle del momento. Romanzi, thriller, romance e molto altro.
+            </p>
+            
+            <div class="row">
+                <!-- Facciamo finta che mi ami -->
+                <div class="col-md-6 mb-4">
+                    <div class="solution-card">
+                        <h5 class="fw-bold mb-3"><i class="fas fa-heart text-warning me-2"></i>Facciamo finta che mi ami <span class="badge bg-danger ms-2">Nuovo</span></h5>
+                        <p class="mb-3">Romanzo di Elena Armas. Una storia d'amore coinvolgente. 4,1/5 stelle con 2.696 recensioni. Prezzo: 2,99€</p>
+                        <a href="https://www.amazon.it/Facciamo-finta-che-mi-ami-ebook/dp/B09ZDDP8DJ?&linkCode=ll2&tag=l0c39-21&linkId=2c86c3ab846cc96b75f0412fd439120d&ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold">
+                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- La donna che fugge -->
+                <div class="col-md-6 mb-4">
+                    <div class="solution-card">
+                        <h5 class="fw-bold mb-3"><i class="fas fa-running text-warning me-2"></i>La donna che fugge <span class="badge bg-danger ms-2">Nuovo</span></h5>
+                        <p class="mb-3">Romanzo di Alicia Giménez-Bartlett. Thriller coinvolgente. 4,0/5 stelle con 2.931 recensioni. Prezzo: 10,99€</p>
+                        <a href="https://www.amazon.it/donna-che-fugge-Alicia-Gim%C3%A9nez-Bartlett-ebook/dp/B0CTZWGF5W?&linkCode=ll2&tag=l0c39-21&linkId=7058182a0a4648dfcae656c086cf8dcb&ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold">
+                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- L'ultima canzone d'amore -->
+                <div class="col-md-6 mb-4">
+                    <div class="solution-card">
+                        <h5 class="fw-bold mb-3"><i class="fas fa-music text-warning me-2"></i>L'ultima canzone d'amore <span class="badge bg-danger ms-2">Nuovo</span></h5>
+                        <p class="mb-3">Romanzo di Lucinda Riley. Storia emozionante e toccante. 4,2/5 stelle con 1.182 recensioni. Prezzo: 9,99€</p>
+                        <a href="https://www.amazon.it/Lultima-canzone-damore-Lucinda-Riley-ebook/dp/B0FL7S4SRG?&linkCode=ll2&tag=l0c39-21&linkId=d146633a49aec4cae9baa82a2e5b3e60&ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold">
+                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- La vittima mancante -->
+                <div class="col-md-6 mb-4">
+                    <div class="solution-card">
+                        <h5 class="fw-bold mb-3"><i class="fas fa-search text-warning me-2"></i>La vittima mancante <span class="badge bg-danger ms-2">Nuovo</span></h5>
+                        <p class="mb-3">Thriller di Robert Bryndza. Investigazione mozzafiato. 4,0/5 stelle con 1.898 recensioni. Prezzo: 0,99€</p>
+                        <a href="https://www.amazon.it/vittima-mancante-Robert-Bryndza-ebook/dp/B0FGLN1Y5V?&linkCode=ll2&tag=l0c39-21&linkId=bc4ba91211d107896e17da4c8abd8b78&ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold">
+                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Il contratto. The Deal -->
+                <div class="col-md-6 mb-4">
+                    <div class="solution-card">
+                        <h5 class="fw-bold mb-3"><i class="fas fa-handshake text-warning me-2"></i>Il contratto. The Deal <span class="badge bg-danger ms-2">Nuovo</span></h5>
+                        <p class="mb-3">Romanzo di Elle Kennedy. New Adult romance. 4,3/5 stelle con 7.700 recensioni. Prezzo: 2,99€</p>
+                        <a href="https://www.amazon.it/contratto-Campus-Vol-1-ebook/dp/B01HYRDTF4?&linkCode=ll2&tag=l0c39-21&linkId=6ae79a4139b37d843448dcec843827f8&ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold">
+                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Libri Fisici Section -->
+    <section class="container">
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4">
+                <i class="fas fa-book text-warning me-2"></i>Libri Fisici Popolari
+            </h2>
+            <p class="text-muted mb-4">
+                Libri cartacei bestseller per chi ama la sensazione tradizionale della lettura.
+            </p>
+            
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong>Consiglio:</strong> Per altri libri fisici e e-reader hardware, visita la <a href="site_11/index.html" class="alert-link fw-bold">sezione completa Libri & E-Reader</a>.
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusione -->
+    <section class="container">
+        <div class="problem-section">
+            <h2 class="fw-bold mb-4">
+                <i class="fas fa-check-circle text-success me-2"></i>Trova il Tuo Libro Perfetto
+            </h2>
+            <p class="text-muted mb-4">
+                Scegli tra eBook Kindle per la massima portabilità o libri fisici per l'esperienza tradizionale. 
+                Ogni formato ha i suoi vantaggi.
+            </p>
+            
+            <div class="alert alert-success">
+                <i class="fas fa-check-circle me-2"></i>
+                <strong>Tutti i prodotti sono disponibili su Amazon con spedizione Prime gratuita.</strong>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="site_11/index.html" class="btn btn-warning btn-lg fw-bold">
+                    <i class="fas fa-arrow-right me-2"></i>Esplora Tutti i Prodotti
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Smart Choices Guide - La tua guida per acquisti intelligenti
+            </p>
+            <p class="text-muted small">
+                Partner affiliato Amazon - Prezzi e disponibilità aggiornati in tempo reale
+            </p>
+            <div class="mt-3">
+                <a href="index.html" class="text-white text-decoration-none me-3">Home</a>
+                <a href="tutte-le-guide.html" class="text-white text-decoration-none">Tutte le Guide</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

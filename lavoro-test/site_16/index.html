@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone & Tech - Smart Choices Guide</title>
+    <meta name="description" content="I migliori smartphone e accessori tech con recensioni e offerte esclusive.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #f8f9fa;
+            --accent-color: #3b82f6;
+            --success-color: #10b981;
+            --trust-color: #0056b3;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(30, 58, 138, 0.3);
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(45deg, #ff9900, #ff6600);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(45deg, #ff6600, #ff9900);
+            transform: scale(1.05);
+        }
+        
+        .category-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .feature-icon {
+            color: var(--success-color);
+            margin-right: 10px;
+        }
+        
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--success-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-mobile-alt me-2"></i>Smart Choices Guide
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Smartphone & Tech</h1>
+            <p class="lead mb-4">I migliori smartphone e accessori tech per prestazioni e fotografia professionale</p>
+
+            <!-- Trust Banner -->
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="badge bg-light text-dark p-2">
+                            <i class="fas fa-star me-1"></i>Top di Gamma
+                        </span>
+                        <span class="badge bg-light text-dark p-2">
+                            <i class="fas fa-camera me-1"></i>Fotografia Pro
+                        </span>
+                        <span class="badge bg-light text-dark p-2">
+                            <i class="fas fa-bolt me-1"></i>Prestazioni Max
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-mobile-alt me-1"></i>Smartphone Premium
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">Google Pixel 8 Pro</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Il flagship Google con fotocamera AI rivoluzionaria, processore Tensor G3, display LTPO OLED e 7 anni di aggiornamenti. 
+                                Perfetto per chi ama la fotografia computazionale e l'esperienza Android pura.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Display:</strong> 6.7" LTPO OLED, 120Hz, 1600 nits peak brightness
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Fotocamera:</strong> 50MP principale + 48MP ultragrandangolare + 48MP teleobiettivo 5x
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Processore:</strong> Google Tensor G3 con AI avanzata
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Memoria:</strong> 12GB RAM, 128GB storage
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Batteria:</strong> 5050mAh con ricarica rapida 30W e wireless
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Aggiornamenti:</strong> 7 anni di garanzia Android e sicurezza
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">🎯 Perché scegliere questo smartphone?</h5>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-brain text-success me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">AI Rivoluzionaria</h6>
+                                                <p class="text-muted small mb-0">Processore Tensor G3 con intelligenza artificiale avanzata per foto e assistente predittivo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-camera text-warning me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Fotografia Professionale</h6>
+                                                <p class="text-muted small mb-0">50MP principale con elaborazione computazionale che batte telefoni con più megapixel</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-sync text-primary me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">7 Anni di Aggiornamenti</h6>
+                                                <p class="text-muted small mb-0">Garanzia unica sul mercato: Android e aggiornamenti di sicurezza fino al 2030</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-android text-info me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Android Puro</h6>
+                                                <p class="text-muted small mb-0">Nessuna bloatware, esperienza stock fluida e aggiornamenti immediati</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Google 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/Google-Pixel-Smartphone-sbloccato-fotocamera/dp/B0DSWFHTL2?crid=2O4RA48LTQYYX&dib=eyJ2IjoiMSJ9.nhQVoYOWW5S6l4NERi_ZaaZ0tY_bW1zv3LH2H6BNvT0-MnzRs7KJamYwEBaeoeuTn7fiNcI31y4wS2fQZouUKU671qV1A7z1xCwwPmn1RBOCMKZCeO8RyTzT20--W2Ufm7vVkBzha3-1RcDYE10YlguUT0LXQlIPXlnfw862S53ikk4v0p6aU8mqCXmJmgHM0HwVc5n5Ga7S0NBcWaZmpSVTXg8HfXUJUwjFgqSG6PTDSEDiRlXnInfKO84u0AQZqXQ1TooL6Mz9KJ1E0fzBz5LRotEBC7EJrSS7TsnSGyM.XreuEjvZNn3rKW6oBaERZZMmSG3lY4mFICTOrgKyKEo&dib_tag=se&keywords=telefoni%2Bcellulari%2Bin%2Bofferta&qid=1777909053&sprefix=telefoni%2Caps%2C288&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.d9b6a10d-e3a2-448c-a21b-086faff5973f&aref=lkaHuBGjUc&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=7168b6f09f5391fccd00238e934ae04f&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-lg">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-mobile-alt me-1"></i>Smartphone Premium
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">Samsung Galaxy S24 Ultra</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Il top di gamma Samsung con display AMOLED 2K, fotocamera da 200MP, processore Snapdragon 8 Gen 3, 
+                                S Pen integrata e batteria da 5000mAh. Perfetto per professionisti e appassionati di fotografia.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Display:</strong> 6.8" AMOLED 2K, 120Hz, HDR10+
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Fotocamera:</strong> 200MP + 12MP ultragrandangolare + 10MP teleobiettivo 3x + 10MP teleobiettivo 10x
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Processore:</strong> Snapdragon 8 Gen 3 for Galaxy
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Memoria:</strong> 12GB RAM, 512GB storage espandibile
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Batteria:</strong> 5000mAh con ricarica rapida 45W
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>S Pen:</strong> Inclusa con funzionalità avanzate
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">🎯 Perché scegliere questo smartphone?</h5>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-crown text-warning me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Top di Gamma Assoluto</h6>
+                                                <p class="text-muted small mb-0">Il migliore smartphone sul mercato con specifiche premium e materiali di lusso</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-pen text-success me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">S Pen Integrata</h6>
+                                                <p class="text-muted small mb-0">Stilo professionale con funzionalità avanzate per produttività e creatività</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-camera-retro text-primary me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Fotocamera 200MP</h6>
+                                                <p class="text-muted small mb-0">La migliore fotocamera su smartphone con zoom 10x ottico e video 8K</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-battery-full text-info me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Batteria Infinita</h6>
+                                                <p class="text-muted small mb-0">5000mAh con ricarica ultra-rapida 45W e uso intensivo per tutto il giorno</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Samsung 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/Samsung-Smartphone-Garanzia-Processore-Assistente/dp/B0G6ZQCVTR?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2DJLA8RWKD6C5&dib=eyJ2IjoiMSJ9.U8wQj7-G-lxWZ8fGUzLpE1KwukYYDQRPCyN0h8eZXueIRJopKc1MBF159o9SPqBtAjMNYh7fQPf7HCd_BzEK7aHWtV8zaw66Bv0Y-qs-daNfOAS4rStpfv5zzMIWzCVeTjTv_TqQRrAljrwldh8QO0nDT-3JikbqRzkDTCwpqDEMBlR6JTGHYoAOHAxYR9WgYnuhGOYxFgv9uV4vqNwY6A3CVYcpjNc7hzcanb9HO4p2UNwXNwTOepP71E7U5IsMkUKJZTswVd5LCAJSvcAttFlOzIWLprX9PmZJi1tePFM.gbplGCoksGpSjMJsFpk-CpA2gYhgvqcj2Jm3HeiO56I&dib_tag=se&keywords=telefoni&qid=1777908305&sprefix=telefoni%2Caps%2C141&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.d9b6a10d-e3a2-448c-a21b-086faff5973f&aref=Kn2F91Nwtq&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=0ad37607e7007be12c44ee4fd4ddf7cb&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-lg">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-mobile-alt me-1"></i>Smartphone Premium
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">ZTE Axon 40 Ultra</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Smartphone flagship con fotocamera sotto display rivoluzionaria, design senza notch e prestazioni elevate. 
+                                Offerta eccezionale per un top di gamma con caratteristiche premium a prezzo contenuto.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Display:</strong> 6.8" AMOLED curve, 120Hz, senza notch
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Fotocamera:</strong> 64MP principale + 64MP ultragrandangolare + 8MP periscopio
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Fotocamera frontale:</strong> 16MP sotto display (invisibile)
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Processore:</strong> Snapdragon 8 Gen 1
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Memoria:</strong> 12GB RAM, 256GB storage
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Batteria:</strong> 5000mAh con ricarica rapida 65W
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Design:</strong> Vetro curvo 3D, IP68, senza interruzioni
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">🎯 Perché scegliere questo smartphone?</h5>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-eye-slash text-success me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Display Senza Notch</h6>
+                                                <p class="text-muted small mb-0">Fotocamera frontale sotto display: schermo intero senza interruzioni visive</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-percentage text-warning me-3 mt-1"></i>
+                                            <div>
+                                                <p class="text-muted small mb-0">Caratteristiche da top di gamma a prezzo contenuto: il miglior rapporto qualità/prezzo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-bolt text-primary me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Ricarica Ultraveloce</h6>
+                                                <p class="text-muted small mb-0">65W di ricarica: da 0 a 100% in meno di 1 ora, la più veloce della categoria</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-gem text-info me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Design Premium</h6>
+                                                <p class="text-muted small mb-0">Vetro curvo 3D, certificazione IP68: materiali e costruzione da flagship</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia ZTE 2 anni</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/ZTE-Smartphone-Memoria-Batteria-Fotocamera/dp/B0GK2829C7?crid=1MZP7NEWOOHR1&dib=eyJ2IjoiMSJ9.AEbBKQValiQVzE_2vkTJ60XsLCHtfsPfmEQnD_YK34r0QpzY506C5U7KoxCIRHy2Y3MZHUJg7OkOGLnDZzGNkgUqMGrDiTM3hfhd_jRUmZcGe4y-i5ngDlCTd8YphJ4mZJ13OIgp09chuoryktw1LguUT0LXQlIPXlnfw862S53ikk4v0p6aU8mqCXmJmgHM0HwVc5n5Ga7S0NBcWaZmpSVTXg8HfXUJUwjFgqSG6PTbfQeRFjdqrZVh2H28XPfe2_2k2pEpj-cCtAXowbdqdDg3gxn1QLxecPB0f7mrJkc.OmmCNtWGY7nImGnZd04CcfA3QvNXDyCRrBMjRMLH5VQ&dib_tag=se&keywords=telefoni+cellulari+in+offerta&qid=1777909104&sprefix=telefoni+cellulari%2Caps%2C346&sr=8-14&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=61a1915e37bba466fcbf8d2c239921c9&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-lg">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card card">
+                        <div class="card-body p-4">
+                            <span class="category-badge mb-3 d-inline-block">
+                                <i class="fas fa-shield-alt me-1"></i>Accessori Smartphone
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">JETech Cover Magnetica Trasparente</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Cover magnetica JETech ultra-sottile e trasparente. Protezione completa con design minimalista che non altera l'aspetto del telefono. 
+                                Magneti integrati per chiusura automatica e funzione stand.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Compatibilità:</strong> Progettata per smartphone top di gamma con supporto magnetico
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Materiale:</strong> PC trasparente ultra-sottile, solo 0.3mm di spessore
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Protezione:</strong> Angoli rinforzati, resistente agli urti e graffi
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Magneti:</strong> Chiusura automatica e funzione stand orizzontale/verticale
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Design:</strong> Completamente trasparente, mostra il design originale del telefono
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle feature-icon"></i>
+                                        <strong>Precisione:</strong> Accesso perfetto a tutti i pulsanti e porte
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">🎯 Perché scegliere questa cover?</h5>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-eye text-success me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Design Invisibile</h6>
+                                                <p class="text-muted small mb-0">Ultra-sottile e trasparente: non rovina il design del tuo telefono premium</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-magnet text-warning me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Smart Magnetica</h6>
+                                                <p class="text-muted small mb-0">Chiusura automatica e funzione stand: praticità e protezione in un solo prodotto</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-shield-alt text-primary me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Protezione Intelligente</h6>
+                                                <p class="text-muted small mb-0">Angoli rinforzati dove serve, sottile dove non serve per un equilibrio perfetto</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <i class="fas fa-dollar-sign text-info me-3 mt-1"></i>
+                                            <div>
+                                                <h6 class="fw-bold">Rapporto Qualità/Prezzo</h6>
+                                                <p class="text-muted small mb-0">Protezione premium a prezzo economy: meno di €13 per cover magnetica intelligente</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia JETech 1 anno</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-undo text-success me-2"></i>
+                                        <span>Reso gratuito 30 giorni</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-credit-card text-success me-2"></i>
+                                        <span>Pagamenti sicuri</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-success fw-bold">Disponibile su Amazon</span>
+                                </div>
+                                <a href="https://www.amazon.it/JETech-Magnetica-Compatibile-Traslucido-Minimalista/dp/B0FHVM6D7Z?pd_rd_w=FHFtQ&content-id=amzn1.sym.9c61bb2b-a26e-47b5-856a-b2f51a21edf3&pf_rd_p=9c61bb2b-a26e-47b5-856a-b2f51a21edf3&pf_rd_r=GAGCM978K7J5MBTXXCCG&pd_rd_wg=NmH98&pd_rd_r=44283adf-3f6a-49be-b12e-a52ef811e345&pd_rd_i=B0FHVM6D7Z&th=1&linkCode=ll2&tag=l0c39-21&linkId=0d0010cc70006ad4a95fbb5e05fdbab8&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Xiaomi REDMI Buds 8 Pro -->
+            <div class="product-card card mb-4">
+                <div class="card-body p-4">
+                    <span class="category-badge mb-3 d-inline-block">
+                        <i class="fas fa-headphones me-1"></i>Cuffie True Wireless
+                    </span>
+                    <h3 class="card-title fw-bold mb-3">Xiaomi REDMI Buds 8 Pro - Cancellazione Attiva Rumore 55dB</h3>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                        </div>
+                        <div class="col-md-6 text-end">
+                        </div>
+                    </div>
+                    <p class="card-text text-muted mb-4">Cuffie True Wireless con cancellazione attiva del rumore a 55dB, triplo driver, suono Hi-Res HiFi, Dolby Audio, batteria fino a 33 ore, Bluetooth 5.4, IP54.</p>
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle feature-icon"></i><strong>ANC:</strong> 55dB cancellazione rumore attiva</li>
+                            <li class="mb-2"><i class="fas fa-check-circle feature-icon"></i><strong>Audio:</strong> Hi-Res HiFi con Dolby Audio</li>
+                            <li class="mb-2"><i class="fas fa-check-circle feature-icon"></i><strong>Batteria:</strong> Fino a 33 ore</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success fw-bold">Disponibile su Amazon</span></div>
+                        <a href="https://www.amazon.it/Xiaomi-Bluetooth-Wireless-cancellazione-batteria/dp/B0G5N98LBK?dib=eyJ2IjoiMSJ9.Pi9knvgH3qH3spyvnGIvWMuIprnu3sEjfDE8V5roC8oDBGFCPufwQsqcxUV1sYxupiWx_dDnctyIQtN0FVzBj3DJnzYXQKpF1TvkxthqbOWMrYPnyznaNyd7yAQN05jlPVsqZ3EJht4gNwAzsPAvrtmMOEe3sGjcOZByYWidnZ4GIMsefOcK0y0xYZiNL9rDxXaISOrnadza37pgYh4fVYw71ZDvTw2geDHDsn1sLIo1zYyQp3q9WhJXhFXX05ztFm2qQMmlDTIEHc09rnELT0nh5ARseQnx4uvJ8SmBwPs.Dgxc-5DyEGRlol_PZiA0rrOchlzdTPEiKB4mazvSr30&dib_tag=se&qid=1778015484&refinements=p_36%3A1631634031&s=electronics&sr=1-7&ufe=app_do%3Aamzn1.fos.864f36ba-f2d2-48d5-beb3-144e2b968e56&th=1&linkCode=ll2&tag=l0c39-21&linkId=76ba90ab9ad237e515331087cdf68fa0&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sennheiser ACCENTUM Open -->
+            <div class="product-card card mb-4">
+                <div class="card-body p-4">
+                    <span class="category-badge mb-3 d-inline-block">
+                        <i class="fas fa-headphones me-1"></i>Cuffie Open Ear
+                    </span>
+                    <h3 class="card-title fw-bold mb-3">Sennheiser ACCENTUM Open Wireless Earbuds</h3>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                        </div>
+                        <div class="col-md-6 text-end">
+                        </div>
+                    </div>
+                    <p class="card-text text-muted mb-4">Design Open Ear, suono dinamico, Bluetooth 5.3, protezione IPX4, autonomia 28 ore, custodia USB-C. Ideali per musica e conversazioni.</p>
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle feature-icon"></i><strong>Design:</strong> Open Ear, ascolti l'ambiente</li>
+                            <li class="mb-2"><i class="fas fa-check-circle feature-icon"></i><strong>Audio:</strong> Suono dinamico Sennheiser</li>
+                            <li class="mb-2"><i class="fas fa-check-circle feature-icon"></i><strong>Autonomia:</strong> 28 ore</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success fw-bold">Disponibile su Amazon</span></div>
+                        <a href="https://www.amazon.it/Sennheiser-ACCENTUM-Open-Auricolario-resistenza/dp/B0F4DXRSG9?dib=eyJ2IjoiMSJ9.bKpvlD63hQn6KvolvW47SA6ux1vP2uFxFdu2BUJ65Glou5DwuecOSgUUgNnG5aFhf8pFaaBDjG_23cVHWrpdgVskTJwwMTUjVMfyPZxGDzGL00tiw2JPklgIqJcIek8DBElP-PiENzshsJshEi8WLuyS8-F2KLlHWnnzFwUdIduFgnFqKnmnmVjAkgjv5qCcIxUfKTo0tIbrNmUzyn2wo-0Px14-EPIcUSlqnZQrA76TiRK-D4IyaVg6C5JvSwbiwkU5SW6EmibjznPHkSH9dItaLkO9vTM0PhG3_O5aiDI.yHKBuQAhSIfDHDBHcMltmAGpxMpeOGGYplpcIK4TA3g&dib_tag=se&qid=1778015530&refinements=p_36%3A1631634031&s=electronics&xpid=rhMdrhbS9n5dN&th=1&linkCode=ll2&tag=l0c39-21&linkId=c4da7d426a4d71ea1b57484fd0fab531&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tigratigro Mag-Safe 3-in-1 -->
+            <div class="product-card card mb-4">
+                <div class="card-body p-4">
+                    <span class="category-badge mb-3 d-inline-block">
+                        <i class="fas fa-charging-station me-1"></i>Caricatore Wireless
+                    </span>
+                    <h3 class="card-title fw-bold mb-3">Tigratigro Caricatore Wireless Mag-Safe 3-in-1</h3>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                        </div>
+                        <div class="col-md-6 text-end">
+                        </div>
+                    </div>
+                    <p class="card-text text-muted mb-4">Caricatore wireless 3-in-1 con Mag-Safe, ricarica rapida stazione magnetica pieghevole per iPhone 12-16, AirPods, Watch.</p>
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle feature-icon"></i><strong>3-in-1:</strong> iPhone + AirPods + Watch</li>
+                            <li class="mb-2"><i class="fas fa-check-circle feature-icon"></i><strong>Mag-Safe:</strong> Compatibile Apple</li>
+                            <li class="mb-2"><i class="fas fa-check-circle feature-icon"></i><strong>Design:</strong> Pieghevole portatile</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success fw-bold">Disponibile su Amazon</span></div>
+                        <a href="https://www.amazon.it/Mag-safe-Caricatore-Wireless-Pieghevole-Compatibile/dp/B0BZLPD549?dib=eyJ2IjoiMSJ9.O0eGSTWM6nmQ9-pySg0GtHzAEcMJ4d3Rzw7vr1DfB5QXk7ZXCl1efmhUT_EvMj3iKSpQmw_pLEn065tXY_b5Q1EYhVmN_wJL2-aDZ9Iai4-M4zDMfiiQYJ0zPG-ryClzxXtCqDj8LSf2cuKQQawW2JQM5R44UiW-ZPdpq_Kaz3O6ELaFj1dZyoilWdXjdo_T3BzI_QEEQcigvEAxDj5cXIz2AEacEdFCHjBp84mNBh_S9G1mQsbSic_cgDATxaGXWA9_TRXGCDPZ8ctvbZIBA1DoSOaRGHdOziLpBn2KJd8.G_mWoVxhkMbGlJrjWxZEOK22EE8brPpzV0Xdppe86yI&dib_tag=se&keywords=caricabatterie%2Bwireless%2Bsmartphone&qid=1778015575&sr=8-1-spons&aref=xX8tQQuImV&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=d78d694ec6bb78f4699e00614ed80315&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Smart Choices Guide. Tutti i diritti riservati.</p>
+            <p class="mb-0 text-muted">Partner affiliato Amazon - Prezzi e disponibilità aggiornati in tempo reale</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
