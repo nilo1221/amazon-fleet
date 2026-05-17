@@ -167,10 +167,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function rotateProducts() {
-        const productContainers = document.querySelectorAll('.row:has(.product-card)');
+        // Find all product cards
+        const productCards = document.querySelectorAll('.product-card');
         
-        productContainers.forEach(container => {
-            const products = Array.from(container.querySelectorAll('.product-card'));
+        if (productCards.length <= 1) return;
+        
+        // Group products by their parent container
+        const containers = new Map();
+        productCards.forEach(card => {
+            const container = card.closest('.row');
+            if (container) {
+                if (!containers.has(container)) {
+                    containers.set(container, []);
+                }
+                containers.get(container).push(card);
+            }
+        });
+        
+        // Shuffle products in each container
+        containers.forEach((products, container) => {
             if (products.length <= 1) return;
             
             // Shuffle products
