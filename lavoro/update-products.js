@@ -60,62 +60,46 @@ function extractProductsFromHTML(html, siteNum) {
     const products = [];
     const $ = cheerio.load(html);
     
-    // Trova tutti i link Amazon con tag affiliate
-    $('a[href*="tag=l0c39-21"]').each((i, element) => {
-        const link = $(element).attr('href');
+    // Trova tutte le card prodotto
+    $('.product-card').each((i, element) => {
+        const $card = $(element);
         
-        // Cerca il nome prodotto cercando nell'elemento parent
-        let name = '';
-        const parent = $(element).closest('.card, .product-card, .col-md-4, .col-md-6');
+        // Cerca il link Amazon nella card
+        const link = $card.find('a[href*="tag=l0c39-21"]').first().attr('href');
         
-        if (parent.length > 0) {
-            // Cerca h3, h4, h5, h6 nel parent
-            const heading = parent.find('h3, h4, h5, h6').first();
+        if (link) {
+            // Cerca il nome prodotto nella card
+            let name = '';
+            const heading = $card.find('h3, h4, h5, h6').first();
             if (heading.length > 0) {
                 name = heading.text().trim();
             }
-        }
-        
-        // Se non trova nel parent, cerca nel fratello precedente
-        if (!name) {
-            const prevSibling = $(element).parent().prev().find('h3, h4, h5, h6').first();
-            if (prevSibling.length > 0) {
-                name = prevSibling.text().trim();
-            }
-        }
-        
-        // Se ancora non trova, cerca in tutta la struttura
-        if (!name) {
-            const allHeadings = $(element).parentsUntil('body').find('h3, h4, h5, h6');
-            if (allHeadings.length > 0) {
-                name = allHeadings.first().text().trim();
-            }
-        }
-        
-        if (name && link) {
-            const category = siteCategories[siteNum] || 'Altro';
             
-            // Determina l'icona basata sulla categoria
-            let icon = 'fa-box';
-            for (const [key, value] of Object.entries(iconMapping)) {
-                if (category.includes(key)) {
-                    icon = value;
-                    break;
+            if (name) {
+                const category = siteCategories[siteNum] || 'Altro';
+                
+                // Determina l'icona basata sulla categoria
+                let icon = 'fa-box';
+                for (const [key, value] of Object.entries(iconMapping)) {
+                    if (category.includes(key)) {
+                        icon = value;
+                        break;
+                    }
                 }
-            }
-            
-            // Verifica che il prodotto non sia duplicato
-            const isDuplicate = products.some(p => 
-                p.name === name || p.link === link
-            );
-            
-            if (!isDuplicate) {
-                products.push({
-                    name: name,
-                    category: category,
-                    link: link,
-                    icon: icon
-                });
+                
+                // Verifica che il prodotto non sia duplicato
+                const isDuplicate = products.some(p => 
+                    p.name === name || p.link === link
+                );
+                
+                if (!isDuplicate) {
+                    products.push({
+                        name: name,
+                        category: category,
+                        link: link,
+                        icon: icon
+                    });
+                }
             }
         }
     });
