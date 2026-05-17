@@ -130,8 +130,12 @@ body {
     box-shadow: 0 20px 40px rgba(10, 10, 10, 0.4);
 }
 
+.product-card-benessere {
+    box-shadow: 0 10px 30px rgba(39, 174, 96, 0.2);
+}
+
 .product-card-benessere:hover {
-    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 20px 40px rgba(230, 126, 34, 0.4);
 }
 
 .product-card-moda-uomo:hover {
@@ -194,7 +198,7 @@ body {
 .site-header-moda-uomo { background: linear-gradient(45deg, #2C3E50, #3498DB); }
 .site-header-accessori { background: linear-gradient(45deg, #6C5CE7, #FD79A8); }
 .site-header-arredamento { background: linear-gradient(45deg, #E91E63, #FFD700); }
-.site-header-benessere { background: linear-gradient(45deg, #3498DB, #2ECC71); }
+.site-header-benessere { background: linear-gradient(45deg, #27AE60, #E67E22); }
 .site-header-viaggi-vacanze { background: linear-gradient(45deg, #3498DB, #2ECC71); }
 .site-header-smartphone { background: linear-gradient(45deg, #667eea, #764ba2); }
 .site-header-dvd { background: linear-gradient(45deg, #9B59B6, #8E44AD); }
