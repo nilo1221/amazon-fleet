@@ -169,8 +169,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function rotateProducts() {
         // Find all product cards
         const productCards = document.querySelectorAll('.product-card');
+        console.log('Found product cards:', productCards.length);
         
-        if (productCards.length <= 1) return;
+        if (productCards.length <= 1) {
+            console.log('Not enough products to rotate');
+            return;
+        }
         
         // Group products by their parent container
         const containers = new Map();
@@ -181,12 +185,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     containers.set(container, []);
                 }
                 containers.get(container).push(card);
+            } else {
+                console.log('No .row container found for product card');
             }
         });
+        
+        console.log('Found containers:', containers.size);
         
         // Shuffle products in each container
         containers.forEach((products, container) => {
             if (products.length <= 1) return;
+            
+            console.log('Shuffling', products.length, 'products in container');
             
             // Shuffle products
             const shuffledProducts = shuffleArray(products);
