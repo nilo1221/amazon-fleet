@@ -1336,9 +1336,13 @@
                             filteredProducts = allProducts;
                         }
                         
+                        console.log('🔄 Rotazione prodotti in evidenza - Prodotti disponibili:', filteredProducts.length);
+                        
                         // Rotazione random automatica
                         const featuredCount = 6; // Prodotti in evidenza
                         const featuredStartIndex = Math.floor(Math.random() * (filteredProducts.length - featuredCount + 1));
+                        
+                        console.log('🎲 Indice di partenza:', featuredStartIndex);
 
                         // Seleziona prodotti per Prodotti Top in Evidenza con varietà di categorie
                         const featuredProducts = [];
@@ -1381,6 +1385,8 @@
                                     </div>
                                 </div>
                             `).join('');
+                            
+                            console.log('✅ Prodotti in evidenza aggiornati:', featuredProducts.map(p => p.name).join(', '));
                         }
                     }
 
