@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Product Rotation System - Real-time rotation
-    const ROTATION_INTERVAL = 5 * 1000; // 5 seconds for testing (change to 29 * 60 * 1000 for production)
+    const ROTATION_INTERVAL = 20 * 1000; // 20 seconds for testing (change to 29 * 60 * 1000 for production)
     const STORAGE_KEY = 'product_rotation';
     
     function shuffleArray(array) {
