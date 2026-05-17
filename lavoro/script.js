@@ -152,4 +152,50 @@ document.addEventListener('DOMContentLoaded', function() {
             'page_type': 'home'
         });
     }
+
+    // Product Rotation System
+    const ROTATION_INTERVAL = 30 * 60 * 1000; // 30 minutes in milliseconds
+    const STORAGE_KEY = 'product_rotation';
+    
+    function shuffleArray(array) {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+    }
+    
+    function rotateProducts() {
+        const productContainers = document.querySelectorAll('.row:has(.product-card)');
+        
+        productContainers.forEach(container => {
+            const products = Array.from(container.querySelectorAll('.product-card'));
+            if (products.length <= 1) return;
+            
+            // Generate a unique key for this container based on its position
+            const containerKey = `${STORAGE_KEY}_${Array.from(document.querySelectorAll('.row:has(.product-card)')).indexOf(container)}`;
+            
+            // Check if we need to rotate
+            const lastRotation = localStorage.getItem(containerKey);
+            const now = Date.now();
+            
+            if (!lastRotation || (now - parseInt(lastRotation)) > ROTATION_INTERVAL) {
+                // Shuffle products
+                const shuffledProducts = shuffleArray(products);
+                
+                // Re-append in shuffled order
+                shuffledProducts.forEach(product => {
+                    container.appendChild(product);
+                });
+                
+                // Save rotation timestamp
+                localStorage.setItem(containerKey, now.toString());
+                console.log('Products rotated for container:', containerKey);
+            }
+        });
+    }
+    
+    // Run rotation on page load
+    rotateProducts();
 });
