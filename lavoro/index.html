@@ -165,7 +165,7 @@
                 <span class="d-block text-warning animate-pulse">Valgono Ogni Centesimo</span>
             </h1>
             <p class="lead mb-5 fs-4">
-                Guide specializzate Amazon per acquisti intelligenti. Recensioni dettagliate, confronti prezzi e prodotti verificati per ogni categoria.
+                La guida ai migliori prodotti Amazon selezionati per te. <strong>Risparmia tempo</strong>: noi selezioniamo i migliori prodotti, tu scegli.
             </p>
             <div class="row justify-content-center mb-5">
                 <div class="col-md-10">
@@ -212,7 +212,57 @@
                         <h2 class="display-5 fw-bold mb-3">
                             <i class="fas fa-fire text-warning me-3" aria-hidden="true"></i>Prodotti Top in Evidenza
                         </h2>
-                        <p class="lead text-muted">I prodotti più cliccati direttamente da Amazon</p>
+                        <p class="lead text-muted">Selezione giornaliera - Nuovi prodotti ogni giorno dai 341 disponibili</p>
+                    </div>
+                </div>
+                <!-- Search Bar -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="product-search" placeholder="Cerca prodotti...">
+                            <button class="btn btn-primary" type="button" id="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category Filters -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="d-flex flex-wrap gap-2 justify-content-center" id="category-filters">
+                            <button class="btn btn-outline-primary active" data-category="all">
+                                Tutti (341)
+                            </button>
+                            <button class="btn btn-outline-primary" data-category="Cucina">
+                                Cucina
+                            </button>
+                            <button class="btn btn-outline-primary" data-category="Smart Home">
+                                Smart Home
+                            </button>
+                            <button class="btn btn-outline-primary" data-category="Fitness">
+                                Fitness
+                            </button>
+                            <button class="btn btn-outline-primary" data-category="Tech">
+                                Tech
+                            </button>
+                            <button class="btn btn-outline-primary" data-category="Cinema">
+                                Cinema
+                            </button>
+                            <button class="btn btn-outline-primary" data-category="Moda">
+                                Moda
+                            </button>
+                            <button class="btn btn-outline-primary" data-category="Altro">
+                                Altro
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rotation Note -->
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <small class="text-muted">
+                            <i class="fas fa-sync-alt me-1"></i>Prodotti aggiornati giornalmente - 341 prodotti selezionati
+                        </small>
                     </div>
                 </div>
                 <div class="row g-4" id="featured-products">
@@ -1311,76 +1361,141 @@
                 .then(response => response.json())
                 .then(data => {
                     const allProducts = data;
+                    let currentCategory = 'all';
+                    let currentSearch = '';
 
-                    // Calcola il giorno dell'anno (0-365)
-                    function getDayOfYear() {
-                        const now = new Date();
-                        const start = new Date(now.getFullYear(), 0, 0);
-                        const diff = now - start;
-                        const oneDay = 1000 * 60 * 60 * 24;
-                        return Math.floor(diff / oneDay);
+                    // Funzione per filtrare prodotti per categoria
+                    function filterProductsByCategory(products, category) {
+                        if (category === 'all') return products;
+                        return products.filter(p => {
+                            const cat = p.category;
+                            if (category === 'Cucina') return cat.includes('Cucina');
+                            if (category === 'Smart Home') return cat.includes('Smart Home');
+                            if (category === 'Fitness') return cat.includes('Fitness');
+                            if (category === 'Tech') return cat.includes('Tech') || cat.includes('Gaming') || cat.includes('Smartphone') || cat.includes('Fotografia');
+                            if (category === 'Cinema') return cat.includes('Cinema') || cat.includes('TV');
+                            if (category === 'Moda') return cat.includes('Moda') || cat.includes('Accessori');
+                            if (category === 'Altro') return !cat.includes('Cucina') && !cat.includes('Smart Home') && !cat.includes('Fitness') && !cat.includes('Tech') && !cat.includes('Cinema') && !cat.includes('Moda');
+                            return products;
+                        });
                     }
 
-                    // Rotazione sequenziale: ogni giorno mostra prodotti diversi
-                    const dayOfYear = getDayOfYear();
-                    const featuredCount = 6; // Prodotti in evidenza
-                    const popularCount = 5; // Prodotti popolari
-
-                    // Calcola l'indice di partenza per oggi
-                    const featuredStartIndex = (dayOfYear * featuredCount) % allProducts.length;
-                    const popularStartIndex = ((dayOfYear * featuredCount) + featuredCount) % allProducts.length;
-
-                    // Seleziona prodotti per Prodotti Top in Evidenza
-                    const featuredProducts = [];
-                    for (let i = 0; i < featuredCount; i++) {
-                        featuredProducts.push(allProducts[(featuredStartIndex + i) % allProducts.length]);
+                    // Funzione per filtrare prodotti per ricerca
+                    function filterProductsBySearch(products, searchTerm) {
+                        if (!searchTerm) return products;
+                        const term = searchTerm.toLowerCase();
+                        return products.filter(p => 
+                            p.name.toLowerCase().includes(term) || 
+                            p.category.toLowerCase().includes(term)
+                        );
                     }
 
-                    // Seleziona prodotti per Popolari (evita duplicati)
-                    const popularProducts = [];
-                    let popularIndex = popularStartIndex;
-                    while (popularProducts.length < popularCount) {
-                        const product = allProducts[popularIndex % allProducts.length];
-                        if (!featuredProducts.includes(product)) {
-                            popularProducts.push(product);
+                    // Funzione per renderizzare prodotti
+                    function renderProducts() {
+                        let filteredProducts = filterProductsByCategory(allProducts, currentCategory);
+                        filteredProducts = filterProductsBySearch(filteredProducts, currentSearch);
+                        
+                        // Calcola il giorno dell'anno (0-365)
+                        function getDayOfYear() {
+                            const now = new Date();
+                            const start = new Date(now.getFullYear(), 0, 0);
+                            const diff = now - start;
+                            const oneDay = 1000 * 60 * 60 * 24;
+                            return Math.floor(diff / oneDay);
                         }
-                        popularIndex++;
-                    }
 
-                    // Aggiorna Prodotti Top in Evidenza
-                    const featuredContainer = document.querySelector('#featured-products .row');
-                    if (featuredContainer) {
-                        featuredContainer.innerHTML = featuredProducts.map(product => `
-                            <div class="col-md-6">
-                                <div class="card h-100 border-0 shadow-sm">
-                                    <div class="card-body p-4 text-center">
-                                        <div class="text-primary mb-3">
-                                            <i class="fas ${product.icon} fa-3x"></i>
+                        // Rotazione sequenziale: ogni giorno mostra prodotti diversi
+                        const dayOfYear = getDayOfYear();
+                        const featuredCount = 6; // Prodotti in evidenza
+                        const popularCount = 5; // Prodotti popolari
+
+                        // Calcola l'indice di partenza per oggi
+                        const featuredStartIndex = (dayOfYear * featuredCount) % filteredProducts.length;
+                        const popularStartIndex = ((dayOfYear * featuredCount) + featuredCount) % filteredProducts.length;
+
+                        // Seleziona prodotti per Prodotti Top in Evidenza
+                        const featuredProducts = [];
+                        for (let i = 0; i < featuredCount; i++) {
+                            featuredProducts.push(filteredProducts[(featuredStartIndex + i) % filteredProducts.length]);
+                        }
+
+                        // Seleziona prodotti per Popolari (evita duplicati)
+                        const popularProducts = [];
+                        let popularIndex = popularStartIndex;
+                        while (popularProducts.length < popularCount) {
+                            const product = filteredProducts[popularIndex % filteredProducts.length];
+                            if (!featuredProducts.includes(product)) {
+                                popularProducts.push(product);
+                            }
+                            popularIndex++;
+                        }
+
+                        // Aggiorna Prodotti Top in Evidenza
+                        const featuredContainer = document.querySelector('#featured-products');
+                        if (featuredContainer) {
+                            featuredContainer.innerHTML = featuredProducts.map((product, index) => `
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body p-4 text-center">
+                                            ${index < 2 ? '<span class="badge bg-success position-absolute top-0 start-50 translate-middle-x mt-2" style="z-index: 1;"><i class="fas fa-star me-1"></i>Consigliato</span>' : ''}
+                                            <div class="text-primary mb-3">
+                                                <i class="fas ${product.icon} fa-3x"></i>
+                                            </div>
+                                            <h5 class="card-title fw-bold">${product.name}</h5>
+                                            <p class="card-text text-muted small">${product.category}</p>
+                                            <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
+                                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                            </a>
                                         </div>
-                                        <h5 class="card-title fw-bold">${product.name}</h5>
-                                        <p class="card-text text-muted small">${product.category}</p>
-                                        <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
-                                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                                        </a>
                                     </div>
                                 </div>
-                            </div>
-                        `).join('');
+                            `).join('');
+                        }
+
+                        // Aggiorna Popolari sidebar
+                        const popularContainer = document.querySelector('#popular-products .card-body');
+                        if (popularContainer) {
+                            popularContainer.innerHTML = popularProducts.map((product, index) => `
+                                <div class="mb-3 pb-3 ${index < popularProducts.length - 1 ? 'border-bottom' : ''}">
+                                    <h6 class="fw-bold mb-2">${product.name}</h6>
+                                    <p class="small text-muted mb-2">${product.category}</p>
+                                    <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-sm btn-warning fw-bold">
+                                        <i class="fab fa-amazon me-1"></i>Amazon
+                                    </a>
+                                </div>
+                            `).join('');
+                        }
                     }
 
-                    // Aggiorna Popolari sidebar
-                    const popularContainer = document.querySelector('#popular-products .card-body');
-                    if (popularContainer) {
-                        popularContainer.innerHTML = popularProducts.map((product, index) => `
-                            <div class="mb-3 pb-3 ${index < popularProducts.length - 1 ? 'border-bottom' : ''}">
-                                <h6 class="fw-bold mb-2">${product.name}</h6>
-                                <p class="small text-muted mb-2">${product.category}</p>
-                                <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-sm btn-warning fw-bold">
-                                    <i class="fab fa-amazon me-1"></i>Amazon
-                                </a>
-                            </div>
-                        `).join('');
-                    }
+                    // Event listeners per filtri categoria
+                    const filterButtons = document.querySelectorAll('#category-filters button');
+                    filterButtons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            filterButtons.forEach(btn => btn.classList.remove('active'));
+                            button.classList.add('active');
+                            currentCategory = button.dataset.category;
+                            renderProducts();
+                        });
+                    });
+
+                    // Event listeners per ricerca
+                    const searchInput = document.getElementById('product-search');
+                    const searchBtn = document.getElementById('search-btn');
+                    
+                    searchInput.addEventListener('input', (e) => {
+                        currentSearch = e.target.value;
+                        renderProducts();
+                    });
+                    
+                    searchInput.addEventListener('keyup', (e) => {
+                        if (e.key === 'Enter') {
+                            currentSearch = e.target.value;
+                            renderProducts();
+                        }
+                    });
+
+                    // Renderizza prodotti iniziali
+                    renderProducts();
                 })
                 .catch(error => console.error('Errore nel caricamento dei prodotti:', error));
         });
