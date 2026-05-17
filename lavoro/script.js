@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Product Rotation System
-    const ROTATION_INTERVAL = 30 * 60 * 1000; // 30 minutes in milliseconds
+    const ROTATION_INTERVAL = 29 * 60 * 1000; // 29 minutes in milliseconds
     const STORAGE_KEY = 'product_rotation';
     
     function shuffleArray(array) {
