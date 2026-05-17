@@ -153,8 +153,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Product Rotation System
-    const ROTATION_INTERVAL = 29 * 60 * 1000; // 29 minutes in milliseconds
+    // Product Rotation System - Real-time rotation
+    const ROTATION_INTERVAL = 5 * 1000; // 5 seconds for testing (change to 29 * 60 * 1000 for production)
     const STORAGE_KEY = 'product_rotation';
     
     function shuffleArray(array) {
@@ -173,29 +173,21 @@ document.addEventListener('DOMContentLoaded', function() {
             const products = Array.from(container.querySelectorAll('.product-card'));
             if (products.length <= 1) return;
             
-            // Generate a unique key for this container based on its position
-            const containerKey = `${STORAGE_KEY}_${Array.from(document.querySelectorAll('.row:has(.product-card)')).indexOf(container)}`;
+            // Shuffle products
+            const shuffledProducts = shuffleArray(products);
             
-            // Check if we need to rotate
-            const lastRotation = localStorage.getItem(containerKey);
-            const now = Date.now();
+            // Re-append in shuffled order
+            shuffledProducts.forEach(product => {
+                container.appendChild(product);
+            });
             
-            if (!lastRotation || (now - parseInt(lastRotation)) > ROTATION_INTERVAL) {
-                // Shuffle products
-                const shuffledProducts = shuffleArray(products);
-                
-                // Re-append in shuffled order
-                shuffledProducts.forEach(product => {
-                    container.appendChild(product);
-                });
-                
-                // Save rotation timestamp
-                localStorage.setItem(containerKey, now.toString());
-                console.log('Products rotated for container:', containerKey);
-            }
+            console.log('Products rotated for container');
         });
     }
     
-    // Run rotation on page load
+    // Run rotation immediately on page load
     rotateProducts();
+    
+    // Run rotation automatically every X seconds
+    setInterval(rotateProducts, ROTATION_INTERVAL);
 });
