@@ -1387,6 +1387,16 @@
                             `).join('');
                             
                             console.log('✅ Prodotti in evidenza aggiornati:', featuredProducts.map(p => p.name).join(', '));
+                            
+                            // GA4 Event: Product Rotation
+                            if (typeof gtag !== 'undefined') {
+                                gtag('event', 'product_rotation', {
+                                    'event_category': 'Homepage',
+                                    'event_label': 'Featured Products',
+                                    'products_count': featuredProducts.length,
+                                    'product_names': featuredProducts.map(p => p.name).join(', ')
+                                });
+                            }
                         }
                     }
 
