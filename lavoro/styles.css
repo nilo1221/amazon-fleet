@@ -41,6 +41,127 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
+/* Product Card uniform style for all niches */
+.product-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    margin-bottom: 30px;
+    background: white;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Category-specific colored shadows */
+.product-card-cucina:hover {
+    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
+}
+
+.product-card-smarthome:hover {
+    box-shadow: 0 20px 40px rgba(0, 184, 148, 0.4);
+}
+
+.product-card-fitness:hover {
+    box-shadow: 0 20px 40px rgba(230, 126, 34, 0.4);
+}
+
+.product-card-giardino:hover {
+    box-shadow: 0 20px 40px rgba(39, 174, 96, 0.4);
+}
+
+.product-card-ufficio:hover {
+    box-shadow: 0 20px 40px rgba(93, 109, 126, 0.4);
+}
+
+.product-card-foto:hover {
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+}
+
+.product-card-pet:hover {
+    box-shadow: 0 20px 40px rgba(230, 126, 34, 0.4);
+}
+
+.product-card-caffe:hover {
+    box-shadow: 0 20px 40px rgba(139, 69, 19, 0.4);
+}
+
+.product-card-gaming:hover {
+    box-shadow: 0 20px 40px rgba(108, 92, 231, 0.4);
+}
+
+.product-card-tech:hover {
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+}
+
+.product-card-libri:hover {
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+}
+
+.product-card-bellezza:hover {
+    box-shadow: 0 20px 40px rgba(233, 30, 99, 0.4);
+}
+
+.product-card-outdoor:hover {
+    box-shadow: 0 20px 40px rgba(9, 132, 227, 0.4);
+}
+
+.product-card-arredamento:hover {
+    box-shadow: 0 20px 40px rgba(233, 30, 99, 0.4);
+}
+
+.product-card-viaggi:hover {
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+}
+
+.product-card-smartphone:hover {
+    box-shadow: 0 20px 40px rgba(66, 114, 234, 0.4);
+}
+
+.product-card-cinema:hover {
+    box-shadow: 0 20px 40px rgba(155, 89, 182, 0.4);
+}
+
+.product-card-moda-donna:hover {
+    box-shadow: 0 20px 40px rgba(10, 10, 10, 0.4);
+}
+
+.product-card-benessere:hover {
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+}
+
+.product-card-moda-uomo:hover {
+    box-shadow: 0 20px 40px rgba(44, 62, 80, 0.4);
+}
+
+.product-card-accessori:hover {
+    box-shadow: 0 20px 40px rgba(108, 92, 231, 0.4);
+}
+
+.product-card-dvd:hover {
+    box-shadow: 0 20px 40px rgba(155, 89, 182, 0.4);
+}
+
+.product-card-mare:hover {
+    box-shadow: 0 20px 40px rgba(9, 132, 227, 0.4);
+}
+
+.product-card-profumi:hover {
+    box-shadow: 0 20px 40px rgba(233, 30, 99, 0.4);
+}
+
+.product-card-sostenibilita {
+    box-shadow: 0 10px 30px rgba(46, 204, 113, 0.2);
+}
+
+.product-card-sostenibilita:hover {
+    box-shadow: 0 20px 40px rgba(46, 204, 113, 0.4);
+}
+
 .site-header {
     padding: 30px;
     color: white;
@@ -66,8 +187,9 @@ body {
 .site-header-outdoor { background: linear-gradient(45deg, #0984E3, #2c3e50); }
 .site-header-mare { background: linear-gradient(45deg, #0984E3, #00B894); }
 .site-header-moda-donna { background: linear-gradient(45deg, #0a0a0a, #D4AF37); }
-.site-header-benessere { background: linear-gradient(45deg, #3498DB, #2980B9); }
+.site-header-mare { background: linear-gradient(45deg, #0984E3, #00B894); }
 .site-header-profumi { background: linear-gradient(45deg, #E91E63, #9C27B0); }
+.site-header-sostenibilita { background: linear-gradient(45deg, #27AE60, #2ECC71); }
 .site-header-moda-uomo { background: linear-gradient(45deg, #2C3E50, #3498DB); }
 .site-header-accessori { background: linear-gradient(45deg, #6C5CE7, #FD79A8); }
 .site-header-arredamento { background: linear-gradient(45deg, #E91E63, #FFD700); }

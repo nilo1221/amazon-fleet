@@ -1,6 +1,9 @@
 // Script per aggiornare automaticamente i numeri dei prodotti nelle card
 async function updateProductCounts() {
     try {
+        // Pulisci cache forzatamente per assicurare dati aggiornati
+        localStorage.removeItem('productCountsCache');
+        
         // Cache dei conteggi (salva in localStorage)
         const cacheKey = 'productCountsCache';
         const cacheTime = 5 * 60 * 1000; // 5 minuti
@@ -18,30 +21,31 @@ async function updateProductCounts() {
         
         // Mappa tra site_ e l'ID della card corrispondente
         const siteToCard = {
-            'site_1': 'card-1',
-            'site_2': 'card-2',
-            'site_3': 'card-3',
-            'site_4': 'card-4',
-            'site_5': 'card-5',
-            'site_6': 'card-6',
-            'site_7': 'card-7',
-            'site_8': 'card-8',
-            'site_9': 'card-9',
-            'site_10': 'card-10',
-            'site_11': 'card-11',
-            'site_12': 'card-12',
-            'site_13': 'card-13',
-            'site_14': 'card-14',
-            'site_15': 'card-15',
-            'site_16': 'card-16',
-            'site_17': 'card-17',
-            'site_18': 'card-18',
-            'site_19': 'card-19',
-            'site_20': 'card-20',
-            'site_21': 'card-21',
-            'site_22': 'card-22',
-            'site_23': 'card-23',
-            'site_24': 'card-24'
+            'cucina-elettrodomestici': 'card-1',
+            'smart-home-domotica': 'card-2',
+            'fitness-casa': 'card-3',
+            'giardinaggio-urbano': 'card-4',
+            'ufficio-produttivo': 'card-5',
+            'fotografia-mobile': 'card-6',
+            'pet-care-intelligente': 'card-7',
+            'cura-macchina-caffe': 'card-8',
+            'elite-gaming-gear': 'card-9',
+            'tech': 'card-10',
+            'libri-ereader': 'card-11',
+            'bellezza-skincare': 'card-12',
+            'outdoor-camping': 'card-13',
+            'arredamento-casa': 'card-14',
+            'viaggi-vacanze': 'card-15',
+            'smartphone-tech': 'card-16',
+            'cinema-tv': 'card-17',
+            'moda-donna': 'card-18',
+            'benessere-personale': 'card-19',
+            'moda-uomo': 'card-20',
+            'accessori-moda': 'card-21',
+            'dvd-bluray': 'card-22',
+            'mare-spiaggia': 'card-23',
+            'profumi-bellezza': 'card-24',
+            'sostenibilita-eco-friendly': 'card-25'
         };
         
         // Mostra loading visivo
