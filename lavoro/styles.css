@@ -523,6 +523,33 @@ body {
     box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
 }
 
+/* Macro Tags Styles */
+.macro-tag {
+    background: white;
+    border: 2px solid #e0e0e0;
+    color: #333;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.macro-tag:hover {
+    background: #3498DB;
+    border-color: #3498DB;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.macro-tag.active {
+    background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+    border-color: #3498DB;
+    color: white;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
 /* Amazon Button Styles - Enhanced */
 .btn-warning {
     background: linear-gradient(135deg, #FF9900 0%, #FF7700 100%) !important;

@@ -88,7 +88,7 @@
     <!-- Hero Section -->
     <section class="hero-section" aria-labelledby="hero-title">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center mb-4">
                 <div class="col-lg-7">
                     <div class="mb-4">
                         <span class="badge bg-white text-warning fw-bold px-4 py-2 rounded-pill shadow-lg">
@@ -96,8 +96,8 @@
                         </span>
                     </div>
                     <h1 id="hero-title" class="display-3 fw-bold mb-4 animate-fade-in">
-                        Trova l'Oggetto Perfetto,
-                        <span class="d-block text-warning animate-pulse">al Prezzo Migliore</span>
+                        Trova la tua prossima
+                        <span class="d-block text-warning animate-pulse">Guida all'Acquisto</span>
                     </h1>
                     <p class="lead mb-5 fs-4">
                         Guide all'acquisto imparziali e le migliori offerte online aggiornate ogni giorno. <strong>Risparmia tempo</strong>: noi cerchiamo, tu acquisti.
@@ -118,6 +118,25 @@
                             <i class="fas fa-check-circle fa-3x text-success hero-float-2"></i>
                             <i class="fas fa-bolt fa-3x text-white hero-float-3"></i>
                         </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Search Bar in Hero -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <div class="input-group input-group-lg shadow-lg">
+                        <input type="text" class="form-control" id="hero-search" placeholder="Cerca 'Smart Home', 'The Boys', 'Skincare'...">
+                        <button class="btn btn-primary" type="button" id="hero-search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <!-- Macro-Bottoni (Tag) -->
+                    <div class="d-flex gap-2 mt-3 flex-wrap justify-content-center">
+                        <button class="btn btn-outline-secondary btn-sm macro-tag" data-category="Tech">Tech</button>
+                        <button class="btn btn-outline-secondary btn-sm macro-tag" data-category="Casa">Casa</button>
+                        <button class="btn btn-outline-secondary btn-sm macro-tag" data-category="Moda">Moda</button>
+                        <button class="btn btn-outline-secondary btn-sm macro-tag" data-category="Cinema">Cinema</button>
                     </div>
                 </div>
             </div>
@@ -163,17 +182,6 @@
                         <small class="text-muted">
                             <i class="fas fa-sync-alt me-1"></i>Prodotti aggiornati ogni ora - 341 prodotti selezionati
                         </small>
-                    </div>
-                </div>
-                <!-- Search Bar -->
-                <div class="row mb-4">
-                    <div class="col-12">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="product-search" placeholder="Cerca categorie...">
-                            <button class="btn btn-primary" type="button" id="search-btn">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
                     </div>
                 </div>
                 <div class="row g-4" id="featured-products">
@@ -1271,6 +1279,76 @@
                     }
                 }
                 card.dataset.category = category;
+            });
+
+            // Sistema di ricerca Hero e macro-tag per filtrare le nicchie
+            const heroSearchInput = document.getElementById('hero-search');
+            const heroSearchBtn = document.getElementById('hero-search-btn');
+            const macroTags = document.querySelectorAll('.macro-tag');
+            
+            // Funzione per filtrare le card delle nicchie
+            function filterSiteCards(searchTerm, categoryFilter = '') {
+                const siteCards = document.querySelectorAll('.site-card');
+                const term = searchTerm.toLowerCase();
+                
+                siteCards.forEach(card => {
+                    const title = card.querySelector('.site-title, h3')?.textContent.toLowerCase() || '';
+                    const description = card.querySelector('.site-description')?.textContent.toLowerCase() || '';
+                    const category = card.dataset.category?.toLowerCase() || '';
+                    const content = title + ' ' + description + ' ' + category;
+                    
+                    let matchesSearch = true;
+                    let matchesCategory = true;
+                    
+                    if (term) {
+                        matchesSearch = content.includes(term);
+                    }
+                    
+                    if (categoryFilter) {
+                        matchesCategory = category.includes(categoryFilter.toLowerCase());
+                    }
+                    
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Event listener per ricerca Hero
+            heroSearchInput.addEventListener('input', (e) => {
+                filterSiteCards(e.target.value);
+            });
+            
+            heroSearchInput.addEventListener('keyup', (e) => {
+                if (e.key === 'Enter') {
+                    filterSiteCards(e.target.value);
+                }
+            });
+            
+            heroSearchBtn.addEventListener('click', () => {
+                filterSiteCards(heroSearchInput.value);
+            });
+            
+            // Event listener per macro-tag
+            macroTags.forEach(tag => {
+                tag.addEventListener('click', () => {
+                    const category = tag.dataset.category;
+                    
+                    // Rimuovi active da tutti i tag
+                    macroTags.forEach(t => t.classList.remove('active'));
+                    
+                    // Se il tag cliccato è già attivo, disattivalo
+                    if (tag.classList.contains('active')) {
+                        tag.classList.remove('active');
+                        filterSiteCards(heroSearchInput.value, '');
+                    } else {
+                        // Altrimenti attivalo
+                        tag.classList.add('active');
+                        filterSiteCards(heroSearchInput.value, category);
+                    }
+                });
             });
 
             // Sistema di rotazione oraria dei prodotti
