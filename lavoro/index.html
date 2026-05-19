@@ -1260,6 +1260,7 @@
                     const allProducts = data;
                     let currentSearch = '';
                     let rotationIndex = 0; // Indice per rotazione deterministica
+                    const featuredCount = 6; // Numero di prodotti da mostrare nel carosello
 
                     // Funzione per filtrare prodotti per ricerca
                     function filterProductsBySearch(products, searchTerm) {
@@ -1297,10 +1298,6 @@
                         'Accessori Moda': '€10-50'
                     };
 
-                    function getPriceRange(category) {
-                        return priceRanges[category] || '€10-100';
-                    }
-
                     function renderProducts() {
                         let filteredProducts = filterProductsBySearch(allProducts, currentSearch);
                         
@@ -1317,7 +1314,6 @@
 
                         // Se c'è una ricerca attiva, mostra i risultati filtrati senza rotazione
                         if (currentSearch) {
-                            const featuredCount = 6;
                             const featuredProducts = [];
                             for (let i = 0; i < Math.min(featuredCount, filteredProducts.length); i++) {
                                 featuredProducts.push(filteredProducts[i]);
@@ -1325,7 +1321,6 @@
                             const featuredContainer = document.querySelector('#featured-products');
                             if (featuredContainer) {
                                 featuredContainer.innerHTML = featuredProducts.map((product, index) => {
-                                    const priceRange = getPriceRange(product.category);
                                     return `
                                     <div class="col-md-6">
                                         <div class="card h-100 border-0 shadow-sm">
@@ -1345,9 +1340,8 @@
                             }
                         } else {
                             // Rotazione basata solo su prodotti ad alto valore (3 Cucina + 3 Gaming + 2 Smart Home)
-                            const featuredCount = 6;
                             const featuredProducts = [];
-                            
+
                             if (highValueProducts.length > 0) {
                                 for (let i = 0; i < featuredCount; i++) {
                                     const index = (rotationIndex + i) % highValueProducts.length;
@@ -1355,7 +1349,7 @@
                                 }
                                 // Avanza l'indice per la prossima rotazione
                                 rotationIndex = (rotationIndex + featuredCount) % highValueProducts.length;
-                            } else {
+                            } else if (filteredProducts.length > 0) {
                                 // Fallback: usa tutti i prodotti se non ci sono prodotti ad alto valore
                                 for (let i = 0; i < featuredCount; i++) {
                                     const index = (rotationIndex + i) % filteredProducts.length;
@@ -1367,7 +1361,6 @@
                             const featuredContainer = document.querySelector('#featured-products');
                             if (featuredContainer) {
                                 featuredContainer.innerHTML = featuredProducts.map((product, index) => {
-                                    const priceRange = getPriceRange(product.category);
                                     return `
                                     <div class="col-md-6">
                                         <div class="card h-100 border-0 shadow-sm">
@@ -1418,7 +1411,6 @@
                     // Navigazione manuale con frecce
                     const prevBtn = document.getElementById('prev-products');
                     const nextBtn = document.getElementById('next-products');
-                    const featuredCount = 6;
                     
                     if (prevBtn && nextBtn) {
                         prevBtn.addEventListener('click', () => {
