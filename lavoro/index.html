@@ -46,18 +46,39 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Navigazione principale">
-        <div class="container">
-            <a class="navbar-brand" href="index.html" aria-label="Smart Choices Guide - Home">
-                <i class="fas fa-shopping-cart me-2" aria-hidden="true"></i>
-                Smart Choices Guide
+        <div class="container d-flex align-items-center">
+            <!-- Logo Block (Left) -->
+            <a class="navbar-logo-block d-flex align-items-center text-decoration-none" href="index.html" aria-label="Smart Choices Guide - Home">
+                <img src="images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon">
+                <div class="navbar-logo-text">
+                    <div class="navbar-logo-title">SMART CHOICES GUIDE</div>
+                    <div class="navbar-logo-subtitle">Migliori Guide d'Acquisto Amazon | Recensioni e Offerte</div>
+                </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle menu">
+
+            <!-- Spacer (Center) -->
+            <div class="flex-grow-1"></div>
+
+            <!-- Search Bar (Right) -->
+            <div class="navbar-search-container d-none d-lg-block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cerca per categoria...">
+                    <button class="btn btn-primary" type="button" aria-label="Cerca">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" aria-current="page">Home</a>
+                        <a class="nav-link active" href="index.html" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
@@ -133,31 +154,24 @@
                     </div>
                     <!-- Macro-Bottoni (Tag) -->
                     <div class="d-flex gap-2 mt-3 flex-wrap justify-content-center">
-                        <button class="btn btn-outline-secondary btn-sm macro-tag" data-category="Tech">Tech</button>
-                        <button class="btn btn-outline-secondary btn-sm macro-tag" data-category="Casa">Casa</button>
-                        <button class="btn btn-outline-secondary btn-sm macro-tag" data-category="Moda">Moda</button>
-                        <button class="btn btn-outline-secondary btn-sm macro-tag" data-category="Cinema">Cinema</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Hero Dynamic Banner -->
-            <div class="row justify-content-center mt-4">
-                <div class="col-md-8">
-                    <div class="alert alert-info border-0 shadow-lg" style="border-radius: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <i class="fas fa-tshirt fa-2x me-3"></i>
-                            <div class="text-start">
-                                <h5 class="fw-bold mb-1">🔥 Abbigliamento in Tendenza</h5>
-                                <p class="mb-0 small">Magliette e accessori delle serie TV più amate</p>
-                            </div>
-                            <a href="cinema-tv/index.html" class="btn btn-light text-primary fw-bold ms-3">
-                                <i class="fas fa-arrow-right me-1"></i>Vedi
-                            </a>
-                        </div>
+    <!-- Trust Section -->
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="p-4 bg-light rounded-3 border-0 shadow-sm">
+                    <div class="d-flex align-items-center justify-content-center mb-3">
+                        <i class="fas fa-shield-alt text-primary fa-2x me-3"></i>
+                        <h3 class="fw-bold mb-0">Perché fidarsi di noi?</h3>
                     </div>
+                    <p class="lead text-muted mb-0">
+                        Selezioniamo ogni giorno i prodotti migliori di Amazon basandoci su <strong>recensioni reali</strong>, <strong>test tecnici</strong> e <strong>rapporto qualità-prezzo</strong>. Tu scegli la categoria, noi ti garantiamo la scelta migliore.
+                    </p>
                 </div>
             </div>
         </div>
@@ -184,23 +198,24 @@
                         </small>
                     </div>
                 </div>
-                <div class="row g-4" id="featured-products">
-                    <!-- Product 1 - Cucina -->
-                    <div class="col-md-6">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body p-4 text-center">
-                                <div class="text-primary mb-3">
-                                    <i class="fas fa-cookie fa-3x"></i>
-                                </div>
-                                <h5 class="card-title fw-bold">Pavesi Snack Ringo Cacao</h5>
-                                <p class="card-text text-muted small">Cucina Moderna & Tech</p>
-                                <a href="https://www.amazon.it/dp/B0DG71YRCC?psc=1&linkCode=ll2&tag=l0c39-21&linkId=38fbab01e61575a1416c2107c3d9cf67&ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
-                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                                </a>
-                            </div>
+                
+                <!-- Carousel Navigation -->
+                <div class="row mb-3">
+                    <div class="col-12 text-center">
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <button id="prev-products" class="btn btn-outline-primary btn-sm" aria-label="Prodotti precedenti">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <span class="text-muted small">Naviga tra le migliori scelte</span>
+                            <button id="next-products" class="btn btn-outline-primary btn-sm" aria-label="Prodotti successivi">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
                         </div>
                     </div>
-                    <!-- Product 2 - Smart Home -->
+                </div>
+                
+                <div class="row g-4" id="featured-products">
+                    <!-- Product 1 - Smart Home -->
                     <div class="col-md-6">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body p-4 text-center">
@@ -276,22 +291,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center mt-4">
-                    <div class="col-md-8">
-                        <div class="alert alert-info border-0 shadow-lg" style="border-radius: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <i class="fas fa-tshirt fa-2x me-3"></i>
-                                <div class="text-start">
-                                    <h5 class="fw-bold mb-1">🔥 Abbigliamento in Tendenza</h5>
-                                    <p class="mb-0 small">Magliette e accessori delle serie TV più amate</p>
-                                </div>
-                                <a href="cinema-tv/index.html" class="btn btn-light text-primary fw-bold ms-3">
-                                    <i class="fas fa-arrow-right me-1"></i>Vedi
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -313,38 +312,7 @@
         
         <div class="site-grid" id="sitesGrid" aria-label="Lista guide specializzate">
 
-            <div class="site-card" role="article" aria-labelledby="card-17-title" id="card-17" data-category="Moda">
-                <div class="site-header site-header-cinema">
-                    <div class="site-icon">
-                        <i class="fas fa-film" aria-hidden="true"></i>
-                    </div>
-                    <h3 id="card-17-title">Abbigliamento Cinema & TV</h3>
-                </div>
-                <div class="site-content">
-                    <span class="badge-category">
-                        Cinema & TV
-                    </span>
-                    <h4 class="site-title">Abbigliamento Cinema & TV</h4>
-                    <p class="site-description">Magliette e accessori ispirati alle serie TV più amate: The Boys, Squid Game, Wednesday e altri popolari.</p>
-                    
-                    <div class="site-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">39</div>
-                            <div class="stat-label">Prodotti</div>
-                        </div>
-                                                <div class="stat-item">
-                            <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
-                        </div>
-                    </div>
-                    
-                    <a href="cinema-tv/index.html" class="btn-site" onclick="showLoading()">
-                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
-                    </a>
-                </div>
-            </div>
-
-
+            <!-- Cucina Moderna & Tech (Prima - 103 clic, alto valore) -->
             <div class="site-card" role="article" aria-labelledby="card-1-title" id="card-1" data-category="Casa">
                 <div class="site-header site-header-cucina">
                     <div class="site-icon">
@@ -361,12 +329,12 @@
                     
                     <div class="site-stats">
                         <div class="stat-item">
-                            <div class="stat-number">23</div>
+                            <div class="stat-number">30</div>
                             <div class="stat-label">Prodotti</div>
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
@@ -376,165 +344,7 @@
                 </div>
             </div>
 
-            <div class="site-card" role="article" aria-labelledby="card-14-title" id="card-14" data-category="Casa">
-                <div class="site-header site-header-arredamento">
-                    <div class="site-icon">
-                        <i class="fas fa-gem" aria-hidden="true"></i>
-                    </div>
-                    <h3 id="card-14-title">Casa & Decorazione</h3>
-                </div>
-                <div class="site-content">
-                    <span class="badge-category">
-                        Casa
-                    </span>
-                    <h4 class="site-title">Casa & Decorazione</h4>
-                    <p class="site-description">Arredamento Casa - Mobili, accessori e complementi d'arredo per rendere la tua casa accogliente e stilosa.</p>
-                    
-                    <div class="site-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">15</div>
-                            <div class="stat-label">Prodotti</div>
-                        </div>
-                                                <div class="stat-item">
-                            <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
-                        </div>
-                    </div>
-                    
-                    <a href="arredamento-casa/index.html" class="btn-site" onclick="showLoading()">
-                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
-                    </a>
-                </div>
-            </div>
-
-            <div class="site-card" role="article" aria-labelledby="card-16-title" id="card-16" data-category="Tech">
-                <div class="site-header site-header-smartphone">
-                    <div class="site-icon">
-                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-                    </div>
-                    <h3 id="card-16-title">Smartphone & Tech</h3>
-                </div>
-                <div class="site-content">
-                    <span class="badge-category">
-                        Tech
-                    </span>
-                    <h4 class="site-title">Smartphone & Tech</h4>
-                    <p class="site-description">I migliori smartphone e accessori tech per prestazioni e fotografia professionale.</p>
-                    
-                    <div class="site-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">11</div>
-                            <div class="stat-label">Prodotti</div>
-                        </div>
-                                                <div class="stat-item">
-                            <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
-                        </div>
-                    </div>
-                    
-                    <a href="smartphone-tech/index.html" class="btn-site" onclick="showLoading()">
-                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
-                    </a>
-                </div>
-            </div>
-
-            <div class="site-card" role="article" aria-labelledby="card-3-title" id="card-3" data-category="Sport">
-                <div class="site-header site-header-fitness">
-                    <div class="site-icon">
-                        <i class="fas fa-dumbbell" aria-hidden="true"></i>
-                    </div>
-                    <h3 id="card-3-title">Fitness Casa</h3>
-                </div>
-                <div class="site-content">
-                    <span class="badge-category">
-                        Sport
-                    </span>
-                    <h4 class="site-title">Fitness Casa</h4>
-                    <p class="site-description">Tutto l'occorrente per un allenamento professionale e sicuro direttamente a casa tua.</p>
-                    
-                    <div class="site-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">16</div>
-                            <div class="stat-label">Prodotti</div>
-                        </div>
-                                                <div class="stat-item">
-                            <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
-                        </div>
-                    </div>
-                    
-                    <a href="fitness-casa/index.html" class="btn-site" onclick="showLoading()">
-                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="site-card" role="article" aria-labelledby="card-7-title" id="card-7" data-category="Casa">
-                <div class="site-header site-header-pet">
-                    <div class="site-icon">
-                        <i class="fas fa-paw" aria-hidden="true"></i>
-                    </div>
-                    <h3 id="card-7-title">Pet Care Intelligente</h3>
-                </div>
-                <div class="site-content">
-                    <span class="badge-category">
-                        Animali
-                    </span>
-                    <h4 class="site-title">Pet Care Intelligente</h4>
-                    <p class="site-description">I migliori accessori per il benessere dei tuoi amici a quattro zampe.</p>
-                    
-                    <div class="site-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">22</div>
-                            <div class="stat-label">Prodotti</div>
-                        </div>
-                                                <div class="stat-item">
-                            <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
-                        </div>
-                    </div>
-                    
-                    <a href="pet-care-intelligente/index.html" class="btn-site" onclick="showLoading()">
-                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
-                    </a>
-                </div>
-            </div>
-
-
-
-
-            <div class="site-card" role="article" aria-labelledby="card-2-title" id="card-2" data-category="Casa">
-                <div class="site-header site-header-smarthome">
-                    <div class="site-icon">
-                        <i class="fas fa-box" aria-hidden="true"></i>
-                    </div>
-                    <h3 id="card-2-title">Smart Home & Domotica</h3>
-                </div>
-                <div class="site-content">
-                    <span class="badge-category">
-                        Smart Home
-                    </span>
-                    <h4 class="site-title">Smart Home & Domotica</h4>
-                    <p class="site-description">Luci smart, telecamere e dispositivi intelligenti per la casa.</p>
-                    
-                    <div class="site-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">12</div>
-                            <div class="stat-label">Prodotti</div>
-                        </div>
-                                                <div class="stat-item">
-                            <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
-                        </div>
-                    </div>
-                    
-                    <a href="smart-home-domotica/index.html" class="btn-site" onclick="showLoading()">
-                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
-                    </a>
-                </div>
-            </div>
-
+            <!-- Elite Gaming Gear (Seconda - Computer/Tablet: 59 clic, hardware costoso) -->
             <div class="site-card" role="article" aria-labelledby="card-9-title" id="card-9" data-category="Tech">
                 <div class="site-header site-header-gaming">
                     <div class="site-icon">
@@ -556,7 +366,7 @@
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
@@ -566,135 +376,167 @@
                 </div>
             </div>
 
-            <!-- Giardinaggio Urbano -->
-            <div class="site-card" role="article" aria-labelledby="card-4-title" id="card-4" data-category="Casa">
-                <div class="site-header site-header-giardino">
+            <!-- Smartphone & Tech (Nascosto - Telefonia: 15 clic) -->
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-16-title" id="card-16" data-category="Tech">
+                <div class="site-header site-header-smartphone">
                     <div class="site-icon">
-                        <i class="fas fa-seedling" aria-hidden="true"></i>
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                     </div>
-                    <h3 id="card-4-title">Giardinaggio Urbano</h3>
+                    <h3 id="card-16-title">Smartphone & Tech</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
-                        Giardinaggio
+                        Tech
                     </span>
-                    <h4 class="site-title">Giardinaggio Urbano</h4>
-                    <p class="site-description">Crea il tuo angolo verde in città con kit idroponica e lampade crescita.</p>
+                    <h4 class="site-title">Smartphone & Tech</h4>
+                    <p class="site-description">I migliori smartphone e accessori tech per prestazioni e fotografia professionale.</p>
                     
                     <div class="site-stats">
                         <div class="stat-item">
-                            <div class="stat-number">10</div>
+                            <div class="stat-number">11</div>
                             <div class="stat-label">Prodotti</div>
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
-                    <a href="giardinaggio-urbano/index.html" class="btn-site" onclick="showLoading()">
+                    <a href="smartphone-tech/index.html" class="btn-site" onclick="showLoading()">
                         <i class="fas fa-arrow-right me-2"></i>Esplora Sito
                     </a>
                 </div>
             </div>
 
-            <!-- Bellezza & Skincare -->
-            <div class="site-card" role="article" aria-labelledby="card-12-title" id="card-12" data-category="Benessere">
-                <div class="site-header site-header-bellezza">
+            <!-- Smart Home & Domotica (Terza - Casa: 72 clic) -->
+            <div class="site-card" role="article" aria-labelledby="card-2-title" id="card-2" data-category="Casa">
+                <div class="site-header site-header-smarthome">
                     <div class="site-icon">
-                        <i class="fas fa-spa" aria-hidden="true"></i>
+                        <i class="fas fa-box" aria-hidden="true"></i>
                     </div>
-                    <h3 id="card-12-title">Bellezza & Skincare</h3>
+                    <h3 id="card-2-title">Smart Home & Domotica</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
-                        Bellezza
+                        Smart Home
                     </span>
-                    <h4 class="site-title">Bellezza & Skincare</h4>
-                    <p class="site-description">Prodotti skincare, makeup e accessori per la cura personale.</p>
+                    <h4 class="site-title">Smart Home & Domotica</h4>
+                    <p class="site-description">Luci smart, telecamere e dispositivi intelligenti per la casa.</p>
                     
                     <div class="site-stats">
                         <div class="stat-item">
-                            <div class="stat-number">8</div>
+                            <div class="stat-number">12</div>
                             <div class="stat-label">Prodotti</div>
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
-                    <a href="bellezza-skincare/index.html" class="btn-site" onclick="showLoading()">
+                    <a href="smart-home-domotica/index.html" class="btn-site" onclick="showLoading()">
                         <i class="fas fa-arrow-right me-2"></i>Esplora Sito
                     </a>
                 </div>
             </div>
 
-            <!-- Moda Uomo -->
-            <div class="site-card" role="article" aria-labelledby="card-20-title" id="card-20" data-category="Moda">
-                <div class="site-header site-header-moda-uomo">
+            <!-- Fitness Casa (Quarta - Sport: 49 clic) -->
+            <div class="site-card" role="article" aria-labelledby="card-3-title" id="card-3" data-category="Sport">
+                <div class="site-header site-header-fitness">
                     <div class="site-icon">
-                        <i class="fas fa-user-tie" aria-hidden="true"></i>
+                        <i class="fas fa-dumbbell" aria-hidden="true"></i>
                     </div>
-                    <h3 id="card-20-title">Moda Uomo</h3>
+                    <h3 id="card-3-title">Fitness Casa</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
-                        Moda
+                        Sport
                     </span>
-                    <h4 class="site-title">Moda Uomo</h4>
-                    <p class="site-description">Abbigliamento e accessori maschili per ogni stile.</p>
+                    <h4 class="site-title">Fitness Casa</h4>
+                    <p class="site-description">Tutto l'occorrente per un allenamento professionale e sicuro direttamente a casa tua.</p>
                     
                     <div class="site-stats">
                         <div class="stat-item">
-                            <div class="stat-number">10</div>
+                            <div class="stat-number">16</div>
                             <div class="stat-label">Prodotti</div>
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
-                    <a href="moda-uomo/index.html" class="btn-site" onclick="showLoading()">
+                    <a href="fitness-casa/index.html" class="btn-site" onclick="showLoading()">
                         <i class="fas fa-arrow-right me-2"></i>Esplora Sito
                     </a>
                 </div>
             </div>
 
-            <!-- Accessori Moda -->
-            <div class="site-card" role="article" aria-labelledby="card-21-title" id="card-21" data-category="Moda">
-                <div class="site-header site-header-accessori">
+            <!-- Abbigliamento Cinema & TV (Categoria economica - spostata giù) -->
+            <div class="site-card" role="article" aria-labelledby="card-17-title" id="card-17" data-category="Moda">
+                <div class="site-header site-header-cinema">
                     <div class="site-icon">
-                        <i class="fas fa-glasses" aria-hidden="true"></i>
+                        <i class="fas fa-film" aria-hidden="true"></i>
                     </div>
-                    <h3 id="card-21-title">Accessori Moda</h3>
+                    <h3 id="card-17-title">Abbigliamento Cinema & TV</h3>
                 </div>
                 <div class="site-content">
                     <span class="badge-category">
-                        Moda
+                        Cinema & TV
                     </span>
-                    <h4 class="site-title">Accessori Moda</h4>
-                    <p class="site-description">Occhiali, cinture, gioielli e accessori per completare il tuo look.</p>
+                    <h4 class="site-title">Abbigliamento Cinema & TV</h4>
+                    <p class="site-description">Magliette e accessori ispirati alle serie TV più amate: The Boys, Squid Game, Wednesday e altri popolari.</p>
                     
                     <div class="site-stats">
                         <div class="stat-item">
-                            <div class="stat-number">7</div>
+                            <div class="stat-number">39</div>
                             <div class="stat-label">Prodotti</div>
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
-                    <a href="accessori-moda/index.html" class="btn-site" onclick="showLoading()">
+                    <a href="cinema-tv/index.html" class="btn-site" onclick="showLoading()">
                         <i class="fas fa-arrow-right me-2"></i>Esplora Sito
                     </a>
                 </div>
             </div>
 
-            <!-- Viaggi & Vacanze -->
+            <!-- Casa & Decorazione (Nascosto - Arredamento giardino: 14 clic) -->
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-14-title" id="card-14" data-category="Casa">
+                <div class="site-header site-header-arredamento">
+                    <div class="site-icon">
+                        <i class="fas fa-gem" aria-hidden="true"></i>
+                    </div>
+                    <h3 id="card-14-title">Casa & Decorazione</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Casa
+                    </span>
+                    <h4 class="site-title">Casa & Decorazione</h4>
+                    <p class="site-description">Arredamento Casa - Mobili, accessori e complementi d'arredo per rendere la tua casa accogliente e stilosa.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                                                <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
+                        </div>
+                    </div>
+                    
+                    <a href="arredamento-casa/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <!-- Viaggi & Vacanze (Quinta - Valigeria: 33 clic) -->
             <div class="site-card" role="article" aria-labelledby="card-15-title" id="card-15" data-category="Viaggi">
                 <div class="site-header site-header-viaggi-vacanze">
                     <div class="site-icon">
@@ -716,7 +558,7 @@
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
@@ -726,39 +568,7 @@
                 </div>
             </div>
 
-            <!-- DVD & Blu-ray -->
-            <div class="site-card" role="article" aria-labelledby="card-22-title" id="card-22" data-category="Cinema">
-                <div class="site-header site-header-dvd">
-                    <div class="site-icon">
-                        <i class="fas fa-compact-disc" aria-hidden="true"></i>
-                    </div>
-                    <h3 id="card-22-title">DVD & Blu-ray</h3>
-                </div>
-                <div class="site-content">
-                    <span class="badge-category">
-                        Cinema
-                    </span>
-                    <h4 class="site-title">DVD & Blu-ray</h4>
-                    <p class="site-description">Film, collezioni e edizioni speciali per i tuoi momenti di relax.</p>
-                    
-                    <div class="site-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">13</div>
-                            <div class="stat-label">Prodotti</div>
-                        </div>
-                                                <div class="stat-item">
-                            <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
-                        </div>
-                    </div>
-                    
-                    <a href="dvd-bluray/index.html" class="btn-site" onclick="showLoading()">
-                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
-                    </a>
-                </div>
-            </div>
-
-            <!-- Ufficio Produttivo -->
+            <!-- Ufficio Produttivo (Settima - Fai da te: 24 clic) -->
             <div class="site-card" role="article" aria-labelledby="card-5-title" id="card-5" data-category="Ufficio">
                 <div class="site-header site-header-ufficio">
                     <div class="site-icon">
@@ -780,7 +590,7 @@
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
@@ -791,7 +601,7 @@
             </div>
 
             <!-- Fotografia Mobile -->
-            <div class="site-card" role="article" aria-labelledby="card-6-title" id="card-6" data-category="Tech">
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-6-title" id="card-6" data-category="Tech">
                 <div class="site-header site-header-foto">
                     <div class="site-icon">
                         <i class="fas fa-camera" aria-hidden="true"></i>
@@ -812,7 +622,7 @@
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
@@ -822,40 +632,8 @@
                 </div>
             </div>
 
-            <!-- Cura Macchina Caffè -->
-            <div class="site-card" role="article" aria-labelledby="card-8-title" id="card-8" data-category="Cucina">
-                <div class="site-header site-header-caffe">
-                    <div class="site-icon">
-                        <i class="fas fa-coffee" aria-hidden="true"></i>
-                    </div>
-                    <h3 id="card-8-title">Cura Macchina Caffè</h3>
-                </div>
-                <div class="site-content">
-                    <span class="badge-category">
-                        Cucina
-                    </span>
-                    <h4 class="site-title">Cura Macchina Caffè</h4>
-                    <p class="site-description">Accessori e manutenzione per macchine da caffè.</p>
-                    
-                    <div class="site-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">7</div>
-                            <div class="stat-label">Prodotti</div>
-                        </div>
-                                                <div class="stat-item">
-                            <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
-                        </div>
-                    </div>
-                    
-                    <a href="cura-macchina-caffe/index.html" class="btn-site" onclick="showLoading()">
-                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
-                    </a>
-                </div>
-            </div>
-
             <!-- Libri & E-Reader -->
-            <div class="site-card" role="article" aria-labelledby="card-11-title" id="card-11" data-category="Cultura">
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-11-title" id="card-11" data-category="Cultura">
                 <div class="site-header site-header-libri">
                     <div class="site-icon">
                         <i class="fas fa-book" aria-hidden="true"></i>
@@ -876,7 +654,7 @@
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
@@ -886,7 +664,7 @@
                 </div>
             </div>
 
-            <!-- Outdoor & Camping -->
+            <!-- Outdoor & Camping (Ottava - Componenti elettronici: 22 clic) -->
             <div class="site-card" role="article" aria-labelledby="card-13-title" id="card-13" data-category="Sport">
                 <div class="site-header site-header-outdoor">
                     <div class="site-icon">
@@ -908,7 +686,7 @@
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
@@ -918,40 +696,8 @@
                 </div>
             </div>
 
-            <!-- Moda Donna -->
-            <div class="site-card" role="article" aria-labelledby="card-18-title" id="card-18" data-category="Moda">
-                <div class="site-header site-header-moda-donna">
-                    <div class="site-icon">
-                        <i class="fas fa-female" aria-hidden="true"></i>
-                    </div>
-                    <h3 id="card-18-title">Moda Donna</h3>
-                </div>
-                <div class="site-content">
-                    <span class="badge-category">
-                        Moda
-                    </span>
-                    <h4 class="site-title">Moda Donna</h4>
-                    <p class="site-description">Abbigliamento e accessori femminili per ogni occasione.</p>
-                    
-                    <div class="site-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">12</div>
-                            <div class="stat-label">Prodotti</div>
-                        </div>
-                                                <div class="stat-item">
-                            <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
-                        </div>
-                    </div>
-                    
-                    <a href="moda-donna/index.html" class="btn-site" onclick="showLoading()">
-                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
-                    </a>
-                </div>
-            </div>
-
             <!-- Benessere Personale -->
-            <div class="site-card" role="article" aria-labelledby="card-19-title" id="card-19" data-category="Benessere">
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-19-title" id="card-19" data-category="Benessere">
                 <div class="site-header site-header-benessere">
                     <div class="site-icon">
                         <i class="fas fa-heart" aria-hidden="true"></i>
@@ -972,7 +718,7 @@
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
@@ -982,40 +728,8 @@
                 </div>
             </div>
 
-            <!-- Tech -->
-            <div class="site-card" role="article" aria-labelledby="card-10-title" id="card-10" data-category="Tech">
-                <div class="site-header site-header-tech">
-                    <div class="site-icon">
-                        <i class="fas fa-microchip" aria-hidden="true"></i>
-                    </div>
-                    <h3 id="card-10-title">Tech & Accessori</h3>
-                </div>
-                <div class="site-content">
-                    <span class="badge-category">
-                        Tech
-                    </span>
-                    <h4 class="site-title">Tech & Accessori</h4>
-                    <p class="site-description">Accessori tech e gadget per la vita digitale.</p>
-                    
-                    <div class="site-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">9</div>
-                            <div class="stat-label">Prodotti</div>
-                        </div>
-                                                <div class="stat-item">
-                            <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
-                        </div>
-                    </div>
-                    
-                    <a href="tech/index.html" class="btn-site" onclick="showLoading()">
-                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
-                    </a>
-                </div>
-            </div>
-
             <!-- Mare e Spiaggia -->
-            <div class="site-card" role="article" aria-labelledby="card-23-title" id="card-23" data-category="Viaggi">
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-23-title" id="card-23" data-category="Viaggi">
                 <div class="site-header site-header-mare">
                     <div class="site-icon">
                         <i class="fas fa-umbrella-beach" aria-hidden="true"></i>
@@ -1036,7 +750,7 @@
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
@@ -1046,40 +760,8 @@
                 </div>
             </div>
 
-            <!-- Profumi & Bellezza -->
-            <div class="site-card" role="article" aria-labelledby="card-24-title" id="card-24" data-category="Benessere">
-                <div class="site-header site-header-profumi">
-                    <div class="site-icon">
-                        <i class="fas fa-spray-can" aria-hidden="true"></i>
-                    </div>
-                    <h3 id="card-24-title">Profumi & Bellezza</h3>
-                </div>
-                <div class="site-content">
-                    <span class="badge-category">
-                        Bellezza
-                    </span>
-                    <h4 class="site-title">Profumi & Bellezza</h4>
-                    <p class="site-description">Profumi e prodotti di bellezza per la cura personale.</p>
-                    
-                    <div class="site-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">2</div>
-                            <div class="stat-label">Prodotti</div>
-                        </div>
-                                                <div class="stat-item">
-                            <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
-                        </div>
-                    </div>
-                    
-                    <a href="profumi-bellezza/index.html" class="btn-site" onclick="showLoading()">
-                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
-                    </a>
-                </div>
-            </div>
-
             <!-- Sostenibilità & Eco-Friendly -->
-            <div class="site-card" role="article" aria-labelledby="card-25-title" id="card-25" data-category="Sostenibilità">
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-25-title" id="card-25" data-category="Sostenibilità">
                 <div class="site-header site-header-sostenibilita">
                     <div class="site-icon">
                         <i class="fas fa-leaf" aria-hidden="true"></i>
@@ -1100,7 +782,7 @@
                         </div>
                                                 <div class="stat-item">
                             <div class="stat-number">Prime</div>
-                            <div class="stat-label">Spedizione</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
                         </div>
                     </div>
                     
@@ -1109,6 +791,206 @@
                     </a>
                 </div>
             </div>
+
+            <!-- CATEGORIE ECONOMICHE (Spostate in fondo) -->
+
+            <!-- Accessori Moda (Categoria economica) -->
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-21-title" id="card-21" data-category="Moda">
+                <div class="site-header site-header-accessori">
+                    <div class="site-icon">
+                        <i class="fas fa-glasses" aria-hidden="true"></i>
+                    </div>
+                    <h3 id="card-21-title">Accessori Moda</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Moda
+                    </span>
+                    <h4 class="site-title">Accessori Moda</h4>
+                    <p class="site-description">Occhiali, cinture, gioielli e accessori per completare il tuo look.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                                                <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
+                        </div>
+                    </div>
+                    
+                    <a href="accessori-moda/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <!-- Moda Uomo (Nascosto - Abbigliamento ha alto tasso reso) -->
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-20-title" id="card-20" data-category="Moda">
+                <div class="site-header site-header-moda-uomo">
+                    <div class="site-icon">
+                        <i class="fas fa-user-tie" aria-hidden="true"></i>
+                    </div>
+                    <h3 id="card-20-title">Moda Uomo</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Moda
+                    </span>
+                    <h4 class="site-title">Moda Uomo</h4>
+                    <p class="site-description">Abbigliamento e accessori maschili per ogni stile.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                                                <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
+                        </div>
+                    </div>
+                    
+                    <a href="moda-uomo/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <!-- Moda Donna (Categoria economica) -->
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-18-title" id="card-18" data-category="Moda">
+                <div class="site-header site-header-moda-donna">
+                    <div class="site-icon">
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                    </div>
+                    <h3 id="card-18-title">Moda Donna</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Moda
+                    </span>
+                    <h4 class="site-title">Moda Donna</h4>
+                    <p class="site-description">Abbigliamento e accessori femminili per ogni occasione.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                                                <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
+                        </div>
+                    </div>
+                    
+                    <a href="moda-donna/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <!-- DVD & Blu-ray (Categoria economica) -->
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-22-title" id="card-22" data-category="Cinema">
+                <div class="site-header site-header-dvd">
+                    <div class="site-icon">
+                        <i class="fas fa-compact-disc" aria-hidden="true"></i>
+                    </div>
+                    <h3 id="card-22-title">DVD & Blu-ray</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Cinema
+                    </span>
+                    <h4 class="site-title">DVD & Blu-ray</h4>
+                    <p class="site-description">Film, collezioni e edizioni speciali per i tuoi momenti di relax.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">13</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                                                <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
+                        </div>
+                    </div>
+                    
+                    <a href="dvd-bluray/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tech & Accessori (Categoria economica) -->
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-10-title" id="card-10" data-category="Tech">
+                <div class="site-header site-header-tech">
+                    <div class="site-icon">
+                        <i class="fas fa-microchip" aria-hidden="true"></i>
+                    </div>
+                    <h3 id="card-10-title">Tech & Accessori</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Tech
+                    </span>
+                    <h4 class="site-title">Tech & Accessori</h4>
+                    <p class="site-description">Accessori tech e gadget per la vita digitale.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">9</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                                                <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
+                        </div>
+                    </div>
+                    
+                    <a href="tech/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profumi & Bellezza (Categoria economica) -->
+            <div class="site-card hidden-category" role="article" aria-labelledby="card-24-title" id="card-24" data-category="Benessere">
+                <div class="site-header site-header-profumi">
+                    <div class="site-icon">
+                        <i class="fas fa-spray-can" aria-hidden="true"></i>
+                    </div>
+                    <h3 id="card-24-title">Profumi & Bellezza</h3>
+                </div>
+                <div class="site-content">
+                    <span class="badge-category">
+                        Bellezza
+                    </span>
+                    <h4 class="site-title">Profumi & Bellezza</h4>
+                    <p class="site-description">Profumi e prodotti di bellezza per la cura personale.</p>
+                    
+                    <div class="site-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Prodotti</div>
+                        </div>
+                                                <div class="stat-item">
+                            <div class="stat-number">Prime</div>
+                            <div class="stat-label">Disponibile con Spedizione Prime</div>
+                        </div>
+                    </div>
+                    
+                    <a href="profumi-bellezza/index.html" class="btn-site" onclick="showLoading()">
+                        <i class="fas fa-arrow-right me-2"></i>Esplora Sito
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <button id="toggleCategoriesBtn" class="btn btn-outline-primary btn-lg" onclick="toggleAllCategories()">
+                <i class="fas fa-th-large me-2"></i>Scopri tutte le categorie
+            </button>
         </div>
     </section>
 
@@ -1208,7 +1090,7 @@
                         <a href="bounty.html" class="btn btn-outline-warning btn-sm me-2">
                             <i class="fas fa-gift me-2" aria-hidden="true"></i>Servizi Amazon
                         </a>
-                        <a href="#" class="btn btn-outline-primary btn-sm">
+                        <a href="tutte-categorie.html" class="btn btn-outline-primary btn-sm">
                             <i class="fas fa-tshirt me-2" aria-hidden="true"></i>Prodotti
                         </a>
                     </div>
@@ -1238,8 +1120,8 @@
             const siteCards = document.querySelectorAll('.site-card');
             const categoryMapping = {
                 'Cucina': 'Casa',
-                'Smart Home': 'Tech',
-                'Domotica': 'Tech',
+                'Smart Home': 'Casa',
+                'Domotica': 'Casa',
                 'Fitness': 'Sport',
                 'Giardinaggio': 'Casa',
                 'Ufficio': 'Ufficio',
@@ -1297,6 +1179,11 @@
                     const category = card.dataset.category?.toLowerCase() || '';
                     const content = title + ' ' + description + ' ' + category;
                     
+                    // Rimuovi hidden-category quando si filtra per mostrare tutte le card potenzialmente rilevanti
+                    if (categoryFilter) {
+                        card.classList.remove('hidden-category');
+                    }
+                    
                     let matchesSearch = true;
                     let matchesCategory = true;
                     
@@ -1351,6 +1238,34 @@
                 });
             });
 
+            // Funzione per mostrare/nascondere tutte le categorie
+            window.toggleAllCategories = function() {
+                const hiddenCards = document.querySelectorAll('.site-card.hidden-category');
+                const btn = document.getElementById('toggleCategoriesBtn');
+                
+                if (hiddenCards.length > 0) {
+                    // Mostra tutte le categorie
+                    hiddenCards.forEach(card => {
+                        card.classList.remove('hidden-category');
+                    });
+                    btn.innerHTML = '<i class="fas fa-th-large me-2"></i>Nascondi categorie extra';
+                } else {
+                    // Nascondi le categorie extra
+                    const allCards = document.querySelectorAll('.site-card');
+                    const visibleCards = document.querySelectorAll('.site-card:not(.hidden-category)');
+                    
+                    // Nascondi le card che non sono tra le 8 principali (basato su dati Amazon)
+                    const topCardIds = ['card-1', 'card-9', 'card-2', 'card-3', 'card-15', 'card-7', 'card-5', 'card-13'];
+                    allCards.forEach(card => {
+                        if (!topCardIds.includes(card.id)) {
+                            card.classList.add('hidden-category');
+                        }
+                    });
+                    
+                    btn.innerHTML = '<i class="fas fa-th-large me-2"></i>Scopri tutte le categorie';
+                }
+            };
+
             // Sistema di rotazione oraria dei prodotti
             // Carica prodotti dal file JSON esterno
             fetch('products.json')
@@ -1371,6 +1286,35 @@
                     }
 
                     // Funzione per renderizzare prodotti
+                    // Mappa prezzi indicativi per categoria
+                    const priceRanges = {
+                        'Cucina': '€10-200',
+                        'Smart Home': '€10-200',
+                        'Fitness': '€10-200',
+                        'Giardinaggio': '€20-200',
+                        'Ufficio': '€10-100',
+                        'Fotografia': '€50-500',
+                        'Pet Care': '€20-300',
+                        'Caffè': '€50-500',
+                        'Gaming': '€50-500',
+                        'Tech': '€10-200',
+                        'Libri': '€10-50',
+                        'Benessere': '€10-100',
+                        'Outdoor': '€20-200',
+                        'Casa': '€20-200',
+                        'Viaggi': '€20-200',
+                        'Smartphone': '€100-1000',
+                        'Cinema': '€10-50',
+                        'Moda Donna': '€10-100',
+                        'Benessere Relax': '€10-100',
+                        'Moda Uomo': '€10-100',
+                        'Accessori Moda': '€10-50'
+                    };
+
+                    function getPriceRange(category) {
+                        return priceRanges[category] || '€10-100';
+                    }
+
                     function renderProducts() {
                         let filteredProducts = filterProductsBySearch(allProducts, currentSearch);
                         
@@ -1379,56 +1323,145 @@
                             filteredProducts = allProducts;
                         }
 
-                        // Mostra 6 prodotti partendo dall'indice corrente
-                        const featuredCount = 6;
-                        const featuredProducts = [];
-                        
+                        // Filtra solo prodotti ad alto valore per rotazione Hero
+                        const highValueCategories = ['Cucina', 'Elite Gaming Gear', 'Gaming', 'Smart Home', 'Domotica'];
+                        const highValueProducts = filteredProducts.filter(p => 
+                            highValueCategories.includes(p.category)
+                        );
+
                         // Se c'è una ricerca attiva, mostra i risultati filtrati senza rotazione
                         if (currentSearch) {
+                            const featuredCount = 6;
+                            const featuredProducts = [];
                             for (let i = 0; i < Math.min(featuredCount, filteredProducts.length); i++) {
                                 featuredProducts.push(filteredProducts[i]);
                             }
-                        } else {
-                            // Rotazione normale basata su tutti i prodotti
-                            for (let i = 0; i < featuredCount; i++) {
-                                const index = (rotationIndex + i) % allProducts.length;
-                                featuredProducts.push(allProducts[index]);
-                            }
-                            // Avanza l'indice per la prossima rotazione
-                            rotationIndex = (rotationIndex + featuredCount) % allProducts.length;
-                        }
-                        const featuredContainer = document.querySelector('#featured-products');
-                        if (featuredContainer) {
-                            featuredContainer.innerHTML = featuredProducts.map((product, index) => `
-                                <div class="col-md-6">
-                                    <div class="card h-100 border-0 shadow-sm">
-                                        <div class="card-body p-4 text-center">
-                                            <div class="text-primary mb-3">
-                                                <i class="fas ${product.icon} fa-3x"></i>
+                            const featuredContainer = document.querySelector('#featured-products');
+                            if (featuredContainer) {
+                                featuredContainer.innerHTML = featuredProducts.map((product, index) => {
+                                    const priceRange = getPriceRange(product.category);
+                                    return `
+                                    <div class="col-md-6">
+                                        <div class="card h-100 border-0 shadow-sm">
+                                            <div class="card-body p-4 text-center">
+                                                <div class="text-primary mb-3">
+                                                    <i class="fas ${product.icon} fa-3x"></i>
+                                                </div>
+                                                <h5 class="card-title fw-bold">${product.name}</h5>
+                                                <p class="card-text text-muted small">${product.category}</p>
+                                                                                                <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
+                                                    <i class="fab fa-amazon me-2"></i>Verifica Disponibilità e Sconto
+                                                </a>
                                             </div>
-                                            <h5 class="card-title fw-bold">${product.name}</h5>
-                                            <p class="card-text text-muted small">${product.category}</p>
-                                            <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
-                                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                                            </a>
                                         </div>
                                     </div>
-                                </div>
-                            `).join('');
+                                `}).join('');
+                            }
+                        } else {
+                            // Rotazione basata solo su prodotti ad alto valore (3 Cucina + 3 Gaming + 2 Smart Home)
+                            const featuredCount = 8;
+                            const featuredProducts = [];
+                            
+                            if (highValueProducts.length > 0) {
+                                for (let i = 0; i < featuredCount; i++) {
+                                    const index = (rotationIndex + i) % highValueProducts.length;
+                                    featuredProducts.push(highValueProducts[index]);
+                                }
+                                // Avanza l'indice per la prossima rotazione
+                                rotationIndex = (rotationIndex + featuredCount) % highValueProducts.length;
+                            } else {
+                                // Fallback: usa tutti i prodotti se non ci sono prodotti ad alto valore
+                                for (let i = 0; i < featuredCount; i++) {
+                                    const index = (rotationIndex + i) % filteredProducts.length;
+                                    featuredProducts.push(filteredProducts[index]);
+                                }
+                                rotationIndex = (rotationIndex + featuredCount) % filteredProducts.length;
+                            }
+
+                            const featuredContainer = document.querySelector('#featured-products');
+                            if (featuredContainer) {
+                                featuredContainer.innerHTML = featuredProducts.map((product, index) => {
+                                    const priceRange = getPriceRange(product.category);
+                                    return `
+                                    <div class="col-md-6">
+                                        <div class="card h-100 border-0 shadow-sm">
+                                            <div class="card-body p-4 text-center">
+                                                <div class="text-primary mb-3">
+                                                    <i class="fas ${product.icon} fa-3x"></i>
+                                                </div>
+                                                <h5 class="card-title fw-bold">${product.name}</h5>
+                                                <p class="card-text text-muted small">${product.category}</p>
+                                                                                                <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
+                                                    <i class="fab fa-amazon me-2"></i>Verifica Disponibilità e Sconto
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `}).join('');
+                            }
                         }
-                        
-                        // Avanza l'indice per la prossima rotazione
-                        rotationIndex = (rotationIndex + featuredCount) % filteredProducts.length;
                     }
 
                     // Renderizza prodotti iniziali
                     renderProducts();
                     
                     // Rotazione automatica ogni 5 secondi
-                    setInterval(renderProducts, 5 * 1000);
+                    let rotationInterval = setInterval(renderProducts, 5 * 1000);
+                    
+                    // Fermare rotazione su hover o touch
+                    const featuredContainer = document.querySelector('#featured-products');
+                    if (featuredContainer) {
+                        featuredContainer.addEventListener('mouseenter', () => {
+                            clearInterval(rotationInterval);
+                        });
+                        
+                        featuredContainer.addEventListener('touchstart', () => {
+                            clearInterval(rotationInterval);
+                        });
+                        
+                        // Riavviare rotazione su mouseleave o touchend
+                        featuredContainer.addEventListener('mouseleave', () => {
+                            rotationInterval = setInterval(renderProducts, 5 * 1000);
+                        });
+                        
+                        featuredContainer.addEventListener('touchend', () => {
+                            rotationInterval = setInterval(renderProducts, 5 * 1000);
+                        });
+                    }
+                    
+                    // Navigazione manuale con frecce
+                    const prevBtn = document.getElementById('prev-products');
+                    const nextBtn = document.getElementById('next-products');
+                    const featuredCount = 8;
+                    
+                    if (prevBtn && nextBtn) {
+                        prevBtn.addEventListener('click', () => {
+                            clearInterval(rotationInterval);
+                            rotationIndex = (rotationIndex - featuredCount) % highValueProducts.length;
+                            if (rotationIndex < 0) rotationIndex += highValueProducts.length;
+                            renderProducts();
+                        });
+                        
+                        nextBtn.addEventListener('click', () => {
+                            clearInterval(rotationInterval);
+                            rotationIndex = (rotationIndex + featuredCount) % highValueProducts.length;
+                            renderProducts();
+                        });
+                    }
                 })
                 .catch(error => console.error('Errore nel caricamento dei prodotti:', error));
         });
+
+        // Funzione showLoading per mostrare overlay di caricamento
+        function showLoading() {
+            const overlay = document.getElementById('loadingOverlay');
+            if (overlay) {
+                overlay.style.display = 'flex';
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 500);
+            }
+        }
     </script>
 </body>
 </html>

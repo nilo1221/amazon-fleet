@@ -102,12 +102,16 @@ body {
 }
 
 .site-card {
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    overflow: hidden;
     background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.site-card.hidden-category {
+    display: none;
 }
 
 .site-card:hover {
@@ -137,7 +141,7 @@ body {
 }
 
 .product-card-cucina:hover {
-    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 20px 40px rgba(211, 84, 0, 0.3);
 }
 
 .product-card-smarthome {
@@ -145,7 +149,7 @@ body {
 }
 
 .product-card-smarthome:hover {
-    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 20px 40px rgba(41, 128, 185, 0.3);
 }
 
 .product-card-fitness {
@@ -153,7 +157,7 @@ body {
 }
 
 .product-card-fitness:hover {
-    box-shadow: 0 20px 40px rgba(44, 62, 80, 0.4);
+    box-shadow: 0 20px 40px rgba(22, 160, 133, 0.25);
 }
 
 .product-card-giardino {
@@ -161,7 +165,7 @@ body {
 }
 
 .product-card-giardino:hover {
-    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 20px 40px rgba(39, 174, 96, 0.25);
 }
 
 .product-card-ufficio {
@@ -169,7 +173,7 @@ body {
 }
 
 .product-card-ufficio:hover {
-    box-shadow: 0 20px 40px rgba(44, 62, 80, 0.4);
+    box-shadow: 0 20px 40px rgba(44, 62, 80, 0.2);
 }
 
 .product-card-foto {
@@ -177,7 +181,7 @@ body {
 }
 
 .product-card-foto:hover {
-    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 20px 40px rgba(93, 109, 126, 0.25);
 }
 
 .product-card-pet {
@@ -185,7 +189,7 @@ body {
 }
 
 .product-card-pet:hover {
-    box-shadow: 0 20px 40px rgba(230, 126, 34, 0.4);
+    box-shadow: 0 20px 40px rgba(230, 126, 34, 0.25);
 }
 
 .product-card-caffe {
@@ -193,7 +197,7 @@ body {
 }
 
 .product-card-caffe:hover {
-    box-shadow: 0 20px 40px rgba(111, 78, 55, 0.4);
+    box-shadow: 0 20px 40px rgba(92, 58, 33, 0.3);
 }
 
 .product-card-gaming {
@@ -201,7 +205,7 @@ body {
 }
 
 .product-card-gaming:hover {
-    box-shadow: 0 20px 40px rgba(155, 89, 182, 0.4);
+    box-shadow: 0 20px 40px rgba(142, 68, 173, 0.35);
 }
 
 .product-card-tech {
@@ -209,7 +213,7 @@ body {
 }
 
 .product-card-tech:hover {
-    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 20px 40px rgba(41, 128, 185, 0.3);
 }
 
 .product-card-libri {
@@ -217,7 +221,7 @@ body {
 }
 
 .product-card-libri:hover {
-    box-shadow: 0 20px 40px rgba(44, 62, 80, 0.4);
+    box-shadow: 0 20px 40px rgba(154, 125, 10, 0.2);
 }
 
 .product-card-bellezza {
@@ -225,7 +229,7 @@ body {
 }
 
 .product-card-bellezza:hover {
-    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 20px 40px rgba(233, 30, 99, 0.25);
 }
 
 .product-card-outdoor {
@@ -233,7 +237,7 @@ body {
 }
 
 .product-card-outdoor:hover {
-    box-shadow: 0 20px 40px rgba(39, 174, 96, 0.4);
+    box-shadow: 0 20px 40px rgba(39, 174, 96, 0.25);
 }
 
 .product-card-arredamento {
@@ -241,7 +245,7 @@ body {
 }
 
 .product-card-arredamento:hover {
-    box-shadow: 0 20px 40px rgba(233, 30, 99, 0.4);
+    box-shadow: 0 20px 40px rgba(110, 44, 0, 0.2);
 }
 
 .product-card-viaggi {
@@ -249,7 +253,7 @@ body {
 }
 
 .product-card-viaggi:hover {
-    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 20px 40px rgba(26, 188, 156, 0.25);
 }
 
 .product-card-smartphone {
@@ -257,7 +261,7 @@ body {
 }
 
 .product-card-smartphone:hover {
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 20px 40px rgba(41, 128, 185, 0.3);
 }
 
 .product-card-cinema {
@@ -265,7 +269,7 @@ body {
 }
 
 .product-card-cinema:hover {
-    box-shadow: 0 20px 40px rgba(155, 89, 182, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .product-card-moda-donna {
@@ -273,7 +277,7 @@ body {
 }
 
 .product-card-moda-donna:hover {
-    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .product-card-benessere {
@@ -281,7 +285,7 @@ body {
 }
 
 .product-card-benessere:hover {
-    box-shadow: 0 20px 40px rgba(91, 44, 111, 0.4);
+    box-shadow: 0 20px 40px rgba(165, 105, 189, 0.25);
 }
 
 .product-card-moda-uomo {
@@ -289,7 +293,7 @@ body {
 }
 
 .product-card-moda-uomo:hover {
-    box-shadow: 0 20px 40px rgba(44, 62, 80, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .product-card-accessori {
@@ -297,7 +301,7 @@ body {
 }
 
 .product-card-accessori:hover {
-    box-shadow: 0 20px 40px rgba(108, 92, 231, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .product-card-dvd {
@@ -305,7 +309,7 @@ body {
 }
 
 .product-card-dvd:hover {
-    box-shadow: 0 20px 40px rgba(155, 89, 182, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .product-card-mare {
@@ -313,7 +317,7 @@ body {
 }
 
 .product-card-mare:hover {
-    box-shadow: 0 20px 40px rgba(9, 132, 227, 0.4);
+    box-shadow: 0 20px 40px rgba(26, 188, 156, 0.25);
 }
 
 .product-card-profumi {
@@ -321,15 +325,15 @@ body {
 }
 
 .product-card-profumi:hover {
-    box-shadow: 0 20px 40px rgba(233, 30, 99, 0.4);
+    box-shadow: 0 20px 40px rgba(233, 30, 99, 0.25);
 }
 
 .product-card-sostenibilita {
     box-shadow: 0 10px 30px rgba(46, 204, 113, 0.2);
 }
 
-.product-card-sostenibilita:hover {
-    box-shadow: 0 20px 40px rgba(46, 204, 113, 0.4);
+.product-card-sostenilita:hover {
+    box-shadow: 0 20px 40px rgba(39, 174, 96, 0.25);
 }
 
 .site-header {
@@ -341,33 +345,33 @@ body {
 }
 
 /* Gradient classes for site headers - Coherent palette */
-.site-header-cucina { background: linear-gradient(135deg, #7B241C 0%, #C0392B 50%, #D35400 100%); }
-.site-header-smarthome { background: linear-gradient(135deg, #154360 0%, #1A5276 50%, #0097A7 100%); }
-.site-header-fitness { background: linear-gradient(135deg, #1C2833 0%, #E67E22 50%, #F39C12 100%); }
-.site-header-giardino { background: linear-gradient(135deg, #1E8449 0%, #27AE60 50%, #2ECC71 100%); }
-.site-header-ufficio { background: linear-gradient(135deg, #4A235A 0%, #5B2C6F 50%, #6C3483 100%); }
-.site-header-foto { background: linear-gradient(135deg, #154360 0%, #1F618D 50%, #2874A6 100%); }
-.site-header-fotografia { background: linear-gradient(135deg, #154360 0%, #1F618D 50%, #2874A6 100%); }
-.site-header-pet { background: linear-gradient(135deg, #E67E22 0%, #27AE60 50%, #E74C3C 100%); }
-.site-header-caffe { background: linear-gradient(135deg, #6E2C00 0%, #873600 50%, #A04000 100%); }
-.site-header-gaming { background: linear-gradient(135deg, #1C2833 0%, #D35400 50%, #6A1B9A 100%); }
-.site-header-viaggi { background: linear-gradient(135deg, #0E6251 0%, #117864 50%, #148F77 100%); }
-.site-header-cinema { background: linear-gradient(135deg, #1A1A2E 0%, #4A148C 50%, #0D47A1 100%); }
-.site-header-libri { background: linear-gradient(135deg, #5B2C6F 0%, #6C3483 50%, #8E44AD 100%); }
-.site-header-bellezza { background: linear-gradient(135deg, #884EA0 0%, #9B59B6 50%, #AF7AC5 100%); }
-.site-header-outdoor { background: linear-gradient(135deg, #145A32 0%, #1E8449 50%, #28B463 100%); }
-.site-header-mare { background: linear-gradient(135deg, #1A5276 0%, #2980B9 50%, #3498DB 100%); }
-.site-header-moda-donna { background: linear-gradient(135deg, #641E16 0%, #873600 50%, #A04000 100%); }
-.site-header-profumi { background: linear-gradient(135deg, #7D3C98 0%, #8E44AD 50%, #9B59B6 100%); }
-.site-header-sostenibilita { background: linear-gradient(135deg, #196F3D 0%, #27AE60 50%, #2ECC71 100%); }
-.site-header-moda-uomo { background: linear-gradient(135deg, #2E4053 0%, #34495E 50%, #5D6D7E 100%); }
-.site-header-accessori { background: linear-gradient(135deg, #566573 0%, #6C7A89 50%, #85929E 100%); }
-.site-header-arredamento { background: linear-gradient(135deg, #880E4F 0%, #C2185B 50%, #B7950B 100%); }
-.site-header-benessere { background: linear-gradient(135deg, #D4AC0D 0%, #F1C40F 50%, #F39C12 100%); }
-.site-header-viaggi-vacanze { background: linear-gradient(135deg, #0E6655 0%, #148F77 50%, #1ABC9C 100%); }
-.site-header-smartphone { background: linear-gradient(135deg, #154360 0%, #1A5276 50%, #0097A7 100%); }
-.site-header-dvd { background: linear-gradient(135deg, #4A148C 0%, #6A1B9A 50%, #8E44AD 100%); }
-.site-header-tech { background: linear-gradient(135deg, #1C2833 0%, #2980B9 50%, #27AE60 100%); }
+.site-header-cucina { background: linear-gradient(135deg, #D35400, #E67E22); }
+.site-header-smarthome { background: linear-gradient(135deg, #1A5276, #2980B9); }
+.site-header-fitness { background: linear-gradient(135deg, #2C3E50, #16A085); }
+.site-header-giardino { background: linear-gradient(135deg, #1E8449, #27AE60); }
+.site-header-ufficio { background: linear-gradient(135deg, #2C3E50, #34495E); }
+.site-header-foto { background: linear-gradient(135deg, #212F3D, #5D6D7E); }
+.site-header-fotografia { background: linear-gradient(135deg, #212F3D, #5D6D7E); }
+.site-header-pet { background: linear-gradient(135deg, #E67E22, #F39C12); }
+.site-header-caffe { background: linear-gradient(135deg, #5C3A21, #874C24); }
+.site-header-gaming { background: linear-gradient(135deg, #6C3483, #8E44AD); }
+.site-header-viaggi { background: linear-gradient(135deg, #117864, #1ABC9C); }
+.site-header-cinema { background: linear-gradient(135deg, #1F2421, #434A42); }
+.site-header-libri { background: linear-gradient(135deg, #7D6608, #9A7D0A); }
+.site-header-bellezza { background: linear-gradient(135deg, #A24857, #E91E63); }
+.site-header-outdoor { background: linear-gradient(135deg, #1E8449, #27AE60); }
+.site-header-mare { background: linear-gradient(135deg, #117864, #1ABC9C); }
+.site-header-moda-donna { background: linear-gradient(135deg, #1A1A1A, #2C3E50); }
+.site-header-profumi { background: linear-gradient(135deg, #A24857, #E91E63); }
+.site-header-sostenibilita { background: linear-gradient(135deg, #1E8449, #27AE60); }
+.site-header-moda-uomo { background: linear-gradient(135deg, #1A1A1A, #2C3E50); }
+.site-header-accessori { background: linear-gradient(135deg, #1A1A1A, #2C3E50); }
+.site-header-arredamento { background: linear-gradient(135deg, #6E2C00, #A04000); }
+.site-header-benessere { background: linear-gradient(135deg, #A569BD, #BB8FCE); }
+.site-header-viaggi-vacanze { background: linear-gradient(135deg, #117864, #1ABC9C); }
+.site-header-smartphone { background: linear-gradient(135deg, #1A5276, #2980B9); }
+.site-header-dvd { background: linear-gradient(135deg, #1F2421, #434A42); }
+.site-header-tech { background: linear-gradient(135deg, #1A5276, #2980B9); }
 
 /* Bootstrap 5 Dropdown Submenu CSS */
 .dropdown-submenu {
@@ -443,6 +447,11 @@ body {
 .site-icon {
     font-size: 2.5rem;
     margin-bottom: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.3));
 }
 
 .site-content {
@@ -712,4 +721,177 @@ body {
     padding: 20px;
     border-radius: 10px;
     border-left: 4px solid #FF9900;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%) !important;
+    border-top: 4px solid #FF9900;
+}
+
+footer h6 {
+    color: #FF9900 !important;
+}
+
+footer a.text-white-50 {
+    transition: all 0.3s ease;
+}
+
+footer a.text-white-50:hover {
+    color: #FFD700 !important;
+    text-decoration: none;
+    transform: translateX(5px);
+}
+
+footer .amazon-disclaimer {
+    background: rgba(255, 215, 0, 0.1) !important;
+    border-left: 4px solid #FFD700;
+}
+
+/* Navbar Logo Styles */
+.navbar-brand img {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Logo Sizing */
+@media (min-width: 1200px) {
+    .navbar-brand img {
+        height: 45px !important;
+        max-width: 200px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-brand img {
+        height: 40px !important;
+        max-width: 180px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-brand img {
+        height: 38px !important;
+        max-width: 160px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-brand img {
+        height: 32px !important;
+        max-width: 140px !important;
+    }
+}
+
+/* Hero Logo Section */
+.hero-logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-logo-container img {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+    transition: all 0.4s ease;
+}
+
+.hero-logo-container img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
+}
+
+@media (max-width: 768px) {
+    .hero-logo-container img {
+        max-width: 250px;
+    }
+}
+
+/* New Navbar Logo Block Styles */
+.navbar-logo-block {
+    color: white !important;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+}
+
+.navbar-logo-block:hover {
+    transform: scale(1.02);
+}
+
+.navbar-logo-icon {
+    height: 45px;
+    width: auto;
+    margin-right: 12px;
+    object-fit: contain;
+}
+
+.navbar-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.navbar-logo-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.navbar-logo-subtitle {
+    font-size: 0.65rem;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.navbar-search-container {
+    min-width: 250px;
+}
+
+.navbar-search-container .input-group {
+    max-width: 300px;
+}
+
+@media (max-width: 991px) {
+    .navbar-logo-icon {
+        height: 38px;
+        margin-right: 8px;
+    }
+    
+    .navbar-logo-title {
+        font-size: 0.95rem;
+    }
+    
+    .navbar-logo-subtitle {
+        font-size: 0.55rem;
+    }
+    
+    .navbar-search-container {
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-logo-icon {
+        height: 32px;
+        margin-right: 6px;
+    }
+    
+    .navbar-logo-title {
+        font-size: 0.85rem;
+    }
+    
+    .navbar-logo-subtitle {
+        font-size: 0.5rem;
+    }
+    
+    .navbar-logo-subtitle {
+        display: none;
+    }
 }
