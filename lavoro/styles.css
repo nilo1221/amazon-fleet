@@ -298,6 +298,7 @@ body {
 .site-header-viaggi-vacanze { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
 .site-header-smartphone { background: linear-gradient(135deg, #154360 0%, #1A5276 50%, #0097A7 100%); }
 .site-header-dvd { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-tech { background: linear-gradient(135deg, #1C2833 0%, #2980B9 50%, #27AE60 100%); }
 
 /* Bootstrap 5 Dropdown Submenu CSS */
 .dropdown-submenu {
