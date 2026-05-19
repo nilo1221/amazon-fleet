@@ -1273,12 +1273,20 @@
                         const featuredCount = 2;
                         const featuredProducts = [];
                         
-                        for (let i = 0; i < featuredCount; i++) {
-                            const index = (rotationIndex + i) % filteredProducts.length;
-                            featuredProducts.push(filteredProducts[index]);
+                        // Se c'è una ricerca attiva, mostra i risultati filtrati senza rotazione
+                        if (currentSearch) {
+                            for (let i = 0; i < Math.min(featuredCount, filteredProducts.length); i++) {
+                                featuredProducts.push(filteredProducts[i]);
+                            }
+                        } else {
+                            // Rotazione normale basata su tutti i prodotti
+                            for (let i = 0; i < featuredCount; i++) {
+                                const index = (rotationIndex + i) % allProducts.length;
+                                featuredProducts.push(allProducts[index]);
+                            }
+                            // Avanza l'indice per la prossima rotazione
+                            rotationIndex = (rotationIndex + featuredCount) % allProducts.length;
                         }
-
-                        // Aggiorna Prodotti Top in Evidenza
                         const featuredContainer = document.querySelector('#featured-products');
                         if (featuredContainer) {
                             featuredContainer.innerHTML = featuredProducts.map((product, index) => `
