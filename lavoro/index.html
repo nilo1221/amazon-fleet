@@ -1344,8 +1344,8 @@
                             filteredProducts = allProducts;
                         }
 
-                        // Mostra 6 prodotti partendo dall'indice corrente
-                        const featuredCount = 6;
+                        // Mostra 12 prodotti partendo dall'indice corrente
+                        const featuredCount = 12;
                         const featuredProducts = [];
                         
                         for (let i = 0; i < featuredCount; i++) {
@@ -1397,8 +1397,8 @@
                     // Renderizza prodotti iniziali
                     renderProducts();
                     
-                    // Rotazione automatica ogni 10 secondi
-                    setInterval(renderProducts, 10 * 1000);
+                    // Rotazione automatica ogni 5 secondi
+                    setInterval(renderProducts, 5 * 1000);
                 })
                 .catch(error => console.error('Errore nel caricamento dei prodotti:', error));
         });
