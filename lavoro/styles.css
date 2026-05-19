@@ -1,16 +1,21 @@
 /* Main Styles */
 :root {
     --primary-color: #3498DB;
+    --primary-dark: #2980B9;
+    --primary-darker: #1A5276;
     --secondary-color: #f8f9fa;
+    --accent-color: #E74C3C;
+    --text-color: #2C3E50;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 .hero-section {
-    background: linear-gradient(135deg, #3498DB 0%, #2980B9 50%, #1A5276 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 50%, var(--primary-darker) 100%);
     color: white;
     padding: 80px 0;
     margin-bottom: 40px;
@@ -57,13 +62,13 @@ body {
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
-/* Category-specific colored shadows */
+/* Category-specific colored shadows - Coherent palette */
 .product-card-cucina {
-    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.2);
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
 }
 
 .product-card-cucina:hover {
-    box-shadow: 0 20px 40px rgba(231, 76, 60, 0.4);
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
 }
 
 .product-card-smarthome {
@@ -79,15 +84,15 @@ body {
 }
 
 .product-card-fitness:hover {
-    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 20px 40px rgba(44, 62, 80, 0.4);
 }
 
 .product-card-giardino {
-    box-shadow: 0 10px 30px rgba(39, 174, 96, 0.2);
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
 }
 
 .product-card-giardino:hover {
-    box-shadow: 0 20px 40px rgba(39, 174, 96, 0.4);
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
 }
 
 .product-card-ufficio {
@@ -266,33 +271,33 @@ body {
     overflow: hidden;
 }
 
-/* Gradient classes for site headers */
-.site-header-cucina { background: linear-gradient(135deg, #7B241C 0%, #C0392B 50%, #D35400 100%); }
-.site-header-smarthome { background: linear-gradient(135deg, #154360 0%, #1A5276 50%, #0097A7 100%); }
-.site-header-fitness { background: linear-gradient(135deg, #1C2833 0%, #E67E22 50%, #F39C12 100%); }
-.site-header-giardino { background: linear-gradient(135deg, #145A32 0%, #27AE60 50%, #B7950B 100%); }
-.site-header-ufficio { background: linear-gradient(135deg, #1C2833 0%, #C0392B 50%, #E74C3C 100%); }
-.site-header-foto { background: linear-gradient(135deg, #154360 0%, #1A5276 50%, #0097A7 100%); }
-.site-header-fotografia { background: linear-gradient(135deg, #154360 0%, #1A5276 50%, #0097A7 100%); }
-.site-header-pet { background: linear-gradient(135deg, #D35400 0%, #E67E22 50%, #27AE60 100%); }
-.site-header-caffe { background: linear-gradient(135deg, #5D4037 0%, #8B4513 50%, #B7950B 100%); }
-.site-header-gaming { background: linear-gradient(135deg, #1C2833 0%, #E67E22 50%, #9B59B6 100%); }
-.site-header-viaggi { background: linear-gradient(135deg, #154360 0%, #0097A7 50%, #1ABC9C 100%); }
-.site-header-cinema { background: linear-gradient(135deg, #1A1A2E 0%, #4A148C 50%, #0D47A1 100%); }
-.site-header-libri { background: linear-gradient(135deg, #1A1A2E 0%, #0056b3 50%, #1ABC9C 100%); }
-.site-header-bellezza { background: linear-gradient(135deg, #0a0a0a 0%, #B7950B 50%, #D4AC0D 100%); }
-.site-header-outdoor { background: linear-gradient(135deg, #145A32 0%, #27AE60 50%, #E67E22 100%); }
-.site-header-mare { background: linear-gradient(135deg, #0056b3 0%, #00897B 50%, #B7950B 100%); }
-.site-header-moda-donna { background: linear-gradient(135deg, #0a0a0a 0%, #B7950B 50%, #D4AC0D 100%); }
-.site-header-profumi { background: linear-gradient(135deg, #880E4F 0%, #C2185B 50%, #B7950B 100%); }
-.site-header-sostenibilita { background: linear-gradient(135deg, #145A32 0%, #1E8449 50%, #0097A7 100%); }
-.site-header-moda-uomo { background: linear-gradient(135deg, #1A1A2E 0%, #0056b3 50%, #B7950B 100%); }
-.site-header-accessori { background: linear-gradient(135deg, #4A148C 0%, #C2185B 50%, #B7950B 100%); }
-.site-header-arredamento { background: linear-gradient(135deg, #880E4F 0%, #C2185B 50%, #B7950B 100%); }
-.site-header-benessere { background: linear-gradient(135deg, #1A1A2E 0%, #4A148C 50%, #6A1B9A 100%); }
-.site-header-viaggi-vacanze { background: linear-gradient(135deg, #154360 0%, #0097A7 50%, #B7950B 100%); }
-.site-header-smartphone { background: linear-gradient(135deg, #154360 0%, #1A5276 50%, #0097A7 100%); }
-.site-header-dvd { background: linear-gradient(135deg, #4A148C 0%, #8E44AD 50%, #6C5CE7 100%); }
+/* Gradient classes for site headers - Coherent palette */
+.site-header-cucina { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--primary-darker) 100%); }
+.site-header-smarthome { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-fitness { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-giardino { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--primary-darker) 100%); }
+.site-header-ufficio { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-foto { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-fotografia { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-pet { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--text-color) 100%); }
+.site-header-caffe { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-gaming { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-viaggi { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-cinema { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-libri { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-bellezza { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-outdoor { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--text-color) 100%); }
+.site-header-mare { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-moda-donna { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-profumi { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-sostenibilita { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--primary-darker) 100%); }
+.site-header-moda-uomo { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-accessori { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-arredamento { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-benessere { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-viaggi-vacanze { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-smartphone { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-dvd { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
 
 /* Bootstrap 5 Dropdown Submenu CSS */
 .dropdown-submenu {
