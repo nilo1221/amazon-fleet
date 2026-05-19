@@ -1421,22 +1421,6 @@
                         rotationIndex = (rotationIndex + featuredCount) % filteredProducts.length;
                     }
 
-                    // Event listeners per ricerca
-                    const searchInput = document.getElementById('product-search');
-                    const searchBtn = document.getElementById('search-btn');
-                    
-                    searchInput.addEventListener('input', (e) => {
-                        currentSearch = e.target.value;
-                        renderProducts();
-                    });
-                    
-                    searchInput.addEventListener('keyup', (e) => {
-                        if (e.key === 'Enter') {
-                            currentSearch = e.target.value;
-                            renderProducts();
-                        }
-                    });
-
                     // Renderizza prodotti iniziali
                     renderProducts();
                     
