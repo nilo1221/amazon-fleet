@@ -17,8 +17,77 @@ body {
 .hero-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 50%, var(--primary-darker) 100%);
     color: white;
-    padding: 80px 0;
-    margin-bottom: 40px;
+    padding: 100px 0 80px 0;
+    margin-bottom: 60px;
+}
+
+.hero-icon-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-icon-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hero-float-1 {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero-float-2 {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    animation: float 3s ease-in-out infinite 1s;
+}
+
+.hero-float-3 {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    animation: float 3s ease-in-out infinite 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.btn-hero-cta {
+    background: linear-gradient(135deg, #FF9900 0%, #FF7700 100%) !important;
+    border: none !important;
+    color: white !important;
+    padding: 15px 35px !important;
+    border-radius: 30px !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-hero-cta:hover {
+    background: linear-gradient(135deg, #FF7700 0%, #FF5500 100%) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 20px rgba(255, 119, 0, 0.5) !important;
 }
 
 .site-card.hidden {
@@ -28,8 +97,8 @@ body {
 .site-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    padding: 20px 0;
+    gap: 40px;
+    padding: 40px 0;
 }
 
 .site-card {
@@ -389,6 +458,43 @@ body {
     font-weight: 600;
     display: inline-block;
     margin-bottom: 15px;
+}
+
+/* Badge per scansione rapida */
+.badge-best {
+    background: linear-gradient(135deg, #F39C12 0%, #E74C3C 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+}
+
+.badge-top {
+    background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+}
+
+.badge-new {
+    background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(155, 89, 182, 0.3);
 }
 
 .btn-filter {
