@@ -1342,35 +1342,10 @@
                         if (filteredProducts.length === 0) {
                             filteredProducts = allProducts;
                         }
-                        
-                        console.log('🔄 Rotazione prodotti in evidenza - Prodotti disponibili:', filteredProducts.length);
-                        
-                        // Rotazione random automatica
-                        const featuredCount = 6; // Prodotti in evidenza
-                        const featuredStartIndex = Math.floor(Math.random() * (filteredProducts.length - featuredCount + 1));
-                        
-                        console.log('🎲 Indice di partenza:', featuredStartIndex);
 
-                        // Seleziona prodotti per Prodotti Top in Evidenza con varietà di categorie
-                        const featuredProducts = [];
-                        const usedCategories = new Set();
-                        
-                        // Prima passata: cerca prodotti di categorie diverse
-                        for (let i = 0; i < filteredProducts.length && featuredProducts.length < featuredCount; i++) {
-                            const product = filteredProducts[(featuredStartIndex + i) % filteredProducts.length];
-                            if (!usedCategories.has(product.category)) {
-                                featuredProducts.push(product);
-                                usedCategories.add(product.category);
-                            }
-                        }
-                        
-                        // Seconda passata: riempi i restanti slot con qualsiasi prodotto
-                        for (let i = 0; i < filteredProducts.length && featuredProducts.length < featuredCount; i++) {
-                            const product = filteredProducts[(featuredStartIndex + i) % filteredProducts.length];
-                            if (!featuredProducts.includes(product)) {
-                                featuredProducts.push(product);
-                            }
-                        }
+                        // Mostra i primi 6 prodotti in ordine deterministico
+                        const featuredCount = 6;
+                        const featuredProducts = filteredProducts.slice(0, featuredCount);
 
                         // Aggiorna Prodotti Top in Evidenza
                         const featuredContainer = document.querySelector('#featured-products');
@@ -1379,7 +1354,6 @@
                                 <div class="col-md-6">
                                     <div class="card h-100 border-0 shadow-sm">
                                         <div class="card-body p-4 text-center">
-                                            ${index < 2 ? '<span class="badge bg-success position-absolute top-0 start-50 translate-middle-x mt-2" style="z-index: 1;"><i class="fas fa-star me-1"></i>Consigliato</span>' : ''}
                                             <div class="text-primary mb-3">
                                                 <i class="fas ${product.icon} fa-3x"></i>
                                             </div>
@@ -1392,18 +1366,6 @@
                                     </div>
                                 </div>
                             `).join('');
-                            
-                            console.log('✅ Prodotti in evidenza aggiornati:', featuredProducts.map(p => p.name).join(', '));
-                            
-                            // GA4 Event: Product Rotation
-                            if (typeof gtag !== 'undefined') {
-                                gtag('event', 'product_rotation', {
-                                    'event_category': 'Homepage',
-                                    'event_label': 'Featured Products',
-                                    'products_count': featuredProducts.length,
-                                    'product_names': featuredProducts.map(p => p.name).join(', ')
-                                });
-                            }
                         }
                     }
 
