@@ -272,18 +272,18 @@ body {
 }
 
 /* Gradient classes for site headers - Coherent palette */
-.site-header-cucina { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--primary-darker) 100%); }
-.site-header-smarthome { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
-.site-header-fitness { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-cucina { background: linear-gradient(135deg, #7B241C 0%, #C0392B 50%, #D35400 100%); }
+.site-header-smarthome { background: linear-gradient(135deg, #154360 0%, #1A5276 50%, #0097A7 100%); }
+.site-header-fitness { background: linear-gradient(135deg, #1C2833 0%, #E67E22 50%, #F39C12 100%); }
 .site-header-giardino { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--primary-darker) 100%); }
 .site-header-ufficio { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
 .site-header-foto { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
 .site-header-fotografia { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
-.site-header-pet { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--text-color) 100%); }
+.site-header-pet { background: linear-gradient(135deg, #E67E22 0%, #27AE60 50%, #E74C3C 100%); }
 .site-header-caffe { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
-.site-header-gaming { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-gaming { background: linear-gradient(135deg, #1C2833 0%, #D35400 50%, #6A1B9A 100%); }
 .site-header-viaggi { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
-.site-header-cinema { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-cinema { background: linear-gradient(135deg, #1A1A2E 0%, #4A148C 50%, #0D47A1 100%); }
 .site-header-libri { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
 .site-header-bellezza { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
 .site-header-outdoor { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--text-color) 100%); }
@@ -293,10 +293,10 @@ body {
 .site-header-sostenibilita { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--primary-darker) 100%); }
 .site-header-moda-uomo { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
 .site-header-accessori { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
-.site-header-arredamento { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-arredamento { background: linear-gradient(135deg, #880E4F 0%, #C2185B 50%, #B7950B 100%); }
 .site-header-benessere { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
 .site-header-viaggi-vacanze { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
-.site-header-smartphone { background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
+.site-header-smartphone { background: linear-gradient(135deg, #154360 0%, #1A5276 50%, #0097A7 100%); }
 .site-header-dvd { background: linear-gradient(135deg, var(--text-color) 0%, var(--primary-dark) 50%, var(--primary-color) 100%); }
 
 /* Bootstrap 5 Dropdown Submenu CSS */
