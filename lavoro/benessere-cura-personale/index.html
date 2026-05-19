@@ -33,7 +33,7 @@
             box-shadow: 0 4px 20px rgba(20, 90, 50, 0.5);
         }
         
-        .category-card {
+        .product-card {
             border: none;
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.08);
@@ -41,57 +41,11 @@
             overflow: hidden;
             margin-bottom: 30px;
             background: white;
-            cursor: pointer;
         }
         
-        .category-card:hover {
+        .product-card:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 20px 40px rgba(233, 30, 99, 0.15);
-        }
-        
-        .category-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
-            color: white;
-        }
-        
-        .category-icon.benessere {
-            background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);
-        }
-        
-        .category-icon.capelli {
-            background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
-        }
-        
-        .category-icon.skincare {
-            background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%);
-        }
-        
-        .category-icon.integratori {
-            background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
-        }
-        
-        .btn-category {
-            background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
-        }
-        
-        .btn-category:hover {
-            background: linear-gradient(135deg, #7B1FA2 0%, #6A1B9A 100%);
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(156, 39, 176, 0.5);
         }
         
         .btn-amazon {
@@ -176,63 +130,219 @@
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <!-- Benessere & Spa -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="category-card card p-4 text-center">
-                        <div class="category-icon benessere">
-                            <i class="fas fa-spa"></i>
+    <!-- Products Section -->
+    <section class="container py-5">
+        <div class="row">
+            <!-- Benessere & Spa Products -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-body p-4">
+                        <span class="category-badge mb-3 d-inline-block">
+                            <i class="fas fa-spa me-1"></i>Hot Stone
+                        </span>
+                        <h3 class="card-title fw-bold mb-3">Pietra Da Massaggio 16Pcs SPA Hot Stone Set</h3>
+                        <p class="card-text text-muted mb-4">Kit pietre massaggio naturali basalto caldo per SPA. 16 pezzi per massaggio professionale e pedicure con oli essenziali.</p>
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Quantità:</strong> 16 pezzi</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Materiale:</strong> Basalto naturale</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Uso:</strong> Massaggio SPA professionale</li>
+                            </ul>
                         </div>
-                        <h4 class="fw-bold mb-3">Benessere & Spa</h4>
-                        <p class="text-muted mb-4">Prodotti benessere</p>
-                        <a href="benessere-spa/index.html" class="btn btn-category">
-                            <i class="fas fa-arrow-right me-2"></i>Esplora
-                        </a>
+                        <a href="https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
                     </div>
                 </div>
-                
-                <!-- Capelli -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="category-card card p-4 text-center">
-                        <div class="category-icon capelli">
-                            <i class="fas fa-spray-can"></i>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-body p-4">
+                        <span class="category-badge mb-3 d-inline-block">
+                            <i class="fas fa-fire me-1"></i>Hot Stone
+                        </span>
+                        <h3 class="card-title fw-bold mb-3">20 Pezzi Lava Pietre con Scatola Riscaldante</h3>
+                        <p class="card-text text-muted mb-4">Kit di pietre calde per massaggio basalto con scatola riscaldante. Hot stone massaggio caldo per SPA e benessere. 20 pezzi lava naturale.</p>
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Quantità:</strong> 20 pezzi</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Include:</strong> Scatola riscaldante</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Materiale:</strong> Lava basalto</li>
+                            </ul>
                         </div>
-                        <h4 class="fw-bold mb-3">Capelli</h4>
-                        <p class="text-muted mb-4">Cura dei capelli</p>
-                        <a href="capelli/index.html" class="btn btn-category">
-                            <i class="fas fa-arrow-right me-2"></i>Esplora
-                        </a>
+                        <a href="https://www.amazon.it/Massaggio-Basalto-Scatola-Riscaldante-Benessere/dp/B0B1PDSNNQ?&linkCode=ll2&tag=l0c39-21&linkId=c485d514e50e53d33d3ff846123b9371&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
                     </div>
                 </div>
-                
-                <!-- Skincare -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="category-card card p-4 text-center">
-                        <div class="category-icon skincare">
-                            <i class="fas fa-magic"></i>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-body p-4">
+                        <span class="category-badge mb-3 d-inline-block">
+                            <i class="fas fa-gem me-1"></i>Massaggio Viso
+                        </span>
+                        <h3 class="card-title fw-bold mb-3">Gua Sha Viso e Rullo di Giada</h3>
+                        <p class="card-text text-muted mb-4">Pietra naturale per massaggio viso lifting. Rullo viso quarzo rosa anti gonfiore. Strumento beauty tool relax per skincare professionale.</p>
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Kit:</strong> Gua Sha + Rullo</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Materiale:</strong> Giada e quarzo rosa</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Benefici:</strong> Lifting, anti-gonfiore</li>
+                            </ul>
                         </div>
-                        <h4 class="fw-bold mb-3">Skincare</h4>
-                        <p class="text-muted mb-4">Cura viso e pelle</p>
-                        <a href="skincare/index.html" class="btn btn-category">
-                            <i class="fas fa-arrow-right me-2"></i>Esplora
-                        </a>
+                        <a href="https://www.amazon.it/Gua-Sha-Viso-Rullo-Giada/dp/B0FS251P7P?dib=eyJ2IjoiMSJ9.sfSyXjXXjP0ssOrQzipGJSF4ry4rLgJn9IL0EAN1Hx1vxz-v-KH_aukry6MQjFnLT-EvXJ1zc4o5AwuhzFowUKa_QX3WZz6LpdYEKmNLoXQxjlvuKcCihnvBnwRGZJ0jsxLre0ocbab598vQ_jOZt71CRTT7-YOxXbEGsjcIVGZEcSKtTqbC5Fr3qG8ZvrhaceA13NtSjcILHGIKb4esg_g0NsELBGKC1GkRJYymyWkYOr7cXpZTQitBBUwxUDWPWSYJl_ulCsk94HkoxnhAcWDnEyPEI9LVpTbrpedMvJI.oWa2OXAjSPdwVPkPzI_ETdPy3LhH9aEcP6fVxl71GsA&dib_tag=se&keywords=Massaggio+Con+Le+Pietre&qid=1778016478&sr=8-4-spons&aref=eeZiuL3Gdn&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=4910fba94d29d03f1ad32df873b6042e&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
                     </div>
                 </div>
-                
-                <!-- Integratori -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="category-card card p-4 text-center">
-                        <div class="category-icon integratori">
-                            <i class="fas fa-capsules"></i>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-body p-4">
+                        <span class="category-badge mb-3 d-inline-block">
+                            <i class="fas fa-bath me-1"></i>Bath Bomb
+                        </span>
+                        <h3 class="card-title fw-bold mb-3">Chicco Bombe da Bagno 3 Pezzi POP</h3>
+                        <p class="card-text text-muted mb-4">Bombe da bagno line Chicco POP Fizzy, formula vegana e dermatologicamente testata per pelli sensibili. 3 profumazioni: Vaniglia, Fragola e Anguria.</p>
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Quantità:</strong> 3 pezzi</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Formula:</strong> Vegana, dermatologicamente testata</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Profumazioni:</strong> Vaniglia, Fragola, Anguria</li>
+                            </ul>
                         </div>
-                        <h4 class="fw-bold mb-3">Integratori</h4>
-                        <p class="text-muted mb-4">Integratori naturali</p>
-                        <a href="integratori/index.html" class="btn btn-category">
-                            <i class="fas fa-arrow-right me-2"></i>Esplora
-                        </a>
+                        <a href="https://www.amazon.it/Chicco-Formula-Dermatologicamente-Sensibili-Profumazioni/dp/B0GWN67S4Z?dib=eyJ2IjoiMSJ9.A5MG6nSiBCyaD2czfhhPEQSqkwWbqiomFb2oe7_fVjCTAo_WLJTnAVFkhQteocf1xScLfgZJ6uP_XjLjejDpRYnm-TrWSiNf8ab8Kby2aC3W3dE3BnFRYJv2ADbKVTzijC2a73RMXkNmI1Ok_JUrivZS9CduCGBFhyt4hEPQlkO0TKmiTG3E-vkFW0s_kGjNHdd8hKcc-FnHaqeB61Lowo1pHU4dbK0CjrZX4CyNNSJ3Qs9B2CFBB4fdP2_pcwD2LejOYbzdEih2mrC4FhjyltIiQQ8LTOFm8FZJ8IJieHc.Csjn4yyHUzIrbkXx08HOFu5G21zhiXRa-3PKks5tEh8&dib_tag=se&qid=1778016630&refinements=p_n_date_first_available_absolute%3A490217031&s=beauty&sr=1-2&linkCode=ll2&tag=l0c39-21&linkId=699383b91d325ec9e9a4790cd658cfdd&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-body p-4">
+                        <span class="category-badge mb-3 d-inline-block">
+                            <i class="fas fa-gift me-1"></i>Regalo Donna
+                        </span>
+                        <h3 class="card-title fw-bold mb-3">Satin Naturel Cofanetto 4 Bombe da Bagno BIO</h3>
+                        <p class="card-text text-muted mb-4">Cofanetto 4 bombe da bagno BIO lussuose vegan. Regalo benessere per donna, sfere da bagno premium. Idea regalo compleanno per lei.</p>
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Quantità:</strong> 4 pezzi</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Tipo:</strong> BIO, vegan, premium</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Ideale per:</strong> Regalo donna</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.amazon.it/gp/aw/d/B09TRKPCT1?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=7884f4c77b1440e4d2494916abeca32c&hsa_cr_id=0&qid=1778016679&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=ErrJ5JoVvT&pd_rd_w=5hrqQ&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=RHPH3155XAZH712EZ5NR&pd_rd_wg=G3AXg&pd_rd_r=965d11ed-b819-44ff-a1ed-09cc8d10a1f9&th=1&linkCode=ll2&tag=l0c39-21&linkId=1acd5d31d953fbdeb949e4e702780408&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-body p-4">
+                        <span class="category-badge mb-3 d-inline-block">
+                            <i class="fas fa-gift me-1"></i>Regalo Donna
+                        </span>
+                        <h3 class="card-title fw-bold mb-3">Satin Naturel Cofanetto 6 Bombe da Bagno BIO</h3>
+                        <p class="card-text text-muted mb-4">Cofanetto 6 bombe da bagno BIO lussuose vegan. Regalo benessere per donna, sfere da bagno premium. Idea regalo compleanno per lei.</p>
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Quantità:</strong> 6 pezzi</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Tipo:</strong> BIO, vegan, premium</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Ideale per:</strong> Regalo donna</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.amazon.it/gp/aw/d/B07H4N9VTX?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=7884f4c77b1440e4d2494916abeca32c&hsa_cr_id=0&qid=1778016679&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=ErrJ5JoVvT&pd_rd_w=5hrqQ&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=RHPH3155XAZH712EZ5NR&pd_rd_wg=G3AXg&pd_rd_r=965d11ed-b819-44ff-a1ed-09cc8d10a1f9&th=1&linkCode=ll2&tag=l0c39-21&linkId=68480626456fd87248bc7928a3dfdad4&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capelli Product -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-body p-4">
+                        <span class="category-badge mb-3 d-inline-block">
+                            <i class="fas fa-spray-can me-1"></i>Capelli
+                        </span>
+                        <h3 class="card-title fw-bold mb-3">Catwalk TIGI Curls Rock Amplifier Crema Arricciante</h3>
+                        <p class="card-text text-muted mb-4">Crema arricciante professionale per definizione e controllo dei capelli ricci. 150 ml.</p>
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Brand:</strong> Catwalk TIGI</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Quantità:</strong> 150 ml</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Uso:</strong> Definizione capelli ricci</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.amazon.it/Catwalk-Amplifier-maggiore-definizione-controllo/dp/B0007506U2?th=1&linkCode=ll2&tag=l0c39-21&linkId=dea4001f7b11889a34872427eef98e76&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skincare Products -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-body p-4">
+                        <span class="category-badge mb-3 d-inline-block">
+                            <i class="fas fa-magic me-1"></i>Skincare
+                        </span>
+                        <h3 class="card-title fw-bold mb-3">celimax Vita A Retinal Shot Tightening Booster</h3>
+                        <p class="card-text text-muted mb-4">Siero viso anti-età con retinolo e matryxil, minimizza pori e riduce rughe. 15 ml.</p>
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Brand:</strong> celimax</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Quantità:</strong> 15 ml</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Benefici:</strong> Anti-età, minimizza pori</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.amazon.it/celimax-Rassodante-retinale-matryxil-minimizzatore/dp/B0DK4Y2YP3?&linkCode=ll2&tag=l0c39-21&linkId=adbc8321981eb5deb5a1bb7258b761b9&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-body p-4">
+                        <span class="category-badge mb-3 d-inline-block">
+                            <i class="fas fa-sun me-1"></i>Skincare
+                        </span>
+                        <h3 class="card-title fw-bold mb-3">La Roche-Posay Anthelios UVmune 400 SPF50+</h3>
+                        <p class="card-text text-muted mb-4">Protezione solare estrema anti-UVA ultra lunghi, resistente ad acqua e sudore. 50 ml.</p>
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Brand:</strong> La Roche-Posay</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Quantità:</strong> 50 ml</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>SPF:</strong> 50+</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.amazon.it/Invisibile-Protezione-Anti-UVA-Resistente-Anthelios/dp/B09SLF5ZH8?&linkCode=ll2&tag=l0c39-21&linkId=eed2a59a0e311390d3492045551022b3&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integratori Product -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-body p-4">
+                        <span class="category-badge mb-3 d-inline-block">
+                            <i class="fas fa-capsules me-1"></i>Integratori
+                        </span>
+                        <h3 class="card-title fw-bold mb-3">Omega 3 IFOS 5 Stelle 90 cps</h3>
+                        <p class="card-text text-muted mb-4">Olio di pesce Omega 3 1000mg ricco di EPA e DHA, senza retrogusto, certificato IFOS 5 stelle. 90 capsule.</p>
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Caratteristiche:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Quantità:</strong> 90 capsule</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Dosaggio:</strong> 1000mg</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Certificazione:</strong> IFOS 5 stelle</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.amazon.it/Omega-Olio-Pesce-Capsule-Trigliceride/dp/B07L2GK84G?th=1&linkCode=ll2&tag=l0c39-21&linkId=16ad088e14f0275cc8152614dd7a1997&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
                     </div>
                 </div>
             </div>
