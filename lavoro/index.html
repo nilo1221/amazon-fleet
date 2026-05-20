@@ -974,9 +974,9 @@
         </div>
         
         <div class="text-center mt-4">
-            <button id="toggleCategoriesBtn" class="btn btn-outline-primary btn-lg" onclick="toggleAllCategories()">
+            <a href="tutte-le-categorie.html" class="btn btn-outline-primary btn-lg">
                 <i class="fas fa-th-large me-2"></i>Scopri tutte le categorie
-            </button>
+            </a>
         </div>
     </section>
 
@@ -1189,7 +1189,8 @@
                 });
             }
             
-            // Event listener per ricerca Hero
+            // Event listener per ricerca Hero (rimossa barra di ricerca, codice commentato)
+            /*
             heroSearchInput.addEventListener('input', (e) => {
                 filterSiteCards(e.target.value);
             });
@@ -1203,6 +1204,7 @@
             heroSearchBtn.addEventListener('click', () => {
                 filterSiteCards(heroSearchInput.value);
             });
+            */
             
             // Event listener per macro-tag
             macroTags.forEach(tag => {
