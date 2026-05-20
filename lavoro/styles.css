@@ -627,6 +627,164 @@ body {
     margin: 0;
 }
 
+/* Guida alla Scelta Section Styles */
+.guida-scelta-section {
+    margin: 60px 0;
+    padding: 60px 0;
+}
+
+.guida-scelta-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.guida-scelta-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 992px) {
+    .guida-scelta-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.guida-scelta-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guida-scelta-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.guida-scelta-header {
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.guida-scelta-header-master {
+    background: linear-gradient(135deg, #1a1a2e 0%, #8B0000 50%, #DC143C 100%);
+}
+
+.guida-scelta-header-mid {
+    background: linear-gradient(135deg, #1A5276 0%, #3498DB 50%, #0097A7 100%);
+}
+
+.guida-scelta-header-entry {
+    background: linear-gradient(135deg, #145A32 0%, #27AE60 50%, #B7950B 100%);
+}
+
+.guida-scelta-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.guida-scelta-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.guida-scelta-body {
+    padding: 30px;
+}
+
+.guida-scelta-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.guida-scelta-pros-cons {
+    margin-bottom: 25px;
+}
+
+.guida-scelta-pros-cons h5 {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.guida-scelta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.guida-scelta-list li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.guida-scelta-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.guida-scelta-list.pro li:before {
+    color: #27AE60;
+}
+
+.guida-scelta-list.con li:before {
+    color: #E74C3C;
+}
+
+.guida-scelta-product {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.guida-scelta-product-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.guida-scelta-product-link {
+    display: block;
+    background: linear-gradient(135deg, #FF9900 0%, #FF7700 100%);
+    color: white;
+    text-align: center;
+    padding: 16px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
+}
+
+.guida-scelta-product-link:hover {
+    background: linear-gradient(135deg, #FF7700 0%, #FF5500 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 119, 0, 0.5);
+}
+
 /* Amazon Button Styles - Enhanced */
 .btn-warning {
     background: linear-gradient(135deg, #FF9900 0%, #FF7700 100%) !important;
