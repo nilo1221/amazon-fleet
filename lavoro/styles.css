@@ -345,33 +345,33 @@ body {
 }
 
 /* Gradient classes for site headers - Coherent palette */
-.site-header-cucina { background: linear-gradient(135deg, #D35400, #E67E22); }
-.site-header-smarthome { background: linear-gradient(135deg, #1A5276, #2980B9); }
-.site-header-fitness { background: linear-gradient(135deg, #2C3E50, #16A085); }
-.site-header-giardino { background: linear-gradient(135deg, #1E8449, #27AE60); }
-.site-header-ufficio { background: linear-gradient(135deg, #2C3E50, #34495E); }
-.site-header-foto { background: linear-gradient(135deg, #212F3D, #5D6D7E); }
-.site-header-fotografia { background: linear-gradient(135deg, #212F3D, #5D6D7E); }
-.site-header-pet { background: linear-gradient(135deg, #E67E22, #F39C12); }
-.site-header-caffe { background: linear-gradient(135deg, #5C3A21, #874C24); }
-.site-header-gaming { background: linear-gradient(135deg, #6C3483, #8E44AD); }
-.site-header-viaggi { background: linear-gradient(135deg, #117864, #1ABC9C); }
-.site-header-cinema { background: linear-gradient(135deg, #1F2421, #434A42); }
-.site-header-libri { background: linear-gradient(135deg, #7D6608, #9A7D0A); }
-.site-header-bellezza { background: linear-gradient(135deg, #A24857, #E91E63); }
-.site-header-outdoor { background: linear-gradient(135deg, #1E8449, #27AE60); }
-.site-header-mare { background: linear-gradient(135deg, #117864, #1ABC9C); }
-.site-header-moda-donna { background: linear-gradient(135deg, #1A1A1A, #2C3E50); }
-.site-header-profumi { background: linear-gradient(135deg, #A24857, #E91E63); }
-.site-header-sostenibilita { background: linear-gradient(135deg, #1E8449, #27AE60); }
-.site-header-moda-uomo { background: linear-gradient(135deg, #1A1A1A, #2C3E50); }
-.site-header-accessori { background: linear-gradient(135deg, #1A1A1A, #2C3E50); }
-.site-header-arredamento { background: linear-gradient(135deg, #6E2C00, #A04000); }
-.site-header-benessere { background: linear-gradient(135deg, #A569BD, #BB8FCE); }
-.site-header-viaggi-vacanze { background: linear-gradient(135deg, #117864, #1ABC9C); }
-.site-header-smartphone { background: linear-gradient(135deg, #1A5276, #2980B9); }
-.site-header-dvd { background: linear-gradient(135deg, #1F2421, #434A42); }
-.site-header-tech { background: linear-gradient(135deg, #1A5276, #2980B9); }
+.site-header-cucina { background: linear-gradient(to right, #C0392B, #D35400); }
+.site-header-smarthome { background: linear-gradient(to right, #154360, #1A5276, #0097A7); }
+.site-header-fitness { background: linear-gradient(to right, #1C2833, #E67E22, #F39C12); }
+.site-header-giardino { background: linear-gradient(to right, #145A32, #1E8449, #B7950B); }
+.site-header-ufficio { background: linear-gradient(to right, #1C2833, #C0392B, #E74C3C); }
+.site-header-foto { background: linear-gradient(to right, #154360, #1A5276, #0097A7); }
+.site-header-fotografia { background: linear-gradient(to right, #154360, #1A5276, #0097A7); }
+.site-header-pet { background: linear-gradient(to right, #E67E22, #27AE60, #E74C3C); }
+.site-header-caffe { background: linear-gradient(to right, #C0392B, #D35400); }
+.site-header-gaming { background: linear-gradient(to right, #1C2833, #D35400, #6A1B9A); }
+.site-header-viaggi { background: linear-gradient(to right, #154360, #1A5276, #0097A7); }
+.site-header-cinema { background: linear-gradient(to right, #1A1A2E, #4A148C, #0D47A1); }
+.site-header-libri { background: linear-gradient(to right, #1C2833, #1A5276, #117864); }
+.site-header-bellezza { background: linear-gradient(to right, #4A148C, #C2185B, #B7950B); }
+.site-header-outdoor { background: linear-gradient(to right, #145A32, #1E8449, #B7950B); }
+.site-header-mare { background: linear-gradient(to right, #0056b3, #00897B, #B7950B); }
+.site-header-moda-donna { background: linear-gradient(to right, #0a0a0a, #B7950B, #D4AC0D); }
+.site-header-profumi { background: linear-gradient(to right, #4A148C, #C2185B, #B7950B); }
+.site-header-sostenibilita { background: linear-gradient(to right, #145A32, #1E8449, #B7950B); }
+.site-header-moda-uomo { background: linear-gradient(to right, #1A1A2E, #0056b3, #B7950B); }
+.site-header-accessori { background: linear-gradient(to right, #4A148C, #C2185B, #B7950B); }
+.site-header-arredamento { background: linear-gradient(to right, #880E4F, #C2185B, #B7950B); }
+.site-header-benessere { background: linear-gradient(to right, #145A32, #C0392B, #B7950B); }
+.site-header-viaggi-vacanze { background: linear-gradient(to right, #154360, #1A5276, #0097A7); }
+.site-header-smartphone { background: linear-gradient(to right, #154360, #1A5276, #0097A7); }
+.site-header-dvd { background: linear-gradient(to right, #9B59B6, #3498DB, #2980B9); }
+.site-header-tech { background: linear-gradient(to right, #154360, #1A5276, #0097A7); }
 
 /* Bootstrap 5 Dropdown Submenu CSS */
 .dropdown-submenu {
