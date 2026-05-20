@@ -61,7 +61,7 @@
         "product": {
           "name": "D&D Set Introduttivo: Draghi dell'Isola delle Tempeste",
           "description": "Set completo per iniziare a giocare subito",
-          "link": "https://www.amazon.it/Draghi-Tempeste-Dungeons-Dragons-introduttivo/dp/0786966637?linkCode=ll2&tag=l0c39-21&linkId=e3f2a1b2c3d4e5f6a7b8c9d0e1f2a3b4&ref=_as_li_ss_tl"
+          "link": "https://www.amazon.it/Draghi-Tempeste-Dungeons-Dragons-introduttivo/dp/0786966637?&linkCode=ll2&tag=l0c39-21&linkId=e3f2a1b2c3d4e5f6a7b8c9d0e1f2a3b4&ref=_as_li_ss_tl"
         }
       }
     }
@@ -85,9 +85,9 @@
           "Richiede spazio adeguato"
         ],
         "product": {
-          "name": "Robot da Cucina Professionale",
-          "description": "Robot multifunzione con accessori premium",
-          "link": "https://www.amazon.it/s?k=robot+cucina+professionale&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+          "name": "Kenwood Chef Elite Titanium KVC7320S",
+          "description": "Robot da cucina professionale 1500W con accessori premium",
+          "link": "https://www.amazon.it/Kenwood-KVC7320S-Titanium-Multifunzione-Accessorio/dp/B00J5G4Q5C?&linkCode=ll2&tag=l0c39-21&linkId=abc123def456&ref=_as_li_ss_tl"
         }
       },
       "mid": {
@@ -105,9 +105,9 @@
           "Materiali standard"
         ],
         "product": {
-          "name": "Frullatore ad Alta Velocità",
-          "description": "Frullatore potente per uso domestico",
-          "link": "https://www.amazon.it/s?k=frullatore+alta+velocit%C3%A0&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+          "name": "Nutribullet 600W Frullatore",
+          "description": "Frullatore ad alta velocità per uso domestico",
+          "link": "https://www.amazon.it/Nutribullet-Frullatore-600W-Accessorio/dp/B00939I7K6?&linkCode=ll2&tag=l0c39-21&linkId=def456ghi789&ref=_as_li_ss_tl"
         }
       },
       "entry": {
@@ -126,9 +126,9 @@
           "Potrebbe richiedere upgrade futuro"
         ],
         "product": {
-          "name": "Set Pentole Base",
-          "description": "Set completo per iniziare a cucinare",
-          "link": "https://www.amazon.it/s?k=set+pentole+base&linkCode=ll2&tag=l0c39-21&linkId=ghi789&ref=_as_li_ss_tl"
+          "name": "Tefal Ingenio Essential 5 Pezzi",
+          "description": "Set pentole base con manico rimovibile",
+          "link": "https://www.amazon.it/Tefal-Ingenio-Essential-Induzione-Rimovibile/dp/B07XJ3Y7JL?&linkCode=ll2&tag=l0c39-21&linkId=ghi789jkl012&ref=_as_li_ss_tl"
         }
       }
     }
@@ -152,9 +152,9 @@
           "Richiede configurazione"
         ],
         "product": {
-          "name": "Tastiera Meccanica Premium RGB",
-          "description": "Tastiera meccanica con switch premium",
-          "link": "https://www.amazon.it/s?k=tastiera+meccanica+rgb+premium&linkCode=ll2&tag=l0c39-21&linkId=jkl012&ref=_as_li_ss_tl"
+          "name": "Keychron K2 Wireless Mechanical Keyboard RGB",
+          "description": "Tastiera meccanica wireless con switch premium e RGB",
+          "link": "https://www.amazon.it/Keychron-Wireless-Mechanical-Keyboard-Bluetooth/dp/B0855FY3HN?&linkCode=ll2&tag=l0c39-21&linkId=jkl012mno345&ref=_as_li_ss_tl"
         }
       },
       "mid": {
@@ -172,9 +172,9 @@
           "Materiali standard"
         ],
         "product": {
-          "name": "Mouse Gaming Wireless",
-          "description": "Mouse wireless con buona precisione",
-          "link": "https://www.amazon.it/s?k=mouse+gaming+wireless&linkCode=ll2&tag=l0c39-21&linkId=mno345&ref=_as_li_ss_tl"
+          "name": "Logitech G502 HERO Wireless Gaming Mouse",
+          "description": "Mouse gaming wireless con sensore HERO di alta precisione",
+          "link": "https://www.amazon.it/Logitech-G502-HERO-Wireless-Gaming/dp/B07WZH5WM6?&linkCode=ll2&tag=l0c39-21&linkId=mno345pqr678&ref=_as_li_ss_tl"
         }
       },
       "entry": {
@@ -193,9 +193,9 @@
           "Potrebbe richiedere upgrade futuro"
         ],
         "product": {
-          "name": "Headset Gaming Base",
-          "description": "Cuffie gaming con audio decente",
-          "link": "https://www.amazon.it/s?k=headset+gaming+base&linkCode=ll2&tag=l0c39-21&linkId=pqr678&ref=_as_li_ss_tl"
+          "name": "Logitech G432 Gaming Headset",
+          "description": "Cuffie gaming 7.1 surround con audio decente",
+          "link": "https://www.amazon.it/Logitech-G432-Cuffie-Surround-Gaming/dp/B07KGH64B6?&linkCode=ll2&tag=l0c39-21&linkId=pqr678stu901&ref=_as_li_ss_tl"
         }
       }
     }
