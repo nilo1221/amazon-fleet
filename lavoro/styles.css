@@ -3,9 +3,9 @@
     --primary-color: #3498DB;
     --primary-dark: #2980B9;
     --primary-darker: #1A5276;
-    --secondary-color: #0f0f12;
+    --secondary-color: #f5f7fa;
     --accent-color: #E74C3C;
-    --text-color: #ffffff;
+    --text-color: #1a1a2e;
 }
 
 body {
@@ -102,9 +102,9 @@ body {
 }
 
 .site-card {
-    background: #1a1a1e;
+    background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     height: 100%;
@@ -507,14 +507,14 @@ body {
 }
 
 .btn-filter {
-    background: #1a1a1e;
-    border: 2px solid #333;
-    color: #ffffff;
+    background: white;
+    border: 2px solid #e0e0e0;
+    color: #333;
     padding: 8px 20px;
     border-radius: 25px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .btn-filter:hover {
@@ -534,14 +534,14 @@ body {
 
 /* Macro Tags Styles */
 .macro-tag {
-    background: #1a1a1e;
-    border: 2px solid #333;
-    color: #ffffff;
+    background: white;
+    border: 2px solid #e0e0e0;
+    color: #333;
     padding: 8px 20px;
     border-radius: 25px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .macro-tag:hover {
@@ -590,11 +590,11 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #ffffff;
+    color: #1a1a2e;
 }
 
 .site-description {
-    color: #b0b0b0;
+    color: #666;
     margin-bottom: 20px;
     line-height: 1.6;
 }
@@ -620,7 +620,7 @@ body {
 
 .stat-label {
     font-size: 0.85em;
-    color: #b0b0b0;
+    color: #666;
     font-weight: 500;
 }
 
