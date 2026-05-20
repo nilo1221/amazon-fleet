@@ -672,18 +672,6 @@ body {
     color: white;
 }
 
-.guida-scelta-header-master {
-    background: linear-gradient(135deg, #1a1a2e 0%, #8B0000 50%, #DC143C 100%);
-}
-
-.guida-scelta-header-mid {
-    background: linear-gradient(135deg, #1A5276 0%, #3498DB 50%, #0097A7 100%);
-}
-
-.guida-scelta-header-entry {
-    background: linear-gradient(135deg, #145A32 0%, #27AE60 50%, #B7950B 100%);
-}
-
 .guida-scelta-badge {
     display: inline-block;
     padding: 8px 20px;

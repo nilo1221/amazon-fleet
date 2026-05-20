@@ -1,0 +1,203 @@
+{
+  "giochi-da-tavolo": {
+    "name": "Giochi da Tavolo",
+    "gradient": "linear-gradient(135deg, #1a1a2e 0%, #8B0000 50%, #DC143C 100%)",
+    "profiles": {
+      "premium": {
+        "badge": "Premium",
+        "title": "Il Master Pro",
+        "description": "Per chi vuole il massimo. Prodotti premium con materiali di alta qualità e funzionalità avanzate.",
+        "pros": [
+          "Materiali di alta qualità",
+          "Durata nel tempo garantita",
+          "Esperienza completa",
+          "Supporto premium"
+        ],
+        "cons": [
+          "Prezzo elevato",
+          "Potrebbe essere eccessivo per principianti"
+        ],
+        "product": {
+          "name": "2024 Player's Handbook Premium",
+          "description": "Manuale completo in edizione premium",
+          "link": "https://www.amazon.it/Players-Handbook-Dungeons-Rulebook-Versione/dp/0786969512?&linkCode=ll2&tag=l0c39-21&linkId=a8d3cd623c05cc0d58f98cff434b4032&ref=_as_li_ss_tl"
+        }
+      },
+      "mid": {
+        "badge": "Consigliato",
+        "title": "La Via di Mezzo",
+        "description": "Per chi cerca il perfetto rapporto qualità/prezzo. Prodotti bilanciati con ottime prestazioni.",
+        "pros": [
+          "Rapporto qualità/prezzo ottimale",
+          "Versatile per diversi livelli",
+          "Buon equilibrio caratteristiche",
+          "Facile da usare"
+        ],
+        "cons": [
+          "Non ha tutte le funzioni premium",
+          "Materiali standard"
+        ],
+        "product": {
+          "name": "DNDND Set Dadi in Metallo Massiccio",
+          "description": "Dadi in metallo massiccio per Dungeons & Dragons",
+          "link": "https://www.amazon.it/DNDND-metallo-Dungeons-Dragons-metallico/dp/B0B5TM36C7?th=1&linkCode=ll2&tag=l0c39-21&linkId=d6b929cc39b4158c1a732bec009644dd&ref=_as_li_ss_tl"
+        }
+      },
+      "entry": {
+        "badge": "Entry Level",
+        "title": "Spesa Contenuta",
+        "description": "Per chi vuole spendere poco e divertirsi subito. Prodotti accessibili perfetti per iniziare.",
+        "pros": [
+          "Prezzo accessibile",
+          "Perfetto per principianti",
+          "Facile da iniziare subito",
+          "Buono per provare"
+        ],
+        "cons": [
+          "Materiali meno durevoli",
+          "Funzionalità limitate",
+          "Potrebbe richiedere upgrade futuro"
+        ],
+        "product": {
+          "name": "D&D Set Introduttivo: Draghi dell'Isola delle Tempeste",
+          "description": "Set completo per iniziare a giocare subito",
+          "link": "https://www.amazon.it/Draghi-Tempeste-Dungeons-Dragons-introduttivo/dp/0786966637?linkCode=ll2&tag=l0c39-21&linkId=e3f2a1b2c3d4e5f6a7b8c9d0e1f2a3b4&ref=_as_li_ss_tl"
+        }
+      }
+    }
+  },
+  "cucina-moderna-tech": {
+    "name": "Cucina Moderna & Tech",
+    "gradient": "linear-gradient(135deg, #2C3E50 0%, #3498DB 50%, #00BCD4 100%)",
+    "profiles": {
+      "premium": {
+        "badge": "Premium",
+        "title": "Il Master Chef",
+        "description": "Per chi vuole il massimo. Elettrodomestici professionali e strumenti di alta qualità.",
+        "pros": [
+          "Materiali professionali",
+          "Prestazioni elevate",
+          "Durata nel tempo",
+          "Garanzia premium"
+        ],
+        "cons": [
+          "Prezzo elevato",
+          "Richiede spazio adeguato"
+        ],
+        "product": {
+          "name": "Robot da Cucina Professionale",
+          "description": "Robot multifunzione con accessori premium",
+          "link": "https://www.amazon.it/s?k=robot+cucina+professionale&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+        }
+      },
+      "mid": {
+        "badge": "Consigliato",
+        "title": "La Via di Mezzo",
+        "description": "Per chi cerca il perfetto rapporto qualità/prezzo. Strumenti bilanciati per uso domestico.",
+        "pros": [
+          "Rapporto qualità/prezzo ottimale",
+          "Versatile per diverse preparazioni",
+          "Facile da usare",
+          "Poco ingombrante"
+        ],
+        "cons": [
+          "Non ha tutte le funzioni professionali",
+          "Materiali standard"
+        ],
+        "product": {
+          "name": "Frullatore ad Alta Velocità",
+          "description": "Frullatore potente per uso domestico",
+          "link": "https://www.amazon.it/s?k=frullatore+alta+velocit%C3%A0&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+        }
+      },
+      "entry": {
+        "badge": "Entry Level",
+        "title": "Spesa Contenuta",
+        "description": "Per chi vuole spendere poco e cucinare subito. Strumenti essenziali perfetti per iniziare.",
+        "pros": [
+          "Prezzo accessibile",
+          "Perfetto per principianti",
+          "Facile da usare",
+          "Poco ingombrante"
+        ],
+        "cons": [
+          "Materiali meno durevoli",
+          "Funzionalità limitate",
+          "Potrebbe richiedere upgrade futuro"
+        ],
+        "product": {
+          "name": "Set Pentole Base",
+          "description": "Set completo per iniziare a cucinare",
+          "link": "https://www.amazon.it/s?k=set+pentole+base&linkCode=ll2&tag=l0c39-21&linkId=ghi789&ref=_as_li_ss_tl"
+        }
+      }
+    }
+  },
+  "elite-gaming-gear": {
+    "name": "Elite Gaming Gear",
+    "gradient": "linear-gradient(135deg, #0D1B2A 0%, #7B2CBF 50%, #E0AAFF 100%)",
+    "profiles": {
+      "premium": {
+        "badge": "Premium",
+        "title": "Il Pro Gamer",
+        "description": "Per chi vuole il massimo. Periferiche professionali per gaming competitivo.",
+        "pros": [
+          "Materiali premium",
+          "Prestazioni massime",
+          "RGB avanzato",
+          "Programmabile"
+        ],
+        "cons": [
+          "Prezzo elevato",
+          "Richiede configurazione"
+        ],
+        "product": {
+          "name": "Tastiera Meccanica Premium RGB",
+          "description": "Tastiera meccanica con switch premium",
+          "link": "https://www.amazon.it/s?k=tastiera+meccanica+rgb+premium&linkCode=ll2&tag=l0c39-21&linkId=jkl012&ref=_as_li_ss_tl"
+        }
+      },
+      "mid": {
+        "badge": "Consigliato",
+        "title": "La Via di Mezzo",
+        "description": "Per chi cerca il perfetto rapporto qualità/prezzo. Periferiche bilanciate per gaming.",
+        "pros": [
+          "Rapporto qualità/prezzo ottimale",
+          "Buone prestazioni",
+          "Facile da configurare",
+          "Versatile"
+        ],
+        "cons": [
+          "Non ha tutte le funzioni premium",
+          "Materiali standard"
+        ],
+        "product": {
+          "name": "Mouse Gaming Wireless",
+          "description": "Mouse wireless con buona precisione",
+          "link": "https://www.amazon.it/s?k=mouse+gaming+wireless&linkCode=ll2&tag=l0c39-21&linkId=mno345&ref=_as_li_ss_tl"
+        }
+      },
+      "entry": {
+        "badge": "Entry Level",
+        "title": "Spesa Contenuta",
+        "description": "Per chi vuole spendere poco e giocare subito. Periferiche essenziali per iniziare.",
+        "pros": [
+          "Prezzo accessibile",
+          "Perfetto per principianti",
+          "Plug & Play",
+          "Semplice da usare"
+        ],
+        "cons": [
+          "Materiali meno durevoli",
+          "Funzionalità limitate",
+          "Potrebbe richiedere upgrade futuro"
+        ],
+        "product": {
+          "name": "Headset Gaming Base",
+          "description": "Cuffie gaming con audio decente",
+          "link": "https://www.amazon.it/s?k=headset+gaming+base&linkCode=ll2&tag=l0c39-21&linkId=pqr678&ref=_as_li_ss_tl"
+        }
+      }
+    }
+  }
+}

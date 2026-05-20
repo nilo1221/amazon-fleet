@@ -56,6 +56,22 @@
         </div>
     </section>
 
+    <!-- Category Selector -->
+    <section class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-4">
+                    <label for="categorySelector" class="form-label fw-bold">Seleziona Categoria:</label>
+                    <select id="categorySelector" class="form-select form-select-lg">
+                        <option value="giochi-da-tavolo">Giochi da Tavolo</option>
+                        <option value="cucina-moderna-tech">Cucina Moderna & Tech</option>
+                        <option value="elite-gaming-gear">Elite Gaming Gear</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Guida alla Scelta Section -->
     <section class="guida-scelta-section">
         <div class="container">
@@ -65,118 +81,8 @@
                 </h2>
                 <p class="lead text-muted">Tre profili pensati per ogni tipo di utente. Trova quello che fa per te.</p>
             </div>
-            <div class="guida-scelta-grid">
-                <!-- Card 1: Il Master Pro -->
-                <div class="guida-scelta-card">
-                    <div class="guida-scelta-header guida-scelta-header-master">
-                        <span class="guida-scelta-badge">Premium</span>
-                        <h3 class="guida-scelta-card-title">Il Master Pro</h3>
-                    </div>
-                    <div class="guida-scelta-body">
-                        <p class="guida-scelta-description">Per chi vuole il massimo. Prodotti premium con materiali di alta qualità e funzionalità avanzate.</p>
-                        
-                        <div class="guida-scelta-pros-cons">
-                            <h5><i class="fas fa-check-circle text-success me-2"></i>Pro</h5>
-                            <ul class="guida-scelta-list pro">
-                                <li>Materiali di alta qualità</li>
-                                <li>Durata nel tempo garantita</li>
-                                <li>Esperienza completa</li>
-                                <li>Supporto premium</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="guida-scelta-pros-cons">
-                            <h5><i class="fas fa-times-circle text-danger me-2"></i>Contro</h5>
-                            <ul class="guida-scelta-list con">
-                                <li>Prezzo elevato</li>
-                                <li>Potrebbe essere eccessivo per principianti</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="guida-scelta-product">
-                            <h5 class="guida-scelta-product-title">Prodotto Consigliato</h5>
-                            <p class="mb-3">2024 Player's Handbook - Manuale completo in edizione premium</p>
-                            <a href="https://www.amazon.it/Players-Handbook-Dungeons-Rulebook-Versione/dp/0786969512?&linkCode=ll2&tag=l0c39-21&linkId=a8d3cd623c05cc0d58f98cff434b4032&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="guida-scelta-product-link">
-                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2: La Via di Mezzo -->
-                <div class="guida-scelta-card">
-                    <div class="guida-scelta-header guida-scelta-header-mid">
-                        <span class="guida-scelta-badge">Consigliato</span>
-                        <h3 class="guida-scelta-card-title">La Via di Mezzo</h3>
-                    </div>
-                    <div class="guida-scelta-body">
-                        <p class="guida-scelta-description">Per chi cerca il perfetto rapporto qualità/prezzo. Prodotti bilanciati con ottime prestazioni.</p>
-                        
-                        <div class="guida-scelta-pros-cons">
-                            <h5><i class="fas fa-check-circle text-success me-2"></i>Pro</h5>
-                            <ul class="guida-scelta-list pro">
-                                <li>Rapporto qualità/prezzo ottimale</li>
-                                <li>Versatile per diversi livelli</li>
-                                <li>Buon equilibrio caratteristiche</li>
-                                <li>Facile da usare</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="guida-scelta-pros-cons">
-                            <h5><i class="fas fa-times-circle text-danger me-2"></i>Contro</h5>
-                            <ul class="guida-scelta-list con">
-                                <li>Non ha tutte le funzioni premium</li>
-                                <li>Materiali standard</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="guida-scelta-product">
-                            <h5 class="guida-scelta-product-title">Prodotto Consigliato</h5>
-                            <p class="mb-3">DNDND Dungeons and Dragons Metal Dice Set - Dadi in metallo massiccio</p>
-                            <a href="https://www.amazon.it/DNDND-metallo-Dungeons-Dragons-metallico/dp/B0B5TM36C7?th=1&linkCode=ll2&tag=l0c39-21&linkId=d6b929cc39b4158c1a732bec009644dd&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="guida-scelta-product-link">
-                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Entry Level -->
-                <div class="guida-scelta-card">
-                    <div class="guida-scelta-header guida-scelta-header-entry">
-                        <span class="guida-scelta-badge">Entry Level</span>
-                        <h3 class="guida-scelta-card-title">Spesa Contenuta</h3>
-                    </div>
-                    <div class="guida-scelta-body">
-                        <p class="guida-scelta-description">Per chi vuole spendere poco e divertirsi subito. Prodotti accessibili perfetti per iniziare.</p>
-                        
-                        <div class="guida-scelta-pros-cons">
-                            <h5><i class="fas fa-check-circle text-success me-2"></i>Pro</h5>
-                            <ul class="guida-scelta-list pro">
-                                <li>Prezzo accessibile</li>
-                                <li>Perfetto per principianti</li>
-                                <li>Facile da iniziare subito</li>
-                                <li>Buono per provare</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="guida-scelta-pros-cons">
-                            <h5><i class="fas fa-times-circle text-danger me-2"></i>Contro</h5>
-                            <ul class="guida-scelta-list con">
-                                <li>Materiali meno durevoli</li>
-                                <li>Funzionalità limitate</li>
-                                <li>Potrebbe richiedere upgrade futuro</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="guida-scelta-product">
-                            <h5 class="guida-scelta-product-title">Prodotto Consigliato</h5>
-                            <p class="mb-3">Ultra Pro Monster Manual Premium Book Cover - Custodia premium accessibile</p>
-                            <a href="https://www.amazon.it/Ultra-Pro-Monster-Manual-caratterizzata/dp/B09RD2KM21?linkCode=ll2&tag=l0c39-21&linkId=c73529080337ca5e2ac7d7c6bb86227a&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" class="guida-scelta-product-link">
-                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="guida-scelta-grid" id="guidaSceltaGrid">
+                <!-- Cards will be loaded dynamically from JavaScript -->
             </div>
 
             <div class="text-center mt-5">
@@ -197,5 +103,104 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript for Dynamic Guide -->
+    <script>
+        let guidaData = null;
+
+        // Load data from JSON
+        async function loadGuidaData() {
+            try {
+                const response = await fetch('guida-acquisto-data.json');
+                guidaData = await response.json();
+                renderCategory('giochi-da-tavolo'); // Default category
+            } catch (error) {
+                console.error('Error loading guida data:', error);
+            }
+        }
+
+        // Render category cards
+        function renderCategory(categoryKey) {
+            if (!guidaData || !guidaData[categoryKey]) {
+                console.error('Category data not found:', categoryKey);
+                return;
+            }
+
+            const category = guidaData[categoryKey];
+            const grid = document.getElementById('guidaSceltaGrid');
+            const gradient = category.gradient;
+
+            // Clear existing cards
+            grid.innerHTML = '';
+
+            // Render cards for each profile
+            const profiles = ['premium', 'mid', 'entry'];
+            const profileKeys = {
+                'premium': category.profiles.premium,
+                'mid': category.profiles.mid,
+                'entry': category.profiles.entry
+            };
+
+            profiles.forEach(profileKey => {
+                const profile = profileKeys[profileKey];
+                const card = createCard(profile, gradient);
+                grid.appendChild(card);
+            });
+        }
+
+        // Create a single card
+        function createCard(profile, gradient) {
+            const card = document.createElement('div');
+            card.className = 'guida-scelta-card';
+
+            const prosHTML = profile.pros.map(pro => `<li>${pro}</li>`).join('');
+            const consHTML = profile.cons.map(con => `<li>${con}</li>`).join('');
+
+            card.innerHTML = `
+                <div class="guida-scelta-header" style="background: ${gradient};">
+                    <span class="guida-scelta-badge">${profile.badge}</span>
+                    <h3 class="guida-scelta-card-title">${profile.title}</h3>
+                </div>
+                <div class="guida-scelta-body">
+                    <p class="guida-scelta-description">${profile.description}</p>
+                    
+                    <div class="guida-scelta-pros-cons">
+                        <h5><i class="fas fa-check-circle text-success me-2"></i>Pro</h5>
+                        <ul class="guida-scelta-list pro">
+                            ${prosHTML}
+                        </ul>
+                    </div>
+                    
+                    <div class="guida-scelta-pros-cons">
+                        <h5><i class="fas fa-times-circle text-danger me-2"></i>Contro</h5>
+                        <ul class="guida-scelta-list con">
+                            ${consHTML}
+                        </ul>
+                    </div>
+                    
+                    <div class="guida-scelta-product">
+                        <h5 class="guida-scelta-product-title">Prodotto Consigliato</h5>
+                        <p class="mb-3">${profile.product.description}</p>
+                        <a href="${profile.product.link}" target="_blank" rel="nofollow noopener" class="guida-scelta-product-link">
+                            <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadGuidaData();
+
+            // Category selector change event
+            const categorySelector = document.getElementById('categorySelector');
+            categorySelector.addEventListener('change', function() {
+                renderCategory(this.value);
+            });
+        });
+    </script>
 </body>
 </html>
