@@ -60,6 +60,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background 0.3s ease;
+}
+
+/* Dynamic color themes for bot */
+.chat-header.theme-moda {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.chat-header.theme-tech {
+    background: linear-gradient(135deg, #00d4ff 0%, #090979 100%);
+}
+
+.chat-header.theme-gaming {
+    background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+}
+
+.chat-header.theme-cucina {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.chat-header.theme-default {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .header-content {

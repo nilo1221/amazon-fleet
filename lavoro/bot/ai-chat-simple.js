@@ -54,18 +54,18 @@ function startAbandonmentTimer() {
     }, 10000);
 }
 
-// Start page-level proactive message (5-10 seconds after page load or scroll)
+// Start page-level proactive message (45-60 seconds after page load or scroll)
 function startPageProactiveMessage() {
     if (proactiveBubbleShown) return;
     
-    // Check if 5-10 seconds have passed since page load
+    // Check if 45-60 seconds have passed since page load
     const timeSinceLoad = Date.now() - pageLoadTime;
     
-    if (timeSinceLoad >= 5000) {
+    if (timeSinceLoad >= 45000) {
         showProactiveBubble();
     } else {
-        // Wait until 5 seconds have passed
-        const waitTime = 5000 - timeSinceLoad;
+        // Wait until 45 seconds have passed
+        const waitTime = 45000 - timeSinceLoad;
         setTimeout(() => {
             if (!proactiveBubbleShown) {
                 showProactiveBubble();
@@ -87,8 +87,8 @@ function showProactiveBubble() {
     proactiveBubble.innerHTML = `
         <button class="proactive-close" onclick="closeProactiveBubble(event)">×</button>
         <div class="proactive-content">
-            <div class="proactive-icon">🤝</div>
-            <div class="proactive-text">Hai trovato quello che cercavi o ti serve una mano per scegliere il regalo perfetto? 😊</div>
+            <div class="proactive-icon">🔥</div>
+            <div class="proactive-text">Ti vedo interessato! Se vuoi, posso confrontare per te le migliori Friggitrici ad Aria oggi su Amazon. Vuoi vedere la mia top 3?</div>
         </div>
     `;
     
@@ -507,6 +507,28 @@ function closeChat() {
     chatButton.classList.remove('active');
 }
 
+// Apply dynamic color theme based on category
+function applyBotTheme(categoryKey) {
+    const chatHeader = document.querySelector('.chat-header');
+    if (!chatHeader) return;
+    
+    // Remove all existing theme classes
+    chatHeader.classList.remove('theme-moda', 'theme-tech', 'theme-gaming', 'theme-cucina', 'theme-default');
+    
+    // Apply appropriate theme based on category
+    if (categoryKey.includes('moda') || categoryKey.includes('cinema')) {
+        chatHeader.classList.add('theme-moda');
+    } else if (categoryKey.includes('gaming') || categoryKey.includes('elite-gaming')) {
+        chatHeader.classList.add('theme-gaming');
+    } else if (categoryKey.includes('tech') || categoryKey.includes('smartphone')) {
+        chatHeader.classList.add('theme-tech');
+    } else if (categoryKey.includes('cucina') || categoryKey.includes('elettrodomestici')) {
+        chatHeader.classList.add('theme-cucina');
+    } else {
+        chatHeader.classList.add('theme-default');
+    }
+}
+
 // Analyze message and find category with intelligent fallback
 async function analyzeMessage(message) {
     if (!message || typeof message !== 'string') return null;
@@ -632,19 +654,36 @@ async function sendMessage() {
                     }, 500);
                 }, 1000);
             } else {
-                // Normal category match
+                // Normal category match with category-specific tone
                 const context = category.context;
-                let responseText = `Ho trovato prodotti nella categoria ${category.name}.`;
-                
-                if (context === 'budget') {
-                    responseText += ' Ecco alcune opzioni economiche:';
-                } else if (context === 'best') {
-                    responseText += ' Ecco i migliori prodotti:';
+                const categoryKey = category.id;
+                let responseText = '';
+
+                // Category-specific consultant tone
+                if (categoryKey.includes('gaming') || categoryKey.includes('elite-gaming')) {
+                    responseText = `Ottima scelta per il gaming! 🔥 Ho analizzato le specifiche tecniche per te. Latenza, DPI, FPS e compatibilità sono i fattori chiave. Ecco i prodotti top per la tua configurazione:`;
+                } else if (categoryKey.includes('moda') || categoryKey.includes('cinema')) {
+                    responseText = `Perfetto! Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato. Ecco le scelte migliori per te:`;
+                } else if (categoryKey.includes('cucina') || categoryKey.includes('elettrodomestici')) {
+                    responseText = `Ottimo! Come consulente di cucina, ho valutato funzionalità, materiali e rapporto qualità-prezzo. Ecco le soluzioni migliori per la tua cucina:`;
+                } else if (categoryKey.includes('tech') || categoryKey.includes('smartphone')) {
+                    responseText = `Ottima scelta! Ho analizzato le specifiche tecniche e le prestazioni. Processore, RAM, storage e batteria sono i fattori chiave. Ecco i prodotti top per le tue esigenze:`;
                 } else {
-                    responseText += ' Ecco alcuni prodotti:';
+                    responseText = `Ho trovato prodotti nella categoria ${category.name}. Come consulente, ho selezionato le migliori opzioni per te.`;
+                    
+                    if (context === 'budget') {
+                        responseText += ' Ecco alcune opzioni economiche:';
+                    } else if (context === 'best') {
+                        responseText += ' Ecco i migliori prodotti:';
+                    } else {
+                        responseText += ' Ecco alcuni prodotti:';
+                    }
                 }
                 
                 addMessage(responseText, 'bot');
+                
+                // Apply dynamic color theme based on category
+                applyBotTheme(categoryKey);
                 
                 // Load products from JSON
                 try {
