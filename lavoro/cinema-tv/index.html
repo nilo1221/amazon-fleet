@@ -14,11 +14,12 @@
     
     <style>
         :root {
-            --primary-color: #4A148C;
+            --primary-color: #6a1b9a;
             --secondary-color: #f8f9fa;
-            --accent-color: #0D47A1;
+            --accent-color: #ff00ff;
+            --neon-cyan: #00ffff;
             --success-color: #10b981;
-            --cinema-color: #4A148C;
+            --cinema-color: #6a1b9a;
         }
 
         body {
@@ -28,11 +29,12 @@
         }
         
         .hero-section {
-            background: linear-gradient(135deg, #1A1A2E 0%, #4A148C 50%, #0D47A1 100%);
+            background: linear-gradient(135deg, #4A148C 0%, #6a1b9a 50%, #0D47A1 100%);
             color: white;
             padding: 80px 0;
             margin-bottom: 40px;
-            box-shadow: 0 4px 20px rgba(26, 26, 46, 0.5);
+            box-shadow: 0 4px 20px rgba(74, 20, 140, 0.5), 0 0 15px rgba(255, 0, 255, 0.2);
+            border-bottom: 2px solid rgba(255, 0, 255, 0.5);
         }
         
         
@@ -40,24 +42,24 @@
         
         
         .btn-amazon {
-            background: linear-gradient(135deg, #4A148C 0%, #0D47A1 100%);
+            background: linear-gradient(135deg, #6a1b9a 0%, #ff00ff 100%);
             color: white;
             border: none;
             padding: 12px 30px;
             border-radius: 25px;
             font-weight: bold;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(74, 20, 140, 0.4);
+            box-shadow: 0 4px 15px rgba(106, 27, 154, 0.4);
         }
 
         .btn-amazon:hover {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%);
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+            box-shadow: 0 6px 20px rgba(255, 0, 255, 0.5);
         }
         
         .category-badge {
-            background: var(--cinema-color);
+            background: var(--accent-color);
             color: white;
             padding: 5px 15px;
             border-radius: 20px;
@@ -65,17 +67,17 @@
             font-weight: 600;
             display: inline-block;
             margin-bottom: 15px;
-            box-shadow: 0 2px 8px rgba(74, 20, 140, 0.4);
+            box-shadow: 0 2px 8px rgba(255, 0, 255, 0.3);
         }
 
         .price-tag {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--success-color);
+            color: var(--neon-cyan);
         }
 
         .feature-icon {
-            color: var(--success-color);
+            color: var(--accent-color);
             margin-right: 10px;
         }
     </style>
