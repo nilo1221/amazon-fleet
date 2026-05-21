@@ -95,7 +95,7 @@ const NicheDatabase = {
         song: "Sugar, Sugar - The Archies",
         songLink: "https://www.youtube.com/watch?v=JibQy5y4R8o",
         songLinkSpotify: "https://open.spotify.com/track/3M3SBRzq5mWfYPXZdOYPG4",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "smart-home-domotica": {
         name: "Smart Home & Domotica",
@@ -106,7 +106,7 @@ const NicheDatabase = {
         song: "Automaton - Jamiroquai",
         songLink: "https://www.youtube.com/watch?v=Erd49aFS55g",
         songLinkSpotify: "https://open.spotify.com/track/0xCpEzvbWCvn1peuUaNv7p",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "fitness-casa": {
         name: "Fitness Casa",
@@ -117,7 +117,7 @@ const NicheDatabase = {
         song: "Physical - Olivia Newton-John",
         songLink: "https://www.youtube.com/watch?v=Z61s-fO3x7k",
         songLinkSpotify: "https://open.spotify.com/track/2nakfNGqLyCJ8u1hH7WWTp",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "elite-gaming-gear": {
         name: "Elite Gaming Gear",
@@ -128,7 +128,7 @@ const NicheDatabase = {
         song: "Blinding Lights - The Weeknd",
         songLink: "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
         songLinkSpotify: "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "pet-care-intelligente": {
         name: "Pet Care Intelligente",
@@ -139,7 +139,7 @@ const NicheDatabase = {
         song: "Who Let the Dogs Out - Baha Men",
         songLink: "https://www.youtube.com/watch?v=Qkuu0Lwb5EM",
         songLinkSpotify: "https://open.spotify.com/track/1H5tvpoApNDxvxDexoaAUo",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "cinema-tv": {
         name: "Cinema & TV",
@@ -150,7 +150,7 @@ const NicheDatabase = {
         song: "Eye of the Tiger - Survivor",
         songLink: "https://www.youtube.com/watch?v=btPJPFnesV4",
         songLinkSpotify: "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "smartphone-tech": {
         name: "Smartphone & Tech",
@@ -161,7 +161,7 @@ const NicheDatabase = {
         song: "Telephone - Lady Gaga",
         songLink: "https://www.youtube.com/watch?v=GQ95z6ywcBY",
         songLinkSpotify: "https://open.spotify.com/track/7rl7ao5pb9BhvAzPdWStxi",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "tech": {
         name: "Tech",
@@ -172,7 +172,7 @@ const NicheDatabase = {
         song: "Technologic - Daft Punk",
         songLink: "https://www.youtube.com/watch?v=YJVmu6yttiw",
         songLinkSpotify: "https://open.spotify.com/track/0LSLM0zuWRkEYemF7JcfEE",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "mare-spiaggia": {
         name: "Mare & Spiaggia",
@@ -183,7 +183,7 @@ const NicheDatabase = {
         song: "Kokomo - The Beach Boys",
         songLink: "https://www.youtube.com/watch?v=Ke1Us_3qfkg",
         songLinkSpotify: "https://open.spotify.com/track/7B22szTT8omMRmpQw6DMqV",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "outdoor-camping": {
         name: "Outdoor & Camping",
@@ -194,7 +194,7 @@ const NicheDatabase = {
         song: "Country Roads - John Denver",
         songLink: "https://www.youtube.com/watch?v=1vrEljMfXYo",
         songLinkSpotify: "https://open.spotify.com/track/1QbOvACeYanja5pbnJbAmk",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "moda-donna": {
         name: "Moda Donna",
@@ -205,7 +205,7 @@ const NicheDatabase = {
         song: "Vogue - Madonna",
         songLink: "https://www.youtube.com/watch?v=GuJQSAiODqI",
         songLinkSpotify: "https://open.spotify.com/track/27QvYgBk0CHOVHthWnkuWt",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "moda-uomo": {
         name: "Moda Uomo",
@@ -216,7 +216,7 @@ const NicheDatabase = {
         song: "Sharp Dressed Man - ZZ Top",
         songLink: "https://www.youtube.com/watch?v=7gz1DIIxqGk",
         songLinkSpotify: "https://open.spotify.com/track/0f9h8awV1X4jSllHXXYdfX",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "arredamento-casa": {
         name: "Casa & Decorazione",
@@ -227,7 +227,7 @@ const NicheDatabase = {
         song: "Home - Michael Bublé",
         songLink: "https://www.youtube.com/watch?v=lb9UXwWV7zE",
         songLinkSpotify: "https://open.spotify.com/track/4wLZ4zPM9c4oe1VV8ejdWV",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "accessori-moda": {
         name: "Accessori Moda",
@@ -238,7 +238,7 @@ const NicheDatabase = {
         song: "Fashion - David Bowie",
         songLink: "https://www.youtube.com/watch?v=GA9P5H15_6A",
         songLinkSpotify: "https://open.spotify.com/track/34V3AvUPfWRW2zListOWZG",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "benessere-cura-personale": {
         name: "Benessere & Cura Personale",
@@ -249,7 +249,7 @@ const NicheDatabase = {
         song: "Beautiful - Christina Aguilera",
         songLink: "https://www.youtube.com/watch?v=eAfyFTzZDMM",
         songLinkSpotify: "https://open.spotify.com/track/3TCauNPqFiniaYHBvEVoHG",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "giochi-da-tavolo": {
         name: "Giochi da Tavolo",
@@ -260,7 +260,7 @@ const NicheDatabase = {
         song: "The Game - Queen",
         songLink: "https://www.youtube.com/watch?v=0pL9Ie5j3-8",
         songLinkSpotify: "https://open.spotify.com/track/3CaetUu7dGAS5AM52ceK1E",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "libri-ereader": {
         name: "Libri & E-Reader",
@@ -271,7 +271,7 @@ const NicheDatabase = {
         song: "Words - Bee Gees",
         songLink: "https://www.youtube.com/watch?v=jW9BA2-h1H0",
         songLinkSpotify: "https://open.spotify.com/track/07PIhdmyYIw8dMeDMsx9FU",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "profumi-bellezza": {
         name: "Profumi & Bellezza",
@@ -282,7 +282,7 @@ const NicheDatabase = {
         song: "Por Una Cabeza - Tango",
         songLink: "https://www.youtube.com/watch?v=B5ezPA7msyI",
         songLinkSpotify: "https://open.spotify.com/track/6fHW0V6DXlmEWn0bfCOt1N",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "abbigliamento-lavoro": {
         name: "Abbigliamento Lavoro",
@@ -293,7 +293,7 @@ const NicheDatabase = {
         song: "Midnight City - M83",
         songLink: "https://www.youtube.com/watch?v=dX3k_QDnzHE",
         songLinkSpotify: "https://open.spotify.com/track/1eyzqe2QqGZUmfcPZtrIyt",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "sostenibilita-eco-friendly": {
         name: "Sostenibilità & Eco-Friendly",
@@ -304,7 +304,7 @@ const NicheDatabase = {
         song: "Earth Song - Michael Jackson",
         songLink: "https://www.youtube.com/watch?v=XAi3VTSdTxU",
         songLinkSpotify: "https://open.spotify.com/track/4GCGH6TJ69neckwITeBFXK",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "ufficio-produttivo": {
         name: "Ufficio Produttivo",
@@ -315,7 +315,7 @@ const NicheDatabase = {
         song: "9 to 5 - Dolly Parton",
         songLink: "https://www.youtube.com/watch?v=LrvPW0JHzRQ",
         songLinkSpotify: "https://open.spotify.com/track/4w3tQBXhn5345eUXDGBWZG",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "viaggi-vacanze": {
         name: "Viaggi & Vacanze",
@@ -326,7 +326,7 @@ const NicheDatabase = {
         song: "On the Road Again - Willie Nelson",
         songLink: "https://www.youtube.com/watch?v=dvdJ1OfJ33o",
         songLinkSpotify: "https://open.spotify.com/track/2GyH5rvdnfkjzsTFaWrrov",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "fotografia-mobile": {
         name: "Fotografia Mobile",
@@ -337,7 +337,7 @@ const NicheDatabase = {
         song: "Photograph - Ed Sheeran",
         songLink: "https://www.youtube.com/watch?v=nSDgHBxUbVQ",
         songLinkSpotify: "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     "dvd-bluray": {
         name: "DVD & Blu-ray",
@@ -348,7 +348,7 @@ const NicheDatabase = {
         song: "Video Killed the Radio Star - The Buggles",
         songLink: "https://www.youtube.com/watch?v=Iwuy4hHO3YQ",
         songLinkSpotify: "https://open.spotify.com/track/6t1FIJlZWTQfIZhsGjaulM",
-        songLinkAmazon: ""
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     }
 };
 
