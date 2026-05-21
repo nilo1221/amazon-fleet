@@ -790,6 +790,24 @@ function showYouTubePlayer(videoId, songName) {
     addMessage(playerMessage, 'bot');
 }
 
+// Show Spotify player in chat
+function showSpotifyPlayer(spotifyUrl, songName) {
+    const playerMessage = `
+        <div style="margin: 10px 0;">
+            <p style="margin-bottom: 8px;">🎵 Now playing: ${songName}</p>
+            <iframe style="border-radius:12px; border:0; width: 100%; height: 152px;" 
+                src="${spotifyUrl.replace('open.spotify.com/track', 'open.spotify.com/embed/track')}" 
+                width="100%" height="152" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
+    `;
+    addMessage(playerMessage, 'bot');
+}
+
 // Apply dynamic color theme based on category personality
 function applyBotTheme(categoryKey) {
     const chatHeader = document.querySelector('.chat-header');
@@ -1467,10 +1485,16 @@ function selectCategoryFromButton(categoryKey) {
                                 <p style="margin-bottom: 8px;">
                                     <button onclick="showYouTubePlayer('${videoId}', '${nicheData.song}')" 
                                             style="background: #FF0000; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px;">
-                                        ▶ Play "${nicheData.song}"
+                                        ▶ Play su YouTube
                                     </button>
                                 </p>
-                                ${nicheData.songLinkSpotify ? `<p style="margin-bottom: 8px;"><a href="${nicheData.songLinkSpotify}" target="_blank" style="color: #1DB954; font-weight: bold; text-decoration: underline;">[Ascolta su Spotify]</a></p>` : ''}
+                                ${nicheData.songLinkSpotify ? `
+                                <p style="margin-bottom: 8px;">
+                                    <button onclick="showSpotifyPlayer('${nicheData.songLinkSpotify}', '${nicheData.song}')" 
+                                            style="background: #1DB954; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px;">
+                                        ▶ Play su Spotify
+                                    </button>
+                                </p>` : ''}
                                 ${nicheData.songLinkAmazon ? `
                                 <p style="margin-bottom: 8px; margin-top: 12px;">💎 Porta l'esperienza con te:</p>
                                 <p style="margin-bottom: 8px;">Vuoi questo sound senza interruzioni e in alta qualità? <a href="${nicheData.songLinkAmazon}" target="_blank" style="color: #00A8E1; font-weight: bold; text-decoration: underline;">[Scopri Amazon Music Unlimited]</a></p>
