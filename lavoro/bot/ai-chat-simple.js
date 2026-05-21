@@ -870,46 +870,36 @@ async function sendMessage() {
                 // Apply dynamic color theme based on category
                 applyBotTheme(categoryKey);
                 
-                // Load products from JSON
+                // As shopping consultant, guide user to category page with comparison table
                 try {
-                    const categoryFile = category.url.replace('index.html', '').replace('/', '');
-                    const response = await fetch(`product-catalogs/${categoryFile}.json`);
-                    if (response.ok) {
-                        const products = await response.json();
-                        // Apply smart sorting with context
-                        const sortedProducts = sortProducts(products, categoryFile, context);
-                        // Show first 5 products
-                        const productsToShow = sortedProducts.slice(0, 5);
-                        productsToShow.forEach(product => {
-                            addProductCard(product);
-                        });
+                    setTimeout(() => {
+                        const categoryLinkDiv = document.createElement('div');
+                        categoryLinkDiv.className = 'category-link-container';
+                        categoryLinkDiv.innerHTML = `
+                            <div class="category-consultation-card">
+                                <div class="consultation-icon">📊</div>
+                                <div class="consultation-content">
+                                    <h4 class="fw-bold mb-2">Tabella Comparativa Disponibile</h4>
+                                    <p class="text-muted mb-3">Ho preparato una tabella comparativa completa con tutti i prodotti selezionati, le loro caratteristiche e i prezzi per aiutarti a scegliere la soluzione migliore.</p>
+                                    <a href="${category.url}" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-table me-2"></i>Vedi Tabella Comparativa
+                                    </a>
+                                </div>
+                            </div>
+                        `;
                         
-                        // Start abandonment timer after showing products
+                        const chatMessages = document.getElementById('chat-messages');
+                        if (chatMessages) {
+                            chatMessages.appendChild(categoryLinkDiv);
+                            chatMessages.scrollTop = chatMessages.scrollHeight;
+                        }
+                        
+                        // Start abandonment timer after showing consultation
                         startAbandonmentTimer();
-                        
-                        // Add budget filters
-                        setTimeout(() => {
-                            addBudgetFilters(categoryFile);
-                            
-                            // Add link to see all products
-                            setTimeout(() => {
-                                addCategoryLink(category);
-                                
-                                // Show related categories suggestions
-                                const categoryKey = Object.keys(categoryKeywords).find(key => categoryKeywords[key].url === category.url);
-                                if (categoryKey && relatedCategories[categoryKey]) {
-                                    setTimeout(() => {
-                                        addRelatedCategoriesSuggestions(categoryKey);
-                                    }, 1000);
-                                }
-                            }, 500);
-                        }, 500);
-                    } else {
-                        addCategoryLink(category);
-                    }
+                    }, 500);
                 } catch (error) {
-                    console.error('Error loading products:', error);
-                    addCategoryLink(category);
+                    console.error('Error showing consultation:', error);
+                    addMessage('Mi dispiace, c\'è stato un errore. Prova a visitare direttamente la pagina della categoria.', 'bot');
                 }
             }
         } else {

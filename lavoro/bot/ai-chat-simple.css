@@ -882,3 +882,59 @@
         font-size: 24px;
     }
 }
+
+/* Category Consultation Card Styles */
+.category-link-container {
+    margin: 15px 0;
+    animation: slideUp 0.3s ease;
+}
+
+.category-consultation-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.category-consultation-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+
+.consultation-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.consultation-content {
+    flex: 1;
+}
+
+.consultation-content h4 {
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+}
+
+.consultation-content p {
+    color: #666;
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.consultation-content .btn {
+    margin-top: 8px;
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
