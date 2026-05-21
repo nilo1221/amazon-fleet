@@ -772,6 +772,24 @@ function getYouTubeId(url) {
     return match ? match[1] : null;
 }
 
+// Show YouTube player in chat
+function showYouTubePlayer(videoId, songName) {
+    const playerMessage = `
+        <div style="margin: 10px 0;">
+            <p style="margin-bottom: 8px;">🎵 Now playing: ${songName}</p>
+            <iframe width="100%" height="200" 
+                src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+                title="${songName}" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                style="border-radius: 8px;">
+            </iframe>
+        </div>
+    `;
+    addMessage(playerMessage, 'bot');
+}
+
 // Apply dynamic color theme based on category personality
 function applyBotTheme(categoryKey) {
     const chatHeader = document.querySelector('.chat-header');
@@ -1441,11 +1459,17 @@ function selectCategoryFromButton(categoryKey) {
                 // Add follow-up with song reference
                 if (nicheData && nicheData.song && nicheData.songLink) {
                     setTimeout(() => {
+                        const videoId = getYouTubeId(nicheData.songLink);
                         const songMessage = `
                             <div style="margin: 10px 0;">
                                 <p style="margin-bottom: 8px;">Per questa categoria, ho selezionato la colonna sonora perfetta per accompagnare la tua esperienza.</p>
                                 <p style="margin-bottom: 8px; font-weight: bold;">🎵 Ascolta subito:</p>
-                                <p style="margin-bottom: 8px;"><a href="${nicheData.songLink}" target="_blank" style="color: #FF0000; font-weight: bold; text-decoration: underline;">[Guarda su YouTube]</a></p>
+                                <p style="margin-bottom: 8px;">
+                                    <button onclick="showYouTubePlayer('${videoId}', '${nicheData.song}')" 
+                                            style="background: #FF0000; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px;">
+                                        ▶ Play "${nicheData.song}"
+                                    </button>
+                                </p>
                                 ${nicheData.songLinkSpotify ? `<p style="margin-bottom: 8px;"><a href="${nicheData.songLinkSpotify}" target="_blank" style="color: #1DB954; font-weight: bold; text-decoration: underline;">[Ascolta su Spotify]</a></p>` : ''}
                                 ${nicheData.songLinkAmazon ? `
                                 <p style="margin-bottom: 8px; margin-top: 12px;">💎 Porta l'esperienza con te:</p>
