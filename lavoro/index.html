@@ -175,7 +175,7 @@
         </div>
     </section>
 
-    <!-- Quick-Win Comparison Table -->
+    <!-- Dynamic Comparison Carousel -->
     <section class="container my-5">
         <div class="row">
             <div class="col-lg-12">
@@ -183,58 +183,178 @@
                     <div class="card-body p-5">
                         <div class="text-center mb-4">
                             <h2 class="display-5 fw-bold mb-3">
-                                <i class="fas fa-fire-burner text-warning me-3" aria-hidden="true"></i>Confronto Friggitrici ad Aria Top
+                                <i class="fas fa-fire-burner text-warning me-3" aria-hidden="true"></i>Confronto Prodotti Cucina
                             </h2>
-                            <p class="lead text-muted">Le migliori 3 friggitrici ad aria confrontate - Scegli quella giusta per te</p>
+                            <p class="lead text-muted">Scorri per vedere i migliori prodotti di ogni categoria</p>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table table-hover table-bordered align-middle">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th>Prodotto</th>
-                                        <th>Capacità</th>
-                                        <th>Potenza</th>
-                                        <th>Caratteristiche Uniche</th>
-                                        <th>Prezzo</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <strong>COSORI Turbo Tower Pro Smart</strong>
-                                            <br><small class="text-muted">Premium con doppio cestello</small>
-                                        </td>
-                                        <td class="text-center"><span class="badge bg-success fs-6">10,8L</span></td>
-                                        <td class="text-center"><span class="badge bg-primary fs-6">2630W</span></td>
-                                        <td>Doppio cestello, 7 funzioni, 50+ ricette, No PFAS</td>
-                                        <td class="text-center"><strong>€€€</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>Ninja Foodi Dual Zone</strong>
-                                            <br><small class="text-muted">Dual zone per famiglie</small>
-                                        </td>
-                                        <td class="text-center"><span class="badge bg-warning text-dark fs-6">7,6L (2x3,8L)</span></td>
-                                        <td class="text-center"><span class="badge bg-primary fs-6">2400W</span></td>
-                                        <td>Dual zone, SYNC function, 240°C, Max Crisp</td>
-                                        <td class="text-center"><strong>€€€</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>COSORI Turbo Blaze 6L</strong>
-                                            <br><small class="text-muted">Best value per famiglie</small>
-                                        </td>
-                                        <td class="text-center"><span class="badge bg-info text-dark fs-6">6L</span></td>
-                                        <td class="text-center"><span class="badge bg-secondary fs-6">N/D</span></td>
-                                        <td>12 programmi, 4 persone</td>
-                                        <td class="text-center"><strong>€€</strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        
+                        <div id="comparisonCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#comparisonCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Friggitrici ad Aria"></button>
+                                <button type="button" data-bs-target="#comparisonCarousel" data-bs-slide-to="1" aria-label="Frullatori Immersione"></button>
+                                <button type="button" data-bs-target="#comparisonCarousel" data-bs-slide-to="2" aria-label="Robot da Cucina"></button>
+                                <button type="button" data-bs-target="#comparisonCarousel" data-bs-slide-to="3" aria-label="Macchine per il Caffè"></button>
+                            </div>
+                            
+                            <div class="carousel-inner">
+                                <!-- Slide 1: Friggitrici ad Aria -->
+                                <div class="carousel-item active">
+                                    <div class="text-center mb-3">
+                                        <h3 class="fw-bold"><i class="fas fa-fire-burner text-warning me-2"></i>Friggitrici ad Aria</h3>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-bordered align-middle">
+                                            <thead class="table-warning">
+                                                <tr>
+                                                    <th>Prodotto</th>
+                                                    <th>Capacità</th>
+                                                    <th>Potenza</th>
+                                                    <th>Caratteristiche</th>
+                                                    <th>Prezzo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>COSORI Turbo Tower Pro</strong><br><small class="text-muted">Premium</small></td>
+                                                    <td class="text-center"><span class="badge bg-success fs-6">10,8L</span></td>
+                                                    <td class="text-center"><span class="badge bg-primary fs-6">2630W</span></td>
+                                                    <td>Doppio cestello, 7 funzioni, 50+ ricette</td>
+                                                    <td class="text-center"><strong>€€€</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Ninja Foodi Dual Zone</strong><br><small class="text-muted">Dual zone</small></td>
+                                                    <td class="text-center"><span class="badge bg-warning text-dark fs-6">7,6L</span></td>
+                                                    <td class="text-center"><span class="badge bg-secondary fs-6">N/D</span></td>
+                                                    <td>2 cestelli, SYNC function, 240°C</td>
+                                                    <td class="text-center"><strong>€€€</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>COSORI Turbo Blaze</strong><br><small class="text-muted">Value</small></td>
+                                                    <td class="text-center"><span class="badge bg-info text-dark fs-6">6L</span></td>
+                                                    <td class="text-center"><span class="badge bg-secondary fs-6">N/D</span></td>
+                                                    <td>12 programmi, 4 persone</td>
+                                                    <td class="text-center"><strong>€€</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 2: Frullatori Immersione -->
+                                <div class="carousel-item">
+                                    <div class="text-center mb-3">
+                                        <h3 class="fw-bold"><i class="fas fa-blender text-info me-2"></i>Frullatori Immersione</h3>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-bordered align-middle">
+                                            <thead class="table-info">
+                                                <tr>
+                                                    <th>Prodotto</th>
+                                                    <th>Potenza</th>
+                                                    <th>Velocità</th>
+                                                    <th>Caratteristiche</th>
+                                                    <th>Prezzo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Frullatore Immersione Multifunzione</strong></td>
+                                                    <td class="text-center"><span class="badge bg-primary fs-6">N/D</span></td>
+                                                    <td class="text-center"><span class="badge bg-success fs-6">Multifunzione</span></td>
+                                                    <td>Accessori inclusi</td>
+                                                    <td class="text-center"><strong>€€</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Bosch MSM24100</strong></td>
+                                                    <td class="text-center"><span class="badge bg-primary fs-6">N/D</span></td>
+                                                    <td class="text-center"><span class="badge bg-success fs-6">Regolabile</span></td>
+                                                    <td>Marchio tedesco</td>
+                                                    <td class="text-center"><strong>€€</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Moulinex DD4521</strong></td>
+                                                    <td class="text-center"><span class="badge bg-primary fs-6">N/D</span></td>
+                                                    <td class="text-center"><span class="badge bg-success fs-6">Regolabile</span></td>
+                                                    <td>Ergonomico</td>
+                                                    <td class="text-center"><strong>€€</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 3: Robot da Cucina -->
+                                <div class="carousel-item">
+                                    <div class="text-center mb-3">
+                                        <h3 class="fw-bold"><i class="fas fa-robot text-success me-2"></i>Robot da Cucina</h3>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-bordered align-middle">
+                                            <thead class="table-success">
+                                                <tr>
+                                                    <th>Prodotto</th>
+                                                    <th>Potenza</th>
+                                                    <th>Funzioni</th>
+                                                    <th>Caratteristiche</th>
+                                                    <th>Prezzo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Bosch MultiTalent 8</strong></td>
+                                                    <td class="text-center"><span class="badge bg-primary fs-6">N/D</span></td>
+                                                    <td class="text-center"><span class="badge bg-success fs-6">8+ funzioni</span></td>
+                                                    <td>Multifunzione compatto</td>
+                                                    <td class="text-center"><strong>€€€</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 4: Macchine per il Caffè -->
+                                <div class="carousel-item">
+                                    <div class="text-center mb-3">
+                                        <h3 class="fw-bold"><i class="fas fa-mug-hot text-danger me-2"></i>Macchine per il Caffè</h3>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-bordered align-middle">
+                                            <thead class="table-danger">
+                                                <tr>
+                                                    <th>Prodotto</th>
+                                                    <th>Tipo</th>
+                                                    <th>Capacità</th>
+                                                    <th>Caratteristiche</th>
+                                                    <th>Prezzo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>DeLonghi Magnifica S</strong></td>
+                                                    <td class="text-center"><span class="badge bg-primary fs-6">Automatica</span></td>
+                                                    <td class="text-center"><span class="badge bg-success fs-6">N/D</span></td>
+                                                    <td>Caffè in grani, macinino incorporato</td>
+                                                    <td class="text-center"><strong>€€€</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="carousel-control-prev" type="button" data-bs-target="#comparisonCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#comparisonCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
+                        
                         <div class="text-center mt-4">
                             <a href="cucina-elettrodomestici/index.html" class="btn btn-warning btn-lg fw-bold shadow-lg">
-                                <i class="fas fa-utensils me-2"></i>Vedi Tutte le Friggitrici ad Aria
+                                <i class="fas fa-utensils me-2"></i>Vedi Tutti i Prodotti Cucina
                             </a>
                         </div>
                     </div>
