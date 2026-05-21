@@ -1,0 +1,59 @@
+{
+  "categories": [
+    {
+      "id": "cucina-elettrodomestici",
+      "name": "Cucina Moderna & Tech",
+      "icon": "fa-utensils",
+      "color": "warning",
+      "productCount": 28,
+      "description": "Friggitrici ad Aria, Pentole, Robot da Cucina",
+      "headerGradient": "linear-gradient(135deg, #7B241C 0%, #C0392B 50%, #D35400 100%)",
+      "primaryColor": "#C0392B",
+      "accentColor": "#D35400"
+    },
+    {
+      "id": "elite-gaming-gear",
+      "name": "Elite Gaming Gear",
+      "icon": "fa-gamepad",
+      "color": "primary",
+      "productCount": 28,
+      "description": "Cuffie, Mouse, Tastiere, Monitor Gaming",
+      "headerGradient": "linear-gradient(135deg, #1C2833 0%, #D35400 50%, #6A1B9A 100%)",
+      "primaryColor": "#6A1B9A",
+      "accentColor": "#D35400"
+    },
+    {
+      "id": "smart-home-domotica",
+      "name": "Smart Home & Domotica",
+      "icon": "fa-box",
+      "color": "success",
+      "productCount": 12,
+      "description": "Termostati, Luci, Telecamere, Sicurezza",
+      "headerGradient": "linear-gradient(135deg, #154360 0%, #1A5276 50%, #0097A7 100%)",
+      "primaryColor": "#0097A7",
+      "accentColor": "#1A5276"
+    },
+    {
+      "id": "cinema-tv",
+      "name": "Cinema & TV",
+      "icon": "fa-film",
+      "color": "danger",
+      "productCount": 38,
+      "description": "Proiettori, Soundbar, Monitor 4K",
+      "headerGradient": "linear-gradient(135deg, #1A1A2E 0%, #4A148C 50%, #0D47A1 100%)",
+      "primaryColor": "#4A148C",
+      "accentColor": "#0D47A1"
+    },
+    {
+      "id": "fitness-casa",
+      "name": "Fitness Casa",
+      "icon": "fa-dumbbell",
+      "color": "info",
+      "productCount": 12,
+      "description": "Smartwatch, Tapis Roulant, Cyclette, Pesi",
+      "headerGradient": "linear-gradient(135deg, #1C2833 0%, #E67E22 50%, #F39C12 100%)",
+      "primaryColor": "#E67E22",
+      "accentColor": "#F39C12"
+    }
+  ]
+}
