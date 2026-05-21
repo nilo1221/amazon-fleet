@@ -742,6 +742,12 @@ function closeChat() {
     chatButton.classList.remove('active');
 }
 
+// Extract YouTube video ID from URL
+function getYouTubeId(url) {
+    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
+    return match ? match[1] : null;
+}
+
 // Apply dynamic color theme based on category personality
 function applyBotTheme(categoryKey) {
     const chatHeader = document.querySelector('.chat-header');
@@ -1411,8 +1417,28 @@ function selectCategoryFromButton(categoryKey) {
                 // Add follow-up with song reference
                 if (nicheData && nicheData.song && nicheData.songLink) {
                     setTimeout(() => {
+                        const videoId = getYouTubeId(nicheData.songLink);
                         const spotifyLink = nicheData.songLinkSpotify ? ` | <a href="${nicheData.songLinkSpotify}" target="_blank" style="color: #1DB954; font-weight: bold; text-decoration: underline;">Spotify</a>` : '';
-                        addMessage(`🎵 Mentre esplori ${category.name}, potresti ascoltare <a href="${nicheData.songLink}" target="_blank" style="color: #008B8B; font-weight: bold; text-decoration: underline;">"${nicheData.song}"</a> per entrare nel mood giusto! <span style="color: #666; font-size: 0.9em;">(YouTube${spotifyLink})</span>`, 'bot');
+                        
+                        if (videoId) {
+                            const youtubePlayer = `
+                                <div style="margin: 10px 0;">
+                                    <p style="margin-bottom: 8px;">🎵 Mentre esplori ${category.name}, ascolta "${nicheData.song}" per entrare nel mood giusto!</p>
+                                    <iframe width="100%" height="200" 
+                                        src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+                                        title="${nicheData.song}" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        style="border-radius: 8px;">
+                                    </iframe>
+                                    <span style="color: #666; font-size: 0.9em;">${spotifyLink}</span>
+                                </div>
+                            `;
+                            addMessage(youtubePlayer, 'bot');
+                        } else {
+                            addMessage(`🎵 Mentre esplori ${category.name}, potresti ascoltare <a href="${nicheData.songLink}" target="_blank" style="color: #008B8B; font-weight: bold; text-decoration: underline;">"${nicheData.song}"</a> per entrare nel mood giusto! <span style="color: #666; font-size: 0.9em;">(YouTube${spotifyLink})</span>`, 'bot');
+                        }
                         
                         // Show related categories as follow-up
                         setTimeout(() => {
