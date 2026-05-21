@@ -766,30 +766,6 @@ function closeChat() {
     chatButton.classList.remove('active');
 }
 
-// Extract YouTube video ID from URL
-function getYouTubeId(url) {
-    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
-    return match ? match[1] : null;
-}
-
-// Show YouTube player in chat
-function showYouTubePlayer(videoId, songName) {
-    const playerMessage = `
-        <div style="margin: 10px 0;">
-            <p style="margin-bottom: 8px;">🎵 Now playing: ${songName}</p>
-            <iframe width="100%" height="200" 
-                src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
-                title="${songName}" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
-                style="border-radius: 8px;">
-            </iframe>
-        </div>
-    `;
-    addMessage(playerMessage, 'bot');
-}
-
 // Show Spotify player in chat
 function showSpotifyPlayer(spotifyUrl, songName) {
     const playerMessage = `
@@ -1477,17 +1453,10 @@ function selectCategoryFromButton(categoryKey) {
                 // Add follow-up with song reference
                 if (nicheData && nicheData.song && nicheData.songLink) {
                     setTimeout(() => {
-                        const videoId = getYouTubeId(nicheData.songLink);
                         const songMessage = `
                             <div style="margin: 10px 0;">
                                 <p style="margin-bottom: 8px;">Per abbinare al meglio i prodotti di ${category.name}, ti consiglio questo sound iconico come sottofondo.</p>
                                 <p style="margin-bottom: 8px; font-weight: bold;">🎵 Ascolta subito:</p>
-                                <p style="margin-bottom: 8px;">
-                                    <button onclick="showYouTubePlayer('${videoId}', '${nicheData.song}')" 
-                                            style="background: #FF0000; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px;">
-                                        ▶ Play su YouTube
-                                    </button>
-                                </p>
                                 ${nicheData.songLinkSpotify ? `
                                 <p style="margin-bottom: 8px;">
                                     <button onclick="showSpotifyPlayer('${nicheData.songLinkSpotify}', '${nicheData.song}')" 
