@@ -1079,3 +1079,18 @@
     padding: 8px 16px;
     border-radius: 8px;
 }
+
+/* Premium Box for Amazon Music */
+.premium-box {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+    border-radius: 8px;
+    font-size: 0.9em;
+    color: #856404;
+    text-align: center;
+}
+
+.premium-box a {
+    color: #d4a017;
+    font-weight: bold;
+    text-decoration: underline;
+}

@@ -1480,7 +1480,7 @@ function selectCategoryFromButton(categoryKey) {
                         const videoId = getYouTubeId(nicheData.songLink);
                         const songMessage = `
                             <div style="margin: 10px 0;">
-                                <p style="margin-bottom: 8px;">Per questa categoria, ho selezionato la colonna sonora perfetta per accompagnare la tua esperienza.</p>
+                                <p style="margin-bottom: 8px;">Per abbinare al meglio i prodotti di ${category.name}, ti consiglio questo sound iconico come sottofondo.</p>
                                 <p style="margin-bottom: 8px; font-weight: bold;">🎵 Ascolta subito:</p>
                                 <p style="margin-bottom: 8px;">
                                     <button onclick="showYouTubePlayer('${videoId}', '${nicheData.song}')" 
@@ -1496,8 +1496,10 @@ function selectCategoryFromButton(categoryKey) {
                                     </button>
                                 </p>` : ''}
                                 ${nicheData.songLinkAmazon ? `
-                                <p style="margin-bottom: 8px; margin-top: 12px;">💎 Porta l'esperienza con te:</p>
-                                <p style="margin-bottom: 8px;">Vuoi questo sound senza interruzioni e in alta qualità? <a href="${nicheData.songLinkAmazon}" target="_blank" style="color: #00A8E1; font-weight: bold; text-decoration: underline;">[Scopri Amazon Music Unlimited]</a></p>
+                                <div class="premium-box" style="margin-top:12px; border:1px solid gold; padding:10px; background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%); border-radius: 8px; font-size: 0.9em; color: #856404; text-align: center;">
+                                    💎 <strong>Vuoi l'esperienza in alta qualità?</strong> 
+                                    <br><a href="${nicheData.songLinkAmazon}" target="_blank" style="color: #d4a017; font-weight: bold; text-decoration: underline;">Ascolta su Amazon Music Unlimited</a>
+                                </div>
                                 ` : ''}
                             </div>
                         `;
