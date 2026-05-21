@@ -10,8 +10,26 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--secondary-color);
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+    background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.02) 1px, transparent 0);
+    background-size: 20px 20px;
     color: var(--text-color);
+}
+
+/* Niche identity bar - filo conduttore unificante */
+.niche-identity-bar {
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    width: 100%;
+    opacity: 0.8;
+}
+
+/* Transizioni fluide per continuità visiva */
+.product-card,
+.btn-amazon,
+.category-badge,
+.site-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-section {

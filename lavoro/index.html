@@ -42,7 +42,92 @@
     </noscript>
     
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="ai-chat.css">
+    <link rel="stylesheet" href="bot/ai-chat-simple.css">
+    
+    <style>
+        :root {
+            --table-primary: #008B8B;
+            --table-secondary: #708090;
+            --table-success: #3CB371;
+            --table-warning: #DAA520;
+            --table-info: #4682B4;
+            --table-danger: #DB7093;
+            --table-light: #F5F5F5;
+        }
+        
+        .table-custom thead.table-primary-custom {
+            background: linear-gradient(135deg, var(--table-primary) 0%, var(--table-secondary) 100%);
+            color: white;
+        }
+        
+        .table-custom thead.table-info-custom {
+            background: linear-gradient(135deg, var(--table-info) 0%, var(--table-primary) 100%);
+            color: white;
+        }
+        
+        .table-custom thead.table-success-custom {
+            background: linear-gradient(135deg, var(--table-success) 0%, var(--table-info) 100%);
+            color: white;
+        }
+        
+        .table-custom thead.table-danger-custom {
+            background: linear-gradient(135deg, var(--table-danger) 0%, var(--table-info) 100%);
+            color: white;
+        }
+        
+        .table-custom thead.table-warning-custom {
+            background: linear-gradient(135deg, var(--table-warning) 0%, var(--table-success) 100%);
+            color: white;
+        }
+        
+        .badge-custom-primary {
+            background-color: var(--table-primary);
+            color: white;
+        }
+        
+        .badge-custom-success {
+            background-color: var(--table-success);
+            color: white;
+        }
+        
+        .badge-custom-warning {
+            background-color: var(--table-warning);
+            color: white;
+        }
+        
+        .badge-custom-info {
+            background-color: var(--table-info);
+            color: white;
+        }
+        
+        .badge-custom-secondary {
+            background-color: var(--table-secondary);
+            color: white;
+        }
+        
+        .table-custom {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .table-custom thead th {
+            border: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+        
+        .table-custom tbody tr {
+            transition: all 0.3s ease;
+        }
+        
+        .table-custom tbody tr:hover {
+            background-color: var(--table-light);
+            transform: scale(1.01);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -203,8 +288,8 @@
                                         <h3 class="fw-bold"><i class="fas fa-fire-burner text-warning me-2"></i>Friggitrici ad Aria</h3>
                                     </div>
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-bordered align-middle">
-                                            <thead class="table-warning">
+                                        <table class="table table-custom table-hover table-bordered align-middle">
+                                            <thead class="table-warning-custom">
                                                 <tr>
                                                     <th>Prodotto</th>
                                                     <th>Capacità</th>
@@ -216,22 +301,22 @@
                                             <tbody>
                                                 <tr>
                                                     <td><strong>COSORI Turbo Tower Pro</strong><br><small class="text-muted">Premium</small></td>
-                                                    <td class="text-center"><span class="badge bg-success fs-6">10,8L</span></td>
-                                                    <td class="text-center"><span class="badge bg-primary fs-6">2630W</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-success fs-6">10,8L</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-primary fs-6">2630W</span></td>
                                                     <td>Doppio cestello, 7 funzioni, 50+ ricette</td>
                                                     <td class="text-center"><strong>€€€</strong></td>
                                                 </tr>
                                                 <tr>
                                                     <td><strong>Ninja Foodi Dual Zone</strong><br><small class="text-muted">Dual zone</small></td>
-                                                    <td class="text-center"><span class="badge bg-warning text-dark fs-6">7,6L</span></td>
-                                                    <td class="text-center"><span class="badge bg-secondary fs-6">N/D</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-warning fs-6">7,6L</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-secondary fs-6">N/D</span></td>
                                                     <td>2 cestelli, SYNC function, 240°C</td>
                                                     <td class="text-center"><strong>€€€</strong></td>
                                                 </tr>
                                                 <tr>
                                                     <td><strong>COSORI Turbo Blaze</strong><br><small class="text-muted">Value</small></td>
-                                                    <td class="text-center"><span class="badge bg-info text-dark fs-6">6L</span></td>
-                                                    <td class="text-center"><span class="badge bg-secondary fs-6">N/D</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-info fs-6">6L</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-secondary fs-6">N/D</span></td>
                                                     <td>12 programmi, 4 persone</td>
                                                     <td class="text-center"><strong>€€</strong></td>
                                                 </tr>
@@ -246,8 +331,8 @@
                                         <h3 class="fw-bold"><i class="fas fa-blender text-info me-2"></i>Frullatori Immersione</h3>
                                     </div>
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-bordered align-middle">
-                                            <thead class="table-info">
+                                        <table class="table table-custom table-hover table-bordered align-middle">
+                                            <thead class="table-info-custom">
                                                 <tr>
                                                     <th>Prodotto</th>
                                                     <th>Potenza</th>
@@ -259,22 +344,22 @@
                                             <tbody>
                                                 <tr>
                                                     <td><strong>Frullatore Immersione Multifunzione</strong></td>
-                                                    <td class="text-center"><span class="badge bg-primary fs-6">N/D</span></td>
-                                                    <td class="text-center"><span class="badge bg-success fs-6">Multifunzione</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-primary fs-6">N/D</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-success fs-6">Multifunzione</span></td>
                                                     <td>Accessori inclusi</td>
                                                     <td class="text-center"><strong>€€</strong></td>
                                                 </tr>
                                                 <tr>
                                                     <td><strong>Bosch MSM24100</strong></td>
-                                                    <td class="text-center"><span class="badge bg-primary fs-6">N/D</span></td>
-                                                    <td class="text-center"><span class="badge bg-success fs-6">Regolabile</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-primary fs-6">N/D</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-success fs-6">Regolabile</span></td>
                                                     <td>Marchio tedesco</td>
                                                     <td class="text-center"><strong>€€</strong></td>
                                                 </tr>
                                                 <tr>
                                                     <td><strong>Moulinex DD4521</strong></td>
-                                                    <td class="text-center"><span class="badge bg-primary fs-6">N/D</span></td>
-                                                    <td class="text-center"><span class="badge bg-success fs-6">Regolabile</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-primary fs-6">N/D</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-success fs-6">Regolabile</span></td>
                                                     <td>Ergonomico</td>
                                                     <td class="text-center"><strong>€€</strong></td>
                                                 </tr>
@@ -289,8 +374,8 @@
                                         <h3 class="fw-bold"><i class="fas fa-robot text-success me-2"></i>Robot da Cucina</h3>
                                     </div>
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-bordered align-middle">
-                                            <thead class="table-success">
+                                        <table class="table table-custom table-hover table-bordered align-middle">
+                                            <thead class="table-success-custom">
                                                 <tr>
                                                     <th>Prodotto</th>
                                                     <th>Potenza</th>
@@ -318,8 +403,8 @@
                                         <h3 class="fw-bold"><i class="fas fa-mug-hot text-danger me-2"></i>Macchine per il Caffè</h3>
                                     </div>
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-bordered align-middle">
-                                            <thead class="table-danger">
+                                        <table class="table table-custom table-hover table-bordered align-middle">
+                                            <thead class="table-danger-custom">
                                                 <tr>
                                                     <th>Prodotto</th>
                                                     <th>Tipo</th>
