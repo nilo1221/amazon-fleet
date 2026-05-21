@@ -14,24 +14,27 @@
     
     <style>
         :root {
-            --primary-color: #4A148C;
-            --secondary-color: #f8f9fa;
-            --accent-color: #0D47A1;
+            --primary-color: #1a0b2e;
+            --secondary-color: #0a0a2e;
+            --accent-color: #ff00ff;
+            --neon-cyan: #00ffff;
             --success-color: #10b981;
-            --cinema-color: #4A148C;
+            --cinema-color: #1a0b2e;
         }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--secondary-color);
+            color: #f8f9fa;
         }
         
         .hero-section {
-            background: linear-gradient(135deg, #1A1A2E 0%, #4A148C 50%, #0D47A1 100%);
+            background: linear-gradient(135deg, #0a0a2e 0%, #1a0b2e 50%, #2d1b4e 100%);
             color: white;
             padding: 80px 0;
             margin-bottom: 40px;
-            box-shadow: 0 4px 20px rgba(26, 26, 46, 0.5);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 0, 255, 0.3);
+            border-bottom: 3px solid #ff00ff;
         }
         
         
@@ -39,24 +42,24 @@
         
         
         .btn-amazon {
-            background: linear-gradient(135deg, #4A148C 0%, #0D47A1 100%);
+            background: linear-gradient(135deg, #1a0b2e 0%, #ff00ff 100%);
             color: white;
             border: none;
             padding: 12px 30px;
             border-radius: 25px;
             font-weight: bold;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(74, 20, 140, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 0, 255, 0.4), 0 0 10px rgba(0, 255, 255, 0.3);
         }
-        
+
         .btn-amazon:hover {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%);
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+            box-shadow: 0 6px 20px rgba(255, 0, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.5);
         }
         
         .category-badge {
-            background: var(--cinema-color);
+            background: var(--accent-color);
             color: white;
             padding: 5px 15px;
             border-radius: 20px;
@@ -64,16 +67,17 @@
             font-weight: 600;
             display: inline-block;
             margin-bottom: 15px;
-            box-shadow: 0 2px 8px rgba(74, 20, 140, 0.4);
+            box-shadow: 0 2px 8px rgba(255, 0, 255, 0.4);
         }
-        
+
+        .price-tag {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--success-color);
+            color: var(--neon-cyan);
         }
-        
+
         .feature-icon {
-            color: var(--success-color);
+            color: var(--accent-color);
             margin-right: 10px;
         }
     </style>
