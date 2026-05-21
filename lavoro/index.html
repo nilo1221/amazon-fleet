@@ -251,7 +251,7 @@
                     <h2 class="display-5 fw-bold mb-3">
                         <i class="fas fa-star text-warning me-3" aria-hidden="true"></i>Scelte della Redazione
                     </h2>
-                    <p class="lead text-muted">Le 5 categorie più amate dai nostri lettori - Clicca per scoprire le migliori offerte</p>
+                    <p class="lead text-muted">Le 6 categorie più amate dai nostri lettori - Clicca per scoprire le migliori offerte</p>
                 </div>
                 
                 <!-- Horizontal Product Strip (Blocco B) -->
@@ -284,6 +284,11 @@
                                         <i class="fas fa-dumbbell fa-2x text-info mb-2"></i>
                                         <div class="fw-bold small">Fitness Casa</div>
                                         <small class="text-muted">12 prodotti</small>
+                                    </a>
+                                    <a href="abbigliamento-lavoro/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item">
+                                        <i class="fas fa-briefcase fa-2x text-secondary mb-2"></i>
+                                        <div class="fw-bold small">Abbigliamento Lavoro</div>
+                                        <small class="text-muted">6 prodotti</small>
                                     </a>
                                 </div>
                             </div>
@@ -330,7 +335,7 @@
                 
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
                                     <i class="fas fa-utensils fa-4x text-warning" aria-hidden="true"></i>
@@ -344,7 +349,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
                                     <i class="fas fa-gamepad fa-4x text-primary" aria-hidden="true"></i>
@@ -358,7 +363,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
                                     <i class="fas fa-box fa-4x text-success" aria-hidden="true"></i>
@@ -372,7 +377,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
                                     <i class="fas fa-film fa-4x text-danger" aria-hidden="true"></i>
@@ -386,7 +391,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
                                     <i class="fas fa-dumbbell fa-4x text-info" aria-hidden="true"></i>
@@ -399,13 +404,27 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                            <div class="card-body p-4 text-center">
+                                <div class="mb-3">
+                                    <i class="fas fa-briefcase fa-4x text-secondary" aria-hidden="true"></i>
+                                </div>
+                                <h4 class="card-title fw-bold mb-3">Abbigliamento Lavoro</h4>
+                                <p class="card-text text-muted mb-4">6 prodotti • Pantaloni Tattici, Ginocchiere, Antitaglio, Scarpe</p>
+                                <a href="abbigliamento-lavoro/index.html" class="btn btn-secondary btn-lg fw-bold w-100">
+                                    <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Other Categories Section (Discreet) -->
-    <section class="container my-5">
+    <section id="sites" class="container my-5">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card shadow-sm border-0 bg-light">
@@ -975,7 +994,7 @@
                                 featuredContainer.innerHTML = featuredProducts.map((product, index) => {
                                     return `
                                     <div class="col-md-6">
-                                        <div class="card h-100 border-0 shadow-sm">
+                                        <div class="product-card card h-100 border-0 shadow-sm">
                                             <div class="card-body p-4 text-center">
                                                 <div class="text-primary mb-3">
                                                     <i class="fas ${product.icon} fa-3x"></i>
@@ -1015,7 +1034,7 @@
                                 featuredContainer.innerHTML = featuredProducts.map((product, index) => {
                                     return `
                                     <div class="col-md-6">
-                                        <div class="card h-100 border-0 shadow-sm">
+                                        <div class="product-card card h-100 border-0 shadow-sm">
                                             <div class="card-body p-4 text-center">
                                                 <div class="text-primary mb-3">
                                                     <i class="fas ${product.icon} fa-3x"></i>

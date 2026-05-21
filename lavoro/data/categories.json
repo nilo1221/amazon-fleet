@@ -54,6 +54,17 @@
       "headerGradient": "linear-gradient(135deg, #1C2833 0%, #E67E22 50%, #F39C12 100%)",
       "primaryColor": "#E67E22",
       "accentColor": "#F39C12"
+    },
+    {
+      "id": "abbigliamento-lavoro",
+      "name": "Abbigliamento Lavoro",
+      "icon": "fa-briefcase",
+      "color": "secondary",
+      "productCount": 6,
+      "description": "Pantaloni Tattici, Ginocchiere, Antitaglio, Scarpe di Sicurezza",
+      "headerGradient": "linear-gradient(135deg, #2C3E50 0%, #5D6D7E 50%, #85929E 100%)",
+      "primaryColor": "#5D6D7E",
+      "accentColor": "#2C3E50"
     }
   ]
 }
