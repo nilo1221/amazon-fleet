@@ -753,15 +753,20 @@ function applyBotTheme(categoryKey) {
     
     const personality = nicheData.personality;
     
-    // Remove all existing theme classes
-    chatHeader.classList.remove(
+    // Remove all existing theme classes from both header and button
+    const themeClasses = [
         'theme-moda', 'theme-tech', 'theme-gaming', 'theme-cucina', 'theme-default',
         'theme-summer', 'theme-adventure', 'theme-fashion', 'theme-wellness',
         'theme-gaming-theme', 'theme-entertainment', 'theme-technical', 'theme-caring',
         'theme-aesthetic', 'theme-intellectual', 'theme-elegant', 'theme-eco',
         'theme-professional', 'theme-travel', 'theme-creative', 'theme-cinema-tv',
         'theme-blinding-lights', 'theme-as-it-was', 'theme-midnight-city'
-    );
+    ];
+    
+    themeClasses.forEach(themeClass => {
+        chatHeader.classList.remove(themeClass);
+        chatButton.classList.remove(themeClass);
+    });
     
     // Apply appropriate theme based on personality
     const personalityToTheme = {
@@ -796,7 +801,9 @@ function applyBotTheme(categoryKey) {
         themeClass = 'theme-midnight-city';
     }
     
+    // Apply theme to both header and button
     chatHeader.classList.add(themeClass);
+    chatButton.classList.add(themeClass);
 }
 
 // Analyze message and find category with intelligent fallback using NicheDatabase

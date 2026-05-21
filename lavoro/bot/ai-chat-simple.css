@@ -64,6 +64,127 @@
     background: var(--bot-current-bg);
 }
 
+/* Dynamic color themes for bot button */
+#ai-chat-button.theme-moda {
+    --bot-current-bg: var(--bot-bg-moda);
+    background: var(--bot-bg-moda);
+}
+
+#ai-chat-button.theme-tech {
+    --bot-current-bg: var(--bot-bg-tech);
+    background: var(--bot-bg-tech);
+}
+
+#ai-chat-button.theme-gaming {
+    --bot-current-bg: var(--bot-bg-gaming);
+    background: var(--bot-bg-gaming);
+}
+
+#ai-chat-button.theme-cucina {
+    --bot-current-bg: var(--bot-bg-cucina);
+    background: var(--bot-bg-cucina);
+}
+
+#ai-chat-button.theme-summer {
+    --bot-current-bg: var(--bot-bg-summer);
+    background: var(--bot-bg-summer);
+}
+
+#ai-chat-button.theme-adventure {
+    --bot-current-bg: var(--bot-bg-adventure);
+    background: var(--bot-bg-adventure);
+}
+
+#ai-chat-button.theme-fashion {
+    --bot-current-bg: var(--bot-bg-fashion);
+    background: var(--bot-bg-fashion);
+}
+
+#ai-chat-button.theme-wellness {
+    --bot-current-bg: var(--bot-bg-wellness);
+    background: var(--bot-bg-wellness);
+}
+
+#ai-chat-button.theme-gaming-theme {
+    --bot-current-bg: var(--bot-bg-gaming-theme);
+    background: var(--bot-bg-gaming-theme);
+}
+
+#ai-chat-button.theme-entertainment {
+    --bot-current-bg: var(--bot-bg-entertainment);
+    background: var(--bot-bg-entertainment);
+}
+
+#ai-chat-button.theme-technical {
+    --bot-current-bg: var(--bot-bg-technical);
+    background: var(--bot-bg-technical);
+}
+
+#ai-chat-button.theme-caring {
+    --bot-current-bg: var(--bot-bg-caring);
+    background: var(--bot-bg-caring);
+}
+
+#ai-chat-button.theme-aesthetic {
+    --bot-current-bg: var(--bot-bg-aesthetic);
+    background: var(--bot-bg-aesthetic);
+}
+
+#ai-chat-button.theme-intellectual {
+    --bot-current-bg: var(--bot-bg-intellectual);
+    background: var(--bot-bg-intellectual);
+}
+
+#ai-chat-button.theme-elegant {
+    --bot-current-bg: var(--bot-bg-elegant);
+    background: var(--bot-bg-elegant);
+}
+
+#ai-chat-button.theme-eco {
+    --bot-current-bg: var(--bot-bg-eco);
+    background: var(--bot-bg-eco);
+}
+
+#ai-chat-button.theme-professional {
+    --bot-current-bg: var(--bot-bg-professional);
+    background: var(--bot-bg-professional);
+}
+
+#ai-chat-button.theme-travel {
+    --bot-current-bg: var(--bot-bg-travel);
+    background: var(--bot-bg-travel);
+}
+
+#ai-chat-button.theme-creative {
+    --bot-current-bg: var(--bot-bg-creative);
+    background: var(--bot-bg-creative);
+}
+
+#ai-chat-button.theme-cinema-tv {
+    --bot-current-bg: var(--bot-bg-cinema-tv);
+    background: var(--bot-bg-cinema-tv);
+}
+
+#ai-chat-button.theme-blinding-lights {
+    --bot-current-bg: var(--bot-bg-blinding-lights);
+    background: var(--bot-bg-blinding-lights);
+}
+
+#ai-chat-button.theme-as-it-was {
+    --bot-current-bg: var(--bot-bg-as-it-was);
+    background: var(--bot-bg-as-it-was);
+}
+
+#ai-chat-button.theme-midnight-city {
+    --bot-current-bg: var(--bot-bg-midnight-city);
+    background: var(--bot-bg-midnight-city);
+}
+
+#ai-chat-button.theme-default {
+    --bot-current-bg: var(--bot-bg-default);
+    background: var(--bot-bg-default);
+}
+
 #ai-chat-window {
     position: fixed;
     bottom: 100px;
