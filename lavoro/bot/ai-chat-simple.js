@@ -94,7 +94,8 @@ const NicheDatabase = {
         valueProp: "Come consulente di cucina, ho valutato funzionalità, materiali e rapporto qualità-prezzo per te.",
         song: "Sugar, Sugar - The Archies",
         songLink: "https://www.youtube.com/watch?v=JibQy5y4R8o",
-        songLinkSpotify: "https://open.spotify.com/track/3M3SBRzq5mWfYPXZdOYPG4"
+        songLinkSpotify: "https://open.spotify.com/track/3M3SBRzq5mWfYPXZdOYPG4",
+        songLinkAmazon: ""
     },
     "smart-home-domotica": {
         name: "Smart Home & Domotica",
@@ -104,7 +105,8 @@ const NicheDatabase = {
         valueProp: "Ho analizzato le specifiche tecniche e la compatibilità per la tua smart home.",
         song: "Automaton - Jamiroquai",
         songLink: "https://www.youtube.com/watch?v=Erd49aFS55g",
-        songLinkSpotify: "https://open.spotify.com/track/0xCpEzvbWCvn1peuUaNv7p"
+        songLinkSpotify: "https://open.spotify.com/track/0xCpEzvbWCvn1peuUaNv7p",
+        songLinkAmazon: ""
     },
     "fitness-casa": {
         name: "Fitness Casa",
@@ -114,7 +116,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i prodotti migliori per raggiungere i tuoi obiettivi fitness a casa.",
         song: "Physical - Olivia Newton-John",
         songLink: "https://www.youtube.com/watch?v=Z61s-fO3x7k",
-        songLinkSpotify: "https://open.spotify.com/track/2nakfNGqLyCJ8u1hH7WWTp"
+        songLinkSpotify: "https://open.spotify.com/track/2nakfNGqLyCJ8u1hH7WWTp",
+        songLinkAmazon: ""
     },
     "elite-gaming-gear": {
         name: "Elite Gaming Gear",
@@ -124,7 +127,8 @@ const NicheDatabase = {
         valueProp: "Ho analizzato le specifiche tecniche per te. Latenza, DPI, FPS e compatibilità sono i fattori chiave.",
         song: "Blinding Lights - The Weeknd",
         songLink: "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
-        songLinkSpotify: "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b"
+        songLinkSpotify: "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
+        songLinkAmazon: ""
     },
     "pet-care-intelligente": {
         name: "Pet Care Intelligente",
@@ -134,7 +138,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori prodotti per il benessere del tuo animale domestico.",
         song: "Who Let the Dogs Out - Baha Men",
         songLink: "https://www.youtube.com/watch?v=Qkuu0Lwb5EM",
-        songLinkSpotify: "https://open.spotify.com/track/1H5tvpoApNDxvxDexoaAUo"
+        songLinkSpotify: "https://open.spotify.com/track/1H5tvpoApNDxvxDexoaAUo",
+        songLinkAmazon: ""
     },
     "cinema-tv": {
         name: "Cinema & TV",
@@ -144,7 +149,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato.",
         song: "Eye of the Tiger - Survivor",
         songLink: "https://www.youtube.com/watch?v=btPJPFnesV4",
-        songLinkSpotify: "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2"
+        songLinkSpotify: "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2",
+        songLinkAmazon: ""
     },
     "smartphone-tech": {
         name: "Smartphone & Tech",
@@ -154,7 +160,8 @@ const NicheDatabase = {
         valueProp: "Ho analizzato le specifiche tecniche e le prestazioni. Processore, RAM, storage e batteria sono i fattori chiave.",
         song: "Telephone - Lady Gaga",
         songLink: "https://www.youtube.com/watch?v=GQ95z6ywcBY",
-        songLinkSpotify: "https://open.spotify.com/track/7rl7ao5pb9BhvAzPdWStxi"
+        songLinkSpotify: "https://open.spotify.com/track/7rl7ao5pb9BhvAzPdWStxi",
+        songLinkAmazon: ""
     },
     "tech": {
         name: "Tech",
@@ -164,7 +171,8 @@ const NicheDatabase = {
         valueProp: "Ho analizzato le specifiche tecniche e le prestazioni per le tue esigenze tecnologiche.",
         song: "Technologic - Daft Punk",
         songLink: "https://www.youtube.com/watch?v=YJVmu6yttiw",
-        songLinkSpotify: "https://open.spotify.com/track/0LSLM0zuWRkEYemF7JcfEE"
+        songLinkSpotify: "https://open.spotify.com/track/0LSLM0zuWRkEYemF7JcfEE",
+        songLinkAmazon: ""
     },
     "mare-spiaggia": {
         name: "Mare & Spiaggia",
@@ -174,7 +182,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori prodotti per goderti il mare e la spiaggia al meglio.",
         song: "Kokomo - The Beach Boys",
         songLink: "https://www.youtube.com/watch?v=Ke1Us_3qfkg",
-        songLinkSpotify: "https://open.spotify.com/track/7B22szTT8omMRmpQw6DMqV"
+        songLinkSpotify: "https://open.spotify.com/track/7B22szTT8omMRmpQw6DMqV",
+        songLinkAmazon: ""
     },
     "outdoor-camping": {
         name: "Outdoor & Camping",
@@ -184,7 +193,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato l'attrezzatura migliore per le tue avventure all'aria aperta.",
         song: "Country Roads - John Denver",
         songLink: "https://www.youtube.com/watch?v=1vrEljMfXYo",
-        songLinkSpotify: "https://open.spotify.com/track/1QbOvACeYanja5pbnJbAmk"
+        songLinkSpotify: "https://open.spotify.com/track/1QbOvACeYanja5pbnJbAmk",
+        songLinkAmazon: ""
     },
     "moda-donna": {
         name: "Moda Donna",
@@ -194,7 +204,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato.",
         song: "Vogue - Madonna",
         songLink: "https://www.youtube.com/watch?v=GuJQSAiODqI",
-        songLinkSpotify: "https://open.spotify.com/track/27QvYgBk0CHOVHthWnkuWt"
+        songLinkSpotify: "https://open.spotify.com/track/27QvYgBk0CHOVHthWnkuWt",
+        songLinkAmazon: ""
     },
     "moda-uomo": {
         name: "Moda Uomo",
@@ -204,7 +215,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato.",
         song: "Sharp Dressed Man - ZZ Top",
         songLink: "https://www.youtube.com/watch?v=7gz1DIIxqGk",
-        songLinkSpotify: "https://open.spotify.com/track/0f9h8awV1X4jSllHXXYdfX"
+        songLinkSpotify: "https://open.spotify.com/track/0f9h8awV1X4jSllHXXYdfX",
+        songLinkAmazon: ""
     },
     "arredamento-casa": {
         name: "Casa & Decorazione",
@@ -214,7 +226,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i prodotti migliori per arredare la tua casa con stile.",
         song: "Home - Michael Bublé",
         songLink: "https://www.youtube.com/watch?v=lb9UXwWV7zE",
-        songLinkSpotify: "https://open.spotify.com/track/4wLZ4zPM9c4oe1VV8ejdWV"
+        songLinkSpotify: "https://open.spotify.com/track/4wLZ4zPM9c4oe1VV8ejdWV",
+        songLinkAmazon: ""
     },
     "accessori-moda": {
         name: "Accessori Moda",
@@ -224,7 +237,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato gli accessori perfetti per completare il tuo look.",
         song: "Fashion - David Bowie",
         songLink: "https://www.youtube.com/watch?v=GA9P5H15_6A",
-        songLinkSpotify: "https://open.spotify.com/track/34V3AvUPfWRW2zListOWZG"
+        songLinkSpotify: "https://open.spotify.com/track/34V3AvUPfWRW2zListOWZG",
+        songLinkAmazon: ""
     },
     "benessere-cura-personale": {
         name: "Benessere & Cura Personale",
@@ -234,7 +248,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori prodotti per la tua routine di bellezza e benessere.",
         song: "Beautiful - Christina Aguilera",
         songLink: "https://www.youtube.com/watch?v=eAfyFTzZDMM",
-        songLinkSpotify: "https://open.spotify.com/track/3TCauNPqFiniaYHBvEVoHG"
+        songLinkSpotify: "https://open.spotify.com/track/3TCauNPqFiniaYHBvEVoHG",
+        songLinkAmazon: ""
     },
     "giochi-da-tavolo": {
         name: "Giochi da Tavolo",
@@ -244,7 +259,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori giochi da tavolo per le tue serate con amici.",
         song: "The Game - Queen",
         songLink: "https://www.youtube.com/watch?v=0pL9Ie5j3-8",
-        songLinkSpotify: "https://open.spotify.com/track/3CaetUu7dGAS5AM52ceK1E"
+        songLinkSpotify: "https://open.spotify.com/track/3CaetUu7dGAS5AM52ceK1E",
+        songLinkAmazon: ""
     },
     "libri-ereader": {
         name: "Libri & E-Reader",
@@ -254,7 +270,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori libri e e-reader per i tuoi momenti di lettura.",
         song: "Words - Bee Gees",
         songLink: "https://www.youtube.com/watch?v=jW9BA2-h1H0",
-        songLinkSpotify: "https://open.spotify.com/track/07PIhdmyYIw8dMeDMsx9FU"
+        songLinkSpotify: "https://open.spotify.com/track/07PIhdmyYIw8dMeDMsx9FU",
+        songLinkAmazon: ""
     },
     "profumi-bellezza": {
         name: "Profumi & Bellezza",
@@ -264,7 +281,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i profumi più esclusivi per la tua personalità.",
         song: "Por Una Cabeza - Tango",
         songLink: "https://www.youtube.com/watch?v=B5ezPA7msyI",
-        songLinkSpotify: "https://open.spotify.com/track/6fHW0V6DXlmEWn0bfCOt1N"
+        songLinkSpotify: "https://open.spotify.com/track/6fHW0V6DXlmEWn0bfCOt1N",
+        songLinkAmazon: ""
     },
     "abbigliamento-lavoro": {
         name: "Abbigliamento Lavoro",
@@ -274,7 +292,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori capi di abbigliamento professionale per il tuo lavoro. Sicurezza, comfort e resistenza sono i criteri che ho considerato.",
         song: "Midnight City - M83",
         songLink: "https://www.youtube.com/watch?v=dX3k_QDnzHE",
-        songLinkSpotify: "https://open.spotify.com/track/1eyzqe2QqGZUmfcPZtrIyt"
+        songLinkSpotify: "https://open.spotify.com/track/1eyzqe2QqGZUmfcPZtrIyt",
+        songLinkAmazon: ""
     },
     "sostenibilita-eco-friendly": {
         name: "Sostenibilità & Eco-Friendly",
@@ -284,7 +303,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i prodotti più sostenibili per ridurre il tuo impatto ambientale.",
         song: "Earth Song - Michael Jackson",
         songLink: "https://www.youtube.com/watch?v=XAi3VTSdTxU",
-        songLinkSpotify: "https://open.spotify.com/track/4GCGH6TJ69neckwITeBFXK"
+        songLinkSpotify: "https://open.spotify.com/track/4GCGH6TJ69neckwITeBFXK",
+        songLinkAmazon: ""
     },
     "ufficio-produttivo": {
         name: "Ufficio Produttivo",
@@ -294,7 +314,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i prodotti migliori per aumentare la tua produttività in ufficio.",
         song: "9 to 5 - Dolly Parton",
         songLink: "https://www.youtube.com/watch?v=LrvPW0JHzRQ",
-        songLinkSpotify: "https://open.spotify.com/track/4w3tQBXhn5345eUXDGBWZG"
+        songLinkSpotify: "https://open.spotify.com/track/4w3tQBXhn5345eUXDGBWZG",
+        songLinkAmazon: ""
     },
     "viaggi-vacanze": {
         name: "Viaggi & Vacanze",
@@ -304,7 +325,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori accessori per i tuoi viaggi e vacanze.",
         song: "On the Road Again - Willie Nelson",
         songLink: "https://www.youtube.com/watch?v=dvdJ1OfJ33o",
-        songLinkSpotify: "https://open.spotify.com/track/2GyH5rvdnfkjzsTFaWrrov"
+        songLinkSpotify: "https://open.spotify.com/track/2GyH5rvdnfkjzsTFaWrrov",
+        songLinkAmazon: ""
     },
     "fotografia-mobile": {
         name: "Fotografia Mobile",
@@ -314,7 +336,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori prodotti per migliorare la tua fotografia mobile.",
         song: "Photograph - Ed Sheeran",
         songLink: "https://www.youtube.com/watch?v=nSDgHBxUbVQ",
-        songLinkSpotify: "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL"
+        songLinkSpotify: "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL",
+        songLinkAmazon: ""
     },
     "dvd-bluray": {
         name: "DVD & Blu-ray",
@@ -324,7 +347,8 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori film e serie TV per la tua collezione.",
         song: "Video Killed the Radio Star - The Buggles",
         songLink: "https://www.youtube.com/watch?v=Iwuy4hHO3YQ",
-        songLinkSpotify: "https://open.spotify.com/track/6t1FIJlZWTQfIZhsGjaulM"
+        songLinkSpotify: "https://open.spotify.com/track/6t1FIJlZWTQfIZhsGjaulM",
+        songLinkAmazon: ""
     }
 };
 
@@ -1417,28 +1441,19 @@ function selectCategoryFromButton(categoryKey) {
                 // Add follow-up with song reference
                 if (nicheData && nicheData.song && nicheData.songLink) {
                     setTimeout(() => {
-                        const videoId = getYouTubeId(nicheData.songLink);
-                        const spotifyLink = nicheData.songLinkSpotify ? ` | <a href="${nicheData.songLinkSpotify}" target="_blank" style="color: #1DB954; font-weight: bold; text-decoration: underline;">Spotify</a>` : '';
-                        
-                        if (videoId) {
-                            const youtubePlayer = `
-                                <div style="margin: 10px 0;">
-                                    <p style="margin-bottom: 8px;">🎵 Mentre esplori ${category.name}, ascolta "${nicheData.song}" per entrare nel mood giusto!</p>
-                                    <iframe width="100%" height="200" 
-                                        src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
-                                        title="${nicheData.song}" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen
-                                        style="border-radius: 8px;">
-                                    </iframe>
-                                    <span style="color: #666; font-size: 0.9em;">${spotifyLink}</span>
-                                </div>
-                            `;
-                            addMessage(youtubePlayer, 'bot');
-                        } else {
-                            addMessage(`🎵 Mentre esplori ${category.name}, potresti ascoltare <a href="${nicheData.songLink}" target="_blank" style="color: #008B8B; font-weight: bold; text-decoration: underline;">"${nicheData.song}"</a> per entrare nel mood giusto! <span style="color: #666; font-size: 0.9em;">(YouTube${spotifyLink})</span>`, 'bot');
-                        }
+                        const songMessage = `
+                            <div style="margin: 10px 0;">
+                                <p style="margin-bottom: 8px;">Per questa categoria, ho selezionato la colonna sonora perfetta per accompagnare la tua esperienza.</p>
+                                <p style="margin-bottom: 8px; font-weight: bold;">🎵 Ascolta subito:</p>
+                                <p style="margin-bottom: 8px;"><a href="${nicheData.songLink}" target="_blank" style="color: #FF0000; font-weight: bold; text-decoration: underline;">[Guarda su YouTube]</a></p>
+                                ${nicheData.songLinkSpotify ? `<p style="margin-bottom: 8px;"><a href="${nicheData.songLinkSpotify}" target="_blank" style="color: #1DB954; font-weight: bold; text-decoration: underline;">[Ascolta su Spotify]</a></p>` : ''}
+                                ${nicheData.songLinkAmazon ? `
+                                <p style="margin-bottom: 8px; margin-top: 12px;">💎 Porta l'esperienza con te:</p>
+                                <p style="margin-bottom: 8px;">Vuoi questo sound senza interruzioni e in alta qualità? <a href="${nicheData.songLinkAmazon}" target="_blank" style="color: #00A8E1; font-weight: bold; text-decoration: underline;">[Scopri Amazon Music Unlimited]</a></p>
+                                ` : ''}
+                            </div>
+                        `;
+                        addMessage(songMessage, 'bot');
                         
                         // Show related categories as follow-up
                         setTimeout(() => {
