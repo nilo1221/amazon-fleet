@@ -20,6 +20,171 @@ let pageScrollTriggered = false;
 // Stop words - common greetings and words that shouldn't trigger product matching
 const stopWords = ['ciao', 'salve', 'ehi', 'hey', 'buongiorno', 'buonasera', 'buonanotte', 'grazie', 'prego', 'scusa', 'scusi', 'per favore', 'perfavore', 'ok', 'sì', 'no', 'si', 'come', 'stai', 'va', 'tutto', 'bene', 'male', 'quindi', 'allora', 'perché', 'perche', 'ma', 'e', 'o', 'a', 'da', 'in', 'con', 'su', 'per', 'tra', 'fra'];
 
+// NicheDatabase - The "Brain" of the bot with tags for each category
+const NicheDatabase = {
+    "cucina-elettrodomestici": {
+        name: "Cucina Moderna & Tech",
+        tags: ["friggitrice", "aria", "forno", "microonde", "bollitore", "caffettiera", "macchina", "caffè", "frigorifero", "freezer", "lavatrice", "asciugatrice", "lavastoviglie", "robot", "cucina", "minipimer", "frullatore", "mixer", "spremiagrumi", "estrattore", "centrifuga", "tostapane", "griglia", "piastra", "cottura", "pentola", "padella", "wok", "pentolame", "batteria", "pentole", "coltello", "taglieri", "tagliere", "scolapasta", "schiumarola", "mestolo", "cucchiaio", "forchetta", "set", "posate", "bottiglia", "thermos", "condizionatore", "ventilatore", "detersivi", "bevande"],
+        url: "cucina-elettrodomestici/index.html",
+        personality: "functional",
+        valueProp: "Come consulente di cucina, ho valutato funzionalità, materiali e rapporto qualità-prezzo per te."
+    },
+    "smart-home-domotica": {
+        name: "Smart Home & Domotica",
+        tags: ["smart", "home", "domotica", "lampada", "termostato", "sensore", "casa", "intelligente", "luci", "automazione", "telecomando", "controllo", "wifi", "bluetooth", "smartphone", "app", "telecamera", "sorveglianza", "videocamera", "allarme", "sicurezza", "serratura", "smart", "lock", "prese", "intelligenti", "prese", "wifi", "hub", "centrale"],
+        url: "smart-home-domotica/index.html",
+        personality: "technical",
+        valueProp: "Ho analizzato le specifiche tecniche e la compatibilità per la tua smart home."
+    },
+    "fitness-casa": {
+        name: "Fitness Casa",
+        tags: ["fitness", "smartwatch", "activity", "tracker", "pesi", "palestra", "allenamento", "sport", "cyclette", "tapis", "roulant", "ellittica", "manubri", "pesetti", "elastici", "bande", "yoga", "pilates", "tappetino", "step", "panca", "bilanciere", "dischi", "cavigliere", "bracciale", "cardio", "corsa", "bici", "spinning", "crossfit", "kettlebell", "trx", "vibrazione", "massaggiatore", "foam", "roller", "jogging", "corsetta"],
+        url: "fitness-casa/index.html",
+        personality: "motivational",
+        valueProp: "Ho selezionato i prodotti migliori per raggiungere i tuoi obiettivi fitness a casa."
+    },
+    "elite-gaming-gear": {
+        name: "Elite Gaming Gear",
+        tags: ["gaming", "cuffie", "headset", "mouse", "tastiera", "keyboard", "controller", "ps5", "xbox", "playstation", "play", "station", "nintendo", "switch", "pc", "computer", "laptop", "monitor", "schermo", "sedia", "gaming", "scrivania", "joystick", "volante", "pedale", "simulatore", "streaming", "twitch", "youtube", "microfono", "webcam", "capture", "card", "vr", "realtà", "virtuale", "oculus", "quest", "headset", "auricolari", "audio", "sound", "fps", "dpi", "latenza"],
+        url: "elite-gaming-gear/index.html",
+        personality: "gaming",
+        valueProp: "Ho analizzato le specifiche tecniche per te. Latenza, DPI, FPS e compatibilità sono i fattori chiave."
+    },
+    "pet-care-intelligente": {
+        name: "Pet Care Intelligente",
+        tags: ["gatto", "cane", "animale", "lettiera", "autopulente", "cibo", "pet", "zampa", "crocchette", "mangiatore", "bevitore", "automatico", "spazzola", "pelo", "tagliaunghie", "trasportino", "cuccia", "casa", "cane", "giocattolo", "osso", "corda", "pallina", "collare", "guinzaglio", "pettorina", "museruola", "antiparassitario", "pulci", "zecke", "integratore", "vitamine"],
+        url: "pet-care-intelligente/index.html",
+        personality: "caring",
+        valueProp: "Ho selezionato i migliori prodotti per il benessere del tuo animale domestico."
+    },
+    "cinema-tv": {
+        name: "Cinema & TV",
+        tags: ["tv", "televisione", "proiettore", "cinema", "film", "bluray", "dvd", "schermo", "monitor", "home", "theater", "surround", "soundbar", "altoparlante", "speaker", "sound", "audio", "hifi", "amplificatore", "ricevitore", "decoder", "satellite", "streaming", "netflix", "prime", "disney", "hbo", "apple", "tv", "chromecast", "fire", "stick", "roku", "kodi", "plex", "media", "player", "cavo", "hdmi", "4k", "8k", "oled", "qled", "led", "lcd"],
+        url: "cinema-tv/index.html",
+        personality: "entertainment",
+        valueProp: "Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato."
+    },
+    "smartphone-tech": {
+        name: "Smartphone & Tech",
+        tags: ["smartphone", "telefono", "cellulare", "iphone", "samsung", "android", "galaxy", "xiaomi", "huawei", "oppo", "oneplus", "pixel", "nokia", "sony", "lg", "motorola", "honor", "realme", "tecno", "infinix", "vivo", "zte", "alcatel", "wiko", "bq", "crosscall", "cat", "rugged", "tough", "tablet", "ipad", "samsung", "galaxy", "tab", "kindle", "ebook", "reader", "smartwatch", "orologio", "fitness", "tracker", "band", "auricolari", "cuffie", "true", "wireless", "airpods", "galaxy", "buds", "powerbank", "batteria", "caricabatterie", "cavo", "usb", "type", "c", "lightning"],
+        url: "smartphone-tech/index.html",
+        personality: "technical",
+        valueProp: "Ho analizzato le specifiche tecniche e le prestazioni. Processore, RAM, storage e batteria sono i fattori chiave."
+    },
+    "tech": {
+        name: "Tech",
+        tags: ["tech", "tecnologia", "gadget", "computer", "laptop", "notebook", "desktop", "pc", "mac", "windows", "linux", "android", "ios", "software", "hardware", "periferica", "mouse", "tastiera", "monitor", "schermo", "stampante", "scanner", "webcam", "microfono", "cuffie", "auricolari", "speaker", "soundbar", "router", "modem", "wifi", "bluetooth", "usb", "cavo", "adattatore", "hub", "dock", "powerbank", "batteria", "caricabatterie", "hard", "disk", "ssd", "ram", "cpu", "gpu", "processore", "scheda", "video", "scheda", "madre", "case", "ventole", "raffreddamento", "liquido", "watercooling"],
+        url: "tech/index.html",
+        personality: "technical",
+        valueProp: "Ho analizzato le specifiche tecniche e le prestazioni per le tue esigenze tecnologiche."
+    },
+    "mare-spiaggia": {
+        name: "Mare & Spiaggia",
+        tags: ["mare", "spiaggia", "ombrellone", "telo", "costume", "scarpe", "acqua", "sandali", "ciabatte", "slip", "infradito", "flip", "flop", "espadrillas", "crema", "solare", "abbronzante", "doposole", "occhiali", "sole", "cappello", "berretto", "fascia", "bandana", "tuta", "bagno", "costume", "bikini", "slip", "mutande", "shorts", "beach", "wear", "gonna", "mare", "dress", "mare", "telo", "microfibra", "asciugamano", "sabbia", "impermeabile", "borsa", "mare", "zaino", "secchiello", "secchio", "paletta", "formine", "pallina", "beach", "volley", "racchette", "surf", "bodyboard", "boogie", "board", "snorkeling", "maschera", "boccaglio", "pinne", "gommone", "canoa", "kayak", "paddleboard"],
+        url: "mare-spiaggia/index.html",
+        personality: "summer",
+        valueProp: "Ho selezionato i migliori prodotti per goderti il mare e la spiaggia al meglio."
+    },
+    "outdoor-camping": {
+        name: "Outdoor & Camping",
+        tags: ["outdoor", "campeggio", "tenda", "montagna", "freddo", "sacco", "pelo", "sleeping", "bag", "lanterna", "torcia", "frontale", "bussola", "gps", "navigatore", "mappe", "kit", "sopravvivenza", "coltello", "multitool", "cucina", "campeggio", "pentole", "portatili", "stoviglie", "posate", "bicchieri", "bottiglia", "thermos", "borsa", "frigo", "cooler", "box", "ice", "sedia", "pieghevole", "tavolo", "pieghevole", "hammock", "amaca", "mosquito", "net", "zanzariera", "poncho", "impermeabile", "giacca", "antivento", "kway", "scarpe", "trekking", "stivali", "bastoncini", "crampon", "piccone", "corda", "imbracatura", "carabiner", "moschettone", "rampicata", "arrampicata"],
+        url: "outdoor-camping/index.html",
+        personality: "adventure",
+        valueProp: "Ho selezionato l'attrezzatura migliore per le tue avventure all'aria aperta."
+    },
+    "moda-donna": {
+        name: "Moda Donna",
+        tags: ["moda", "donna", "abbigliamento", "vestito", "scarpe", "donna", "borsa", "donna", "top", "tshirt", "maglietta", "blusa", "camicetta", "jeans", "pantaloni", "gonna", "giacca", "cappotto", "maglione", "pullover", "cardigan", "blazer", "abito", "sera", "elegante", "intimo", "reggiseno", "mutandine", "calze", "collant", "calzini", "costume", "bagno", "beachwear", "accessori", "gioielli", "collana", "orecchino", "bracciale", "anello", "occhiali", "sole", "sciarpa", "cintura", "cappello", "berretto", "scarpe eleganti", "tacchi", "décolleté", "sandali eleganti", "pumps", "tessuto", "vestibilità", "design"],
+        url: "moda-donna/index.html",
+        personality: "fashion",
+        valueProp: "Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato."
+    },
+    "moda-uomo": {
+        name: "Moda Uomo",
+        tags: ["moda", "uomo", "abbigliamento", "camicia", "scarpe", "uomo", "borsa", "uomo", "tshirt", "maglietta", "polo", "jeans", "pantaloni", "pantaloni", "shorts", "giacca", "cappotto", "maglione", "pullover", "cardigan", "blazer", "completo", "abito", "elegante", "intimo", "mutande", "boxer", "slip", "calze", "calzini", "costume", "bagno", "beachwear", "cravatta", "papillon", "cintura", "cinturino", "cappello", "berretto", "guanti", "scarpe", "sneakers", "mocassini", "stivali", "scarpe eleganti", "scarpe da cerimonia", "scarpe classiche", "oxford", "derby", "loafer", "monk", "tessuto", "vestibilità", "design"],
+        url: "moda-uomo/index.html",
+        personality: "fashion",
+        valueProp: "Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato."
+    },
+    "arredamento-casa": {
+        name: "Casa & Decorazione",
+        tags: ["arredamento", "casa", "decorazione", "vaso", "decorativo", "candela", "profumata", "zanzariera", "tappeto", "lampada", "cuscino", "tenda", "mobili", "sofà", "poltrona", "tavolo", "sedia", "armadio", "mensole", "libreria", "comodino", "specchio", "quadro", "orologio", "da", "parete"],
+        url: "arredamento-casa/index.html",
+        personality: "aesthetic",
+        valueProp: "Ho selezionato i prodotti migliori per arredare la tua casa con stile."
+    },
+    "accessori-moda": {
+        name: "Accessori Moda",
+        tags: ["accessori", "moda", "occhiali", "da", "sole", "cintura", "borsetta", "borsa", "portafoglio", "sciarpa", "cappello", "guanti", "gioielli", "collana", "bracciale", "anello", "orecchini"],
+        url: "accessori-moda/index.html",
+        personality: "fashion",
+        valueProp: "Ho selezionato gli accessori perfetti per completare il tuo look."
+    },
+    "benessere-cura-personale": {
+        name: "Benessere & Cura Personale",
+        tags: ["benessere", "cura", "personale", "crema", "viso", "siero", "lozione", "tonico", "detergente", "esfoliante", "idratante", "solare", "abbronzante", "doposole", "trucco", "fondotinta", "correttore", "mascara", "eyeliner", "ombretto", "rossetto", "gloss", "blush", "bronzer", "illuminante", "primer", "spugna", "pennello", "brush", "palette", "smalto", "unghie", "rimuovi", "smalto", "nail", "polish", "remover", "capelli", "balsamo", "dopobarba"],
+        url: "benessere-cura-personale/index.html",
+        personality: "wellness",
+        valueProp: "Ho selezionato i migliori prodotti per la tua routine di bellezza e benessere."
+    },
+    "giochi-da-tavolo": {
+        name: "Giochi da Tavolo",
+        tags: ["giochi", "da", "tavolo", "board", "game", "dadi", "dungeons", "dragons", "dnd", "pathfinder", "gurps", "call", "cthulhu", "vampire", "masquerade", "warhammer", "age", "sigmar", "monopoly", "risk", "scrabble", "trivial", "pursuit", "cluedo", "twister", "jenga", "uno", "rummy", "poker", "blackjack", "bridge", "scopone", "briscola", "tressette", "scala", "40", "scacchi", "dama", "go", "mahjong", "backgammon", "carrom", "mancala", "catan", "settlers", "ticket", "ride", "carcassonne", "pandemic", "terraforming", "mars", "wingspan", "azul", "splendor"],
+        url: "giochi-da-tavolo/index.html",
+        personality: "gaming",
+        valueProp: "Ho selezionato i migliori giochi da tavolo per le tue serate con amici."
+    },
+    "libri-ereader": {
+        name: "Libri & E-Reader",
+        tags: ["libro", "kindle", "ebook", "lettore", "romanzo", "thriller", "giallo", "fantasy", "fantascienza", "horror", "romance", "erotico", "storico", "biografia", "autobiografia", "saggio", "manual", "guida", "studio", "scuola", "università", "bambini", "ragazzi", "young", "adult", "fumetto", "manga", "graphic", "novel", "comics", "audiolibro", "audible", "kobo", "nook", "boox", "pocketbook", "tolino", "sony", "reader", "paperwhite", "oasis", "scribe", "clara", "libra", "h2o", "glo", "aura", "one", "edition", "forma", "cover", "custodia", "light", "case"],
+        url: "libri-ereader/index.html",
+        personality: "intellectual",
+        valueProp: "Ho selezionato i migliori libri e e-reader per i tuoi momenti di lettura."
+    },
+    "profumi-bellezza": {
+        name: "Profumi & Bellezza",
+        tags: ["profumo", "bellezza", "makeup", "cosmetico", "eau", "de", "toilette", "parfum", "eau", "de", "parfum", "intense", "edp", "edt", "cologne", "after", "shave", "balsamo", "dopobarba"],
+        url: "profumi-bellezza/index.html",
+        personality: "elegant",
+        valueProp: "Ho selezionato i profumi più esclusivi per la tua personalità."
+    },
+    "sostenibilita-eco-friendly": {
+        name: "Sostenibilità & Eco-Friendly",
+        tags: ["sostenibilità", "eco", "ambiente", "riciclo", "ecologico", "green", "biologico", "organico", "naturale", "plastic", "free", "zero", "waste", "compostabile", "biodegradabile", "riciclato", "riciclabile", "energia", "solare", "pannelli", "solari", "eolico", "turbina", "idrico", "acqua", "risparmio", "energetico", "led", "lampadina", "batteria", "ricaricabile", "powerbank", "solare", "borsa", "tessile", "canna", "acqua", "bottiglia", "vetro", "acciaio", "inox", "bamboo", "bambù", "corteccia", "betulla", "canapa", "lino", "cotone", "organico", "fair", "trade", "equo", "solidale", "locale", "km", "zero", "slow", "food"],
+        url: "sostenibilita-eco-friendly/index.html",
+        personality: "eco",
+        valueProp: "Ho selezionato i prodotti più sostenibili per ridurre il tuo impatto ambientale."
+    },
+    "ufficio-produttivo": {
+        name: "Ufficio Produttivo",
+        tags: ["ufficio", "scrivania", "sedia", "ufficio", "stampante", "organizzatore", "cassetto", "porta", "documenti", "raccoglitore", "cartella", "busta", "penna", "matita", "evidenziatore", "correttore", "gomma", "righello", "forbice", "taglierino", "calcolatrice", "agenda", "diario", "calendario", "planner", "organizer", "blocco", "notes", "post", "it", "adesivi", "nastro", "scotch", "rilegatrice", "foratrice", "tagliacarte", "laminatrice", "spillatrice", "cucitrice", "punti", "metal", "fermacampioni", "portapenne", "portamouse", "tappetino", "mouse", "supporto", "monitor", "braccio", "monitor", "lampada", "scrivania", "lettore", "cd", "dvd", "masterizzatore", "esterno", "hard", "disk", "nas", "server"],
+        url: "ufficio-produttivo/index.html",
+        personality: "professional",
+        valueProp: "Ho selezionato i prodotti migliori per aumentare la tua produttività in ufficio."
+    },
+    "viaggi-vacanze": {
+        name: "Viaggi & Vacanze",
+        tags: ["viaggi", "vacanze", "valigia", "zaino", "trolley", "borsetta", "borsa", "viaggio", "adattatore", "spina", "corrente", "cuscino", "viaggio", "mascherina", "sonno", "occhiali", "sonno", "tappo", "orecchio", "kit", "pronto", "soccorso", "assicurazione", "viaggio", "guida", "turistica", "mappa", "gps", "navigatore"],
+        url: "viaggi-vacanze/index.html",
+        personality: "travel",
+        valueProp: "Ho selezionato i migliori accessori per i tuoi viaggi e vacanze."
+    },
+    "fotografia-mobile": {
+        name: "Fotografia Mobile",
+        tags: ["fotografia", "mobile", "fotocamera", "camera", "smartphone", "foto", "video", "lente", "obiettivo", "treppiede", "selfie", "stick", "gimbal", "stabilizzatore", "microfono", "esterno", "light", "ring", "flash", "kit", "fotografia"],
+        url: "fotografia-mobile/index.html",
+        personality: "creative",
+        valueProp: "Ho selezionato i migliori prodotti per migliorare la tua fotografia mobile."
+    },
+    "dvd-bluray": {
+        name: "DVD & Blu-ray",
+        tags: ["dvd", "bluray", "film", "serie", "tv", "collezione", "box", "set", "4k", "ultra", "hd"],
+        url: "dvd-bluray/index.html",
+        personality: "entertainment",
+        valueProp: "Ho selezionato i migliori film e serie TV per la tua collezione."
+    }
+};
+
 // Proactive message bubble
 let proactiveBubble = null;
 let proactiveBubbleShown = false;
@@ -529,7 +694,7 @@ function applyBotTheme(categoryKey) {
     }
 }
 
-// Analyze message and find category with intelligent fallback
+// Analyze message and find category with intelligent fallback using NicheDatabase
 async function analyzeMessage(message) {
     if (!message || typeof message !== 'string') return null;
     
@@ -553,20 +718,20 @@ async function analyzeMessage(message) {
         context = 'best';
     }
     
-    // Calculate relevance scores for each category
+    // Calculate relevance scores for each category using NicheDatabase
     const categoryScores = [];
-    for (const [categoryKey, categoryData] of Object.entries(categoryKeywords)) {
+    for (const [categoryKey, categoryData] of Object.entries(NicheDatabase)) {
         let score = 0;
         
-        for (const keyword of categoryData.keywords) {
+        for (const tag of categoryData.tags) {
             // Exact match - high score
-            if (lowerMessage.includes(keyword)) {
+            if (lowerMessage.includes(tag)) {
                 score += 10;
             }
             
             // Fuzzy match for each meaningful word - medium score
             for (const word of meaningfulWords) {
-                if (fuzzyMatch(word, keyword)) {
+                if (fuzzyMatch(word, tag)) {
                     score += 5;
                 }
             }
@@ -582,14 +747,14 @@ async function analyzeMessage(message) {
     
     // If we have a clear winner (score >= 10), return it
     if (categoryScores.length > 0 && categoryScores[0].score >= 10) {
-        return { ...categoryScores[0].categoryData, context };
+        return { ...categoryScores[0].categoryData, context, id: categoryScores[0].categoryKey };
     }
     
     // Otherwise, return the top 3 suggestions for intelligent fallback
     if (categoryScores.length > 0) {
         return { 
             type: 'suggestions', 
-            suggestions: categoryScores.slice(0, 3).map(s => s.categoryData),
+            suggestions: categoryScores.slice(0, 3).map(s => ({ ...s.categoryData, id: s.categoryKey })),
             context 
         };
     }
@@ -654,30 +819,27 @@ async function sendMessage() {
                     }, 500);
                 }, 1000);
             } else {
-                // Normal category match with category-specific tone
+                // Normal category match with dynamic personality-based tone from NicheDatabase
                 const context = category.context;
                 const categoryKey = category.id;
+                const nicheData = NicheDatabase[categoryKey];
+                
                 let responseText = '';
-
-                // Category-specific consultant tone
-                if (categoryKey.includes('gaming') || categoryKey.includes('elite-gaming')) {
-                    responseText = `Ottima scelta per il gaming! 🔥 Ho analizzato le specifiche tecniche per te. Latenza, DPI, FPS e compatibilità sono i fattori chiave. Ecco i prodotti top per la tua configurazione:`;
-                } else if (categoryKey.includes('moda') || categoryKey.includes('cinema')) {
-                    responseText = `Perfetto! Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato. Ecco le scelte migliori per te:`;
-                } else if (categoryKey.includes('cucina') || categoryKey.includes('elettrodomestici')) {
-                    responseText = `Ottimo! Come consulente di cucina, ho valutato funzionalità, materiali e rapporto qualità-prezzo. Ecco le soluzioni migliori per la tua cucina:`;
-                } else if (categoryKey.includes('tech') || categoryKey.includes('smartphone')) {
-                    responseText = `Ottima scelta! Ho analizzato le specifiche tecniche e le prestazioni. Processore, RAM, storage e batteria sono i fattori chiave. Ecco i prodotti top per le tue esigenze:`;
-                } else {
-                    responseText = `Ho trovato prodotti nella categoria ${category.name}. Come consulente, ho selezionato le migliori opzioni per te.`;
+                
+                // Use valueProp from NicheDatabase for dynamic consultant tone
+                if (nicheData && nicheData.valueProp) {
+                    responseText = `${nicheData.valueProp}`;
                     
                     if (context === 'budget') {
                         responseText += ' Ecco alcune opzioni economiche:';
                     } else if (context === 'best') {
                         responseText += ' Ecco i migliori prodotti:';
                     } else {
-                        responseText += ' Ecco alcuni prodotti:';
+                        responseText += ' Ecco i prodotti selezionati:';
                     }
+                } else {
+                    // Fallback if nicheData not found
+                    responseText = `Ho trovato prodotti nella categoria ${category.name}. Ecco i prodotti disponibili:`;
                 }
                 
                 addMessage(responseText, 'bot');
