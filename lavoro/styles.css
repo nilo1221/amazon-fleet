@@ -1194,3 +1194,8 @@ footer .amazon-disclaimer {
     flex-direction: column;
     justify-content: center;
 }
+
+/* Horizontal carousel strip items */
+.featured-strip-item {
+    min-width: 200px;
+}
