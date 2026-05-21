@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trova il Tuo Prodotto - Ricerca Guidata</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gradient-start: #FF6B35;
+            --gradient-mid: #FF9500;
+            --gradient-end: #FFB800;
+            --background-color: #f5f7fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            min-height: 100vh;
+        }
+        
+        .search-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+        
+        .search-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .search-header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+        
+        .search-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .search-step {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+        
+        .keyword-btn {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            margin: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .keyword-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subcategory-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+        
+        .subcategory-card:hover {
+            border-color: var(--gradient-mid);
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subcategory-card i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subcategory-card h4 {
+            font-weight: bold;
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+        
+        .filter-option {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            padding: 15px 25px;
+            border-radius: 25px;
+            margin: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .filter-option:hover, .filter-option.selected {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
+            color: white;
+            border-color: var(--gradient-mid);
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-card h4 {
+            font-weight: bold;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+        
+        .feature-tag {
+            display: inline-block;
+            background: #f8f9fa;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #666;
+            margin: 3px;
+        }
+        
+        .match-badge {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        
+        .amazon-btn {
+            background: linear-gradient(135deg, #FF9900, #FFAD33);
+            color: #1a1a2e;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .amazon-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .back-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        
+        .back-btn:hover {
+            background: #5a6268;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--gradient-mid);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <div class="search-header">
+                <h1><i class="fas fa-search me-3" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>Trova il Tuo Prodotto</h1>
+                <p>Raccontaci cosa stai cercando per la tua cucina e ti aiuteremo a trovarlo</p>
+            </div>
+            
+            <!-- Step 1: Search Input -->
+            <div id="step1" class="search-step">
+                <div class="step-title"><span class="step-number">1</span>Cosa stai cercando?</div>
+                <input type="text" id="searchInput" class="search-input" placeholder="Digita cosa cerchi (es: frullatore, friggitrice, robot...)" autocomplete="off">
+                <div id="keywordSuggestions" class="mt-3">
+                    <p class="text-muted mb-2">Oppure seleziona:</p>
+                    <button class="keyword-btn" onclick="selectKeyword('frullatore')">Frullatore</button>
+                    <button class="keyword-btn" onclick="selectKeyword('friggitrice')">Friggitrice</button>
+                    <button class="keyword-btn" onclick="selectKeyword('robot')">Robot</button>
+                    <button class="keyword-btn" onclick="selectKeyword('caffè')">Macchina Caffè</button>
+                </div>
+            </div>
+            
+            <!-- Step 2: Subcategory Selection -->
+            <div id="step2" class="search-step hidden">
+                <button class="back-btn" onclick="goToStep(1)"><i class="fas fa-arrow-left me-2"></i>Indietro</button>
+                <div class="step-title"><span class="step-number">2</span>Che tipo di prodotto cerchi?</div>
+                <div id="subcategoriesContainer"></div>
+            </div>
+            
+            <!-- Step 3: Filters -->
+            <div id="step3" class="search-step hidden">
+                <button class="back-btn" onclick="goToStep(2)"><i class="fas fa-arrow-left me-2"></i>Indietro</button>
+                <div class="step-title"><span class="step-number">3</span>Dettagli aggiuntivi</div>
+                <div id="filtersContainer"></div>
+                <button class="btn btn-primary mt-3" onclick="applyFilters()" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); border: none; padding: 12px 30px; border-radius: 25px;">Cerca Prodotti</button>
+            </div>
+            
+            <!-- Step 4: Results -->
+            <div id="step4" class="search-step hidden">
+                <button class="back-btn" onclick="goToStep(3)"><i class="fas fa-arrow-left me-2"></i>Indietro</button>
+                <div class="step-title"><span class="step-number">4</span>Ecco i nostri prodotti per te</div>
+                <p class="text-muted mb-4" id="resultsSummary"></p>
+                <div id="resultsContainer"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let searchData = null;
+        let selectedSubcategory = null;
+        let selectedFilters = {};
+        let searchQuery = '';
+        
+        // Load search data
+        async function loadSearchData() {
+            try {
+                const response = await fetch('search-data.json');
+                searchData = await response.json();
+            } catch (error) {
+                console.error('Error loading search data:', error);
+            }
+        }
+        
+        // Handle search input
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchQuery = this.value.toLowerCase();
+                goToStep(2);
+            }
+        });
+        
+        // Select keyword
+        function selectKeyword(keyword) {
+            searchQuery = keyword.toLowerCase();
+            goToStep(2);
+        }
+        
+        // Go to specific step
+        function goToStep(step) {
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`step${i}`).classList.add('hidden');
+            }
+            document.getElementById(`step${step}`).classList.remove('hidden');
+            
+            if (step === 2) {
+                showSubcategories();
+            } else if (step === 3) {
+                showFilters();
+            } else if (step === 4) {
+                showResults();
+            }
+        }
+        
+        // Show subcategories
+        function showSubcategories() {
+            const container = document.getElementById('subcategoriesContainer');
+            container.innerHTML = '';
+            
+            searchData.subcategories.forEach(sub => {
+                const matched = sub.keywords.some(k => k.toLowerCase().includes(searchQuery) || searchQuery.includes(k.toLowerCase()));
+                
+                const card = document.createElement('div');
+                card.className = 'subcategory-card';
+                card.innerHTML = `
+                    <i class="fas fa-blender"></i>
+                    <h4>${sub.name}</h4>
+                    <p class="text-muted mb-0">${sub.keywords.join(', ')}</p>
+                `;
+                card.onclick = () => selectSubcategory(sub);
+                container.appendChild(card);
+            });
+        }
+        
+        // Select subcategory
+        function selectSubcategory(subcategory) {
+            selectedSubcategory = subcategory;
+            selectedFilters = {};
+            goToStep(3);
+        }
+        
+        // Show filters
+        function showFilters() {
+            const container = document.getElementById('filtersContainer');
+            container.innerHTML = '';
+            
+            if (selectedSubcategory.filters && selectedSubcategory.filters.length > 0) {
+                selectedSubcategory.filters.forEach(filter => {
+                    const filterDiv = document.createElement('div');
+                    filterDiv.className = 'mb-4';
+                    filterDiv.innerHTML = `
+                        <h5 class="mb-3">${filter.name}</h5>
+                        <div class="filter-options" id="filter_${filter.id}"></div>
+                    `;
+                    container.appendChild(filterDiv);
+                    
+                    const optionsContainer = document.getElementById(`filter_${filter.id}`);
+                    filter.options.forEach(option => {
+                        const optionBtn = document.createElement('span');
+                        optionBtn.className = 'filter-option';
+                        optionBtn.textContent = option;
+                        optionBtn.onclick = () => selectFilter(filter.id, option, optionBtn);
+                        optionsContainer.appendChild(optionBtn);
+                    });
+                });
+            } else {
+                container.innerHTML = '<p class="text-muted">Nessun filtro disponibile per questa categoria</p>';
+            }
+        }
+        
+        // Select filter
+        function selectFilter(filterId, value, element) {
+            if (!selectedFilters[filterId]) {
+                selectedFilters[filterId] = [];
+            }
+            
+            const index = selectedFilters[filterId].indexOf(value);
+            if (index > -1) {
+                selectedFilters[filterId].splice(index, 1);
+                element.classList.remove('selected');
+            } else {
+                selectedFilters[filterId].push(value);
+                element.classList.add('selected');
+            }
+        }
+        
+        // Apply filters and show results
+        function applyFilters() {
+            goToStep(4);
+        }
+        
+        // Show results
+        function showResults() {
+            const container = document.getElementById('resultsContainer');
+            container.innerHTML = '';
+            
+            let filteredProducts = selectedSubcategory.products;
+            
+            // Apply filters
+            Object.keys(selectedFilters).forEach(filterId => {
+                if (selectedFilters[filterId].length > 0) {
+                    filteredProducts = filteredProducts.filter(product => {
+                        const productValue = product[filterId] || product[filterId + '_filter'];
+                        return selectedFilters[filterId].includes(productValue);
+                    });
+                }
+            });
+            
+            // Update summary
+            const summary = document.getElementById('resultsSummary');
+            if (filteredProducts.length > 0) {
+                summary.textContent = `Trovati ${filteredProducts.length} prodotti per "${selectedSubcategory.name}"`;
+            } else {
+                summary.textContent = 'Nessun prodotto trovato con i filtri selezionati';
+            }
+            
+            // Display products
+            filteredProducts.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                
+                let matchScore = 100;
+                const filterCount = Object.keys(selectedFilters).length;
+                if (filterCount > 0) {
+                    matchScore = Math.round((filteredProducts.length / selectedSubcategory.products.length) * 100);
+                }
+                
+                card.innerHTML = `
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <h4>${product.name}</h4>
+                            <div class="mb-3">
+                                ${product.features.map(f => `<span class="feature-tag">${f}</span>`).join('')}
+                            </div>
+                            <a href="${product.amazon_link}" target="_blank" rel="nofollow noopener" class="amazon-btn">
+                                <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                            </a>
+                        </div>
+                        <span class="match-badge">${matchScore}% adatto</span>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            
+            if (filteredProducts.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-5">
+                        <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">Nessun prodotto trovato. Prova a cambiare i filtri.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Initialize
+        loadSearchData();
+    </script>
+</body>
+</html>

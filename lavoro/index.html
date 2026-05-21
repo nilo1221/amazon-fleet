@@ -42,6 +42,7 @@
     </noscript>
     
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ai-chat.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -119,7 +120,7 @@
                     </div>
                     <h1 id="hero-title" class="display-3 fw-bold mb-4 animate-fade-in">
                         Trova la tua prossima
-                        <span class="d-block text-warning animate-pulse">Guida all'Acquisto</span>
+                        <span class="d-block text-warning">Guida all'Acquisto</span>
                     </h1>
                     <p class="lead mb-5 fs-4">
                         Guide all'acquisto imparziali e le migliori offerte online aggiornate ogni giorno. <strong>Risparmia tempo</strong>: noi cerchiamo, tu acquisti.
@@ -158,6 +159,8 @@
                     </div>
                     <p class="lead text-muted mb-0">
                         Selezioniamo ogni giorno i prodotti migliori di Amazon basandoci su <strong>recensioni reali</strong>, <strong>test tecnici</strong> e <strong>rapporto qualità-prezzo</strong>. Tu scegli la categoria, noi ti garantiamo la scelta migliore.
+                        <br><br>
+                        <strong class="text-primary">302+ prodotti selezionati</strong> • <strong class="text-primary">23 categorie specializzate</strong> • <strong class="text-primary">77 utenti attivi</strong>
                     </p>
                 </div>
             </div>
@@ -274,6 +277,7 @@
         </div>
     </section>
 
+    
     <!-- Sites Section -->
     <section id="sites" class="container" aria-labelledby="sites-title">
         <div class="row mb-4">
@@ -738,8 +742,8 @@
                 </div>
             </div>
 
-            <!-- Mare e Spiaggia -->
-            <div class="site-card hidden-category" role="article" aria-labelledby="card-23-title" id="card-23" data-category="Viaggi">
+            <!-- Mare e Spiaggia (Stagione estiva - 15 prodotti) -->
+            <div class="site-card" role="article" aria-labelledby="card-23-title" id="card-23" data-category="Viaggi">
                 <div class="site-header site-header-mare">
                     <div class="site-icon">
                         <i class="fas fa-umbrella-beach" aria-hidden="true"></i>
@@ -1059,7 +1063,7 @@
                         <li class="mb-2"><a href="smart-home-domotica/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-box me-2" aria-hidden="true"></i>Smart Home & Domotica</a></li>
                         <li class="mb-2"><a href="fitness-casa/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-dumbbell me-2" aria-hidden="true"></i>Fitness Casa</a></li>
                         <li class="mb-2"><a href="libri-ereader/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-book me-2" aria-hidden="true"></i>Libri & E-Reader</a></li>
-                        <li class="mb-2"><a href="arredamento-casa/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-plane me-2" aria-hidden="true"></i>Viaggi & Turismo</a></li>
+                        <li class="mb-2"><a href="arredamento-casa/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-gem me-2" aria-hidden="true"></i>Casa & Decorazione</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -1357,7 +1361,7 @@
                                                 <h5 class="card-title fw-bold">${product.name}</h5>
                                                 <p class="card-text text-muted small">${product.category}</p>
                                                                                                 <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
-                                                    <i class="fab fa-amazon me-2"></i>Verifica Disponibilità e Sconto
+                                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                                                 </a>
                                             </div>
                                         </div>
@@ -1397,7 +1401,7 @@
                                                 <h5 class="card-title fw-bold">${product.name}</h5>
                                                 <p class="card-text text-muted small">${product.category}</p>
                                                                                                 <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
-                                                    <i class="fab fa-amazon me-2"></i>Verifica Disponibilità e Sconto
+                                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                                                 </a>
                                             </div>
                                         </div>
@@ -1467,5 +1471,46 @@
             }
         }
     </script>
+    
+    <link rel="stylesheet" href="ai-chat-simple.css">
+    <script src="ai-chat-simple.js"></script>
+    
+    <!-- AI Chat Button -->
+    <div id="ai-chat-button" onclick="toggleChat()">
+        <img src="images/logo.png" alt="Smart Choices Guide" class="chat-button-logo">
+    </div>
+    
+    <!-- AI Chat Window -->
+    <div id="ai-chat-window">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="header-content">
+                <img src="images/logo.png" alt="Smart Choices Guide Logo" class="chat-bot-logo">
+                <div>
+                    <h5>Assistente Smart</h5>
+                    <small>Online</small>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()" title="Chiudi chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <!-- Chat Messages -->
+        <div id="chat-messages" class="chat-messages">
+            <!-- Messages will be loaded dynamically via JavaScript -->
+        </div>
+        
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <button id="mic-button" onclick="toggleVoiceRecognition()" title="Parla con l'assistente">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <input type="text" id="chat-input" placeholder="Scrivi il tuo messaggio...">
+            <button onclick="sendMessage()" title="Invia messaggio">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
