@@ -22,6 +22,7 @@
     --bot-bg-professional: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --bot-bg-travel: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     --bot-bg-creative: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bot-bg-cinema-tv: linear-gradient(135deg, #6a1b9a 0%, #ff00ff 100%);
     
     --bot-current-bg: var(--bot-bg-default);
 }
@@ -164,6 +165,10 @@
 
 .chat-header.theme-creative {
     --bot-current-bg: var(--bot-bg-creative);
+}
+
+.chat-header.theme-cinema-tv {
+    --bot-current-bg: var(--bot-bg-cinema-tv);
 }
 
 .chat-header.theme-default {

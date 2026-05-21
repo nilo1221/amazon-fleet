@@ -696,7 +696,7 @@ function applyBotTheme(categoryKey) {
         'theme-summer', 'theme-adventure', 'theme-fashion', 'theme-wellness',
         'theme-gaming-theme', 'theme-entertainment', 'theme-technical', 'theme-caring',
         'theme-aesthetic', 'theme-intellectual', 'theme-elegant', 'theme-eco',
-        'theme-professional', 'theme-travel', 'theme-creative'
+        'theme-professional', 'theme-travel', 'theme-creative', 'theme-cinema-tv'
     );
     
     // Apply appropriate theme based on personality
@@ -720,7 +720,12 @@ function applyBotTheme(categoryKey) {
         'creative': 'theme-creative'
     };
     
-    const themeClass = personalityToTheme[personality] || 'theme-default';
+    // Special case for Cinema & TV - use synthwave theme
+    let themeClass = personalityToTheme[personality] || 'theme-default';
+    if (categoryKey === 'cinema-tv') {
+        themeClass = 'theme-cinema-tv';
+    }
+    
     chatHeader.classList.add(themeClass);
 }
 
