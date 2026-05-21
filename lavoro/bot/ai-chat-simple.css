@@ -23,6 +23,9 @@
     --bot-bg-travel: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     --bot-bg-creative: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --bot-bg-cinema-tv: linear-gradient(135deg, #6a1b9a 0%, #ff00ff 100%);
+    --bot-bg-blinding-lights: linear-gradient(135deg, #0a0a2e 0%, #ff0033 50%, #ff6b35 100%);
+    --bot-bg-as-it-was: linear-gradient(135deg, #ffb6c1 0%, #ffd700 50%, #87ceeb 100%);
+    --bot-bg-midnight-city: linear-gradient(135deg, #1a0b2e 0%, #00ffff 50%, #ff00ff 100%);
     
     --bot-current-bg: var(--bot-bg-default);
 }
@@ -169,6 +172,18 @@
 
 .chat-header.theme-cinema-tv {
     --bot-current-bg: var(--bot-bg-cinema-tv);
+}
+
+.chat-header.theme-blinding-lights {
+    --bot-current-bg: var(--bot-bg-blinding-lights);
+}
+
+.chat-header.theme-as-it-was {
+    --bot-current-bg: var(--bot-bg-as-it-was);
+}
+
+.chat-header.theme-midnight-city {
+    --bot-current-bg: var(--bot-bg-midnight-city);
 }
 
 .chat-header.theme-default {

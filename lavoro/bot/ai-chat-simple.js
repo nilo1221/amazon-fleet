@@ -696,7 +696,8 @@ function applyBotTheme(categoryKey) {
         'theme-summer', 'theme-adventure', 'theme-fashion', 'theme-wellness',
         'theme-gaming-theme', 'theme-entertainment', 'theme-technical', 'theme-caring',
         'theme-aesthetic', 'theme-intellectual', 'theme-elegant', 'theme-eco',
-        'theme-professional', 'theme-travel', 'theme-creative', 'theme-cinema-tv'
+        'theme-professional', 'theme-travel', 'theme-creative', 'theme-cinema-tv',
+        'theme-blinding-lights', 'theme-as-it-was', 'theme-midnight-city'
     );
     
     // Apply appropriate theme based on personality
@@ -724,6 +725,12 @@ function applyBotTheme(categoryKey) {
     let themeClass = personalityToTheme[personality] || 'theme-default';
     if (categoryKey === 'cinema-tv') {
         themeClass = 'theme-cinema-tv';
+    } else if (categoryKey === 'elite-gaming-gear') {
+        themeClass = 'theme-blinding-lights';
+    } else if (categoryKey === 'moda-donna') {
+        themeClass = 'theme-as-it-was';
+    } else if (categoryKey === 'tech') {
+        themeClass = 'theme-midnight-city';
     }
     
     chatHeader.classList.add(themeClass);
