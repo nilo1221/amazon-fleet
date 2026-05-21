@@ -1,5 +1,31 @@
 /* Simple AI Chat Styles */
 
+/* CSS Variables for dynamic theming */
+:root {
+    --bot-bg-default: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bot-bg-moda: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --bot-bg-tech: linear-gradient(135deg, #00d4ff 0%, #090979 100%);
+    --bot-bg-gaming: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+    --bot-bg-cucina: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --bot-bg-summer: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    --bot-bg-adventure: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --bot-bg-fashion: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --bot-bg-wellness: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    --bot-bg-gaming-theme: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+    --bot-bg-entertainment: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bot-bg-technical: linear-gradient(135deg, #00d4ff 0%, #090979 100%);
+    --bot-bg-caring: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    --bot-bg-aesthetic: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    --bot-bg-intellectual: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bot-bg-elegant: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --bot-bg-eco: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    --bot-bg-professional: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bot-bg-travel: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --bot-bg-creative: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    --bot-current-bg: var(--bot-bg-default);
+}
+
 .chat-button-logo {
     width: 100%;
     height: 100%;
@@ -31,7 +57,7 @@
 }
 
 #ai-chat-button.active {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: var(--bot-current-bg);
 }
 
 #ai-chat-window {
@@ -54,7 +80,7 @@
 }
 
 .chat-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--bot-current-bg);
     color: white;
     padding: 20px;
     display: flex;
@@ -63,25 +89,85 @@
     transition: background 0.3s ease;
 }
 
-/* Dynamic color themes for bot */
+/* Dynamic color themes for bot using CSS variables */
 .chat-header.theme-moda {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --bot-current-bg: var(--bot-bg-moda);
 }
 
 .chat-header.theme-tech {
-    background: linear-gradient(135deg, #00d4ff 0%, #090979 100%);
+    --bot-current-bg: var(--bot-bg-tech);
 }
 
 .chat-header.theme-gaming {
-    background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+    --bot-current-bg: var(--bot-bg-gaming);
 }
 
 .chat-header.theme-cucina {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --bot-current-bg: var(--bot-bg-cucina);
+}
+
+.chat-header.theme-summer {
+    --bot-current-bg: var(--bot-bg-summer);
+}
+
+.chat-header.theme-adventure {
+    --bot-current-bg: var(--bot-bg-adventure);
+}
+
+.chat-header.theme-fashion {
+    --bot-current-bg: var(--bot-bg-fashion);
+}
+
+.chat-header.theme-wellness {
+    --bot-current-bg: var(--bot-bg-wellness);
+}
+
+.chat-header.theme-gaming-theme {
+    --bot-current-bg: var(--bot-bg-gaming-theme);
+}
+
+.chat-header.theme-entertainment {
+    --bot-current-bg: var(--bot-bg-entertainment);
+}
+
+.chat-header.theme-technical {
+    --bot-current-bg: var(--bot-bg-technical);
+}
+
+.chat-header.theme-caring {
+    --bot-current-bg: var(--bot-bg-caring);
+}
+
+.chat-header.theme-aesthetic {
+    --bot-current-bg: var(--bot-bg-aesthetic);
+}
+
+.chat-header.theme-intellectual {
+    --bot-current-bg: var(--bot-bg-intellectual);
+}
+
+.chat-header.theme-elegant {
+    --bot-current-bg: var(--bot-bg-elegant);
+}
+
+.chat-header.theme-eco {
+    --bot-current-bg: var(--bot-bg-eco);
+}
+
+.chat-header.theme-professional {
+    --bot-current-bg: var(--bot-bg-professional);
+}
+
+.chat-header.theme-travel {
+    --bot-current-bg: var(--bot-bg-travel);
+}
+
+.chat-header.theme-creative {
+    --bot-current-bg: var(--bot-bg-creative);
 }
 
 .chat-header.theme-default {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bot-current-bg: var(--bot-bg-default);
 }
 
 .header-content {
@@ -617,25 +703,87 @@
 }
 
 #mic-button.active {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: var(--bot-current-bg);
     color: white;
+}
+
+/* Typing indicator for bot "thinking" state */
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 10px 15px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    max-width: fit-content;
+    margin: 10px 0;
+}
+
+.typing-indicator .dot {
+    width: 8px;
+    height: 8px;
+    background: #999;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out;
+}
+
+.typing-indicator .dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-indicator .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 60%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     #ai-chat-window {
-        width: 350px;
-        height: 500px;
-        bottom: 100px;
-        right: 15px;
+        width: calc(100vw - 40px);
+        max-height: 70vh;
+        bottom: 90px;
+        right: 20px;
+        left: 20px;
+        border-radius: 15px;
     }
     
     #ai-chat-button {
         bottom: 20px;
         right: 20px;
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+        width: 55px;
+        height: 55px;
+    }
+    
+    .chat-header {
+        padding: 15px;
+    }
+    
+    .chat-messages {
+        padding: 15px;
+    }
+    
+    .chat-message {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    
+    .chat-input {
+        padding: 10px 15px;
+    }
+    
+    .chat-input input {
+        font-size: 14px;
     }
     
     .category-btn {

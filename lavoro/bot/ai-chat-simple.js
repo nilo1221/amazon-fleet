@@ -672,26 +672,49 @@ function closeChat() {
     chatButton.classList.remove('active');
 }
 
-// Apply dynamic color theme based on category
+// Apply dynamic color theme based on category personality
 function applyBotTheme(categoryKey) {
     const chatHeader = document.querySelector('.chat-header');
-    if (!chatHeader) return;
+    const chatButton = document.getElementById('ai-chat-button');
+    if (!chatHeader || !chatButton) return;
+    
+    const nicheData = NicheDatabase[categoryKey];
+    if (!nicheData || !nicheData.personality) return;
+    
+    const personality = nicheData.personality;
     
     // Remove all existing theme classes
-    chatHeader.classList.remove('theme-moda', 'theme-tech', 'theme-gaming', 'theme-cucina', 'theme-default');
+    chatHeader.classList.remove(
+        'theme-moda', 'theme-tech', 'theme-gaming', 'theme-cucina', 'theme-default',
+        'theme-summer', 'theme-adventure', 'theme-fashion', 'theme-wellness',
+        'theme-gaming-theme', 'theme-entertainment', 'theme-technical', 'theme-caring',
+        'theme-aesthetic', 'theme-intellectual', 'theme-elegant', 'theme-eco',
+        'theme-professional', 'theme-travel', 'theme-creative'
+    );
     
-    // Apply appropriate theme based on category
-    if (categoryKey.includes('moda') || categoryKey.includes('cinema')) {
-        chatHeader.classList.add('theme-moda');
-    } else if (categoryKey.includes('gaming') || categoryKey.includes('elite-gaming')) {
-        chatHeader.classList.add('theme-gaming');
-    } else if (categoryKey.includes('tech') || categoryKey.includes('smartphone')) {
-        chatHeader.classList.add('theme-tech');
-    } else if (categoryKey.includes('cucina') || categoryKey.includes('elettrodomestici')) {
-        chatHeader.classList.add('theme-cucina');
-    } else {
-        chatHeader.classList.add('theme-default');
-    }
+    // Apply appropriate theme based on personality
+    const personalityToTheme = {
+        'functional': 'theme-cucina',
+        'technical': 'theme-tech',
+        'motivational': 'theme-wellness',
+        'gaming': 'theme-gaming',
+        'caring': 'theme-caring',
+        'entertainment': 'theme-entertainment',
+        'summer': 'theme-summer',
+        'adventure': 'theme-adventure',
+        'fashion': 'theme-moda',
+        'aesthetic': 'theme-aesthetic',
+        'wellness': 'theme-wellness',
+        'intellectual': 'theme-intellectual',
+        'elegant': 'theme-elegant',
+        'eco': 'theme-eco',
+        'professional': 'theme-professional',
+        'travel': 'theme-travel',
+        'creative': 'theme-creative'
+    };
+    
+    const themeClass = personalityToTheme[personality] || 'theme-default';
+    chatHeader.classList.add(themeClass);
 }
 
 // Analyze message and find category with intelligent fallback using NicheDatabase
@@ -922,7 +945,7 @@ function addProactiveMessage(text) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Add loading indicator
+// Add loading indicator with typing animation
 function addLoadingIndicator() {
     const chatMessages = document.getElementById('chat-messages');
     if (!chatMessages) return;
@@ -930,7 +953,7 @@ function addLoadingIndicator() {
     const loadingDiv = document.createElement('div');
     loadingDiv.className = 'chat-message bot loading';
     loadingDiv.id = 'loading-indicator';
-    loadingDiv.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div> Sto cercando le migliori opzioni per te...';
+    loadingDiv.innerHTML = '<div class="typing-indicator"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>';
     chatMessages.appendChild(loadingDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
