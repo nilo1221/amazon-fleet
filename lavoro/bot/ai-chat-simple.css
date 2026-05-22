@@ -1094,3 +1094,140 @@
     font-weight: bold;
     text-decoration: underline;
 }
+
+/* Amazon Killer Button - Step 2: Call to Action Grafica */
+.amazon-killer-container {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.btn-amazon-killer {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF9500 50%, #FFB800 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+    border: 2px solid #FFD700;
+    animation: pulse-orange 2s ease-in-out infinite;
+}
+
+.btn-amazon-killer:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.8);
+}
+
+.btn-amazon-killer i {
+    font-size: 20px;
+}
+
+@keyframes pulse-orange {
+    0%, 100% {
+        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+    }
+    50% {
+        box-shadow: 0 10px 30px rgba(255, 107, 53, 0.8);
+    }
+}
+
+/* Top Products List Styles - Step 3: Navigazione Guidata */
+.top-products-header {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-products-list {
+    background: white;
+    border: 2px solid #FFD700;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.top-product-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 8px;
+}
+
+.top-product-item:hover {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+    border-color: #FFD700;
+    transform: translateX(5px);
+}
+
+.product-rank {
+    background: linear-gradient(135deg, #FF6B35 0%, #FF9500 100%);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.product-icon {
+    color: #667eea;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.product-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.product-name {
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.product-desc {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.3;
+}
+
+.btn-product-view {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.btn-product-view:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.5);
+}

@@ -95,7 +95,45 @@ const NicheDatabase = {
         song: "Sugar, Sugar - The Archies",
         songLink: "https://www.youtube.com/watch?v=JibQy5y4R8o",
         songLinkSpotify: "https://open.spotify.com/track/3M3SBRzq5mWfYPXZdOYPG4",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
+        topProducts: [
+            {
+                name: "COSORI Turbo Blaze Friggitrice ad Aria 6L",
+                description: "Friggitrice ad aria professionale con tecnologia rapida",
+                icon: "fa-fire-burner",
+                link: "https://www.amazon.it/dp/B0F9TRBWPD?th=1&linkCode=ll2&tag=l0c39-21&linkId=e4eba26a535c983c4e07840efa208f84&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Ninja Foodi Dual Zone AF300EU",
+                description: "Doppia zona di cottura per pasti completi",
+                icon: "fa-fire-burner",
+                link: "https://www.amazon.it/Ninja-Friggitrice-Antiaderente-Croccantezza-AF300EU/dp/B08GC1QZ5W?ie=UTF8&hvadid=722187028311&hvpos=&hvexid=&hvnetw=g&hvrand=5851704191900702564&hvpone=&hvptwo=&hvqmt=&hvdev=c&adgrpid=170593183899&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=dsa-1599129282449&hydadcr=&mcid=&gad_source=1&th=1&linkCode=ll2&tag=l0c39-21&linkId=249b95bd5fc47a61d3403272535940ac&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Bosch MultiTalent 8 Robot Multifunzione",
+                description: "Robot da cucina completo con 8 accessori",
+                icon: "fa-blender",
+                link: "https://www.amazon.it/Bosch-MC812M844-Cucina-Multifunzione-Alluminio/dp/B07HPRQJL1?th=1&linkCode=ll2&tag=l0c39-21&linkId=2acaa6b678bac18747a2cdac25e75848&ref=_as_li_ss_tl"
+            },
+            {
+                name: "DeLonghi Magnifica S Macchina per il Caffè",
+                description: "Macchina per caffè automatica con macinino",
+                icon: "fa-mug-hot",
+                link: "https://www.amazon.it/DeLonghi-ECAM-22-110-B-superautomatica-cappuccinatore/dp/B00400OMU0?th=1&linkCode=ll2&tag=l0c39-21&linkId=c4c63beb2b7eb467e265380304081467&ref=_as_li_ss_tl"
+            },
+            {
+                name: "KASANOVA Evolution 6-Piece Cookware Set",
+                description: "Set pentole antiaderenti professionali",
+                icon: "fa-utensils",
+                link: "https://www.amazon.it/dp/B0DB5F1TSC?th=1&linkCode=ll2&tag=l0c39-21&linkId=6bb20f44951b8ba0c585777641d7a799&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Condizionatore Portatile 3-in-1",
+                description: "Raffreddamento, ventilazione e umidificazione",
+                icon: "fa-snowflake",
+                link: "https://www.amazon.it/dp/B0D3PP64JS?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=HPJ8v9XaEK&linkCode=ll2&tag=l0c39-21&linkId=9f8aac727b8af31fe8eb8ae08e38ba65&ref=_as_li_ss_tl"
+            }
+        ]
     },
     "smart-home-domotica": {
         name: "Smart Home & Domotica",
@@ -356,6 +394,12 @@ const NicheDatabase = {
 let proactiveBubble = null;
 let proactiveBubbleShown = false;
 
+// Sales timeline timers
+let engagementTimer = null;
+let valueTimer = null;
+let closingTimer = null;
+let salesTimersStarted = false;
+
 // Start abandonment timer
 function startAbandonmentTimer() {
     // Clear existing timer
@@ -404,6 +448,124 @@ function startPageProactiveMessage() {
             }
         }, waitTime);
     }
+}
+
+// Start sales timeline timers (1, 2, 3 minutes) - proportional to music duration
+function startSalesTimers() {
+    if (salesTimersStarted) return;
+    salesTimersStarted = true;
+    
+    const nicheKey = detectCurrentNiche();
+    const nicheName = nicheKey && NicheDatabase[nicheKey] ? NicheDatabase[nicheKey].name : 'questa categoria';
+    
+    // Se siamo in homepage, non fare nulla (bot normale)
+    if (!nicheKey) {
+        return;
+    }
+    
+    // Se siamo in una nicchia, nascondi bottone e mostra dopo 1 minuto
+    const chatButton = document.getElementById('ai-chat-button');
+    if (chatButton) {
+        chatButton.style.display = 'none';
+    }
+    
+    // Minuto 1: Fase di Ingaggio - Apri chat automaticamente nelle nicchie
+    engagementTimer = setTimeout(() => {
+        const chatWindow = document.getElementById('ai-chat-window');
+        if (chatWindow) {
+            chatWindow.classList.add('active');
+            chatOpen = true;
+            const engagementMessage = `Ti serve aiuto a scegliere il prodotto in ${nicheName}? Ho preparato i migliori prodotti per te.`;
+            addProactiveMessage(engagementMessage);
+            setTimeout(() => {
+                showAmazonKillerButton('1min');
+            }, 500);
+        }
+    }, 1 * 60 * 1000); // 1 minuto
+    
+    // Minuto 2: Fase di Valore
+    valueTimer = setTimeout(() => {
+        if (chatOpen) {
+            const valueMessage = `Se stai cercando la qualità in ${nicheName}, ho selezionato questo Kit Premium che è il top in questa categoria. Risparmi tempo e hai tutto subito.`;
+            addProactiveMessage(valueMessage);
+            setTimeout(() => {
+                showAmazonKillerButton('2min');
+            }, 500);
+        }
+    }, 2 * 60 * 1000); // 2 minuti
+    
+    // Minuto 3: Fase di Chiusura
+    closingTimer = setTimeout(() => {
+        if (chatOpen) {
+            const closingMessage = `La disponibilità per questi articoli di ${nicheName} è limitata. Ti consiglio di bloccare il prezzo su Amazon prima che cambi.`;
+            addProactiveMessage(closingMessage);
+            setTimeout(() => {
+                showAmazonKillerButton('3min');
+            }, 500);
+        }
+    }, 3 * 60 * 1000); // 3 minuti
+}
+
+// Show Amazon Killer Button (CTA grafico) - Step 3: Navigazione Guidata
+function showAmazonKillerButton(phase) {
+    const nicheKey = detectCurrentNiche();
+    const niche = nicheKey && NicheDatabase[nicheKey] ? NicheDatabase[nicheKey] : null;
+    const trackingTag = `tag=l0c39-21-${phase}`;
+    
+    let buttonHTML = '';
+    
+    if (niche && niche.topProducts && niche.topProducts.length > 0) {
+        // Mostra i 6 prodotti TOP della categoria con link diretti
+        buttonHTML = `
+            <div class="amazon-killer-container">
+                <div class="top-products-header">
+                    <i class="fas fa-trophy text-warning"></i>
+                    <strong>TOP 6 Prodotti ${niche.name}</strong>
+                </div>
+                <div class="top-products-list">
+        `;
+        
+        niche.topProducts.forEach((product, index) => {
+            // Aggiunge tracking tag al link esistente
+            const productLink = product.link.includes('?') 
+                ? `${product.link}&phase=${phase}`
+                : `${product.link}?phase=${phase}`;
+            
+            buttonHTML += `
+                <div class="top-product-item">
+                    <span class="product-rank">${index + 1}</span>
+                    <i class="fas ${product.icon} product-icon"></i>
+                    <div class="product-info">
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-desc">${product.description}</div>
+                    </div>
+                    <a href="${productLink}" class="btn-product-view" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            `;
+        });
+        
+        buttonHTML += `
+                </div>
+                <a href="${niche.url}?${trackingTag}" class="btn-amazon-killer" target="_blank" rel="noopener">
+                    <i class="fab fa-amazon"></i> Vedi Tutti i Prodotti
+                </a>
+            </div>
+        `;
+    } else {
+        // Fallback: link generico alla categoria
+        const nicheUrl = niche ? niche.url : '#';
+        buttonHTML = `
+            <div class="amazon-killer-container">
+                <a href="${nicheUrl}?${trackingTag}" class="btn-amazon-killer" target="_blank" rel="noopener">
+                    <i class="fab fa-amazon"></i> Vedi Top 5 Prodotti
+                </a>
+            </div>
+        `;
+    }
+    
+    addMessage(buttonHTML, 'bot', true);
 }
 
 // Detect current niche from URL
@@ -653,9 +815,11 @@ function toggleChat() {
     if (chatWindow.classList.contains('active')) {
         chatWindow.classList.remove('active');
         chatButton.classList.remove('active');
+        chatOpen = false;
     } else {
         chatWindow.classList.add('active');
         chatButton.classList.add('active');
+        chatOpen = true;
         
         // Track bot opening in Google Analytics
         if (typeof gtag !== 'undefined') {
@@ -1529,6 +1693,11 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         startPageProactiveMessage();
     }, 5000);
+    
+    // Start sales timeline timers (Step 1)
+    setTimeout(() => {
+        startSalesTimers();
+    }, 1000);
     
     // Add scroll detection
     window.addEventListener('scroll', detectScroll);
