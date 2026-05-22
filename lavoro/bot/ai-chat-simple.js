@@ -657,6 +657,14 @@ function toggleChat() {
         chatWindow.classList.add('active');
         chatButton.classList.add('active');
         
+        // Track bot opening in Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'bot_open', {
+                'event_category': 'bot_interaction',
+                'event_label': 'chat_opened'
+            });
+        }
+        
         // Show welcome message with macro-categories on first open
         const chatMessages = document.getElementById('chat-messages');
         if (chatMessages && chatMessages.children.length === 0) {
@@ -768,6 +776,14 @@ function closeChat() {
 
 // Show Spotify player in chat
 function showSpotifyPlayer(spotifyUrl, songName) {
+    // Track Spotify play in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'spotify_play', {
+            'event_category': 'music_interaction',
+            'event_label': songName
+        });
+    }
+    
     const playerMessage = `
         <div style="margin: 10px 0;">
             <p style="margin-bottom: 8px;">🎵 Now playing: ${songName}</p>
@@ -782,6 +798,16 @@ function showSpotifyPlayer(spotifyUrl, songName) {
         </div>
     `;
     addMessage(playerMessage, 'bot');
+}
+
+// Track Amazon Music click in Google Analytics
+function trackAmazonMusicClick() {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'amazon_music_click', {
+            'event_category': 'music_interaction',
+            'event_label': 'amazon_music_unlimited'
+        });
+    }
 }
 
 // Apply dynamic color theme based on category personality
@@ -1467,7 +1493,7 @@ function selectCategoryFromButton(categoryKey) {
                                 ${nicheData.songLinkAmazon ? `
                                 <div class="premium-box" style="margin-top:12px; border:1px solid gold; padding:10px; background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%); border-radius: 8px; font-size: 0.9em; color: #856404; text-align: center;">
                                     💎 <strong>Vuoi l'esperienza in alta qualità?</strong> 
-                                    <br><a href="${nicheData.songLinkAmazon}" target="_blank" style="color: #d4a017; font-weight: bold; text-decoration: underline;">Ascolta su Amazon Music Unlimited</a>
+                                    <br><a href="${nicheData.songLinkAmazon}" target="_blank" onclick="trackAmazonMusicClick()" style="color: #d4a017; font-weight: bold; text-decoration: underline;">Ascolta su Amazon Music Unlimited</a>
                                 </div>
                                 ` : ''}
                             </div>
