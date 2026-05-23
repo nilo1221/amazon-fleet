@@ -1662,29 +1662,100 @@ function addProductCard(product) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Get personality-based response
+// Get personality-based response with variations
 function getPersonalityResponse(categoryKey, personality, categoryName) {
     const personalityResponses = {
-        'functional': `Per ${categoryName} ho analizzato funzionalità, materiali e rapporto qualità-prezzo. Ecco i prodotti selezionati:`,
-        'technical': `Ho esaminato le specifiche tecniche per ${categoryName}. Prestazioni e compatibilità sono i fattori chiave. Ecco le opzioni:`,
-        'motivational': `Per raggiungere i tuoi obiettivi con ${categoryName}, ho selezionato i prodotti migliori. Dai il massimo! Ecco cosa ho trovato:`,
-        'gaming': `Per il tuo setup gaming in ${categoryName}, ho analizzato latenza, DPI e compatibilità. Ecco i prodotti top:`,
-        'caring': `Per il benessere del tuo animale in ${categoryName}, ho scelto i prodotti più sicuri e confortevoli. Ecco le opzioni:`,
-        'entertainment': `Per il tuo stile in ${categoryName}, ho selezionato prodotti con design iconico. Tessuto e vestibilità sono i criteri chiave. Ecco i prodotti:`,
-        'summer': `Per goderti il mare e la spiaggia con ${categoryName}, ho scelto i migliori prodotti per la tua estate. Ecco le opzioni:`,
-        'adventure': `Per le tue avventure outdoor in ${categoryName}, ho selezionato l'attrezzatura più resistente e affidabile. Ecco i prodotti:`,
-        'fashion': `Per il tuo stile unico in ${categoryName}, ho selezionato capi con tessuti premium e design iconico. Ecco le opzioni:`,
-        'aesthetic': `Per arredare con stile in ${categoryName}, ho scelto prodotti che combinano estetica e funzionalità. Ecco le opzioni:`,
-        'wellness': `Per la tua routine di bellezza in ${categoryName}, ho selezionato i prodotti più efficaci e naturali. Ecco le opzioni:`,
-        'intellectual': `Per i tuoi momenti di lettura in ${categoryName}, ho scelto i migliori libri e dispositivi. Ecco le opzioni:`,
-        'elegant': `Per la tua personalità unica in ${categoryName}, ho selezionato i profumi più esclusivi. Ecco le opzioni:`,
-        'eco': `Per ridurre il tuo impatto ambientale in ${categoryName}, ho scelto i prodotti più sostenibili. Ecco le opzioni:`,
-        'professional': `Per il tuo lavoro in ${categoryName}, ho selezionato capi professionali con sicurezza e comfort. Ecco le opzioni:`,
-        'travel': `Per i tuoi viaggi con ${categoryName}, ho scelto gli accessori più pratici e funzionali. Ecco le opzioni:`,
-        'creative': `Per migliorare la tua fotografia con ${categoryName}, ho selezionato i migliori accessori creativi. Ecco le opzioni:`
+        'functional': [
+            `Per ${categoryName} ho analizzato funzionalità, materiali e rapporto qualità-prezzo. Ecco i prodotti selezionati:`,
+            `Ho valutato attentamente ${categoryName} per funzionalità e durata. Ecco le mie scelte:`,
+            `Per ${categoryName}, ho considerato ogni dettaglio tecnico. Ecco i prodotti migliori:`
+        ],
+        'technical': [
+            `Ho esaminato le specifiche tecniche per ${categoryName}. Prestazioni e compatibilità sono i fattori chiave. Ecco le opzioni:`,
+            `Dall'analisi tecnica di ${categoryName}, ecco i prodotti con le migliori specifiche:`,
+            `Per ${categoryName}, ho verificato compatibilità e prestazioni. Ecco cosa ho trovato:`
+        ],
+        'motivational': [
+            `Per raggiungere i tuoi obiettivi con ${categoryName}, ho selezionato i prodotti migliori. Dai il massimo! Ecco cosa ho trovato:`,
+            `Con ${categoryName} puoi raggiungere grandi risultati. Ecco i prodotti per motivarti:`,
+            `Per la tua performance in ${categoryName}, ho scelto solo il meglio. Andiamo!`
+        ],
+        'gaming': [
+            `Per il tuo setup gaming in ${categoryName}, ho analizzato latenza, DPI e compatibilità. Ecco i prodotti top:`,
+            `Ho ottimizzato la selezione di ${categoryName} per il gaming. Latenza e FPS sono i fattori chiave:`,
+            `Per dominare in ${categoryName}, ecco i prodotti con le migliori specifiche gaming:`
+        ],
+        'caring': [
+            `Per il benessere del tuo animale in ${categoryName}, ho scelto i prodotti più sicuri e confortevoli. Ecco le opzioni:`,
+            `Ho selezionato ${categoryName} pensando al comfort e alla sicurezza del tuo amico a quattro zampe:`,
+            `Per la cura del tuo animale con ${categoryName}, ecco i prodotti più affidabili:`
+        ],
+        'entertainment': [
+            `Per il tuo stile in ${categoryName}, ho selezionato prodotti con design iconico. Tessuto e vestibilità sono i criteri chiave. Ecco i prodotti:`,
+            `Ho scelto ${categoryName} per il tuo intrattenimento con stile unico. Ecco le opzioni:`,
+            `Per il tuo setup entertainment in ${categoryName}, ecco i prodotti con design iconico:`
+        ],
+        'summer': [
+            `Per goderti il mare e la spiaggia con ${categoryName}, ho scelto i migliori prodotti per la tua estate. Ecco le opzioni:`,
+            `Ho selezionato ${categoryName} per le tue giornate estive al mare. Ecco cosa ho trovato:`,
+            `Per la tua estate perfetta con ${categoryName}, ecco i prodotti essenziali:`
+        ],
+        'adventure': [
+            `Per le tue avventure outdoor in ${categoryName}, ho selezionato l'attrezzatura più resistente e affidabile. Ecco i prodotti:`,
+            `Ho scelto ${categoryName} per resistere a ogni avventura. Ecco l'attrezzatura top:`,
+            `Per le tue escursioni con ${categoryName}, ecco i prodotti più robusti:`
+        ],
+        'fashion': [
+            `Per il tuo stile unico in ${categoryName}, ho selezionato capi con tessuti premium e design iconico. Ecco le opzioni:`,
+            `Ho curato la selezione di ${categoryName} per il tuo look distintivo. Ecco i capi migliori:`,
+            `Per esprimere il tuo stile con ${categoryName}, ecco i prodotti di tendenza:`
+        ],
+        'aesthetic': [
+            `Per arredare con stile in ${categoryName}, ho scelto prodotti che combinano estetica e funzionalità. Ecco le opzioni:`,
+            `Ho selezionato ${categoryName} per un design minimalista e moderno. Ecco i prodotti:`,
+            `Per la tua casa con ${categoryName}, ecco i prodotti che combinano bellezza e utilità:`
+        ],
+        'wellness': [
+            `Per la tua routine di bellezza in ${categoryName}, ho selezionato i prodotti più efficaci e naturali. Ecco le opzioni:`,
+            `Ho scelto ${categoryName} per il tuo benessere e relax. Ecco i prodotti migliori:`,
+            `Per prenderti cura di te con ${categoryName}, ecco i prodotti più efficaci:`
+        ],
+        'intellectual': [
+            `Per i tuoi momenti di lettura in ${categoryName}, ho scelto i migliori libri e dispositivi. Ecco le opzioni:`,
+            `Ho selezionato ${categoryName} per stimolare la tua mente. Ecco i libri e dispositivi:`,
+            `Per i tuoi momenti di cultura con ${categoryName}, ecco le migliori opzioni:`
+        ],
+        'elegant': [
+            `Per la tua personalità unica in ${categoryName}, ho selezionato i profumi più esclusivi. Ecco le opzioni:`,
+            `Ho scelto ${categoryName} per il tuo stile elegante. Ecco i profumi top:`,
+            `Per esprimere la tua eleganza con ${categoryName}, ecco le fragranze migliori:`
+        ],
+        'eco': [
+            `Per ridurre il tuo impatto ambientale in ${categoryName}, ho scelto i prodotti più sostenibili. Ecco le opzioni:`,
+            `Ho selezionato ${categoryName} pensando all'ambiente. Ecco i prodotti eco-friendly:`,
+            `Per uno stile di vita sostenibile con ${categoryName}, ecco le scelte migliori:`
+        ],
+        'professional': [
+            `Per il tuo lavoro in ${categoryName}, ho selezionato capi professionali con sicurezza e comfort. Ecco le opzioni:`,
+            `Ho scelto ${categoryName} per la tua carriera professionale. Ecco i capi migliori:`,
+            `Per il tuo ambiente di lavoro con ${categoryName}, ecco i prodotti più affidabili:`
+        ],
+        'travel': [
+            `Per i tuoi viaggi con ${categoryName}, ho scelto gli accessori più pratici e funzionali. Ecco le opzioni:`,
+            `Ho selezionato ${categoryName} per viaggiare senza pensieri. Ecco gli accessori essenziali:`,
+            `Per le tue avventure di viaggio con ${categoryName}, ecco i prodotti più pratici:`
+        ],
+        'creative': [
+            `Per migliorare la tua fotografia con ${categoryName}, ho selezionato i migliori accessori creativi. Ecco le opzioni:`,
+            `Ho scelto ${categoryName} per la tua creatività visiva. Ecco gli accessori top:`,
+            `Per esprimere la tua arte con ${categoryName}, ecco i prodotti migliori:`
+        ]
     };
     
-    return personalityResponses[personality] || `Ecco i prodotti ${categoryName}:`;
+    const responses = personalityResponses[personality] || [`Ecco i prodotti ${categoryName}:`];
+    
+    // Select random variation
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 // Show follow-up suggestions after category selection
