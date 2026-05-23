@@ -1410,6 +1410,19 @@ async function sendMessage() {
                 // As shopping consultant, guide user to category page with comparison table
                 try {
                     setTimeout(() => {
+                        // Calculate relative path for comparison table link
+                        const currentPath = window.location.pathname;
+                        let depth = 0;
+                        if (currentPath.startsWith('/lavoro/')) {
+                            const afterLavoro = currentPath.replace('/lavoro/', '');
+                            depth = (afterLavoro.match(/\//g) || []).length;
+                        }
+                        let relativePath = '';
+                        for (let i = 0; i < depth; i++) {
+                            relativePath += '../';
+                        }
+                        const finalUrl = relativePath + category.url.replace(/^\//, '');
+                        
                         const categoryLinkDiv = document.createElement('div');
                         categoryLinkDiv.className = 'category-link-container';
                         categoryLinkDiv.innerHTML = `
@@ -1418,7 +1431,7 @@ async function sendMessage() {
                                 <div class="consultation-content">
                                     <h4 class="fw-bold mb-2">Tabella Comparativa Disponibile</h4>
                                     <p class="text-muted mb-3">Ho preparato una tabella comparativa completa con tutti i prodotti selezionati, le loro caratteristiche e i prezzi per aiutarti a scegliere la soluzione migliore.</p>
-                                    <a href="${category.url}" class="btn btn-primary btn-sm">
+                                    <a href="${finalUrl}" class="btn btn-primary btn-sm">
                                         <i class="fas fa-table me-2"></i>Vedi Tabella Comparativa
                                     </a>
                                 </div>
