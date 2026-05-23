@@ -504,6 +504,14 @@ const catalogoProdotti = {
     }
 };
 
+// comboMessages - Messaggi unici per ogni contesto con placeholder
+const comboMessages = {
+    "mare": "Ehi, vedo che ti stai preparando per la spiaggia! 🌊 Guarda, se passi una giornata al mare come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per godermi il relax e una scorta di {prodottoAncora} per non dover correre al bar. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
+    "pc": "Ehi, ma ti stai preparando per lavorare? 🔥 Guarda, se passi lunghe sessioni come me, non posso fare a meno di due cose: delle {prodottoNicchia} per concentrarmi e una scorta di {prodottoAncora} per non dover fermarmi quando ho sete. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
+    "outdoor": "Che bello, vai in campeggio! 🌲 Guarda, se vai in natura come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per dormire bene e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
+    "caldo": "Che giornata calda! ❄️ Guarda, se anche tu soffri il caldo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per rinfrescarmi e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una vera salvezza in questi giorni!"
+};
+
 // Funzione per ottenere prodotti dal catalogo in base alla categoria
 function getProdottiByCategoria(categoria) {
     const prodotti = [];
@@ -560,9 +568,17 @@ function showUrgencyComboMessage(context) {
     const prodottoAncora = catalogoProdotti['coca_cola_zero'];
     console.log('Prodotto ancora:', prodottoAncora);
     
+    // Prendi il messaggio combo per il contesto
+    const messaggioTemplate = comboMessages[context] || comboMessages['mare'];
+    
+    // Sostituisci i placeholder
+    const messaggioPersonalizzato = messaggioTemplate
+        .replace('{prodottoNicchia}', prodottoPrincipale.nome)
+        .replace('{prodottoAncora}', prodottoAncora.nome);
+    
     const message = `
         <div class="urgency-combo-message">
-            <p style="margin-bottom: 12px; font-size: 15px; line-height: 1.5;">${prodottoPrincipale.messaggio}</p>
+            <p style="margin-bottom: 12px; font-size: 15px; line-height: 1.5;">${messaggioPersonalizzato}</p>
             <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px solid #dee2e6;">
                 <div style="margin-bottom: 12px;">
                     <strong>📦 Combo consigliata:</strong>
