@@ -57,11 +57,11 @@ function getPersonalizedGreeting() {
     const totalVisits = Object.values(userPreferences.visits || {}).reduce((a, b) => a + b, 0);
     
     if (totalVisits === 0) {
-        return 'Ciao! Sono qui per aiutarti a scegliere il meglio su Amazon. Cosa ti frulla per la testa oggi? Scegli una categoria o dimmi cosa stai cercando!';
+        return 'Ehi ciao! 👋 Stavo giusto guardando questi prodotti su Amazon, ci sono un sacco di cose interessanti. Dimmi, cosa ti serve oggi? Se mi dici cosa stai cercando, ti faccio vedere quello che secondo me vale la pena.';
     } else if (totalVisits < 3) {
-        return 'Bentornato! Hai già esplorato alcune categorie. Vuoi continuare dove avevi lasciato o esplorare qualcosa di nuovo?';
+        return 'Ehi bentornato! 👋 È bello rivederti. Vuoi continuare a guardare dove avevi lasciato o cerchi qualcosa di nuovo oggi?';
     } else {
-        return 'Bentornato! Ti conosco già fammi indovinare... vuoi vedere i prodotti che ti hanno interessato di più?';
+        return 'Ehi bentornato! 👋 Ti conosco già fammi indovinare... vuoi vedere i prodotti che ti hanno interessato di più l\'altra volta?';
     }
 }
 
@@ -423,7 +423,7 @@ const ContextDatabase = {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
-                message: "Lavorare al meglio significa prendersi cura della propria concentrazione. 🔥 Ho selezionato per te le cuffie HyperX Cloud insieme alla Coca-Cola Zero: l'energia giusta per affrontare la sessione di lavoro senza cali di tensione. Ecco la combo ideale per chi non scende a compromessi."
+                message: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma io odio fermarmi a cercare bar o macchinette quando sono in concentrazione. Per questo mi porto dietro le cuffie HyperX Cloud e la Coca-Cola Zero: con questa combo ho risolto il problema concentrazione e idratazione per tutta la sessione. Se ti va te la lascio qui, è una bella comodità."
             }
         ]
     },
@@ -440,7 +440,7 @@ const ContextDatabase = {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
-                message: "La natura chiama! 🌲 Se stai pianificando la tua prossima scampagnata, non farti trovare impreparato. Ho preparato questa combo speciale con la tenda Brunner e la Coca-Cola Zero: tutto quello che ti serve per gestire energia e mobilità in un unico ordine. Vivi l'avventura senza pensieri."
+                message: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio avere tutto pronto. Io uso questa tenda Brunner e mi porto sempre la Coca-Cola Zero: con questa combo ho risolto il problema alloggio e idratazione per tutta l'avventura. Se ti va te la lascio qui, è davvero comoda."
             }
         ]
     },
@@ -457,7 +457,7 @@ const ContextDatabase = {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
-                message: "Il caldo è arrivato! ❄️ Ho selezionato per te il condizionatore portatile 3-in-1 insieme alla Coca-Cola Zero: la combo perfetta per affrontare le temperature più alte con freschezza e idratazione. Non lasciare che il caldo ti fermi!"
+                message: "Che giornata calda! ❄️ Non so tu, ma io odio sudare quando è così caldo. Per questo uso il condizionatore portatile 3-in-1 insieme alla Coca-Cola Zero: con questa combo ho risolto il problema temperatura e idratazione. Se ti va te la lascio qui, è una vera salvezza in questi giorni."
             }
         ]
     }
@@ -702,7 +702,7 @@ function startSalesTimers() {
     // Minuto 2: Fase di Valore
     valueTimer = setTimeout(() => {
         if (chatOpen) {
-            const valueMessage = `Se stai cercando la qualità in ${nicheName}, ho selezionato questo Kit Premium che è il top in questa categoria. Risparmi tempo e hai tutto subito.`;
+            const valueMessage = `Non so tu, ma per ${nicheName} cerco sempre la qualità. Questo Kit Premium che ti mostro è quello che uso, mi trovo benissimo. Se ti va dai un'occhiata:`;
             addProactiveMessage(valueMessage);
             setTimeout(() => {
                 showAmazonKillerButton('2min');
@@ -713,7 +713,7 @@ function startSalesTimers() {
     // Minuto 3: Fase di Chiusura
     closingTimer = setTimeout(() => {
         if (chatOpen) {
-            const closingMessage = `La disponibilità per questi articoli di ${nicheName} è limitata. Ti consiglio di bloccare il prezzo su Amazon prima che cambi.`;
+            const closingMessage = `Ehi, se ti va di dare un'occhiata a questi prodotti di ${nicheName}, te li lascio qui. Io li uso e funzionano bene, magari ti potrebbero servire anche a te.`;
             addProactiveMessage(closingMessage);
             setTimeout(() => {
                 showAmazonKillerButton('3min');
@@ -1655,7 +1655,7 @@ function addProductCard(product) {
         ${product.description ? `<div class="product-desc">${product.description}</div>` : ''}
         ${specsHTML}
         ${adviceHTML}
-        <a href="${product.link}" class="product-link" target="_blank" rel="noopener noreferrer">🛒 Vedi su Amazon</a>
+        <a href="${product.link}" class="product-link" target="_blank" rel="noopener noreferrer">👀 Se ti va, dai un'occhiata su Amazon</a>
     `;
     
     chatMessages.appendChild(productDiv);
@@ -1666,89 +1666,89 @@ function addProductCard(product) {
 function getPersonalityResponse(categoryKey, personality, categoryName) {
     const personalityResponses = {
         'functional': [
-            `Per ${categoryName} ho analizzato funzionalità, materiali e rapporto qualità-prezzo. Ecco i prodotti selezionati:`,
-            `Ho valutato attentamente ${categoryName} per funzionalità e durata. Ecco le mie scelte:`,
-            `Per ${categoryName}, ho considerato ogni dettaglio tecnico. Ecco i prodotti migliori:`
+            `Per ${categoryName} io mi affido a prodotti che durano davvero, non so tu ma odio doverli ricomprare subito. Questi che ti mostro li uso da un po' e mi trovo bene, se ti va dai un'occhiata:`,
+            `Non so tu, ma per ${categoryName} cerco sempre qualità-prezzo. Questi mi hanno convinto, li uso e funzionano bene. Se ti interessano te li lascio qui:`,
+            `Per ${categoryName} ho fatto un sacco di ricerche prima di trovare quelli giusti. Questi sono quelli che uso, se vuoi dacci un'occhiata:`
         ],
         'technical': [
-            `Ho esaminato le specifiche tecniche per ${categoryName}. Prestazioni e compatibilità sono i fattori chiave. Ecco le opzioni:`,
-            `Dall'analisi tecnica di ${categoryName}, ecco i prodotti con le migliori specifiche:`,
-            `Per ${categoryName}, ho verificato compatibilità e prestazioni. Ecco cosa ho trovato:`
+            `Per ${categoryName} sono molto schizzinoso sulle specifiche. Questi prodotti li ho testati personalmente e funzionano alla grande. Se ti va te li passo:`,
+            `Non so tu, ma per ${categoryName} voglio che tutto sia compatibile e funzioni bene. Questi li uso e mi trovo bene, se ti interessano:`,
+            `Per ${categoryName} ho controllato ogni dettaglio tecnico. Questi sono quelli che uso quotidianamente, se vuoi dacci un'occhiata:`
         ],
         'motivational': [
-            `Per raggiungere i tuoi obiettivi con ${categoryName}, ho selezionato i prodotti migliori. Dai il massimo! Ecco cosa ho trovato:`,
-            `Con ${categoryName} puoi raggiungere grandi risultati. Ecco i prodotti per motivarti:`,
-            `Per la tua performance in ${categoryName}, ho scelto solo il meglio. Andiamo!`
+            `Per ${categoryName} ti serve qualcosa che ti motivi davvero. Io uso questi prodotti e mi aiutano a dare il massimo. Se ti va te li lascio qui:`,
+            `Non so tu, ma per ${categoryName} cerco prodotti che mi spingano a fare di più. Questi funzionano per me, se ti interessano:`,
+            `Per la tua performance in ${categoryName} questi prodotti sono top. Li uso e fanno la differenza, se vuoi dacci un'occhiata:`
         ],
         'gaming': [
-            `Per il tuo setup gaming in ${categoryName}, ho analizzato latenza, DPI e compatibilità. Ecco i prodotti top:`,
-            `Ho ottimizzato la selezione di ${categoryName} per il gaming. Latenza e FPS sono i fattori chiave:`,
-            `Per dominare in ${categoryName}, ecco i prodotti con le migliori specifiche gaming:`
+            `Ah, cerchi roba per il gaming? 🎮 Io uso questi prodotti da un sacco di tempo, latenza e FPS sono perfetti. Se ti va te li passo:`,
+            `Per il tuo setup gaming in ${categoryName} non scendere a compromessi. Questi li uso e non mi hanno mai deluso, se ti interessano:`,
+            `Per dominare in ${categoryName} ti serve l'attrezzatura giusta. Io uso questi e funzionano benissimo, se vuoi dacci un'occhiata:`
         ],
         'caring': [
-            `Per il benessere del tuo animale in ${categoryName}, ho scelto i prodotti più sicuri e confortevoli. Ecco le opzioni:`,
-            `Ho selezionato ${categoryName} pensando al comfort e alla sicurezza del tuo amico a quattro zampe:`,
-            `Per la cura del tuo animale con ${categoryName}, ecco i prodotti più affidabili:`
+            `Per il tuo amico a quattro zampe in ${categoryName} io uso solo prodotti sicuri. Questi li uso con il mio animale e mi trovo benissimo. Se ti va te li lascio:`,
+            `Non so tu, ma per ${categoryName} voglio il massimo comfort per il mio animale. Questi prodotti sono perfetti, se ti interessano:`,
+            `Per la cura del tuo animale con ${categoryName} questi prodotti sono affidabili. Li uso quotidianamente, se vuoi dacci un'occhiata:`
         ],
         'entertainment': [
-            `Per il tuo stile in ${categoryName}, ho selezionato prodotti con design iconico. Tessuto e vestibilità sono i criteri chiave. Ecco i prodotti:`,
-            `Ho scelto ${categoryName} per il tuo intrattenimento con stile unico. Ecco le opzioni:`,
-            `Per il tuo setup entertainment in ${categoryName}, ecco i prodotti con design iconico:`
+            `Per il tuo intrattenimento in ${categoryName} io cerco prodotti con stile. Questi li uso e fanno la differenza. Se ti va te li passo:`,
+            `Non so tu, ma per ${categoryName} voglio qualcosa di unico. Questi prodotti hanno un design pazzesco, se ti interessano:`,
+            `Per il tuo setup entertainment in ${categoryName} questi prodotti sono iconici. Li uso e mi piace un sacco, se vuoi dacci un'occhiata:`
         ],
         'summer': [
-            `Per goderti il mare e la spiaggia con ${categoryName}, ho scelto i migliori prodotti per la tua estate. Ecco le opzioni:`,
-            `Ho selezionato ${categoryName} per le tue giornate estive al mare. Ecco cosa ho trovato:`,
-            `Per la tua estate perfetta con ${categoryName}, ecco i prodotti essenziali:`
+            `Che bello, vai al mare! 🏖️ Per ${categoryName} io uso questi prodotti, sono perfetti per l'estate. Se ti va te li lascio:`,
+            `Non so tu, ma per ${categoryName} voglio roba che resista al sole e alla sabbia. Questi li uso e funzionano benissimo, se ti interessano:`,
+            `Per la tua estate perfetta con ${categoryName} questi prodotti sono essenziali. Li uso ogni anno, se vuoi dacci un'occhiata:`
         ],
         'adventure': [
-            `Per le tue avventure outdoor in ${categoryName}, ho selezionato l'attrezzatura più resistente e affidabile. Ecco i prodotti:`,
-            `Ho scelto ${categoryName} per resistere a ogni avventura. Ecco l'attrezzatura top:`,
-            `Per le tue escursioni con ${categoryName}, ecco i prodotti più robusti:`
+            `Per le tue avventure in ${categoryName} ti serve attrezzatura che resiste. Io uso questi prodotti e non mi hanno mai deluso. Se ti va te li passo:`,
+            `Non so tu, ma per ${categoryName} cerco roba robusta. Questi prodotti resistono a tutto, li uso nelle mie escursioni. Se ti interessano:`,
+            `Per le tue escursioni con ${categoryName} questi prodotti sono top. Li uso e fanno la differenza, se vuoi dacci un'occhiata:`
         ],
         'fashion': [
-            `Per il tuo stile unico in ${categoryName}, ho selezionato capi con tessuti premium e design iconico. Ecco le opzioni:`,
-            `Ho curato la selezione di ${categoryName} per il tuo look distintivo. Ecco i capi migliori:`,
-            `Per esprimere il tuo stile con ${categoryName}, ecco i prodotti di tendenza:`
+            `Per il tuo stile in ${categoryName} io cerco capi con tessuti di qualità. Questi li uso e il look è perfetto. Se ti va te li lascio:`,
+            `Non so tu, ma per ${categoryName} voglio qualcosa di distintivo. Questi capi hanno un design pazzesco, se ti interessano:`,
+            `Per esprimere il tuo stile con ${categoryName} questi prodotti sono di tendenza. Li uso e mi piace un sacco, se vuoi dacci un'occhiata:`
         ],
         'aesthetic': [
-            `Per arredare con stile in ${categoryName}, ho scelto prodotti che combinano estetica e funzionalità. Ecco le opzioni:`,
-            `Ho selezionato ${categoryName} per un design minimalista e moderno. Ecco i prodotti:`,
-            `Per la tua casa con ${categoryName}, ecco i prodotti che combinano bellezza e utilità:`
+            `Per arredare in ${categoryName} io cerco prodotti che abbiano stile. Questi li uso a casa mia e l'effetto è bellissimo. Se ti va te li passo:`,
+            `Non so tu, ma per ${categoryName} voglio design minimalista. Questi prodotti sono perfetti, li uso e mi trovo benissimo. Se ti interessano:`,
+            `Per la tua casa con ${categoryName} questi prodotti combinano bellezza e utilità. Li uso e funzionano alla grande, se vuoi dacci un'occhiata:`
         ],
         'wellness': [
-            `Per la tua routine di bellezza in ${categoryName}, ho selezionato i prodotti più efficaci e naturali. Ecco le opzioni:`,
-            `Ho scelto ${categoryName} per il tuo benessere e relax. Ecco i prodotti migliori:`,
-            `Per prenderti cura di te con ${categoryName}, ecco i prodotti più efficaci:`
+            `Per la tua routine di bellezza in ${categoryName} io uso solo prodotti efficaci. Questi li uso quotidianamente e mi trovo benissimo. Se ti va te li lascio:`,
+            `Non so tu, ma per ${categoryName} voglio prodotti naturali. Questi sono perfetti per il relax, se ti interessano:`,
+            `Per prenderti cura di te con ${categoryName} questi prodotti sono top. Li uso e fanno la differenza, se vuoi dacci un'occhiata:`
         ],
         'intellectual': [
-            `Per i tuoi momenti di lettura in ${categoryName}, ho scelto i migliori libri e dispositivi. Ecco le opzioni:`,
-            `Ho selezionato ${categoryName} per stimolare la tua mente. Ecco i libri e dispositivi:`,
-            `Per i tuoi momenti di cultura con ${categoryName}, ecco le migliori opzioni:`
+            `Per i tuoi momenti di lettura in ${categoryName} io cerco prodotti di qualità. Questi li uso e stimolano la mente. Se ti va te li passo:`,
+            `Non so tu, ma per ${categoryName} voglio dispositivi che funzionino bene. Questi li uso per leggere e sono perfetti, se ti interessano:`,
+            `Per i tuoi momenti di cultura con ${categoryName} questi prodotti sono ottimi. Li uso e mi piace un sacco, se vuoi dacci un'occhiata:`
         ],
         'elegant': [
-            `Per la tua personalità unica in ${categoryName}, ho selezionato i profumi più esclusivi. Ecco le opzioni:`,
-            `Ho scelto ${categoryName} per il tuo stile elegante. Ecco i profumi top:`,
-            `Per esprimere la tua eleganza con ${categoryName}, ecco le fragranze migliori:`
+            `Per il tuo stile in ${categoryName} io cerco profumi esclusivi. Questi li uso e ricevo sempre complimenti. Se ti va te li lascio:`,
+            `Non so tu, ma per ${categoryName} voglio qualcosa di elegante. Questi profumi sono pazzeschi, se ti interessano:`,
+            `Per esprimere la tua eleganza con ${categoryName} queste fragranze sono top. Le uso e mi piace un sacco, se vuoi dacci un'occhiata:`
         ],
         'eco': [
-            `Per ridurre il tuo impatto ambientale in ${categoryName}, ho scelto i prodotti più sostenibili. Ecco le opzioni:`,
-            `Ho selezionato ${categoryName} pensando all'ambiente. Ecco i prodotti eco-friendly:`,
-            `Per uno stile di vita sostenibile con ${categoryName}, ecco le scelte migliori:`
+            `Per ridurre l'impatto ambientale in ${categoryName} io uso solo prodotti sostenibili. Questi li uso e sono perfetti. Se ti va te li passo:`,
+            `Non so tu, ma per ${categoryName} voglio prodotti eco-friendly. Questi sono ottimi per l'ambiente, se ti interessano:`,
+            `Per uno stile di vita sostenibile con ${categoryName} questi prodotti sono ideali. Li uso e funzionano benissimo, se vuoi dacci un'occhiata:`
         ],
         'professional': [
-            `Per il tuo lavoro in ${categoryName}, ho selezionato capi professionali con sicurezza e comfort. Ecco le opzioni:`,
-            `Ho scelto ${categoryName} per la tua carriera professionale. Ecco i capi migliori:`,
-            `Per il tuo ambiente di lavoro con ${categoryName}, ecco i prodotti più affidabili:`
+            `Per il tuo lavoro in ${categoryName} io cerco capi sicuri e comodi. Questi li uso e non mi hanno mai deluso. Se ti va te li lascio:`,
+            `Non so tu, ma per ${categoryName} voglio roba professionale. Questi prodotti sono affidabili, se ti interessano:`,
+            `Per il tuo ambiente di lavoro con ${categoryName} questi prodotti sono top. Li uso quotidianamente, se vuoi dacci un'occhiata:`
         ],
         'travel': [
-            `Per i tuoi viaggi con ${categoryName}, ho scelto gli accessori più pratici e funzionali. Ecco le opzioni:`,
-            `Ho selezionato ${categoryName} per viaggiare senza pensieri. Ecco gli accessori essenziali:`,
-            `Per le tue avventure di viaggio con ${categoryName}, ecco i prodotti più pratici:`
+            `Per i tuoi viaggi in ${categoryName} io cerco accessori pratici. Questi li uso e viaggiare è molto più facile. Se ti va te li passo:`,
+            `Non so tu, ma per ${categoryName} voglio viaggiare senza pensieri. Questi accessori sono essenziali, se ti interessano:`,
+            `Per le tue avventure di viaggio con ${categoryName} questi prodotti sono perfetti. Li uso e fanno la differenza, se vuoi dacci un'occhiata:`
         ],
         'creative': [
-            `Per migliorare la tua fotografia con ${categoryName}, ho selezionato i migliori accessori creativi. Ecco le opzioni:`,
-            `Ho scelto ${categoryName} per la tua creatività visiva. Ecco gli accessori top:`,
-            `Per esprimere la tua arte con ${categoryName}, ecco i prodotti migliori:`
+            `Per la tua fotografia in ${categoryName} io cerco accessori creativi. Questi li uso e migliorano un sacco le mie foto. Se ti va te li lascio:`,
+            `Non so tu, ma per ${categoryName} voglio roba che stimoli la creatività. Questi accessori sono top, se ti interessano:`,
+            `Per esprimere la tua arte con ${categoryName} questi prodotti sono perfetti. Li uso e mi piace un sacco, se vuoi dacci un'occhiata:`
         ]
     };
     
