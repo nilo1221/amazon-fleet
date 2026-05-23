@@ -1608,10 +1608,17 @@ function addCategoryLink(category) {
     
     // Calculate relative path based on current location
     const currentPath = window.location.pathname;
-    const depth = (currentPath.match(/\//g) || []).length - 1; // Count slashes, minus 1 for root
+    
+    // If we're in /lavoro/ subdirectory, count depth after that
+    let depth = 0;
+    if (currentPath.startsWith('/lavoro/')) {
+        const afterLavoro = currentPath.replace('/lavoro/', '');
+        depth = (afterLavoro.match(/\//g) || []).length;
+    }
+    
     let relativePath = '';
     
-    // If we're in a subdirectory, add ../ for each level
+    // If we're in a subdirectory of lavoro, add ../ for each level
     for (let i = 0; i < depth; i++) {
         relativePath += '../';
     }
