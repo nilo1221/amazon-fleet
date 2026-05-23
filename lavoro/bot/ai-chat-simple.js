@@ -552,20 +552,27 @@ function showUrgencyComboMessage(context) {
         return;
     }
     
-    // Prendi il primo prodotto come principale
-    const prodottoPrincipale = prodotti[0];
+    // Prendi il primo prodotto specifico della categoria (non Coca-Cola)
+    const prodottoPrincipale = prodotti.find(p => p.id !== 'coca_cola_zero') || prodotti[0];
     console.log('Prodotto principale:', prodottoPrincipale);
+    
+    // Prendi Coca-Cola come "prodotto ancora"
+    const prodottoAncora = catalogoProdotti['coca_cola_zero'];
+    console.log('Prodotto ancora:', prodottoAncora);
     
     const message = `
         <div class="urgency-combo-message">
             <p style="margin-bottom: 12px; font-size: 15px; line-height: 1.5;">${prodottoPrincipale.messaggio}</p>
             <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px solid #dee2e6;">
                 <div style="margin-bottom: 12px;">
-                    <strong>📦 Prodotto consigliato:</strong>
+                    <strong>📦 Combo consigliata:</strong>
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <a href="${prodottoPrincipale.link}" target="_blank" onclick="trackComboClick('${context}', 1)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da;">
-                        ${prodottoPrincipale.nome}
+                    <a href="${prodottoPrincipale.link}" target="_blank" onclick="trackComboClick('${context}', 1)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da; margin-bottom: 8px;">
+                        1. ${prodottoPrincipale.nome}
+                    </a>
+                    <a href="${prodottoAncora.link}" target="_blank" onclick="trackComboClick('${context}', 2)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da;">
+                        2. ${prodottoAncora.nome}
                     </a>
                 </div>
             </div>
