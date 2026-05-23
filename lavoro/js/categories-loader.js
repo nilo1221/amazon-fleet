@@ -9,7 +9,7 @@ class CategoryLoader {
 
     async loadCategories() {
         try {
-            const response = await fetch('/lavoro/data/categories.json');
+            const response = await fetch('/data/categories.json');
             this.categories = await response.json();
             this.dataLoaded = true;
             return this.categories;
