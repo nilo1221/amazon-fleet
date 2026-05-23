@@ -1608,7 +1608,7 @@ function addCategoryLink(category) {
     
     const linkDiv = document.createElement('div');
     linkDiv.className = 'chat-message bot';
-    linkDiv.innerHTML = `<a href="${category.url}" class="category-link" target="_blank" rel="noopener noreferrer">👉 Vedi tutti i prodotti ${category.name}</a>`;
+    linkDiv.innerHTML = `<a href="${category.url}" class="category-link">👉 Vedi tutti i prodotti ${category.name}</a>`;
     chatMessages.appendChild(linkDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
