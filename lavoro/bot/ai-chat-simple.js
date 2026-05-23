@@ -19,6 +19,7 @@ let pageScrollTriggered = false;
 let conversationHistory = [];
 let userPreferences = {};
 let currentNiche = null;
+let urgencyTimerStarted = false;
 
 // Load user preferences from localStorage
 function loadUserPreferences() {
@@ -89,7 +90,7 @@ const NicheDatabase = {
     "cucina-elettrodomestici": {
         name: "Cucina Moderna & Tech",
         tags: ["friggitrice", "aria", "forno", "microonde", "bollitore", "caffettiera", "macchina", "caffè", "frigorifero", "freezer", "lavatrice", "asciugatrice", "lavastoviglie", "robot", "cucina", "minipimer", "frullatore", "mixer", "spremiagrumi", "estrattore", "centrifuga", "tostapane", "griglia", "piastra", "cottura", "pentola", "padella", "wok", "pentolame", "batteria", "pentole", "coltello", "taglieri", "tagliere", "scolapasta", "schiumarola", "mestolo", "cucchiaio", "forchetta", "set", "posate", "bottiglia", "thermos", "condizionatore", "ventilatore", "detersivi", "bevande"],
-        url: "cucina-elettrodomestici/index.html",
+        url: "/cucina-elettrodomestici/index.html",
         personality: "functional",
         valueProp: "Come consulente di cucina, ho valutato funzionalità, materiali e rapporto qualità-prezzo per te.",
         song: "Sugar, Sugar - The Archies",
@@ -138,7 +139,7 @@ const NicheDatabase = {
     "smart-home-domotica": {
         name: "Smart Home & Domotica",
         tags: ["smart", "home", "domotica", "lampada", "termostato", "sensore", "casa", "intelligente", "luci", "automazione", "telecomando", "controllo", "wifi", "bluetooth", "smartphone", "app", "telecamera", "sorveglianza", "videocamera", "allarme", "sicurezza", "serratura", "smart", "lock", "prese", "intelligenti", "prese", "wifi", "hub", "centrale"],
-        url: "smart-home-domotica/index.html",
+        url: "/smart-home-domotica/index.html",
         personality: "technical",
         valueProp: "Ho analizzato le specifiche tecniche e la compatibilità per la tua smart home.",
         song: "Automaton - Jamiroquai",
@@ -149,7 +150,7 @@ const NicheDatabase = {
     "fitness-casa": {
         name: "Fitness Casa",
         tags: ["fitness", "smartwatch", "activity", "tracker", "pesi", "palestra", "allenamento", "sport", "cyclette", "tapis", "roulant", "ellittica", "manubri", "pesetti", "elastici", "bande", "yoga", "pilates", "tappetino", "step", "panca", "bilanciere", "dischi", "cavigliere", "bracciale", "cardio", "corsa", "bici", "spinning", "crossfit", "kettlebell", "trx", "vibrazione", "massaggiatore", "foam", "roller", "jogging", "corsetta"],
-        url: "fitness-casa/index.html",
+        url: "/fitness-casa/index.html",
         personality: "motivational",
         valueProp: "Ho selezionato i prodotti migliori per raggiungere i tuoi obiettivi fitness a casa.",
         song: "Physical - Olivia Newton-John",
@@ -160,7 +161,7 @@ const NicheDatabase = {
     "elite-gaming-gear": {
         name: "Elite Gaming Gear",
         tags: ["gaming", "cuffie", "headset", "mouse", "tastiera", "keyboard", "controller", "ps5", "xbox", "playstation", "play", "station", "nintendo", "switch", "pc", "computer", "laptop", "monitor", "schermo", "sedia", "gaming", "scrivania", "joystick", "volante", "pedale", "simulatore", "streaming", "twitch", "youtube", "microfono", "webcam", "capture", "card", "vr", "realtà", "virtuale", "oculus", "quest", "headset", "auricolari", "audio", "sound", "fps", "dpi", "latenza"],
-        url: "elite-gaming-gear/index.html",
+        url: "/elite-gaming-gear/index.html",
         personality: "gaming",
         valueProp: "Ho analizzato le specifiche tecniche per te. Latenza, DPI, FPS e compatibilità sono i fattori chiave.",
         song: "Blinding Lights - The Weeknd",
@@ -171,7 +172,7 @@ const NicheDatabase = {
     "pet-care-intelligente": {
         name: "Pet Care Intelligente",
         tags: ["gatto", "cane", "animale", "lettiera", "autopulente", "cibo", "pet", "zampa", "crocchette", "mangiatore", "bevitore", "automatico", "spazzola", "pelo", "tagliaunghie", "trasportino", "cuccia", "casa", "cane", "giocattolo", "osso", "corda", "pallina", "collare", "guinzaglio", "pettorina", "museruola", "antiparassitario", "pulci", "zecke", "integratore", "vitamine"],
-        url: "pet-care-intelligente/index.html",
+        url: "/pet-care-intelligente/index.html",
         personality: "caring",
         valueProp: "Ho selezionato i migliori prodotti per il benessere del tuo animale domestico.",
         song: "Who Let the Dogs Out - Baha Men",
@@ -182,7 +183,7 @@ const NicheDatabase = {
     "cinema-tv": {
         name: "Cinema & TV",
         tags: ["tv", "televisione", "proiettore", "cinema", "film", "bluray", "dvd", "schermo", "monitor", "home", "theater", "surround", "soundbar", "altoparlante", "speaker", "sound", "audio", "hifi", "amplificatore", "ricevitore", "decoder", "satellite", "streaming", "netflix", "prime", "disney", "hbo", "apple", "tv", "chromecast", "fire", "stick", "roku", "kodi", "plex", "media", "player", "cavo", "hdmi", "4k", "8k", "oled", "qled", "led", "lcd"],
-        url: "cinema-tv/index.html",
+        url: "/cinema-tv/index.html",
         personality: "entertainment",
         valueProp: "Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato.",
         song: "Eye of the Tiger - Survivor",
@@ -193,7 +194,7 @@ const NicheDatabase = {
     "smartphone-tech": {
         name: "Smartphone & Tech",
         tags: ["smartphone", "telefono", "cellulare", "iphone", "samsung", "android", "galaxy", "xiaomi", "huawei", "oppo", "oneplus", "pixel", "nokia", "sony", "lg", "motorola", "honor", "realme", "tecno", "infinix", "vivo", "zte", "alcatel", "wiko", "bq", "crosscall", "cat", "rugged", "tough", "tablet", "ipad", "samsung", "galaxy", "tab", "kindle", "ebook", "reader", "smartwatch", "orologio", "fitness", "tracker", "band", "auricolari", "cuffie", "true", "wireless", "airpods", "galaxy", "buds", "powerbank", "batteria", "caricabatterie", "cavo", "usb", "type", "c", "lightning"],
-        url: "smartphone-tech/index.html",
+        url: "/smartphone-tech/index.html",
         personality: "technical",
         valueProp: "Ho analizzato le specifiche tecniche e le prestazioni. Processore, RAM, storage e batteria sono i fattori chiave.",
         song: "Telephone - Lady Gaga",
@@ -204,7 +205,7 @@ const NicheDatabase = {
     "tech": {
         name: "Tech",
         tags: ["tech", "tecnologia", "gadget", "computer", "laptop", "notebook", "desktop", "pc", "mac", "windows", "linux", "android", "ios", "software", "hardware", "periferica", "mouse", "tastiera", "monitor", "schermo", "stampante", "scanner", "webcam", "microfono", "cuffie", "auricolari", "speaker", "soundbar", "router", "modem", "wifi", "bluetooth", "usb", "cavo", "adattatore", "hub", "dock", "powerbank", "batteria", "caricabatterie", "hard", "disk", "ssd", "ram", "cpu", "gpu", "processore", "scheda", "video", "scheda", "madre", "case", "ventole", "raffreddamento", "liquido", "watercooling"],
-        url: "tech/index.html",
+        url: "/tech/index.html",
         personality: "technical",
         valueProp: "Ho analizzato le specifiche tecniche e le prestazioni per le tue esigenze tecnologiche.",
         song: "Technologic - Daft Punk",
@@ -215,7 +216,7 @@ const NicheDatabase = {
     "mare-spiaggia": {
         name: "Mare & Spiaggia",
         tags: ["mare", "spiaggia", "ombrellone", "telo", "costume", "scarpe", "acqua", "sandali", "ciabatte", "slip", "infradito", "flip", "flop", "espadrillas", "crema", "solare", "abbronzante", "doposole", "occhiali", "sole", "cappello", "berretto", "fascia", "bandana", "tuta", "bagno", "costume", "bikini", "slip", "mutande", "shorts", "beach", "wear", "gonna", "mare", "dress", "mare", "telo", "microfibra", "asciugamano", "sabbia", "impermeabile", "borsa", "mare", "zaino", "secchiello", "secchio", "paletta", "formine", "pallina", "beach", "volley", "racchette", "surf", "bodyboard", "boogie", "board", "snorkeling", "maschera", "boccaglio", "pinne", "gommone", "canoa", "kayak", "paddleboard"],
-        url: "mare-spiaggia/index.html",
+        url: "/mare-spiaggia/index.html",
         personality: "summer",
         valueProp: "Ho selezionato i migliori prodotti per goderti il mare e la spiaggia al meglio.",
         song: "Kokomo - The Beach Boys",
@@ -226,7 +227,7 @@ const NicheDatabase = {
     "outdoor-camping": {
         name: "Outdoor & Camping",
         tags: ["outdoor", "campeggio", "tenda", "montagna", "freddo", "sacco", "pelo", "sleeping", "bag", "lanterna", "torcia", "frontale", "bussola", "gps", "navigatore", "mappe", "kit", "sopravvivenza", "coltello", "multitool", "cucina", "campeggio", "pentole", "portatili", "stoviglie", "posate", "bicchieri", "bottiglia", "thermos", "borsa", "frigo", "cooler", "box", "ice", "sedia", "pieghevole", "tavolo", "pieghevole", "hammock", "amaca", "mosquito", "net", "zanzariera", "poncho", "impermeabile", "giacca", "antivento", "kway", "scarpe", "trekking", "stivali", "bastoncini", "crampon", "piccone", "corda", "imbracatura", "carabiner", "moschettone", "rampicata", "arrampicata"],
-        url: "outdoor-camping/index.html",
+        url: "/outdoor-camping/index.html",
         personality: "adventure",
         valueProp: "Ho selezionato l'attrezzatura migliore per le tue avventure all'aria aperta.",
         song: "Country Roads - John Denver",
@@ -237,7 +238,7 @@ const NicheDatabase = {
     "moda-donna": {
         name: "Moda Donna",
         tags: ["moda", "donna", "abbigliamento", "vestito", "scarpe", "donna", "borsa", "donna", "top", "tshirt", "maglietta", "blusa", "camicetta", "jeans", "pantaloni", "gonna", "giacca", "cappotto", "maglione", "pullover", "cardigan", "blazer", "abito", "sera", "elegante", "intimo", "reggiseno", "mutandine", "calze", "collant", "calzini", "costume", "bagno", "beachwear", "accessori", "gioielli", "collana", "orecchino", "bracciale", "anello", "occhiali", "sole", "sciarpa", "cintura", "cappello", "berretto", "scarpe eleganti", "tacchi", "décolleté", "sandali eleganti", "pumps", "tessuto", "vestibilità", "design"],
-        url: "moda-donna/index.html",
+        url: "/moda-donna/index.html",
         personality: "fashion",
         valueProp: "Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato.",
         song: "Vogue - Madonna",
@@ -248,7 +249,7 @@ const NicheDatabase = {
     "moda-uomo": {
         name: "Moda Uomo",
         tags: ["moda", "uomo", "abbigliamento", "camicia", "scarpe", "uomo", "borsa", "uomo", "tshirt", "maglietta", "polo", "jeans", "pantaloni", "pantaloni", "shorts", "giacca", "cappotto", "maglione", "pullover", "cardigan", "blazer", "completo", "abito", "elegante", "intimo", "mutande", "boxer", "slip", "calze", "calzini", "costume", "bagno", "beachwear", "cravatta", "papillon", "cintura", "cinturino", "cappello", "berretto", "guanti", "scarpe", "sneakers", "mocassini", "stivali", "scarpe eleganti", "scarpe da cerimonia", "scarpe classiche", "oxford", "derby", "loafer", "monk", "tessuto", "vestibilità", "design"],
-        url: "moda-uomo/index.html",
+        url: "/moda-uomo/index.html",
         personality: "fashion",
         valueProp: "Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato.",
         song: "Sharp Dressed Man - ZZ Top",
@@ -259,7 +260,7 @@ const NicheDatabase = {
     "arredamento-casa": {
         name: "Casa & Decorazione",
         tags: ["arredamento", "casa", "decorazione", "vaso", "decorativo", "candela", "profumata", "zanzariera", "tappeto", "lampada", "cuscino", "tenda", "mobili", "sofà", "poltrona", "tavolo", "sedia", "armadio", "mensole", "libreria", "comodino", "specchio", "quadro", "orologio", "da", "parete"],
-        url: "arredamento-casa/index.html",
+        url: "/arredamento-casa/index.html",
         personality: "aesthetic",
         valueProp: "Ho selezionato i prodotti migliori per arredare la tua casa con stile.",
         song: "Home - Michael Bublé",
@@ -270,7 +271,7 @@ const NicheDatabase = {
     "accessori-moda": {
         name: "Accessori Moda",
         tags: ["accessori", "moda", "occhiali", "da", "sole", "cintura", "borsetta", "borsa", "portafoglio", "sciarpa", "cappello", "guanti", "gioielli", "collana", "bracciale", "anello", "orecchini"],
-        url: "accessori-moda/index.html",
+        url: "/accessori-moda/index.html",
         personality: "fashion",
         valueProp: "Ho selezionato gli accessori perfetti per completare il tuo look.",
         song: "Fashion - David Bowie",
@@ -281,7 +282,7 @@ const NicheDatabase = {
     "benessere-cura-personale": {
         name: "Benessere & Cura Personale",
         tags: ["benessere", "cura", "personale", "crema", "viso", "siero", "lozione", "tonico", "detergente", "esfoliante", "idratante", "solare", "abbronzante", "doposole", "trucco", "fondotinta", "correttore", "mascara", "eyeliner", "ombretto", "rossetto", "gloss", "blush", "bronzer", "illuminante", "primer", "spugna", "pennello", "brush", "palette", "smalto", "unghie", "rimuovi", "smalto", "nail", "polish", "remover", "capelli", "balsamo", "dopobarba"],
-        url: "benessere-cura-personale/index.html",
+        url: "/benessere-cura-personale/index.html",
         personality: "wellness",
         valueProp: "Ho selezionato i migliori prodotti per la tua routine di bellezza e benessere.",
         song: "Beautiful - Christina Aguilera",
@@ -292,7 +293,7 @@ const NicheDatabase = {
     "giochi-da-tavolo": {
         name: "Giochi da Tavolo",
         tags: ["giochi", "da", "tavolo", "board", "game", "dadi", "dungeons", "dragons", "dnd", "pathfinder", "gurps", "call", "cthulhu", "vampire", "masquerade", "warhammer", "age", "sigmar", "monopoly", "risk", "scrabble", "trivial", "pursuit", "cluedo", "twister", "jenga", "uno", "rummy", "poker", "blackjack", "bridge", "scopone", "briscola", "tressette", "scala", "40", "scacchi", "dama", "go", "mahjong", "backgammon", "carrom", "mancala", "catan", "settlers", "ticket", "ride", "carcassonne", "pandemic", "terraforming", "mars", "wingspan", "azul", "splendor"],
-        url: "giochi-da-tavolo/index.html",
+        url: "/giochi-da-tavolo/index.html",
         personality: "gaming",
         valueProp: "Ho selezionato i migliori giochi da tavolo per le tue serate con amici.",
         song: "The Game - Queen",
@@ -303,7 +304,7 @@ const NicheDatabase = {
     "libri-ereader": {
         name: "Libri & E-Reader",
         tags: ["libro", "kindle", "ebook", "lettore", "romanzo", "thriller", "giallo", "fantasy", "fantascienza", "horror", "romance", "erotico", "storico", "biografia", "autobiografia", "saggio", "manual", "guida", "studio", "scuola", "università", "bambini", "ragazzi", "young", "adult", "fumetto", "manga", "graphic", "novel", "comics", "audiolibro", "audible", "kobo", "nook", "boox", "pocketbook", "tolino", "sony", "reader", "paperwhite", "oasis", "scribe", "clara", "libra", "h2o", "glo", "aura", "one", "edition", "forma", "cover", "custodia", "light", "case"],
-        url: "libri-ereader/index.html",
+        url: "/libri-ereader/index.html",
         personality: "intellectual",
         valueProp: "Ho selezionato i migliori libri e e-reader per i tuoi momenti di lettura.",
         song: "Words - Bee Gees",
@@ -314,7 +315,7 @@ const NicheDatabase = {
     "profumi-bellezza": {
         name: "Profumi & Bellezza",
         tags: ["profumo", "bellezza", "makeup", "cosmetico", "eau", "de", "toilette", "parfum", "eau", "de", "parfum", "intense", "edp", "edt", "cologne", "after", "shave", "balsamo", "dopobarba"],
-        url: "profumi-bellezza/index.html",
+        url: "/profumi-bellezza/index.html",
         personality: "elegant",
         valueProp: "Ho selezionato i profumi più esclusivi per la tua personalità.",
         song: "Por Una Cabeza - Tango",
@@ -325,7 +326,7 @@ const NicheDatabase = {
     "abbigliamento-lavoro": {
         name: "Abbigliamento Lavoro",
         tags: ["lavoro", "abbigliamento", "ufficio", "business", "blazer", "pantaloni", "cargo", "militari", "tattici", "scarpe", "sicurezza", "antinfortunistiche", "punta", "acciaio", "professionale", "uniform", "divisa", "ingegnere", "architetto", "avvocato", "commercialista", "medico", "infermiere", "cantier", "industria", "protezione", "resistente", "robusto", "sicurezza"],
-        url: "abbigliamento-lavoro/index.html",
+        url: "/abbigliamento-lavoro/index.html",
         personality: "professional",
         valueProp: "Ho selezionato i migliori capi di abbigliamento professionale per il tuo lavoro. Sicurezza, comfort e resistenza sono i criteri che ho considerato.",
         song: "Midnight City - M83",
@@ -336,7 +337,7 @@ const NicheDatabase = {
     "sostenibilita-eco-friendly": {
         name: "Sostenibilità & Eco-Friendly",
         tags: ["sostenibilità", "eco", "ambiente", "riciclo", "ecologico", "green", "biologico", "organico", "naturale", "plastic", "free", "zero", "waste", "compostabile", "biodegradabile", "riciclato", "riciclabile", "energia", "solare", "pannelli", "solari", "eolico", "turbina", "idrico", "acqua", "risparmio", "energetico", "led", "lampadina", "batteria", "ricaricabile", "powerbank", "solare", "borsa", "tessile", "canna", "acqua", "bottiglia", "vetro", "acciaio", "inox", "bamboo", "bambù", "corteccia", "betulla", "canapa", "lino", "cotone", "organico", "fair", "trade", "equo", "solidale", "locale", "km", "zero", "slow", "food"],
-        url: "sostenibilita-eco-friendly/index.html",
+        url: "/sostenibilita-eco-friendly/index.html",
         personality: "eco",
         valueProp: "Ho selezionato i prodotti più sostenibili per ridurre il tuo impatto ambientale.",
         song: "Earth Song - Michael Jackson",
@@ -347,7 +348,7 @@ const NicheDatabase = {
     "ufficio-produttivo": {
         name: "Ufficio Produttivo",
         tags: ["ufficio", "scrivania", "sedia", "ufficio", "stampante", "organizzatore", "cassetto", "porta", "documenti", "raccoglitore", "cartella", "busta", "penna", "matita", "evidenziatore", "correttore", "gomma", "righello", "forbice", "taglierino", "calcolatrice", "agenda", "diario", "calendario", "planner", "organizer", "blocco", "notes", "post", "it", "adesivi", "nastro", "scotch", "rilegatrice", "foratrice", "tagliacarte", "laminatrice", "spillatrice", "cucitrice", "punti", "metal", "fermacampioni", "portapenne", "portamouse", "tappetino", "mouse", "supporto", "monitor", "braccio", "monitor", "lampada", "scrivania", "lettore", "cd", "dvd", "masterizzatore", "esterno", "hard", "disk", "nas", "server"],
-        url: "ufficio-produttivo/index.html",
+        url: "/ufficio-produttivo/index.html",
         personality: "professional",
         valueProp: "Ho selezionato i prodotti migliori per aumentare la tua produttività in ufficio.",
         song: "9 to 5 - Dolly Parton",
@@ -358,7 +359,7 @@ const NicheDatabase = {
     "viaggi-vacanze": {
         name: "Viaggi & Vacanze",
         tags: ["viaggi", "vacanze", "valigia", "zaino", "trolley", "borsetta", "borsa", "viaggio", "adattatore", "spina", "corrente", "cuscino", "viaggio", "mascherina", "sonno", "occhiali", "sonno", "tappo", "orecchio", "kit", "pronto", "soccorso", "assicurazione", "viaggio", "guida", "turistica", "mappa", "gps", "navigatore"],
-        url: "viaggi-vacanze/index.html",
+        url: "/viaggi-vacanze/index.html",
         personality: "travel",
         valueProp: "Ho selezionato i migliori accessori per i tuoi viaggi e vacanze.",
         song: "On the Road Again - Willie Nelson",
@@ -369,7 +370,7 @@ const NicheDatabase = {
     "fotografia-mobile": {
         name: "Fotografia Mobile",
         tags: ["fotografia", "mobile", "fotocamera", "camera", "smartphone", "foto", "video", "lente", "obiettivo", "treppiede", "selfie", "stick", "gimbal", "stabilizzatore", "microfono", "esterno", "light", "ring", "flash", "kit", "fotografia"],
-        url: "fotografia-mobile/index.html",
+        url: "/fotografia-mobile/index.html",
         personality: "creative",
         valueProp: "Ho selezionato i migliori prodotti per migliorare la tua fotografia mobile.",
         song: "Photograph - Ed Sheeran",
@@ -380,7 +381,7 @@ const NicheDatabase = {
     "dvd-bluray": {
         name: "DVD & Blu-ray",
         tags: ["dvd", "bluray", "film", "serie", "tv", "collezione", "box", "set", "4k", "ultra", "hd"],
-        url: "dvd-bluray/index.html",
+        url: "/dvd-bluray/index.html",
         personality: "entertainment",
         valueProp: "Ho selezionato i migliori film e serie TV per la tua collezione.",
         song: "Video Killed the Radio Star - The Buggles",
@@ -389,6 +390,220 @@ const NicheDatabase = {
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     }
 };
+
+// ContextDatabase - Combos per il bot di urgenza
+const ContextDatabase = {
+    "mare": {
+        name: "Mare & Spiaggia",
+        triggerKeywords: ["mare", "spiaggia", "ombrellone", "telo", "sole", "acqua", "estivo", "estates"],
+        combos: [
+            {
+                product1: {
+                    name: "Joy Summer Ombrellone Spiaggia Cabina Ø 200 BLU",
+                    link: "https://www.amazon.it/Joy-Summer-Ombrellone-Spiaggia-Cabina/dp/B00W1KAQWY?&linkCode=ll2&tag=l0c39-21&linkId=94666e812e9a7fa1ccb012eb0fd999cc&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Una giornata di sole fantastica, vero? 🌊 Per goderti il mare senza pensieri, ho unito l'ombrellone perfetto alla Coca-Cola Zero: è la combo ideale per restare idratato sotto il sole senza dover correre al bar. Comoda, pratica e pensata per il tuo relax."
+            }
+        ]
+    },
+    "pc": {
+        name: "PC & Gaming",
+        triggerKeywords: ["pc", "computer", "gaming", "lavoro", "studio", "ufficio", "monitor", "cuffie", "mouse", "tastiera"],
+        combos: [
+            {
+                product1: {
+                    name: "HyperX Cloud Cuffie Gaming",
+                    link: "https://www.amazon.it/HyperX-Cloud-Cuffie-Gaming-Mobile/dp/B00SAYCVTQ?mcid=c659dba90f523f5ca09a82b25c56a3e6&hvadid=700813659493&hvpos=&hvnetw=g&hvrand=12981572348516290815&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-381707145357&hvocijid=12981572348516290815-B00SAYCXWG-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=4e8af65a5e14abb66fa2f74389a0d44c&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Lavorare al meglio significa prendersi cura della propria concentrazione. 🔥 Ho selezionato per te le cuffie HyperX Cloud insieme alla Coca-Cola Zero: l'energia giusta per affrontare la sessione di lavoro senza cali di tensione. Ecco la combo ideale per chi non scende a compromessi."
+            }
+        ]
+    },
+    "outdoor": {
+        name: "Outdoor & Camping",
+        triggerKeywords: ["outdoor", "campeggio", "tend", "zaino", "escursione", "avventura", "natura", "barbecue", "bbq"],
+        combos: [
+            {
+                product1: {
+                    name: "Brunner Tenda adatta Camping 3000",
+                    link: "https://www.amazon.it/Brunner-Tenda-adatta-Camping-3000/dp/B07NZSV33G?pd_rd_w=SrERZ&content-id=amzn1.sym.424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_p=424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_r=GGEPG1FNR1KN3JY8PSWJ&pd_rd_wg=I3y7l&pd_rd_r=22330237-b6e0-4094-8318-91b0a5a9328f&pd_rd_i=B07NZSV33G&linkCode=ll2&tag=l0c39-21&linkId=e8c40ee5fe6fd040865a21fd39e20126&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "La natura chiama! 🌲 Se stai pianificando la tua prossima scampagnata, non farti trovare impreparato. Ho preparato questa combo speciale con la tenda Brunner e la Coca-Cola Zero: tutto quello che ti serve per gestire energia e mobilità in un unico ordine. Vivi l'avventura senza pensieri."
+            }
+        ]
+    },
+    "caldo": {
+        name: "Caldo & Rinfrescamento",
+        triggerKeywords: ["caldo", "calore", "estate", "rinfrescante", "ventilatore", "condizionatore", "clima", "temperature"],
+        combos: [
+            {
+                product1: {
+                    name: "Condizionatore Portatile 3-in-1",
+                    link: "https://www.amazon.it/dp/B0D3PP64JS?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=HPJ8v9XaEK&linkCode=ll2&tag=l0c39-21&linkId=9f8aac727b8af31fe8eb8ae08e38ba65&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Il caldo è arrivato! ❄️ Ho selezionato per te il condizionatore portatile 3-in-1 insieme alla Coca-Cola Zero: la combo perfetta per affrontare le temperature più alte con freschezza e idratazione. Non lasciare che il caldo ti fermi!"
+            }
+        ]
+    }
+};
+
+// Funzione per rilevare il contesto dell'utente
+function getContesto() {
+    const currentPath = window.location.pathname;
+    const currentUrl = window.location.href.toLowerCase();
+    
+    // Controlla se siamo in una pagina specifica
+    if (currentPath.includes('mare-spiaggia') || currentUrl.includes('mare') || currentUrl.includes('spiaggia')) {
+        return 'mare';
+    }
+    if (currentPath.includes('elite-gaming-gear') || currentPath.includes('tech') || currentUrl.includes('pc') || currentUrl.includes('gaming')) {
+        return 'pc';
+    }
+    if (currentPath.includes('outdoor-camping') || currentUrl.includes('outdoor') || currentUrl.includes('campeggio')) {
+        return 'outdoor';
+    }
+    if (currentPath.includes('cucina-elettrodomestici') || currentUrl.includes('condizionatore') || currentUrl.includes('ventilatore')) {
+        return 'caldo';
+    }
+    
+    // Default: homepage o contesto non identificato
+    return null;
+}
+
+// Funzione per mostrare il messaggio di urgenza con combo
+function showUrgencyComboMessage(context) {
+    console.log('showUrgencyComboMessage called with context:', context);
+    
+    const contextData = ContextDatabase[context];
+    console.log('ContextDatabase data:', contextData);
+    
+    if (!contextData || !contextData.combos || contextData.combos.length === 0) {
+        console.error('No combo data found for context:', context);
+        return;
+    }
+    
+    const combo = contextData.combos[0]; // Prendi la prima combo per ora
+    console.log('Combo to show:', combo);
+    
+    const message = `
+        <div class="urgency-combo-message">
+            <p style="margin-bottom: 12px; font-size: 15px; line-height: 1.5;">${combo.message}</p>
+            <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px solid #dee2e6;">
+                <div style="margin-bottom: 12px;">
+                    <strong>📦 Combo Premium:</strong>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <a href="${combo.product1.link}" target="_blank" onclick="trackComboClick('${context}', 1)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da; margin-bottom: 8px;">
+                        1. ${combo.product1.name}
+                    </a>
+                    <a href="${combo.product2.link}" target="_blank" onclick="trackComboClick('${context}', 2)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da;">
+                        2. ${combo.product2.name}
+                    </a>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    console.log('Calling addMessage with combo message');
+    addMessage(message, 'bot');
+}
+
+// Funzione per tracciare i click sulle combos
+function trackComboClick(context, productNumber) {
+    if (!userPreferences.comboClicks) {
+        userPreferences.comboClicks = {};
+    }
+    if (!userPreferences.comboClicks[context]) {
+        userPreferences.comboClicks[context] = { product1: 0, product2: 0 };
+    }
+    userPreferences.comboClicks[context][`product${productNumber}`]++;
+    saveUserPreferences();
+    console.log(`Combo click tracked: ${context} - product ${productNumber}`);
+}
+
+// Funzione per avviare il timer di urgenza (70-120 minuti)
+function startUrgencyTimer() {
+    // Controlla se il timer è già stato avviato in questa sessione
+    const urgencyShown = sessionStorage.getItem('urgencyComboShown');
+    if (urgencyShown === 'true') {
+        return;
+    }
+    
+    // Controlla se il timer è già stato avviato
+    if (urgencyTimerStarted) {
+        return;
+    }
+    
+    urgencyTimerStarted = true;
+    
+    // Calcola tempo casuale tra 70 e 120 minuti (in millisecondi)
+    const minTime = 70 * 60 * 1000; // 70 minuti
+    const maxTime = 120 * 60 * 1000; // 120 minuti
+    const randomTime = Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
+    
+    console.log(`Urgency timer set for ${randomTime / 60000} minutes`);
+    
+    setTimeout(() => {
+        const context = getContesto();
+        if (context && ContextDatabase[context]) {
+            // Apri il chat se non è aperto
+            if (!chatOpen) {
+                toggleChat();
+            }
+            
+            // Pulisci il chat e mostra il messaggio di combo
+            setTimeout(() => {
+                const chatMessages = document.getElementById('chat-messages');
+                if (chatMessages) {
+                    chatMessages.innerHTML = ''; // Pulisci tutti i messaggi
+                }
+                showUrgencyComboMessage(context);
+                sessionStorage.setItem('urgencyComboShown', 'true');
+            }, 1500);
+        }
+    }, randomTime);
+}
+
+// Funzione di test per attivare immediatamente il messaggio di combo
+function testUrgencyCombo() {
+    console.log('Testing urgency combo...');
+    const context = getContesto();
+    
+    // Se non viene rilevato un contesto, usa 'mare' come default per il test
+    const testContext = context || 'mare';
+    
+    console.log(`Test context: ${testContext}`);
+    
+    // Apri il chat se non è aperto
+    if (!chatOpen) {
+        toggleChat();
+    }
+    
+    // Pulisci il chat e mostra il messaggio di combo
+    setTimeout(() => {
+        const chatMessages = document.getElementById('chat-messages');
+        if (chatMessages) {
+            chatMessages.innerHTML = ''; // Pulisci tutti i messaggi
+        }
+        showUrgencyComboMessage(testContext);
+    }, 1500);
+}
 
 // Proactive message bubble
 let proactiveBubble = null;
@@ -463,11 +678,12 @@ function startSalesTimers() {
         return;
     }
     
-    // Se siamo in una nicchia, nascondi bottone e mostra dopo 1 minuto
-    const chatButton = document.getElementById('ai-chat-button');
-    if (chatButton) {
-        chatButton.style.display = 'none';
-    }
+    // NOTA: Non nascondiamo più il pulsante nelle nicchie per permettere le combos di urgenza
+    // Il pulsante deve essere sempre visibile
+    // const chatButton = document.getElementById('ai-chat-button');
+    // if (chatButton) {
+    //     chatButton.style.display = 'none';
+    // }
     
     // Minuto 1: Fase di Ingaggio - Apri chat automaticamente nelle nicchie
     engagementTimer = setTimeout(() => {
@@ -1698,6 +1914,11 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         startSalesTimers();
     }, 1000);
+    
+    // Start urgency timer for combos (Fase 2)
+    setTimeout(() => {
+        startUrgencyTimer();
+    }, 2000);
     
     // Add scroll detection
     window.addEventListener('scroll', detectScroll);

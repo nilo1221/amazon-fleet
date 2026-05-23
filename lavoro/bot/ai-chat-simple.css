@@ -27,6 +27,9 @@
     --bot-bg-as-it-was: linear-gradient(135deg, #ffb6c1 0%, #ffd700 50%, #87ceeb 100%);
     --bot-bg-midnight-city: linear-gradient(135deg, #1a0b2e 0%, #00ffff 50%, #ff00ff 100%);
     
+    /* Premium theme: Blu Notte e Ambra */
+    --bot-bg-premium: linear-gradient(135deg, #0a0a2e 0%, #1a1a4e 50%, #FFA500 100%);
+    
     --bot-current-bg: var(--bot-bg-default);
 }
 
@@ -44,7 +47,7 @@
     right: 30px;
     width: 60px;
     height: 60px;
-    background: transparent;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -53,6 +56,7 @@
     transition: all 0.3s ease;
     z-index: 9999;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 #ai-chat-button:hover {
