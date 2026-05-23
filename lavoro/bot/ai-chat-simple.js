@@ -1606,9 +1606,22 @@ function addCategoryLink(category) {
     const chatMessages = document.getElementById('chat-messages');
     if (!chatMessages || !category) return;
     
+    // Calculate relative path based on current location
+    const currentPath = window.location.pathname;
+    const depth = (currentPath.match(/\//g) || []).length - 1; // Count slashes, minus 1 for root
+    let relativePath = '';
+    
+    // If we're in a subdirectory, add ../ for each level
+    for (let i = 0; i < depth; i++) {
+        relativePath += '../';
+    }
+    
+    // Remove leading / from category.url and prepend relative path
+    const finalUrl = relativePath + category.url.replace(/^\//, '');
+    
     const linkDiv = document.createElement('div');
     linkDiv.className = 'chat-message bot';
-    linkDiv.innerHTML = `<a href="${category.url}" class="category-link">👉 Vedi tutti i prodotti ${category.name}</a>`;
+    linkDiv.innerHTML = `<a href="${finalUrl}" class="category-link">👉 Vedi tutti i prodotti ${category.name}</a>`;
     chatMessages.appendChild(linkDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
