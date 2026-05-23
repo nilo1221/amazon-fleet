@@ -463,6 +463,59 @@ const ContextDatabase = {
     }
 };
 
+// catalogoProdotti - Archivio prodotti per consigli attivi del bot
+// Questo catalogo contiene i prodotti che il bot consiglia attivamente in base al contesto
+// product-catalogs/*.json rimane per i prodotti mostrati nelle pagine
+const catalogoProdotti = {
+    "ombrellone_mare": {
+        nome: "Joy Summer Ombrellone Spiaggia Cabina Ø 200 BLU",
+        categoria: "mare",
+        descrizione: "Ombrellone cabina perfetto per il mare, ti protegge dal sole con stile.",
+        link: "https://www.amazon.it/Joy-Summer-Ombrellone-Spiaggia-Cabina/dp/B00W1KAQWY?&linkCode=ll2&tag=l0c39-21&linkId=94666e812e9a7fa1ccb012eb0fd999cc&ref=_as_li_ss_tl",
+        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio stare all'ombra senza problemi. Io uso questo ombrellone e mi trovo benissimo. Se ti va te lo passo:"
+    },
+    "coca_cola_zero": {
+        nome: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+        categoria: ["mare", "pc", "outdoor", "caldo"],
+        descrizione: "Rinfrescante senza zuccheri, perfetta per idratarsi in ogni situazione.",
+        link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl",
+        messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Coca-Cola Zero per rinfrescarmi, se le vuoi ti do il link."
+    },
+    "cuffie_hyperx": {
+        nome: "HyperX Cloud Cuffie Gaming",
+        categoria: "pc",
+        descrizione: "Cuffie gaming comode con audio cristallino, perfette per lunghe sessioni.",
+        link: "https://www.amazon.it/HyperX-Cloud-Cuffie-Gaming-Mobile/dp/B00SAYCVTQ?mcid=c659dba90f523f5ca09a82b25c56a3e6&hvadid=700813659493&hvpos=&hvnetw=g&hvrand=12981572348516290815&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-381707145357&hvocijid=12981572348516290815-B00SAYCXWG-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=4e8af65a5e14abb66fa2f74389a0d44c&ref=_as_li_ss_tl",
+        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma io odio fermarmi a cercare bar o macchinette quando sono in concentrazione. Per questo mi porto dietro le cuffie HyperX Cloud: con queste ho risolto il problema concentrazione. Se ti va te le lascio qui:"
+    },
+    "tenda_camping": {
+        nome: "Brunner Tenda adatta Camping 3000",
+        categoria: "outdoor",
+        descrizione: "Tenda robusta per il campeggio, resiste a ogni avventura.",
+        link: "https://www.amazon.it/Brunner-Tenda-adatta-Camping-3000/dp/B07NZSV33G?pd_rd_w=SrERZ&content-id=amzn1.sym.424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_p=424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_r=GGEPG1FNR1KN3JY8PSWJ&pd_rd_wg=I3y7l&pd_rd_r=22330237-b6e0-4094-8318-91b0a5a9328f&pd_rd_i=B07NZSV33G&linkCode=ll2&tag=l0c39-21&linkId=e8c40ee5fe6fd040865a21fd39e20126&ref=_as_li_ss_tl",
+        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio avere tutto pronto. Io uso questa tenda Brunner e mi trovo benissimo. Se ti va te la lascio qui:"
+    },
+    "condizionatore_portatile": {
+        nome: "Condizionatore Portatile 3-in-1",
+        categoria: "caldo",
+        descrizione: "Condizionatore portatile 3-in-1 con raffreddamento, ventilatore e umidificatore.",
+        link: "https://www.amazon.it/dp/B0D3PP64JS?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=HPJ8v9XaEK&linkCode=ll2&tag=l0c39-21&linkId=9f8aac727b8af31fe8eb8ae08e38ba65&ref=_as_li_ss_tl",
+        messaggio: "Che giornata calda! ❄️ Non so tu, ma io odio sudare quando è così caldo. Per questo uso il condizionatore portatile 3-in-1: con questo ho risolto il problema temperatura. Se ti va te lo lascio qui, è una vera salvezza in questi giorni."
+    }
+};
+
+// Funzione per ottenere prodotti dal catalogo in base alla categoria
+function getProdottiByCategoria(categoria) {
+    const prodotti = [];
+    for (const [id, prodotto] of Object.entries(catalogoProdotti)) {
+        const categorieProdotto = Array.isArray(prodotto.categoria) ? prodotto.categoria : [prodotto.categoria];
+        if (categorieProdotto.includes(categoria)) {
+            prodotti.push({ id, ...prodotto });
+        }
+    }
+    return prodotti;
+}
+
 // Funzione per rilevare il contesto dell'utente
 function getContesto() {
     const currentPath = window.location.pathname;
@@ -490,30 +543,29 @@ function getContesto() {
 function showUrgencyComboMessage(context) {
     console.log('showUrgencyComboMessage called with context:', context);
     
-    const contextData = ContextDatabase[context];
-    console.log('ContextDatabase data:', contextData);
+    // Usa catalogoProdotti invece di ContextDatabase
+    const prodotti = getProdottiByCategoria(context);
+    console.log('Prodotti trovati per categoria', context, ':', prodotti);
     
-    if (!contextData || !contextData.combos || contextData.combos.length === 0) {
-        console.error('No combo data found for context:', context);
+    if (!prodotti || prodotti.length === 0) {
+        console.error('No products found for context:', context);
         return;
     }
     
-    const combo = contextData.combos[0]; // Prendi la prima combo per ora
-    console.log('Combo to show:', combo);
+    // Prendi il primo prodotto come principale
+    const prodottoPrincipale = prodotti[0];
+    console.log('Prodotto principale:', prodottoPrincipale);
     
     const message = `
         <div class="urgency-combo-message">
-            <p style="margin-bottom: 12px; font-size: 15px; line-height: 1.5;">${combo.message}</p>
+            <p style="margin-bottom: 12px; font-size: 15px; line-height: 1.5;">${prodottoPrincipale.messaggio}</p>
             <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px solid #dee2e6;">
                 <div style="margin-bottom: 12px;">
-                    <strong>📦 Combo Premium:</strong>
+                    <strong>📦 Prodotto consigliato:</strong>
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <a href="${combo.product1.link}" target="_blank" onclick="trackComboClick('${context}', 1)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da; margin-bottom: 8px;">
-                        1. ${combo.product1.name}
-                    </a>
-                    <a href="${combo.product2.link}" target="_blank" onclick="trackComboClick('${context}', 2)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da;">
-                        2. ${combo.product2.name}
+                    <a href="${prodottoPrincipale.link}" target="_blank" onclick="trackComboClick('${context}', 1)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da;">
+                        ${prodottoPrincipale.nome}
                     </a>
                 </div>
             </div>
@@ -561,7 +613,8 @@ function startUrgencyTimer() {
     
     setTimeout(() => {
         const context = getContesto();
-        if (context && ContextDatabase[context]) {
+        const prodotti = getProdottiByCategoria(context);
+        if (context && prodotti && prodotti.length > 0) {
             // Apri il chat se non è aperto
             if (!chatOpen) {
                 toggleChat();
