@@ -203,10 +203,10 @@ const NicheDatabase = {
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         topProducts: [
             {
-                name: "Coca-Cola Original Taste - 6 Bottiglie da 1.5L",
-                description: "Cassa convenienza con 6 bottiglie da 1.5 litri - Il gusto classico in formato famiglia",
-                icon: "fa-box",
-                link: "https://www.amazon.it/Coca-Cola-Scorta-Convenienza-omaggio-PET/dp/B00Y8BXVD0?th=1&linkCode=ll2&tag=l0c39-21&linkId=900d0c4f0a41e0c88dd53b3b5be61854&ref=_as_li_ss_tl"
+                name: "Kinley Tonic Water - 24 Bottiglie Vetro da 200 ml",
+                description: "Acqua tonica premium con note di limone, lime e lemongrass - 24 bottiglie vetro per mixology",
+                icon: "fa-glass-martini",
+                link: "https://www.amazon.it/dp/B08CVSCZ82?aref=3toTxiHbHG&aaxitk=2390785a166ecaf4dff8b69645a443fa&pd_rd_plhdr=t&th=1&linkCode=ll2&tag=l0c39-21&linkId=5919496244367507f5ce325cbeb97ecd&ref=_as_li_ss_tl"
             },
             {
                 name: "Red Bull Energy Drink - Cartone Lattine",
