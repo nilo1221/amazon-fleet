@@ -146,6 +146,14 @@ const NicheDatabase = {
         songLink: "https://www.youtube.com/watch?v=Erd49aFS55g",
         songLinkSpotify: "https://open.spotify.com/track/0xCpEzvbWCvn1peuUaNv7p",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
+        topProducts: [
+            {
+                name: "ANRAN 5MP FHD Videocamera Sorveglianza Esterno",
+                description: "Videocamera di sorveglianza senza fili con pannello solare e visione notturna a colori",
+                icon: "fa-video",
+                link: "https://www.amazon.it/ANRAN-Videocamera-Sorveglianza-Intelligenti-Compatibilit%C3%A0/dp/B0C7VGQ3YW?dib=eyJ2IjoiMSJ9.1DUtNeB5dKg1MFjjbicm4Genxymh0OwyTHq69p2-7PfVknts_EmuJFw7YYROSpVfhV3S5EgXnLLAn4ayZTIg-0UzszZuVWVg31XBuHtxCfBaVlBBc0CZjPIy_JBk0i_E2SVgPIN7eeklQFVuq0qqhe_E8NjWtz-wHMrzMUDgK5f10TDTQ8wJT7kvh2I6X_Zc3pCwV6sNC6phPDbcKM3fKy-w7IEfdJH0nYHhmiRrg_VMM8zPndZha4pmNN-fIrcawVITY_wK_2gxDw9InrfANhZZuCZZ3gCN7-1wwPsVZ3g.m4DTWSrxaL_8GV7uyixPw-WjHQcOH3a7OzWzmJ1cOq4&dib_tag=se&keywords=telecamera%2Bsicurezza%2Bpannello%2Bsolare&qid=1779588652&sr=8-1-spons&aref=zZdHsKk8ct&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=fd1c29cb470679df5eeedc3e8aa0f0ff&ref=_as_li_ss_tl"
+            }
+        ]
     },
     "fitness-casa": {
         name: "Fitness Casa",
@@ -179,6 +187,14 @@ const NicheDatabase = {
         songLink: "https://www.youtube.com/watch?v=Qkuu0Lwb5EM",
         songLinkSpotify: "https://open.spotify.com/track/1H5tvpoApNDxvxDexoaAUo",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
+        topProducts: [
+            {
+                name: "Furbo Mini Videocamera + Pacchetto Sicurezza Casa",
+                description: "Videocamera intelligente con visione notturna a colori e audio a due vie",
+                icon: "fa-video",
+                link: "https://www.amazon.it/Furbo-Videocamera-Pacchetto-Sicurezza-ABBONAMENTO/dp/B0CTKXQNPX?dib=eyJ2IjoiMSJ9.Gk2kpCjiWG0_Ucds2IowQnNhVjUE088sj3J0k5Sv5CDbazBy7_tQa30-9h09fLMCOITyU0KOeBd7ia_6T5AczMQYgOcQ-PkjsZANeD7DEy5-ilz9f8HY2LubVJZ7gmWqEudtXsZFil32JCUOPyNEL0Z-fZPr5MY6P2T9j_fgxM6fSg9YVPCDfbOHF7i1Gd0rjdigGzkshK1enCbB6vNB_HwUUK0qkI2coK3sXIz3i0pGmeK6nJb_T5OeE-xxfLvgevOxuxANded0-cm0GltgP4c5g52ojijDD0y-Mqo9-74.k7v8wBq2u7wpSD5VPS7ybdIHxqaM5o9ZVPSryRjlUa0&dib_tag=se&keywords=videocamera%2Bgatti%2Bcane&qid=1779588573&sr=8-5-spons&aref=GGf8pUZJR4&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=98aa9371f60229eab0df58596f2b631c&ref=_as_li_ss_tl"
+            }
+        ]
     },
     "cinema-tv": {
         name: "Cinema & TV",
@@ -205,6 +221,18 @@ const NicheDatabase = {
             {
                 name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
                 description: "Bevanda isotonica con carboidrati ed elettroliti - Ideale per sportivi e montagna",
+            {
+                name: "ALPRO SENZA ZUCCHERI, Bevanda alla MANDORLA",
+                description: "Alternativa vegetale al latte senza zuccheri con vitamine B2, B12, D2, E",
+                icon: "fa-leaf",
+                link: "https://www.amazon.it/ZUCCHERI-MANDORLA-vegetale-vitamine-confezioni/dp/B0DTYZX9NJ?psc=1&linkCode=ll2&tag=l0c39-21&linkId=06cd1283271cb70c174cc9964578baa7&ref=_as_li_ss_tl"
+            },
+            {
+                name: "AMACX Turbo Energy Gel per Atleti di Resistenza",
+                description: "Gel energetico con caffeina e 40g di carboidrati per sport di resistenza",
+                icon: "fa-running",
+                link: "https://www.amazon.it/dp/B0C9R21RSR?ie=UTF8&pd_rd_plhdr=t&aref=g0wHB7AZJ6&th=1&linkCode=ll2&tag=l0c39-21&linkId=bd15f3474e308a5e387baacb32264287&ref=_as_li_ss_tl"
+            }
                 icon: "fa-running",
                 link: "https://www.amazon.it/dp/B00Y8D9P6K?pd_rd_i=B00Y8D9P6K&pd_rd_w=hD6VB&content-id=amzn1.sym.1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_p=1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_r=Z6CWD9336NKK428RK0M9&pd_rd_wg=KZQgL&pd_rd_r=abccc0cc-88f2-4383-986f-4d5f7ccb08ea&aref=hfNoBhuot5&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
             },
@@ -257,6 +285,14 @@ const NicheDatabase = {
     },
     "outdoor-camping": {
         name: "Outdoor & Camping",
+        topProducts: [
+            {
+                name: "Outsunny Tenda da Campeggio per 5 Persone",
+                description: "Tenda famigliare a tunnel impermeabile con 2 stanze separate e veranda",
+                icon: "fa-campground",
+                link: "https://www.amazon.it/Outsunny-Campeggio-Famigliare-Impermeabile-Trasporto/dp/B0F29BC3LJ?dib=eyJ2IjoiMSJ9.ulozInvSluYgmjL7E4H17-nAjJHzYRjROTEnqlFpGL9rcTv1HvBYllPgdkIOoBc-SXEeDIUidIWqJE4AeJTHcZ5kpcfb-CbXWSuWBnlEGux0SYwJl5CN6KjwbGkcf5LYtfkWYLYhp-VRNrNS39zryi-GS8GUlm9wertELzYFRsAg71Q6fOgEh7TBpUI6u8QHOJUlu2meJDnywkKi1X5bXBNiXNAhAwJKJ9bqCG3l-8t4IkuYs_y0pQC-xviQ1KLrXxRPf2HuWEFd42TvQJZTycFqjyjdOxHq0ZCX6PoU80I.EZDBto_kC4Hujwih7D6p-5SlIOd0DLRboEy_uZX_9X0&dib_tag=se&keywords=tenda%2Btunnel%2Bcampeggio%2Bpremium&qid=1779588392&sr=8-7&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&th=1&linkCode=ll2&tag=l0c39-21&linkId=b50732e0036a8492066b30d1254d5733&ref=_as_li_ss_tl"
+            }
+        ]
         tags: ["outdoor", "campeggio", "tenda", "montagna", "freddo", "sacco", "pelo", "sleeping", "bag", "lanterna", "torcia", "frontale", "bussola", "gps", "navigatore", "mappe", "kit", "sopravvivenza", "coltello", "multitool", "cucina", "campeggio", "pentole", "portatili", "stoviglie", "posate", "bicchieri", "bottiglia", "thermos", "borsa", "frigo", "cooler", "box", "ice", "sedia", "pieghevole", "tavolo", "pieghevole", "hammock", "amaca", "mosquito", "net", "zanzariera", "poncho", "impermeabile", "giacca", "antivento", "kway", "scarpe", "trekking", "stivali", "bastoncini", "crampon", "piccone", "corda", "imbracatura", "carabiner", "moschettone", "rampicata", "arrampicata"],
         url: "/outdoor-camping/index.html",
         personality: "adventure",
@@ -397,6 +433,14 @@ const NicheDatabase = {
         songLink: "https://www.youtube.com/watch?v=dvdJ1OfJ33o",
         songLinkSpotify: "https://open.spotify.com/track/2GyH5rvdnfkjzsTFaWrrov",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
+        topProducts: [
+            {
+                name: "Valigia + Zaino Bagaglio a Mano Rigida 55x24x33",
+                description: "Set completo valigia rigida + zaino con USB-C ricarica e supporto smartphone",
+                icon: "fa-suitcase-rolling",
+                link: "https://www.amazon.it/Bagaglio-55x24x33-Lucchetto-Borraccia-Smartphone/dp/B0GXZG4X6Y?&linkCode=ll2&tag=l0c39-21&linkId=9e2aa91a1c8d3bcbaef8d22ed1555743&ref=_as_li_ss_tl"
+            }
+        ]
     },
     "fotografia-mobile": {
         name: "Fotografia Mobile",
@@ -408,6 +452,14 @@ const NicheDatabase = {
         songLink: "https://www.youtube.com/watch?v=nSDgHBxUbVQ",
         songLinkSpotify: "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
+        topProducts: [
+            {
+                name: "Obiettivo Macro Evil Eye Con Luce Di Riempimento",
+                description: "Lente macro professionale con luce di riempimento integrata per smartphone",
+                icon: "fa-camera",
+                link: "https://www.amazon.it/Evil-Riempimento-Smartphone-Professionale-HB100U/dp/B0FGDCC3T6?dib=eyJ2IjoiMSJ9.tSOJNnarIf8aiWBIYE09tkBO-ZyfEhf3FwHomH1WQ94p1_klYId3eto_BTlh2AnA6DFkI_jb2UdbBcjTH5dIYwX9_ux85T3xoPf3mAMw59DbZIKr-rf-EkAJI-bWRTPPMHO3hPKYPBDWEZa5O66019nGSYko8bRXlAleIUM2VyYwuA7jTDZisaNeuC58HhY8k7FPKZMxRuOS3CwaaXzUXbI0pgy4OpokPnoiA0adSKZJFtFzXjrPFrFtWcgNiKot_Yw1Kd2R0YAYM0i2hLZqpxAWGemo-e1cwbtMY-kFe-w.JXTQM30lH9wi0aM5-6FmOrAxtZWn5ekOQuXjdinmEwY&dib_tag=se&keywords=lente+macro+smartphone&qid=1779588926&sr=8-3-spons&aref=ynynWAvq12&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=32b53ec2d46d82783e04960af02a2a11&ref=_as_li_ss_tl"
+            }
+        ]
     },
     "dvd-bluray": {
         name: "DVD & Blu-ray",
