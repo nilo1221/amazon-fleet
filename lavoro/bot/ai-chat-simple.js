@@ -1702,6 +1702,9 @@ function detectScroll() {
 // Detect scroll to trigger combo message at 50%
 let comboTimerStarted = false;
 let comboInterval = null;
+let nicheIndex = 0;
+let lastShownProducts = [];
+const allNiches = ['mare', 'pc', 'outdoor', 'caldo', 'fitness', 'smart-home', 'pet-care', 'cinema', 'smartphone', 'tech', 'moda-donna', 'moda-uomo', 'arredamento', 'accessori', 'benessere', 'giochi', 'libri', 'profumi', 'lavoro', 'sostenibilita', 'ufficio', 'viaggi', 'fotografia', 'dvd'];
 
 function detectComboScroll() {
     if (comboTimerStarted) return;
@@ -1724,12 +1727,9 @@ function detectComboScroll() {
 }
 
 function showComboMessage() {
-    let context = getContesto();
-    
-    // Fallback: se contesto è null, usa 'mare' come default
-    if (!context) {
-        context = 'mare';
-    }
+    // Usa nicchia ciclica invece del contesto corrente
+    const context = allNiches[nicheIndex % allNiches.length];
+    nicheIndex++; // Incrementa per la prossima volta
     
     let prodotti = getProdottiByCategoria(context);
     
@@ -1738,7 +1738,6 @@ function showComboMessage() {
         const prodottiMare = getProdottiByCategoria('mare');
         if (prodottiMare && prodottiMare.length > 0) {
             prodotti = prodottiMare;
-            context = 'mare';
         } else {
             return;
         }
@@ -1752,9 +1751,21 @@ function showComboMessage() {
         // Se non ci sono prodotti filtrati, usa tutti i prodotti
         const prodottiFinali = prodottiFiltrati.length > 0 ? prodottiFiltrati : prodotti;
         
-        // Seleziona un prodotto a caso (sempre diverso perché random)
-        const indiceCasuale = Math.floor(Math.random() * prodottiFinali.length);
-        const prodottoPrincipale = prodottiFinali[indiceCasuale];
+        // Filtra prodotti per evitare ripetizioni consecutive
+        const prodottiNonRipetuti = prodottiFinali.filter(p => !lastShownProducts.includes(p.id));
+        
+        // Se tutti i prodotti sono stati mostrati recentemente, resetta
+        const prodottiDaUsare = prodottiNonRipetuti.length > 0 ? prodottiNonRipetuti : prodottiFinali;
+        
+        // Seleziona un prodotto a caso
+        const indiceCasuale = Math.floor(Math.random() * prodottiDaUsare.length);
+        const prodottoPrincipale = prodottiDaUsare[indiceCasuale];
+        
+        // Aggiungi ai prodotti mostrati recentemente (max 10)
+        lastShownProducts.push(prodottoPrincipale.id);
+        if (lastShownProducts.length > 10) {
+            lastShownProducts.shift();
+        }
         
         // Seleziona una bibita a caso per la rotazione basata sui tag
         let idBibitaScelta;
