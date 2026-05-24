@@ -1668,6 +1668,7 @@ function detectScroll() {
 // Detect scroll to trigger combo message at 50%
 let comboTimerStarted = false;
 let comboInterval = null;
+let prodottiMostrati = []; // Tieni traccia dei prodotti già mostrati
 
 function detectComboScroll() {
     if (comboTimerStarted) return;
@@ -1697,30 +1698,93 @@ function showComboMessage() {
         context = 'mare';
     }
     
-    const prodotti = getProdottiByCategoria(context);
+    let prodotti = getProdottiByCategoria(context);
     
     // Fallback: se non ci sono prodotti per il contesto, usa prodotti da 'mare'
     if (!prodotti || prodotti.length === 0) {
         const prodottiMare = getProdottiByCategoria('mare');
         if (prodottiMare && prodottiMare.length > 0) {
-            // Apri il chat se non è aperto
-            if (!chatOpen) {
-                toggleChat();
-            }
-            
-            // Pulisci il chat e mostra il messaggio di combo
-            setTimeout(() => {
-                const chatMessages = document.getElementById('chat-messages');
-                if (chatMessages) {
-                    chatMessages.innerHTML = ''; // Pulisci tutti i messaggi
-                }
-                showUrgencyComboMessage('mare');
-            }, 500);
+            prodotti = prodottiMare;
+            context = 'mare';
+        } else {
+            return;
         }
-        return;
     }
     
     if (context && prodotti && prodotti.length > 0) {
+        // Filtra i prodotti escludendo quelli già mostrati
+        const prodottiNonMostrati = prodotti.filter(p => !prodottiMostrati.includes(p.id));
+        
+        // Se tutti i prodotti sono stati mostrati, ricomincia il ciclo
+        if (prodottiNonMostrati.length === 0) {
+            prodottiMostrati = [];
+        }
+        
+        // Seleziona prodotti da mostrare (non mostrati o ricominciato)
+        const prodottiDaUsare = prodottiMostrati.length === 0 ? prodotti : prodottiNonMostrati;
+        
+        // Filtra i prodotti della categoria escludendo le bibite
+        const idBibite = ['coca_cola_zero', 'pepsi_max', 'fanta_original', 'l_angelica_waterstick', 'jamaica_zenzero'];
+        const prodottiFiltrati = prodottiDaUsare.filter(p => !idBibite.includes(p.id));
+        
+        // Se non ci sono prodotti filtrati, usa tutti i prodotti
+        const prodottiFinali = prodottiFiltrati.length > 0 ? prodottiFiltrati : prodottiDaUsare;
+        
+        // Seleziona un prodotto a caso
+        const indiceCasuale = Math.floor(Math.random() * prodottiFinali.length);
+        const prodottoPrincipale = prodottiFinali[indiceCasuale];
+        
+        // Aggiungi ai prodotti mostrati
+        if (!prodottiMostrati.includes(prodottoPrincipale.id)) {
+            prodottiMostrati.push(prodottoPrincipale.id);
+        }
+        
+        // Seleziona una bibita a caso per la rotazione
+        let idBibitaScelta;
+        if (context === 'fitness') {
+            // Per fitness usa solo bevande sportive
+            const idBevandeSportive = ['red_bull', 'enervit_isotonic', 'powerbar_isoactive', 'gomo_energy', 'gatorade_sport'];
+            const indiceBevandaSportiva = Math.floor(Math.random() * idBevandeSportive.length);
+            idBibitaScelta = idBevandeSportive[indiceBevandaSportiva];
+        } else {
+            // Per altri contesti usa le bibite normali
+            const indiceBibita = Math.floor(Math.random() * idBibite.length);
+            idBibitaScelta = idBibite[indiceBibita];
+        }
+        const prodottoAncora = catalogoProdotti[idBibitaScelta];
+        
+        // Controllo di sicurezza: verifica che i prodotti abbiano i nomi definiti
+        if (!prodottoPrincipale || !prodottoPrincipale.nome || !prodottoAncora || !prodottoAncora.nome) {
+            return;
+        }
+        
+        // Prendi il messaggio combo per il contesto
+        const messaggioTemplate = comboMessages[context] || comboMessages['mare'];
+        
+        // Sostituisci i placeholder
+        const messaggioPersonalizzato = messaggioTemplate
+            .replace('{prodottoNicchia}', prodottoPrincipale.nome)
+            .replace('{prodottoAncora}', prodottoAncora.nome);
+        
+        const message = `
+            <div class="urgency-combo-message">
+                <p style="margin-bottom: 12px; font-size: 15px; line-height: 1.5;">${messaggioPersonalizzato}</p>
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px solid #dee2e6;">
+                    <div style="margin-bottom: 12px;">
+                        <strong>📦 Combo consigliata:</strong>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <a href="${prodottoPrincipale.link}" target="_blank" onclick="trackComboClick('${context}', 1)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da; margin-bottom: 8px;">
+                            1. ${prodottoPrincipale.nome}
+                        </a>
+                        <a href="${prodottoAncora.link}" target="_blank" onclick="trackComboClick('${context}', 2)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da;">
+                            2. ${prodottoAncora.nome}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+        
         // Apri il chat se non è aperto
         if (!chatOpen) {
             toggleChat();
@@ -1732,7 +1796,7 @@ function showComboMessage() {
             if (chatMessages) {
                 chatMessages.innerHTML = ''; // Pulisci tutti i messaggi
             }
-            showUrgencyComboMessage(context);
+            addMessage(message, 'bot');
         }, 500);
     }
 }
