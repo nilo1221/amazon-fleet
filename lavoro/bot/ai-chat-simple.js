@@ -1483,12 +1483,29 @@ function getContesto() {
 function showUrgencyComboMessage(context) {
     console.log('showUrgencyComboMessage called with context:', context);
     
+    // Lista di tutte le categorie disponibili nel catalogo
+    const tutteCategorie = ['mare', 'fitness', 'smart-home', 'pet-care', 'cinema', 'smartphone', 'tech', 'moda-donna', 'moda-uomo', 'arredamento', 'accessori', 'benessere', 'giochi', 'libri', 'profumi', 'lavoro', 'outdoor', 'cucina', 'ufficio', 'fotografia', 'viaggi', 'bibite-bevande'];
+    
+    // 80% usa la nicchia corrente, 20% randomizza tra altre nicchie
+    const random = Math.random();
+    let contextDaUsare = context;
+    
+    if (random > 0.8 && context) {
+        // 20% delle volte: seleziona una categoria diversa
+        const altreCategorie = tutteCategorie.filter(cat => cat !== context);
+        if (altreCategorie.length > 0) {
+            const indiceRandom = Math.floor(Math.random() * altreCategorie.length);
+            contextDaUsare = altreCategorie[indiceRandom];
+            console.log('Random categoria selezionata:', contextDaUsare, '(originale:', context, ')');
+        }
+    }
+    
     // Usa catalogoProdotti invece di ContextDatabase
-    const prodotti = getProdottiByCategoria(context);
-    console.log('Prodotti trovati per categoria', context, ':', prodotti);
+    const prodotti = getProdottiByCategoria(contextDaUsare);
+    console.log('Prodotti trovati per categoria', contextDaUsare, ':', prodotti);
     
     if (!prodotti || prodotti.length === 0) {
-        console.error('No products found for context:', context);
+        console.error('No products found for context:', contextDaUsare);
         return;
     }
     
@@ -1966,18 +1983,21 @@ function showComboMessage() {
         context = 'mare';
     }
     
-    // Strategia 80/20: 80% nicchia corrente, 20% nicchie correlate
+    // Lista di tutte le categorie disponibili nel catalogo
+    const tutteCategorie = ['mare', 'fitness', 'smart-home', 'pet-care', 'cinema', 'smartphone', 'tech', 'moda-donna', 'moda-uomo', 'arredamento', 'accessori', 'benessere', 'giochi', 'libri', 'profumi', 'lavoro', 'outdoor', 'cucina', 'ufficio', 'fotografia', 'viaggi', 'bibite-bevande'];
+    
+    // Strategia 80/20: 80% nicchia corrente, 20% random tra tutte le altre nicchie
     const random = Math.random();
     if (random < 0.8) {
         // 80%: usa nicchia corrente
     } else {
-        // 20%: usa nicchia correlata
-        const related = relatedNiches[context] || [];
-        if (related.length > 0) {
-            const randomRelated = related[Math.floor(Math.random() * related.length)];
-            context = randomRelated;
+        // 20%: usa una categoria diversa random
+        const altreCategorie = tutteCategorie.filter(cat => cat !== context);
+        if (altreCategorie.length > 0) {
+            const indiceRandom = Math.floor(Math.random() * altreCategorie.length);
+            context = altreCategorie[indiceRandom];
+            console.log('Random categoria selezionata in showComboMessage:', context, '(originale)');
         }
-        // Se non ci sono nicchie correlate, mantieni quella corrente
     }
     
     let prodotti = getProdottiByCategoria(context);
