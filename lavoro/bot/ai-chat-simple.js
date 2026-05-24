@@ -1483,35 +1483,30 @@ function getContesto() {
 function showUrgencyComboMessage(context) {
     console.log('showUrgencyComboMessage called with context:', context);
     
-    // Lista di tutte le categorie disponibili nel catalogo
-    const tutteCategorie = ['mare', 'fitness', 'smart-home', 'pet-care', 'cinema', 'smartphone', 'tech', 'moda-donna', 'moda-uomo', 'arredamento', 'accessori', 'benessere', 'giochi', 'libri', 'profumi', 'lavoro', 'outdoor', 'cucina', 'ufficio', 'fotografia', 'viaggi', 'bibite-bevande'];
-    
-    // 80% usa la nicchia corrente, 20% randomizza tra altre nicchie
+    // 80% prodotti della nicchia corrente, 20% bibite/bevande
     const random = Math.random();
-    let contextDaUsare = context;
+    let prodotti;
+    let useBibite = false;
     
-    if (random > 0.8 && context) {
-        // 20% delle volte: seleziona una categoria diversa
-        const altreCategorie = tutteCategorie.filter(cat => cat !== context);
-        if (altreCategorie.length > 0) {
-            const indiceRandom = Math.floor(Math.random() * altreCategorie.length);
-            contextDaUsare = altreCategorie[indiceRandom];
-            console.log('Random categoria selezionata:', contextDaUsare, '(originale:', context, ')');
-        }
+    if (random < 0.8) {
+        // 80%: usa prodotti della nicchia corrente
+        prodotti = getProdottiByCategoria(context);
+        console.log('80%: usando prodotti della nicchia', context);
+    } else {
+        // 20%: usa bibite/bevande
+        prodotti = getProdottiByCategoria('bibite-bevande');
+        useBibite = true;
+        console.log('20%: usando bibite/bevande');
     }
     
-    // Usa catalogoProdotti invece di ContextDatabase
-    const prodotti = getProdottiByCategoria(contextDaUsare);
-    console.log('Prodotti trovati per categoria', contextDaUsare, ':', prodotti);
-    
     if (!prodotti || prodotti.length === 0) {
-        console.error('No products found for context:', contextDaUsare);
+        console.error('No products found');
         return;
     }
     
-    // Filtra i prodotti della categoria escludendo le bibite
+    // Se stiamo usando bibite, non filtrare le bibite
     const idBibite = ['coca_cola_zero', 'pepsi_max', 'fanta_original', 'l_angelica_waterstick', 'jamaica_zenzero'];
-    const prodottiFiltrati = prodotti.filter(p => !idBibite.includes(p.id));
+    const prodottiFiltrati = useBibite ? prodotti : prodotti.filter(p => !idBibite.includes(p.id));
     
     // Se non ci sono prodotti filtrati, usa tutti i prodotti
     const prodottiDaUsare = prodottiFiltrati.length > 0 ? prodottiFiltrati : prodotti;
@@ -1521,20 +1516,32 @@ function showUrgencyComboMessage(context) {
     const prodottoPrincipale = prodottiDaUsare[indiceCasuale];
     console.log('Prodotto principale selezionato a caso:', prodottoPrincipale);
     
-    // Seleziona una bibita a caso per la rotazione
-    let idBibitaScelta;
-    if (context === 'fitness') {
-        // Per fitness usa solo bevande sportive
-        const idBevandeSportive = ['red_bull', 'enervit_isotonic', 'powerbar_isoactive', 'gomo_energy', 'gatorade_sport'];
-        const indiceBevandaSportiva = Math.floor(Math.random() * idBevandeSportive.length);
-        idBibitaScelta = idBevandeSportive[indiceBevandaSportiva];
+    // Seleziona il secondo prodotto per la combo
+    let prodottoAncora;
+    if (useBibite) {
+        // Se il principale è bibita, il secondo è della nicchia corrente
+        const prodottiNiche = getProdottiByCategoria(context);
+        const prodottiNicheFiltrati = prodottiNiche.filter(p => !idBibite.includes(p.id));
+        const prodottiNicheDaUsare = prodottiNicheFiltrati.length > 0 ? prodottiNicheFiltrati : prodottiNiche;
+        const indiceNiche = Math.floor(Math.random() * prodottiNicheDaUsare.length);
+        prodottoAncora = prodottiNicheDaUsare[indiceNiche];
+        console.log('Prodotto della nicchia selezionato:', prodottoAncora);
     } else {
-        // Per altri contesti usa le bibite normali
-        const indiceBibita = Math.floor(Math.random() * idBibite.length);
-        idBibitaScelta = idBibite[indiceBibita];
+        // Se il principale è della nicchia, il secondo è bibita
+        let idBibitaScelta;
+        if (context === 'fitness') {
+            // Per fitness usa solo bevande sportive
+            const idBevandeSportive = ['red_bull', 'enervit_isotonic', 'powerbar_isoactive', 'gomo_energy', 'gatorade_sport'];
+            const indiceBevandaSportiva = Math.floor(Math.random() * idBevandeSportive.length);
+            idBibitaScelta = idBevandeSportive[indiceBevandaSportiva];
+        } else {
+            // Per altri contesti usa le bibite normali
+            const indiceBibita = Math.floor(Math.random() * idBibite.length);
+            idBibitaScelta = idBibite[indiceBibita];
+        }
+        prodottoAncora = catalogoProdotti[idBibitaScelta];
+        console.log('Bibita selezionata a caso:', prodottoAncora);
     }
-    const prodottoAncora = catalogoProdotti[idBibitaScelta];
-    console.log('Bibita selezionata a caso:', prodottoAncora);
     
     // Controllo di sicurezza: verifica che i prodotti abbiano i nomi definiti
     if (!prodottoPrincipale || !prodottoPrincipale.nome || !prodottoAncora || !prodottoAncora.nome) {
@@ -1983,40 +1990,38 @@ function showComboMessage() {
         context = 'mare';
     }
     
-    // Lista di tutte le categorie disponibili nel catalogo
-    const tutteCategorie = ['mare', 'fitness', 'smart-home', 'pet-care', 'cinema', 'smartphone', 'tech', 'moda-donna', 'moda-uomo', 'arredamento', 'accessori', 'benessere', 'giochi', 'libri', 'profumi', 'lavoro', 'outdoor', 'cucina', 'ufficio', 'fotografia', 'viaggi', 'bibite-bevande'];
-    
-    // Strategia 80/20: 80% nicchia corrente, 20% random tra tutte le altre nicchie
+    // 80% prodotti della nicchia corrente, 20% bibite/bevande
     const random = Math.random();
+    let prodotti;
+    let useBibite = false;
+    
     if (random < 0.8) {
-        // 80%: usa nicchia corrente
+        // 80%: usa prodotti della nicchia corrente
+        prodotti = getProdottiByCategoria(context);
+        console.log('80%: usando prodotti della nicchia', context);
     } else {
-        // 20%: usa una categoria diversa random
-        const altreCategorie = tutteCategorie.filter(cat => cat !== context);
-        if (altreCategorie.length > 0) {
-            const indiceRandom = Math.floor(Math.random() * altreCategorie.length);
-            context = altreCategorie[indiceRandom];
-            console.log('Random categoria selezionata in showComboMessage:', context, '(originale)');
-        }
+        // 20%: usa bibite/bevande
+        prodotti = getProdottiByCategoria('bibite-bevande');
+        useBibite = true;
+        console.log('20%: usando bibite/bevande');
     }
     
-    let prodotti = getProdottiByCategoria(context);
-    
-    // Fallback: se non ci sono prodotti per il contesto, usa prodotti da 'mare'
+    // Fallback: se non ci sono prodotti, usa prodotti da 'mare'
     if (!prodotti || prodotti.length === 0) {
         const prodottiMare = getProdottiByCategoria('mare');
         if (prodottiMare && prodottiMare.length > 0) {
             prodotti = prodottiMare;
             context = 'mare';
+            useBibite = false;
         } else {
             return;
         }
     }
     
     if (context && prodotti && prodotti.length > 0) {
-        // Filtra i prodotti della categoria escludendo le bibite
+        // Se stiamo usando bibite, non filtrare le bibite
         const idBibite = ['coca_cola_zero', 'pepsi_max', 'fanta_original', 'l_angelica_waterstick', 'jamaica_zenzero'];
-        const prodottiFiltrati = prodotti.filter(p => !idBibite.includes(p.id));
+        const prodottiFiltrati = useBibite ? prodotti : prodotti.filter(p => !idBibite.includes(p.id));
         
         // Se non ci sono prodotti filtrati, usa tutti i prodotti
         const prodottiFinali = prodottiFiltrati.length > 0 ? prodottiFiltrati : prodotti;
@@ -2037,38 +2042,49 @@ function showComboMessage() {
             lastShownProducts.shift();
         }
         
-        // Seleziona una bibita a caso per la rotazione basata sui tag
-        let idBibitaScelta;
-        if (context === 'fitness') {
-            // Per fitness usa bevande con tag sportivi
-            const tagSportivi = ['sportiva', 'energetica', 'isotonica', 'pre-workout'];
-            const bevandeSportive = Object.keys(catalogoProdotti).filter(id => {
-                const prodotto = catalogoProdotti[id];
-                return prodotto.tag && prodotto.tag.some(tag => tagSportivi.includes(tag));
-            });
-            if (bevandeSportive.length > 0) {
-                const indiceBevanda = Math.floor(Math.random() * bevandeSportive.length);
-                idBibitaScelta = bevandeSportive[indiceBevanda];
-            } else {
-                // Fallback se non ci sono bevande sportive
-                idBibitaScelta = 'red_bull';
-            }
+        // Seleziona il secondo prodotto per la combo
+        let prodottoAncora;
+        if (useBibite) {
+            // Se il principale è bibita, il secondo è della nicchia corrente
+            const prodottiNiche = getProdottiByCategoria(context);
+            const prodottiNicheFiltrati = prodottiNiche.filter(p => !idBibite.includes(p.id));
+            const prodottiNicheDaUsare = prodottiNicheFiltrati.length > 0 ? prodottiNicheFiltrati : prodottiNiche;
+            const indiceNiche = Math.floor(Math.random() * prodottiNicheDaUsare.length);
+            prodottoAncora = prodottiNicheDaUsare[indiceNiche];
+            console.log('Prodotto della nicchia selezionato:', prodottoAncora);
         } else {
-            // Per altri contesti usa bevande con tag rinfrescanti
-            const tagRinfrescanti = ['rinfrescante', 'senza zucchero', 'classica', 'analcolica', 'drenante', 'naturale'];
-            const bevandeRinfrescanti = Object.keys(catalogoProdotti).filter(id => {
-                const prodotto = catalogoProdotti[id];
-                return prodotto.tag && prodotto.tag.some(tag => tagRinfrescanti.includes(tag));
-            });
-            if (bevandeRinfrescanti.length > 0) {
-                const indiceBevanda = Math.floor(Math.random() * bevandeRinfrescanti.length);
-                idBibitaScelta = bevandeRinfrescanti[indiceBevanda];
+            // Se il principale è della nicchia, il secondo è bibita
+            let idBibitaScelta;
+            if (context === 'fitness') {
+                // Per fitness usa bevande con tag sportivi
+                const tagSportivi = ['sportiva', 'energetica', 'isotonica', 'pre-workout'];
+                const bevandeSportive = Object.keys(catalogoProdotti).filter(id => {
+                    const prodotto = catalogoProdotti[id];
+                    return prodotto.tag && prodotto.tag.some(tag => tagSportivi.includes(tag));
+                });
+                if (bevandeSportive.length > 0) {
+                    const indiceBevanda = Math.floor(Math.random() * bevandeSportive.length);
+                    idBibitaScelta = bevandeSportive[indiceBevanda];
+                } else {
+                    idBibitaScelta = 'red_bull';
+                }
             } else {
-                // Fallback se non ci sono bevande rinfrescanti
-                idBibitaScelta = 'coca_cola_zero';
+                // Per altri contesti usa bevande con tag rinfrescanti
+                const tagRinfrescanti = ['rinfrescante', 'senza zucchero', 'classica', 'analcolica', 'drenante', 'naturale'];
+                const bevandeRinfrescanti = Object.keys(catalogoProdotti).filter(id => {
+                    const prodotto = catalogoProdotti[id];
+                    return prodotto.tag && prodotto.tag.some(tag => tagRinfrescanti.includes(tag));
+                });
+                if (bevandeRinfrescanti.length > 0) {
+                    const indiceBevanda = Math.floor(Math.random() * bevandeRinfrescanti.length);
+                    idBibitaScelta = bevandeRinfrescanti[indiceBevanda];
+                } else {
+                    idBibitaScelta = 'coca_cola_zero';
+                }
             }
+            prodottoAncora = catalogoProdotti[idBibitaScelta];
+            console.log('Bibita selezionata a caso:', prodottoAncora);
         }
-        const prodottoAncora = catalogoProdotti[idBibitaScelta];
         
         // Controllo di sicurezza: verifica che i prodotti abbiano i nomi definiti
         if (!prodottoPrincipale || !prodottoPrincipale.nome || !prodottoAncora || !prodottoAncora.nome) {
