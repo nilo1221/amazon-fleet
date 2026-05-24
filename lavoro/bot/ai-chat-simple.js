@@ -739,6 +739,30 @@ const catalogoProdotti = {
         link: "https://www.amazon.it/dp/B00T7L20AQ?th=1&linkCode=ll2&tag=l0c39-21&linkId=425913cbbff678f4faae0baf8f6c7bb4&ref=_as_li_ss_tl",
         messaggio: "Creatina pura per massimizzare forza e recupero muscolare."
     },
+    "optimum_preworkout": {
+        nome: "Optimum Nutrition Gold Standard Pre-Workout",
+        categoria: "fitness",
+        tag: ["pre-workout", "energetica", "caffeina", "fitness"],
+        descrizione: "Pre-workout con creatina e caffeina per massimizzare performance e forza.",
+        link: "https://www.amazon.it/Optimum-Nutrition-Standard-allenamento-ingredienti/dp/B00TFB0YTM?th=1&linkCode=ll2&tag=l0c39-21&linkId=0d889a2ab529400f6f01a4e005947cae&ref=_as_li_ss_tl",
+        messaggio: "Pre-workout per avere energia e carica prima dell'allenamento."
+    },
+    "gg4lab_preworkout": {
+        nome: "GG4Lab Preworkout con Creatina, Citrullina, Beta Alanine",
+        categoria: "fitness",
+        tag: ["pre-workout", "creatina", "citrullina", "fitness"],
+        descrizione: "Pre-workout con creatina, citrullina e beta alanine per carica istantanea.",
+        link: "https://www.amazon.it/GG4Lab-Preworkout-Muscolare-Creatina-Citrullina/dp/B0DQ1WMP29?&linkCode=ll2&tag=l0c39-21&linkId=270653c4a896968edcccf97deff3762b&ref=_as_li_ss_tl",
+        messaggio: "Pre-workout completo per spingere l'allenamento al limite."
+    },
+    "bandini_creatina": {
+        nome: "Bandini Creatine Monohydrate 100% Pure",
+        categoria: "fitness",
+        tag: ["creatina", "fitness", "pura", "vegan"],
+        descrizione: "Creatina monoidrata 100% pura per training e sport, con dosatore incluso.",
+        link: "https://www.amazon.it/Creatina-Micronizzata-Monoidrata-Polvere-grammi/dp/B09X5YJQLV?&linkCode=ll2&tag=l0c39-21&linkId=3f36198678a2403420afda6fd31a2007&ref=_as_li_ss_tl",
+        messaggio: "Creatina pura per migliorare performance in allenamenti intensi."
+    },
     // SMART HOME DOMOTICA
     "philips_hue": {
         nome: "Philips Hue White & Color Ambiance Starter Kit 2 Lampadine",
