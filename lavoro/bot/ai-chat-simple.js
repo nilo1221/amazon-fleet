@@ -676,6 +676,14 @@ const catalogoProdotti = {
         link: "https://www.amazon.it/Estath%C3%A9-Limone-Bevanda-Analcolica-Bottiglie/dp/B01FSBKG86?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2M2BPCA8TOUV7&dib=eyJ2IjoiMSJ9.FiNkIUSC2dwiAjBv-vwb_T3iFcvkm0npGXqMDbFNVPHWAcA1wkohMXDWHejOQDZWyh70zaxkQ2MOcFmC69W-fBS02NXayRXQ0e05HcnY1lpndp8Km8d3wjj_r1RbAbSGRRuvelDnV5XzWh4HerpW2finqRUXql6XNIlDWxMLwqzfUSODU8Zl8pXJeDp-q552nnxXc7RRrEi9cyMbCbaBAeacsaEavHwkOVnYwOPF5CgR1xrsXM8MgbIythzF2UHCbEK6EsPn8hFo9C3Jd5vp6Ozy04zf2QYV2oljYBBrr-4.EwmWYge8TR116AjrwsL1YWZOEEZvDZqtRxDEMg5qWZs&dib_tag=se&keywords=bevande&qid=1779666721&rdc=1&sprefix=bevande%2Caps%2C191&sr=8-6&th=1&linkCode=ll2&tag=l0c39-21&linkId=d38ff5ede0fca7fc29fe28063906cdf9&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio un the freddo. E poi io uso la Estathé Limone, è il the freddo con vero infuso di foglie di the e succo di limone, se lo vuoi ti do il link."
     },
+    "hipro_drink": {
+        nome: "HiPRO Drink Liquido",
+        categoria: ["fitness"],
+        tag: ["proteica", "sportiva", "senza zuccheri", "analcolica"],
+        descrizione: "Bevanda proteica liquida con 25g di proteine al gusto fragola e lampone, senza lattosio e senza zuccheri aggiunti.",
+        link: "https://www.amazon.it/dp/B07Z42P2RG?ie=UTF8&psc=1&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=KZBA5VTTAYAD8EHRAXN5&pd_rd_wg=CdEOt&pd_rd_w=8BYvX&pd_rd_r=32878f6d-474d-43e9-99c1-9a4d9f2163bd&fpw=alm&almBrandId=QW1hem9uIEZyZXNo&aref=D92tQNMbIG&linkCode=ll2&tag=l0c39-21&linkId=11a56cb96b04f077bf5b107363f96f01&ref=_as_li_ss_tl",
+        messaggio: "Tipo che ti alleni forte! 💪 Hai bisogno di proteine per il recupero. E poi io uso la HiPRO Drink Liquido, ha 25g di proteine al gusto fragola e lampone, senza zuccheri, se la vuoi ti do il link."
+    },
     "red_bull": {
         nome: "Red Bull Energy Drink, 250 ml (24 Lattine)",
         categoria: ["fitness"],
