@@ -1741,6 +1741,34 @@ function detectScroll() {
     }
 }
 
+// Related niches mapping for 80/20 strategy
+const relatedNiches = {
+    'mare': ['outdoor', 'viaggi', 'caldo'],
+    'pc': ['tech', 'smartphone', 'cinema'],
+    'outdoor': ['mare', 'viaggi', 'fitness'],
+    'caldo': ['mare', 'outdoor', 'fitness'],
+    'fitness': ['outdoor', 'smartphone', 'tech'],
+    'smart-home': ['tech', 'arredamento', 'pet-care'],
+    'pet-care': ['arredamento', 'outdoor', 'smart-home'],
+    'cinema': ['tech', 'smartphone', 'pc'],
+    'smartphone': ['tech', 'pc', 'cinema'],
+    'tech': ['pc', 'smartphone', 'smart-home'],
+    'moda-donna': ['accessori', 'profumi', 'moda-uomo'],
+    'moda-uomo': ['accessori', 'profumi', 'moda-donna'],
+    'arredamento': ['smart-home', 'benessere', 'pet-care'],
+    'accessori': ['moda-donna', 'moda-uomo', 'profumi'],
+    'benessere': ['arredamento', 'profumi', 'pet-care'],
+    'giochi': ['pc', 'tech', 'cinema'],
+    'libri': ['tech', 'smartphone', 'benessere'],
+    'profumi': ['moda-donna', 'moda-uomo', 'accessori'],
+    'lavoro': ['ufficio', 'tech', 'arredamento'],
+    'sostenibilita': ['arredamento', 'benessere', 'outdoor'],
+    'ufficio': ['lavoro', 'tech', 'arredamento'],
+    'viaggi': ['mare', 'outdoor', 'caldo'],
+    'fotografia': ['smartphone', 'tech', 'cinema'],
+    'dvd': ['cinema', 'tech', 'pc']
+};
+
 // Detect scroll to trigger combo message at 50%
 let comboTimerStarted = false;
 let comboInterval = null;
@@ -1769,9 +1797,27 @@ function detectComboScroll() {
 }
 
 function showComboMessage() {
-    // Usa nicchia ciclica invece del contesto corrente
-    const context = allNiches[nicheIndex % allNiches.length];
-    nicheIndex++; // Incrementa per la prossima volta
+    // Ottieni il contesto corrente
+    let context = getContesto();
+    
+    // Fallback: se contesto è null, usa 'mare' come default
+    if (!context) {
+        context = 'mare';
+    }
+    
+    // Strategia 80/20: 80% nicchia corrente, 20% nicchie correlate
+    const random = Math.random();
+    if (random < 0.8) {
+        // 80%: usa nicchia corrente
+    } else {
+        // 20%: usa nicchia correlata
+        const related = relatedNiches[context] || [];
+        if (related.length > 0) {
+            const randomRelated = related[Math.floor(Math.random() * related.length)];
+            context = randomRelated;
+        }
+        // Se non ci sono nicchie correlate, mantieni quella corrente
+    }
     
     let prodotti = getProdottiByCategoria(context);
     
@@ -1780,6 +1826,7 @@ function showComboMessage() {
         const prodottiMare = getProdottiByCategoria('mare');
         if (prodottiMare && prodottiMare.length > 0) {
             prodotti = prodottiMare;
+            context = 'mare';
         } else {
             return;
         }
