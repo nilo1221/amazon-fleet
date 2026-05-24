@@ -646,38 +646,53 @@ const catalogoProdotti = {
     // BIBITE - PRODOTTI ANCORA PER TUTTE LE COMBO (rotazione)
     "coca_cola_zero": {
         nome: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-        categoria: ["mare", "pc", "outdoor", "caldo"],
+        categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
         descrizione: "Rinfrescante senza zuccheri, perfetta per idratarsi in ogni situazione.",
         link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Coca-Cola Zero per rinfrescarmi, se le vuoi ti do il link."
     },
     "pepsi_max": {
         nome: "Pepsi Max",
-        categoria: ["mare", "pc", "outdoor", "caldo"],
+        categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
         descrizione: "Rinfrescante senza zuccheri, perfetta per idratarsi in ogni situazione.",
         link: "https://www.amazon.it/gp/aw/d/B01G7F3UGC?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=8d6332e821957b1699faccbdc1aa92dd&hsa_cr_id=0&qid=1779582795&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=3P9Vi1enMO&pd_rd_w=zSkrP&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=S5V72ME4DAJZX44T1FH5&pd_rd_wg=oM2U9&pd_rd_r=a2d776b6-5c87-4a65-bc8a-6efd66e839e8&th=1&linkCode=ll2&tag=l0c39-21&linkId=ec385cd554c3a0d7024f726505bcea88&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Pepsi Max per rinfrescarmi, se le vuoi ti do il link."
     },
     "fanta_original": {
         nome: "Fanta Original",
-        categoria: ["mare", "pc", "outdoor", "caldo"],
+        categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
         descrizione: "Rinfrescante con conservanti riciclabili, perfetta per idratarsi.",
         link: "https://www.amazon.it/Fanta-Original-Conservanti-riciclabile-Rinfrescante/dp/B0F94MN626?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite%2Bpacchi&qid=1779582795&rdc=1&sprefix=bibite%2Bpacchi%2Caps%2C139&sr=8-4-spons&aref=7rIRpk3FXE&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=5caf24d3ef7761336f39c4485f57268b&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Fanta Original per rinfrescarmi, se le vuoi ti do il link."
     },
     "l_angelica_waterstick": {
         nome: "L'Angelica Waterstick Drenante",
-        categoria: ["mare", "pc", "outdoor", "caldo"],
+        categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
         descrizione: "Waterstick drenante contro stanchezza e affaticamento.",
         link: "https://www.amazon.it/LAngelica-Waterstick-Drenante-Stanchezza-Affaticamento/dp/B0D46F19MB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite%2Bpacchi&qid=1779582795&rdc=1&sprefix=bibite%2Bpacchi%2Caps%2C139&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=96869b71eb53e48236d136535ae799a8&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso l'Angelica Waterstick per rinfrescarmi, se le vuoi ti do il link."
     },
     "jamaica_zenzero": {
         nome: "Jamaica Bibita Analcolica Zenzero",
-        categoria: ["mare", "pc", "outdoor", "caldo"],
+        categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
         descrizione: "Bibita analcolica allo zenzero, rinfrescante e naturale.",
         link: "https://www.amazon.it/Jamaica-Bibita-analcolica-zenzero-lattine/dp/B006R638VY?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite+pacchi&qid=1779582795&sprefix=bibite+pacchi%2Caps%2C139&sr=8-9&linkCode=ll2&tag=l0c39-21&linkId=c08e0e25f8bb7282d7653fdca0c2e473&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Jamaica allo zenzero per rinfrescarmi, se le vuoi ti do il link."
+    },
+    // FITNESS CASA
+    "namedsport_proteinbar": {
+        nome: "NAMEDSPORT Proteinbar",
+        categoria: "fitness",
+        descrizione: "Barretta energetica con 35% di proteine, ideale come spuntino o post workout.",
+        link: "https://www.amazon.it/dp/B088CBGH2Y?ascsubtag=srctok-03e71a251493ad36&btn_ref=srctok-03e71a251493ad36&th=1&linkCode=ll2&tag=l0c39-21&linkId=e182e40481fe0812ca7512c0fde7f20b&ref=_as_li_ss_tl",
+        messaggio: "Barretta proteica di alta qualità per il tuo allenamento."
+    },
+    "optimum_creatina": {
+        nome: "Optimum Nutrition Creatina Monoidrata",
+        categoria: "fitness",
+        descrizione: "Creatina micronizzata al 100% per migliorare forza e performance muscolare.",
+        link: "https://www.amazon.it/dp/B00T7L20AQ?th=1&linkCode=ll2&tag=l0c39-21&linkId=425913cbbff678f4faae0baf8f6c7bb4&ref=_as_li_ss_tl",
+        messaggio: "Creatina pura per massimizzare forza e recupero muscolare."
     },
     // PC GAMING
     "monitor_msi": {
@@ -914,7 +929,8 @@ const comboMessages = {
     "pc": "Ehi, ma ti stai preparando per lavorare? 🔥 Guarda, se passi lunghe sessioni come me, non posso fare a meno di due cose: delle {prodottoNicchia} per concentrarmi e una scorta di {prodottoAncora} per non dover fermarmi quando ho sete. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
     "outdoor": "Che bello, vai in campeggio! 🌲 Guarda, se vai in natura come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per dormire bene e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
     "caldo": "Che giornata calda! ❄️ Guarda, se anche tu soffri il caldo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per rinfrescarmi e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una vera salvezza in questi giorni!",
-    "bibite-bevande": "Ehi, cerchi qualcosa di rinfrescante! 🥤 Guarda, se vuoi goderti una bibita fresca come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per il relax e una scorta di {prodottoAncora} per non dover andare al supermercato. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!"
+    "bibite-bevande": "Ehi, cerchi qualcosa di rinfrescante! 🥤 Guarda, se vuoi goderti una bibita fresca come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per il relax e una scorta di {prodottoAncora} per non dover andare al supermercato. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
+    "fitness": "Ehi, vedo che ti alleni! 💪 Guarda, se ti alleni come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per l'allenamento e una scorta di {prodottoAncora} per idratarmi durante l'workout. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale per i risultati!"
 };
 
 // Funzione per ottenere prodotti dal catalogo in base alla categoria
@@ -940,6 +956,9 @@ function getContesto() {
     }
     if (currentPath.includes('elite-gaming-gear') || currentPath.includes('tech') || currentUrl.includes('pc') || currentUrl.includes('gaming')) {
         return 'pc';
+    }
+    if (currentPath.includes('fitness-casa') || currentUrl.includes('fitness') || currentUrl.includes('palestra') || currentUrl.includes('allenamento')) {
+        return 'fitness';
     }
     if (currentPath.includes('outdoor-camping') || currentUrl.includes('outdoor') || currentUrl.includes('campeggio')) {
         return 'outdoor';
