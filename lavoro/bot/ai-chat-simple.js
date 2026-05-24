@@ -1668,7 +1668,7 @@ function detectScroll() {
 // Detect scroll to trigger combo message at 50%
 let comboTimerStarted = false;
 let comboInterval = null;
-let prodottiMostrati = []; // Tieni traccia dei prodotti già mostrati
+let prodottiMostrati = {}; // Tieni traccia dei prodotti già mostrati per contesto
 
 function detectComboScroll() {
     if (comboTimerStarted) return;
@@ -1712,16 +1712,21 @@ function showComboMessage() {
     }
     
     if (context && prodotti && prodotti.length > 0) {
-        // Filtra i prodotti escludendo quelli già mostrati
-        const prodottiNonMostrati = prodotti.filter(p => !prodottiMostrati.includes(p.id));
+        // Inizializza array per questo contesto se non esiste
+        if (!prodottiMostrati[context]) {
+            prodottiMostrati[context] = [];
+        }
         
-        // Se tutti i prodotti sono stati mostrati, ricomincia il ciclo
+        // Filtra i prodotti escludendo quelli già mostrati per questo contesto
+        const prodottiNonMostrati = prodotti.filter(p => !prodottiMostrati[context].includes(p.id));
+        
+        // Se tutti i prodotti sono stati mostrati per questo contesto, ricomincia il ciclo
         if (prodottiNonMostrati.length === 0) {
-            prodottiMostrati = [];
+            prodottiMostrati[context] = [];
         }
         
         // Seleziona prodotti da mostrare (non mostrati o ricominciato)
-        const prodottiDaUsare = prodottiMostrati.length === 0 ? prodotti : prodottiNonMostrati;
+        const prodottiDaUsare = prodottiMostrati[context].length === 0 ? prodotti : prodottiNonMostrati;
         
         // Filtra i prodotti della categoria escludendo le bibite
         const idBibite = ['coca_cola_zero', 'pepsi_max', 'fanta_original', 'l_angelica_waterstick', 'jamaica_zenzero'];
@@ -1734,9 +1739,9 @@ function showComboMessage() {
         const indiceCasuale = Math.floor(Math.random() * prodottiFinali.length);
         const prodottoPrincipale = prodottiFinali[indiceCasuale];
         
-        // Aggiungi ai prodotti mostrati
-        if (!prodottiMostrati.includes(prodottoPrincipale.id)) {
-            prodottiMostrati.push(prodottoPrincipale.id);
+        // Aggiungi ai prodotti mostrati per questo contesto
+        if (!prodottiMostrati[context].includes(prodottoPrincipale.id)) {
+            prodottiMostrati[context].push(prodottoPrincipale.id);
         }
         
         // Seleziona una bibita a caso per la rotazione
