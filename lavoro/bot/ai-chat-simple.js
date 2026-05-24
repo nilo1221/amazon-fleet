@@ -203,22 +203,22 @@ const NicheDatabase = {
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         topProducts: [
             {
-                name: "Kinley Tonic Water - 24 Bottiglie Vetro da 200 ml",
-                description: "Acqua tonica premium con note di limone, lime e lemongrass - 24 bottiglie vetro per mixology",
-                icon: "fa-glass-martini",
-                link: "https://www.amazon.it/dp/B08CVSCZ82?aref=3toTxiHbHG&aaxitk=2390785a166ecaf4dff8b69645a443fa&pd_rd_plhdr=t&th=1&linkCode=ll2&tag=l0c39-21&linkId=5919496244367507f5ce325cbeb97ecd&ref=_as_li_ss_tl"
+                name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
+                description: "Bevanda isotonica con carboidrati ed elettroliti - Ideale per sportivi e montagna",
+                icon: "fa-running",
+                link: "https://www.amazon.it/dp/B00Y8D9P6K?pd_rd_i=B00Y8D9P6K&pd_rd_w=hD6VB&content-id=amzn1.sym.1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_p=1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_r=Z6CWD9336NKK428RK0M9&pd_rd_wg=KZQgL&pd_rd_r=abccc0cc-88f2-4383-986f-4d5f7ccb08ea&aref=hfNoBhuot5&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
             },
             {
-                name: "Red Bull Energy Drink - Cartone Lattine",
-                description: "Energy drink che rivitalizza corpo e mente - Ideale per gaming, studio e lavoro",
+                name: "Lemonsoda Energy | Icy Breeze - 12 Lattine da 50 cl",
+                description: "Energy drink zero zuccheri con taurina e guaranà - Rinfrescante per sportivi",
                 icon: "fa-bolt",
-                link: "https://www.amazon.it/Red-Bull-Energy-Cartone-Lattine/dp/B0DJNRYK2K?th=1&linkCode=ll2&tag=l0c39-21&linkId=19c6ba4e4cd004f26af3de941baa7875&ref=_as_li_ss_tl"
+                link: "https://www.amazon.it/dp/B0CX6F2P4Y?aref=p0phC4nHB2&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=21631174d53fa4717497d9a40abd9ad5&ref=_as_li_ss_tl"
             },
             {
-                name: "Monster Energy Drink - Lattine e Bottiglie",
-                description: "L'energy drink più mostruoso del pianeta - Combinazione ideale per carica e grinta",
-                icon: "fa-fire",
-                link: "https://www.amazon.it/Monster-Energy-Drink-lattine-bottiglie/dp/B0158ZD2CE?&linkCode=ll2&tag=l0c39-21&linkId=dd0aebc2c8682e5b39fff1f6e8eb1a6d&ref=_as_li_ss_tl"
+                name: "Enervit Sport Drink Pack - 6 bottiglie da 500ml",
+                description: "Bevanda a base di carboidrati ed elettroliti - Per reintegrare perdite idrosaline",
+                icon: "fa-heartbeat",
+                link: "https://www.amazon.it/Enervit-bottiglie-Leggermente-Effervescente-carboidrati/dp/B0D81HC5TX?&linkCode=ll2&tag=l0c39-21&linkId=2c888ce3961e8b4a274f06ebe43f4f1d&ref=_as_li_ss_tl"
             }
         ]
     },
