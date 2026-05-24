@@ -668,6 +668,14 @@ const catalogoProdotti = {
         link: "https://www.amazon.it/allArancia-Loriginale-Aranciata-Siciliane-Coloranti/dp/B0CX6RN9NL?pd_rd_w=2yHUJ&content-id=amzn1.sym.bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_p=bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_r=PFFA4DDBKXSVN2FC1H25&pd_rd_wg=D1XOt&pd_rd_r=50121f40-c47e-4f48-985d-f0021d428a7e&pd_rd_i=B0CX6HFND3&th=1&linkCode=ll2&tag=l0c39-21&linkId=d713fc75412235936992a0b962276211&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio un'aranciata fresca. E poi io uso la Oransoda Zero per rinfrescarmi, è l'originale aranciata italiana con succo di arance siciliane, se la vuoi ti do il link."
     },
+    "estathe_limone": {
+        nome: "Estathé Limone",
+        categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
+        tag: ["rinfrescante", "the freddo", "senza glutine", "analcolica"],
+        descrizione: "The freddo con vero infuso di foglie di the e succo di limone, bevanda analcolica senza glutine.",
+        link: "https://www.amazon.it/Estath%C3%A9-Limone-Bevanda-Analcolica-Bottiglie/dp/B01FSBKG86?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2M2BPCA8TOUV7&dib=eyJ2IjoiMSJ9.FiNkIUSC2dwiAjBv-vwb_T3iFcvkm0npGXqMDbFNVPHWAcA1wkohMXDWHejOQDZWyh70zaxkQ2MOcFmC69W-fBS02NXayRXQ0e05HcnY1lpndp8Km8d3wjj_r1RbAbSGRRuvelDnV5XzWh4HerpW2finqRUXql6XNIlDWxMLwqzfUSODU8Zl8pXJeDp-q552nnxXc7RRrEi9cyMbCbaBAeacsaEavHwkOVnYwOPF5CgR1xrsXM8MgbIythzF2UHCbEK6EsPn8hFo9C3Jd5vp6Ozy04zf2QYV2oljYBBrr-4.EwmWYge8TR116AjrwsL1YWZOEEZvDZqtRxDEMg5qWZs&dib_tag=se&keywords=bevande&qid=1779666721&rdc=1&sprefix=bevande%2Caps%2C191&sr=8-6&th=1&linkCode=ll2&tag=l0c39-21&linkId=d38ff5ede0fca7fc29fe28063906cdf9&ref=_as_li_ss_tl",
+        messaggio: "Tipo che giornata calda, ci vorrebbe proprio un the freddo. E poi io uso la Estathé Limone, è il the freddo con vero infuso di foglie di the e succo di limone, se lo vuoi ti do il link."
+    },
     "red_bull": {
         nome: "Red Bull Energy Drink, 250 ml (24 Lattine)",
         categoria: ["fitness"],
