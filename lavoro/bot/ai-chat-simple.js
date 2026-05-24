@@ -647,6 +647,7 @@ const catalogoProdotti = {
     "coca_cola_zero": {
         nome: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
         categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
+        tag: ["senza zucchero", "rinfrescante", "classica", "analcolica"],
         descrizione: "Rinfrescante senza zuccheri, perfetta per idratarsi in ogni situazione.",
         link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Coca-Cola Zero per rinfrescarmi, se le vuoi ti do il link."
@@ -654,6 +655,7 @@ const catalogoProdotti = {
     "pepsi_max": {
         nome: "Pepsi Max",
         categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
+        tag: ["senza zucchero", "rinfrescante", "classica", "analcolica"],
         descrizione: "Rinfrescante senza zuccheri, perfetta per idratarsi in ogni situazione.",
         link: "https://www.amazon.it/Pepsi-Max-Bevanda-Analcolica-Zucchero/dp/B08VVTS94X?&linkCode=ll2&tag=l0c39-21&linkId=3b6054372f292480c97d501dcdb834b6&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Pepsi Max per rinfrescarmi, se le vuoi ti do il link."
@@ -661,6 +663,7 @@ const catalogoProdotti = {
     "red_bull": {
         nome: "Red Bull Energy Drink, 250 ml (24 Lattine)",
         categoria: ["fitness"],
+        tag: ["energetica", "sportiva", "caffeina", "analcolica"],
         descrizione: "Bevanda energetica per sportivi, perfetta per allenamenti intensi.",
         link: "https://www.amazon.it/Red-Bull-Energy-Cartone-Lattine/dp/B01G7F3UGC?th=1&linkCode=ll2&tag=l0c39-21&linkId=5d2abd95aeb04ce933f0f60e9aeab00f&ref=_as_li_ss_tl",
         messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di energia. Io uso Red Bull per avere la carica giusta, se la vuoi ti do il link."
@@ -668,6 +671,7 @@ const catalogoProdotti = {
     "enervit_isotonic": {
         nome: "Enervit Isotonic Drink Limone",
         categoria: ["fitness"],
+        tag: ["isotonica", "sportiva", "sali minerali", "analcolica"],
         descrizione: "Bevanda isotonica con sali minerali, ideale per idratazione durante sport.",
         link: "https://www.amazon.it/Enervit-Spa-Isotonic-Drink-Limone/dp/B07DTBVP4T?th=1&linkCode=ll2&tag=l0c39-21&linkId=70e15dc5129cb5e69e8fb461ec37e8b6&ref=_as_li_ss_tl",
         messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di idratarmi bene. Io uso Enervit Isotonic per i sali minerali, se la vuoi ti do il link."
@@ -675,6 +679,7 @@ const catalogoProdotti = {
     "powerbar_isoactive": {
         nome: "PowerBar Isoactive Red Fruit",
         categoria: ["fitness"],
+        tag: ["isotonica", "sportiva", "elettroliti", "analcolica"],
         descrizione: "Bevanda isotonica con 5 elettroliti, perfetta per allenamenti intensi.",
         link: "https://www.amazon.it/PowerBar-Boisson-IsoActive-Fruit-Punch/dp/B078K1VM3M?th=1&linkCode=ll2&tag=l0c39-21&linkId=0e28cc439dc7186dd0fccfa8ef38c2c2&ref=_as_li_ss_tl",
         messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di elettroliti. Io uso PowerBar Isoactive per il recupero, se la vuoi ti do il link."
@@ -682,6 +687,7 @@ const catalogoProdotti = {
     "gomo_energy": {
         nome: "GoMo ENERGY Isotonic Sport Drink",
         categoria: ["fitness"],
+        tag: ["isotonica", "senza zucchero", "sportiva", "analcolica"],
         descrizione: "Bevanda isotonica senza zucchero, ideale per idratazione sportiva.",
         link: "https://www.amazon.it/GoMo-ENERGY%C2%AE-Isotonic-Sport-Drink/dp/B072KSBLR6?th=1&linkCode=ll2&tag=l0c39-21&linkId=7ff99045649298642b63799c295ddf41&ref=_as_li_ss_tl",
         messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport voglio una bevanda leggera. Io uso GoMo ENERGY senza zucchero, se la vuoi ti do il link."
@@ -689,6 +695,7 @@ const catalogoProdotti = {
     "gatorade_sport": {
         nome: "Gatorade Sport Drink",
         categoria: ["fitness"],
+        tag: ["sportiva", "elettroliti", "idratazione", "analcolica"],
         descrizione: "Bevanda sportiva con elettroliti, perfetta per idratazione durante allenamento.",
         link: "https://www.amazon.it/dp/B0D2Y3PZTR?ie=UTF8&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=HAB68W7XNMNKX1NHE4AT&pd_rd_wg=avtw4&pd_rd_w=z072w&pd_rd_r=c153241b-2ce3-4a61-8ded-8bc8f3e2bed6&aref=Xu76ZS3xYo&th=1&linkCode=ll2&tag=l0c39-21&linkId=4821d146bb6000dae4f6f957628343ea&ref=_as_li_ss_tl",
         messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di elettroliti. Io uso Gatorade per l'idratazione, se la vuoi ti do il link."
@@ -696,6 +703,7 @@ const catalogoProdotti = {
     "fanta_original": {
         nome: "Fanta Original",
         categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
+        tag: ["rinfrescante", "frizzante", "classica", "analcolica"],
         descrizione: "Rinfrescante con conservanti riciclabili, perfetta per idratarsi.",
         link: "https://www.amazon.it/Fanta-Original-Conservanti-riciclabile-Rinfrescante/dp/B0F94MN626?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite%2Bpacchi&qid=1779582795&rdc=1&sprefix=bibite%2Bpacchi%2Caps%2C139&sr=8-4-spons&aref=7rIRpk3FXE&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=5caf24d3ef7761336f39c4485f57268b&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Fanta Original per rinfrescarmi, se le vuoi ti do il link."
@@ -703,6 +711,7 @@ const catalogoProdotti = {
     "l_angelica_waterstick": {
         nome: "L'Angelica Waterstick Drenante",
         categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
+        tag: ["drenante", "naturale", "detox", "analcolica"],
         descrizione: "Waterstick drenante contro stanchezza e affaticamento.",
         link: "https://www.amazon.it/LAngelica-Waterstick-Drenante-Stanchezza-Affaticamento/dp/B0D46F19MB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite%2Bpacchi&qid=1779582795&rdc=1&sprefix=bibite%2Bpacchi%2Caps%2C139&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=96869b71eb53e48236d136535ae799a8&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso l'Angelica Waterstick per rinfrescarmi, se le vuoi ti do il link."
@@ -710,6 +719,7 @@ const catalogoProdotti = {
     "jamaica_zenzero": {
         nome: "Jamaica Bibita Analcolica Zenzero",
         categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
+        tag: ["naturale", "zenzero", "analcolica", "rinfrescante"],
         descrizione: "Bibita analcolica allo zenzero, rinfrescante e naturale.",
         link: "https://www.amazon.it/Jamaica-Bibita-analcolica-zenzero-lattine/dp/B006R638VY?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite+pacchi&qid=1779582795&sprefix=bibite+pacchi%2Caps%2C139&sr=8-9&linkCode=ll2&tag=l0c39-21&linkId=c08e0e25f8bb7282d7653fdca0c2e473&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Jamaica allo zenzero per rinfrescarmi, se le vuoi ti do il link."
