@@ -209,16 +209,16 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/Coca-Cola-Scorta-Convenienza-omaggio-PET/dp/B00Y8BXVD0?th=1&linkCode=ll2&tag=l0c39-21&linkId=900d0c4f0a41e0c88dd53b3b5be61854&ref=_as_li_ss_tl"
             },
             {
-                name: "Fanta Original - 6 Lattine da 330ml",
-                description: "Bibita aranciata con succo di arance italiane, senza conservanti - Lattine 100% riciclabili",
-                icon: "fa-orange",
-                link: "https://www.amazon.it/dp/B089F2XKN6?aref=l0wSNlmxfp&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=000aa981ba9d623a8ee0e445ebf1e030&ref=_as_li_ss_tl"
+                name: "Red Bull Energy Drink - Cartone Lattine",
+                description: "Energy drink che rivitalizza corpo e mente - Ideale per gaming, studio e lavoro",
+                icon: "fa-bolt",
+                link: "https://www.amazon.it/Red-Bull-Energy-Cartone-Lattine/dp/B0DJNRYK2K?th=1&linkCode=ll2&tag=l0c39-21&linkId=19c6ba4e4cd004f26af3de941baa7875&ref=_as_li_ss_tl"
             },
             {
-                name: "Sicilia Bedda - Bibite Tomarchio (6x1.25L)",
-                description: "Bibite siciliane artigianali in vetro: Spuma, Arancia Rossa, Aranciata, Chinotto, Ginger",
-                icon: "fa-wine-bottle",
-                link: "https://www.amazon.it/Sicilia-Bedda-TOMARCHIO-BOTTIGLIA-Siciliano/dp/B09VH73DKM?th=1&linkCode=ll2&tag=l0c39-21&linkId=d819a4925f841ce590ebfafc500c9513&ref=_as_li_ss_tl"
+                name: "Monster Energy Drink - Lattine e Bottiglie",
+                description: "L'energy drink più mostruoso del pianeta - Combinazione ideale per carica e grinta",
+                icon: "fa-fire",
+                link: "https://www.amazon.it/Monster-Energy-Drink-lattine-bottiglie/dp/B0158ZD2CE?&linkCode=ll2&tag=l0c39-21&linkId=dd0aebc2c8682e5b39fff1f6e8eb1a6d&ref=_as_li_ss_tl"
             }
         ]
     },
