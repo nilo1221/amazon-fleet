@@ -568,6 +568,14 @@ function showUrgencyComboMessage(context) {
     const prodottoAncora = catalogoProdotti['coca_cola_zero'];
     console.log('Prodotto ancora:', prodottoAncora);
     
+    // Controllo di sicurezza: verifica che i prodotti abbiano i nomi definiti
+    if (!prodottoPrincipale || !prodottoPrincipale.nome || !prodottoAncora || !prodottoAncora.nome) {
+        console.error('Prodotti senza nome definiti, uso messaggio di fallback');
+        // Usa messaggio di benvenuto standard come fallback
+        addMessage(getPersonalizedGreeting(), 'bot');
+        return;
+    }
+    
     // Prendi il messaggio combo per il contesto
     const messaggioTemplate = comboMessages[context] || comboMessages['mare'];
     
