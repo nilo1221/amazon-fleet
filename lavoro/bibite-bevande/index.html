@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibite & Bevande - Smart Choices Guide</title>
+    <meta name="description" content="Le migliori bibite e bevande rinfrescanti per l'estate. Coca-Cola, Pepsi, Fanta e molto altro.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    
+    <style>
+        :root {
+            --primary-color: #E74C3C;
+            --secondary-color: #F8F9FA;
+            --accent-color: #3498DB;
+            --success-color: #27AE60;
+            --beverage-color: #E74C3C;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #E74C3C 0%, #3498DB 50%, #27AE60 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(231, 76, 60, 0.3);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #032B44 0%, #0B5345 100%);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 86, 179, 0.5);
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #E74C3C 0%, #3498DB 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Bibite & Bevande</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Niche Identity Bar -->
+    <div class="niche-identity-bar"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Bibite & Bevande</h1>
+                    <p class="lead mb-4">Rinfrescati con le migliori bibite e bevande per l'estate. Perfette per mare, outdoor, gaming e casa.</p>
+                    <div class="category-badge mb-3">
+                        <i class="fas fa-glass-water me-2"></i>Bevande Rinfrescanti
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="fas fa-can-food" style="font-size: 150px; opacity: 0.9;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: var(--primary-color);">Le Nostre Bibite Consigliate</h2>
+            
+            <div class="row g-4">
+                <!-- Coca-Cola Zero -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0" style="border-radius: 15px;">
+                        <div class="card-body p-0">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=500&h=300&fit=crop" alt="Coca-Cola Zero" class="product-image">
+                                <span class="category-badge position-absolute top-3 end-3">Senza Zuccheri</span>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="card-title fw-bold mb-3">Coca-Cola Zero Sugars</h5>
+                                <p class="card-text text-muted mb-4">6 x 1.5 Litre Bottles - Rinfrescante senza zuccheri, perfetta per idratarsi in ogni situazione.</p>
+                                <a href="https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pepsi Max -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0" style="border-radius: 15px;">
+                        <div class="card-body p-0">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?w=500&h=300&fit=crop" alt="Pepsi Max" class="product-image">
+                                <span class="category-badge position-absolute top-3 end-3">Senza Zuccheri</span>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="card-title fw-bold mb-3">Pepsi Max</h5>
+                                <p class="card-text text-muted mb-4">Rinfrescante senza zuccheri, perfetta per idratarsi in ogni situazione.</p>
+                                <a href="https://www.amazon.it/gp/aw/d/B01G7F3UGC?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=8d6332e821957b1699faccbdc1aa92dd&hsa_cr_id=0&qid=1779582795&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=3P9Vi1enMO&pd_rd_w=zSkrP&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=S5V72ME4DAJZX44T1FH5&pd_rd_wg=oM2U9&pd_rd_r=a2d776b6-5c87-4a65-bc8a-6efd66e839e8&th=1&linkCode=ll2&tag=l0c39-21&linkId=ec385cd554c3a0d7024f726505bcea88&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fanta Original -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0" style="border-radius: 15px;">
+                        <div class="card-body p-0">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1563651839-a1e8f0f79110?w=500&h=300&fit=crop" alt="Fanta Original" class="product-image">
+                                <span class="category-badge position-absolute top-3 end-3">Conservanti Riciclabili</span>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="card-title fw-bold mb-3">Fanta Original</h5>
+                                <p class="card-text text-muted mb-4">Rinfrescante con conservanti riciclabili, perfetta per idratarsi.</p>
+                                <a href="https://www.amazon.it/Fanta-Original-Conservanti-riciclabile-Rinfrescante/dp/B0F94MN626?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite%2Bpacchi&qid=1779582795&rdc=1&sprefix=bibite%2Bpacchi%2Caps%2C139&sr=8-4-spons&aref=7rIRpk3FXE&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=5caf24d3ef7761336f39c4485f57268b&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- L'Angelica Waterstick -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0" style="border-radius: 15px;">
+                        <div class="card-body p-0">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&h=300&fit=crop" alt="L'Angelica Waterstick" class="product-image">
+                                <span class="category-badge position-absolute top-3 end-3">Drenante</span>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="card-title fw-bold mb-3">L'Angelica Waterstick Drenante</h5>
+                                <p class="card-text text-muted mb-4">Waterstick drenante contro stanchezza e affaticamento.</p>
+                                <a href="https://www.amazon.it/LAngelica-Waterstick-Drenante-Stanchezza-Affaticamento/dp/B0D46F19MB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite%2Bpacchi&qid=1779582795&rdc=1&sprefix=bibite%2Bpacchi%2Caps%2C139&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=96869b71eb53e48236d136535ae799a8&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jamaica Zenzero -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0" style="border-radius: 15px;">
+                        <div class="card-body p-0">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&h=300&fit=crop" alt="Jamaica Zenzero" class="product-image">
+                                <span class="category-badge position-absolute top-3 end-3">Naturale</span>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="card-title fw-bold mb-3">Jamaica Bibita Analcolica Zenzero</h5>
+                                <p class="card-text text-muted mb-4">Bibita analcolica allo zenzero, rinfrescante e naturale.</p>
+                                <a href="https://www.amazon.it/Jamaica-Bibita-analcolica-zenzero-lattine/dp/B006R638VY?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite+pacchi&qid=1779582795&sprefix=bibite+pacchi%2Caps%2C139&sr=8-9&linkCode=ll2&tag=l0c39-21&linkId=c08e0e25f8bb7282d7653fdca0c2e473&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Related Niches -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: var(--primary-color);">Abbinamenti Consigliati</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-umbrella-beach mb-3" style="font-size: 50px; color: #20B2AA;"></i>
+                            <h5 class="card-title">Mare & Spiaggia</h5>
+                            <p class="card-text text-muted">Perfetto per le giornate al sole</p>
+                            <a href="../mare-spiaggia/index.html" class="btn btn-outline-primary mt-2">Vedi Prodotti</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-campground mb-3" style="font-size: 50px; color: #27AE60;"></i>
+                            <h5 class="card-title">Outdoor & Camping</h5>
+                            <p class="card-text text-muted">Ideale per avventure in natura</p>
+                            <a href="../outdoor-camping/index.html" class="btn btn-outline-primary mt-2">Vedi Prodotti</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-gamepad mb-3" style="font-size: 50px; color: #9B59B6;"></i>
+                            <h5 class="card-title">Elite Gaming Gear</h5>
+                            <p class="card-text text-muted">Per lunghe sessioni di gaming</p>
+                            <a href="../elite-gaming-gear/index.html" class="btn btn-outline-primary mt-2">Vedi Prodotti</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Smart Choices Guide. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

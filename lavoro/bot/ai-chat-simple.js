@@ -869,6 +869,10 @@ function getContesto() {
     if (currentPath.includes('cucina-elettrodomestici') || currentUrl.includes('condizionatore') || currentUrl.includes('ventilatore')) {
         return 'caldo';
     }
+    // Bibite & Bevande - usa contesto mare per combo (bibite come prodotto ancora)
+    if (currentPath.includes('bibite-bevande') || currentUrl.includes('bibite') || currentUrl.includes('bevande')) {
+        return 'mare'; // Usa mare come default per combo con bibite
+    }
     
     // Default: homepage o contesto non identificato
     return null;
