@@ -1621,6 +1621,37 @@ function detectScroll() {
     }
 }
 
+// Detect scroll to trigger combo message at 50%
+function detectComboScroll() {
+    const urgencyShown = sessionStorage.getItem('urgencyComboShown');
+    if (urgencyShown === 'true') return;
+    
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    
+    if (scrollPercentage >= 50) {
+        const context = getContesto();
+        const prodotti = getProdottiByCategoria(context);
+        if (context && prodotti && prodotti.length > 0) {
+            // Apri il chat se non è aperto
+            if (!chatOpen) {
+                toggleChat();
+            }
+            
+            // Pulisci il chat e mostra il messaggio di combo
+            setTimeout(() => {
+                const chatMessages = document.getElementById('chat-messages');
+                if (chatMessages) {
+                    chatMessages.innerHTML = ''; // Pulisci tutti i messaggi
+                }
+                showUrgencyComboMessage(context);
+                sessionStorage.setItem('urgencyComboShown', 'true');
+            }, 500);
+        }
+    }
+}
+
 // Reset abandonment timer on user interaction
 function resetAbandonmentTimer() {
     lastInteractionTime = Date.now();
@@ -2766,13 +2797,14 @@ document.addEventListener('DOMContentLoaded', function() {
         startSalesTimers();
     }, 1000);
     
-    // Start urgency timer for combos (Fase 2)
-    setTimeout(() => {
-        startUrgencyTimer();
-    }, 2000);
+    // Disable urgency timer - now triggered by scroll at 50%
+    // setTimeout(() => {
+    //     startUrgencyTimer();
+    // }, 2000);
     
     // Add scroll detection
     window.addEventListener('scroll', detectScroll);
+    window.addEventListener('scroll', detectComboScroll);
     
     // Add click outside to close proactive bubble
     document.addEventListener('click', function(event) {
