@@ -1319,9 +1319,9 @@ function startUrgencyTimer() {
     
     urgencyTimerStarted = true;
     
-    // Calcola tempo casuale tra 70 e 120 minuti (in millisecondi)
-    const minTime = 70 * 60 * 1000; // 70 minuti
-    const maxTime = 120 * 60 * 1000; // 120 minuti
+    // Calcola tempo casuale tra 1 e 10 minuti (in millisecondi)
+    const minTime = 1 * 60 * 1000; // 1 minuto
+    const maxTime = 10 * 60 * 1000; // 10 minuti
     const randomTime = Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
     
     console.log(`Urgency timer set for ${randomTime / 60000} minutes`);
