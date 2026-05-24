@@ -771,6 +771,48 @@ const catalogoProdotti = {
         link: "https://www.amazon.it/Lampadina-Lampadine-Telecomando-Dimmerabili-Bluetooth/dp/B099NRLRG3?th=1&linkCode=ll2&tag=l0c39-21&linkId=219c8455668c9752a083f2fba067000b&ref=_as_li_ss_tl",
         messaggio: "Illuminazione smart per la tua casa."
     },
+    "tapo_presa_smart": {
+        nome: "Tapo Presa Smart con Monitoraggio Consumo",
+        categoria: "smart-home",
+        descrizione: "Presa intelligente WiFi compatibile con Alexa e Google Home. Controllo remoto, programmazione oraria, monitoraggio consumo.",
+        link: "https://www.amazon.it/Tapo-Monitoraggio-Intelligente-Compatibile-Preselezione/dp/B0CHFJ7V3J?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2OJTEON8O297M&dib=eyJ2IjoiMSJ9.dWtkMjCLn9aCjl0wCvqQXgrHNqmwuu1ikYJCky2J2kdM1V_OJiW8EWQ3ceEBY1MC1S7EWkMx6UdbKc6MpdoYxs7IYVfYKTBgJ5v9i-DTzlUFu3njz0ZNHz9wm1oatuNN4WETv5ath3X0JxkjtuFrwfTOD2ldbI3_aaT35Rqjur7UYf4kB22ONLfXaK6UjDyJtulRvvt4tipYSPj3VAfcDnpGuc5BrL_ZnC5lpGClQ44mLoDxA7X68wEKQWZ6b3vQhKw12cLH3WZmY7AaUYlPLZN4YdGjMCYCUtH-2AZaGAA.-AB66Zbc9avjnlaPJy3eTR-q7yLclHOBAgq3YpyeBbA&dib_tag=se&keywords=smart&qid=1777897538&sprefix=smart%2B%2Caps%2C166&sr=8-6&th=1&linkCode=ll2&tag=l0c39-21&linkId=c150503bd157e5c4f2b5b32caf1e9058&ref=_as_li_ss_tl",
+        messaggio: "Presa smart per controllo remoto e monitoraggio consumo."
+    },
+    "amazon_basics_presa": {
+        nome: "Amazon Basics Presa Intelligente Singola",
+        categoria: "smart-home",
+        descrizione: "Presa smart WiFi per Alexa senza hub. Ingombro limitato, controllo remoto, routine giornaliere.",
+        link: "https://www.amazon.it/Amazon-Basics-intelligente-singola-confezione/dp/B0CMXNWCVP?mcid=9e2aa91a1c8d3bcbaef8d22ed1555743&hvadid=705743448845&hvpos=&hvnetw=g&hvrand=3521815141531840554&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2347766460617&hvocijid=3521815141531840554-B0CMXNWCVP-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=e9d8c1168729535c8e5f367cfbc39448&ref=_as_li_ss_tl",
+        messaggio: "Presa smart Amazon Basics compatibile Alexa."
+    },
+    "tp_link_p105": {
+        nome: "TP-Link Tapo P105 Presa Smart Italiana",
+        categoria: "smart-home",
+        descrizione: "Presa WiFi intelligente compatibile Google Home e Amazon Alexa. Modalità assenza, timer programmazione.",
+        link: "https://www.amazon.it/TP-Link-Intelligente-Compatibile-Controllo-tramite/dp/B07Z5JD3T4?pd_rd_w=e2dzD&content-id=amzn1.sym.1f3c1772-ccf5-4aa2-abc0-5bb5851fb447&pf_rd_p=1f3c1772-ccf5-4aa2-abc0-5bb5851fb447&pf_rd_r=F4ATCRT21RHMY22PYNGP&pd_rd_wg=zWCfO&pd_rd_r=6b4f6f0e-40f4-4bc2-ae48-0d834bc5e132&pd_rd_i=B07Z5JD3T4&th=1&linkCode=ll2&tag=l0c39-21&linkId=e4dd22dc612200b8b487d3965d6fb599&ref=_as_li_ss_tl",
+        messaggio: "Presa smart TP-Link compatibile tutte le spine italiane."
+    },
+    "echo_dot_max": {
+        nome: "Echo Dot Max Alexa",
+        categoria: "smart-home",
+        descrizione: "Altoparlante intelligente con assistente vocale Alexa. Audio premium, hub casa intelligente integrato.",
+        link: "https://www.amazon.it/echo-dot-max/dp/B0DKLDMHYB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=VGVLPWDE291C&dib=eyJ2IjoiMSJ9.zYeRUCSdJcAUhnVXvl4Poxnjo4taik9-sEWyw5aw3gBoMG-HoGA6vqR7pBWK_5FdZw2hBzxSrolbrS9VW-XaHdXxN9l0Zv6wFdQyXdlrbj2D6AC2NzrwV_Xhfooioc_kYDZKBWC1MtunEV7a2lXifq9SeAkvSCSNtM-17EIAqtN8odNJ4K5HT5VJoP-uvxxyGLECMo5c8a1idko1GzcEbSIMvvB98cVIiXbWiN3ka1Jb6d8hjsOTkrULiJGl13Rpj0H57D0sJb9M1qtTW_uqFDi669VgMKQ-8HMA89bk8oY.QiN_0D7vxwblphZpC_HwFr7q1Gfg4cFicZIShfXPxKI&dib_tag=se&keywords=alexa&qid=1777897593&sprefix=alexa%2Caps%2C155&sr=8-11&ufe=app_do%3Aamzn1.fos.7cf526d8-b33c-4cc8-8e05-b9df5480d46b&th=1&linkCode=ll2&tag=l0c39-21&linkId=8dfeb0081aa8558b0fb4e680bad53dde&ref=_as_li_ss_tl",
+        messaggio: "Echo Dot con Alexa per controllo vocale e musica."
+    },
+    "broadlink_telecomando": {
+        nome: "Broadlink Telecomando Universale Infrarossi",
+        categoria: "smart-home",
+        descrizione: "Telecomando universale per TV, ventilatori. Controllo vocale Alexa/Google, compatibile 80.000+ dispositivi.",
+        link: "https://www.amazon.it/Broadlink-Telecomando-Universale-Infrarossi-Ventilatori/dp/B0F8Q9MRHM?dib=eyJ2IjoiMSJ9.Dx7C1e0JYqrvymxrTkk1DdPXopxEbaELZWfriTBEhJX39rfM3be8-Y63a0sjxrzTxYXt-XN52ylfn-vu_U4FUFG9f27CGQ52VeNVwCzR6yoGAiJC5xRaTPsGCvgMo6SemRoEm5VOIthUcsZKrBDFZhtf73LYrMD_VIDGF_9p0ISb2XIqjnB7FmPQyMCaqgSJ4jdd-5uZAlcT40ZdC-sImnhCj7KVaQpoQoPVL-LdTV4FmKyL2lUWq9DpVRs-SQpR5xIbBTArOD8DqnaN46XnM06M5Ts1FHihKayXJkGKf3g.ltB2Oe3U9hcN12g3Nj5pc9tFdB8Q52CB4QLY5u8T_QI&dib_tag=se&keywords=smart%2Bhome&qid=1778008692&sr=8-2-spons&aref=sl8qYRQp9L&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=9ba47a905d8237d3baa2483ebf79d805&ref=_as_li_ss_tl",
+        messaggio: "Telecomando universale per controllo dispositivi IR."
+    },
+    "telecomando_condizionatore": {
+        nome: "Telecomando Universale Infrarossi Condizionatore",
+        categoria: "smart-home",
+        descrizione: "Telecomando universale per condizionatori. Compatibile tutte le marche, controllo vocale app.",
+        link: "https://www.amazon.it/Telecomando-Universale-Infrarossi-Condizionatore-Utilizzando/dp/B0CW1NHM2W?dib=eyJ2IjoiMSJ9.Dx7C1e0JYqrvymxrTkk1DdPXopxEbaELZWfriTBEhJX39rfM3be8-Y63a0sjxrzTxYXt-XN52ylfn-vu_U4FUFG9f27CGQ52VeNVwCzR6yoGAiJC5xRaTPsGCvgMo6SemRoEm5VOIthUcsZKrBDFZhtf73LYrMD_VIDGF_9p0ISb2XIqjnB7FmPQyMCaqgSJ4jdd-5uZAlcT40ZdC-sImnhCj7KVaQpoQoPVL-LdTV4FmKyL2lUWq9DpVRs-SQpR5xIbBTArOD8DqnaN46XnM06M5Ts1FHihKayXJkGKf3g.ltB2Oe3U9hcN12g3Nj5pc9tFdB8Q52CB4QLY5u8T_QI&dib_tag=se&keywords=smart+home&qid=1778008692&sr=8-4-spons&aref=xNvPc26oEh&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=1c50041c3d94a94ab36563340b658a09&ref=_as_li_ss_tl",
+        messaggio: "Telecomando universale per condizionatori."
+    },
     // PET CARE INTELLIGENTE
     "petkit_pura": {
         nome: "PETKIT Pura Max 2 Lettiera Gatto Autopulente",
