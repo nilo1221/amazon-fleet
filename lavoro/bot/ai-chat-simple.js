@@ -665,6 +665,34 @@ const catalogoProdotti = {
         link: "https://www.amazon.it/Red-Bull-Energy-Cartone-Lattine/dp/B01G7F3UGC?th=1&linkCode=ll2&tag=l0c39-21&linkId=5d2abd95aeb04ce933f0f60e9aeab00f&ref=_as_li_ss_tl",
         messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di energia. Io uso Red Bull per avere la carica giusta, se la vuoi ti do il link."
     },
+    "enervit_isotonic": {
+        nome: "Enervit Isotonic Drink Limone",
+        categoria: ["fitness"],
+        descrizione: "Bevanda isotonica con sali minerali, ideale per idratazione durante sport.",
+        link: "https://www.amazon.it/Enervit-Spa-Isotonic-Drink-Limone/dp/B07DTBVP4T?th=1&linkCode=ll2&tag=l0c39-21&linkId=70e15dc5129cb5e69e8fb461ec37e8b6&ref=_as_li_ss_tl",
+        messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di idratarmi bene. Io uso Enervit Isotonic per i sali minerali, se la vuoi ti do il link."
+    },
+    "powerbar_isoactive": {
+        nome: "PowerBar Isoactive Red Fruit",
+        categoria: ["fitness"],
+        descrizione: "Bevanda isotonica con 5 elettroliti, perfetta per allenamenti intensi.",
+        link: "https://www.amazon.it/PowerBar-Boisson-IsoActive-Fruit-Punch/dp/B078K1VM3M?th=1&linkCode=ll2&tag=l0c39-21&linkId=0e28cc439dc7186dd0fccfa8ef38c2c2&ref=_as_li_ss_tl",
+        messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di elettroliti. Io uso PowerBar Isoactive per il recupero, se la vuoi ti do il link."
+    },
+    "gomo_energy": {
+        nome: "GoMo ENERGY Isotonic Sport Drink",
+        categoria: ["fitness"],
+        descrizione: "Bevanda isotonica senza zucchero, ideale per idratazione sportiva.",
+        link: "https://www.amazon.it/GoMo-ENERGY%C2%AE-Isotonic-Sport-Drink/dp/B072KSBLR6?th=1&linkCode=ll2&tag=l0c39-21&linkId=7ff99045649298642b63799c295ddf41&ref=_as_li_ss_tl",
+        messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport voglio una bevanda leggera. Io uso GoMo ENERGY senza zucchero, se la vuoi ti do il link."
+    },
+    "gatorade_sport": {
+        nome: "Gatorade Sport Drink",
+        categoria: ["fitness"],
+        descrizione: "Bevanda sportiva con elettroliti, perfetta per idratazione durante allenamento.",
+        link: "https://www.amazon.it/dp/B0D2Y3PZTR?ie=UTF8&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=HAB68W7XNMNKX1NHE4AT&pd_rd_wg=avtw4&pd_rd_w=z072w&pd_rd_r=c153241b-2ce3-4a61-8ded-8bc8f3e2bed6&aref=Xu76ZS3xYo&th=1&linkCode=ll2&tag=l0c39-21&linkId=4821d146bb6000dae4f6f957628343ea&ref=_as_li_ss_tl",
+        messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di elettroliti. Io uso Gatorade per l'idratazione, se la vuoi ti do il link."
+    },
     "fanta_original": {
         nome: "Fanta Original",
         categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
@@ -1245,8 +1273,10 @@ function showUrgencyComboMessage(context) {
     // Seleziona una bibita a caso per la rotazione
     let idBibitaScelta;
     if (context === 'fitness') {
-        // Per fitness usa solo bevande sportive (Red Bull)
-        idBibitaScelta = 'red_bull';
+        // Per fitness usa solo bevande sportive
+        const idBevandeSportive = ['red_bull', 'enervit_isotonic', 'powerbar_isoactive', 'gomo_energy', 'gatorade_sport'];
+        const indiceBevandaSportiva = Math.floor(Math.random() * idBevandeSportive.length);
+        idBibitaScelta = idBevandeSportive[indiceBevandaSportiva];
     } else {
         // Per altri contesti usa le bibite normali
         const indiceBibita = Math.floor(Math.random() * idBibite.length);
