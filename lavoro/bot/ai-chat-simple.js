@@ -924,6 +924,41 @@ const catalogoProdotti = {
         link: "https://www.amazon.it/dp/B08X2Y3Z4W?th=1&linkCode=ll2&tag=l0c39-21&linkId=jkl789mno890&ref=_as_li_ss_tl",
         messaggio: "Scarpe da lavoro sicure e confortevoli."
     },
+    "beta_scarpe_antinfortunistiche": {
+        nome: "BETA 7352A Scarpe Antinfortunistiche",
+        categoria: "lavoro",
+        descrizione: "Scarpe antinfortunistiche con tessuto mesh ad alta traspirazione, punta in acciaio.",
+        link: "https://www.amazon.it/BETA-7352A-Antinfortunistiche-Tessuto-Mesh-Alta-Traspirazione/dp/B084J5FKMC?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=4def01942ae31959c75d370229a008f4&ref=_as_li_ss_tl",
+        messaggio: "Scarpe antinfortunistiche leggere e traspiranti."
+    },
+    "casco_ventilato_sicurezza": {
+        nome: "Casco Protettivo Ventilato Sicurezza Industriale",
+        categoria: "lavoro",
+        descrizione: "Casco di sicurezza ventilato per lavori edili e industriali, con visiera.",
+        link: "https://www.amazon.it/protettivo-ventilato-sicurezza-industriale-costruzione/dp/B0C4PBDGTL?th=1&linkCode=ll2&tag=l0c39-21&linkId=5cd8e28c76d56c640992ccb2c820dc43&ref=_as_li_ss_tl",
+        messaggio: "Casco di sicurezza ventilato per lavori industriali."
+    },
+    "casco_universale_sicurezza": {
+        nome: "Casco Protettivo Sicurezza Universale",
+        categoria: "lavoro",
+        descrizione: "Casco di sicurezza universale per ponteggi e lavori commerciali, materiale ABS resistente.",
+        link: "https://www.amazon.it/protettivo-sicurezza-universale-ponteggi-commercianti/dp/B0CDBH4K61?th=1&linkCode=ll2&tag=l0c39-21&linkId=081330ca1e10c747973f0d4f71357c14&ref=_as_li_ss_tl",
+        messaggio: "Casco di sicurezza universale per ponteggi."
+    },
+    "guanti_lavoro_sicurezza": {
+        nome: "Guanti da Lavoro Sicurezza",
+        categoria: "lavoro",
+        descrizione: "Guanti da lavoro per sicurezza e protezione.",
+        link: "https://www.amazon.it/dp/B079D8H1FW?ie=UTF8&pd_rd_plhdr=t&aref=ZYukvHlh3A&th=1&linkCode=ll2&tag=l0c39-21&linkId=5e337ad376b801c0bb460f88aacd49de&ref=_as_li_ss_tl",
+        messaggio: "Guanti da lavoro per protezione sicura."
+    },
+    "gilet_alta_visibilita": {
+        nome: "Gilet Alta Visibilità Sicurezza",
+        categoria: "lavoro",
+        descrizione: "Gilet ad alta visibilità per sicurezza sul lavoro.",
+        link: "https://www.amazon.it/dp/B09CD49XP2?ie=UTF8&pd_rd_plhdr=t&aref=spmAm7G9kJ&th=1&linkCode=ll2&tag=l0c39-21&linkId=df5a6ee1b4bba2bf87fffc3bf7f9b751&ref=_as_li_ss_tl",
+        messaggio: "Gilet alta visibilità per sicurezza sul lavoro."
+    },
     // SOSTENIBILITA ECO FRIENDLY
     "borsa_ecologica": {
         nome: "Borsa Ecologica Riutilizzabile",
