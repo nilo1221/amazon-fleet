@@ -1042,6 +1042,17 @@ function trackComboClick(context, productNumber) {
     }
     userPreferences.comboClicks[context][`product${productNumber}`]++;
     saveUserPreferences();
+    
+    // Track combo click in GA4
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'combo_click', {
+            'context': context,
+            'product_number': productNumber,
+            'event_category': 'bot_interaction',
+            'event_label': `combo_${context}_product${productNumber}`
+        });
+    }
+    
     console.log(`Combo click tracked: ${context} - product ${productNumber}`);
 }
 
@@ -1243,7 +1254,7 @@ function showAmazonKillerButton(phase) {
         const nicheUrlAbsolute = niche.url.startsWith('/') ? niche.url : '/' + niche.url;
         buttonHTML += `
                 </div>
-                <a href="${nicheUrlAbsolute}?${trackingTag}" class="btn-amazon-killer" target="_blank" rel="noopener">
+                <a href="${nicheUrlAbsolute}?${trackingTag}" class="btn-amazon-killer" target="_blank" rel="noopener" onclick="trackAmazonKillerClick('${categoryKey}', 'all_products')">
                     <i class="fab fa-amazon"></i> Vedi Tutti i Prodotti
                 </a>
             </div>
@@ -1253,7 +1264,7 @@ function showAmazonKillerButton(phase) {
         const nicheUrl = niche ? (niche.url.startsWith('/') ? niche.url : '/' + niche.url) : '#';
         buttonHTML = `
             <div class="amazon-killer-container">
-                <a href="${nicheUrl}?${trackingTag}" class="btn-amazon-killer" target="_blank" rel="noopener">
+                <a href="${nicheUrl}?${trackingTag}" class="btn-amazon-killer" target="_blank" rel="noopener" onclick="trackAmazonKillerClick('${categoryKey}', 'top_products')">
                     <i class="fab fa-amazon"></i> Vedi Top 5 Prodotti
                 </a>
             </div>
@@ -1583,6 +1594,16 @@ function selectMacroCategory(macroKey) {
     const macro = macroCategories[macroKey];
     if (!macro) return;
     
+    // Track macro category selection in GA4
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'bot_macro_category_selected', {
+            'macro_category': macro.name,
+            'macro_key': macroKey,
+            'event_category': 'bot_interaction',
+            'event_label': 'macro_selection'
+        });
+    }
+    
     addMessage(`Hai selezionato: ${macro.icon} ${macro.name}`, 'user');
     
     // Reset abandonment timer on user interaction
@@ -1631,6 +1652,14 @@ function closeChat() {
     chatOpen = false;
     chatWindow.classList.remove('active');
     chatButton.classList.remove('active');
+    
+    // Track chat close in GA4
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'bot_close', {
+            'event_category': 'bot_interaction',
+            'event_label': 'chat_closed'
+        });
+    }
 }
 
 // Show Spotify player in chat
@@ -1810,6 +1839,15 @@ async function sendMessage() {
     
     const message = chatInput.value.trim();
     if (!message) return;
+    
+    // Track user message in GA4
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'bot_message_sent', {
+            'message_length': message.length,
+            'event_category': 'bot_interaction',
+            'event_label': 'user_message'
+        });
+    }
     
     // Add user message
     addMessage(message, 'user');
@@ -2393,6 +2431,16 @@ function selectCategoryFromButton(categoryKey) {
         // Track visit for personalization
         trackCategoryVisit(categoryKey);
         
+        // Track category selection in GA4
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'bot_category_selected', {
+                'category_name': category.name,
+                'category_key': categoryKey,
+                'event_category': 'bot_interaction',
+                'event_label': 'category_selection'
+            });
+        }
+        
         addMessage(`Hai selezionato: ${category.name}`, 'user');
         
         // Reset abandonment timer on user interaction
@@ -2493,3 +2541,15 @@ document.addEventListener('DOMContentLoaded', function() {
         chatInput.addEventListener('keypress', handleKeyPress);
     }
 });
+
+// Track Amazon Killer button clicks in GA4
+function trackAmazonKillerClick(categoryKey, buttonType) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'bot_amazon_killer_click', {
+            'category_key': categoryKey,
+            'button_type': buttonType,
+            'event_category': 'bot_interaction',
+            'event_label': 'amazon_killer_button'
+        });
+    }
+}

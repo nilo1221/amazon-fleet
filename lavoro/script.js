@@ -110,6 +110,15 @@ function goToNextPage() {
     if (currentPage < maxPage) {
         currentPage++;
         renderProducts();
+        
+        // Track carousel navigation
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'carousel_next', {
+                'page': currentPage,
+                'event_category': 'carousel_interaction',
+                'event_label': 'next_page'
+            });
+        }
     }
 }
 
@@ -117,6 +126,15 @@ function goToPrevPage() {
     if (currentPage > 0) {
         currentPage--;
         renderProducts();
+        
+        // Track carousel navigation
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'carousel_prev', {
+                'page': currentPage,
+                'event_category': 'carousel_interaction',
+                'event_label': 'prev_page'
+            });
+        }
     }
 }
 
@@ -354,3 +372,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }, 30000);
+
+// Track Bootstrap carousel slide changes
+document.addEventListener('DOMContentLoaded', function() {
+    const comparisonCarousel = document.getElementById('comparisonCarousel');
+    if (comparisonCarousel) {
+        comparisonCarousel.addEventListener('slide.bs.carousel', function(event) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'carousel_slide_change', {
+                    'slide_index': event.to,
+                    'carousel_id': 'comparisonCarousel',
+                    'event_category': 'carousel_interaction',
+                    'event_label': 'comparison_carousel'
+                });
+            }
+        });
+    }
+});
