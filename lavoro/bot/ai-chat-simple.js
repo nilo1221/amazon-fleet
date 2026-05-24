@@ -694,6 +694,165 @@ const catalogoProdotti = {
         link: "https://www.amazon.it/dp/B00T7L20AQ?th=1&linkCode=ll2&tag=l0c39-21&linkId=425913cbbff678f4faae0baf8f6c7bb4&ref=_as_li_ss_tl",
         messaggio: "Creatina pura per massimizzare forza e recupero muscolare."
     },
+    // SMART HOME DOMOTICA
+    "philips_hue": {
+        nome: "Philips Hue White & Color Ambiance",
+        categoria: "smart-home",
+        descrizione: "Kit illuminazione intelligente con 2 lampadine e bridge.",
+        link: "https://www.amazon.it/dp/B07XBRBLZ6?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123def456&ref=_as_li_ss_tl",
+        messaggio: "Illuminazione smart per la tua casa."
+    },
+    // PET CARE INTELLIGENTE
+    "petkit_pura": {
+        nome: "PETKIT Pura Max 2 Lettiera Gatto Autopulente",
+        categoria: "pet-care",
+        descrizione: "Lettiera autopulente con controllo app e design moderno.",
+        link: "https://www.amazon.it/PETKIT-Autopulente-Automatica-Antiodore-Controllo/dp/B0D9QJZ7FG?&linkCode=ll2&tag=l0c39-21&linkId=2db071e67a1cd179da498fe5a20b50a3&ref=_as_li_ss_tl",
+        messaggio: "Lettiera autopulente per il comfort del tuo gatto."
+    },
+    "fockety_mangiatoia": {
+        nome: "Fockety Mangiatoia Automatica per Gatti",
+        categoria: "pet-care",
+        descrizione: "Mangiatoia automatica con timer per alimentazione programmata.",
+        link: "https://www.amazon.it/dp/B0D6WBXY8M?&linkCode=ll2&tag=l0c39-21&linkId=7ebc2a8ea2ea3e0228163422202800a8&ref=_as_li_ss_tl",
+        messaggio: "Mangiatoia automatica per l'alimentazione regolare."
+    },
+    // CINEMA TV
+    "samsung_qled": {
+        nome: "Samsung QLED 4K Smart TV",
+        categoria: "cinema",
+        descrizione: "TV 4K QLED con smart functions e alta qualità immagine.",
+        link: "https://www.amazon.it/dp/B08XGQZV5R?th=1&linkCode=ll2&tag=l0c39-21&linkId=def456ghi789&ref=_as_li_ss_tl",
+        messaggio: "TV 4K per la migliore esperienza home cinema."
+    },
+    // SMARTPHONE TECH
+    "iphone_15": {
+        nome: "Apple iPhone 15",
+        categoria: "smartphone",
+        descrizione: "Smartphone Apple con Dynamic Island e fotocamera avanzata.",
+        link: "https://www.amazon.it/dp/B0CHX1W1XY?th=1&linkCode=ll2&tag=l0c39-21&linkId=ghi789jkl012&ref=_as_li_ss_tl",
+        messaggio: "iPhone 15 per la migliore esperienza mobile."
+    },
+    // TECH
+    "airpods_pro": {
+        nome: "Apple AirPods Pro",
+        categoria: "tech",
+        descrizione: "Cuffie wireless con cancellazione rumore attiva.",
+        link: "https://www.amazon.it/dp/B09JFJWH5Z?th=1&linkCode=ll2&tag=l0c39-21&linkId=jkl012mno345&ref=_as_li_ss_tl",
+        messaggio: "Cuffie wireless premium per audio di qualità."
+    },
+    // MODA DONNA
+    "borsa_michael_kors": {
+        nome: "Michael Kors Borsa a Tracolla",
+        categoria: "moda-donna",
+        descrizione: "Borsa elegante in pelle con finiture metalliche.",
+        link: "https://www.amazon.it/dp/B08X5Y7Z8W?th=1&linkCode=ll2&tag=l0c39-21&linkId=mno345pqr678&ref=_as_li_ss_tl",
+        messaggio: "Borsa elegante per completare il tuo look."
+    },
+    // MODA UOMO
+    "cintura_hugo_boss": {
+        nome: "HUGO BOSS Cintura in Pelle",
+        categoria: "moda-uomo",
+        descrizione: "Cintura in pelle con fibbia metallica logo.",
+        link: "https://www.amazon.it/dp/B07Z8X5Y7Z?th=1&linkCode=ll2&tag=l0c39-21&linkId=pqr678stu901&ref=_as_li_ss_tl",
+        messaggio: "Cintura elegante per lo stile maschile."
+    },
+    // ARREDAMENTO CASA
+    "tavolo_extensible": {
+        nome: "Tavolo da Pranzo Extensible",
+        categoria: "arredamento",
+        descrizione: "Tavolo allungabile in legno per sala da pranzo.",
+        link: "https://www.amazon.it/dp/B08X9Y8Z0W?th=1&linkCode=ll2&tag=l0c39-21&linkId=stu901vwx234&ref=_as_li_ss_tl",
+        messaggio: "Tavolo elegante per la tua sala da pranzo."
+    },
+    // ACCESSORI MODA
+    "occhiali_da_sole": {
+        nome: "Ray-Ban Occhiali da Sole Aviator",
+        categoria: "accessori",
+        descrizione: "Occhiali da sole classici con montatura metallica.",
+        link: "https://www.amazon.it/dp/B00M7T8K3S?th=1&linkCode=ll2&tag=l0c39-21&linkId=vwx234yzd345&ref=_as_li_ss_tl",
+        messaggio: "Occhiali da sole iconici per proteggere gli occhi."
+    },
+    // BENESSERE CURA PERSONALE
+    "spazzola_elettrica": {
+        nome: "Philips Sonicare Spazzola Elettrica",
+        categoria: "benessere",
+        descrizione: "Spazzola elettrica sonica per igiene orale avanzata.",
+        link: "https://www.amazon.it/dp/B07X1Y2Z3W?th=1&linkCode=ll2&tag=l0c39-21&linkId=yzd345abc456&ref=_as_li_ss_tl",
+        messaggio: "Spazzola elettrica per igiene orale perfetta."
+    },
+    // GIOCHI DA TAVOLO
+    "monopoly": {
+        nome: "Monopoly Edizione Classica",
+        categoria: "giochi",
+        descrizione: "Gioco da tavolo classico per serate divertenti.",
+        link: "https://www.amazon.it/dp/B00MEBHI2W?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc456def567&ref=_as_li_ss_tl",
+        messaggio: "Monopoly classico per serate con amici."
+    },
+    // LIBRI EREADER
+    "kindle_paperwhite": {
+        nome: "Amazon Kindle Paperwhite",
+        categoria: "libri",
+        descrizione: "E-reader con schermo ad alta risoluzione e luce integrata.",
+        link: "https://www.amazon.it/dp/B09MSZQK5X?th=1&linkCode=ll2&tag=l0c39-21&linkId=def567ghi678&ref=_as_li_ss_tl",
+        messaggio: "Kindle Paperwhite per leggere ovunque."
+    },
+    // PROFUMI BELLEZZA
+    "dior_sauvage": {
+        nome: "Dior Sauvage Eau de Parfum",
+        categoria: "profumi",
+        descrizione: "Profumo maschile con note fresche e legnose.",
+        link: "https://www.amazon.it/dp/B018O8I2F2?th=1&linkCode=ll2&tag=l0c39-21&linkId=ghi678jkl789&ref=_as_li_ss_tl",
+        messaggio: "Profumo iconico per uomo sicuro di sé."
+    },
+    // ABBIGLIAMENTO LAVORO
+    "scarpe_antinfortunistiche": {
+        nome: "Scarpe Antinfortunistiche da Lavoro",
+        categoria: "lavoro",
+        descrizione: "Scarpe da lavoro con protezione punta acciaio.",
+        link: "https://www.amazon.it/dp/B08X2Y3Z4W?th=1&linkCode=ll2&tag=l0c39-21&linkId=jkl789mno890&ref=_as_li_ss_tl",
+        messaggio: "Scarpe da lavoro sicure e confortevoli."
+    },
+    // SOSTENIBILITA ECO FRIENDLY
+    "borsa_ecologica": {
+        nome: "Borsa Ecologica Riutilizzabile",
+        categoria: "sostenibilita",
+        descrizione: "Borsa in cotone organico per la spesa sostenibile.",
+        link: "https://www.amazon.it/dp/B08X3Z4Y5W?th=1&linkCode=ll2&tag=l0c39-21&linkId=mno890pqr901&ref=_as_li_ss_tl",
+        messaggio: "Borsa ecologica per ridurre l'impatto ambientale."
+    },
+    // UFFICIO PRODUTTIVO
+    "sedia_ufficio": {
+        nome: "Sedia da Ufficio Ergonomica",
+        categoria: "ufficio",
+        descrizione: "Sedia ergonomica con supporto lombare regolabile.",
+        link: "https://www.amazon.it/dp/B08X4Y5Z6W?th=1&linkCode=ll2&tag=l0c39-21&linkId=pqr901stu012&ref=_as_li_ss_tl",
+        messaggio: "Sedia ergonomica per lavorare in comfort."
+    },
+    // VIAGGI VACANZE
+    "valigia_rigida": {
+        nome: "Samsonite Valigia Rigida",
+        categoria: "viaggi",
+        descrizione: "Valigia rigida con ruote e lucchetto TSA.",
+        link: "https://www.amazon.it/dp/B07Z9Y0X1W?th=1&linkCode=ll2&tag=l0c39-21&linkId=stu012vwx123&ref=_as_li_ss_tl",
+        messaggio: "Valigia robusta per i tuoi viaggi."
+    },
+    // FOTOGRAFIA MOBILE
+    "obiettivo_macro": {
+        nome: "Obiettivo Macro per Smartphone",
+        categoria: "fotografia",
+        descrizione: "Lente macro per fotografia ravvicinata con smartphone.",
+        link: "https://www.amazon.it/dp/B08X5Z6Y7W?th=1&linkCode=ll2&tag=l0c39-21&linkId=vwx123yzd234&ref=_as_li_ss_tl",
+        messaggio: "Obiettivo macro per foto dettagliate."
+    },
+    // DVD BLURAY
+    "box_office": {
+        nome: "Box Office Film Collection",
+        categoria: "dvd",
+        descrizione: "Collezione di film classici in Blu-ray.",
+        link: "https://www.amazon.it/dp/B08X6Y7Z8W?th=1&linkCode=ll2&tag=l0c39-21&linkId=yzd234abc345&ref=_as_li_ss_tl",
+        messaggio: "Collezione di film per serate cinema a casa."
+    },
     // PC GAMING
     "monitor_msi": {
         nome: "MSI Monitor Gaming G255F",
@@ -930,7 +1089,26 @@ const comboMessages = {
     "outdoor": "Che bello, vai in campeggio! 🌲 Guarda, se vai in natura come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per dormire bene e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
     "caldo": "Che giornata calda! ❄️ Guarda, se anche tu soffri il caldo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per rinfrescarmi e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una vera salvezza in questi giorni!",
     "bibite-bevande": "Ehi, cerchi qualcosa di rinfrescante! 🥤 Guarda, se vuoi goderti una bibita fresca come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per il relax e una scorta di {prodottoAncora} per non dover andare al supermercato. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
-    "fitness": "Ehi, vedo che ti alleni! 💪 Guarda, se ti alleni come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per l'allenamento e una scorta di {prodottoAncora} per idratarmi durante l'workout. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale per i risultati!"
+    "fitness": "Ehi, vedo che ti alleni! 💪 Guarda, se ti alleni come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per l'allenamento e una scorta di {prodottoAncora} per idratarmi durante l'workout. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale per i risultati!",
+    "smart-home": "Ehi, rendi la tua casa intelligente! 🏠 Guarda, se vuoi automatizzare la casa come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il controllo smart e una scorta di {prodottoAncora} per rilassarmi. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
+    "pet-care": "Ehi, ti prendi cura del tuo pet! 🐾 Guarda, se ami i tuoi animali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il loro comfort e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
+    "cinema": "Ehi, vuoi goderti un film a casa! 🎬 Guarda, se ami il cinema come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la migliore esperienza e una scorta di {prodottoAncora} per lo snack perfetto. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
+    "smartphone": "Ehi, sei sempre connesso! 📱 Guarda, se usi il telefono come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per migliorare l'esperienza e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
+    "tech": "Ehi, ami la tecnologia! 🔧 Guarda, se usi gadget come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il mio setup e una scorta di {prodottoAncora} per non fermarmi. Ti lascio qui i link a entrambi, ti assicuro che è comodissimo!",
+    "moda-donna": "Ehi, vuoi essere alla moda! 👗 Guarda, se curi il tuo stile come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per completare il look e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
+    "moda-uomo": "Ehi, vuoi uno stile unico! 👔 Guarda, se curi il tuo look come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per distinguerti e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
+    "arredamento": "Ehi, arredi la tua casa! 🏡 Guarda, se vuoi una casa bella come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per lo stile e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
+    "accessori": "Ehi, completi il tuo look! 👜 Guarda, se ami gli accessori come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il dettaglio perfetto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
+    "benessere": "Ehi, ti prendi cura di te! 💆 Guarda, se curi il tuo benessere come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la routine e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
+    "giochi": "Ehi, vuoi divertirti! 🎲 Guarda, se ami i giochi come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per serate divertenti e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
+    "libri": "Ehi, ami leggere! 📚 Guarda, se leggi come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per leggere ovunque e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
+    "profumi": "Ehi, vuoi lasciare un'impressione! 🌸 Guarda, se curi il tuo profumo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il tuo stile e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
+    "lavoro": "Ehi, lavori con stile! 👷 Guarda, se curi il tuo abbigliamento da lavoro come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la sicurezza e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
+    "sostenibilita": "Ehi, vuoi essere eco-friendly! 🌱 Guarda, se curi l'ambiente come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per ridurre l'impatto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è importante!",
+    "ufficio": "Ehi, lavori in ufficio! 💼 Guarda, se vuoi produttività come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per lavorare meglio e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
+    "viaggi": "Ehi, vuoi viaggiare! ✈️ Guarda, se ami viaggiare come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il viaggio e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è comodissimo!",
+    "fotografia": "Ehi, ami la fotografia! 📷 Guarda, se scatti foto come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per scatti migliori e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
+    "dvd": "Ehi, vuoi guardare film! 🎞️ Guarda, se ami il cinema come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la collezione e una scorta di {prodottoAncora} per lo snack. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!"
 };
 
 // Funzione per ottenere prodotti dal catalogo in base alla categoria
@@ -959,6 +1137,63 @@ function getContesto() {
     }
     if (currentPath.includes('fitness-casa') || currentUrl.includes('fitness') || currentUrl.includes('palestra') || currentUrl.includes('allenamento')) {
         return 'fitness';
+    }
+    if (currentPath.includes('smart-home-domotica') || currentUrl.includes('smart') || currentUrl.includes('domotica') || currentUrl.includes('home')) {
+        return 'smart-home';
+    }
+    if (currentPath.includes('pet-care-intelligente') || currentUrl.includes('pet') || currentUrl.includes('animali') || currentUrl.includes('gatto') || currentUrl.includes('cane')) {
+        return 'pet-care';
+    }
+    if (currentPath.includes('cinema-tv') || currentUrl.includes('cinema') || currentUrl.includes('tv') || currentUrl.includes('film')) {
+        return 'cinema';
+    }
+    if (currentPath.includes('smartphone-tech') || currentUrl.includes('smartphone') || currentUrl.includes('telefono') || currentUrl.includes('mobile')) {
+        return 'smartphone';
+    }
+    if (currentPath.includes('tech') || currentUrl.includes('tecnologia') || currentUrl.includes('gadget')) {
+        return 'tech';
+    }
+    if (currentPath.includes('moda-donna') || currentUrl.includes('moda') || currentUrl.includes('donna') || currentUrl.includes('femminile')) {
+        return 'moda-donna';
+    }
+    if (currentPath.includes('moda-uomo') || currentUrl.includes('uomo') || currentUrl.includes('maschile')) {
+        return 'moda-uomo';
+    }
+    if (currentPath.includes('arredamento-casa') || currentUrl.includes('arredamento') || currentUrl.includes('casa') || currentUrl.includes('mobili')) {
+        return 'arredamento';
+    }
+    if (currentPath.includes('accessori-moda') || currentUrl.includes('accessori') || currentUrl.includes('borse') || currentUrl.includes('scarpe')) {
+        return 'accessori';
+    }
+    if (currentPath.includes('benessere-cura-personale') || currentUrl.includes('benessere') || currentUrl.includes('cura') || currentUrl.includes('persona')) {
+        return 'benessere';
+    }
+    if (currentPath.includes('giochi-da-tavolo') || currentUrl.includes('giochi') || currentUrl.includes('tavolo') || currentUrl.includes('board')) {
+        return 'giochi';
+    }
+    if (currentPath.includes('libri-ereader') || currentUrl.includes('libri') || currentUrl.includes('ereader') || currentUrl.includes('lettura')) {
+        return 'libri';
+    }
+    if (currentPath.includes('profumi-bellezza') || currentUrl.includes('profumi') || currentUrl.includes('bellezza') || currentUrl.includes('cosmetici')) {
+        return 'profumi';
+    }
+    if (currentPath.includes('abbigliamento-lavoro') || currentUrl.includes('lavoro') || currentUrl.includes('abbigliamento') || currentUrl.includes('uniformi')) {
+        return 'lavoro';
+    }
+    if (currentPath.includes('sostenibilita-eco-friendly') || currentUrl.includes('sostenibilita') || currentUrl.includes('eco') || currentUrl.includes('ambiente')) {
+        return 'sostenibilita';
+    }
+    if (currentPath.includes('ufficio-produttivo') || currentUrl.includes('ufficio') || currentUrl.includes('produttivo') || currentUrl.includes('desk')) {
+        return 'ufficio';
+    }
+    if (currentPath.includes('viaggi-vacanze') || currentUrl.includes('viaggi') || currentUrl.includes('vacanze') || currentUrl.includes('valigie')) {
+        return 'viaggi';
+    }
+    if (currentPath.includes('fotografia-mobile') || currentUrl.includes('fotografia') || currentUrl.includes('foto') || currentUrl.includes('camera')) {
+        return 'fotografia';
+    }
+    if (currentPath.includes('dvd-bluray') || currentUrl.includes('dvd') || currentUrl.includes('bluray') || currentUrl.includes('film')) {
+        return 'dvd';
     }
     if (currentPath.includes('outdoor-camping') || currentUrl.includes('outdoor') || currentUrl.includes('campeggio')) {
         return 'outdoor';
