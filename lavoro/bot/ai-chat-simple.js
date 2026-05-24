@@ -1666,48 +1666,43 @@ function detectScroll() {
 }
 
 // Detect scroll to trigger combo message at 50%
+let comboTimerStarted = false;
+let comboInterval = null;
+
 function detectComboScroll() {
-    const urgencyShown = sessionStorage.getItem('urgencyComboShown');
-    // Rimuovi controllo sessionStorage per farlo apparire sempre (per testing)
-    // if (urgencyShown === 'true') return;
+    if (comboTimerStarted) return;
     
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercentage = (scrollTop / scrollHeight) * 100;
     
     if (scrollPercentage >= 50) {
-        let context = getContesto();
+        comboTimerStarted = true;
         
-        // Fallback: se contesto è null, usa 'mare' come default
-        if (!context) {
-            context = 'mare';
-        }
+        // Mostra il messaggio combo subito al 50%
+        showComboMessage();
         
-        const prodotti = getProdottiByCategoria(context);
-        
-        // Fallback: se non ci sono prodotti per il contesto, usa prodotti da 'mare'
-        if (!prodotti || prodotti.length === 0) {
-            const prodottiMare = getProdottiByCategoria('mare');
-            if (prodottiMare && prodottiMare.length > 0) {
-                // Apri il chat se non è aperto
-                if (!chatOpen) {
-                    toggleChat();
-                }
-                
-                // Pulisci il chat e mostra il messaggio di combo
-                setTimeout(() => {
-                    const chatMessages = document.getElementById('chat-messages');
-                    if (chatMessages) {
-                        chatMessages.innerHTML = ''; // Pulisci tutti i messaggi
-                    }
-                    showUrgencyComboMessage('mare');
-                    sessionStorage.setItem('urgencyComboShown', 'true');
-                }, 500);
-            }
-            return;
-        }
-        
-        if (context && prodotti && prodotti.length > 0) {
+        // Poi mostra ogni 30 secondi
+        comboInterval = setInterval(() => {
+            showComboMessage();
+        }, 30000); // 30 secondi
+    }
+}
+
+function showComboMessage() {
+    let context = getContesto();
+    
+    // Fallback: se contesto è null, usa 'mare' come default
+    if (!context) {
+        context = 'mare';
+    }
+    
+    const prodotti = getProdottiByCategoria(context);
+    
+    // Fallback: se non ci sono prodotti per il contesto, usa prodotti da 'mare'
+    if (!prodotti || prodotti.length === 0) {
+        const prodottiMare = getProdottiByCategoria('mare');
+        if (prodottiMare && prodottiMare.length > 0) {
             // Apri il chat se non è aperto
             if (!chatOpen) {
                 toggleChat();
@@ -1719,10 +1714,26 @@ function detectComboScroll() {
                 if (chatMessages) {
                     chatMessages.innerHTML = ''; // Pulisci tutti i messaggi
                 }
-                showUrgencyComboMessage(context);
-                sessionStorage.setItem('urgencyComboShown', 'true');
+                showUrgencyComboMessage('mare');
             }, 500);
         }
+        return;
+    }
+    
+    if (context && prodotti && prodotti.length > 0) {
+        // Apri il chat se non è aperto
+        if (!chatOpen) {
+            toggleChat();
+        }
+        
+        // Pulisci il chat e mostra il messaggio di combo
+        setTimeout(() => {
+            const chatMessages = document.getElementById('chat-messages');
+            if (chatMessages) {
+                chatMessages.innerHTML = ''; // Pulisci tutti i messaggi
+            }
+            showUrgencyComboMessage(context);
+        }, 500);
     }
 }
 
