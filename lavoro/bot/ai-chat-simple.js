@@ -655,8 +655,15 @@ const catalogoProdotti = {
         nome: "Pepsi Max",
         categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
         descrizione: "Rinfrescante senza zuccheri, perfetta per idratarsi in ogni situazione.",
-        link: "https://www.amazon.it/Pepsi-Max-Bevanda-Analcolica-Zucchero/dp/B08VVTS94X?&linkCode=ll2&tag=l0c39-21&linkId=0617cdcc9bc8611a7b37c1cbe86468aa&ref=_as_li_ss_tl",
+        link: "https://www.amazon.it/Pepsi-Max-Bevanda-Analcolica-Zucchero/dp/B08VVTS94X?&linkCode=ll2&tag=l0c39-21&linkId=3b6054372f292480c97d501dcdb834b6&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Pepsi Max per rinfrescarmi, se le vuoi ti do il link."
+    },
+    "red_bull": {
+        nome: "Red Bull Energy Drink, 250 ml (24 Lattine)",
+        categoria: ["fitness"],
+        descrizione: "Bevanda energetica per sportivi, perfetta per allenamenti intensi.",
+        link: "https://www.amazon.it/Red-Bull-Energy-Cartone-Lattine/dp/B01G7F3UGC?th=1&linkCode=ll2&tag=l0c39-21&linkId=5d2abd95aeb04ce933f0f60e9aeab00f&ref=_as_li_ss_tl",
+        messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di energia. Io uso Red Bull per avere la carica giusta, se la vuoi ti do il link."
     },
     "fanta_original": {
         nome: "Fanta Original",
@@ -1236,8 +1243,15 @@ function showUrgencyComboMessage(context) {
     console.log('Prodotto principale selezionato a caso:', prodottoPrincipale);
     
     // Seleziona una bibita a caso per la rotazione
-    const indiceBibita = Math.floor(Math.random() * idBibite.length);
-    const idBibitaScelta = idBibite[indiceBibita];
+    let idBibitaScelta;
+    if (context === 'fitness') {
+        // Per fitness usa solo bevande sportive (Red Bull)
+        idBibitaScelta = 'red_bull';
+    } else {
+        // Per altri contesti usa le bibite normali
+        const indiceBibita = Math.floor(Math.random() * idBibite.length);
+        idBibitaScelta = idBibite[indiceBibita];
+    }
     const prodottoAncora = catalogoProdotti[idBibitaScelta];
     console.log('Bibita selezionata a caso:', prodottoAncora);
     
