@@ -1193,33 +1193,128 @@ const catalogoProdotti = {
     }
 };
 
-// comboMessages - Messaggi unici per ogni contesto con placeholder
+// comboMessages - Array di messaggi per ogni contesto con placeholder
 const comboMessages = {
-    "mare": "Ehi, vedo che ti stai preparando per la spiaggia! 🌊 Guarda, se passi una giornata al mare come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per godermi il relax e una scorta di {prodottoAncora} per non dover correre al bar. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
-    "pc": "Ehi, ma ti stai preparando per lavorare? 🔥 Guarda, se passi lunghe sessioni come me, non posso fare a meno di due cose: delle {prodottoNicchia} per concentrarmi e una scorta di {prodottoAncora} per non dover fermarmi quando ho sete. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
-    "outdoor": "Che bello, vai in campeggio! 🌲 Guarda, se vai in natura come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per dormire bene e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
-    "caldo": "Che giornata calda! ❄️ Guarda, se anche tu soffri il caldo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per rinfrescarmi e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una vera salvezza in questi giorni!",
-    "bibite-bevande": "Ehi, cerchi qualcosa di rinfrescante! 🥤 Guarda, se vuoi goderti una bibita fresca come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per il relax e una scorta di {prodottoAncora} per non dover andare al supermercato. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
-    "fitness": "Ehi, vedo che ti alleni! 💪 Guarda, se ti alleni come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per l'allenamento e una scorta di {prodottoAncora} per idratarmi durante l'workout. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale per i risultati!",
-    "smart-home": "Ehi, rendi la tua casa intelligente! 🏠 Guarda, se vuoi automatizzare la casa come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il controllo smart e una scorta di {prodottoAncora} per rilassarmi. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
-    "pet-care": "Ehi, ti prendi cura del tuo pet! 🐾 Guarda, se ami i tuoi animali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il loro comfort e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
-    "cinema": "Ehi, vuoi goderti un film a casa! 🎬 Guarda, se ami il cinema come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la migliore esperienza e una scorta di {prodottoAncora} per lo snack perfetto. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
-    "smartphone": "Ehi, sei sempre connesso! 📱 Guarda, se usi il telefono come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per migliorare l'esperienza e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
-    "tech": "Ehi, ami la tecnologia! 🔧 Guarda, se usi gadget come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il mio setup e una scorta di {prodottoAncora} per non fermarmi. Ti lascio qui i link a entrambi, ti assicuro che è comodissimo!",
-    "moda-donna": "Ehi, vuoi essere alla moda! 👗 Guarda, se curi il tuo stile come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per completare il look e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
-    "moda-uomo": "Ehi, vuoi uno stile unico! 👔 Guarda, se curi il tuo look come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per distinguerti e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
-    "arredamento": "Ehi, arredi la tua casa! 🏡 Guarda, se vuoi una casa bella come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per lo stile e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
-    "accessori": "Ehi, completi il tuo look! 👜 Guarda, se ami gli accessori come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il dettaglio perfetto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
-    "benessere": "Ehi, ti prendi cura di te! 💆 Guarda, se curi il tuo benessere come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la routine e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
-    "giochi": "Ehi, vuoi divertirti! 🎲 Guarda, se ami i giochi come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per serate divertenti e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
-    "libri": "Ehi, ami leggere! 📚 Guarda, se leggi come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per leggere ovunque e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
-    "profumi": "Ehi, vuoi lasciare un'impressione! 🌸 Guarda, se curi il tuo profumo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il tuo stile e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
-    "lavoro": "Ehi, lavori con stile! 👷 Guarda, se curi il tuo abbigliamento da lavoro come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la sicurezza e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
-    "sostenibilita": "Ehi, vuoi essere eco-friendly! 🌱 Guarda, se curi l'ambiente come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per ridurre l'impatto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è importante!",
-    "ufficio": "Ehi, lavori in ufficio! 💼 Guarda, se vuoi produttività come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per lavorare meglio e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
-    "viaggi": "Ehi, vuoi viaggiare! ✈️ Guarda, se ami viaggiare come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il viaggio e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è comodissimo!",
-    "fotografia": "Ehi, ami la fotografia! 📷 Guarda, se scatti foto come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per scatti migliori e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
-    "dvd": "Ehi, vuoi guardare film! 🎞️ Guarda, se ami il cinema come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la collezione e una scorta di {prodottoAncora} per lo snack. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!"
+    "mare": [
+        "Ehi, vedo che ti stai preparando per la spiaggia! 🌊 Guarda, se passi una giornata al mare come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per godermi il relax e una scorta di {prodottoAncora} per non dover correre al bar. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
+        "Che bella giornata per il mare! 🏖️ Guarda, se vai al mare come me, non puoi fare a meno di due cose: un {prodottoNicchia} per il comfort e una {prodottoAncora} per rinfrescarti. Ecco i link, fidati!",
+        "Ti piace il mare? 🌊 Guarda, per una giornata perfetta al mare servono due cose: un {prodottoNicchia} e una {prodottoAncora}. Ti lascio i link, è fantastico!"
+    ],
+    "pc": [
+        "Ehi, ma ti stai preparando per lavorare? 🔥 Guarda, se passi lunghe sessioni come me, non posso fare a meno di due cose: delle {prodottoNicchia} per concentrarmi e una scorta di {prodottoAncora} per non dover fermarmi quando ho sete. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
+        "Lavori al computer? 💻 Guarda, per sessioni produttive servono due cose: {prodottoNicchia} e {prodottoAncora}. Ecco i link, ti assicuro che è essenziale!",
+        "Ti serve energia per il lavoro? ⚡ Guarda, io uso {prodottoNicchia} e {prodottoAncora} per rimanere concentrato. Ti lascio i link!"
+    ],
+    "outdoor": [
+        "Che bello, vai in campeggio! 🌲 Guarda, se vai in natura come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per dormire bene e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
+        "Ami l'outdoor? 🏕️ Guarda, per avventure all'aria aperta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
+        "Ti piace la natura? 🌿 Guarda, io porto sempre {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "caldo": [
+        "Che giornata calda! ❄️ Guarda, se anche tu soffri il caldo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per rinfrescarmi e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una vera salvezza in questi giorni!",
+        "Fa caldo oggi? 🥵 Guarda, per sopravvivere al caldo servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è una salvezza!",
+        "Ti serve rinfrescarsi? ❄️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "fitness": [
+        "Ehi, vedo che ti alleni! 💪 Guarda, se ti alleni come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per l'allenamento e una scorta di {prodottoAncora} per idratarmi durante l'workout. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale per i risultati!",
+        "Ti alleni? 🏋️ Guarda, per workout perfetti servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fondamentale!",
+        "Vuoi risultati? 💪 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "smart-home": [
+        "Ehi, rendi la tua casa intelligente! 🏠 Guarda, se vuoi automatizzare la casa come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il controllo smart e una scorta di {prodottoAncora} per rilassarmi. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
+        "Ami la domotica? 🏠 Guarda, per una casa smart servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fantastico!",
+        "Vuoi automatizzare la casa? 🤖 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "pet-care": [
+        "Ehi, ti prendi cura del tuo pet! 🐾 Guarda, se ami i tuoi animali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il loro comfort e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
+        "Hai animali? 🐱 Guarda, per il loro comfort servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fondamentale!",
+        "Ti prendi cura del tuo pet? 🐕 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "cinema": [
+        "Ehi, vuoi goderti un film a casa! 🎬 Guarda, se ami il cinema come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la migliore esperienza e una scorta di {prodottoAncora} per lo snack perfetto. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
+        "Ami i film? 🎥 Guarda, per l'esperienza perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fantastico!",
+        "Vuoi guardare un film? 🎬 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "smartphone": [
+        "Ehi, sei sempre connesso! 📱 Guarda, se usi il telefono come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per migliorare l'esperienza e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
+        "Usi sempre il telefono? 📲 Guarda, per la migliore esperienza servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
+        "Vuoi migliorare il tuo telefono? 📱 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "tech": [
+        "Ehi, ami la tecnologia! 🔧 Guarda, se usi gadget come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il mio setup e una scorta di {prodottoAncora} per non fermarmi. Ti lascio qui i link a entrambi, ti assicuro che è comodissimo!",
+        "Ami la tecnologia? 💻 Guarda, per il setup perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è comodissimo!",
+        "Vuoi gadget tech? 🔧 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "moda-donna": [
+        "Ehi, vuoi essere alla moda! 👗 Guarda, se curi il tuo stile come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per completare il look e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
+        "Vuoi essere elegante? 👠 Guarda, per il look perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
+        "Ti piace la moda? 💃 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "moda-uomo": [
+        "Ehi, vuoi uno stile unico! 👔 Guarda, se curi il tuo look come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per distinguerti e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
+        "Vuoi stile maschile? 🤵 Guarda, per distinguerti servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
+        "Ti piace lo stile? 👔 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "arredamento": [
+        "Ehi, arredi la tua casa! 🏡 Guarda, se vuoi una casa bella come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per lo stile e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
+        "Vuoi arredare casa? 🛋️ Guarda, per lo stile perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
+        "Ti piace l'arredamento? 🏠 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "accessori": [
+        "Ehi, completi il tuo look! 👜 Guarda, se ami gli accessori come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il dettaglio perfetto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
+        "Vuoi accessori? 👒 Guarda, per il dettaglio perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fondamentale!",
+        "Ti piace gli accessori? 💼 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "benessere": [
+        "Ehi, ti prendi cura di te! 💆 Guarda, se curi il tuo benessere come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la routine e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
+        "Vuoi benessere? 🧴 Guarda, per la routine perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
+        "Ti piace la cura personale? 💆 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "giochi": [
+        "Ehi, vuoi divertirti! 🎲 Guarda, se ami i giochi come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per serate divertenti e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
+        "Ami i giochi? 🎮 Guarda, per serate divertenti servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
+        "Vuoi divertirti? 🎲 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "libri": [
+        "Ehi, ami leggere! 📚 Guarda, se leggi come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per leggere ovunque e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
+        "Ami leggere? 📖 Guarda, per leggere ovunque servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fantastico!",
+        "Vuoi leggere? 📚 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "profumi": [
+        "Ehi, vuoi lasciare un'impressione! 🌸 Guarda, se curi il tuo profumo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il tuo stile e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
+        "Vuoi profumi? 💐 Guarda, per il tuo stile servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
+        "Ti piace il profumo? 🌸 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "lavoro": [
+        "Ehi, lavori con stile! 👷 Guarda, se curi il tuo abbigliamento da lavoro come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la sicurezza e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
+        "Lavori? 👔 Guarda, per la sicurezza servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fondamentale!",
+        "Vuoi sicurezza al lavoro? 👷 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "sostenibilita": [
+        "Ehi, vuoi essere eco-friendly! 🌱 Guarda, se curi l'ambiente come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per ridurre l'impatto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è importante!",
+        "Vuoi essere eco-friendly? ♻️ Guarda, per ridurre l'impatto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è importante!",
+        "Ti piace l'ambiente? 🌱 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "ufficio": [
+        "Ehi, lavori in ufficio! 💼 Guarda, se vuoi produttività come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per lavorare meglio e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
+        "Lavori in ufficio? 🖥️ Guarda, per la produttività servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
+        "Vuoi produttività? 💼 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "viaggi": [
+        "Ehi, vuoi viaggiare! ✈️ Guarda, se ami viaggiare come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il viaggio e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è comodissimo!",
+        "Ami viaggiare? 🧳 Guarda, per viaggiare servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è comodissimo!",
+        "Vuoi viaggiare? ✈️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "fotografia": [
+        "Ehi, ami la fotografia! 📷 Guarda, se scatti foto come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per scatti migliori e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
+        "Ami la fotografia? 📸 Guarda, per scatti migliori servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
+        "Vuoi scattare foto? 📷 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "dvd": [
+        "Ehi, vuoi guardare film! 🎞️ Guarda, se ami il cinema come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la collezione e una scorta di {prodottoAncora} per lo snack. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
+        "Ami i DVD? 📀 Guarda, per la collezione servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fantastico!",
+        "Vuoi collezionare? 🎞️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ]
 };
 
 // Funzione per ottenere prodotti dal catalogo in base alla categoria
@@ -1369,8 +1464,11 @@ function showUrgencyComboMessage(context) {
         return;
     }
     
-    // Prendi il messaggio combo per il contesto
-    const messaggioTemplate = comboMessages[context] || comboMessages['mare'];
+    // Prendi il messaggio combo per il contesto (seleziona random dall'array)
+    const messagesArray = comboMessages[context] || comboMessages['mare'];
+    const messaggioTemplate = Array.isArray(messagesArray) 
+        ? messagesArray[Math.floor(Math.random() * messagesArray.length)]
+        : messagesArray;
     
     // Sostituisci i placeholder
     const messaggioPersonalizzato = messaggioTemplate
@@ -1894,8 +1992,11 @@ function showComboMessage() {
             return;
         }
         
-        // Prendi il messaggio combo per il contesto
-        const messaggioTemplate = comboMessages[context] || comboMessages['mare'];
+        // Prendi il messaggio combo per il contesto (seleziona random dall'array)
+        const messagesArray = comboMessages[context] || comboMessages['mare'];
+        const messaggioTemplate = Array.isArray(messagesArray) 
+            ? messagesArray[Math.floor(Math.random() * messagesArray.length)]
+            : messagesArray;
         
         // Sostituisci i placeholder
         const messaggioPersonalizzato = messaggioTemplate
