@@ -76,6 +76,20 @@ function createProductCard(product) {
     link.className = 'btn btn-warning fw-bold mt-3';
     link.innerHTML = '<i class="fab fa-amazon me-2"></i>Vedi su Amazon';
 
+    // Track product view (impression)
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'view_item', {
+            'item_id': product.link.split('/dp/')[1]?.split('?')[0] || 'unknown',
+            'item_name': product.name,
+            'item_category': product.category,
+            'affiliation': 'Amazon',
+            'currency': 'EUR',
+            'value': 0,
+            'event_category': 'ecommerce',
+            'event_label': 'product_impression'
+        });
+    }
+
     cardBody.appendChild(iconDiv);
     cardBody.appendChild(title);
     cardBody.appendChild(category);
