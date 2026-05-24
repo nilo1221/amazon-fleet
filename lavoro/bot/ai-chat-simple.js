@@ -769,41 +769,9 @@ function startSalesTimers() {
     //     chatButton.style.display = 'none';
     // }
     
-    // Minuto 1: Fase di Ingaggio - Apri chat automaticamente nelle nicchie
-    engagementTimer = setTimeout(() => {
-        const chatWindow = document.getElementById('ai-chat-window');
-        if (chatWindow) {
-            chatWindow.classList.add('active');
-            chatOpen = true;
-            const engagementMessage = `Ti serve aiuto a scegliere il prodotto in ${nicheName}? Ho preparato i migliori prodotti per te.`;
-            addProactiveMessage(engagementMessage);
-            setTimeout(() => {
-                showAmazonKillerButton('1min');
-            }, 500);
-        }
-    }, 1 * 60 * 1000); // 1 minuto
-    
-    // Minuto 2: Fase di Valore
-    valueTimer = setTimeout(() => {
-        if (chatOpen) {
-            const valueMessage = `Non so tu, ma per ${nicheName} cerco sempre la qualità. Questo Kit Premium che ti mostro è quello che uso, mi trovo benissimo. Se ti va dai un'occhiata:`;
-            addProactiveMessage(valueMessage);
-            setTimeout(() => {
-                showAmazonKillerButton('2min');
-            }, 500);
-        }
-    }, 2 * 60 * 1000); // 2 minuti
-    
-    // Minuto 3: Fase di Chiusura
-    closingTimer = setTimeout(() => {
-        if (chatOpen) {
-            const closingMessage = `Ehi, se ti va di dare un'occhiata a questi prodotti di ${nicheName}, te li lascio qui. Io li uso e funzionano bene, magari ti potrebbero servire anche a te.`;
-            addProactiveMessage(closingMessage);
-            setTimeout(() => {
-                showAmazonKillerButton('3min');
-            }, 500);
-        }
-    }, 3 * 60 * 1000); // 3 minuti
+    // Rimossi messaggi generici (minuto 1, 2, 3) nelle nicchie - ridondanti
+    // L'utente è già nella pagina, non ha senso linkare alla stessa pagina
+    // Il sistema combo (70-120 minuti) è più intelligente e pertinente
 }
 
 // Show Amazon Killer Button (CTA grafico) - Step 3: Navigazione Guidata
