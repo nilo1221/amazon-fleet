@@ -239,12 +239,25 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             const productName = this.textContent.trim() || 'Amazon Product';
             const url = this.href;
+            const productCard = this.closest('.product-card');
+            const category = productCard ? productCard.querySelector('.category-badge')?.textContent.trim() || 'Unknown' : 'Unknown';
+            
             if (typeof gtag !== 'undefined') {
-                gtag('event', 'product_click', {
+                gtag('event', 'select_item', {
+                    'item_id': url.split('/dp/')[1]?.split('?')[0] || 'unknown',
+                    'item_name': productName,
+                    'item_category': category,
+                    'affiliation': 'Amazon',
+                    'currency': 'EUR',
+                    'value': 0
+                });
+                
+                gtag('event', 'affiliate_click', {
                     'product_name': productName,
+                    'product_category': category,
                     'product_url': url,
                     'event_category': 'ecommerce',
-                    'event_label': productName
+                    'event_label': 'Amazon Affiliate'
                 });
             }
         });
@@ -289,3 +302,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+    // Add UTM parameters to Amazon links for better tracking
+    const addUTMParams = (url, source, medium, campaign) => {
+        try {
+            const urlObj = new URL(url);
+            urlObj.searchParams.set('utm_source', source);
+            urlObj.searchParams.set('utm_medium', medium);
+            urlObj.searchParams.set('utm_campaign', campaign);
+            urlObj.searchParams.set('utm_content', 'affiliate');
+            return urlObj.toString();
+        } catch (e) {
+            return url;
+        }
+    };
+
+    // Apply UTM parameters to all Amazon links
+    document.querySelectorAll('a[href*="amazon"]').forEach(link => {
+        const currentUrl = link.href;
+        const utmUrl = addUTMParams(currentUrl, 'smartchoicesguide', 'affiliate', 'product_click');
+        link.href = utmUrl;
+    });
+
+    // Track scroll depth for engagement
+    let maxScroll = 0;
+    window.addEventListener('scroll', () => {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        if (scrollPercent > maxScroll) {
+            maxScroll = scrollPercent;
+            if (maxScroll === 25 || maxScroll === 50 || maxScroll === 75 || maxScroll === 100) {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'scroll_tracking', {
+                        'percent_scrolled': maxScroll,
+                        'event_category': 'engagement'
+                    });
+                }
+            }
+        }
+    });
+
+    // Track time on page
+    let timeOnPage = 0;
+    setInterval(() => {
+        timeOnPage += 30;
+        if (timeOnPage === 30 || timeOnPage === 60 || timeOnPage === 120 || timeOnPage === 300) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'time_on_page', {
+                    'time_seconds': timeOnPage,
+                    'event_category': 'engagement'
+                });
+            }
+        }
+    }, 30000);
