@@ -1668,7 +1668,6 @@ function detectScroll() {
 // Detect scroll to trigger combo message at 50%
 let comboTimerStarted = false;
 let comboInterval = null;
-let prodottiMostrati = {}; // Tieni traccia dei prodotti già mostrati per contesto
 
 function detectComboScroll() {
     if (comboTimerStarted) return;
@@ -1712,37 +1711,16 @@ function showComboMessage() {
     }
     
     if (context && prodotti && prodotti.length > 0) {
-        // Inizializza array per questo contesto se non esiste
-        if (!prodottiMostrati[context]) {
-            prodottiMostrati[context] = [];
-        }
-        
-        // Filtra i prodotti escludendo quelli già mostrati per questo contesto
-        const prodottiNonMostrati = prodotti.filter(p => !prodottiMostrati[context].includes(p.id));
-        
-        // Se tutti i prodotti sono stati mostrati per questo contesto, ricomincia il ciclo
-        if (prodottiNonMostrati.length === 0) {
-            prodottiMostrati[context] = [];
-        }
-        
-        // Seleziona prodotti da mostrare (non mostrati o ricominciato)
-        const prodottiDaUsare = prodottiMostrati[context].length === 0 ? prodotti : prodottiNonMostrati;
-        
         // Filtra i prodotti della categoria escludendo le bibite
         const idBibite = ['coca_cola_zero', 'pepsi_max', 'fanta_original', 'l_angelica_waterstick', 'jamaica_zenzero'];
-        const prodottiFiltrati = prodottiDaUsare.filter(p => !idBibite.includes(p.id));
+        const prodottiFiltrati = prodotti.filter(p => !idBibite.includes(p.id));
         
         // Se non ci sono prodotti filtrati, usa tutti i prodotti
-        const prodottiFinali = prodottiFiltrati.length > 0 ? prodottiFiltrati : prodottiDaUsare;
+        const prodottiFinali = prodottiFiltrati.length > 0 ? prodottiFiltrati : prodotti;
         
-        // Seleziona un prodotto a caso
+        // Seleziona un prodotto a caso (sempre diverso perché random)
         const indiceCasuale = Math.floor(Math.random() * prodottiFinali.length);
         const prodottoPrincipale = prodottiFinali[indiceCasuale];
-        
-        // Aggiungi ai prodotti mostrati per questo contesto
-        if (!prodottiMostrati[context].includes(prodottoPrincipale.id)) {
-            prodottiMostrati[context].push(prodottoPrincipale.id);
-        }
         
         // Seleziona una bibita a caso per la rotazione
         let idBibitaScelta;
