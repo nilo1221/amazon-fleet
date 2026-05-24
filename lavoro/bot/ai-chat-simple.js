@@ -1756,17 +1756,36 @@ function showComboMessage() {
         const indiceCasuale = Math.floor(Math.random() * prodottiFinali.length);
         const prodottoPrincipale = prodottiFinali[indiceCasuale];
         
-        // Seleziona una bibita a caso per la rotazione
+        // Seleziona una bibita a caso per la rotazione basata sui tag
         let idBibitaScelta;
         if (context === 'fitness') {
-            // Per fitness usa solo bevande sportive
-            const idBevandeSportive = ['red_bull', 'enervit_isotonic', 'powerbar_isoactive', 'gomo_energy', 'gatorade_sport'];
-            const indiceBevandaSportiva = Math.floor(Math.random() * idBevandeSportive.length);
-            idBibitaScelta = idBevandeSportive[indiceBevandaSportiva];
+            // Per fitness usa bevande con tag sportivi
+            const tagSportivi = ['sportiva', 'energetica', 'isotonica', 'pre-workout'];
+            const bevandeSportive = Object.keys(catalogoProdotti).filter(id => {
+                const prodotto = catalogoProdotti[id];
+                return prodotto.tag && prodotto.tag.some(tag => tagSportivi.includes(tag));
+            });
+            if (bevandeSportive.length > 0) {
+                const indiceBevanda = Math.floor(Math.random() * bevandeSportive.length);
+                idBibitaScelta = bevandeSportive[indiceBevanda];
+            } else {
+                // Fallback se non ci sono bevande sportive
+                idBibitaScelta = 'red_bull';
+            }
         } else {
-            // Per altri contesti usa le bibite normali
-            const indiceBibita = Math.floor(Math.random() * idBibite.length);
-            idBibitaScelta = idBibite[indiceBibita];
+            // Per altri contesti usa bevande con tag rinfrescanti
+            const tagRinfrescanti = ['rinfrescante', 'senza zucchero', 'classica', 'analcolica', 'drenante', 'naturale'];
+            const bevandeRinfrescanti = Object.keys(catalogoProdotti).filter(id => {
+                const prodotto = catalogoProdotti[id];
+                return prodotto.tag && prodotto.tag.some(tag => tagRinfrescanti.includes(tag));
+            });
+            if (bevandeRinfrescanti.length > 0) {
+                const indiceBevanda = Math.floor(Math.random() * bevandeRinfrescanti.length);
+                idBibitaScelta = bevandeRinfrescanti[indiceBevanda];
+            } else {
+                // Fallback se non ci sono bevande rinfrescanti
+                idBibitaScelta = 'coca_cola_zero';
+            }
         }
         const prodottoAncora = catalogoProdotti[idBibitaScelta];
         
