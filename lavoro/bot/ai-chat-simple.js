@@ -731,10 +731,10 @@ const catalogoProdotti = {
     },
     // SMART HOME DOMOTICA
     "philips_hue": {
-        nome: "Philips Hue White & Color Ambiance",
+        nome: "Philips Hue White & Color Ambiance Starter Kit 2 Lampadine",
         categoria: "smart-home",
-        descrizione: "Kit illuminazione intelligente con 2 lampadine e bridge.",
-        link: "https://www.amazon.it/dp/B07XBRBLZ6?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123def456&ref=_as_li_ss_tl",
+        descrizione: "Kit illuminazione intelligente con 2 lampadine Smart, Hue Bridge e telecomando Smart Button inclusi, Bluetooth.",
+        link: "https://www.amazon.it/Lampadina-Lampadine-Telecomando-Dimmerabili-Bluetooth/dp/B099NRLRG3?th=1&linkCode=ll2&tag=l0c39-21&linkId=219c8455668c9752a083f2fba067000b&ref=_as_li_ss_tl",
         messaggio: "Illuminazione smart per la tua casa."
     },
     // PET CARE INTELLIGENTE
