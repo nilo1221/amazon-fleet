@@ -660,6 +660,14 @@ const catalogoProdotti = {
         link: "https://www.amazon.it/Pepsi-Max-Bevanda-Analcolica-Zucchero/dp/B08VVTS94X?&linkCode=ll2&tag=l0c39-21&linkId=3b6054372f292480c97d501dcdb834b6&ref=_as_li_ss_tl",
         messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Pepsi Max per rinfrescarmi, se le vuoi ti do il link."
     },
+    "oransoda_zero": {
+        nome: "Oransoda Zero",
+        categoria: ["mare", "pc", "outdoor", "caldo", "fitness"],
+        tag: ["senza zucchero", "rinfrescante", "aranciata", "analcolica"],
+        descrizione: "Bevanda gassata all'arancia senza zuccheri, con succo di arance siciliane e senza coloranti.",
+        link: "https://www.amazon.it/allArancia-Loriginale-Aranciata-Siciliane-Coloranti/dp/B0CX6RN9NL?pd_rd_w=2yHUJ&content-id=amzn1.sym.bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_p=bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_r=PFFA4DDBKXSVN2FC1H25&pd_rd_wg=D1XOt&pd_rd_r=50121f40-c47e-4f48-985d-f0021d428a7e&pd_rd_i=B0CX6HFND3&th=1&linkCode=ll2&tag=l0c39-21&linkId=d713fc75412235936992a0b962276211&ref=_as_li_ss_tl",
+        messaggio: "Tipo che giornata calda, ci vorrebbe proprio un'aranciata fresca. E poi io uso la Oransoda Zero per rinfrescarmi, è l'originale aranciata italiana con succo di arance siciliane, se la vuoi ti do il link."
+    },
     "red_bull": {
         nome: "Red Bull Energy Drink, 250 ml (24 Lattine)",
         categoria: ["fitness"],
