@@ -959,6 +959,34 @@ const catalogoProdotti = {
         link: "https://www.amazon.it/dp/B09CD49XP2?ie=UTF8&pd_rd_plhdr=t&aref=spmAm7G9kJ&th=1&linkCode=ll2&tag=l0c39-21&linkId=df5a6ee1b4bba2bf87fffc3bf7f9b751&ref=_as_li_ss_tl",
         messaggio: "Gilet alta visibilità per sicurezza sul lavoro."
     },
+    "pantaloni_cargo_tattici": {
+        nome: "Pantaloni Cargo Tattici da Lavoro",
+        categoria: "lavoro",
+        descrizione: "Pantaloni cargo tattici da lavoro con tasche multiple per strumenti.",
+        link: "https://www.amazon.it/dp/B0FQ69B1ZT?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=9008b58b98302d63fda3f36d48d509e8&ref=_as_li_ss_tl",
+        messaggio: "Pantaloni cargo tattici con tasche multiple."
+    },
+    "pantaloni_cargo_multiuso": {
+        nome: "Pantaloni Cargo Multiuso",
+        categoria: "lavoro",
+        descrizione: "Pantaloni cargo multiuso per lavoro e outdoor, tasche multiple.",
+        link: "https://www.amazon.it/dp/B09V1C6JM1?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=qYkLSxXBJw&linkCode=ll2&tag=l0c39-21&linkId=f0fcaa3dd347facf30b8f44d5ba84555&ref=_as_li_ss_tl",
+        messaggio: "Pantaloni cargo multiuso per lavoro e outdoor."
+    },
+    "pantaloni_cargo_ginocchiere": {
+        nome: "BLACK HAMMER Pantaloni Cargo con Ginocchiere",
+        categoria: "lavoro",
+        descrizione: "Pantaloni cargo con ginocchiere rinforzate per lavori pesanti.",
+        link: "https://www.amazon.it/BLACK-HAMMER-Rinforzati-Ginocchiere-Abbigliamento/dp/B08KPKLG7G?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=faf5f6b5109f10e849aad33441f4cbed&ref=_as_li_ss_tl",
+        messaggio: "Pantaloni cargo con ginocchiere rinforzate."
+    },
+    "pantaloni_cargo_elasticizzati": {
+        nome: "Pantaloni Cargo Elasticizzati",
+        categoria: "lavoro",
+        descrizione: "Pantaloni cargo elasticizzati con tasche multiple, comfort elevato.",
+        link: "https://www.amazon.it/Yekdmxop-Pantaloni-vestibilit%C3%A0-Pantalone-Elasticizzati/dp/B0DXPQZMWF?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=e326dcb854df59a2d73610fa2304b169&ref=_as_li_ss_tl",
+        messaggio: "Pantaloni cargo elasticizzati per comfort."
+    },
     // SOSTENIBILITA ECO FRIENDLY
     "borsa_ecologica": {
         nome: "Borsa Ecologica Riutilizzabile",
