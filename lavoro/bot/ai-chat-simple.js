@@ -191,6 +191,49 @@ const NicheDatabase = {
         songLinkSpotify: "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
+    "bibite-bevande": {
+        name: "Bibite & Bevande",
+        tags: ["bibita", "bevanda", "coca", "cola", "pepsi", "fanta", "sprite", "acqua", "gassata", "analcolica", "birra", "vino", "succo", "frizzante", "tonica", "ginger", "zenzero", "limonata", "aranciata", "drenante", "integratore", "energy", "drink", "red", "bull", "monster", "caffe", "tè", "the", "tisana", "infuso", "latte", "soda", "soft", "drink", "lattina", "bottiglia", "scorta", "multipack", "confezione", "famiglia"],
+        url: "/bibite-bevande/index.html",
+        personality: "refreshing",
+        valueProp: "Ho selezionato le bibite e bevande migliori per rinfrescarti. Gusto, qualità e convenienza sono i fattori chiave.",
+        song: "Sugar - Maroon 5",
+        songLink: "https://www.youtube.com/watch?v=09R8_2nJtjg",
+        songLinkSpotify: "https://open.spotify.com/track/6PQK5W1qJc7Qf9q5K8Y9X0",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: [
+            {
+                name: "Coca-Cola Zero Sugars",
+                description: "6 x 1.5 Litre Bottles - Il gusto classico senza zuccheri",
+                icon: "fa-can-food",
+                link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Pepsi Max",
+                description: "Bibita senza zuccheri con gusto intenso",
+                icon: "fa-can-food",
+                link: "https://www.amazon.it/gp/aw/d/B01G7F3UGC?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=8d6332e821957b1699faccbdc1aa92dd&hsa_cr_id=0&qid=1779582795&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=3P9Vi1enMO&pd_rd_w=zSkrP&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=S5V72ME4DAJZX44T1FH5&pd_rd_wg=oM2U9&pd_rd_r=a2d776b6-5c87-4a65-bc8a-6efd66e839e8&th=1&linkCode=ll2&tag=l0c39-21&linkId=ec385cd554c3a0d7024f726505bcea88&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Fanta Original",
+                description: "Bibita aranciata con conservanti riciclabili",
+                icon: "fa-orange",
+                link: "https://www.amazon.it/Fanta-Original-Conservanti-riciclabile-Rinfrescante/dp/B0F94MN626?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite%2Bpacchi&qid=1779582795&rdc=1&sprefix=bibite%2Bpacchi%2Caps%2C139&sr=8-4-spons&aref=7rIRpk3FXE&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=5caf24d3ef7761336f39c4485f57268b&ref=_as_li_ss_tl"
+            },
+            {
+                name: "L'Angelica Waterstick Drenante",
+                description: "Integratore drenante per combattere stanchezza",
+                icon: "fa-leaf",
+                link: "https://www.amazon.it/LAngelica-Waterstick-Drenante-Stanchezza-Affaticamento/dp/B0D46F19MB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite%2Bpacchi&qid=1779582795&rdc=1&sprefix=bibite%2Bpacchi%2Caps%2C139&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=96869b71eb53e48236d136535ae799a8&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Jamaica Bibita Analcolica Zenzero",
+                description: "Bibita analcolica allo zenzero in lattine",
+                icon: "fa-seedling",
+                link: "https://www.amazon.it/Jamaica-Bibita-analcolica-zenzero-lattine/dp/B006R638VY?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite+pacchi&qid=1779582795&sprefix=bibite+pacchi%2Caps%2C139&sr=8-9&linkCode=ll2&tag=l0c39-21&linkId=c08e0e25f8bb7282d7653fdca0c2e473&ref=_as_li_ss_tl"
+            }
+        ]
+    },
     "smartphone-tech": {
         name: "Smartphone & Tech",
         tags: ["smartphone", "telefono", "cellulare", "iphone", "samsung", "android", "galaxy", "xiaomi", "huawei", "oppo", "oneplus", "pixel", "nokia", "sony", "lg", "motorola", "honor", "realme", "tecno", "infinix", "vivo", "zte", "alcatel", "wiko", "bq", "crosscall", "cat", "rugged", "tough", "tablet", "ipad", "samsung", "galaxy", "tab", "kindle", "ebook", "reader", "smartwatch", "orologio", "fitness", "tracker", "band", "auricolari", "cuffie", "true", "wireless", "airpods", "galaxy", "buds", "powerbank", "batteria", "caricabatterie", "cavo", "usb", "type", "c", "lightning"],
@@ -836,7 +879,8 @@ const comboMessages = {
     "mare": "Ehi, vedo che ti stai preparando per la spiaggia! 🌊 Guarda, se passi una giornata al mare come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per godermi il relax e una scorta di {prodottoAncora} per non dover correre al bar. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
     "pc": "Ehi, ma ti stai preparando per lavorare? 🔥 Guarda, se passi lunghe sessioni come me, non posso fare a meno di due cose: delle {prodottoNicchia} per concentrarmi e una scorta di {prodottoAncora} per non dover fermarmi quando ho sete. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
     "outdoor": "Che bello, vai in campeggio! 🌲 Guarda, se vai in natura come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per dormire bene e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
-    "caldo": "Che giornata calda! ❄️ Guarda, se anche tu soffri il caldo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per rinfrescarmi e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una vera salvezza in questi giorni!"
+    "caldo": "Che giornata calda! ❄️ Guarda, se anche tu soffri il caldo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per rinfrescarmi e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una vera salvezza in questi giorni!",
+    "bibite-bevande": "Ehi, cerchi qualcosa di rinfrescante! 🥤 Guarda, se vuoi goderti una bibita fresca come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per il relax e una scorta di {prodottoAncora} per non dover andare al supermercato. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!"
 };
 
 // Funzione per ottenere prodotti dal catalogo in base alla categoria
@@ -869,9 +913,9 @@ function getContesto() {
     if (currentPath.includes('cucina-elettrodomestici') || currentUrl.includes('condizionatore') || currentUrl.includes('ventilatore')) {
         return 'caldo';
     }
-    // Bibite & Bevande - usa contesto mare per combo (bibite come prodotto ancora)
+    // Bibite & Bevande - ora ha proprio database entry
     if (currentPath.includes('bibite-bevande') || currentUrl.includes('bibite') || currentUrl.includes('bevande')) {
-        return 'mare'; // Usa mare come default per combo con bibite
+        return 'bibite-bevande';
     }
     
     // Default: homepage o contesto non identificato
