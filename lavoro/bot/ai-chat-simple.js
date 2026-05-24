@@ -1804,16 +1804,14 @@ function showComboMessage() {
         
         const message = `
             <div class="urgency-combo-message">
-                <p style="margin-bottom: 12px; font-size: 15px; line-height: 1.5;">${messaggioPersonalizzato}</p>
-                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px solid #dee2e6;">
-                    <div style="margin-bottom: 12px;">
-                        <strong>📦 Combo consigliata:</strong>
-                    </div>
-                    <div style="margin-bottom: 10px;">
-                        <a href="${prodottoPrincipale.link}" target="_blank" onclick="trackComboClick('${context}', 1)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da; margin-bottom: 8px;">
+                <p>${messaggioPersonalizzato}</p>
+                <div class="combo-container">
+                    <div class="combo-title">📦 Combo consigliata:</div>
+                    <div>
+                        <a href="${prodottoPrincipale.link}" target="_blank" onclick="trackComboClick('${context}', 1)" class="combo-link">
                             1. ${prodottoPrincipale.nome}
                         </a>
-                        <a href="${prodottoAncora.link}" target="_blank" onclick="trackComboClick('${context}', 2)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da;">
+                        <a href="${prodottoAncora.link}" target="_blank" onclick="trackComboClick('${context}', 2)" class="combo-link">
                             2. ${prodottoAncora.nome}
                         </a>
                     </div>
