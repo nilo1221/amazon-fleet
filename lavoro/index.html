@@ -1381,5 +1381,74 @@
             </button>
         </div>
     </div>
+
+    <script>
+        // Sistema Timer 24 ore per Nuove Nicchie
+        document.addEventListener('DOMContentLoaded', function() {
+            const NEW_NICHE_KEY = 'bibite_bevande_created';
+            const TIMER_HOURS = 24;
+            
+            // Se è la prima volta, salva la data di creazione
+            if (!localStorage.getItem(NEW_NICHE_KEY)) {
+                localStorage.setItem(NEW_NICHE_KEY, Date.now().toString());
+            }
+            
+            const createdTime = parseInt(localStorage.getItem(NEW_NICHE_KEY));
+            const expiryTime = createdTime + (TIMER_HOURS * 60 * 60 * 1000);
+            const now = Date.now();
+            const timeLeft = expiryTime - now;
+            
+            // Elementi Bibite & Bevande
+            const bibiteStripItem = document.querySelector('a[href="bibite-bevande/index.html"].featured-strip-item');
+            const bibiteCard = document.querySelector('.card-body:has(.fa-can-food)').closest('.col-lg-4');
+            
+            // Funzione per formattare il tempo
+            function formatTime(ms) {
+                if (ms <= 0) return '00:00:00';
+                const hours = Math.floor(ms / (1000 * 60 * 60));
+                const minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((ms % (1000 * 60)) / 1000);
+                return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            // Aggiorna il timer
+            function updateTimer() {
+                const currentTimeLeft = expiryTime - Date.now();
+                
+                if (currentTimeLeft <= 0) {
+                    // Timer scaduto - nascondi Bibite & Bevande da Scelte della Redazione
+                    if (bibiteStripItem) bibiteStripItem.style.display = 'none';
+                    if (bibiteCard) bibiteCard.style.display = 'none';
+                    return;
+                }
+                
+                // Mostra timer se gli elementi esistono
+                if (bibiteStripItem) {
+                    let timerElement = bibiteStripItem.querySelector('.timer-display');
+                    if (!timerElement) {
+                        timerElement = document.createElement('div');
+                        timerElement.className = 'timer-display text-danger small mt-1';
+                        bibiteStripItem.appendChild(timerElement);
+                    }
+                    timerElement.textContent = `⏱ ${formatTime(currentTimeLeft)}`;
+                }
+                
+                if (bibiteCard) {
+                    let timerElement = bibiteCard.querySelector('.timer-display');
+                    if (!timerElement) {
+                        timerElement = document.createElement('div');
+                        timerElement.className = 'timer-display text-danger small mt-2';
+                        const cardBody = bibiteCard.querySelector('.card-body');
+                        cardBody.appendChild(timerElement);
+                    }
+                    timerElement.textContent = `⏱ Tempo rimanente: ${formatTime(currentTimeLeft)}`;
+                }
+            }
+            
+            // Aggiorna ogni secondo
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        });
+    </script>
 </body>
 </html>
