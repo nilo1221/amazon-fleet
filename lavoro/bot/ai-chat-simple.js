@@ -459,7 +459,7 @@ const NicheDatabase = {
         songLinkSpotify: "https://open.spotify.com/track/0f9h8awV1X4jSllHXXYdfX",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         primaryColor: "#1a1a2e",
-        accentColor: "#4a4a6a",
+        accentColor: "#D4AF37",
         secondaryColor: "#f8f9fa",
         topProducts: [
             {
