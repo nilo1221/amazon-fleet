@@ -1596,6 +1596,40 @@ function getContesto() {
 function showUrgencyComboMessage(context) {
     console.log('showUrgencyComboMessage called with context:', context);
     
+    // Prima prova a usare le combo del database modulare
+    const comboData = getComboData(context);
+    
+    if (comboData && comboData.combos && comboData.combos.length > 0) {
+        // Usa le combo del database
+        const randomCombo = comboData.combos[Math.floor(Math.random() * comboData.combos.length)];
+        
+        const message = `
+            <div class="urgency-combo-message">
+                <p style="margin-bottom: 12px; font-size: 15px; line-height: 1.5;">${randomCombo.message}</p>
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px solid #dee2e6;">
+                    <div style="margin-bottom: 12px;">
+                        <strong>📦 Combo consigliata:</strong>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <a href="${randomCombo.product1.link}" target="_blank" onclick="trackComboClick('${context}', 1)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da; margin-bottom: 8px;">
+                            1. ${randomCombo.product1.name}
+                        </a>
+                        <a href="${randomCombo.product2.link}" target="_blank" onclick="trackComboClick('${context}', 2)" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da;">
+                            2. ${randomCombo.product2.name}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        console.log('Calling addMessage with combo message from database');
+        addMessage(message, 'bot');
+        return;
+    }
+    
+    // Fallback: usa il sistema vecchio con catalogoProdotti
+    console.log('No combo data found, using fallback with catalogoProdotti');
+    
     // 80% prodotti della nicchia corrente, 20% bibite/bevande
     const random = Math.random();
     let prodotti;
@@ -2102,6 +2136,37 @@ function showComboMessage() {
     if (!context) {
         context = 'mare';
     }
+    
+    // Prima prova a usare le combo del database modulare
+    const comboData = getComboData(context);
+    
+    if (comboData && comboData.combos && comboData.combos.length > 0) {
+        // Usa le combo del database
+        const randomCombo = comboData.combos[Math.floor(Math.random() * comboData.combos.length)];
+        
+        const message = `
+            <div class="urgency-combo-message">
+                <p>${randomCombo.message}</p>
+                <div class="combo-container">
+                    <div class="combo-title">📦 Combo consigliata:</div>
+                    <div>
+                        <a href="${randomCombo.product1.link}" target="_blank" onclick="trackComboClick('${context}', 1)" class="combo-link">
+                            1. ${randomCombo.product1.name}
+                        </a>
+                        <a href="${randomCombo.product2.link}" target="_blank" onclick="trackComboClick('${context}', 2)" class="combo-link">
+                            2. ${randomCombo.product2.name}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        addMessage(message, 'bot');
+        return;
+    }
+    
+    // Fallback: usa il sistema vecchio con catalogoProdotti
+    console.log('No combo data found, using fallback with catalogoProdotti');
     
     // 80% prodotti della nicchia corrente, 20% bibite/bevande
     const random = Math.random();
