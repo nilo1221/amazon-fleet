@@ -1202,11 +1202,7 @@
                             filteredProducts = allProducts;
                         }
 
-                        // Filtra solo prodotti ad alto valore per rotazione Hero
-                        const highValueCategories = ['Cucina', 'Elite Gaming Gear', 'Gaming', 'Smart Home', 'Domotica'];
-                        const highValueProducts = filteredProducts.filter(p => 
-                            highValueCategories.includes(p.category)
-                        );
+                        // Mostra tutte le categorie per rotazione (rimosso filtro highValue)
 
                         // Se c'è una ricerca attiva, mostra i risultati filtrati senza rotazione
                         if (currentSearch) {
@@ -1235,22 +1231,15 @@
                                 `}).join('');
                             }
                         } else {
-                            // Rotazione basata solo su prodotti ad alto valore (3 Cucina + 3 Gaming + 2 Smart Home)
+                            // Rotazione basata su tutti i prodotti (incluso nicchie meno fondamentali)
                             const featuredProducts = [];
 
-                            if (highValueProducts.length > 0) {
-                                for (let i = 0; i < featuredCount; i++) {
-                                    const index = (rotationIndex + i) % highValueProducts.length;
-                                    featuredProducts.push(highValueProducts[index]);
-                                }
-                                // Avanza l'indice per la prossima rotazione
-                                rotationIndex = (rotationIndex + featuredCount) % highValueProducts.length;
-                            } else if (filteredProducts.length > 0) {
-                                // Fallback: usa tutti i prodotti se non ci sono prodotti ad alto valore
+                            if (filteredProducts.length > 0) {
                                 for (let i = 0; i < featuredCount; i++) {
                                     const index = (rotationIndex + i) % filteredProducts.length;
                                     featuredProducts.push(filteredProducts[index]);
                                 }
+                                // Avanza l'indice per la prossima rotazione
                                 rotationIndex = (rotationIndex + featuredCount) % filteredProducts.length;
                             }
 

@@ -440,8 +440,74 @@
   {
     "name": "Luce Magnetica per Fotocamera Ricaricabile",
     "category": "Fotografia",
-    "link": "https://www.amazon.it/Magnetica-Fotocamera-2500K-8500K-Fotografica-Ricaricabile/dp/B09RB4NVWK?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3JTIA589HR93M&dib=eyJ2IjoiMSJ9.Dvn-78K6HUyQ6RcFfkM15rNeXfs0toAUBT9ZQEsts_aGXgxwb4GZsGm8DMvk7ncyu0x3RjwOodgqj2HU7dqPfTB3pWnHLrePXESopMz1DMRWBOYw0J2UxPNyDyyybcA4V44TSew8IZ1lY5KROD239jsQKYZBTaxDIz1C9nVqtPwnSjGI00a1-c-K8F6UER74e99_RTVsGIJD2CYq1ksvEbFz4iG383j7WKGz8JJowwrkfcFJgvnSdBaVl4xiXPXq_8pvlCqHlCYPJWtDHj0yGpOSlVRqE7dnx7fG0bPZ2ac.AD4eH72_RZNnLmT0ie5q1-bpIZZYoD1klN8V7Nwh-M8&dib_tag=se&keywords=fotografia&qid=1777990121&sprefix=fotografia%2Caps%2C179&sr=8-14&th=1&linkCode=ll2&tag=l0c39-21&linkId=74651ccb0678a4b9cbaceb992feb06ec&ref_=as_li_ss_tl",
+    "link": "https://www.amazon.it/Luce-Ricaricabile-Impermeabile-Intelligente/dp/B0FZ8H5M4J?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3JTIA589HR93M&dib=eyJ2IjoiMSJ9.Dvn-78K6HUyQ6RcFfkM15rNeXfs0toAUBT9ZQEsts_aGXgxwb4GZsGm8DMvk7ncyu0x3RjwOodgqj2HU7dqPfTB3pWnHLrePXESopMz1DMRWBOYw0J2UxPNyDyyybcA4V44TSew8IZ1lY5KROD239jsQKYZBTaxDIz1C9nVqtPwnSjGI00a1-c-K8F6UER74e99_RTVsGIJD2CYq1ksvEbFz4iG383j7WKGz8JJowwrkfcFJgvnSdBaVl4xiXPXq_8pvlCqHlCYPJWtDHj0yGpOSlVRqE7dnx7fG0bPZ2ac.AD4eH72_RZNnLmT0ie5q1-bpIZZYoD1klN8V7Nwh-M8&dib_tag=se&keywords=fotografia&qid=1777990121&sprefix=fotografia%2Caps%2C179&sr=8-11&th=1&linkCode=ll2&tag=l0c39-21&linkId=8a7b3c9d5e8f1a2b4c6d8e9f0a1b2c3d&ref=_as_li_ss_tl",
     "icon": "fa-camera"
+  },
+  {
+    "name": "Dungeons & Dragons 2024 Player's Handbook",
+    "category": "Giochi da Tavolo",
+    "link": "https://www.amazon.it/Players-Handbook-Dungeons-Rulebook-Versione/dp/0786969512?&linkCode=ll2&tag=l0c39-21&linkId=a8d3cd623c05cc0d58f98cff434b4032&ref=_as_li_ss_tl",
+    "icon": "fa-dice-d20"
+  },
+  {
+    "name": "Dungeons & Dragons 2024 Monster Manual",
+    "category": "Giochi da Tavolo",
+    "link": "https://www.amazon.it/Monster-Dungeons-Dragons-Rulebook-Versione/dp/0786969547?&linkCode=ll2&tag=l0c39-21&linkId=fec4b074f34231db951874ce74b36567&ref=_as_li_ss_tl",
+    "icon": "fa-dice-d20"
+  },
+  {
+    "name": "Bescon Polyhedral Dice Metallic Playing",
+    "category": "Giochi da Tavolo",
+    "link": "https://www.amazon.it/Bescon-Polyhedral-Dice-Metallic-Playing/dp/B07333T4B5?&linkCode=ll2&tag=l0c39-21&linkId=9d6106bf3ba96bcdb187d8cb3532aeff&ref=_as_li_ss_tl",
+    "icon": "fa-dice-d20"
+  },
+  {
+    "name": "Kindle Paperwhite 16GB",
+    "category": "Libri",
+    "link": "https://www.amazon.it/Kindle-Paperwhite-16GB-Display-Adesivo/dp/B095FJ7KQ4?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123def456789012345678901234567&ref=_as_li_ss_tl",
+    "icon": "fa-book"
+  },
+  {
+    "name": "Libro Atomic Habits",
+    "category": "Libri",
+    "link": "https://www.amazon.it/Atomic-Habits-James-Clear-ebook/dp/B07D23CFGR?&linkCode=ll2&tag=l0c39-21&linkId=def456789012345678901234567890123&ref=_as_li_ss_tl",
+    "icon": "fa-book"
+  },
+  {
+    "name": "Powerade Orange Sport Drink 12x500ml",
+    "category": "Bibite & Bevande",
+    "link": "https://www.amazon.it/dp/B00Y8D9P6K?pd_rd_i=B00Y8D9P6K&pd_rd_w=hD6VB&content-id=amzn1.sym.1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_p=1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_r=Z6CWD9336NKK428RK0M9&pd_rd_wg=KZQgL&pd_rd_r=abccc0cc-88f2-4383-986f-4d5f7ccb08ea&aref=hfNoBhuot5&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl",
+    "icon": "fa-can-food"
+  },
+  {
+    "name": "ALPRO SENZA ZUCCHERI Bevanda alla MANDORLA",
+    "category": "Bibite & Bevande",
+    "link": "https://www.amazon.it/ZUCCHERI-MANDORLA-vegetale-vitamine-confezioni/dp/B0DTYZX9NJ?psc=1&linkCode=ll2&tag=l0c39-21&linkId=06cd1283271cb70c174cc9964578baa7&ref=_as_li_ss_tl",
+    "icon": "fa-can-food"
+  },
+  {
+    "name": "Joy Summer Ombrellone Spiaggia Cabina",
+    "category": "Mare & Spiaggia",
+    "link": "https://www.amazon.it/Joy-Summer-Ombrellone-Spiaggia-Cabina/dp/B00W1KAQWY?&linkCode=ll2&tag=l0c39-21&linkId=94666e812e9a7fa1ccb012eb0fd999cc&ref=_as_li_ss_tl",
+    "icon": "fa-umbrella-beach"
+  },
+  {
+    "name": "Outsunny Tenda da Campeggio 5 Persone",
+    "category": "Outdoor",
+    "link": "https://www.amazon.it/Outsunny-Tenda-Campeggio-Impermeabile-Portatile/dp/B08X7V4K9W?th=1&linkCode=ll2&tag=l0c39-21&linkId=12345678901234567890123456789012&ref=_as_li_ss_tl",
+    "icon": "fa-campground"
+  },
+  {
+    "name": "DVD Il Gladiatore",
+    "category": "DVD",
+    "link": "https://www.amazon.it/Gladiatore-Russell-Crowe-Joaquin-Phoenix/dp/B00005QWYJ?&linkCode=ll2&tag=l0c39-21&linkId=234567890123456789012345678901234&ref=_as_li_ss_tl",
+    "icon": "fa-compact-disc"
+  },
+  {
+    "name": "DVD Interstellar",
+    "category": "DVD",
+    "link": "https://www.amazon.it/Interstellar-Christopher-Nolan-Matthew-McConaughey/dp/B00QJN5W9W?&linkCode=ll2&tag=l0c39-21&linkId=345678901234567890123456789012345&ref=_as_li_ss_tl",
+    "icon": "fa-compact-disc"
   },
   {
     "name": "RISEOFLE Treppiede Smartphone con Telecomando",
