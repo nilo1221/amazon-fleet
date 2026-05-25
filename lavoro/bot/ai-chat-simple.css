@@ -168,6 +168,11 @@
     background: var(--bot-bg-adventure);
 }
 
+#ai-chat-button.theme-biciclette {
+    --bot-current-bg: var(--bot-bg-adventure);
+    background: var(--bot-bg-adventure);
+}
+
 #ai-chat-button.theme-fashion {
     --bot-current-bg: var(--bot-bg-fashion);
     background: var(--bot-bg-fashion);
@@ -314,6 +319,10 @@
 }
 
 .chat-header.theme-adventure {
+    --bot-current-bg: var(--bot-bg-adventure);
+}
+
+.chat-header.theme-biciclette {
     --bot-current-bg: var(--bot-bg-adventure);
 }
 

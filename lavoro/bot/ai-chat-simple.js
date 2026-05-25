@@ -2073,7 +2073,8 @@ function applyThemeOnLoad() {
         'theme-gaming-theme', 'theme-entertainment', 'theme-technical', 'theme-caring',
         'theme-aesthetic', 'theme-intellectual', 'theme-elegant', 'theme-eco',
         'theme-professional', 'theme-travel', 'theme-creative', 'theme-merchandise-serie-tv',
-        'theme-blinding-lights', 'theme-as-it-was', 'theme-midnight-city'
+        'theme-blinding-lights', 'theme-as-it-was', 'theme-midnight-city', 'theme-parrucchiere',
+        'theme-biciclette'
     ];
     
     themeClasses.forEach(themeClass => {
@@ -2110,6 +2111,10 @@ function applyThemeOnLoad() {
         themeClass = 'theme-blinding-lights';
     } else if (categoryKey === 'moda-donna') {
         themeClass = 'theme-as-it-was';
+    } else if (categoryKey === 'biciclette-mobilita') {
+        themeClass = 'theme-biciclette';
+    } else if (categoryKey === 'parrucchiere-barbiere') {
+        themeClass = 'theme-parrucchiere';
     } else if (categoryKey === 'tech') {
         themeClass = 'theme-midnight-city';
     }
@@ -2803,7 +2808,8 @@ function applyBotTheme(categoryKey) {
         'theme-gaming-theme', 'theme-entertainment', 'theme-technical', 'theme-caring',
         'theme-aesthetic', 'theme-intellectual', 'theme-elegant', 'theme-eco',
         'theme-professional', 'theme-travel', 'theme-creative', 'theme-merchandise-serie-tv',
-        'theme-blinding-lights', 'theme-as-it-was', 'theme-midnight-city'
+        'theme-blinding-lights', 'theme-as-it-was', 'theme-midnight-city', 'theme-parrucchiere',
+        'theme-biciclette'
     ];
     
     themeClasses.forEach(themeClass => {
@@ -2840,6 +2846,10 @@ function applyBotTheme(categoryKey) {
         themeClass = 'theme-blinding-lights';
     } else if (categoryKey === 'moda-donna') {
         themeClass = 'theme-as-it-was';
+    } else if (categoryKey === 'biciclette-mobilita') {
+        themeClass = 'theme-biciclette';
+    } else if (categoryKey === 'parrucchiere-barbiere') {
+        themeClass = 'theme-parrucchiere';
     } else if (categoryKey === 'tech') {
         themeClass = 'theme-midnight-city';
     }
