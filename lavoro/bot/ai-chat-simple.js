@@ -3635,6 +3635,12 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.addEventListener('click', closeProactiveBubble);
     });
     
+    // Add event listener for close chat button
+    const closeChatButton = document.querySelector('.close-btn');
+    if (closeChatButton) {
+        closeChatButton.addEventListener('click', toggleChat);
+    }
+    
     // Apply theme on load
     applyThemeOnLoad();
     
