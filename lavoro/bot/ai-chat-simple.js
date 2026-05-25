@@ -449,6 +449,39 @@ const NicheDatabase = {
         songLinkSpotify: "https://open.spotify.com/track/3yrSvpt2l1xhsV9Em88Pul",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
     },
+    "parrucchiere-barbiere": {
+        name: "Parrucchiere & Barbiere",
+        tags: ["parrucchiere", "barbiere", "forbici", "rasoio", "taglio", "capelli", "barba", "pettine", "spazzola", "phon", "piastra", "arricciacapelli", "taglieri", "carrello", "sedia", "lavabo", "attrezzatura", "strumenti", "professionale", "salone", "barber", "shop", "grooming", "cura", "personal", "style", "look", "hair", "cut", "shave", "beard", "mustache", "trimmer", "clipper"],
+        url: "/parrucchiere-barbiere/index.html",
+        personality: "professional",
+        valueProp: "Ho selezionato le attrezzature professionali più affidabili per il tuo salone.",
+        song: "Smooth Operator - Sade",
+        songLinkSpotify: "https://open.spotify.com/track/0f9h8awV1X4jSllHXXYdfX",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        primaryColor: "#1a1a2e",
+        accentColor: "#4a4a6a",
+        secondaryColor: "#f8f9fa",
+        topProducts: [
+            {
+                name: "SCHWERTKRONE Rasoio a Mano Libera con Manico Prezioso",
+                description: "Rasoio tradizionale premium con 100 lame Derby incluse",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/SCHWERTKRONE-Prezioso-Barbiere-Rasatura-Definizione/dp/B0957WPKP4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-3-spons&aref=6byR8fHsbO&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ba67fb8d666610e44040abf78006017&ref=_as_li_ss_tl"
+            },
+            {
+                name: "OCBA Forbici Parrucchiere Professionali 6 Pollici",
+                description: "Forbici capelli in acciaio inossidabile con design ergonomico",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/Parrucchiere-Professionali-6Pollici-Inossidabile-Barbiere/dp/B088BCF6NP?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-4-spons&aref=c8jD8vrstC&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=8fb2796e9175ae201e4e22f53eb542b7&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Carrello Professionale per Parrucchiere",
+                description: "Carrello organizer con cassetti per attrezzature",
+                icon: "fa-suitcase",
+                link: "https://www.amazon.it/Carrello-Professionale-Parrucchiere-Organizzatore-Attrezzature/dp/B09X7Y8Z9Q?linkCode=ll2&tag=l0c39-21&linkId=abc123def456&ref=_as_li_ss_tl"
+            }
+        ]
+    },
     "profumi-bellezza": {
         name: "Profumi & Bellezza",
         tags: ["profumo", "bellezza", "makeup", "cosmetico", "eau", "de", "toilette", "parfum", "eau", "de", "parfum", "intense", "edp", "edt", "cologne", "after", "shave", "balsamo", "dopobarba"],
@@ -1487,6 +1520,9 @@ function getContesto() {
     }
     if (currentPath.includes('pet-care-intelligente') || currentUrl.includes('pet') || currentUrl.includes('animali') || currentUrl.includes('gatto') || currentUrl.includes('cane')) {
         return 'pet-care';
+    }
+    if (currentPath.includes('parrucchiere-barbiere') || currentUrl.includes('parrucchiere') || currentUrl.includes('barbiere') || currentUrl.includes('forbici') || currentUrl.includes('rasoio')) {
+        return 'parrucchiere-barbiere';
     }
     if (currentPath.includes('cinema-tv') || currentUrl.includes('cinema') || currentUrl.includes('tv') || currentUrl.includes('film')) {
         return 'cinema';
