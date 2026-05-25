@@ -445,8 +445,8 @@ const NicheDatabase = {
         personality: "intellectual",
         valueProp: "Ho selezionato i migliori libri e e-reader per i tuoi momenti di lettura.",
         kindleLink: "https://www.amazon.it/kindle-dbs/ku/?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        song: "The Sound of Silence - Simon & Garfunkel",
-        songLinkSpotify: "https://open.spotify.com/track/3YfS47QufnLDFA71FUsgCM",
+        song: "Brown Eyed Girl - Van Morrison",
+        songLinkSpotify: "https://open.spotify.com/track/3yrSvpt2l1xhsV9Em88Pul",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
     },
     "profumi-bellezza": {
@@ -2540,6 +2540,16 @@ function trackAmazonMusicClick() {
     }
 }
 
+// Track Kindle Unlimited click in Google Analytics
+function trackKindleClick() {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'kindle_unlimited_click', {
+            'event_category': 'reading_interaction',
+            'event_label': 'Kindle Unlimited'
+        });
+    }
+}
+
 // Apply dynamic color theme based on category personality
 function applyBotTheme(categoryKey) {
     const chatHeader = document.querySelector('.chat-header');
@@ -3323,6 +3333,11 @@ function selectCategoryFromButton(categoryKey) {
                                         ▶ Play su Spotify
                                     </button>
                                 </p>` : ''}
+                                ${categoryKey === 'libri-ereader' && nicheData.kindleLink ? `
+                                <div class="kindle-box" style="margin-top:12px; border:1px solid #007185; padding:10px; background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%); border-radius: 8px; font-size: 0.9em; color: #007185; text-align: center;">
+                                    📚 <strong>Vuoi un modo migliore per leggere?</strong> 
+                                    <br><a href="${nicheData.kindleLink}" target="_blank" onclick="trackKindleClick()" style="color: #007185; font-weight: bold; text-decoration: underline;">Prova Kindle Unlimited con migliaia di libri</a>
+                                </div>` : ''}
                                 ${nicheData.songLinkAmazon ? `
                                 <div class="premium-box" style="margin-top:12px; border:1px solid gold; padding:10px; background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%); border-radius: 8px; font-size: 0.9em; color: #856404; text-align: center;">
                                     💎 <strong>Vuoi l'esperienza in alta qualità?</strong> 
