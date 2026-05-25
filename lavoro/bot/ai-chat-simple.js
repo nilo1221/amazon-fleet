@@ -446,7 +446,7 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori libri e e-reader per i tuoi momenti di lettura.",
         kindleLink: "https://www.amazon.it/kindle-dbs/ku/?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         song: "The Sound of Silence - Simon & Garfunkel",
-        songLinkSpotify: "https://open.spotify.com/track/5v0jC9dPd4v9Rl2r5h6i7j",
+        songLinkSpotify: "https://open.spotify.com/track/3YfS47QufnLDFA71FUsgCM",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
     },
     "profumi-bellezza": {
