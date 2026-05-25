@@ -3610,6 +3610,10 @@ function handleKeyPress(event) {
 
 // Initialize proactive message system
 document.addEventListener('DOMContentLoaded', function() {
+    // Reset proactive bubble shown flag on page load
+    proactiveBubbleShown = false;
+    pageScrollTriggered = false;
+    
     // Apply theme on load
     applyThemeOnLoad();
     
