@@ -447,7 +447,6 @@ const NicheDatabase = {
         kindleLink: "https://www.amazon.it/kindle-dbs/ku/?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         song: "Brown Eyed Girl - Van Morrison",
         songLinkSpotify: "https://open.spotify.com/track/3yrSvpt2l1xhsV9Em88Pul",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
     },
     "parrucchiere-barbiere": {
         name: "Parrucchiere & Barbiere",
