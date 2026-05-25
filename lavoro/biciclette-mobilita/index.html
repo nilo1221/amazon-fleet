@@ -22,8 +22,6 @@
     <!-- AI Chat CSS -->
     <link rel="stylesheet" href="../bot/ai-chat-simple.css">
     <!-- AI Chat JS - defer per caricare dopo HTML ma prima interazioni -->
-    <script src="../bot/combo-database.js" defer></script>
-    <script src="../bot/ai-chat-simple.js" defer></script>
     
     <style>
         :root {
@@ -440,5 +438,10 @@
             </button>
         </div>
     </div>
+    
+    <!-- Bot AI Script - Must load combo-database before ai-chat-simple -->
+        <!-- Bot AI Script - Must load combo-database before ai-chat-simple -->
+    <script src="../bot/combo-database.js"></script>
+    <script src="../bot/ai-chat-simple.js"></script>
 </body>
 </html>
