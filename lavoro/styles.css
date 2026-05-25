@@ -1,11 +1,11 @@
 /* Main Styles */
 :root {
-    --primary-color: #D4AF37;
-    --primary-dark: #1a1a1a;
-    --primary-darker: #8B4513;
-    --secondary-color: #722F37;
-    --accent-color: #CD7F32;
-    --accent-gold: #D4AF37;
+    --primary-color: #FF69B4;
+    --primary-dark: #9400D3;
+    --primary-darker: #00FFFF;
+    --secondary-color: #FFFFFF;
+    --accent-color: #FF1493;
+    --accent-gold: #FF69B4;
     --text-color: #1a1a2e;
 }
 
