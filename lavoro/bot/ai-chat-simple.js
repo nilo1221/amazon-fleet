@@ -610,19 +610,19 @@ const NicheDatabase = {
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         topProducts: [
             {
-                name: "IBK Bicicletta Bici MTB 26"" Mountain Bike BIAMMORTIZZATA",
+                name: "IBK Bicicletta Bici MTB 26\" Mountain Bike BIAMMORTIZZATA",
                 description: "Mountain bike biammortizzata con cambio 21 velocità e freni a disco",
                 icon: "fa-bicycle",
                 link: "https://www.amazon.it/IBK-Bicicletta-Mountain-Biammortizzata-Velocit%C3%A0/dp/B0F5BSJJVL?dib=eyJ2IjoiMSJ9.qDw6yrJXU1txWqQl1ewOnWLXIasRXObMGYNw4OLmadyFuZBqskI6X3xnEoMd80oT2RpkWO5IN_fIk0Hn5OEREkXDIw4jhCEeLObcZLlEIybXRjt06fitE7vByulRW82xT1N9YHSl-kpJPE6TEJi0nwcF_Y2vQK8F-1Ht7iMIuYxXE1cagiKEKcDxyaQolowqpnV20GtPo57I77oqju7VC8qO1ikICc2lOXH8alnfe0Mp80jT0U5oxcgQ8Xbih1hn5l0Zf-C1-77mr4gK9bjrNrSmTnWjZuxr2OrW1nC3XD8.bdKRfArYhgK-HAkPkG85J-yv4Xr3WSZIG9QuiyiKB_w&dib_tag=se&keywords=bici&qid=1779723129&sr=8-4&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&th=1&linkCode=ll2&tag=l0c39-21&linkId=d8d4d864e4cd81828b0bd4134d792c12&ref=_as_li_ss_tl"
             },
             {
-                name: "HillMiles Bici Elettrica Per Adulti Da 26"",
+                name: "HillMiles Bici Elettrica Per Adulti Da 26\"",
                 description: "E-bike con batteria 36V 13Ah rimovibile, autonomia 80-100km",
                 icon: "fa-bolt",
                 link: "https://www.amazon.it/Elettrica-Bicicletta-Rimovibile-Autonomia-impermeabile/dp/B0G395GHT5?dib=eyJ2IjoiMSJ9.qDw6yrJXU1txWqQl1ewOnWLXIasRXObMGYNw4OLmadyFuZBqskI6X3xnEoMd80oT2RpkWO5IN_fIk0Hn5OEREkXDIw4jhCEeLObcZLlEIybXRjt06fitE7vByulRW82xT1N9YHSl-kpJPE6TEJi0nwcF_Y2vQK8F-1Ht7iMIuYxXE1cagiKEKcDxyaQolowqpnV20GtPo57I77oqju7VC8qO1ikICc2lOXH8alnfe0Mp80jT0U5oxcgQ8Xbih1hn5l0Zf-C1-77mr4gK9bjrNrSmTnWjZuxr2OrW1nC3XD8.bdKRfArYhgK-HAkPkG85J-yv4Xr3WSZIG9QuiyiKB_w&dib_tag=se&keywords=bici&qid=1779723129&sr=8-6&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&th=1&linkCode=ll2&tag=l0c39-21&linkId=2e9e593bbb0f4099e2247e7807be74ac&ref=_as_li_ss_tl"
             },
             {
-                name: "IBK Bicicletta TXC MTB 29"" Pollici Mountain Bike",
+                name: "IBK Bicicletta TXC MTB 29\" Pollici Mountain Bike",
                 description: "Mountain bike 29 pollici in alluminio con freni a disco idraulici",
                 icon: "fa-mountain",
                 link: "https://www.amazon.it/IBK-Bicicletta-Mountain-Alluminio-Ammortizzata/dp/B08HWGW7SG?dib=eyJ2IjoiMSJ9.qDw6yrJXU1txWqQl1ewOnWLXIasRXObMGYNw4OLmadyFuZBqskI6X3xnEoMd80oT2RpkWO5IN_fIk0Hn5OEREkXDIw4jhCEeLObcZLlEIybXRjt06fitE7vByulRW82xT1N9YHSl-kpJPE6TEJi0nwcF_Y2vQK8F-1Ht7iMIuYxXE1cagiKEKcDxyaQolowqpnV20GtPo57I77oqju7VC8qO1ikICc2lOXH8alnfe0Mp80jT0U5oxcgQ8Xbih1hn5l0Zf-C1-77mr4gK9bjrNrSmTnWjZuxr2OrW1nC3XD8.bdKRfArYhgK-HAkPkG85J-yv4Xr3WSZIG9QuiyiKB_w&dib_tag=se&keywords=bici&qid=1779723129&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&aref=OaqTfWA1fP&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=59626a720eeaee58a3db43e048bbaaea&ref=_as_li_ss_tl"
@@ -1540,7 +1540,7 @@ const comboMessages = {
         "Ehi, ami manga e anime! 📖 Guarda, se leggi come me, non posso fare a meno di due cose: un {prodottoNicchia} per la mia collezione e una scorta di {prodottoAncora} per non fermarmi. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
         "Sei un otaku? 🎌 Guarda, per la collezione perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è imperdibile!",
         "Vuoi storie epiche? ⚔️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
-    ]
+    ],
     "biciclette-mobilita": [
         "Ehi, ami le biciclette! 🚲 Guarda, se pedali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il mio giro e una scorta di {prodottoAncora} per la manutenzione. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
         "Ti piace andare in bici? 🚴 Guarda, per la mobilità perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
