@@ -282,6 +282,9 @@ const NicheDatabase = {
         song: "Summer Vibes Deep House Mix",
         songLinkSpotify: "https://open.spotify.com/playlist/53FHC0FredNfhyXUVl2mb8",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        primaryColor: "#00CED1",
+        accentColor: "#FF6B35",
+        secondaryColor: "#FF1493",
         topProducts: [
             {
                 name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
