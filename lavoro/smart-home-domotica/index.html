@@ -1414,7 +1414,7 @@
     <script src="../niche-tracking.js"></script>
     <!-- AI Chat JS -->
     <!-- AI Chat Button -->
-    <div id="ai-chat-button" >
+    <div id="ai-chat-button" onclick="toggleChat()">
         <img src="../images/logo.png" alt="Smart Choices Guide" class="chat-button-logo">
     </div>
     
@@ -1429,7 +1429,7 @@
                     <small>Online</small>
                 </div>
             </div>
-            <button class="close-btn"  title="Chiudi chat">
+            <button class="close-btn" onclick="toggleChat()" title="Chiudi chat">
                 <i class="fas fa-times"></i>
             </button>
         </div>
@@ -1442,7 +1442,7 @@
         <!-- Chat Input -->
         <div class="chat-input">
             <input type="text" id="chat-input" placeholder="Scrivi il tuo messaggio...">
-            <button  title="Invia messaggio">
+            <button onclick="sendMessage()" title="Invia messaggio">
                 <i class="fas fa-paper-plane"></i>
             </button>
         </div>
