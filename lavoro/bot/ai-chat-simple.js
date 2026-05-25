@@ -220,7 +220,6 @@ const NicheDatabase = {
         kindleLink: "https://www.amazon.it/kindle-dbs/ku/?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         song: "Gurenge - LiSA",
         songLinkSpotify: "https://open.spotify.com/track/23DbzwNJSLo7nkSWjODMvY",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         primaryColor: "#9400D3",
         accentColor: "#DC143C",
         secondaryColor: "#FF6600",
@@ -258,23 +257,23 @@ const NicheDatabase = {
         personality: "creative",
         valueProp: "Ho selezionato i migliori giradischi e vinili per un'esperienza audio autentica e nostalgica.",
         song: "Bohemian Rhapsody - Queen",
-        songLinkSpotify: "https://open.spotify.com/track/4q3nwBC3iYiE2R0y3i8F9Y",
+        songLinkSpotify: "https://open.spotify.com/track/7tFiyTwD0nx5a1eklYtX2J",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         primaryColor: "#1a1a2e",
         accentColor: "#e94560",
         secondaryColor: "#16213e",
         topProducts: [
             {
-                name: "Audio-Technica AT-LP60XUSB Giradischi",
-                description: "Giradischi completamente automatico con uscita USB per digitalizzare i vinili",
+                name: "Oasis - Complete Studio Album Collection (Gold Vinyl Box Set)",
+                description: "Cofanetto completo degli album in studio degli Oasis in vinile oro",
                 icon: "fa-compact-disc",
-                link: "https://www.amazon.it/Audio-Technica-AT-LP60XUSB-Giradischi-completamente-automatico/dp/B07J5XZL6K?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123def456&ref=_as_li_ss_tl"
+                link: "https://www.amazon.it/Complete-Studio-Collection-Amazon-Exclusive/dp/B0F99ZJ52F?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683180&sprefix=set+vinili%2Caps%2C131&sr=8-4&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=14945c94044fd23f187315fd3cd6ad00&ref=_as_li_ss_tl"
             },
             {
-                name: "Sony PS-LX310BT Giradischi Bluetooth",
-                description: "Giradischi con Bluetooth per trasmettere musica wireless",
+                name: "Metallica - The Black Album (30Th Anniversary Ltd)",
+                description: "Edizione 30° anniversario del Black Album dei Metallica in vinile",
                 icon: "fa-bluetooth-b",
-                link: "https://www.amazon.it/Sony-PS-LX310BT-Giradischi-Bluetooth-Nero/dp/B07N3Z9S2J?th=1&linkCode=ll2&tag=l0c39-21&linkId=def456ghi789&ref=_as_li_ss_tl"
+                link: "https://www.amazon.it/Black-Album-30Th-Anniversary-Libro/dp/B097NP5HXH?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-9&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=a091a665e57f1afbdd3aa256f99c69a3&ref=_as_li_ss_tl"
             }
         ]
     },
@@ -501,10 +500,10 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/Parrucchiere-Professionali-6Pollici-Inossidabile-Barbiere/dp/B088BCF6NP?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-4-spons&aref=c8jD8vrstC&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=8fb2796e9175ae201e4e22f53eb542b7&ref=_as_li_ss_tl"
             },
             {
-                name: "Carrello Professionale per Parrucchiere",
-                description: "Carrello organizer con cassetti per attrezzature",
+                name: "Carrello Parrucchiere Professionale Cassetti Estraibili",
+                description: "Carrello professionale con cassetti estraibili per attrezzature",
                 icon: "fa-suitcase",
-                link: "https://www.amazon.it/Carrello-Professionale-Parrucchiere-Organizzatore-Attrezzature/dp/B09X7Y8Z9Q?linkCode=ll2&tag=l0c39-21&linkId=abc123def456&ref=_as_li_ss_tl"
+                link: "https://www.amazon.it/Carrello-Parrucchiere-Professionale-Cassetti-Estraibili/dp/B0F1NBTJ2X?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-12&linkCode=ll2&tag=l0c39-21&linkId=a2dd234ef654842976675e9c91e2df12&ref=_as_li_ss_tl"
             }
         ]
     },
@@ -931,99 +930,99 @@ const catalogoProdotti = {
     },
     // CINEMA TV
     "samsung_qled": {
-        nome: "Samsung QLED 4K Smart TV",
+        nome: "Proiettore Videoproiettore TOPTRO Smartphone Correzione",
         categoria: "cinema",
-        descrizione: "TV 4K QLED con smart functions e alta qualità immagine.",
-        link: "https://www.amazon.it/dp/B08XGQZV5R?th=1&linkCode=ll2&tag=l0c39-21&linkId=def456ghi789&ref=_as_li_ss_tl",
-        messaggio: "TV 4K per la migliore esperienza home cinema."
+        descrizione: "Proiettore 4K con correzione keystone e compatibilità smartphone.",
+        link: "https://www.amazon.it/Proiettore-Videoproiettore-TOPTRO-Smartphone-Correzione/dp/B0CKRPTF4L?&linkCode=ll2&tag=l0c39-21&linkId=f77e39ffd9666af65f40632c408f8e8f&ref=_as_li_ss_tl",
+        messaggio: "Proiettore 4K per la migliore esperienza home cinema."
     },
     // SMARTPHONE TECH
     "iphone_15": {
-        nome: "Apple iPhone 15",
-        categoria: "smartphone",
-        descrizione: "Smartphone Apple con Dynamic Island e fotocamera avanzata.",
-        link: "https://www.amazon.it/dp/B0CHX1W1XY?th=1&linkCode=ll2&tag=l0c39-21&linkId=ghi789jkl012&ref=_as_li_ss_tl",
-        messaggio: "iPhone 15 per la migliore esperienza mobile."
+        nome: "Cofanetto Orologio gioielli Collana Anello Orecchini",
+        categoria: "cinema",
+        descrizione: "Cofanetto gioielli elegante con collana, anello e orecchini.",
+        link: "https://www.amazon.it/Cofanetto-Orologio-gioielli-Collana-Anello-Orecchini/dp/B07795PQDW?&linkCode=ll2&tag=l0c39-21&linkId=d7b42d25253d1f8f15e6f5ac077c9b2b&ref=_as_li_ss_tl",
+        messaggio: "Cofanetto gioielli per completare il tuo stile."
     },
     // TECH
     "airpods_pro": {
-        nome: "Apple AirPods Pro",
+        nome: "HyperX Cloud Cuffie Gaming",
         categoria: "tech",
-        descrizione: "Cuffie wireless con cancellazione rumore attiva.",
-        link: "https://www.amazon.it/dp/B09JFJWH5Z?th=1&linkCode=ll2&tag=l0c39-21&linkId=jkl012mno345&ref=_as_li_ss_tl",
-        messaggio: "Cuffie wireless premium per audio di qualità."
+        descrizione: "Cuffie gaming wireless con cancellazione rumore attiva.",
+        link: "https://www.amazon.it/HyperX-Cloud-Cuffie-Gaming-Mobile/dp/B00SAYCVTQ?mcid=c659dba90f523f5ca09a82b25c56a3e6&hvadid=700813659493&hvpos=&hvnetw=g&hvrand=12981572348516290815&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-381707145357&hvocijid=12981572348516290815-B00SAYCXWG-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=4e8af65a5e14abb66fa2f74389a0d44c&ref=_as_li_ss_tl",
+        messaggio: "Cuffie gaming premium per audio di qualità."
     },
     // MODA DONNA
     "borsa_michael_kors": {
-        nome: "Michael Kors Borsa a Tracolla",
+        nome: "Tods Donna Mocassino Platform Mascherina",
         categoria: "moda-donna",
-        descrizione: "Borsa elegante in pelle con finiture metalliche.",
-        link: "https://www.amazon.it/dp/B08X5Y7Z8W?th=1&linkCode=ll2&tag=l0c39-21&linkId=mno345pqr678&ref=_as_li_ss_tl",
-        messaggio: "Borsa elegante per completare il tuo look."
+        descrizione: "Mocassino elegante con platform e mascherina.",
+        link: "https://www.amazon.it/Tods-Donna-Mocassino-Platform-Mascherina/dp/B0C3VZRYSG?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=d51d2c599eb07e84ba1c51057afbfd9b&ref=_as_li_ss_tl",
+        messaggio: "Mocassino elegante per completare il tuo look."
     },
     // MODA UOMO
     "cintura_hugo_boss": {
-        nome: "HUGO BOSS Cintura in Pelle",
+        nome: "Smanicato Invernale Pullover Maglione Autunnale",
         categoria: "moda-uomo",
-        descrizione: "Cintura in pelle con fibbia metallica logo.",
-        link: "https://www.amazon.it/dp/B07Z8X5Y7Z?th=1&linkCode=ll2&tag=l0c39-21&linkId=pqr678stu901&ref=_as_li_ss_tl",
-        messaggio: "Cintura elegante per lo stile maschile."
+        descrizione: "Smanicato invernale in pile per la stagione fredda.",
+        link: "https://www.amazon.it/Smanicato-Invernale-Pullover-Maglione-Autunnale/dp/B0FNX784MK?&linkCode=ll2&tag=l0c39-21&linkId=048b7f63ab1f4a17764d337ef7f27e89&ref=_as_li_ss_tl",
+        messaggio: "Smanicato elegante per lo stile maschile."
     },
     // ARREDAMENTO CASA
     "tavolo_extensible": {
-        nome: "Tavolo da Pranzo Extensible",
-        categoria: "arredamento",
-        descrizione: "Tavolo allungabile in legno per sala da pranzo.",
-        link: "https://www.amazon.it/dp/B08X9Y8Z0W?th=1&linkCode=ll2&tag=l0c39-21&linkId=stu901vwx234&ref=_as_li_ss_tl",
-        messaggio: "Tavolo elegante per la tua sala da pranzo."
+        nome: "Nobleza Acquario Illuminazione Filtraggio Integrato",
+        categoria: "pet-care",
+        descrizione: "Acquario completo con illuminazione e filtraggio integrato.",
+        link: "https://www.amazon.it/Nobleza-Acquario-Illuminazione-Filtraggio-Integrato/dp/B0BQBRP9C1?th=1&linkCode=ll2&tag=l0c39-21&linkId=d54870a7ff8f4cebfa5d37d47b4c955a&ref=_as_li_ss_tl",
+        messaggio: "Acquario elegante per il tuo animale domestico."
     },
     // ACCESSORI MODA
     "occhiali_da_sole": {
-        nome: "Ray-Ban Occhiali da Sole Aviator",
+        nome: "House Dragon Logo Maglietta",
         categoria: "accessori",
-        descrizione: "Occhiali da sole classici con montatura metallica.",
-        link: "https://www.amazon.it/dp/B00M7T8K3S?th=1&linkCode=ll2&tag=l0c39-21&linkId=vwx234yzd345&ref=_as_li_ss_tl",
-        messaggio: "Occhiali da sole iconici per proteggere gli occhi."
+        descrizione: "Maglietta con logo House of the Dragon.",
+        link: "https://www.amazon.it/House-Dragon-Logo-Maglietta/dp/B0B8BKK2Y5?customId=B07536XX75&customizationToken=MC_Assembly_1%23B07536XX75&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=2ac7e3075294df95cc459e2e771892c8&ref=_as_li_ss_tl",
+        messaggio: "Maglietta iconica per proteggere gli occhi."
     },
     // BENESSERE CURA PERSONALE
     "spazzola_elettrica": {
-        nome: "Philips Sonicare Spazzola Elettrica",
-        categoria: "benessere",
-        descrizione: "Spazzola elettrica sonica per igiene orale avanzata.",
-        link: "https://www.amazon.it/dp/B07X1Y2Z3W?th=1&linkCode=ll2&tag=l0c39-21&linkId=yzd345abc456&ref=_as_li_ss_tl",
-        messaggio: "Spazzola elettrica per igiene orale perfetta."
+        nome: "Panathletic Elastici Fitness Set Bande",
+        categoria: "fitness",
+        descrizione: "Set di elastici fitness per allenamento a casa.",
+        link: "https://www.amazon.it/Panathletic-Elastici-Fitness-Set-Bande/dp/B016A9IUWY?th=1&linkCode=ll2&tag=l0c39-21&linkId=6dbdcb8523b4ed784a7fc3eb1c446af1&ref=_as_li_ss_tl",
+        messaggio: "Elastici fitness per allenamento a casa."
     },
     // GIOCHI DA TAVOLO
     "monopoly": {
-        nome: "Monopoly Edizione Classica",
+        nome: "2024 Player's Handbook (Dungeons & Dragons Core Rulebook)",
         categoria: "giochi",
-        descrizione: "Gioco da tavolo classico per serate divertenti.",
-        link: "https://www.amazon.it/dp/B00MEBHI2W?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc456def567&ref=_as_li_ss_tl",
-        messaggio: "Monopoly classico per serate con amici."
+        descrizione: "Manuale del giocatore per Dungeons & Dragons 2024.",
+        link: "https://www.amazon.it/Players-Handbook-Dungeons-Rulebook-Versione/dp/0786969512?&linkCode=ll2&tag=l0c39-21&linkId=a8d3cd623c05cc0d58f98cff434b4032&ref=_as_li_ss_tl",
+        messaggio: "Player's Handbook per sessioni D&D epiche."
     },
     // LIBRI EREADER
     "kindle_paperwhite": {
-        nome: "Amazon Kindle Paperwhite",
+        nome: "Daydreamer ali del sogno Aa Vv",
         categoria: "libri",
-        descrizione: "E-reader con schermo ad alta risoluzione e luce integrata.",
-        link: "https://www.amazon.it/dp/B09MSZQK5X?th=1&linkCode=ll2&tag=l0c39-21&linkId=def567ghi678&ref=_as_li_ss_tl",
-        messaggio: "Kindle Paperwhite per leggere ovunque."
+        descrizione: "Romanzo bestseller italiano.",
+        link: "https://www.amazon.it/Daydreamer-ali-del-sogno-Aa-Vv/dp/8804736178?crid=3TY5QGE8F68AR&dib=eyJ2IjoiMSJ9.cXKxgSe7W5q94BO5HgbZtidoyLEM8uNIWo3jVoXlhXbs9nPD9XofsxXLYUJl3UVP.Ak-bbQQ0ptrC57kwQWUouMCFpXxRoI_87EZGljBiaZI&dib_tag=se&keywords=libri+daydreamer+le+ali+del+sogno&qid=1778003739&sprefix=libri+le+ali++%2Caps%2C141&sr=8-1&linkCode=ll2&tag=l0c39-21&linkId=58bf6a65290c6dde0cda8cfa27d163e1&ref=_as_li_ss_tl",
+        messaggio: "Romanzo bestseller per leggere ovunque."
     },
     // PROFUMI BELLEZZA
     "dior_sauvage": {
-        nome: "Dior Sauvage Eau de Parfum",
-        categoria: "profumi",
-        descrizione: "Profumo maschile con note fresche e legnose.",
-        link: "https://www.amazon.it/dp/B018O8I2F2?th=1&linkCode=ll2&tag=l0c39-21&linkId=ghi678jkl789&ref=_as_li_ss_tl",
-        messaggio: "Profumo iconico per uomo sicuro di sé."
+        nome: "Money Heist Bella Ciao Maglietta",
+        categoria: "cinema",
+        descrizione: "Maglietta con scritta Bella Ciao da La Casa di Carta.",
+        link: "https://www.amazon.it/Money-Heist-Bella-Ciao-Maglietta/dp/B082GP349M?&linkCode=ll2&tag=l0c39-21&linkId=c7687ca429ed6f36a502f2362589f246&ref=_as_li_ss_tl",
+        messaggio: "Maglietta iconica per fan de La Casa di Carta."
     },
     // ABBIGLIAMENTO LAVORO
     "scarpe_antinfortunistiche": {
-        nome: "Scarpe Antinfortunistiche da Lavoro",
-        categoria: "lavoro",
-        descrizione: "Scarpe da lavoro con protezione punta acciaio.",
-        link: "https://www.amazon.it/dp/B08X2Y3Z4W?th=1&linkCode=ll2&tag=l0c39-21&linkId=jkl789mno890&ref=_as_li_ss_tl",
-        messaggio: "Scarpe da lavoro sicure e confortevoli."
+        nome: "Joma Nobel Allenamento Unisex Adulto",
+        categoria: "fitness",
+        descrizione: "Scarpe da allenamento per fitness e sport.",
+        link: "https://www.amazon.it/Joma-Nobel-Allenamento-Unisex-Adulto/dp/B00IXMBTKC?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=67de91ddab09a654c237fb9f253e9dfc&ref=_as_li_ss_tl",
+        messaggio: "Scarpe da allenamento sicure e confortevoli."
     },
     "beta_scarpe_antinfortunistiche": {
         nome: "BETA 7352A Scarpe Antinfortunistiche",

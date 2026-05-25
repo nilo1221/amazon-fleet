@@ -26,6 +26,7 @@
     --bot-bg-blinding-lights: linear-gradient(135deg, #0a0a2e 0%, #ff0033 50%, #ff6b35 100%);
     --bot-bg-as-it-was: linear-gradient(135deg, #ffb6c1 0%, #ffd700 50%, #87ceeb 100%);
     --bot-bg-midnight-city: linear-gradient(135deg, #1a0b2e 0%, #00ffff 50%, #ff00ff 100%);
+    --bot-bg-parrucchiere: linear-gradient(135deg, #1a1a2e 0%, #D4AF37 50%, #f8f9fa 100%);
     
     /* Premium theme: Blu Notte e Ambra */
     --bot-bg-premium: linear-gradient(135deg, #0a0a2e 0%, #1a1a4e 50%, #FFA500 100%);
@@ -252,6 +253,11 @@
     background: var(--bot-bg-midnight-city);
 }
 
+#ai-chat-button.theme-parrucchiere {
+    --bot-current-bg: var(--bot-bg-parrucchiere);
+    background: var(--bot-bg-parrucchiere);
+}
+
 #ai-chat-button.theme-default {
     --bot-current-bg: var(--bot-bg-default);
     background: var(--bot-bg-default);
@@ -377,6 +383,10 @@
 
 .chat-header.theme-midnight-city {
     --bot-current-bg: var(--bot-bg-midnight-city);
+}
+
+.chat-header.theme-parrucchiere {
+    --bot-current-bg: var(--bot-bg-parrucchiere);
 }
 
 .chat-header.theme-default {

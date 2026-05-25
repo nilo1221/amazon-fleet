@@ -19,8 +19,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Telo Mare Microfibra Sand Proof",
-                    link: "https://www.amazon.it/Telo-Mare-Microfibra-Sand-Proof/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                    name: "Fit-Flip Telo Mare microfibra marino bianco",
+                    link: "https://www.amazon.it/Fit-Flip-Telo-Mare-microfibra-marino-bianco/dp/B09KNMTKPS?th=1&linkCode=ll2&tag=l0c39-21&linkId=b2c56b41c9500ff261d9cde21e931b3f&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -30,8 +30,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Maschera Snorkeling Professionale",
-                    link: "https://www.amazon.it/Maschera-Snorkeling-Professionale/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                    name: "Cressi Scarpette Acquatici Bambini Transparente",
+                    link: "https://www.amazon.it/Cressi-Scarpette-Acquatici-Bambini-Transparente/dp/B000O6AJNI?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c9803e478a795e32eb84c529bfd188c2&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -58,8 +58,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Mouse Gaming Wireless RGB",
-                    link: "https://www.amazon.it/Mouse-Gaming-Wireless-RGB/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                    name: "Razer DeathAdder Essential",
+                    link: "https://www.amazon.it/Razer-DeathAdder-Essential-essenziale-sensore/dp/B092R5MCB3?mcid=b339f1fa54c632069402bc15331fe6e4&hvadid=700790378073&hvpos=&hvnetw=g&hvrand=17152808515394588193&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1363770907123&hvocijid=17152808515394588193-B092R5MCB3-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=1b32d94d6fc3b1cc750a1b8b4d8f4ca1&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -69,8 +69,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Tastiera Meccanica RGB",
-                    link: "https://www.amazon.it/Tastiera-Meccanica-RGB/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                    name: "Razer BlackWidow Green Switch",
+                    link: "https://www.amazon.it/Razer-BlackWidow-Green-Switch-interruttori/dp/B0C6MJGRSP?mcid=94713db3966d30d790c2523d57edca8f&hvadid=711050895070&hvpos=&hvnetw=g&hvrand=13769018999092458833&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2270730354227&hvocijid=13769018999092458833-B0C6MJGRSP-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=dfe44a8eea673b7a91f20eafd80fdc60&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -97,8 +97,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Zaino da Trekking 50L",
-                    link: "https://www.amazon.it/Zaino-Trekking-50L/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                    name: "TRIZAND spiaggia trasporto impermeabile",
+                    link: "https://www.amazon.it/TRIZAND-spiaggia-trasporto-impermeabile-23492/dp/B0CTPTR99X?pd_rd_w=metuQ&content-id=amzn1.sym.3a84fb8b-d4d6-4483-8fd7-0000cb59ea5a&pf_rd_p=3a84fb8b-d4d6-4483-8fd7-0000cb59ea5a&pf_rd_r=GGEPG1FNR1KN3JY8PSWJ&pd_rd_wg=I3y7l&pd_rd_r=22330237-b6e0-4094-8318-91b0a5a9328f&pd_rd_i=B0CTPTR99X&linkCode=ll2&tag=l0c39-21&linkId=4940199de276b89a5b47db92baef10dd&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -108,8 +108,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Barbecue Portatile Gas",
-                    link: "https://www.amazon.it/Barbecue-Portatile-Gas/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                    name: "Auauraintt Barbecue Portatile pieghevole campeggio",
+                    link: "https://www.amazon.it/Auauraintt-Barbecue-Portatile-pieghevole-campeggio/dp/B0D5CM7NR8?&linkCode=ll2&tag=l0c39-21&linkId=5642e8c53d343f3cfa433e868b6cbe3b&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -136,8 +136,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Ventilatore a Torre Silenzioso",
-                    link: "https://www.amazon.it/Ventilatore-Torre-Silenzioso/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                    name: "Ventilatore Silenzioso Ricaricabile Pieghevole Telecomando",
+                    link: "https://www.amazon.it/Ventilatore-Silenzioso-Ricaricabile-Pieghevole-Telecomando/dp/B0DZ5ZB59N?th=1&linkCode=ll2&tag=l0c39-21&linkId=e5e746f4698bf8950b8c872ed5e18a5f&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -147,8 +147,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Ventilatore da Tavolo USB",
-                    link: "https://www.amazon.it/Ventilatore-Tavolo-USB/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                    name: "Ventilator Silenzioso Ventilatori Ricaricabile Rotazione",
+                    link: "https://www.amazon.it/Ventilator-Silenzioso-Ventilatori-Ricaricabile-Rotazione/dp/B0CP27G3V5?th=1&linkCode=ll2&tag=l0c39-21&linkId=d36fd176303a9&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -165,7 +165,7 @@ const ComboDatabase = {
             {
                 product1: {
                     name: "SCHWERTKRONE Rasoio a Mano Libera con Manico Prezioso",
-                    link: "https://www.amazon.it/SCHWERTKRONE-Rasoio-Libera-Manico-Prezioso/dp/B09C5X7R3Z?&linkCode=ll2&tag=l0c39-21&linkId=6d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d&ref=_as_li_ss_tl"
+                    link: "https://www.amazon.it/dp/B074QPKFYQ?psc=1&aref=2EsuFIfF7d&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=04d8b1b795bf1f526d3f2eddd0b7a866&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -176,7 +176,7 @@ const ComboDatabase = {
             {
                 product1: {
                     name: "Forbici Professionali Parrucchiere 6 Pollici",
-                    link: "https://www.amazon.it/Forbici-Professionali-Parrucchieri-Acciaio-Inossidabile/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                    link: "https://www.amazon.it/dp/B074QPKFYQ?psc=1&aref=2EsuFIfF7d&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=04d8b1b795bf1f526d3f2eddd0b7a866&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -187,7 +187,7 @@ const ComboDatabase = {
             {
                 product1: {
                     name: "Tagliacapelli Professionale Regolabarba",
-                    link: "https://www.amazon.it/Tagliacapelli-Professionale-Regolabarba-Batteria/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                    link: "https://www.amazon.it/dp/B074QPKFYQ?psc=1&aref=2EsuFIfF7d&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=04d8b1b795bf1f526d3f2eddd0b7a866&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -203,8 +203,8 @@ const ComboDatabase = {
         combos: [
             {
                 product1: {
-                    name: "One Piece - Volume 1-100 Complete Collection",
-                    link: "https://www.amazon.it/One-Piece-Volume-1-100-Collection/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123def456&ref=_as_li_ss_tl"
+                    name: "One piece (Vol. 1)",
+                    link: "https://www.amazon.it/One-piece-1-Eiichiro-Oda/dp/8864201793?&linkCode=ll2&tag=l0c39-21&linkId=e72c284460a4ab716a6c562758b2c330&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -214,8 +214,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Dragon Ball Super - Complete Series Box Set",
-                    link: "https://www.amazon.it/Dragon-Ball-Super-Complete-Box/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                    name: "Dragon Ball 1 (Dragon Ball Evergreen Edition) eBook",
+                    link: "https://www.amazon.it/Dragon-Ball-Evergreen-ebook/dp/B07M5HTBFL?&linkCode=ll2&tag=l0c39-21&linkId=b0f9292e84b16cf9298cb1026150d642&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -225,8 +225,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Naruto Shippuden - Complete Box Set",
-                    link: "https://www.amazon.it/Naruto-Shippuden-Complete-Box-Set/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=ghi789&ref=_as_li_ss_tl"
+                    name: "Naruto 1 eBook",
+                    link: "https://www.amazon.it/Naruto-1-Masashi-Kishimoto-ebook/dp/B0BWCVY8PS?&linkCode=ll2&tag=l0c39-21&linkId=469bd1c492b998b84a0a2ca7915d22dc&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -281,8 +281,8 @@ const ComboDatabase = {
         combos: [
             {
                 product1: {
-                    name: "Manubri Regolabili 20kg",
-                    link: "https://www.amazon.it/Manubri-Regolabili-Palestra-Esercizio-Casa/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=jkl012&ref=_as_li_ss_tl"
+                    name: "RE-manubri regolabili Chiusure collegamento",
+                    link: "https://www.amazon.it/RE-manubri-regolabili-Chiusure-collegamento/dp/B09773F9BL?th=1&linkCode=ll2&tag=l0c39-21&linkId=a44d9f6049a02d0fe4b53915e085269f&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -292,8 +292,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Tappetino Yoga Antiscivolo",
-                    link: "https://www.amazon.it/Tappetino-Yoga-Antiscivolo-Spessore-10mm/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=mno345&ref=_as_li_ss_tl"
+                    name: "Tappetino Spessore Antiscivolo KG Qualità",
+                    link: "https://www.amazon.it/Tappetino-Spessore-Antiscivolo-KG-Qualit%C3%A0/dp/B01N67BRCF?th=1&linkCode=ll2&tag=l0c39-21&linkId=bb90c8bac4dbb7272f7d8192a73c4759&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
@@ -309,8 +309,8 @@ const ComboDatabase = {
         combos: [
             {
                 product1: {
-                    name: "Amazon Echo Dot 5th Generation",
-                    link: "https://www.amazon.it/Amazon-Echo-5th-Generation/dp/B09B8V1Z3P?&linkCode=ll2&tag=l0c39-21&linkId=pqr678&ref=_as_li_ss_tl"
+                    name: "Amazon Basics intelligente singola confezione",
+                    link: "https://www.amazon.it/Amazon-Basics-intelligente-singola-confezione/dp/B0CMXNWCVP?mcid=9e2aa91a1c8d3bcbaef8d22ed1555743&hvadid=705743448845&hvpos=&hvnetw=g&hvrand=3521815141531840554&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2347766460617&hvocijid=3521815141531840554-B0CMXNWCVP-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=e9d8c1168729535c8e5f367cfbc39448&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -320,8 +320,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Smart Light Bulb WiFi RGB",
-                    link: "https://www.amazon.it/Smart-Light-Bulb-WiFi-RGB/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=stu901&ref=_as_li_ss_tl"
+                    name: "TP-Link Intelligente Compatibile Controllo tramite",
+                    link: "https://www.amazon.it/TP-Link-Intelligente-Compatibile-Controllo-tramite/dp/B07Z5JD3T4?pd_rd_w=e2dzD&content-id=amzn1.sym.1f3c1772-ccf5-4aa2-abc0-5bb5851fb447&pf_rd_p=1f3c1772-ccf5-4aa2-abc0-5bb5851fb447&pf_rd_r=F4ATCRT21RHMY22PYNGP&pd_rd_wg=zWCfO&pd_rd_r=6b4f6f0e-40f4-4bc2-ae48-0d834bc5e132&pd_rd_i=B07Z5JD3T4&th=1&linkCode=ll2&tag=l0c39-21&linkId=e4dd22dc612200b8b487d3965d6fb599&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -337,8 +337,8 @@ const ComboDatabase = {
         combos: [
             {
                 product1: {
-                    name: "Lettiera Autopulente per Gatti",
-                    link: "https://www.amazon.it/Lettiera-Autopulente-Gatto-Senza-Sacchetto/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=vwx234&ref=_as_li_ss_tl"
+                    name: "HaoAMZ Lettiera automatica dimensioni autopulente",
+                    link: "https://www.amazon.it/HaoAMZ-Lettiera-automatica-dimensioni-autopulente/dp/B0CKYYTWY4?&linkCode=ll2&tag=l0c39-21&linkId=2fbb8edf22e292d8a30e649af6540b65&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -348,8 +348,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Cuccia Ortopedica per Cane",
-                    link: "https://www.amazon.it/Cuccia-Ortopedica-Cane-Memory-Foam/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=yza567&ref=_as_li_ss_tl"
+                    name: "Tiragraffi tiragraffi multilivello attività piattaforme",
+                    link: "https://www.amazon.it/Tiragraffi-tiragraffi-multilivello-attivit%C3%A0-piattaforme/dp/B0BN9YL1KH?th=1&linkCode=ll2&tag=l0c39-21&linkId=e03fe2a5d31a3f3dcccfc3ecd1d7e9ec&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -365,8 +365,8 @@ const ComboDatabase = {
         combos: [
             {
                 product1: {
-                    name: "Proiettore 4K Home Cinema",
-                    link: "https://www.amazon.it/Proiettore-4K-Home-Cinema/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=bcd890&ref=_as_li_ss_tl"
+                    name: "Proiettore Videoproiettore TOPTRO Smartphone Correzione",
+                    link: "https://www.amazon.it/Proiettore-Videoproiettore-TOPTRO-Smartphone-Correzione/dp/B0CKRPTF4L?&linkCode=ll2&tag=l0c39-21&linkId=f77e39ffd9666af65f40632c408f8e8f&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -376,8 +376,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Soundbar Wireless Dolby Atmos",
-                    link: "https://www.amazon.it/Soundbar-Wireless-Dolby-Atmos/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=efg123&ref=_as_li_ss_tl"
+                    name: "proiettore portatile regolabile Projector ricaricabile",
+                    link: "https://www.amazon.it/proiettore-portatile-regolabile-Projector-ricaricabile/dp/B0FG2432GJ?th=1&linkCode=ll2&tag=l0c39-21&linkId=5b9777d87a5e7a03b360884764158873&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -449,8 +449,8 @@ const ComboDatabase = {
         combos: [
             {
                 product1: {
-                    name: "Set di Pentole Antiaderenti 10 Pezzi",
-                    link: "https://www.amazon.it/Set-Pentole-Antiaderenti-Pezzi-Induzione/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=ghi456&ref=_as_li_ss_tl"
+                    name: "Prestige antiaderenti resistenti induzione impugnare",
+                    link: "https://www.amazon.it/Prestige-antiaderenti-resistenti-induzione-impugnare/dp/B0C49TJKJ5?th=1&linkCode=ll2&tag=l0c39-21&linkId=1334e0ede6f625ea3ce52d4ef9a163fb&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -460,8 +460,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Robot da Cucina Multifunzione",
-                    link: "https://www.amazon.it/Robot-Cucina-Multifunzione-1000W/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=jkl789&ref=_as_li_ss_tl"
+                    name: "Bosch MC812M844 Cucina Multifunzione Alluminio",
+                    link: "https://www.amazon.it/Bosch-MC812M844-Cucina-Multifunzione-Alluminio/dp/B07HPRQJL1?th=1&linkCode=ll2&tag=l0c39-21&linkId=2acaa6b678bac18747a2cdac25e75848&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -477,8 +477,8 @@ const ComboDatabase = {
         combos: [
             {
                 product1: {
-                    name: "Sneakers Sportive Uomo",
-                    link: "https://www.amazon.it/Sneakers-Sportive-Uomo-Running/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=mno012&ref=_as_li_ss_tl"
+                    name: "paillettes sneakers nightclub tendenza all-match",
+                    link: "https://www.amazon.it/paillettes-sneakers-nightclub-tendenza-all-match/dp/B098BCRK41?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=82723a79eb1a7c7ae378324a7b89c9f2&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -488,8 +488,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Borsa in Pelle Donna",
-                    link: "https://www.amazon.it/Borsa-Pelle-Donna-Luxury/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=pqr345&ref=_as_li_ss_tl"
+                    name: "Tods Donna Mocassino Platform Mascherina",
+                    link: "https://www.amazon.it/Tods-Donna-Mocassino-Platform-Mascherina/dp/B0C3VZRYSG?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=d51d2c599eb07e84ba1c51057afbfd9b&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -505,8 +505,8 @@ const ComboDatabase = {
         combos: [
             {
                 product1: {
-                    name: "Kindle Paperwhite 11th Generation",
-                    link: "https://www.amazon.it/Kindle-Paperwhite-11th-Generation/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=stu678&ref=_as_li_ss_tl"
+                    name: "Daydreamer ali del sogno Aa Vv",
+                    link: "https://www.amazon.it/Daydreamer-ali-del-sogno-Aa-Vv/dp/8804736178?crid=3TY5QGE8F68AR&dib=eyJ2IjoiMSJ9.cXKxgSe7W5q94BO5HgbZtidoyLEM8uNIWo3jVoXlhXbs9nPD9XofsxXLYUJl3UVP.Ak-bbQQ0ptrC57kwQWUouMCFpXxRoI_87EZGljBiaZI&dib_tag=se&keywords=libri+daydreamer+le+ali+del+sogno&qid=1778003739&sprefix=libri+le+ali++%2Caps%2C141&sr=8-1&linkCode=ll2&tag=l0c39-21&linkId=58bf6a65290c6dde0cda8cfa27d163e1&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
@@ -516,8 +516,8 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Bestseller Italiano - Romanzo",
-                    link: "https://www.amazon.it/Bestseller-Italiano-Romanzo/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=vwx901&ref=_as_li_ss_tl"
+                    name: "Fuoco sangue George R Martin",
+                    link: "https://www.amazon.it/Fuoco-sangue-George-R-Martin/dp/880475172X?&linkCode=ll2&tag=l0c39-21&linkId=12ee8a5a0273875275dd3073149c4fdc&ref=_as_li_ss_tl"
                 },
                 product2: {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",

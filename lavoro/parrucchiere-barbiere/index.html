@@ -722,6 +722,33 @@
     
     <!-- AI Chat Window -->
     <div id="ai-chat-window">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="header-content">
+                <img src="../images/logo.png" alt="Smart Choices Guide Logo" class="chat-bot-logo">
+                <div>
+                    <h5>Assistente Smart</h5>
+                    <small>Online</small>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()" title="Chiudi chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <!-- Chat Messages -->
+        <div id="chat-messages" class="chat-messages">
+            <!-- Messages will be loaded dynamically via JavaScript -->
+        </div>
+        
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Scrivi il tuo messaggio...">
+            <button onclick="sendMessage()" title="Invia messaggio">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
     
     <!-- Niche Tracking Script -->
     <script>
@@ -736,6 +763,20 @@
                 'niche': niche,
                 'timestamp': timestamp
             });
+        }
+
+        // Apply bot theme on page load
+        function applyThemeOnLoad() {
+            if (typeof applyTheme === 'function') {
+                applyTheme('parrucchiere-barbiere');
+            }
+        }
+
+        // Apply theme when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', applyThemeOnLoad);
+        } else {
+            applyThemeOnLoad();
         }
     </script>
 </body>
