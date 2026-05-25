@@ -2272,29 +2272,31 @@ const macroCategories = {
 
 // Related categories mapping
 const relatedCategories = {
-    'cucina-elettrodomestici': ['smart-home-domotica', 'arredamento-casa'],
+    'cucina-elettrodomestici': ['smart-home-domotica', 'arredamento-casa', 'bibite-bevande'],
     'smart-home-domotica': ['cucina-elettrodomestici', 'tech'],
-    'fitness-casa': ['smartphone-tech', 'tech'],
-    'elite-gaming-gear': ['smartphone-tech', 'tech', 'cinema-tv'],
+    'fitness-casa': ['smartphone-tech', 'tech', 'bibite-bevande'],
+    'elite-gaming-gear': ['smartphone-tech', 'tech', 'cinema-tv', 'bibite-bevande'],
     'pet-care-intelligente': ['arredamento-casa', 'outdoor-camping'],
-    'cinema-tv': ['tech', 'smartphone-tech'],
+    'cinema-tv': ['tech', 'smartphone-tech', 'bibite-bevande'],
+    'bibite-bevande': ['fitness-casa', 'mare-spiaggia', 'outdoor-camping', 'caldo-rinfrescamento'],
     'smartphone-tech': ['tech', 'fitness-casa', 'elite-gaming-gear'],
     'moda-donna': ['accessori-moda', 'profumi-bellezza'],
     'moda-uomo': ['accessori-moda', 'profumi-bellezza'],
-    'viaggi-vacanze': ['outdoor-camping', 'mare-spiaggia'],
+    'viaggi-vacanze': ['outdoor-camping', 'mare-spiaggia', 'bibite-bevande'],
     'accessori-moda': ['moda-donna', 'moda-uomo'],
     'arredamento-casa': ['smart-home-domotica', 'benessere-cura-personale'],
     'benessere-cura-personale': ['profumi-bellezza', 'arredamento-casa'],
-    'dvd-bluray': ['cinema-tv'],
+    'dvd-bluray': ['cinema-tv', 'bibite-bevande'],
     'fotografia-mobile': ['tech', 'smartphone-tech'],
-    'giochi-da-tavolo': ['elite-gaming-gear'],
+    'giochi-da-tavolo': ['elite-gaming-gear', 'bibite-bevande'],
     'libri-ereader': ['tech', 'smartphone-tech'],
-    'mare-spiaggia': ['viaggi-vacanze', 'outdoor-camping'],
-    'outdoor-camping': ['viaggi-vacanze', 'mare-spiaggia'],
+    'mare-spiaggia': ['viaggi-vacanze', 'outdoor-camping', 'bibite-bevande'],
+    'outdoor-camping': ['viaggi-vacanze', 'mare-spiaggia', 'bibite-bevande'],
     'profumi-bellezza': ['moda-donna', 'moda-uomo', 'benessere-cura-personale'],
     'sostenibilita-eco-friendly': ['arredamento-casa', 'tech'],
     'tech': ['smartphone-tech', 'fitness-casa', 'elite-gaming-gear'],
-    'ufficio-produttivo': ['tech', 'arredamento-casa']
+    'ufficio-produttivo': ['tech', 'arredamento-casa', 'bibite-bevande'],
+    'caldo-rinfrescamento': ['bibite-bevande', 'fitness-casa']
 };
 
 // Toggle chat window
