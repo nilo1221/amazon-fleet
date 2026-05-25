@@ -3425,7 +3425,7 @@ function selectCategoryFromButton(categoryKey) {
                                         ▶ Play su Spotify
                                     </button>
                                 </p>` : ''}
-                                ${categoryKey === 'libri-ereader' && nicheData.kindleLink ? `
+                                ${(categoryKey === 'libri-ereader' || categoryKey === 'manga-anime') && nicheData.kindleLink ? `
                                 <div class="premium-box" style="margin-top:12px; border:1px solid #007185; padding:10px; background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%); border-radius: 8px; font-size: 0.9em; color: #007185; text-align: center;">
                                     📚 <strong>Vuoi un modo migliore per leggere?</strong> 
                                     <br><a href="${nicheData.kindleLink}" target="_blank" onclick="trackKindleClick()" style="color: #007185; font-weight: bold; text-decoration: underline;">Prova Kindle Unlimited con migliaia di libri</a>
