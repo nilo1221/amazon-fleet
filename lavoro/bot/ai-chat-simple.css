@@ -22,7 +22,7 @@
     --bot-bg-professional: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --bot-bg-travel: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     --bot-bg-creative: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --bot-bg-cinema-tv: linear-gradient(135deg, #6a1b9a 0%, #ff00ff 100%);
+    --bot-bg-merchandise-serie-tv: linear-gradient(135deg, #6a1b9a 0%, #ff00ff 100%);
     --bot-bg-blinding-lights: linear-gradient(135deg, #0a0a2e 0%, #ff0033 50%, #ff6b35 100%);
     --bot-bg-as-it-was: linear-gradient(135deg, #ffb6c1 0%, #ffd700 50%, #87ceeb 100%);
     --bot-bg-midnight-city: linear-gradient(135deg, #1a0b2e 0%, #00ffff 50%, #ff00ff 100%);
@@ -233,9 +233,9 @@
     background: var(--bot-bg-creative);
 }
 
-#ai-chat-button.theme-cinema-tv {
-    --bot-current-bg: var(--bot-bg-cinema-tv);
-    background: var(--bot-bg-cinema-tv);
+#ai-chat-button.theme-merchandise-serie-tv {
+    --bot-current-bg: var(--bot-bg-merchandise-serie-tv);
+    background: var(--bot-bg-merchandise-serie-tv);
 }
 
 #ai-chat-button.theme-blinding-lights {
@@ -369,8 +369,8 @@
     --bot-current-bg: var(--bot-bg-creative);
 }
 
-.chat-header.theme-cinema-tv {
-    --bot-current-bg: var(--bot-bg-cinema-tv);
+.chat-header.theme-merchandise-serie-tv {
+    --bot-current-bg: var(--bot-bg-merchandise-serie-tv);
 }
 
 .chat-header.theme-blinding-lights {

@@ -34,12 +34,12 @@
       "accentColor": "#1A5276"
     },
     {
-      "id": "cinema-tv",
-      "name": "Cinema & TV",
+      "id": "merchandise-serie-tv",
+      "name": "Merchandise Serie TV",
       "icon": "fa-film",
       "color": "danger",
-      "productCount": 38,
-      "description": "Proiettori, Soundbar, Monitor 4K",
+      "productCount": 41,
+      "description": "Merchandise Serie TV, Abbigliamento, Accessori",
       "headerGradient": "linear-gradient(135deg, #1A1A2E 0%, #4A148C 50%, #0D47A1 100%)",
       "primaryColor": "#4A148C",
       "accentColor": "#0D47A1"

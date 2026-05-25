@@ -295,20 +295,20 @@ const NicheDatabase = {
             }
         ]
     },
-    "cinema-tv": {
-        name: "Cinema & TV",
-        tags: ["tv", "televisione", "proiettore", "cinema", "film", "bluray", "dvd", "schermo", "monitor", "home", "theater", "surround", "soundbar", "altoparlante", "speaker", "sound", "audio", "hifi", "amplificatore", "ricevitore", "decoder", "satellite", "streaming", "netflix", "prime", "disney", "hbo", "apple", "tv", "chromecast", "fire", "stick", "roku", "kodi", "plex", "media", "player", "cavo", "hdmi", "4k", "8k", "oled", "qled", "led", "lcd"],
-        url: "/cinema-tv/index.html",
+    "merchandise-serie-tv": {
+        name: "Merchandise Serie TV",
+        tags: ["merchandise", "serie", "tv", "televisione", "abbigliamento", "outfit", "maglietta", "felpa", "camicia", "berretto", "accessori", "gioielli", "collana", "bracciale", "cosplay", "costume", "peaky", "blinders", "stranger", "things", "wednesday", "witcher", "fallout", "shogun", "bridgerton", "money", "heist", "crown", "house", "dragon", "sanem", "can", "divit", "leyla", "emre", "le", "ali", "del", "sogno"],
+        url: "/merchandise-serie-tv/index.html",
         personality: "entertainment",
-        valueProp: "Ho selezionato i migliori prodotti per il tuo stile. Tessuto, vestibilità e design iconico sono i criteri che ho considerato.",
+        valueProp: "Ho selezionato i migliori merchandise ufficiali e outfit ispirati alle serie TV. Tessuto, vestibilità e design iconico sono i criteri che ho considerato.",
         song: "Eye of the Tiger - Survivor",
         songLinkSpotify: "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
     },
-    "bibite-bevande": {
-        name: "Bibite & Bevande",
+    "snack-bevande": {
+        name: "Snack & Bevande",
         tags: ["bibita", "bevanda", "coca", "cola", "pepsi", "fanta", "sprite", "acqua", "gassata", "analcolica", "birra", "vino", "succo", "frizzante", "tonica", "ginger", "zenzero", "limonata", "aranciata", "drenante", "integratore", "energy", "drink", "red", "bull", "monster", "caffe", "tè", "the", "tisana", "infuso", "latte", "soda", "soft", "drink", "lattina", "bottiglia", "scorta", "multipack", "confezione", "famiglia"],
-        url: "/bibite-bevande/index.html",
+        url: "/snack-bevande/index.html",
         personality: "refreshing",
         valueProp: "Ho selezionato le bibite e bevande migliori per rinfrescarti. Gusto, qualità e convenienza sono i fattori chiave.",
         song: "Summer Vibes Deep House Mix",
@@ -385,22 +385,22 @@ const NicheDatabase = {
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         topProducts: [
             {
-                name: "EMPIRE GAMING - Armor RF800 Kit Wireless Tastiera e Mouse QWERTY(Italiana-Layout)",
-                description: "Set completo wireless per gaming con tastiera e mouse RGB, tappetino incluso",
-                icon: "fa-keyboard",
-                link: "https://www.amazon.it/EMPIRE-GAMING-Ricaricabile-Italiana-Layout-Mac-Blanco/dp/B0C1GW8GLV?dib=eyJ2IjoiMSJ9.H41HIU37m21CAZuT26axiA1EVEWY2bXYhStFJR3IDqBv0aeUCnBMJj0OkxJH0eloLNz42CrbMX7PKpHa9ZCRX8Iciue4SVdKof1U0YEZ8L6CCcEmdqVrV41vYfiW2zsA5vncJTKgHBVJ7HdzKEwMri8BgPFhaCYAMKFEUeahS4nGmVZOaFnjUWQltgrByPhu_wzjwT2D-6KnpVkB_8x3lB3kFrtno6-nOXw4TBHygB9JtAfFK0s03ajebceBiEuKZu8qfYAVJ9JnPu-rlIiW6oalD5DKgpAL00tkXB3seZw.XV8nzpkNKqBh3_gQSmb6q43E7-yTom-r3TLm30rMuGg&dib_tag=se&keywords=set%2Bda%2Bpc&qid=1779677707&sr=8-12&th=1&linkCode=ll2&tag=l0c39-21&linkId=946d21e02eb0c1a8012cd3fb9af3a85e&ref=_as_li_ss_tl"
+                name: "Columbia Crestwood Mid Waterproof Scarponi da Trekking Uomo",
+                description: "Scarponi da trekking ed escursionismo impermeabili a vita media uomo",
+                icon: "fa-hiking",
+                link: "https://www.amazon.it/Columbia-Crestwood-Waterproof-Trekking-Escursionismo/dp/B084N51S2C?m=a2b7wb2xmx2l4v&ascsubtag=srctok-37a5530180b0b50b&btn_ref=srctok-37a5530180b0b50b&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=cb14b4ba2df67d1525e569160a66ef41&ref=_as_li_ss_tl"
             },
             {
-                name: "Empire Gaming - Armor RF800 Wireless Gaming Tastatur und Maus QWERTZ (Deutsche Layout)",
-                description: "Set wireless gaming con tastiera tedesca QWERTZ, mouse ergonomico e tappetino",
-                icon: "fa-keyboard",
-                link: "https://www.amazon.it/EMPIRE-GAMING-Layout-Kabellose-Ergonomische/dp/B0BN8ZHQ95?dib=eyJ2IjoiMSJ9.H41HIU37m21CAZuT26axiA1EVEWY2bXYhStFJR3IDqBv0aeUCnBMJj0OkxJH0eloLNz42CrbMX7PKpHa9ZCRX8Iciue4SVdKof1U0YEZ8L6CCcEmdqVrV41vYfiW2zsA5vncJTKgHBVJ7HdzKEwMri8BgPFhaCYAMKFEUeahS4nGmVZOaFnjUWQltgrByPhu_wzjwT2D-6KnpVkB_8x3lB3kFrtno6-nOXw4TBHygB9JtAfFK0s03ajebceBiEuKZu8qfYAVJ9JnPu-rlIiW6oalD5DKgpAL00tkXB3seZw.XV8nzpkNKqBh3_gQSmb6q43E7-yTom-r3TLm30rMuGg&dib_tag=se&keywords=set+da+pc&qid=1779677707&sr=8-22&linkCode=ll2&tag=l0c39-21&linkId=f005831de4564cf1e48104fd044e6041&ref=_as_li_ss_tl"
+                name: "The North Face Scarpe Impermeabili Litewave Fastpack II da Donna",
+                description: "Scarpe impermeabili da donna con altezza caviglia media per trekking e outdoor",
+                icon: "fa-hiking",
+                link: "https://www.amazon.it/dp/B084N51S2C?m=a2b7wb2xmx2l4v&ascsubtag=srctok-37a5530180b0b50b&btn_ref=srctok-37a5530180b0b50b&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=cb14b4ba2df67d1525e569160a66ef41&ref=_as_li_ss_tl"
             },
             {
-                name: "EMPIRE GAMING - Hellhounds PC Gaming Pack English",
-                description: "Set gaming completo con tastiera, mouse e tappetino, software programmabile e illuminazione RGB",
-                icon: "fa-keyboard",
-                link: "https://www.amazon.it/EMPIRE-GAMING-Hellhounds-programmable-backlighting/dp/B07PFL1N1H?dib=eyJ2IjoiMSJ9.H41HIU37m21CAZuT26axiA1EVEWY2bXYhStFJR3IDqBv0aeUCnBMJj0OkxJH0eloLNz42CrbMX7PKpHa9ZCRX8Iciue4SVdKof1U0YEZ8L6CCcEmdqVrV41vYfiW2zsA5vncJTKgHBVJ7HdzKEwMri8BgPFhaCYAMKFEUeahS4nGmVZOaFnjUWQltgrByPhu_wzjwT2D-6KnpVkB_8x3lB3kFrtno6-nOXw4TBHygB9JtAfFK0s03ajebceBiEuKZu8qfYAVJ9JnPu-rlIiW6oalD5DKgpAL00tkXB3seZw.XV8nzpkNKqBh3_gQSmb6q43E7-yTom-r3TLm30rMuGg&dib_tag=se&keywords=set+da+pc&qid=1779677707&sr=8-56&linkCode=ll2&tag=l0c39-21&linkId=7017561edf10d81b7a5f10cc520ded52&ref=_as_li_ss_tl"
+                name: "FE Active Tenda Campeggio con Zanzariera",
+                description: "Tenda da campeggio con zanzariera integrata, impermeabile e resistente",
+                icon: "fa-campground",
+                link: "https://www.amazon.it/FE-Active-zanzariera-Impermeabile-Escursionismo/dp/B07QV3MQTT?&linkCode=ll2&tag=l0c39-21&linkId=aab7aeba98e2fe34f5bbfd458b27fb66&ref=_as_li_ss_tl"
             }
         ]
     },
@@ -598,6 +598,36 @@ const NicheDatabase = {
         song: "Video Killed the Radio Star - The Buggles",
         songLinkSpotify: "https://open.spotify.com/track/6t1FIJlZWTQfIZhsGjaulM",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
+    },
+    "biciclette-mobilita": {
+        name: "Biciclette & Mobilità",
+        tags: ["bicicletta", "bici", "bicycle", "bike", "mtb", "mountain", "bike", "e-bike", "ebike", "elettrica", "elettrico", "pendolare", "urbano", "mobilità", "mobilita", "ciclismo", "ciclista", "corsa", "spinning", "trail", "off-road", "offroad", "alluminio", "freni", "disco", "idraulico", "cambio", "velocità", "velocita", "batteria", "autonomia", "ricaricabile", "impermeabile", "sospensioni", "ammortizzata", "biammortizzata", "ruote", "pneumatici", "sellino", "manubrio", "pedali", "casco", "luci", "campanello", "portapacchi", "borraccia"],
+        url: "/biciclette-mobilita/index.html",
+        personality: "adventure",
+        valueProp: "Ho analizzato le specifiche tecniche per te. Telaio, batteria, autonomia e freni sono i fattori chiave per la tua mobilità.",
+        song: "Bicycle Race - Queen",
+        songLinkSpotify: "https://open.spotify.com/track/1g9sK0mV7zHlXhJz8m5W8m",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: [
+            {
+                name: "IBK Bicicletta Bici MTB 26"" Mountain Bike BIAMMORTIZZATA",
+                description: "Mountain bike biammortizzata con cambio 21 velocità e freni a disco",
+                icon: "fa-bicycle",
+                link: "https://www.amazon.it/IBK-Bicicletta-Mountain-Biammortizzata-Velocit%C3%A0/dp/B0F5BSJJVL?dib=eyJ2IjoiMSJ9.qDw6yrJXU1txWqQl1ewOnWLXIasRXObMGYNw4OLmadyFuZBqskI6X3xnEoMd80oT2RpkWO5IN_fIk0Hn5OEREkXDIw4jhCEeLObcZLlEIybXRjt06fitE7vByulRW82xT1N9YHSl-kpJPE6TEJi0nwcF_Y2vQK8F-1Ht7iMIuYxXE1cagiKEKcDxyaQolowqpnV20GtPo57I77oqju7VC8qO1ikICc2lOXH8alnfe0Mp80jT0U5oxcgQ8Xbih1hn5l0Zf-C1-77mr4gK9bjrNrSmTnWjZuxr2OrW1nC3XD8.bdKRfArYhgK-HAkPkG85J-yv4Xr3WSZIG9QuiyiKB_w&dib_tag=se&keywords=bici&qid=1779723129&sr=8-4&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&th=1&linkCode=ll2&tag=l0c39-21&linkId=d8d4d864e4cd81828b0bd4134d792c12&ref=_as_li_ss_tl"
+            },
+            {
+                name: "HillMiles Bici Elettrica Per Adulti Da 26"",
+                description: "E-bike con batteria 36V 13Ah rimovibile, autonomia 80-100km",
+                icon: "fa-bolt",
+                link: "https://www.amazon.it/Elettrica-Bicicletta-Rimovibile-Autonomia-impermeabile/dp/B0G395GHT5?dib=eyJ2IjoiMSJ9.qDw6yrJXU1txWqQl1ewOnWLXIasRXObMGYNw4OLmadyFuZBqskI6X3xnEoMd80oT2RpkWO5IN_fIk0Hn5OEREkXDIw4jhCEeLObcZLlEIybXRjt06fitE7vByulRW82xT1N9YHSl-kpJPE6TEJi0nwcF_Y2vQK8F-1Ht7iMIuYxXE1cagiKEKcDxyaQolowqpnV20GtPo57I77oqju7VC8qO1ikICc2lOXH8alnfe0Mp80jT0U5oxcgQ8Xbih1hn5l0Zf-C1-77mr4gK9bjrNrSmTnWjZuxr2OrW1nC3XD8.bdKRfArYhgK-HAkPkG85J-yv4Xr3WSZIG9QuiyiKB_w&dib_tag=se&keywords=bici&qid=1779723129&sr=8-6&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&th=1&linkCode=ll2&tag=l0c39-21&linkId=2e9e593bbb0f4099e2247e7807be74ac&ref=_as_li_ss_tl"
+            },
+            {
+                name: "IBK Bicicletta TXC MTB 29"" Pollici Mountain Bike",
+                description: "Mountain bike 29 pollici in alluminio con freni a disco idraulici",
+                icon: "fa-mountain",
+                link: "https://www.amazon.it/IBK-Bicicletta-Mountain-Alluminio-Ammortizzata/dp/B08HWGW7SG?dib=eyJ2IjoiMSJ9.qDw6yrJXU1txWqQl1ewOnWLXIasRXObMGYNw4OLmadyFuZBqskI6X3xnEoMd80oT2RpkWO5IN_fIk0Hn5OEREkXDIw4jhCEeLObcZLlEIybXRjt06fitE7vByulRW82xT1N9YHSl-kpJPE6TEJi0nwcF_Y2vQK8F-1Ht7iMIuYxXE1cagiKEKcDxyaQolowqpnV20GtPo57I77oqju7VC8qO1ikICc2lOXH8alnfe0Mp80jT0U5oxcgQ8Xbih1hn5l0Zf-C1-77mr4gK9bjrNrSmTnWjZuxr2OrW1nC3XD8.bdKRfArYhgK-HAkPkG85J-yv4Xr3WSZIG9QuiyiKB_w&dib_tag=se&keywords=bici&qid=1779723129&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&aref=OaqTfWA1fP&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=59626a720eeaee58a3db43e048bbaaea&ref=_as_li_ss_tl"
+            }
+        ]
     }
 };
 
@@ -1398,7 +1428,7 @@ const comboMessages = {
         "Ti piace il manga? 📚 Guarda, per la collezione perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è imperdibile!",
         "Vuoi collezionare? 🎌 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
     ],
-    "bibite-bevande": [
+    "snack-bevande": [
         "Vuoi rinfrescarti? 🥤 Guarda, se vuoi bevande come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per l'energia e una scorta di {prodottoAncora} per la leggerezza. Ti lascio qui i link a entrambi, ti assicuro che è la combo ideale!",
         "Ti piace le bevande? 🍹 Guarda, per la scorta perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è ideale!",
         "Vuoi idratarti? 💧 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
@@ -1511,6 +1541,11 @@ const comboMessages = {
         "Sei un otaku? 🎌 Guarda, per la collezione perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è imperdibile!",
         "Vuoi storie epiche? ⚔️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
     ]
+    "biciclette-mobilita": [
+        "Ehi, ami le biciclette! 🚲 Guarda, se pedali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il mio giro e una scorta di {prodottoAncora} per la manutenzione. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
+        "Ti piace andare in bici? 🚴 Guarda, per la mobilità perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
+        "Vuoi muoverti in libertà? 🌳 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ]
 };
 
 // Funzione per ottenere prodotti dal catalogo in base alla categoria
@@ -1549,8 +1584,11 @@ function getContesto() {
     if (currentPath.includes('parrucchiere-barbiere') || currentUrl.includes('parrucchiere') || currentUrl.includes('barbiere') || currentUrl.includes('forbici') || currentUrl.includes('rasoio')) {
         return 'parrucchiere-barbiere';
     }
-    if (currentPath.includes('cinema-tv') || currentUrl.includes('cinema') || currentUrl.includes('tv') || currentUrl.includes('film')) {
-        return 'cinema';
+    if (currentPath.includes('merchandise-serie-tv') || currentUrl.includes('merchandise') || currentUrl.includes('serie') || currentUrl.includes('tv')) {
+        return 'merchandise-serie-tv';
+    }
+    if (currentPath.includes('biciclette-mobilita') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
+        return 'biciclette-mobilita';
     }
     if (currentPath.includes('smartphone-tech') || currentUrl.includes('smartphone') || currentUrl.includes('telefono') || currentUrl.includes('mobile')) {
         return 'smartphone';
@@ -1610,8 +1648,8 @@ function getContesto() {
         return 'caldo';
     }
     // Bibite & Bevande - ora ha proprio database entry
-    if (currentPath.includes('bibite-bevande') || currentUrl.includes('bibite') || currentUrl.includes('bevande')) {
-        return 'bibite-bevande';
+    if (currentPath.includes('snack-bevande') || currentUrl.includes('bibite') || currentUrl.includes('bevande')) {
+        return 'snack-bevande';
     }
     
     // Default: homepage o contesto non identificato
@@ -1667,7 +1705,7 @@ function showUrgencyComboMessage(context) {
         console.log('80%: usando prodotti della nicchia', context);
     } else {
         // 20%: usa bibite/bevande
-        prodotti = getProdottiByCategoria('bibite-bevande');
+        prodotti = getProdottiByCategoria('snack-bevande');
         useBibite = true;
         console.log('20%: usando bibite/bevande');
     }
@@ -2034,7 +2072,7 @@ function applyThemeOnLoad() {
         'theme-summer', 'theme-adventure', 'theme-fashion', 'theme-wellness',
         'theme-gaming-theme', 'theme-entertainment', 'theme-technical', 'theme-caring',
         'theme-aesthetic', 'theme-intellectual', 'theme-elegant', 'theme-eco',
-        'theme-professional', 'theme-travel', 'theme-creative', 'theme-cinema-tv',
+        'theme-professional', 'theme-travel', 'theme-creative', 'theme-merchandise-serie-tv',
         'theme-blinding-lights', 'theme-as-it-was', 'theme-midnight-city'
     ];
     
@@ -2064,10 +2102,10 @@ function applyThemeOnLoad() {
         'creative': 'theme-creative'
     };
     
-    // Special case for Cinema & TV - use synthwave theme
+    // Special case for Merchandise Serie TV - use synthwave theme
     let themeClass = personalityToTheme[personality] || 'theme-default';
-    if (categoryKey === 'cinema-tv') {
-        themeClass = 'theme-cinema-tv';
+    if (categoryKey === 'merchandise-serie-tv') {
+        themeClass = 'theme-merchandise-serie-tv';
     } else if (categoryKey === 'elite-gaming-gear') {
         themeClass = 'theme-blinding-lights';
     } else if (categoryKey === 'moda-donna') {
@@ -2272,7 +2310,7 @@ function showComboMessage() {
         console.log('80%: usando prodotti della nicchia', context);
     } else {
         // 20%: usa bibite/bevande
-        prodotti = getProdottiByCategoria('bibite-bevande');
+        prodotti = getProdottiByCategoria('snack-bevande');
         useBibite = true;
         console.log('20%: usando bibite/bevande');
     }
@@ -2487,10 +2525,10 @@ const macroCategories = {
         icon: '🎮',
         categories: ['elite-gaming-gear', 'giochi-da-tavolo', 'libri-ereader']
     },
-    'cinema-tv': {
-        name: 'Moda Serie TV',
+    'merchandise-serie-tv': {
+        name: 'Merchandise Serie TV',
         icon: '📺',
-        categories: ['cinema-tv', 'dvd-bluray']
+        categories: ['merchandise-serie-tv', 'dvd-bluray']
     },
     'moda': {
         name: 'Moda',
@@ -2516,34 +2554,35 @@ const macroCategories = {
 
 // Related categories mapping
 const relatedCategories = {
-    'cucina-elettrodomestici': ['smart-home-domotica', 'arredamento-casa', 'bibite-bevande'],
-    'smart-home-domotica': ['cucina-elettrodomestici', 'tech'],
-    'fitness-casa': ['smartphone-tech', 'tech', 'bibite-bevande'],
-    'elite-gaming-gear': ['smartphone-tech', 'tech', 'cinema-tv', 'bibite-bevande', 'manga-anime'],
-    'pet-care-intelligente': ['arredamento-casa', 'outdoor-camping'],
-    'cinema-tv': ['tech', 'smartphone-tech', 'bibite-bevande', 'manga-anime', 'musica-vinili'],
-    'bibite-bevande': ['fitness-casa', 'mare-spiaggia', 'outdoor-camping', 'caldo-rinfrescamento'],
-    'smartphone-tech': ['tech', 'fitness-casa', 'elite-gaming-gear'],
-    'moda-donna': ['accessori-moda', 'profumi-bellezza', 'manga-anime', 'parrucchiere-barbiere'],
-    'moda-uomo': ['accessori-moda', 'profumi-bellezza', 'manga-anime', 'parrucchiere-barbiere'],
-    'viaggi-vacanze': ['outdoor-camping', 'mare-spiaggia', 'bibite-bevande'],
-    'accessori-moda': ['moda-donna', 'moda-uomo', 'parrucchiere-barbiere'],
-    'arredamento-casa': ['smart-home-domotica', 'benessere-cura-personale'],
-    'benessere-cura-personale': ['profumi-bellezza', 'arredamento-casa', 'parrucchiere-barbiere'],
-    'dvd-bluray': ['cinema-tv', 'bibite-bevande'],
-    'fotografia-mobile': ['tech', 'smartphone-tech'],
-    'giochi-da-tavolo': ['elite-gaming-gear', 'bibite-bevande'],
-    'libri-ereader': ['tech', 'smartphone-tech', 'manga-anime'],
-    'mare-spiaggia': ['viaggi-vacanze', 'outdoor-camping', 'bibite-bevande'],
-    'outdoor-camping': ['viaggi-vacanze', 'mare-spiaggia', 'bibite-bevande'],
-    'parrucchiere-barbiere': ['benessere-cura-personale', 'moda-donna', 'moda-uomo', 'accessori-moda'],
-    'manga-anime': ['cinema-tv', 'libri-ereader', 'moda-donna', 'moda-uomo', 'elite-gaming-gear'],
-    'musica-vinili': ['cinema-tv', 'tech', 'benessere-cura-personale'],
-    'profumi-bellezza': ['moda-donna', 'moda-uomo', 'benessere-cura-personale', 'parrucchiere-barbiere'],
-    'sostenibilita-eco-friendly': ['arredamento-casa', 'tech'],
-    'tech': ['smartphone-tech', 'fitness-casa', 'elite-gaming-gear', 'musica-vinili'],
-    'ufficio-produttivo': ['tech', 'arredamento-casa', 'bibite-bevande'],
-    'caldo-rinfrescamento': ['bibite-bevande', 'fitness-casa']
+    'cucina-elettrodomestici': ['smart-home-domotica', 'arredamento-casa', 'snack-bevande'],
+    'smart-home-domotica': ['cucina-elettrodomestici', 'tech', 'snack-bevande'],
+    'fitness-casa': ['smartphone-tech', 'tech', 'snack-bevande'],
+    'elite-gaming-gear': ['smartphone-tech', 'tech', 'merchandise-serie-tv', 'snack-bevande', 'manga-anime'],
+    'pet-care-intelligente': ['arredamento-casa', 'outdoor-camping', 'snack-bevande'],
+    'merchandise-serie-tv': ['tech', 'smartphone-tech', 'snack-bevande', 'manga-anime', 'musica-vinili'],
+    'snack-bevande': ['fitness-casa', 'mare-spiaggia', 'outdoor-camping', 'caldo-rinfrescamento'],
+    'smartphone-tech': ['tech', 'fitness-casa', 'elite-gaming-gear', 'snack-bevande'],
+    'moda-donna': ['accessori-moda', 'profumi-bellezza', 'manga-anime', 'parrucchiere-barbiere', 'snack-bevande'],
+    'moda-uomo': ['accessori-moda', 'profumi-bellezza', 'manga-anime', 'parrucchiere-barbiere', 'snack-bevande'],
+    'viaggi-vacanze': ['outdoor-camping', 'mare-spiaggia', 'snack-bevande'],
+    'accessori-moda': ['moda-donna', 'moda-uomo', 'parrucchiere-barbiere', 'snack-bevande'],
+    'arredamento-casa': ['smart-home-domotica', 'benessere-cura-personale', 'snack-bevande'],
+    'benessere-cura-personale': ['profumi-bellezza', 'arredamento-casa', 'parrucchiere-barbiere', 'snack-bevande'],
+    'dvd-bluray': ['merchandise-serie-tv', 'snack-bevande'],
+    'fotografia-mobile': ['tech', 'smartphone-tech', 'snack-bevande'],
+    'giochi-da-tavolo': ['elite-gaming-gear', 'snack-bevande'],
+    'libri-ereader': ['tech', 'smartphone-tech', 'manga-anime', 'snack-bevande'],
+    'mare-spiaggia': ['viaggi-vacanze', 'outdoor-camping', 'snack-bevande'],
+    'outdoor-camping': ['viaggi-vacanze', 'mare-spiaggia', 'snack-bevande'],
+    'biciclette-mobilita': ['fitness-casa', 'outdoor-camping', 'tech', 'snack-bevande'],
+    'parrucchiere-barbiere': ['benessere-cura-personale', 'moda-donna', 'moda-uomo', 'accessori-moda', 'snack-bevande'],
+    'manga-anime': ['merchandise-serie-tv', 'libri-ereader', 'moda-donna', 'moda-uomo', 'elite-gaming-gear', 'snack-bevande'],
+    'musica-vinili': ['merchandise-serie-tv', 'tech', 'benessere-cura-personale', 'snack-bevande'],
+    'profumi-bellezza': ['moda-donna', 'moda-uomo', 'benessere-cura-personale', 'parrucchiere-barbiere', 'snack-bevande'],
+    'sostenibilita-eco-friendly': ['arredamento-casa', 'tech', 'snack-bevande'],
+    'tech': ['smartphone-tech', 'fitness-casa', 'elite-gaming-gear', 'musica-vinili', 'snack-bevande'],
+    'ufficio-produttivo': ['tech', 'arredamento-casa', 'snack-bevande'],
+    'caldo-rinfrescamento': ['snack-bevande', 'fitness-casa']
 };
 
 // Toggle chat window
@@ -2763,7 +2802,7 @@ function applyBotTheme(categoryKey) {
         'theme-summer', 'theme-adventure', 'theme-fashion', 'theme-wellness',
         'theme-gaming-theme', 'theme-entertainment', 'theme-technical', 'theme-caring',
         'theme-aesthetic', 'theme-intellectual', 'theme-elegant', 'theme-eco',
-        'theme-professional', 'theme-travel', 'theme-creative', 'theme-cinema-tv',
+        'theme-professional', 'theme-travel', 'theme-creative', 'theme-merchandise-serie-tv',
         'theme-blinding-lights', 'theme-as-it-was', 'theme-midnight-city'
     ];
     
@@ -2793,10 +2832,10 @@ function applyBotTheme(categoryKey) {
         'creative': 'theme-creative'
     };
     
-    // Special case for Cinema & TV - use synthwave theme
+    // Special case for Merchandise Serie TV - use synthwave theme
     let themeClass = personalityToTheme[personality] || 'theme-default';
-    if (categoryKey === 'cinema-tv') {
-        themeClass = 'theme-cinema-tv';
+    if (categoryKey === 'merchandise-serie-tv') {
+        themeClass = 'theme-merchandise-serie-tv';
     } else if (categoryKey === 'elite-gaming-gear') {
         themeClass = 'theme-blinding-lights';
     } else if (categoryKey === 'moda-donna') {

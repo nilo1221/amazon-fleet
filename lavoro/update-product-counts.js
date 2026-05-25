@@ -37,7 +37,7 @@ async function updateProductCounts() {
             'arredamento-casa': 'card-14',
             'viaggi-vacanze': 'card-15',
             'smartphone-tech': 'card-16',
-            'cinema-tv': 'card-17',
+            'merchandise-serie-tv': 'card-17',
             'moda-donna': 'card-18',
             'benessere-personale': 'card-19',
             'moda-uomo': 'card-20',

@@ -19,7 +19,7 @@ const niches = [
     'arredamento-casa',
     'viaggi-vacanze',
     'smartphone-tech',
-    'cinema-tv',
+    'merchandise-serie-tv',
     'moda-donna',
     'benessere-personale',
     'moda-uomo',
