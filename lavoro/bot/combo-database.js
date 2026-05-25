@@ -264,14 +264,14 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Sprite Zero - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                    name: "KollyKolla Borraccia 500ml con Filtro e Indicatore del Tempo",
+                    link: "https://www.amazon.it/dp/B0FBWT2V5D?m=a11il2pnwyju7h&ascsubtag=srctok-1ce1c3d05b4ffb5c&btn_ref=srctok-1ce1c3d05b4ffb5c&th=1&linkCode=ll2&tag=l0c39-21&linkId=0fe74787eea3960191433b519e53ad44&ref_=as_li_ss_tl"
                 },
                 product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                    name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
+                    link: "https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
                 },
-                message: "Vuoi bibite senza zucchero? 🥤 Guarda, con Sprite Zero e Coca-Cola Zero hai tutto per rinfrescarti senza calorie. Ecco i link!"
+                message: "Vuoi idratarti in modo intelligente? 💧 Guarda, con la borraccia KollyKolla riutilizzabile e Powerade per l'energia, hai tutto per lo sport e la scuola. Ecco i link!"
             }
         ]
     },
