@@ -251,6 +251,33 @@ const NicheDatabase = {
             }
         ]
     },
+    "musica-vinili": {
+        name: "Musica & Vinili",
+        tags: ["vinile", "vinili", "disco", "record", "giradischi", "turntable", "music", "musica", "audio", "hifi", "stereo", "amplificatore", "cuffie", "speaker", "altoparlante", "analogico", "analog", "lp", "ep", "single", "album", "collection", "collezione", "vinyl", "vinyls", "dj", "mixer", "crossfader", "beat", "rhythm", "jazz", "rock", "pop", "classical", "classica", "electronic", "elettronica", "hip hop", "rap", "reggae", "blues", "soul", "funk", "disco", "punk", "metal", "indie", "alternative", "folk", "country", "r&b", "rnb", "techno", "house", "trance", "ambient", "dub", "dubstep", "drum", "bass", "edm", "synth", "synthesizer", "keyboard", "piano", "guitar", "chitarra", "bass", "basso", "drums", "batteria", "vocals", "voce", "singer", "cantante", "band", "gruppo", "artist", "artista", "concert", "concerto", "live", "studio", "recording", "registrazione", "mastering", "mixing", "mixaggio", "production", "produzione", "sound", "suono", "quality", "qualità", "fidelity", "fedeltà", "warmth", "calore", "analog", "nostalgia", "retro", "vintage", "classic", "classico", "collectible", "da collezione", "rare", "raro", "limited", "limitato", "edition", "edizione", "box", "set", "collector", "collezionista", "audiophile", "audiofilo", "music lover", "amante della musica", "vinyl lover", "amante dei vinili", "record store", "negozio di dischi", "music store", "negozio di musica", "turntable", "giradischi", "tonearm", "braccio", "cartridge", "testina", "stylus", "puntina", "needle", "ago", "platter", "piatto", "motor", "motore", "belt", "cinghia", "direct drive", "azionamento diretto", "belt drive", "azionamento a cinghia", "speed", "velocità", "rpm", "33", "45", "78", "vinyl record", "disco in vinile", "lp record", "disco lp", "12 inch", "12 pollici", "7 inch", "7 pollici", "gatefold", "copertina apribile", "picture disc", "disco picture", "colored vinyl", "vinile colorato", "transparent vinyl", "vinile trasparente", "heavy vinyl", "vinile pesante", "180 gram", "200 gram", "audiophile vinyl", "vinile audiofilo", "master tape", "nastro master", "original recording", "registrazione originale", "remastered", "rimasterizzato", "reissue", "riedizione", "first press", "prima stampa", "original press", "stampa originale"],
+        url: "/musica-vinili/index.html",
+        personality: "creative",
+        valueProp: "Ho selezionato i migliori giradischi e vinili per un'esperienza audio autentica e nostalgica.",
+        song: "Bohemian Rhapsody - Queen",
+        songLinkSpotify: "https://open.spotify.com/track/4q3nwBC3iYiE2R0y3i8F9Y",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        primaryColor: "#1a1a2e",
+        accentColor: "#e94560",
+        secondaryColor: "#16213e",
+        topProducts: [
+            {
+                name: "Audio-Technica AT-LP60XUSB Giradischi",
+                description: "Giradischi completamente automatico con uscita USB per digitalizzare i vinili",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Audio-Technica-AT-LP60XUSB-Giradischi-completamente-automatico/dp/B07J5XZL6K?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123def456&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Sony PS-LX310BT Giradischi Bluetooth",
+                description: "Giradischi con Bluetooth per trasmettere musica wireless",
+                icon: "fa-bluetooth-b",
+                link: "https://www.amazon.it/Sony-PS-LX310BT-Giradischi-Bluetooth-Nero/dp/B07N3Z9S2J?th=1&linkCode=ll2&tag=l0c39-21&linkId=def456ghi789&ref=_as_li_ss_tl"
+            }
+        ]
+    },
  "pet-care-intelligente": {
         name: "Pet Care Intelligente",
         tags: ["gatto", "cane", "animale", "lettiera", "autopulente", "cibo", "pet", "zampa", "crocchette", "mangiatore", "bevitore", "automatico", "spazzola", "pelo", "tagliaunghie", "trasportino", "cuccia", "casa", "cane", "giocattolo", "osso", "corda", "pallina", "collare", "guinzaglio", "pettorina", "museruola", "antiparassitario", "pulci", "zecke", "integratore", "vitamine"],
