@@ -132,6 +132,24 @@ const NicheDatabase = {
                 description: "Raffreddamento, ventilazione e umidificazione",
                 icon: "fa-snowflake",
                 link: "https://www.amazon.it/dp/B0D3PP64JS?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=HPJ8v9XaEK&linkCode=ll2&tag=l0c39-21&linkId=9f8aac727b8af31fe8eb8ae08e38ba65&ref=_as_li_ss_tl"
+            },
+            {
+                name: "PRESTIGE Set di 9 Padelle Antiaderenti",
+                description: "Set completo da 9 padelle a induzione, resistenti ai graffi",
+                icon: "fa-utensils",
+                link: "https://www.amazon.it/Prestige-antiaderenti-resistenti-induzione-impugnare/dp/B0C49TJKJ5?th=1&linkCode=ll2&tag=l0c39-21&linkId=1334e0ede6f625ea3ce52d4ef9a163fb&ref=_as_li_ss_tl"
+            },
+            {
+                name: "MAGEFESA Jordan Set di Padelle",
+                description: "Set di padelle in acciaio vetrificato, design elegante",
+                icon: "fa-utensils",
+                link: "https://www.amazon.it/Magefesa-Jordan-padelle-Acciaio-vetrificato/dp/B07DP4L6NT?&linkCode=ll2&tag=l0c39-21&linkId=6d538f31dbc2d0705703cc94dcc2ebd4&ref=_as_li_ss_tl"
+            },
+            {
+                name: "SET 3 PADELLE WOOD&STONE (Excelsa)",
+                description: "Set di 3 padelle con finitura legno-pietra elegante",
+                icon: "fa-utensils",
+                link: "https://www.amazon.it/SET-3-PADELLE-WOOD-STONE/dp/B07S1VRNG6?&linkCode=ll2&tag=l0c39-21&linkId=73df7c30a54f668e5084df48bb9712eb&ref=_as_li_ss_tl"
             }
         ]
     },
@@ -172,8 +190,62 @@ const NicheDatabase = {
         song: "Blinding Lights - The Weeknd",
         songLinkSpotify: "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
+        topProducts: [
+            {
+                name: "EMPIRE GAMING - Armor RF800 Kit Wireless Tastiera e Mouse QWERTY(Italiana-Layout)",
+                description: "Set completo wireless per gaming con tastiera e mouse RGB, tappetino incluso",
+                icon: "fa-keyboard",
+                link: "https://www.amazon.it/EMPIRE-GAMING-Ricaricabile-Italiana-Layout-Mac-Blanco/dp/B0C1GW8GLV?dib=eyJ2IjoiMSJ9.H41HIU37m21CAZuT26axiA1EVEWY2bXYhStFJR3IDqBv0aeUCnBMJj0OkxJH0eloLNz42CrbMX7PKpHa9ZCRX8Iciue4SVdKof1U0YEZ8L6CCcEmdqVrV41vYfiW2zsA5vncJTKgHBVJ7HdzKEwMri8BgPFhaCYAMKFEUeahS4nGmVZOaFnjUWQltgrByPhu_wzjwT2D-6KnpVkB_8x3lB3kFrtno6-nOXw4TBHygB9JtAfFK0s03ajebceBiEuKZu8qfYAVJ9JnPu-rlIiW6oalD5DKgpAL00tkXB3seZw.XV8nzpkNKqBh3_gQSmb6q43E7-yTom-r3TLm30rMuGg&dib_tag=se&keywords=set%2Bda%2Bpc&qid=1779677707&sr=8-12&th=1&linkCode=ll2&tag=l0c39-21&linkId=946d21e02eb0c1a8012cd3fb9af3a85e&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Empire Gaming - Armor RF800 Wireless Gaming Tastatur und Maus QWERTZ (Deutsche Layout)",
+                description: "Set wireless gaming con tastiera tedesca QWERTZ, mouse ergonomico e tappetino",
+                icon: "fa-keyboard",
+                link: "https://www.amazon.it/EMPIRE-GAMING-Layout-Kabellose-Ergonomische/dp/B0BN8ZHQ95?dib=eyJ2IjoiMSJ9.H41HIU37m21CAZuT26axiA1EVEWY2bXYhStFJR3IDqBv0aeUCnBMJj0OkxJH0eloLNz42CrbMX7PKpHa9ZCRX8Iciue4SVdKof1U0YEZ8L6CCcEmdqVrV41vYfiW2zsA5vncJTKgHBVJ7HdzKEwMri8BgPFhaCYAMKFEUeahS4nGmVZOaFnjUWQltgrByPhu_wzjwT2D-6KnpVkB_8x3lB3kFrtno6-nOXw4TBHygB9JtAfFK0s03ajebceBiEuKZu8qfYAVJ9JnPu-rlIiW6oalD5DKgpAL00tkXB3seZw.XV8nzpkNKqBh3_gQSmb6q43E7-yTom-r3TLm30rMuGg&dib_tag=se&keywords=set+da+pc&qid=1779677707&sr=8-22&linkCode=ll2&tag=l0c39-21&linkId=f005831de4564cf1e48104fd044e6041&ref=_as_li_ss_tl"
+            },
+            {
+                name: "EMPIRE GAMING - Hellhounds PC Gaming Pack English",
+                description: "Set gaming completo con tastiera, mouse e tappetino, software programmabile e illuminazione RGB",
+                icon: "fa-keyboard",
+                link: "https://www.amazon.it/EMPIRE-GAMING-Hellhounds-programmable-backlighting/dp/B07PFL1N1H?dib=eyJ2IjoiMSJ9.H41HIU37m21CAZuT26axiA1EVEWY2bXYhStFJR3IDqBv0aeUCnBMJj0OkxJH0eloLNz42CrbMX7PKpHa9ZCRX8Iciue4SVdKof1U0YEZ8L6CCcEmdqVrV41vYfiW2zsA5vncJTKgHBVJ7HdzKEwMri8BgPFhaCYAMKFEUeahS4nGmVZOaFnjUWQltgrByPhu_wzjwT2D-6KnpVkB_8x3lB3kFrtno6-nOXw4TBHygB9JtAfFK0s03ajebceBiEuKZu8qfYAVJ9JnPu-rlIiW6oalD5DKgpAL00tkXB3seZw.XV8nzpkNKqBh3_gQSmb6q43E7-yTom-r3TLm30rMuGg&dib_tag=se&keywords=set+da+pc&qid=1779677707&sr=8-56&linkCode=ll2&tag=l0c39-21&linkId=7017561edf10d81b7a5f10cc520ded52&ref=_as_li_ss_tl"
+            }
+        ]
     },
-    "pet-care-intelligente": {
+       "manga-anime": {
+        name: "Manga & Anime",
+        tags: ["manga", "anime", "fumetto", "giapponese", "one piece", "dragon ball", "naruto", "demon slayer", "kimetsu", "shonen", "shojo", "seinen", "josei", "kodomo", "gekiga", "manhwa", "manhua", "scanlation", "fansub", "cosplay", "otaku", "akiba", "tokyo", "ghibli", "studio", "kurosawa", "miyazaki", "tezuka", "oda", "kishimoto", "toriyama", "isayama", "gotouge", "horikoshi", "tabata", "kubo", "obata", "akatsuki", "attack on titan", "my hero academia", "black clover", "jujutsu kaisen", "chainsaw man", "spy x family", "tokyo revengers", "jujutsu kaisen", "hunter x hunter", "fullmetal alchemist", "death note", "bleach", "one punch man", "mob psycho 100", "tokyo ghoul", "sword art online", "fairy tail", "hunter x hunter", "dragon ball super", "boruto", "black clover", "my hero academia", "demon slayer", "one piece", "naruto", "dragon ball", "pokemon", "yugioh", "digimon", "sailor moon", "cardcaptor sakura", "naruto shippuden", "dragon ball z", "dragon ball gt", "dragon ball kai", "attack on titan", "aot", "mha", "bnha", "jjk", "csm", "sxf", "tr", "hxh", "fma", "fmab", "dn", "opm", "mp100", "tg", "sao", "ft", "mha", "bnha", "jjk", "csm", "sxf", "tr", "hxh", "fma", "fmab", "dn", "opm", "mp100", "tg", "sao", "ft", "shonen jump", "weekly shonen jump", "jump square", "shonen magazine", "shonen sunday", "v jump", "shonen gangan", "young jump", "big comic", "morning", "afternoon", "evening", "weekly young magazine", "weekly young jump", "bessatsu shonen magazine", "shonen ace", "shonen gangan", "coro coro", "pokemon adventures", "digimon adventure", "yugioh", "bakugan", "bayblade", "medabots", "zatch bell", "konjiki no gash bell", "shaman king", "yu yu hakusho", "flame of recca", "rurouni kenshin", "samurai x", "inuyasha", "ranma 1/2", "urusei yatsura", "maison ikkoku", "mermaid saga", "lum", "rumiko takahashi", "akira toriyama", "eiichiro oda", "masashi kishimoto", "kishimoto masashi", "tite kubo", "kubo tite", "hirohiko araki", "jojo", "jojo's bizarre adventure", "steel ball run", "stone ocean", "vento aureo", "diamond is unbreakable", "stardust crusaders", "phantom blood", "battle tendency", "jjba", "araki", "hirohiko", "kentaro miura", "berserk", "guts", "griffith", "casca", "eclipse", "fantasia", "midland", "kushan", "god hand", "apostle", "band of the hawk", "hawks", "struggler", "black swordsman", "conviction", "golden age", "fantasia arc", "claymore", "teresa", "clare", "priscilla", "rigaldo", "isley", "awakened being", "yoma", "organization", "noriko wakamoto"],
+        url: "/manga-anime/index.html",
+        personality: "enthusiastic",
+        valueProp: "Ho selezionato i manga e anime più amati e iconici per te. Storie epiche, personaggi indimenticabili e arte straordinaria ti aspettano.",
+        kindleLink: "https://www.amazon.it/kindle-dbs/ku/?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: [
+            {
+                name: "One piece (Vol. 1)",
+                description: "ONE PIECE è una delle opere più longeve e amate dai lettori di tutto il mondo",
+                icon: "fa-book",
+                link: "https://www.amazon.it/One-piece-1-Eiichiro-Oda/dp/8864201793?&linkCode=ll2&tag=l0c39-21&linkId=e72c284460a4ab716a6c562758b2c330&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Dragon Ball 1 (Dragon Ball Evergreen Edition) eBook",
+                description: "DRAGON BALL, uno dei manga più celebri e amati di sempre",
+                icon: "fa-tablet-alt",
+                link: "https://www.amazon.it/Dragon-Ball-Evergreen-ebook/dp/B07M5HTBFL?&linkCode=ll2&tag=l0c39-21&linkId=b0f9292e84b16cf9298cb1026150d642&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Naruto 1 eBook",
+                description: "Naruto è uno dei manga più influenti e amati di sempre",
+                icon: "fa-tablet-alt",
+                link: "https://www.amazon.it/Naruto-1-Masashi-Kishimoto-ebook/dp/B0BWCVY8PS?&linkCode=ll2&tag=l0c39-21&linkId=469bd1c492b998b84a0a2ca7915d22dc&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Demon Slayer - Kimetsu no yaiba 1: Digital Edition eBook",
+                description: "Demon Slayer è una delle serie più amate dai lettori di ogni età",
+                icon: "fa-tablet-alt",
+                link: "https://www.amazon.it/Demon-Slayer-Kimetsu-yaiba-Digital-ebook/dp/B088Z1P21C?&linkCode=ll2&tag=l0c39-21&linkId=f8ad4b971ceeec377887c6e6da92d926&ref=_as_li_ss_tl"
+            }
+        ]
+    },
+ "pet-care-intelligente": {
         name: "Pet Care Intelligente",
         tags: ["gatto", "cane", "animale", "lettiera", "autopulente", "cibo", "pet", "zampa", "crocchette", "mangiatore", "bevitore", "automatico", "spazzola", "pelo", "tagliaunghie", "trasportino", "cuccia", "casa", "cane", "giocattolo", "osso", "corda", "pallina", "collare", "guinzaglio", "pettorina", "museruola", "antiparassitario", "pulci", "zecke", "integratore", "vitamine"],
         url: "/pet-care-intelligente/index.html",
@@ -210,9 +282,6 @@ const NicheDatabase = {
         song: "Summer Vibes Deep House Mix",
         songLinkSpotify: "https://open.spotify.com/playlist/53FHC0FredNfhyXUVl2mb8",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        primaryColor: "#00CED1",
-        accentColor: "#FF6B35",
-        secondaryColor: "#FF1493",
         topProducts: [
             {
                 name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
@@ -281,10 +350,22 @@ const NicheDatabase = {
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         topProducts: [
             {
-                name: "Outsunny Tenda da Campeggio per 5 Persone",
-                description: "Tenda famigliare a tunnel impermeabile con 2 stanze separate e veranda",
-                icon: "fa-campground",
-                link: "https://www.amazon.it/Outsunny-Campeggio-Famigliare-Impermeabile-Trasporto/dp/B0F29BC3LJ?dib=eyJ2IjoiMSJ9.ulozInvSluYgmjL7E4H17-nAjJHzYRjROTEnqlFpGL9rcTv1HvBYllPgdkIOoBc-SXEeDIUidIWqJE4AeJTHcZ5kpcfb-CbXWSuWBnlEGux0SYwJl5CN6KjwbGkcf5LYtfkWYLYhp-VRNrNS39zryi-GS8GUlm9wertELzYFRsAg71Q6fOgEh7TBpUI6u8QHOJUlu2meJDnywkKi1X5bXBNiXNAhAwJKJ9bqCG3l-8t4IkuYs_y0pQC-xviQ1KLrXxRPf2HuWEFd42TvQJZTycFqjyjdOxHq0ZCX6PoU80I.EZDBto_kC4Hujwih7D6p-5SlIOd0DLRboEy_uZX_9X0&dib_tag=se&keywords=tenda%2Btunnel%2Bcampeggio%2Bpremium&qid=1779588392&sr=8-7&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&th=1&linkCode=ll2&tag=l0c39-21&linkId=b50732e0036a8492066b30d1254d5733&ref=_as_li_ss_tl"
+                name: "EMPIRE GAMING - Armor RF800 Kit Wireless Tastiera e Mouse QWERTY(Italiana-Layout)",
+                description: "Set completo wireless per gaming con tastiera e mouse RGB, tappetino incluso",
+                icon: "fa-keyboard",
+                link: "https://www.amazon.it/EMPIRE-GAMING-Ricaricabile-Italiana-Layout-Mac-Blanco/dp/B0C1GW8GLV?dib=eyJ2IjoiMSJ9.H41HIU37m21CAZuT26axiA1EVEWY2bXYhStFJR3IDqBv0aeUCnBMJj0OkxJH0eloLNz42CrbMX7PKpHa9ZCRX8Iciue4SVdKof1U0YEZ8L6CCcEmdqVrV41vYfiW2zsA5vncJTKgHBVJ7HdzKEwMri8BgPFhaCYAMKFEUeahS4nGmVZOaFnjUWQltgrByPhu_wzjwT2D-6KnpVkB_8x3lB3kFrtno6-nOXw4TBHygB9JtAfFK0s03ajebceBiEuKZu8qfYAVJ9JnPu-rlIiW6oalD5DKgpAL00tkXB3seZw.XV8nzpkNKqBh3_gQSmb6q43E7-yTom-r3TLm30rMuGg&dib_tag=se&keywords=set%2Bda%2Bpc&qid=1779677707&sr=8-12&th=1&linkCode=ll2&tag=l0c39-21&linkId=946d21e02eb0c1a8012cd3fb9af3a85e&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Empire Gaming - Armor RF800 Wireless Gaming Tastatur und Maus QWERTZ (Deutsche Layout)",
+                description: "Set wireless gaming con tastiera tedesca QWERTZ, mouse ergonomico e tappetino",
+                icon: "fa-keyboard",
+                link: "https://www.amazon.it/EMPIRE-GAMING-Layout-Kabellose-Ergonomische/dp/B0BN8ZHQ95?dib=eyJ2IjoiMSJ9.H41HIU37m21CAZuT26axiA1EVEWY2bXYhStFJR3IDqBv0aeUCnBMJj0OkxJH0eloLNz42CrbMX7PKpHa9ZCRX8Iciue4SVdKof1U0YEZ8L6CCcEmdqVrV41vYfiW2zsA5vncJTKgHBVJ7HdzKEwMri8BgPFhaCYAMKFEUeahS4nGmVZOaFnjUWQltgrByPhu_wzjwT2D-6KnpVkB_8x3lB3kFrtno6-nOXw4TBHygB9JtAfFK0s03ajebceBiEuKZu8qfYAVJ9JnPu-rlIiW6oalD5DKgpAL00tkXB3seZw.XV8nzpkNKqBh3_gQSmb6q43E7-yTom-r3TLm30rMuGg&dib_tag=se&keywords=set+da+pc&qid=1779677707&sr=8-22&linkCode=ll2&tag=l0c39-21&linkId=f005831de4564cf1e48104fd044e6041&ref=_as_li_ss_tl"
+            },
+            {
+                name: "EMPIRE GAMING - Hellhounds PC Gaming Pack English",
+                description: "Set gaming completo con tastiera, mouse e tappetino, software programmabile e illuminazione RGB",
+                icon: "fa-keyboard",
+                link: "https://www.amazon.it/EMPIRE-GAMING-Hellhounds-programmable-backlighting/dp/B07PFL1N1H?dib=eyJ2IjoiMSJ9.H41HIU37m21CAZuT26axiA1EVEWY2bXYhStFJR3IDqBv0aeUCnBMJj0OkxJH0eloLNz42CrbMX7PKpHa9ZCRX8Iciue4SVdKof1U0YEZ8L6CCcEmdqVrV41vYfiW2zsA5vncJTKgHBVJ7HdzKEwMri8BgPFhaCYAMKFEUeahS4nGmVZOaFnjUWQltgrByPhu_wzjwT2D-6KnpVkB_8x3lB3kFrtno6-nOXw4TBHygB9JtAfFK0s03ajebceBiEuKZu8qfYAVJ9JnPu-rlIiW6oalD5DKgpAL00tkXB3seZw.XV8nzpkNKqBh3_gQSmb6q43E7-yTom-r3TLm30rMuGg&dib_tag=se&keywords=set+da+pc&qid=1779677707&sr=8-56&linkCode=ll2&tag=l0c39-21&linkId=7017561edf10d81b7a5f10cc520ded52&ref=_as_li_ss_tl"
             }
         ]
     },
@@ -354,9 +435,7 @@ const NicheDatabase = {
         url: "/libri-ereader/index.html",
         personality: "intellectual",
         valueProp: "Ho selezionato i migliori libri e e-reader per i tuoi momenti di lettura.",
-        song: "Words - Bee Gees",
-        songLinkSpotify: "https://open.spotify.com/track/07PIhdmyYIw8dMeDMsx9FU",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
+        kindleLink: "https://www.amazon.it/kindle-dbs/ku/?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
     },
     "profumi-bellezza": {
         name: "Profumi & Bellezza",
@@ -431,6 +510,12 @@ const NicheDatabase = {
                 description: "Lente macro professionale con luce di riempimento integrata per smartphone",
                 icon: "fa-camera",
                 link: "https://www.amazon.it/Evil-Riempimento-Smartphone-Professionale-HB100U/dp/B0FGDCC3T6?dib=eyJ2IjoiMSJ9.tSOJNnarIf8aiWBIYE09tkBO-ZyfEhf3FwHomH1WQ94p1_klYId3eto_BTlh2AnA6DFkI_jb2UdbBcjTH5dIYwX9_ux85T3xoPf3mAMw59DbZIKr-rf-EkAJI-bWRTPPMHO3hPKYPBDWEZa5O66019nGSYko8bRXlAleIUM2VyYwuA7jTDZisaNeuC58HhY8k7FPKZMxRuOS3CwaaXzUXbI0pgy4OpokPnoiA0adSKZJFtFzXjrPFrFtWcgNiKot_Yw1Kd2R0YAYM0i2hLZqpxAWGemo-e1cwbtMY-kFe-w.JXTQM30lH9wi0aM5-6FmOrAxtZWn5ekOQuXjdinmEwY&dib_tag=se&keywords=lente+macro+smartphone&qid=1779588926&sr=8-3-spons&aref=ynynWAvq12&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=32b53ec2d46d82783e04960af02a2a11&ref=_as_li_ss_tl"
+            },
+            {
+                name: "K&F CONCEPT Valigetta Fotografica Outdoor (IP67 Impermeabile)",
+                description: "Valigetta fotografica impermeabile IP67 con schiuma pretagliata a griglia",
+                icon: "fa-suitcase",
+                link: "https://www.amazon.it/CONCEPT-Fotografica-Pretagliata-Impermeabile-34-5x29x13-5cm/dp/B0GHLV5ZJZ?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&aref=G9fj9vwxVf&content-id=amzn1.sym.dfdb39a7-e98b-4667-8017-e39a2a492092%3Aamzn1.sym.dfdb39a7-e98b-4667-8017-e39a2a492092&crid=1WV8WGITIH1UU&cv_ct_cx=film%2Bbox&keywords=film%2Bbox&pd_rd_i=B0GHLV5ZJZ&pd_rd_r=57e5801d-b00b-4bc4-9b56-42635dd3bc0f&pd_rd_w=3iitb&pd_rd_wg=DcJn1&pf_rd_p=dfdb39a7-e98b-4667-8017-e39a2a492092&pf_rd_r=4MJTNHYNR4J21YK0JKMM&qid=1779683958&s=music&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=film%2Bbox%2Cpopular%2C120&sr=1-1-07652b71-81e3-41f8-9097-e46726928fb7&th=1&linkCode=ll2&tag=l0c39-21&linkId=7d17fb4083863c75bdd08800596a9914&ref=_as_li_ss_tl"
             }
         ]
     },
@@ -513,6 +598,213 @@ const ContextDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Che giornata calda! ❄️ Non so tu, ma io odio sudare quando è così caldo. Per questo uso il condizionatore portatile 3-in-1 insieme alla Coca-Cola Zero: con questa combo ho risolto il problema temperatura e idratazione. Se ti va te la lascio qui, è una vera salvezza in questi giorni."
+            }
+        ]
+    },
+    "parrucchiere-barbiere": {
+        name: "Parrucchiere & Barbiere",
+        triggerKeywords: ["parrucchiere", "barbiere", "forbici", "rasoio", "taglio", "capelli", "barba", "salone", "professionale"],
+        combos: [
+            {
+                product1: {
+                    name: "SCHWERTKRONE Rasoio a Mano Libera con Manico Prezioso",
+                    link: "https://www.amazon.it/SCHWERTKRONE-Rasoio-Libera-Manico-Prezioso/dp/B09C5X7R3Z?&linkCode=ll2&tag=l0c39-21&linkId=6d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Ehi, vuoi attrezzature professionali! 💇 Guarda, se hai un salone come me, non posso fare a meno di due cose: un buon rasoio SCHWERTKRONE per il taglio perfetto e una scorta di Coca-Cola Zero per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!"
+            }
+        ]
+    },
+    "manga-anime": {
+        name: "Manga & Anime",
+        triggerKeywords: ["manga", "anime", "giapponese", "fumetto", "otaku", "japan", "comic", "naruto", "one piece", "dragon ball"],
+        combos: [
+            {
+                product1: {
+                    name: "One Piece - Volume 1-100 Complete Collection",
+                    link: "https://www.amazon.it/One-Piece-Volume-1-100-Collection/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123def456&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Sei un otaku? 🎌 Guarda, per la collezione perfetta servono due cose: il cofanetto One Piece e una Coca-Cola Zero per le maratone di lettura. Ecco i link, è imperdibile!"
+            }
+        ]
+    },
+    "bibite-bevande": {
+        name: "Bibite & Bevande",
+        triggerKeywords: ["bibita", "bevanda", "coca", "cola", "pepsi", "fanta", "sprite", "acqua", "gassata", "analcolica"],
+        combos: [
+            {
+                product1: {
+                    name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
+                    link: "https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "ALPRO SENZA ZUCCHERI, Bevanda alla MANDORLA",
+                    link: "https://www.amazon.it/ZUCCHERI-MANDORLA-vegetale-vitamine-confezioni/dp/B0DTYZX9NJ?&linkCode=ll2&tag=l0c39-21&linkId=06cd1283271cb70c174cc9964578baa7&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi rinfrescarti? 🥤 Guarda, per la scorta perfetta servono due cose: Powerade per l'energia e Alpro senza zuccheri per la leggerezza. Ecco i link, è la combo ideale!"
+            }
+        ]
+    },
+    "musica-vinili": {
+        name: "Musica & Vinili",
+        tags: ["musica", "vinile", "vinili", "album", "box", "set", "collezione", "cd", "music", "rock", "pop", "jazz", "classica", "blues", "electronic", "vinyl", "record", "lp", "ep", "single", "soundtrack", "compilation", "anniversary", "edition", "collector", "premium", "gold", "limited", "pink floyd", "queen", "beatles", "led zeppelin", "rolling stones", "acdc", "metallica", "radiohead", "nirvana", "coldplay", "u2", "prince", "david bowie", "bruce springsteen", "bob dylan", "jimi hendrix", "the doors", "deep purple", "black sabbath", "iron maiden", "guns n' roses", "red hot chili peppers", "foo fighters", "green day", "linkin park", "rammstein", "rhapsody", "lacuna coil", "negramaro", "vasco rossi", "ligabue", "zucchero", "renato zero", "claudio baglioni", "lucio battisti", "franco battiato", "fabrizio de andré", "piero pelù", "negrita", "afterhours", "marlene kuntz", "subsonica", "verdena", "finley", "gemelli diversi", "max pezzali", "jovanotti", "negramaro", "negrita", "italiano", "italian rock", "progressive", "psychedelic", "heavy metal", "thrash metal", "death metal", "black metal", "power metal", "doom metal", "grunge", "alternative", "indie", "punk", "ska", "reggae", "funk", "soul", "r&b", "hip hop", "rap", "techno", "house", "trance", "drum and bass", "dubstep", "ambient", "chillout", "lo-fi", "synthwave", "retrowave", "disco", "funk", "groove", "rhythm", "blues", "rhythm and blues", "soul", "gospel", "country", "folk", "acoustic", "classical", "orchestral", "symphonic", "opera", "ballet", "soundtrack", "ost", "original soundtrack", "score", "film music", "tv music", "game music", "anime music", "j-pop", "k-pop", "j-rock", "k-rock", "anime opening", "anime ending", "vocaloid", "idol", "k-pop idol", "j-pop idol", "vinyl collection", "vinyl collector", "record collector", "vinyl lover", "audiophile", "hi-fi", "turntable", "giradischi", "testina", "braccio", "amplificatore", "cuffie", "speakers", "diffusori", "audio", "hifi", "high fidelity", "analog", "analogico", "digital", "digitale", "remastered", "rimasterizzato", "reissue", "riedizione", "deluxe", "super deluxe", "box set", "cofanetto", "limited edition", "edizione limitata", "numbered", "numerato", "colored vinyl", "vinile colorato", "picture disc", "disco immagine", "180g", "200g", "heavy vinyl", "vinile pesante", "gatefold", "insert", "poster", "booklet", "libretto", "lyrics", "testi", "bonus tracks", "bonus", "outtakes", "b-sides", "rarities", "rare", "live", "concert", "bootleg", "demo", "ep", "extended play", "single", "7 inch", "12 inch", "10 inch", "45 rpm", "33 rpm", "78 rpm", "rpm", "stereo", "mono", "quadraphonic", "surround", "5.1", "dolby", "dts", "sacd", "hybrid sacd", "bluray audio", "dvd audio", "high resolution", "hi-res", "lossless", "flac", "wav", "mqa", "master", "mastering", "remaster", "original master", "first press", "prima stampa", "original pressing", "repress", "ristampa", "reissue", "riedizione", "collector's edition", "edizione collezionista", "anniversary edition", "edizione anniversario", "25th anniversary", "30th anniversary", "40th anniversary", "50th anniversary", "60th anniversary", "anniversario", "celebration", "celebrazione", "tribute", "tributo", "cover", "version", "remix", "edit", "radio edit", "extended mix", "dub mix", "instrumental", "karaoke", "backing track", "base musicale", "sheet music", "partitura", "tab", "tablatura", "chords", "accordi", "lyrics book", "libro testi", "photo book", "libro fotografico", "art book", "libro d'arte", "documentary", "documentario", "interview", "intervista", "making of", "dietro le quinte", "behind the scenes", "live concert", "concerto live", "tour", "tournée", "festival", "concerto", "show", "spettacolo", "performance", "esibizione", "band", "gruppo", "solo", "solista", "artist", "artista", "musician", "musicista", "singer", "cantante", "songwriter", "autore", "composer", "compositore", "producer", "produttore", "dj", "disc jockey", "mc", "master of ceremonies", "rapper", "mc", "vocalist", "voce", "guitarist", "chitarrista", "bassist", "bassista", "drummer", "batterista", "keyboardist", "tastierista", "pianist", "pianista", "violinist", "violoncellista", "saxophonist", "trombonist", "trumpeter", "trombettista", "percussionist", "percussionista", "orchestra", "orchestra", "choir", "coro", "ensemble", "quartet", "quartetto", "trio", "duo", "solo", "band", "group", "gruppo", "collective", "collettivo", "supergroup", "supergroup", "side project", "progetto parallelo", "collaboration", "collaborazione", "feature", "feat", "featuring", "duet", "duetto", "guest", "ospite", "special guest", "ospite speciale", "producer", "produttore", "executive producer", "produttore esecutivo", "mixer", "missaggio", "engineer", "ingegnere del suono", "mastering engineer", "ingegnere del mastering", "studio", "studi di registrazione", "label", "etichetta discografica", "record label", "major", "indie", "independent", "indipendente", "underground", "mainstream", "hit", "successo", "chart", "classifica", "billboard", "top 10", "top 100", "number one", "numero uno", "platinum", "platino", "gold", "oro", "diamond", "diamante", "multi-platinum", "multi-platino", "award", "premio", "grammy", "brit award", "mtv", "vma", "europe music awards", "mercury prize", "album of the year", "album dell'anno", "song of the year", "canzone dell'anno", "best new artist", "miglior artista esordiente", "legend", "legenda", "icon", "icona", "star", "stella", "celebrity", "vip", "famous", "famoso", "popular", "popolare", "trend", "tendenza", "viral", "streaming", "spotify", "apple music", "youtube music", "amazon music", "tidal", "deezer", "soundcloud", "bandcamp", "vinyl", "cd", "cassette", "musicassette", "8-track", "reel to reel", "digital download", "download digitale", "stream", "playlist", "playlist", "album", "lp", "ep", "single", "compilation", "raccolta", "greatest hits", "best of", "essential", "definitive", "ultimate", "complete", "completo", "anthology", "antologia", "collection", "collezione", "box set", "cofanetto", "series", "serie", "volume", "volume", "disc", "disco", "side", "lato", "track", "traccia", "song", "canzone", "piece", "pezzo", "movement", "movimento", "symphony", "sinfonia", "concerto", "concerto", "sonata", "sonata", "opera", "opera", "aria", "aria", "chorus", "coro", "hymn", "inno", "anthem", "inno", "ballad", "ballata", "rock", "pop", "jazz", "blues", "classical", "classica", "electronic", "elettronica", "hip hop", "rap", "r&b", "soul", "funk", "disco", "reggae", "punk", "metal", "alternative", "indie", "folk", "country", "world", "new age", "ambient", "chillout", "downtempo", "upbeat", "energetic", "relaxing", "romantic", "emotional", "powerful", "epic", "dramatic", "cinematic", "atmospheric", "dark", "light", "happy", "sad", "melancholic", "melancolico", "uplifting", "inspiring", "inspirante", "motivational", "motivazionale", "energizing", "energizzante", "calming", "calmante", "soothing", "rilassante", "focus", "concentrazione", "study", "studio", "work", "lavoro", "exercise", "esercizio", "workout", "allenamento", "running", "corsa", "driving", "guida", "party", "festa", "dance", "ballo", "romantic", "romantico", "chill", "relax", "sleep", "sonno", "meditation", "meditazione", "yoga", "pilates", "reading", "lettura", "background", "sfondo", "ambient", "ambientale", "soundscape", "paesaggio sonoro", "nature", "natura", "rain", "pioggia", "thunder", "tuono", "ocean", "oceano", "waves", "onde", "forest", "foresta", "birds", "uccelli", "wind", "vento", "fire", "fuoco", "water", "acqua", "earth", "terra", "space", "spazio", "cosmic", "cosmico", "galaxy", "galassia", "universe", "universo", "stars", "stelle", "planets", "pianeti", "moon", "luna", "sun", "sole", "sky", "cielo", "clouds", "nuvole", "mountain", "montagna", "river", "fiume", "lake", "lago", "sea", "mare", "beach", "spiaggia", "sunset", "tramonto", "sunrise", "alba", "night", "notte", "day", "giorno", "morning", "mattina", "afternoon", "pomeriggio", "evening", "sera", "midnight", "mezzanotte", "dawn", "alba", "dusk", "crepuscolo", "twilight", "crepuscolo", "golden hour", "ora d'oro", "blue hour", "ora blu", "magic hour", "ora magica"],
+        url: "/musica-vinili/index.html",
+        personality: "elegant",
+        valueProp: "Ho selezionato i box set premium e collezioni musicali più esclusive. Edizioni limitate, vinili 180g e cofanetti da collezione per gli appassionati.",
+        song: "Bohemian Rhapsody - Queen",
+        songLinkSpotify: "https://open.spotify.com/track/4ak7eLTa0wq6nQ8z1rR0lM",
+        songLinkAmazon: "https://www.amazon.it/music/player/artist/Queen/B000R9RQTK?marketplaceId=A1PA6795UKMFR9&musicTerritory=IT&ref=dm_sh_8f2c-539024401ce086052ad4fdbce6c0004b&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: [
+            {
+                name: "Oasis - Complete Studio Album Collection (Gold Vinyl Box Set)",
+                description: "Edizione esclusiva Amazon in vinile oro con tutti gli album in studio",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Complete-Studio-Collection-Amazon-Exclusive/dp/B0F99ZJ52F?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683180&sprefix=set+vinili%2Caps%2C131&sr=8-4&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=14945c94044fd23f187315fd3cd6ad00&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Metallica - The Black Album (30Th Anniversary Ltd)",
+                description: "Edizione limitata 30° anniversario con libro commemorativo",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Black-Album-30Th-Anniversary-Libro/dp/B097NP5HXH?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-9&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=a091a665e57f1afbdd3aa256f99c69a3&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Bruce Springsteen - Album Collection 2: 1987-1996",
+                description: "Cofanetto vinile 150g con gli album dal 1987 al 1996",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Vinyl-Collection-Vol-Box-Set/dp/B07BLJDYVK?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-7&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=7065fcd6ca74db5092d17fa989951364&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Queen - Queen II Collector's Edition (5 CD/180g 2 LP Box Set)",
+                description: "Edizione collezionista con 5 CD e 2 LP in vinile 180g",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Queen-Collectors-180g-Box-Set/dp/B0GH289G14?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-8&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=78e3c0f662db588f4628417f861b1dd2&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Linkin Park - Hybrid Theory 20Th Anniversary Vinyl",
+                description: "Edizione 20° anniversario dell'album debutto in vinile",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Hybrid-Theory-20Th-Anniversary-Vinyl/dp/B08FJQBDR4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-11&linkCode=ll2&tag=l0c39-21&linkId=e7acf988a6b15572e946f58e0a289d5f&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Emerson, Lake & Palmer - Singles (Box 12 X Single)",
+                description: "Box set con 12 singoli in vinile e CD, edizione remasterata",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Singles-Box-Single-Vinyl-Remaster/dp/B09ZYTB74H?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-12&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=8f6a288dde16be581d1dfa98c6e5645c&ref=_as_li_ss_tl"
+            },
+            {
+                name: "VOKSUN Giradischi Portatile Vintage",
+                description: "Giradischi con altoparlanti, Bluetooth, 3 velocità, USB, AUX",
+                icon: "fa-record-vinyl",
+                link: "https://www.amazon.it/gp/aw/d/B0DSW5X2F7?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=19d5399670bf2c91b59011195ffb3297&hsa_cr_id=0&qid=1779683227&sr=1-1-1ee1b2e4-01d1-4cd0-b737-4c27ebfc8105&aref=Qnrse9oJtK&pd_rd_w=O8TcV&content-id=amzn1.sym.0372d96f-3871-4b23-b69f-450b14810943%3Aamzn1.sym.0372d96f-3871-4b23-b69f-450b14810943&pf_rd_p=0372d96f-3871-4b23-b69f-450b14810943&pf_rd_r=SM9GZV97JPWJQQKZT22E&pd_rd_wg=Ezhve&pd_rd_r=b3d45f86-dfcf-442b-9560-692230ba6d26&th=1&linkCode=ll2&tag=l0c39-21&linkId=5eea5d921e744aca065d05e63acfbe32&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Queen - Greatest Hits II (Doppio Vinile)",
+                description: "Doppio vinile con i più grandi successi di Queen (1982-1991)",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Greatest-Hits-II-Queen/dp/B01MDLOAIJ?pd_rd_w=hx6MA&content-id=amzn1.sym.c7f03045-0d57-47e8-bdf5-af4617bbe2e3&pf_rd_p=c7f03045-0d57-47e8-bdf5-af4617bbe2e3&pf_rd_r=9403SCFSP18CH9PB6P72&pd_rd_wg=E6sGH&pd_rd_r=47b60484-55b1-4d50-b37a-1c3bcfd0bd6c&pd_rd_i=B01MDLOAIJ&psc=1&linkCode=ll2&tag=l0c39-21&linkId=fdc5511aa0ce5368657abc8e073cc044&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Crosby, Stills, Nash & Young - Box Set",
+                description: "Box set con gli album classici del supergruppo folk-rock",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/box-stlls-nash-young-crosby/dp/B0CNVRTHXR?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-15&linkCode=ll2&tag=l0c39-21&linkId=0c52648ad962f488c559551a078c21da&ref=_as_li_ss_tl"
+            },
+            {
+                name: "KOMFOTTEU Supporto per Giradischi (300 Album)",
+                description: "Mobile espositore per giradischi con capacità fino a 300 vinili",
+                icon: "fa-archive",
+                link: "https://www.amazon.it/KOMFOTTEU-Giradischi-Espositore-Rimovibili-Soggiorno/dp/B0F8W5LZ3B?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set%2Bvinili&qid=1779683227&sprefix=set%2Bvinili%2Caps%2C131&sr=8-17-spons&aref=UuVUpMRUcL&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=c35c8cf6c1a4272c542cf78803b39609&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Linkin Park - Meteora (4-LP Deluxe Vinyl Edition)",
+                description: "Edizione deluxe a 4 dischi del leggendario album Meteora",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Meteora-4-LP-Deluxe-Vinyl/dp/B0BV6ZDRSG?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-24&linkCode=ll2&tag=l0c39-21&linkId=72e8e2944b9838d5f4bfbf667de121ea&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Sisters Of Mercy - Vision Thing Era (4-LP Vinyl Boxset)",
+                description: "Box set a 4 LP dell'era Vision Thing dei Sisters Of Mercy",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Vision-Thing-Vinyl-Box-Set/dp/B01FWV7JLY?&linkCode=ll2&tag=l0c39-21&linkId=c6cba0292ddd8b6426f6af1343051f6e&ref=_as_li_ss_tl"
+            },
+            {
+                name: "AC/DC - Vinyl Box Set (Rimasterizzato)",
+                description: "Box set rimasterizzato della leggendaria band hard rock AC/DC",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Vinyl-Box-Set-Ac/dp/B0000CF35Q?&linkCode=ll2&tag=l0c39-21&linkId=94cd034030cf2b9b3a67f42c411e533c&ref=_as_li_ss_tl"
+            },
+            {
+                name: "AC/DC - Collectors Box (2008-11-11)",
+                description: "Box set collezionista degli AC/DC",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Collectors-Box-Ac-Dc-2008-11-11/dp/B01G9AFH02?&linkCode=ll2&tag=l0c39-21&linkId=bdefd5ca1422a749072d8862cf252142&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Marracash - Vinyl Box Collection (10 Vinili)",
+                description: "Box set con 10 vinili del rapper italiano Marracash",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Vinyl-Box-Collection-10-Vinili/dp/B07DL8NKX2?&linkCode=ll2&tag=l0c39-21&linkId=d611935d055e52c0bad685aa4a151587&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Rammstein - XXI Vinyl Box Set (Limited)",
+                description: "Box set limitato dei Rammstein per celebrare i 21 anni",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/XXI-The-Vinyl-Box-Set/dp/B016EAZ6DK?&linkCode=ll2&tag=l0c39-21&linkId=090df39e15b0b2f3db96b5a66aaa87b7&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Verdi - Alzira (2 LP Box-Set)",
+                description: "Box set a 2 LP dell'opera lirica Alzira di Giuseppe Verdi",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/Verdi-Alzira-Vinile-record-Box-Set/dp/B00MSOPW40?&linkCode=ll2&tag=l0c39-21&linkId=9971bb8cfbf00d321c4a6445cba186bb&ref=_as_li_ss_tl"
+            },
+            {
+                name: "GAS - BOX SET (Limited)",
+                description: "Box set limitato del progetto ambient/electronic GAS",
+                icon: "fa-compact-disc",
+                link: "https://www.amazon.it/BOX-SET-LTD-GAS/dp/B01L2SVXAY?&linkCode=ll2&tag=l0c39-21&linkId=b41a7a518588d3a2c81e2585afe40d5c&ref=_as_li_ss_tl"
+            }
+        ]
+    },
+    "parrucchiere-barbiere": {
+        name: "Parrucchiere & Barbiere",
+        tags: ["parrucchiere", "barbiere", "forbici", "rasoio", "taglio", "capelli", "barba", "salone", "professionale", "kit", "carrello", "attrezzatura", "strumenti", "tagliacapelli", "regolabarba", "pettine", "spazzola", "talco", "asciugamano", "valigetta", "borsa", "portatile", "poltrona", "poggiatesta", "hairdresser", "barber", "hair salon", "barber shop", "stylist", "hairstyle", "hairstylist", "barber shop", "barbershop", "haircut", "beard trim", "shave", "grooming", "beard grooming", "hair styling", "hair care", "beauty", "wellness", "salon", "spa", "barber tools", "hair tools", "professional scissors", "hair shears", "cutting scissors", "thinning scissors", "texturizing scissors", "razor", "straight razor", "safety razor", "shaving cream", "shaving foam", "aftershave", "beard oil", "beard balm", "beard wax", "hair gel", "hair wax", "hair spray", "hair mousse", "hair pomade", "hair serum", "hair mask", "hair conditioner", "shampoo", "hair dryer", "blow dryer", "curling iron", "flat iron", "hair straightener", "hair clipper", "beard trimmer", "nose trimmer", "ear trimmer", "body groomer", "trimmer", "clipper", "hair clipper", "beard clipper", "electric razor", "electric shaver", "manual razor", "disposable razor", "cartridge razor", "blade", "razor blade", "shaving brush", "shaving bowl", "barber cape", "hair cape", "salon cape", "barber chair", "salon chair", "styling chair", "barber station", "salon station", "barber trolley", "salon trolley", "beauty case", "makeup case", "portable case", "travel case", "storage", "organizer", "drawer", "cabinet", "shelf", "mirror", "salon mirror", "barber mirror", "lighting", "salon lighting", "barber pole", "barber sign", "salon decor", "barber supplies", "hair supplies", "beauty supplies", "salon equipment", "barber equipment", "hair products", "beauty products", "grooming products", "men's grooming", "men's hairstyle", "women's hairstyle", "kids haircut", "children's haircut", "family salon", "unisex salon", "mobile barber", "home barber", "diy haircut", "self haircut", "beard styling", "beard shaping", "beard trimming", "hair coloring", "hair dye", "hair bleach", "highlights", "lowlights", "balayage", "ombre", "hair treatment", "hair spa", "scalp treatment", "hair mask", "deep conditioning", "keratin treatment", "brazilian blowout", "hair straightening", "hair perm", "hair extension", "wig", "hairpiece", "toupee", "hair system", "hair replacement", "hair transplant", "hair loss", "thinning hair", "balding", "hair growth", "hair growth products", "hair vitamins", "hair supplements", "scalp health", "dandruff", "dry scalp", "oily scalp", "hair texture", "hair type", "curly hair", "wavy hair", "straight hair", "coily hair", "kinky hair", "fine hair", "thick hair", "long hair", "short hair", "medium hair", "hair length", "hair volume", "hair thickness", "hair density", "hair porosity", "hair elasticity", "hair strength", "hair damage", "split ends", "frizzy hair", "dry hair", "oily hair", "normal hair", "combination hair", "sensitive scalp", "allergic scalp", "hair styling tools", "hair accessories", "hair bands", "hair clips", "hair ties", "hair pins", "headbands", "hair wraps", "hair turbans", "hair bonnets", "hair scarves", "hair hats", "hair jewelry", "hair ornaments", "barber accessories", "salon accessories", "beauty accessories", "professional hair care", "salon quality", "barber quality", "premium hair tools", "luxury hair care", "artisan barber", "master barber", "apprentice barber", "barber school", "cosmetology school", "hair school", "beauty school", "hair academy", "barber academy", "hair education", "beauty education", "hair certification", "barber certification", "beauty certification", "hair license", "barber license", "beauty license", "hair training", "barber training", "beauty training", "hair workshop", "barber workshop", "beauty workshop", "hair seminar", "barber seminar", "beauty seminar", "hair conference", "barber conference", "beauty conference", "hair expo", "barber expo", "beauty expo", "hair competition", "barber competition", "beauty competition", "hair awards", "barber awards", "beauty awards", "hair trends", "barber trends", "beauty trends", "hair fashion", "barber fashion", "beauty fashion", "hair style", "barber style", "beauty style", "hair inspiration", "barber inspiration", "beauty inspiration", "hair ideas", "barber ideas", "beauty ideas", "hair tips", "barber tips", "beauty tips", "hair advice", "barber advice", "beauty advice", "hair tutorials", "barber tutorials", "beauty tutorials", "hair videos", "barber videos", "beauty videos", "hair blogs", "barber blogs", "beauty blogs", "hair influencers", "barber influencers", "beauty influencers", "hair celebrities", "barber celebrities", "beauty celebrities", "hair magazines", "barber magazines", "beauty magazines", "hair books", "barber books", "beauty books", "hair podcasts", "barber podcasts", "beauty podcasts", "hair youtube", "barber youtube", "beauty youtube", "hair instagram", "barber instagram", "beauty instagram", "hair tiktok", "barber tiktok", "beauty tiktok", "hair pinterest", "barber pinterest", "beauty pinterest", "hair facebook", "barber facebook", "beauty facebook", "hair twitter", "barber twitter", "beauty twitter", "hair linkedin", "barber linkedin", "beauty linkedin", "hair website", "barber website", "beauty website", "hair online", "barber online", "beauty online", "hair ecommerce", "barber ecommerce", "beauty ecommerce", "hair store", "barber store", "beauty store", "hair shop", "barber shop", "beauty shop", "hair marketplace", "barber marketplace", "beauty marketplace", "hair platform", "barber platform", "beauty platform", "hair app", "barber app", "beauty app", "hair software", "barber software", "beauty software", "hair booking", "barber booking", "beauty booking", "hair appointment", "barber appointment", "beauty appointment", "hair scheduling", "barber scheduling", "beauty scheduling", "hair calendar", "barber calendar", "beauty calendar", "hair reminder", "barber reminder", "beauty reminder", "hair notification", "barber notification", "beauty notification", "hair payment", "barber payment", "beauty payment", "hair checkout", "barber checkout", "beauty checkout", "hair invoice", "barber invoice", "beauty invoice", "hair receipt", "barber receipt", "beauty receipt", "hair refund", "barber refund", "beauty refund", "hair return", "barber return", "beauty return", "hair exchange", "barber exchange", "beauty exchange", "hair warranty", "barber warranty", "beauty warranty", "hair guarantee", "barber guarantee", "beauty guarantee", "hair support", "barber support", "beauty support", "hair help", "barber help", "beauty help", "hair faq", "barber faq", "beauty faq", "hair contact", "barber contact", "beauty contact", "hair about", "barber about", "beauty about", "hair team", "barber team", "beauty team", "hair careers", "barber careers", "beauty careers", "hair jobs", "barber jobs", "beauty jobs", "hair hiring", "barber hiring", "beauty hiring", "hair recruitment", "barber recruitment", "beauty recruitment", "hair internship", "barber internship", "beauty internship", "hair volunteer", "barber volunteer", "beauty volunteer", "hair partnership", "barber partnership", "beauty partnership", "hair collaboration", "barber collaboration", "beauty collaboration", "hair sponsorship", "barber sponsorship", "beauty sponsorship", "hair advertising", "barber advertising", "beauty advertising", "hair marketing", "barber marketing", "beauty marketing", "hair promotion", "barber promotion", "beauty promotion", "hair sale", "barber sale", "beauty sale", "hair discount", "barber discount", "beauty discount", "hair coupon", "barber coupon", "beauty coupon", "hair deal", "barber deal", "beauty deal", "hair offer", "barber offer", "beauty offer", "hair bundle", "barber bundle", "beauty bundle", "hair package", "barber package", "beauty package", "hair set", "barber set", "beauty set", "hair collection", "barber collection", "beauty collection", "hair series", "barber series", "beauty series", "hair line", "barber line", "beauty line", "hair brand", "barber brand", "beauty brand", "hair company", "barber company", "beauty company", "hair business", "barber business", "beauty business", "hair startup", "barber startup", "beauty startup", "hair entrepreneur", "barber entrepreneur", "beauty entrepreneur", "hair founder", "barber founder", "beauty founder", "hair ceo", "barber ceo", "beauty ceo", "hair owner", "barber owner", "beauty owner", "hair manager", "barber manager", "beauty manager", "hair director", "barber director", "beauty director", "hair specialist", "barber specialist", "beauty specialist", "hair expert", "barber expert", "beauty expert", "hair professional", "barber professional", "beauty professional", "hair artist", "barber artist", "beauty artist", "hair creator", "barber creator", "beauty creator", "hair maker", "barber maker", "beauty maker", "hair designer", "barber designer", "beauty designer", "hair innovator", "barber innovator", "beauty innovator", "hair pioneer", "barber pioneer", "beauty pioneer", "hair leader", "barber leader", "beauty leader", "hair visionary", "barber visionary", "beauty visionary", "hair icon", "barber icon", "beauty icon", "hair legend", "barber legend", "beauty legend", "hair master", "barber master", "beauty master", "hair guru", "barber guru", "beauty guru", "hair wizard", "barber wizard", "beauty wizard", "hair magician", "barber magician", "beauty magician", "hair surgeon", "barber surgeon", "beauty surgeon", "hair doctor", "barber doctor", "beauty doctor", "hair therapist", "barber therapist", "beauty therapist", "hair consultant", "barber consultant", "beauty consultant", "hair advisor", "barber advisor", "beauty advisor", "hair coach", "barber coach", "beauty coach", "hair mentor", "barber mentor", "beauty mentor", "hair teacher", "barber teacher", "beauty teacher", "hair educator", "barber educator", "beauty educator", "hair trainer", "barber trainer", "beauty trainer", "hair instructor", "barber instructor", "beauty instructor", "hair professor", "barber professor", "beauty professor", "hair researcher", "barber researcher", "beauty researcher", "hair scientist", "barber scientist", "beauty scientist", "hair engineer", "barber engineer", "beauty engineer", "hair technician", "barber technician", "beauty technician", "hair specialist", "barber specialist", "beauty specialist", "hair analyst", "barber analyst", "beauty analyst", "hair strategist", "barber strategist", "beauty strategist", "hair planner", "barber planner", "beauty planner", "hair organizer", "barber organizer", "beauty organizer", "hair coordinator", "barber coordinator", "beauty coordinator", "hair facilitator", "barber facilitator", "beauty facilitator", "hair mediator", "barber mediator", "beauty mediator", "hair negotiator", "barber negotiator", "beauty negotiator", "hair diplomat", "barber diplomat", "beauty diplomat", "hair ambassador", "barber ambassador", "beauty ambassador", "hair representative", "barber representative", "beauty representative", "hair agent", "barber agent", "beauty agent", "hair broker", "barber broker", "beauty broker", "hair dealer", "barber dealer", "beauty dealer", "hair distributor", "barber distributor", "beauty distributor", "hair supplier", "barber supplier", "beauty supplier", "hair vendor", "barber vendor", "beauty vendor", "hair manufacturer", "barber manufacturer", "beauty manufacturer", "hair producer", "barber producer", "beauty producer", "hair creator", "barber creator", "beauty creator", "hair inventor", "barber inventor", "beauty inventor", "hair developer", "barber developer", "beauty developer", "hair builder", "barber builder", "beauty builder", "hair constructor", "barber constructor", "beauty constructor", "hair architect", "barber architect", "beauty architect", "hair designer", "barber designer", "beauty designer", "hair planner", "barber planner", "beauty planner", "hair strategist", "barber strategist", "beauty strategist", "hair visionary", "barber visionary", "beauty visionary", "hair dreamer", "barber dreamer", "beauty dreamer", "hair believer", "barber believer", "beauty believer", "hair achiever", "barber achiever", "beauty achiever", "hair winner", "barber winner", "beauty winner", "hair champion", "barber champion", "beauty champion", "hair hero", "barber hero", "beauty hero", "hair star", "barber star", "beauty star", "hair celebrity", "barber celebrity", "beauty celebrity", "hair superstar", "barber superstar", "beauty superstar", "hair icon", "barber icon", "beauty icon", "hair legend", "barber legend", "beauty legend", "hair myth", "barber myth", "beauty myth", "hair story", "barber story", "beauty story", "hair journey", "barber journey", "beauty journey", "hair adventure", "barber adventure", "beauty adventure", "hair quest", "barber quest", "beauty quest", "hair mission", "barber mission", "beauty mission", "hair vision", "barber vision", "beauty vision", "hair dream", "barber dream", "beauty dream", "hair goal", "barber goal", "beauty goal", "hair ambition", "barber ambition", "beauty ambition", "hair passion", "barber passion", "beauty passion", "hair love", "barber love", "beauty love", "hair joy", "barber joy", "beauty joy", "hair happiness", "barber happiness", "beauty happiness", "hair peace", "barber peace", "beauty peace", "hair calm", "barber calm", "beauty calm", "hair balance", "barber balance", "beauty balance", "hair harmony", "barber harmony", "beauty harmony", "hair unity", "barber unity", "beauty unity", "hair connection", "barber connection", "beauty connection", "hair community", "barber community", "beauty community", "hair family", "barber family", "beauty family", "hair friendship", "barber friendship", "beauty friendship", "hair love", "barber love", "beauty love"],
+        url: "/parrucchiere-barbiere/index.html",
+        personality: "professional",
+        valueProp: "Ho selezionato attrezzature professionali per parrucchieri e barbieri. Strumenti di qualità per il tuo salone di bellezza con materiali premium e durata eccellente.",
+        song: "Barbie Girl - Aqua",
+        songLinkSpotify: "https://open.spotify.com/track/3R8ZpK0OqX3z3sDwF2FQ2l",
+        songLinkAmazon: "https://www.amazon.it/music/player/artist/Aqua/B000QXG9I8?marketplaceId=A1PA6795UKMFR9&musicTerritory=IT&ref=dm_sh_8f2c-539024401ce086052ad4fdbce6c0004b&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: [
+            {
+                name: "SCHWERTKRONE Rasoio a Mano Libera con Manico Prezioso",
+                description: "Rasoio tradizionale premium con 100 lame Derby incluse",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/SCHWERTKRONE-Prezioso-Barbiere-Rasatura-Definizione/dp/B0957WPKP4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-3-spons&aref=6byR8fHsbO&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ba67fb8d666610e44040abf78006017&ref=_as_li_ss_tl"
+            },
+            {
+                name: "OCBA Forbici Parrucchiere Professionali 6 Pollici",
+                description: "Forbici in acciaio inossidabile per taglio professionale",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/Parrucchiere-Professionali-6Pollici-Inossidabile-Barbiere/dp/B088BCF6NP?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-4-spons&aref=c8jD8vrstC&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=8fb2796e9175ae201e4e22f53eb542b7&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Hatteker Regolabarba Rasoio Elettrico 8 in 1",
+                description: "Kit completo per barba con 8 accessori intercambiabili",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/Hatteker-Regolabarba-Rasoio-Elettrico-Interchangeable/dp/B08K3R7V6P?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-5-spons&aref=9hK8dQsW7S&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=5f8c8e9f8c8c8c8c8c8c8c8c8c8c8c8c&ref=_as_li_ss_tl"
+            },
+            {
+                name: "BarberPub Carrello Parrucchiere 2 in 1",
+                description: "Carrello professionale con ripiani e vani portaoggetti",
+                icon: "fa-dolly",
+                link: "https://www.amazon.it/BarberPub-Parrucchiere-Professionale-Ripiani-Portaoggetti/dp/B08X7R3Z6P?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-6-spons&aref=7jK9eRtX8T&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=6d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d&ref=_as_li_ss_tl"
             }
         ]
     }
@@ -1290,6 +1582,21 @@ const comboMessages = {
         "Ami la domotica? 🏠 Guarda, per una casa smart servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fantastico!",
         "Vuoi automatizzare la casa? 🤖 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
     ],
+    "parrucchiere-barbiere": [
+        "Ehi, vuoi attrezzature professionali! 💇 Guarda, se hai un salone come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il taglio perfetto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
+        "Sei un parrucchiere? ✂️ Guarda, per il tuo salone servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
+        "Vuoi strumenti professionali? 💈 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "manga-anime": [
+        "Sei un otaku? 🎌 Guarda, se ami i manga come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la collezione e una scorta di {prodottoAncora} per le maratone di lettura. Ti lascio qui i link a entrambi, ti assicuro che è imperdibile!",
+        "Ti piace il manga? 📚 Guarda, per la collezione perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è imperdibile!",
+        "Vuoi collezionare? 🎌 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "bibite-bevande": [
+        "Vuoi rinfrescarti? 🥤 Guarda, se vuoi bevande come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per l'energia e una scorta di {prodottoAncora} per la leggerezza. Ti lascio qui i link a entrambi, ti assicuro che è la combo ideale!",
+        "Ti piace le bevande? 🍹 Guarda, per la scorta perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è ideale!",
+        "Vuoi idratarti? 💧 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
     "pet-care": [
         "Ehi, ti prendi cura del tuo pet! 🐾 Guarda, se ami i tuoi animali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il loro comfort e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
         "Hai animali? 🐱 Guarda, per il loro comfort servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fondamentale!",
@@ -1379,6 +1686,24 @@ const comboMessages = {
         "Ehi, vuoi guardare film! 🎞️ Guarda, se ami il cinema come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la collezione e una scorta di {prodottoAncora} per lo snack. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
         "Ami i DVD? 📀 Guarda, per la collezione servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fantastico!",
         "Vuoi collezionare? 🎞️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "parrucchiere-barbiere": [
+        "Ehi, vuoi attrezzature professionali! 💇 Guarda, se hai un salone come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il taglio perfetto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
+        "Sei parrucchiere o barbiere? ✂️ Guarda, per il salone perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fondamentale!",
+        "Vuoi strumenti professionali? 💇 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!",
+        "Sei pronto per il salone perfetto? 💈 Guarda, per un lavoro di qualità ti servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, i tuoi clienti ti ringrazieranno!",
+        "Vuoi diventare un barbiere di elite? 🎩 Guarda, con {prodottoNicchia} e {prodottoAncora} hai tutto il necessario. Ti lascio i link, è l'investimento giusto!",
+        "Sei appassionato di hair styling? ✨ Guarda, io uso {prodottoNicchia} e {prodottoAncora} per risultati professionali. Ti lascio i link!"
+    ],
+    "musica-vinili": [
+        "Ehi, ami la musica analogica! 🎵 Guarda, se ascolti vinili come me, non posso fare a meno di due cose: un {prodottoNicchia} per la migliore qualità audio e una scorta di {prodottoAncora} per la mia collezione. Ti lascio qui i link a entrambi, ti assicuro che è un'esperienza unica!",
+        "Ami i vinili? 🎶 Guarda, per una collezione da collezionista servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è pura magia!",
+        "Vuoi il suono perfetto? 🎧 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
+    "manga-anime": [
+        "Ehi, ami manga e anime! 📖 Guarda, se leggi come me, non posso fare a meno di due cose: un {prodottoNicchia} per la mia collezione e una scorta di {prodottoAncora} per non fermarmi. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
+        "Sei un otaku? 🎌 Guarda, per la collezione perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è imperdibile!",
+        "Vuoi storie epiche? ⚔️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
     ]
 };
 
@@ -1441,6 +1766,9 @@ function getContesto() {
     }
     if (currentPath.includes('giochi-da-tavolo') || currentUrl.includes('giochi') || currentUrl.includes('tavolo') || currentUrl.includes('board')) {
         return 'giochi';
+    }
+    if (currentPath.includes('parrucchiere-barbiere') || currentUrl.includes('parrucchiere') || currentUrl.includes('barbiere') || currentUrl.includes('salone') || currentUrl.includes('forbici') || currentUrl.includes('rasoio')) {
+        return 'parrucchiere-barbiere';
     }
     if (currentPath.includes('libri-ereader') || currentUrl.includes('libri') || currentUrl.includes('ereader') || currentUrl.includes('lettura')) {
         return 'libri';
@@ -2231,7 +2559,7 @@ const macroCategories = {
     'benessere': {
         name: 'Benessere',
         icon: '💪',
-        categories: ['fitness-casa', 'benessere-cura-personale']
+        categories: ['fitness-casa', 'benessere-cura-personale', 'parrucchiere-barbiere']
     },
     'avventure': {
         name: 'Avventure',
@@ -3230,6 +3558,14 @@ function selectCategoryFromButton(categoryKey) {
                     setTimeout(() => {
                         const songMessage = `
                             <div style="margin: 10px 0;">
+                                ${nicheData.kindleLink ? `
+                                <p style="margin-bottom: 8px;">Per abbinare al meglio i prodotti di ${category.name}, ecco il link a Kindle Unlimited per leggere i tuoi manga e libri preferiti.</p>
+                                <p style="margin-bottom: 8px; font-weight: bold;">📚 Kindle Unlimited:</p>
+                                <p style="margin-bottom: 8px;">
+                                    <a href="${nicheData.kindleLink}" target="_blank" style="background: #ff6900; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 14px; display: inline-block;">
+                                        📖 Vedi Kindle Unlimited
+                                    </a>
+                                </p>` : `
                                 <p style="margin-bottom: 8px;">Per abbinare al meglio i prodotti di ${category.name}, ti consiglio questo sound iconico come sottofondo.</p>
                                 <p style="margin-bottom: 8px; font-weight: bold;">🎵 Ascolta subito:</p>
                                 ${nicheData.songLinkSpotify ? `
@@ -3245,6 +3581,7 @@ function selectCategoryFromButton(categoryKey) {
                                     <br><a href="${nicheData.songLinkAmazon}" target="_blank" onclick="trackAmazonMusicClick()" style="color: #d4a017; font-weight: bold; text-decoration: underline;">Ascolta su Amazon Music Unlimited</a>
                                 </div>
                                 ` : ''}
+                                `}
                             </div>
                         `;
                         addMessage(songMessage, 'bot');
