@@ -2608,7 +2608,7 @@ function toggleChat() {
         chatWindow.classList.add('active');
         chatButton.classList.add('active');
         chatOpen = true;
-        
+
         // Track bot opening in Google Analytics
         if (typeof gtag !== 'undefined') {
             gtag('event', 'bot_open', {
@@ -2616,11 +2616,19 @@ function toggleChat() {
                 'event_label': 'chat_opened'
             });
         }
-        
+
         // Show welcome message with macro-categories on first open
         const chatMessages = document.getElementById('chat-messages');
         if (chatMessages && chatMessages.children.length === 0) {
             showWelcomeMessage();
+        } else if (chatMessages) {
+            // If chat has messages but no categories visible, show macro-categories
+            const hasQuickReplies = chatMessages.querySelector('.quick-replies');
+            if (!hasQuickReplies) {
+                setTimeout(() => {
+                    showMacroCategories();
+                }, 300);
+            }
         }
     }
 }
