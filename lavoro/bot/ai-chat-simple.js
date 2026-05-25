@@ -218,11 +218,11 @@ const NicheDatabase = {
         personality: "enthusiastic",
         valueProp: "Ho selezionato i manga e anime più amati e iconici per te. Storie epiche, personaggi indimenticabili e arte straordinaria ti aspettano.",
         kindleLink: "https://www.amazon.it/kindle-dbs/ku/?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        song: "A Cruel Angel's Thesis - Yoko Takahashi",
-        songLinkSpotify: "https://open.spotify.com/track/0QJiB9X8q9Y7KpK0VJ0K0K",
+        song: "Gurenge - LiSA",
+        songLinkSpotify: "https://open.spotify.com/track/23DbzwNJSLo7nkSWjODMvY",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         primaryColor: "#9400D3",
-        accentColor: "#00FF00",
+        accentColor: "#DC143C",
         secondaryColor: "#FF6600",
         topProducts: [
             {
