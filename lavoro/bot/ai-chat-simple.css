@@ -618,7 +618,7 @@
     gap: 8px;
 }
 
-.category-btn {
+#ai-chat-window .category-btn {
     padding: 8px 12px;
     background: white;
     border: 1px solid #e0e0e0;
@@ -628,13 +628,13 @@
     transition: all 0.3s ease;
 }
 
-.category-btn:hover {
+#ai-chat-window .category-btn:hover {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border-color: transparent;
 }
 
-.category-link {
+#ai-chat-window .category-link {
     display: inline-block;
     padding: 10px 15px;
     background: linear-gradient(135deg, #FF9900 0%, #FF7700 100%);
@@ -648,13 +648,13 @@
     box-shadow: 0 4px 15px rgba(255, 119, 0, 0.3);
 }
 
-.category-link:hover {
+#ai-chat-window .category-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 119, 0, 0.4);
 }
 
 /* Product Cards */
-.product-card {
+#ai-chat-window .product-card {
     background: white;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
@@ -663,19 +663,19 @@
     transition: all 0.3s ease;
 }
 
-.product-card:hover {
+#ai-chat-window .product-card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
 }
 
-.product-name {
+#ai-chat-window .product-name {
     font-weight: 600;
     font-size: 14px;
     color: #333;
     margin-bottom: 8px;
 }
 
-.product-desc {
+#ai-chat-window .product-desc {
     font-size: 13px;
     color: #666;
     margin-bottom: 10px;
@@ -707,7 +707,7 @@
     box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
 }
 
-.product-link {
+#ai-chat-window .product-link {
     display: inline-block;
     padding: 8px 16px;
     background: linear-gradient(135deg, #FF9900 0%, #FF7700 100%);
@@ -720,7 +720,7 @@
     box-shadow: 0 4px 15px rgba(255, 119, 0, 0.3);
 }
 
-.product-link:hover {
+#ai-chat-window .product-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 119, 0, 0.4);
 }
@@ -747,7 +747,7 @@
     gap: 8px;
 }
 
-.suggestion-btn {
+#ai-chat-window .suggestion-btn {
     padding: 8px 12px;
     background: white;
     border: 1px solid #667eea;
@@ -758,7 +758,7 @@
     transition: all 0.3s ease;
 }
 
-.suggestion-btn:hover {
+#ai-chat-window .suggestion-btn:hover {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border-color: transparent;
@@ -786,7 +786,7 @@
     gap: 8px;
 }
 
-.filter-btn {
+#ai-chat-window .filter-btn {
     padding: 8px 12px;
     background: white;
     border: 1px solid #667eea;
@@ -797,7 +797,7 @@
     transition: all 0.3s ease;
 }
 
-.filter-btn:hover {
+#ai-chat-window .filter-btn:hover {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border-color: transparent;
@@ -826,7 +826,7 @@
     gap: 8px;
 }
 
-.quick-reply-card {
+#ai-chat-window .quick-reply-card {
     background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 12px;
@@ -841,19 +841,19 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.quick-reply-card:active {
+#ai-chat-window .quick-reply-card:active {
     transform: scale(0.98);
 }
 
-.quick-reply-card:hover {
+#ai-chat-window .quick-reply-card:hover {
     background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
     border-color: #3498DB;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.quick-reply-card:hover .quick-reply-icon,
-.quick-reply-card:hover .quick-reply-name {
+#ai-chat-window .quick-reply-card:hover .quick-reply-icon,
+#ai-chat-window .quick-reply-card:hover .quick-reply-name {
     color: white;
 }
 
