@@ -584,5 +584,24 @@
             </button>
         </div>
     </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()" title="Chiudi chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <!-- Chat Messages -->
+        <div id="chat-messages" class="chat-messages">
+            <!-- Messages will be loaded dynamically via JavaScript -->
+        </div>
+        
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Scrivi il tuo messaggio...">
+            <button onclick="sendMessage()" title="Invia messaggio">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
