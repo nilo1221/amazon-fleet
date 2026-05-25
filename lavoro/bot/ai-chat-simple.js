@@ -3348,7 +3348,7 @@ function selectCategoryFromButton(categoryKey) {
                 addCategoryLink(category);
                 
                 // Add follow-up with song reference
-                if (nicheData && nicheData.song && nicheData.songLinkSpotify) {
+                if (nicheData && nicheData.song && (nicheData.songLinkSpotify || nicheData.songLinkAmazon)) {
                     setTimeout(() => {
                         const songMessage = `
                             <div style="margin: 10px 0;">
