@@ -3351,14 +3351,6 @@ function selectCategoryFromButton(categoryKey) {
                     setTimeout(() => {
                         const songMessage = `
                             <div style="margin: 10px 0;">
-                                ${nicheData.kindleLink ? `
-                                <p style="margin-bottom: 8px;">Per abbinare al meglio i prodotti di ${category.name}, ecco il link a Kindle Unlimited per leggere i tuoi manga e libri preferiti.</p>
-                                <p style="margin-bottom: 8px; font-weight: bold;">📚 Kindle Unlimited:</p>
-                                <p style="margin-bottom: 8px;">
-                                    <a href="${nicheData.kindleLink}" target="_blank" style="background: #ff6900; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 14px; display: inline-block;">
-                                        📖 Vedi Kindle Unlimited
-                                    </a>
-                                </p>` : `
                                 <p style="margin-bottom: 8px;">Per abbinare al meglio i prodotti di ${category.name}, ti consiglio questo sound iconico come sottofondo.</p>
                                 <p style="margin-bottom: 8px; font-weight: bold;">🎵 Ascolta subito:</p>
                                 ${nicheData.songLinkSpotify ? `
@@ -3379,7 +3371,6 @@ function selectCategoryFromButton(categoryKey) {
                                     <br><a href="${nicheData.songLinkAmazon}" target="_blank" onclick="trackAmazonMusicClick()" style="color: #d4a017; font-weight: bold; text-decoration: underline;">Ascolta su Amazon Music Unlimited</a>
                                 </div>
                                 ` : ''}
-                                `}
                             </div>
                         `;
                         addMessage(songMessage, 'bot');
