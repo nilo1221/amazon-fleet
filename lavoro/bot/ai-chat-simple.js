@@ -1988,6 +1988,73 @@ function detectCurrentNiche() {
     return null;
 }
 
+// Apply theme to chat elements based on current niche
+function applyThemeOnLoad() {
+    const categoryKey = detectCurrentNiche();
+    if (!categoryKey) return;
+    
+    const chatHeader = document.querySelector('.chat-header');
+    const chatButton = document.getElementById('ai-chat-button');
+    if (!chatHeader || !chatButton) return;
+    
+    const nicheData = NicheDatabase[categoryKey];
+    if (!nicheData || !nicheData.personality) return;
+    
+    const personality = nicheData.personality;
+    
+    // Remove all existing theme classes from both header and button
+    const themeClasses = [
+        'theme-moda', 'theme-tech', 'theme-gaming', 'theme-cucina', 'theme-default',
+        'theme-summer', 'theme-adventure', 'theme-fashion', 'theme-wellness',
+        'theme-gaming-theme', 'theme-entertainment', 'theme-technical', 'theme-caring',
+        'theme-aesthetic', 'theme-intellectual', 'theme-elegant', 'theme-eco',
+        'theme-professional', 'theme-travel', 'theme-creative', 'theme-cinema-tv',
+        'theme-blinding-lights', 'theme-as-it-was', 'theme-midnight-city'
+    ];
+    
+    themeClasses.forEach(themeClass => {
+        chatHeader.classList.remove(themeClass);
+        chatButton.classList.remove(themeClass);
+    });
+    
+    // Apply appropriate theme based on personality
+    const personalityToTheme = {
+        'functional': 'theme-cucina',
+        'technical': 'theme-tech',
+        'motivational': 'theme-wellness',
+        'gaming': 'theme-gaming',
+        'caring': 'theme-caring',
+        'entertainment': 'theme-entertainment',
+        'summer': 'theme-summer',
+        'adventure': 'theme-adventure',
+        'fashion': 'theme-moda',
+        'aesthetic': 'theme-aesthetic',
+        'wellness': 'theme-wellness',
+        'intellectual': 'theme-intellectual',
+        'elegant': 'theme-elegant',
+        'eco': 'theme-eco',
+        'professional': 'theme-professional',
+        'travel': 'theme-travel',
+        'creative': 'theme-creative'
+    };
+    
+    // Special case for Cinema & TV - use synthwave theme
+    let themeClass = personalityToTheme[personality] || 'theme-default';
+    if (categoryKey === 'cinema-tv') {
+        themeClass = 'theme-cinema-tv';
+    } else if (categoryKey === 'elite-gaming-gear') {
+        themeClass = 'theme-blinding-lights';
+    } else if (categoryKey === 'moda-donna') {
+        themeClass = 'theme-as-it-was';
+    } else if (categoryKey === 'tech') {
+        themeClass = 'theme-midnight-city';
+    }
+    
+    // Apply theme to both header and button
+    chatHeader.classList.add(themeClass);
+    chatButton.classList.add(themeClass);
+}
+
 // Show proactive message bubble
 function showProactiveBubble() {
     if (proactiveBubbleShown || proactiveBubble) return;
@@ -3468,6 +3535,9 @@ function handleKeyPress(event) {
 
 // Initialize proactive message system
 document.addEventListener('DOMContentLoaded', function() {
+    // Apply theme on load
+    applyThemeOnLoad();
+    
     // Start page-level proactive message after 5-10 seconds
     setTimeout(() => {
         startPageProactiveMessage();
