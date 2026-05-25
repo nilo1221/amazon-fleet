@@ -108,14 +108,14 @@ const ComboDatabase = {
             },
             {
                 product1: {
-                    name: "Auauraintt Barbecue Portatile pieghevole campeggio",
-                    link: "https://www.amazon.it/Auauraintt-Barbecue-Portatile-pieghevole-campeggio/dp/B0D5CM7NR8?&linkCode=ll2&tag=l0c39-21&linkId=5642e8c53d343f3cfa433e868b6cbe3b&ref=_as_li_ss_tl"
+                    name: "Thule Easyfold Xt Piattaforma Gancio Traino Portabici",
+                    link: "https://www.amazon.it/dp/B01N1MNL1A?ascsubtag=srctok-5a6a88b301e9bd44&btn_ref=srctok-5a6a88b301e9bd44&th=1&linkCode=ll2&tag=l0c39-21&linkId=35f2475332cf43eef75e0370bd6f4a47&ref_=as_li_ss_tl"
                 },
                 product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                    name: "Outsunny Tenda da Campeggio per 5 Persone",
+                    link: "https://www.amazon.it/Outsunny-Campeggio-Famigliare-Impermeabile-Trasporto/dp/B0F29BC3LJ?dib=eyJ2IjoiMSJ9.ulozInvSluYgmjL7E4H17-nAjJHzYRjROTEnqlFpGL9rcTv1HvBYllPgdkIOoBc-SXEeDIUidIWqJE4AeJTHcZ5kpcfb-CbXWSuWBnlEGux0SYwJl5CN6KjwbGkcf5LYtfkWYLYhp-VRNrNS39zryi-GS8GUlm9wertELzYFRsAg71Q6fOgEh7TBpUI6u8QHOJUlu2meJDnywkKi1X5bXBNiXNAhAwJKJ9bqCG3l-8t4IkuYs_y0pQC-xviQ1KLrXxRPf2HuWEFd42TvQJZTycFqjyjdOxHq0ZCX6PoU80I.EZDBto_kC4Hujwih7D6p-5SlIOd0DLRboEy_uZX_9X0&dib_tag=se&keywords=tenda%2Btunnel%2Bcampeggio%2Bpremium&qid=1779588392&sr=8-7&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&th=1&linkCode=ll2&tag=l0c39-21&linkId=b50732e0036a8492066b30d1254d5733&ref=_as_li_ss_tl"
                 },
-                message: "Vuoi grigliare all'aperto? 🍖 Guarda, con questo barbecue e Coca-Cola Zero hai tutto per le grigliate. Ecco i link!"
+                message: "Vuoi viaggiare con la bici? 🚴 Guarda, con il portabici Thule Easyfold Xt e la tenda Outsunny hai tutto per avventure indimenticabili. Ecco i link!"
             }
         ]
     },
