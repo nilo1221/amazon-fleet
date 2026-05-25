@@ -3617,30 +3617,6 @@ document.addEventListener('DOMContentLoaded', function() {
     comboTimerStarted = false;
     urgencyTimerStarted = false;
     
-    // Add event listener for chat button (instead of inline onclick)
-    const chatButton = document.getElementById('ai-chat-button');
-    if (chatButton) {
-        chatButton.addEventListener('click', toggleChat);
-    }
-    
-    // Add event listener for send button (instead of inline onclick)
-    const sendButton = document.querySelector('.chat-input button');
-    if (sendButton) {
-        sendButton.addEventListener('click', sendMessage);
-    }
-    
-    // Add event listener for close proactive button (instead of inline onclick)
-    const closeButtons = document.querySelectorAll('.proactive-close');
-    closeButtons.forEach(btn => {
-        btn.addEventListener('click', closeProactiveBubble);
-    });
-    
-    // Add event listener for close chat button
-    const closeChatButton = document.querySelector('.close-btn');
-    if (closeChatButton) {
-        closeChatButton.addEventListener('click', toggleChat);
-    }
-    
     // Apply theme on load
     applyThemeOnLoad();
     
