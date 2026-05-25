@@ -1,17 +1,17 @@
 /* Main Styles */
 :root {
-    --primary-color: #2E5C8A;
-    --primary-dark: #0A0A2E;
-    --primary-darker: #5BA3F2;
-    --secondary-color: #f4f6f9;
-    --accent-color: #FF0033;
-    --accent-gold: #FFD700;
-    --text-color: #1a1a2e;
+    --primary-color: #C41E3A;
+    --primary-dark: #000000;
+    --primary-darker: #4A4A4A;
+    --secondary-color: #3D2B1F;
+    --accent-color: #FFFFFF;
+    --accent-gold: #C41E3A;
+    --text-color: #FFFFFF;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #faf9f6;
+    background: #000000;
     color: var(--text-color);
 }
 
