@@ -4,14 +4,14 @@
     --primary-dark: #000000;
     --primary-darker: #4A4A4A;
     --secondary-color: #3D2B1F;
-    --accent-color: #FFFFFF;
+    --accent-color: #C41E3A;
     --accent-gold: #C41E3A;
-    --text-color: #FFFFFF;
+    --text-color: #1a1a2e;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #000000;
+    background: #faf9f6;
     color: var(--text-color);
 }
 
