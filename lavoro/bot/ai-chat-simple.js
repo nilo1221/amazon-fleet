@@ -550,6 +550,28 @@ const ContextDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Una giornata di sole fantastica, vero? 🌊 Per goderti il mare senza pensieri, ho unito l'ombrellone perfetto alla Coca-Cola Zero: è la combo ideale per restare idratato sotto il sole senza dover correre al bar. Comoda, pratica e pensata per il tuo relax."
+            },
+            {
+                product1: {
+                    name: "Telo Mare Microfibra Sand Proof",
+                    link: "https://www.amazon.it/Telo-Mare-Microfibra-Sand-Proof/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Ti piace la spiaggia? 🏖️ Guarda, con questo telo microfibra e Coca-Cola Zero hai tutto per il relax. Ecco i link!"
+            },
+            {
+                product1: {
+                    name: "Maschera Snorkeling Professionale",
+                    link: "https://www.amazon.it/Maschera-Snorkeling-Professionale/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi esplorare il mare? 🤿 Guarda, con questa maschera snorkeling e Coca-Cola Zero hai tutto per le avventure. Ecco i link!"
             }
         ]
     },
@@ -567,6 +589,28 @@ const ContextDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma io odio fermarmi a cercare bar o macchinette quando sono in concentrazione. Per questo mi porto dietro le cuffie HyperX Cloud e la Coca-Cola Zero: con questa combo ho risolto il problema concentrazione e idratazione per tutta la sessione. Se ti va te la lascio qui, è una bella comodità."
+            },
+            {
+                product1: {
+                    name: "Mouse Gaming Wireless RGB",
+                    link: "https://www.amazon.it/Mouse-Gaming-Wireless-RGB/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Sei un gamer? 🎮 Guarda, con questo mouse wireless e Coca-Cola Zero hai tutto per le sessioni. Ecco i link!"
+            },
+            {
+                product1: {
+                    name: "Tastiera Meccanica RGB",
+                    link: "https://www.amazon.it/Tastiera-Meccanica-RGB/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi scrivere velocemente? ⌨️ Guarda, con questa tastiera meccanica e Coca-Cola Zero hai tutto per lavorare. Ecco i link!"
             }
         ]
     },
@@ -584,6 +628,28 @@ const ContextDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio avere tutto pronto. Io uso questa tenda Brunner e mi porto sempre la Coca-Cola Zero: con questa combo ho risolto il problema alloggio e idratazione per tutta l'avventura. Se ti va te la lascio qui, è davvero comoda."
+            },
+            {
+                product1: {
+                    name: "Zaino da Trekking 50L",
+                    link: "https://www.amazon.it/Zaino-Trekking-50L/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi fare escursioni? 🥾 Guarda, con questo zaino e Coca-Cola Zero hai tutto per le avventure. Ecco i link!"
+            },
+            {
+                product1: {
+                    name: "Barbecue Portatile Gas",
+                    link: "https://www.amazon.it/Barbecue-Portatile-Gas/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi grigliare all'aperto? 🍖 Guarda, con questo barbecue e Coca-Cola Zero hai tutto per le grigliate. Ecco i link!"
             }
         ]
     },
@@ -601,6 +667,28 @@ const ContextDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Che giornata calda! ❄️ Non so tu, ma io odio sudare quando è così caldo. Per questo uso il condizionatore portatile 3-in-1 insieme alla Coca-Cola Zero: con questa combo ho risolto il problema temperatura e idratazione. Se ti va te la lascio qui, è una vera salvezza in questi giorni."
+            },
+            {
+                product1: {
+                    name: "Ventilatore a Torre Silenzioso",
+                    link: "https://www.amazon.it/Ventilatore-Torre-Silenzioso/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Fa caldo? 🌡️ Guarda, con questo ventilatore a torre e Coca-Cola Zero hai tutto per rinfrescarti. Ecco i link!"
+            },
+            {
+                product1: {
+                    name: "Ventilatore da Tavolo USB",
+                    link: "https://www.amazon.it/Ventilatore-Tavolo-USB/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi fresco sul tavolo? 💨 Guarda, con questo ventilatore USB e Coca-Cola Zero hai tutto per lavorare. Ecco i link!"
             }
         ]
     },
@@ -618,6 +706,28 @@ const ContextDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Ehi, vuoi attrezzature professionali! 💇 Guarda, se hai un salone come me, non posso fare a meno di due cose: un buon rasoio SCHWERTKRONE per il taglio perfetto e una scorta di Coca-Cola Zero per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!"
+            },
+            {
+                product1: {
+                    name: "Forbici Professionali Parrucchiere 6 Pollici",
+                    link: "https://www.amazon.it/Forbici-Professionali-Parrucchieri-Acciaio-Inossidabile/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Sei un parrucchiere? ✂️ Guarda, per il tuo salone servono forbici professionali e una bevanda rinfrescante. Ecco i link, è essenziale!"
+            },
+            {
+                product1: {
+                    name: "Tagliacapelli Professionale Regolabarba",
+                    link: "https://www.amazon.it/Tagliacapelli-Professionale-Regolabarba-Batteria/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi strumenti professionali? 💈 Guarda, io uso questo tagliacapelli e Coca-Cola Zero. Ti lascio i link!"
             }
         ]
     },
@@ -635,6 +745,28 @@ const ContextDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Sei un otaku? 🎌 Guarda, per la collezione perfetta servono due cose: il cofanetto One Piece e una Coca-Cola Zero per le maratone di lettura. Ecco i link, è imperdibile!"
+            },
+            {
+                product1: {
+                    name: "Dragon Ball Super - Complete Series Box Set",
+                    link: "https://www.amazon.it/Dragon-Ball-Super-Complete-Box/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Ti piace Dragon Ball? 🐉 Guarda, per la collezione completa servono il box set e una bevanda rinfrescante. Ecco i link, è imperdibile!"
+            },
+            {
+                product1: {
+                    name: "Naruto Shippuden - Complete Box Set",
+                    link: "https://www.amazon.it/Naruto-Shippuden-Complete-Box-Set/dp/B08X7R3Z6P?&linkCode=ll2&tag=l0c39-21&linkId=ghi789&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi leggere Naruto? 🍥 Guarda, con il box set completo e Coca-Cola Zero hai tutto per le maratone. Ecco i link!"
             }
         ]
     },
@@ -652,6 +784,28 @@ const ContextDatabase = {
                     link: "https://www.amazon.it/ZUCCHERI-MANDORLA-vegetale-vitamine-confezioni/dp/B0DTYZX9NJ?&linkCode=ll2&tag=l0c39-21&linkId=06cd1283271cb70c174cc9964578baa7&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi rinfrescarti? 🥤 Guarda, per la scorta perfetta servono due cose: Powerade per l'energia e Alpro senza zuccheri per la leggerezza. Ecco i link, è la combo ideale!"
+            },
+            {
+                product1: {
+                    name: "Pepsi Max - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Fanta Orange - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi una scorta di bibite? 🍊 Guarda, con Pepsi Max e Fanta Orange hai tutto per rinfrescarti. Ecco i link!"
+            },
+            {
+                product1: {
+                    name: "Sprite Zero - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi bibite senza zucchero? 🥤 Guarda, con Sprite Zero e Coca-Cola Zero hai tutto per rinfrescarti senza calorie. Ecco i link!"
             }
         ]
     },
