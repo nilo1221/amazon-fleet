@@ -1,0 +1,71 @@
+{
+  "niche": "Musica & Vinili",
+  "products": [
+    {
+      "name": "Linkin Park - Meteora (4-LP Deluxe Vinyl Edition)",
+      "description": "Edizione deluxe a 4 dischi del leggendario album Meteora",
+      "icon": "fa-compact-disc",
+      "link": "https://www.amazon.it/Meteora-4-LP-Deluxe-Vinyl/dp/B0BV6ZDRSG?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-24&linkCode=ll2&tag=l0c39-21&linkId=72e8e2944b9838d5f4bfbf667de121ea&ref=_as_li_ss_tl"
+    },
+    {
+      "name": "Sisters Of Mercy - Vision Thing Era (4-LP Vinyl Boxset)",
+      "description": "Box set a 4 LP dell'era Vision Thing dei Sisters Of Mercy",
+      "icon": "fa-compact-disc",
+      "link": "https://www.amazon.it/Vision-Thing-Vinyl-Box-Set/dp/B01FWV7JLY?&linkCode=ll2&tag=l0c39-21&linkId=c6cba0292ddd8b6426f6af1343051f6e&ref=_as_li_ss_tl"
+    },
+    {
+      "name": "AC/DC - Vinyl Box Set (Rimasterizzato)",
+      "description": "Box set rimasterizzato della leggendaria band hard rock AC/DC",
+      "icon": "fa-compact-disc",
+      "link": "https://www.amazon.it/Vinyl-Box-Set-Ac/dp/B0000CF35Q?&linkCode=ll2&tag=l0c39-21&linkId=94cd034030cf2b9b3a67f42c411e533c&ref=_as_li_ss_tl"
+    },
+    {
+      "name": "AC/DC - Collectors Box (2008-11-11)",
+      "description": "Box set collezionista degli AC/DC",
+      "icon": "fa-compact-disc",
+      "link": "https://www.amazon.it/Collectors-Box-Ac-Dc-2008-11-11/dp/B01G9AFH02?&linkCode=ll2&tag=l0c39-21&linkId=bdefd5ca1422a749072d8862cf252142&ref=_as_li_ss_tl"
+    },
+    {
+      "name": "Marracash - Vinyl Box Collection (10 Vinili)",
+      "description": "Box set con 10 vinili del rapper italiano Marracash",
+      "icon": "fa-compact-disc",
+      "link": "https://www.amazon.it/Vinyl-Box-Collection-10-Vinili/dp/B07DL8NKX2?&linkCode=ll2&tag=l0c39-21&linkId=d611935d055e52c0bad685aa4a151587&ref=_as_li_ss_tl"
+    },
+    {
+      "name": "Rammstein - XXI Vinyl Box Set (Limited)",
+      "description": "Box set limitato dei Rammstein per celebrare i 21 anni",
+      "icon": "fa-compact-disc",
+      "link": "https://www.amazon.it/XXI-The-Vinyl-Box-Set/dp/B016EAZ6DK?&linkCode=ll2&tag=l0c39-21&linkId=090df39e15b0b2f3db96b5a66aaa87b7&ref=_as_li_ss_tl"
+    },
+    {
+      "name": "Verdi - Alzira (2 LP Box-Set)",
+      "description": "Box set a 2 LP dell'opera lirica Alzira di Giuseppe Verdi",
+      "icon": "fa-compact-disc",
+      "link": "https://www.amazon.it/Verdi-Alzira-Vinile-record-Box-Set/dp/B00MSOPW40?&linkCode=ll2&tag=l0c39-21&linkId=9971bb8cfbf00d321c4a6445cba186bb&ref=_as_li_ss_tl"
+    },
+    {
+      "name": "GAS - BOX SET (Limited)",
+      "description": "Box set limitato del progetto ambient/electronic GAS",
+      "icon": "fa-compact-disc",
+      "link": "https://www.amazon.it/BOX-SET-LTD-GAS/dp/B01L2SVXAY?&linkCode=ll2&tag=l0c39-21&linkId=b41a7a518588d3a2c81e2585afe40d5c&ref=_as_li_ss_tl"
+    },
+    {
+      "name": "KOMFOTTEU Supporto per Giradischi (300 Album)",
+      "description": "Mobile espositore per giradischi con capacità fino a 300 vinili",
+      "icon": "fa-archive",
+      "link": "https://www.amazon.it/KOMFOTTEU-Giradischi-Espositore-Rimovibili-Soggiorno/dp/B0F8W5LZ3B?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set%2Bvinili&qid=1779683227&sprefix=set%2Bvinili%2Caps%2C131&sr=8-17-spons&aref=UuVUpMRUcL&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=c35c8cf6c1a4272c542cf78803b39609&ref=_as_li_ss_tl"
+    },
+    {
+      "name": "Greatest Hits of All Time - Vinile",
+      "description": "Collezione dei più grandi successi di tutti i tempi in vinile",
+      "icon": "fa-compact-disc",
+      "link": "https://www.amazon.it/Greatest-Hits-Time-Vinile/dp/B0CVPZ7X9Q?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-20&linkCode=ll2&tag=l0c39-21&linkId=abc123def456&ref=_as_li_ss_tl"
+    },
+    {
+      "name": "Supporto per Giradischi in Vinile",
+      "description": "Supporto stabile per giradischi con design elegante",
+      "icon": "fa-record-vinyl",
+      "link": "https://www.amazon.it/Supporto-Giradischi-Vinile-Stabile/dp/B0CVPZ7X9Q?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-21&linkCode=ll2&tag=l0c39-21&linkId=def456ghi789&ref=_as_li_ss_tl"
+    }
+  ]
+}

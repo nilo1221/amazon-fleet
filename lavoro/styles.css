@@ -1171,7 +1171,7 @@ footer .amazon-disclaimer {
 }
 
 .carousel-item {
-    animation: fadeIn 0.8s ease-out;
+    /* Removed fadeIn animation to allow Bootstrap horizontal slide animation */
 }
 
 /* Hover lift animation */
@@ -1253,4 +1253,30 @@ footer .amazon-disclaimer {
 .product-card .card-body {
     position: relative;
     z-index: 1;
+}
+
+/* Carousel niche buttons improvements */
+.carousel-niche-button-container {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.carousel-niche-button-container a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+    padding: 0.75rem 2rem;
+    display: inline-block;
+}
+
+.carousel-niche-button-container a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Mobile improvements for carousel buttons */
+@media (max-width: 768px) {
+    .carousel-niche-button-container a {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
 }
