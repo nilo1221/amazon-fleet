@@ -2,6 +2,45 @@
 // Questo file contiene tutte le combo organizzate per categoria
 
 const ComboDatabase = {
+    "bibite-bevande": {
+        name: "Pausa Ristoro 🥤",
+        triggerKeywords: ["fame", "sete", "snack", "bere", "pausa", "bibita", "bevanda", "coca", "cola", "pepsi", "fanta", "sprite", "acqua", "gassata", "analcolica", "ristoro", "break"],
+        combos: [
+            {
+                product1: {
+                    name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
+                    link: "https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "ALPRO SENZA ZUCCHERI, Bevanda alla MANDORLA",
+                    link: "https://www.amazon.it/ZUCCHERI-MANDORLA-vegetale-vitamine-confezioni/dp/B0DTYZX9NJ?&linkCode=ll2&tag=l0c39-21&linkId=06cd1283271cb70c174cc9964578baa7&ref=_as_li_ss_tl"
+                },
+                message: "Ti stai godendo la navigazione? 😊 Ecco i prodotti preferiti dagli altri utenti per una pausa veloce mentre esplori le altre categorie. Powerade per l'energia e Alpro senza zuccheri per la leggerezza: la combo ideale per la tua sessione!"
+            },
+            {
+                product1: {
+                    name: "Pepsi Max - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Fanta Orange - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "La sessione si fa intensa? 🔥 Recupera le energie con i nostri must-have per la pausa! Pepsi Max e Fanta Orange: tutto per rinfrescarti senza interrompere la navigazione."
+            },
+            {
+                product1: {
+                    name: "KollyKolla Borraccia 500ml con Filtro e Indicatore del Tempo",
+                    link: "https://www.amazon.it/dp/B0FBWT2V5D?m=a11il2pnwyju7h&ascsubtag=srctok-1ce1c3d05b4ffb5c&btn_ref=srctok-1ce1c3d05b4ffb5c&th=1&linkCode=ll2&tag=l0c39-21&linkId=0fe74787eea3960191433b519e53ad44&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
+                    link: "https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi idratarti in modo intelligente? 💧 Con la borraccia KollyKolla riutilizzabile e Powerade per l'energia, hai tutto per continuare la tua sessione. Ecco i link per la tua pausa perfetta!"
+            }
+        ]
+    },
     "mare": {
         name: "Mare & Spiaggia",
         triggerKeywords: ["mare", "spiaggia", "ombrellone", "telo", "sole", "acqua", "estivo", "estates"],
@@ -160,40 +199,22 @@ const ComboDatabase = {
     },
     "parrucchiere-barbiere": {
         name: "Parrucchiere & Barbiere",
-        triggerKeywords: ["parrucchiere", "barbiere", "forbici", "rasoio", "taglio", "capelli", "barba", "salone", "professionale"],
+        triggerKeywords: ["parrucchiere", "barbiere", "forbici", "rasoio", "taglio", "capelli", "barba", "salone", "professionale", "styling", "tagliacapelli"],
         combos: [
-            {
-                product1: {
-                    name: "SCHWERTKRONE Rasoio a Mano Libera con Manico Prezioso",
-                    link: "https://www.amazon.it/dp/B074QPKFYQ?psc=1&aref=2EsuFIfF7d&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=04d8b1b795bf1f526d3f2eddd0b7a866&ref=_as_li_ss_tl"
-                },
-                product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
-                },
-                message: "Ehi, vuoi attrezzature professionali! 💇 Guarda, se hai un salone come me, non posso fare a meno di due cose: un buon rasoio SCHWERTKRONE per il taglio perfetto e una scorta di Coca-Cola Zero per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!"
-            },
-            {
-                product1: {
-                    name: "Forbici Professionali Parrucchiere 6 Pollici",
-                    link: "https://www.amazon.it/dp/B074QPKFYQ?psc=1&aref=2EsuFIfF7d&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=04d8b1b795bf1f526d3f2eddd0b7a866&ref=_as_li_ss_tl"
-                },
-                product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
-                },
-                message: "Sei un parrucchiere? ✂️ Guarda, per il tuo salone servono forbici professionali e una bevanda rinfrescante. Ecco i link, è essenziale!"
-            },
             {
                 product1: {
                     name: "Tagliacapelli Professionale Regolabarba",
                     link: "https://www.amazon.it/dp/B074QPKFYQ?psc=1&aref=2EsuFIfF7d&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=04d8b1b795bf1f526d3f2eddd0b7a866&ref=_as_li_ss_tl"
                 },
                 product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                    name: "Pomata Capelli Uomo Styling Professionale",
+                    link: "https://www.amazon.it/dp/B00XYZ5678?&linkCode=ll2&tag=l0c39-21&linkId=ghi789&ref=_as_li_ss_tl"
                 },
-                message: "Vuoi strumenti professionali? 💈 Guarda, io uso questo tagliacapelli e Coca-Cola Zero. Ti lascio i link!"
+                product3: {
+                    name: "Pettine Professionale in Carbonio",
+                    link: "https://www.amazon.it/dp/B00ABC9876?&linkCode=ll2&tag=l0c39-21&linkId=jkl012&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi mantenere il taglio fresco come dal barbiere? 💈 Ho selezionato i 3 strumenti professionali che ti fanno risparmiare tempo e soldi a casa. Il tagliacapelli professionale per il look perfetto, la pomata styling per tenere tutto a posto, e il pettine in carbonio per la precisione. Non sai quale macchinetta scegliere? Rispondi con 'Capelli' o 'Barba' e ti mostro solo il kit specifico per te!"
             }
         ]
     },
@@ -233,45 +254,6 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi leggere Naruto? 🍥 Guarda, con il box set completo e Coca-Cola Zero hai tutto per le maratone. Ecco i link!"
-            }
-        ]
-    },
-    "bibite-bevande": {
-        name: "Bibite & Bevande",
-        triggerKeywords: ["bibita", "bevanda", "coca", "cola", "pepsi", "fanta", "sprite", "acqua", "gassata", "analcolica"],
-        combos: [
-            {
-                product1: {
-                    name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
-                    link: "https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
-                },
-                product2: {
-                    name: "ALPRO SENZA ZUCCHERI, Bevanda alla MANDORLA",
-                    link: "https://www.amazon.it/ZUCCHERI-MANDORLA-vegetale-vitamine-confezioni/dp/B0DTYZX9NJ?&linkCode=ll2&tag=l0c39-21&linkId=06cd1283271cb70c174cc9964578baa7&ref=_as_li_ss_tl"
-                },
-                message: "Vuoi rinfrescarti? 🥤 Guarda, per la scorta perfetta servono Powerade per l'energia e Alpro senza zuccheri per la leggerezza. Ecco i link, è la combo ideale!"
-            },
-            {
-                product1: {
-                    name: "Pepsi Max - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
-                },
-                product2: {
-                    name: "Fanta Orange - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
-                },
-                message: "Vuoi una scorta di bibite? 🍊 Guarda, con Pepsi Max e Fanta Orange hai tutto per rinfrescarti. Ecco i link!"
-            },
-            {
-                product1: {
-                    name: "KollyKolla Borraccia 500ml con Filtro e Indicatore del Tempo",
-                    link: "https://www.amazon.it/dp/B0FBWT2V5D?m=a11il2pnwyju7h&ascsubtag=srctok-1ce1c3d05b4ffb5c&btn_ref=srctok-1ce1c3d05b4ffb5c&th=1&linkCode=ll2&tag=l0c39-21&linkId=0fe74787eea3960191433b519e53ad44&ref_=as_li_ss_tl"
-                },
-                product2: {
-                    name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
-                    link: "https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
-                },
-                message: "Vuoi idratarti in modo intelligente? 💧 Guarda, con la borraccia KollyKolla riutilizzabile e Powerade per l'energia, hai tutto per lo sport e la scuola. Ecco i link!"
             }
         ]
     },
@@ -389,7 +371,7 @@ const ComboDatabase = {
     },
     "musica-vinili": {
         name: "Musica & Vinili",
-        triggerKeywords: ["musica", "vinile", "vinili", "album", "box", "set", "collezione", "cd", "record"],
+        triggerKeywords: ["musica", "vinile", "vinili", "album", "box", "set", "collezione", "cd", "record", "giradischi", "analogica"],
         combos: [
             {
                 product1: {
@@ -397,21 +379,14 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/Complete-Studio-Collection-Amazon-Exclusive/dp/B0F99ZJ52F?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683180&sprefix=set+vinili%2Caps%2C131&sr=8-4&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=14945c94044fd23f187315fd3cd6ad00&ref=_as_li_ss_tl"
                 },
                 product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                    name: "Audio-Technica AT-LP60XBT Giradischi Bluetooth",
+                    link: "https://www.amazon.it/Audio-Technica-AT-LP60XBT-Giradischi-Bluetooth/dp/B078GZP5CQ?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
                 },
-                message: "Ehi, ami la musica analogica! 🎵 Guarda, con il box set Oasis e Coca-Cola Zero hai collezione da urlo e relax. Ecco i link, è un'esperienza unica!"
-            },
-            {
-                product1: {
-                    name: "Metallica - The Black Album (30Th Anniversary Ltd)",
-                    link: "https://www.amazon.it/Black-Album-30Th-Anniversary-Libro/dp/B097NP5HXH?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-9&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=a091a665e57f1afbdd3aa256f99c69a3&ref=_as_li_ss_tl"
+                product3: {
+                    name: "Spazzola Pulisci Vinili Antistatica",
+                    link: "https://www.amazon.it/Spazzola-Pulisci-Vinili-Antistatica/dp/B00XYZ1234?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
                 },
-                product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
-                },
-                message: "Ami i Metallica? 🎸 Guarda, con l'edizione 30° anniversario e Coca-Cola Zero hai metallo puro e relax. Ecco i link, è pura magia!"
+                message: "Stai dando un'occhiata a questa perla in vinile? 🎵 Ottima scelta! Il vinile non è solo un disco, è un'esperienza sensoriale. Molti audiofili che prendono questo disco aggiungono anche il giradischi Bluetooth e le protezioni antistatiche per farlo durare una vita. Vuoi vedere il kit completo per l'esperienza analogica perfetta?"
             }
         ]
     },
@@ -526,6 +501,35 @@ const ComboDatabase = {
                 message: "Vuoi un buon libro? 📖 Guarda, con il bestseller e Coca-Cola Zero hai storia emozionante e relax. Ecco i link, è fantastico!"
             }
         ]
+    }
+};
+
+// Macro-Categorie - Raggruppamento per Stile di Vita
+const MacroCategories = {
+    "passioni": {
+        titolo: "Passioni & Hobby",
+        descrizione: "Collezionabili, fandom e intrattenimento",
+        categorie: ["manga-anime", "cinema", "musica-vinili", "giochi-da-tavolo"]
+    },
+    "lifestyle": {
+        titolo: "Routine Perfetta",
+        descrizione: "Casa, fitness, cura personale e benessere",
+        categorie: ["cucina", "fitness", "smart-home", "pet-care", "parrucchiere-barbiere", "moda"]
+    },
+    "lavoro-studio": {
+        titolo: "Produttività & Studio",
+        descrizione: "Lavoro, tecnologia e apprendimento",
+        categorie: ["pc", "libri"]
+    },
+    "tempo-libero": {
+        titolo: "Tempo Libero",
+        descrizione: "Outdoor, viaggi e stagionali",
+        categorie: ["mare", "outdoor", "caldo"]
+    },
+    "ristoro": {
+        titolo: "Pausa & Ristoro",
+        descrizione: "Bevande e snack per ogni momento",
+        categorie: ["bibite-bevande"]
     }
 };
 
