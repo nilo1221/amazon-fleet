@@ -296,6 +296,12 @@ const NicheDatabase = {
                 description: "Edizione completa del manga acclamato di Makoto Shinkai",
                 icon: "fa-box",
                 link: "https://www.amazon.it/Suzume-Complete-box-Makoto-Shinkai/dp/882264896X?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.FwUc2l1f7JvDSyF0IpLxVXi-xEVohdrAkWozVq5tEBMZ6Nf-gPEuaBgi0-bJSnKXoRHJbk9Sq60N9y1ubzhHHGw43KxH8S9g_oZ8ripBw_z0zpmFutLCLV7NbvFM2OfVGGOT8Jk0-F1akLwjOeOQiLXQPIP076VzEdZyASG776CKadOEe9-51SPFEFUcSiqrSJwxjkORGjc5gjT36QtBHWjHuk4-DDRGgQPG7Tle4vc.f5WzoLFZvE4DkHMKzt18IEtTh7-kspFZamSufV8ReSw&dib_tag=se&keywords=box&qid=1779861402&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-6&ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=a92b6706e6de73c53c15e8c3b9422571&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Tex 75. Box legno. Con shopper in tela, cartolina",
+                description: "Edizione premium del fumetto western italiano in box legno",
+                icon: "fa-box",
+                link: "https://www.amazon.it/Tex-legno-shopper-tela-cartolina/dp/8869618862?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.FwUc2l1f7JvDSyF0IpLxVXi-xEVohdrAkWozVq5tEBMZ6Nf-gPEuaBgi0-bJSnKXoRHJbk9Sq60N9y1ubzhHHGw43KxH8S9g_oZ8ripBw_z0zpmFutLCLV7NbvFM2OfVGGOT8Jk0-F1akLwjOeOQiLXQPIP076VzEdZyASG776CKadOEe9-51SPFEFUcSiqrSJwxjkORGjc5gjT36QtBHWjHuk4-DDRGgQPG7Tle4vc.f5WzoLFZvE4DkHMKzt18IEtTh7-kspFZamSufV8ReSw&dib_tag=se&keywords=box&qid=1779861402&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-8&ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=1f8c36f87dbc7dbe6949b07e8214364b&ref=_as_li_ss_tl"
             }
         ]
     },
