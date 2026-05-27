@@ -2687,6 +2687,9 @@
             // Timer completamente disabilitato - non mostrare più i countdown e non aggiornare
             /* updateTimer();
             setInterval(updateTimer, 1000); */
+            
+            // Rimuovi eventuali timer-display esistenti dal DOM
+            document.querySelectorAll('.timer-display').forEach(el => el.remove());
         });
 
         // Dynamic carousel link update based on active slide
