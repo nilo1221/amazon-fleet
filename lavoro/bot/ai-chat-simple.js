@@ -747,6 +747,24 @@ const NicheDatabase = {
             }
         ]
     },
+    "fai-da-te": {
+        name: "Fai da Te",
+        tags: ["fai", "da", "te", "fai-da-te", "bricolage", "attrezzi", "utensili", "trapano", "avvitatore", "cassetta", "attrezzi", "lavori", "domestici", "ferramenta", "strumenti", "manuali", "elettrici", "batteria", "pun", "viti", "chiave", "cacciavite", "martello", "pinza"],
+        url: "/fai-da-te/index.html",
+        personality: "practical",
+        valueProp: "Ho selezionato i migliori attrezzi e utensili per i tuoi lavori di fai da te e bricolage.",
+        song: "Working for the Weekend - Loverboy",
+        songLinkSpotify: "https://open.spotify.com/track/7l8Rd8O3x2d5q6d5l8R9d5l",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: [
+            {
+                name: "DEKO Cassetta Attrezzi Completa con Trapano Avvitatore Batteria 12V, 238 Pezzi",
+                description: "Cassetta attrezzi completa con trapano avvitatore a batteria 12V e set di 238 pezzi",
+                icon: "fa-tools",
+                link: "https://www.amazon.it/DEKO-Cassetta-Attrezzi-Avvitatore-Valigetta/dp/B0CW5CH1QJ?linkCode=ll2&tag=l0c39-21&linkId=71c09eaa6530ec3c52e33c09cf7947af&ref=_as_li_ss_tl"
+            }
+        ]
+    },
     "dvd-bluray": {
         name: "DVD & Blu-ray",
         tags: ["dvd", "bluray", "film", "serie", "tv", "collezione", "box", "set", "4k", "ultra", "hd"],
