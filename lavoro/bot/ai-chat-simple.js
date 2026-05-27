@@ -52,53 +52,16 @@ function trackCategoryVisit(categoryKey) {
     saveUserPreferences();
 }
 
-// Get category name from context
-function getCategoryNameFromContext() {
-    const context = getContesto();
-    
-    // Map context codes to category names
-    const contextNames = {
-        'homepage': 'Smart Choices Guide',
-        'mare': 'Mare & Spiaggia',
-        'pc': 'Elite Gaming Gear',
-        'fitness': 'Fitness Casa',
-        'smart-home': 'Smart Home & Domotica',
-        'pet-care': 'Pet Care Intelligente',
-        'parrucchiere-barbiere': 'Parrucchiere & Barbiere',
-        'abbigliamento-serie-tv-film': 'Cinema & TV',
-        'biciclette-mobilita': 'Biciclette & Mobilità',
-        'smartphone': 'Smartphone & Tech',
-        'tech': 'Tech',
-        'moda-donna': 'Moda Donna',
-        'moda-uomo': 'Moda Uomo',
-        'arredamento': 'Arredamento Casa',
-        'accessori': 'Accessori Moda',
-        'benessere': 'Benessere & Cura Personale',
-        'cucina': 'Cucina Moderna & Tech',
-        'libri': 'Libri & E-Reader',
-        'outdoor': 'Outdoor & Camping',
-        'ufficio': 'Ufficio Produttivo',
-        'viaggi': 'Viaggi & Vacanze',
-        'giochi': 'Giochi da Tavolo',
-        'profumi': 'Profumi & Bellezza',
-        'sostenibilita': 'Sostenibilità & Eco-Friendly',
-        'dvd': 'DVD & Blu-ray'
-    };
-    
-    return contextNames[context] || 'questa categoria';
-}
-
 // Get personalized greeting based on visit history
 function getPersonalizedGreeting() {
     const totalVisits = Object.values(userPreferences.visits || {}).reduce((a, b) => a + b, 0);
-    const categoryName = getCategoryNameFromContext();
     
     if (totalVisits === 0) {
-        return `Ciao! Sei qui per approfondire ${categoryName}? Posso mostrarti il kit che stanno scegliendo tutti oggi. Vuoi dare un'occhiata?`;
+        return 'Ehi ciao! 👋 Stavo giusto guardando questi prodotti su Amazon, ci sono un sacco di cose interessanti. Dimmi, cosa ti serve oggi? Se mi dici cosa stai cercando, ti faccio vedere quello che secondo me vale la pena.';
     } else if (totalVisits < 3) {
-        return `Ciao bentornato! Sei qui per approfondire ${categoryName}? Posso mostrarti il kit che stanno scegliendo tutti oggi. Vuoi dare un'occhiata?`;
+        return 'Ehi bentornato! 👋 È bello rivederti. Vuoi continuare a guardare dove avevi lasciato o cerchi qualcosa di nuovo oggi?';
     } else {
-        return `Ciao bentornato! Sei qui per approfondire ${categoryName}? Posso mostrarti il kit che stanno scegliendo tutti oggi. Vuoi dare un'occhiata?`;
+        return 'Ehi bentornato! 👋 Ti conosco già fammi indovinare... vuoi vedere i prodotti che ti hanno interessato di più l\'altra volta?';
     }
 }
 
@@ -284,24 +247,6 @@ const NicheDatabase = {
                 description: "Demon Slayer è una delle serie più amate dai lettori di ogni età",
                 icon: "fa-tablet-alt",
                 link: "https://www.amazon.it/Demon-Slayer-Kimetsu-yaiba-Digital-ebook/dp/B088Z1P21C?&linkCode=ll2&tag=l0c39-21&linkId=f8ad4b971ceeec377887c6e6da92d926&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Fire Punch Complete Box",
-                description: "Edizione completa della serie acclamata dalla critica di Tatsuki Fujimoto",
-                icon: "fa-box",
-                link: "https://www.amazon.it/Fire-punch-Complete-Tatsuki-Fujimoto/dp/8822626656?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.R3TQEJ-TKD2eCa47iSUOUT0FZDxCgIdEWGSgLTMK9RcZ6Nf-gPEuaBgi0-bJSnKXcr48-ATkLYz_U-t5_xZczCx-pO3j2xbp5FDtKguSD061snnOeUoRSGIwsERaPtSRPsL7Z7VjHAsXUt5SlO-LFXhIRtpnpPrJRAWgGzM7az_mdqLvSvAInVM8l2bgcOYSKUetDzOd44thZPYYHh4WbS8k7rWCNhRutbVNrJuAtBw.xKmVT_y4Zjh4S2eOZSh_s1wzSu7AIc4z1zDe4BCIZxo&dib_tag=se&keywords=box&qid=1779861347&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-2&ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=b9db34d67b703d5f2797b6c0c79a7b0a&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Suzume Complete Box",
-                description: "Edizione completa del manga acclamato di Makoto Shinkai",
-                icon: "fa-box",
-                link: "https://www.amazon.it/Suzume-Complete-box-Makoto-Shinkai/dp/882264896X?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.FwUc2l1f7JvDSyF0IpLxVXi-xEVohdrAkWozVq5tEBMZ6Nf-gPEuaBgi0-bJSnKXoRHJbk9Sq60N9y1ubzhHHGw43KxH8S9g_oZ8ripBw_z0zpmFutLCLV7NbvFM2OfVGGOT8Jk0-F1akLwjOeOQiLXQPIP076VzEdZyASG776CKadOEe9-51SPFEFUcSiqrSJwxjkORGjc5gjT36QtBHWjHuk4-DDRGgQPG7Tle4vc.f5WzoLFZvE4DkHMKzt18IEtTh7-kspFZamSufV8ReSw&dib_tag=se&keywords=box&qid=1779861402&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-6&ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=a92b6706e6de73c53c15e8c3b9422571&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Tex 75. Box legno. Con shopper in tela, cartolina",
-                description: "Edizione premium del fumetto western italiano in box legno",
-                icon: "fa-box",
-                link: "https://www.amazon.it/Tex-legno-shopper-tela-cartolina/dp/8869618862?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.FwUc2l1f7JvDSyF0IpLxVXi-xEVohdrAkWozVq5tEBMZ6Nf-gPEuaBgi0-bJSnKXoRHJbk9Sq60N9y1ubzhHHGw43KxH8S9g_oZ8ripBw_z0zpmFutLCLV7NbvFM2OfVGGOT8Jk0-F1akLwjOeOQiLXQPIP076VzEdZyASG776CKadOEe9-51SPFEFUcSiqrSJwxjkORGjc5gjT36QtBHWjHuk4-DDRGgQPG7Tle4vc.f5WzoLFZvE4DkHMKzt18IEtTh7-kspFZamSufV8ReSw&dib_tag=se&keywords=box&qid=1779861402&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-8&ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=1f8c36f87dbc7dbe6949b07e8214364b&ref=_as_li_ss_tl"
             }
         ]
     },
@@ -314,36 +259,7 @@ const NicheDatabase = {
         song: "Bohemian Rhapsody - Queen",
         songLinkSpotify: "https://open.spotify.com/track/7tFiyTwD0nx5a1eklYtX2J",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        topProducts: [
-            {
-                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
-                description: "Kit pietre massaggio naturali basalto caldo per SPA",
-                icon: "fa-spa",
-                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
-            },
-            {
-            {
-                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
-                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
-                icon: "fa-bottle-droplet",
-                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
-            }
-        ]
         primaryColor: "#1a1a2e",
-        topProducts: [
-            {
-                name: "SCHWERTKRONE Rasoio a Mano Libera con Manico Prezioso",
-                description: "Rasoio tradizionale premium con 100 lame Derby incluse",
-                icon: "fa-cut",
-                link: "https://www.amazon.it/SCHWERTKRONE-Prezioso-Barbiere-Rasatura-Definizione/dp/B0957WPKP4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-3-spons&aref=6byR8fHsbO&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ba67fb8d666610e44040abf78006017&ref=_as_li_ss_tl"
-            },
-            {
-                name: "CIICII Forbici Parrucchiere Professionali",
-                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
-                icon: "fa-cut",
-                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
-            }
-        ]
         accentColor: "#e94560",
         secondaryColor: "#16213e",
         topProducts: [
@@ -379,10 +295,10 @@ const NicheDatabase = {
             }
         ]
     },
-    "abbigliamento-serie-tv-film": {
-        name: "Abbigliamento Serie TV & Film",
-        tags: ["abbigliamento", "serie", "tv", "film", "televisione", "outfit", "maglietta", "felpa", "camicia", "berretto", "accessori", "gioielli", "collana", "bracciale", "cosplay", "costume", "peaky", "blinders", "stranger", "things", "wednesday", "witcher", "fallout", "shogun", "bridgerton", "money", "heist", "crown", "house", "dragon", "sanem", "can", "divit", "leyla", "emre", "le", "ali", "del", "sogno"],
-        url: "/abbigliamento-serie-tv-film/index.html",
+    "merchandise-serie-tv": {
+        name: "Merchandise Serie TV",
+        tags: ["merchandise", "serie", "tv", "televisione", "abbigliamento", "outfit", "maglietta", "felpa", "camicia", "berretto", "accessori", "gioielli", "collana", "bracciale", "cosplay", "costume", "peaky", "blinders", "stranger", "things", "wednesday", "witcher", "fallout", "shogun", "bridgerton", "money", "heist", "crown", "house", "dragon", "sanem", "can", "divit", "leyla", "emre", "le", "ali", "del", "sogno"],
+        url: "/merchandise-serie-tv/index.html",
         personality: "entertainment",
         valueProp: "Ho selezionato i migliori merchandise ufficiali e outfit ispirati alle serie TV. Tessuto, vestibilità e design iconico sono i criteri che ho considerato.",
         song: "Eye of the Tiger - Survivor",
@@ -398,21 +314,6 @@ const NicheDatabase = {
         song: "Summer Vibes Deep House Mix",
         songLinkSpotify: "https://open.spotify.com/playlist/53FHC0FredNfhyXUVl2mb8",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        topProducts: [
-            {
-                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
-                description: "Kit pietre massaggio naturali basalto caldo per SPA",
-                icon: "fa-spa",
-                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
-            },
-            {
-            {
-                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
-                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
-                icon: "fa-bottle-droplet",
-                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
-            }
-        ]
         primaryColor: "#00CED1",
         accentColor: "#FF6B35",
         secondaryColor: "#FF1493",
@@ -484,21 +385,6 @@ const NicheDatabase = {
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         topProducts: [
             {
-                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
-                description: "Kit pietre massaggio naturali basalto caldo per SPA",
-                icon: "fa-spa",
-                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
-            },
-            {
-            {
-                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
-                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
-                icon: "fa-bottle-droplet",
-                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
-            }
-        ]
-        topProducts: [
-            {
                 name: "Columbia Crestwood Mid Waterproof Scarponi da Trekking Uomo",
                 description: "Scarponi da trekking ed escursionismo impermeabili a vita media uomo",
                 icon: "fa-hiking",
@@ -567,21 +453,6 @@ const NicheDatabase = {
         song: "Beautiful - Christina Aguilera",
         songLinkSpotify: "https://open.spotify.com/track/3TCauNPqFiniaYHBvEVoHG",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
-        topProducts: [
-            {
-                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
-                description: "Kit pietre massaggio naturali basalto caldo per SPA",
-                icon: "fa-spa",
-                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
-            },
-            {
-            {
-                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
-                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
-                icon: "fa-bottle-droplet",
-                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
-            }
-        ]
     },
     "giochi-da-tavolo": {
         name: "Giochi da Tavolo",
@@ -612,36 +483,7 @@ const NicheDatabase = {
         song: "Smooth Operator - Sade",
         songLinkSpotify: "https://open.spotify.com/track/0f9h8awV1X4jSllHXXYdfX",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        topProducts: [
-            {
-                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
-                description: "Kit pietre massaggio naturali basalto caldo per SPA",
-                icon: "fa-spa",
-                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
-            },
-            {
-            {
-                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
-                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
-                icon: "fa-bottle-droplet",
-                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
-            }
-        ]
         primaryColor: "#1a1a2e",
-        topProducts: [
-            {
-                name: "SCHWERTKRONE Rasoio a Mano Libera con Manico Prezioso",
-                description: "Rasoio tradizionale premium con 100 lame Derby incluse",
-                icon: "fa-cut",
-                link: "https://www.amazon.it/SCHWERTKRONE-Prezioso-Barbiere-Rasatura-Definizione/dp/B0957WPKP4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-3-spons&aref=6byR8fHsbO&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ba67fb8d666610e44040abf78006017&ref=_as_li_ss_tl"
-            },
-            {
-                name: "CIICII Forbici Parrucchiere Professionali",
-                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
-                icon: "fa-cut",
-                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
-            }
-        ]
         accentColor: "#D4AF37",
         secondaryColor: "#f8f9fa",
         topProducts: [
@@ -725,10 +567,10 @@ const NicheDatabase = {
     },
     "studio-fotografico": {
         name: "Studio Fotografico",
-        tags: ["fotografia", "studio", "illuminazione", "softbox", "light", "rgb", "led", "video", "vlogging", "streaming", "professionale", "fotocamera", "camera", "treppiede", "impermeabile", "valigetta", "custodia", "kit"],
+        tags: ["fotografia", "mobile", "fotocamera", "camera", "smartphone", "foto", "video", "lente", "obiettivo", "treppiede", "selfie", "stick", "gimbal", "stabilizzatore", "microfono", "esterno", "light", "ring", "flash", "kit", "fotografia", "studio", "illuminazione", "softbox", "luce", "rgb", "continua"],
         url: "/studio-fotografico/index.html",
         personality: "creative",
-        valueProp: "Ho selezionato i migliori prodotti per il tuo studio fotografico professionale.",
+        valueProp: "Ho selezionato i migliori prodotti per il tuo studio fotografico, dall'illuminazione agli accessori.",
         song: "Photograph - Ed Sheeran",
         songLinkSpotify: "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
@@ -792,9 +634,9 @@ const NicheDatabase = {
         url: "/biciclette-mobilita/index.html",
         personality: "adventure",
         valueProp: "Ho analizzato le specifiche tecniche per te. Telaio, batteria, autonomia e freni sono i fattori chiave per la tua mobilità.",
-        song: "Born to Be Wild - Steppenwolf",
-        songLinkSpotify: "https://open.spotify.com/track/2VPGmrcBw5X4yAu3B8UZNE",
-        songLinkAmazon: "https://www.amazon.it/Born-Be-Wild-Steppenwolf/dp/B084T91B1W?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        song: "Bicycle Race - Queen",
+        songLinkSpotify: "https://open.spotify.com/track/1g9sK0mV7zHlXhJz8m5W8m",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         topProducts: [
             {
                 name: "IBK Bicicletta Bici MTB 26\" Mountain Bike BIAMMORTIZZATA",
@@ -813,42 +655,6 @@ const NicheDatabase = {
                 description: "Mountain bike 29 pollici in alluminio con freni a disco idraulici",
                 icon: "fa-mountain",
                 link: "https://www.amazon.it/IBK-Bicicletta-Mountain-Alluminio-Ammortizzata/dp/B08HWGW7SG?dib=eyJ2IjoiMSJ9.qDw6yrJXU1txWqQl1ewOnWLXIasRXObMGYNw4OLmadyFuZBqskI6X3xnEoMd80oT2RpkWO5IN_fIk0Hn5OEREkXDIw4jhCEeLObcZLlEIybXRjt06fitE7vByulRW82xT1N9YHSl-kpJPE6TEJi0nwcF_Y2vQK8F-1Ht7iMIuYxXE1cagiKEKcDxyaQolowqpnV20GtPo57I77oqju7VC8qO1ikICc2lOXH8alnfe0Mp80jT0U5oxcgQ8Xbih1hn5l0Zf-C1-77mr4gK9bjrNrSmTnWjZuxr2OrW1nC3XD8.bdKRfArYhgK-HAkPkG85J-yv4Xr3WSZIG9QuiyiKB_w&dib_tag=se&keywords=bici&qid=1779723129&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&aref=OaqTfWA1fP&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=59626a720eeaee58a3db43e048bbaaea&ref=_as_li_ss_tl"
-            }
-        ]
-    },
-    "abbigliamento-ciclismo": {
-        name: "Abbigliamento Ciclismo",
-        tags: ["abbigliamento", "ciclismo", "tuta", "salopette", "pantaloncini", "maglia", "jersey", "impermeabile", "antipioggia", "guanti", "occhiali", "casco", "calzamaglia", "scarpe", "bici", "mtb", "strada", "corsa", "gel", "imbottitura", "traspirante", "estivo", "invernale", "protezione", "sicurezza"],
-        url: "/abbigliamento-ciclismo/index.html",
-        personality: "sporty",
-        valueProp: "Ho selezionato gli abbigliamenti tecnici migliori per il ciclismo. Comfort, traspirabilità e protezione sono i fattori chiave.",
-        song: "Ride Like the Wind - Christopher Cross",
-        songLinkSpotify: "https://open.spotify.com/track/4n7Pi8Xf7dHhJvFJQ5h7jV",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        topProducts: [
-            {
-                name: "HOMTOL Abbigliamento Ciclismo Set Manica Corta",
-                description: "Tuta completa per ciclismo estivo con pantaloncini imbottiti in gel",
-                icon: "fa-tshirt",
-                link: "https://www.amazon.it/HOMTOL-Abbigliamento-Pantaloncini-Traspirante-Asciugatura/dp/B09WTTT4DB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-8&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=a9e628388e8936065229065d0a285e1d&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Tuta Ciclismo Completa con Guanti e Occhiali",
-                description: "Set completo con tuta, pantaloncini 9D gel imbottito, guanti e occhiali",
-                icon: "fa-bicycle",
-                link: "https://www.amazon.it/Abbigliamento-Ciclismo-Pantaloncini-imbottito-MTB%EF%BC%8BGuanti/dp/B0CTDGVJ3L?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-12&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6e353cbe213e027be887cb9aab1aef8&ref=_as_li_ss_tl"
-            },
-            {
-                name: "X-TIGER Ciclismo Uomo 5D Gel Salopette",
-                description: "Salopette con imbottitura 5D gel per massimo comfort durante il ciclismo",
-                icon: "fa-user-circle",
-                link: "https://www.amazon.it/dp/B08TBD3TDJ?pd_rd_i=B08TBD3TDJ&pd_rd_w=aglq3&content-id=amzn1.sym.1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_p=1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_r=XTV7YVW7B28ED089QK7Q&pd_rd_wg=FvYuM&pd_rd_r=1358c35d-d9ef-4322-91ed-17f27df3c651&aref=O7aTTOb90U&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6ab1ef2b3389860a033474173b56b3f&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Tuta Impermeabile Antipioggia",
-                description: "Set giacca e pantalone impermeabile per protezione completa dalla pioggia",
-                icon: "fa-cloud-rain",
-                link: "https://www.amazon.it/Auto-Accessori-Lupex-Impermeabile-Antipioggia/dp/B0BF5MXH19?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-47&th=1&linkCode=ll2&tag=l0c39-21&linkId=739862a3e171c23c5193803bc66f1de4&ref=_as_li_ss_tl"
             }
         ]
     }
@@ -1364,7 +1170,7 @@ const catalogoProdotti = {
         link: "https://www.amazon.it/dp/B07Z9Y0X1W?th=1&linkCode=ll2&tag=l0c39-21&linkId=stu012vwx123&ref=_as_li_ss_tl",
         messaggio: "Valigia robusta per i tuoi viaggi."
     },
-    // STUDIO FOTOGRAFICO
+    // FOTOGRAFIA MOBILE
     "obiettivo_macro": {
         nome: "Obiettivo Macro per Smartphone",
         categoria: "fotografia",
@@ -1788,11 +1594,6 @@ function getContesto() {
     const currentPath = window.location.pathname;
     const currentUrl = window.location.href.toLowerCase();
     
-    // Homepage
-    if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html')) {
-        return 'homepage';
-    }
-    
     // Controlla se siamo in una pagina specifica
     if (currentPath.includes('mare-spiaggia') || currentUrl.includes('mare') || currentUrl.includes('spiaggia')) {
         return 'mare';
@@ -1812,8 +1613,8 @@ function getContesto() {
     if (currentPath.includes('parrucchiere-barbiere') || currentUrl.includes('parrucchiere') || currentUrl.includes('barbiere') || currentUrl.includes('forbici') || currentUrl.includes('rasoio')) {
         return 'parrucchiere-barbiere';
     }
-    if (currentPath.includes('abbigliamento-serie-tv-film') || currentUrl.includes('abbigliamento') || currentUrl.includes('serie') || currentUrl.includes('tv') || currentUrl.includes('film')) {
-        return 'abbigliamento-serie-tv-film';
+    if (currentPath.includes('merchandise-serie-tv') || currentUrl.includes('merchandise') || currentUrl.includes('serie') || currentUrl.includes('tv')) {
+        return 'merchandise-serie-tv';
     }
     if (currentPath.includes('biciclette-mobilita') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
         return 'biciclette-mobilita';
@@ -1842,6 +1643,21 @@ function getContesto() {
     if (currentPath.includes('giochi-da-tavolo') || currentUrl.includes('giochi') || currentUrl.includes('tavolo') || currentUrl.includes('board')) {
         return 'giochi';
     }
+    if (currentPath.includes('parrucchiere-barbiere') || currentUrl.includes('parrucchiere') || currentUrl.includes('barbiere') || currentUrl.includes('salone') || currentUrl.includes('forbici') || currentUrl.includes('rasoio')) {
+        return 'parrucchiere-barbiere';
+    }
+    if (currentPath.includes('cinema-tv') || currentUrl.includes('cinema') || currentUrl.includes('tv') || currentUrl.includes('televisione') || currentUrl.includes('proiettore') || currentUrl.includes('film')) {
+        return 'cinema-tv';
+    }
+    if (currentPath.includes('fai-da-te') || currentUrl.includes('fai') || currentUrl.includes('da') || currentUrl.includes('te') || currentUrl.includes('attrezzi') || currentUrl.includes('bricolage')) {
+        return 'fai-da-te';
+    }
+    if (currentPath.includes('abbigliamento-ciclismo') || currentUrl.includes('ciclismo') || currentUrl.includes('abbigliamento') || currentUrl.includes('sport')) {
+        return 'abbigliamento-ciclismo';
+    }
+    if (currentPath.includes('biciclette-mobilita') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
+        return 'biciclette-mobilita';
+    }
     if (currentPath.includes('libri-ereader') || currentUrl.includes('libri') || currentUrl.includes('ereader') || currentUrl.includes('lettura')) {
         return 'libri';
     }
@@ -1860,11 +1676,8 @@ function getContesto() {
     if (currentPath.includes('viaggi-vacanze') || currentUrl.includes('viaggi') || currentUrl.includes('vacanze') || currentUrl.includes('valigie')) {
         return 'viaggi';
     }
-    if (currentPath.includes('studio-fotografico') || currentUrl.includes('studio') || currentUrl.includes('fotografia') || currentUrl.includes('foto') || currentUrl.includes('camera')) {
-        return 'studio-fotografico';
-    }
-    if (currentPath.includes('cinema-tv') || currentUrl.includes('cinema') || currentUrl.includes('tv') || currentUrl.includes('televisione') || currentUrl.includes('proiettore') || currentUrl.includes('home') || currentUrl.includes('theater')) {
-        return 'cinema-tv';
+    if (currentPath.includes('studio-fotografico') || currentUrl.includes('fotografia') || currentUrl.includes('foto') || currentUrl.includes('camera')) {
+        return 'fotografia';
     }
     if (currentPath.includes('dvd-bluray') || currentUrl.includes('dvd') || currentUrl.includes('bluray') || currentUrl.includes('film')) {
         return 'dvd';
@@ -1878,15 +1691,6 @@ function getContesto() {
     // Bibite & Bevande - ora ha proprio database entry
     if (currentPath.includes('snack-bevande') || currentUrl.includes('bibite') || currentUrl.includes('bevande')) {
         return 'snack-bevande';
-    }
-    if (currentPath.includes('fai-da-te') || currentUrl.includes('fai') || currentUrl.includes('da') || currentUrl.includes('te') || currentUrl.includes('attrezzi') || currentUrl.includes('bricolage')) {
-        return 'fai-da-te';
-    }
-    if (currentPath.includes('abbigliamento-ciclismo') || currentUrl.includes('ciclismo') || currentUrl.includes('abbigliamento') || currentUrl.includes('sport')) {
-        return 'abbigliamento-ciclismo';
-    }
-    if (currentPath.includes('biciclette-mobilita') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
-        return 'biciclette-mobilita';
     }
     
     // Default: homepage o contesto non identificato
@@ -2309,7 +2113,7 @@ function applyThemeOnLoad() {
         'theme-summer', 'theme-adventure', 'theme-fashion', 'theme-wellness',
         'theme-gaming-theme', 'theme-entertainment', 'theme-technical', 'theme-caring',
         'theme-aesthetic', 'theme-intellectual', 'theme-elegant', 'theme-eco',
-        'theme-professional', 'theme-travel', 'theme-creative', 'theme-abbigliamento-serie-tv-film',
+        'theme-professional', 'theme-travel', 'theme-creative', 'theme-merchandise-serie-tv',
         'theme-blinding-lights', 'theme-as-it-was', 'theme-midnight-city', 'theme-parrucchiere',
         'theme-biciclette'
     ];
@@ -2342,8 +2146,8 @@ function applyThemeOnLoad() {
     
     // Special case for Merchandise Serie TV - use synthwave theme
     let themeClass = personalityToTheme[personality] || 'theme-default';
-    if (categoryKey === 'abbigliamento-serie-tv-film') {
-        themeClass = 'theme-abbigliamento-serie-tv-film';
+    if (categoryKey === 'merchandise-serie-tv') {
+        themeClass = 'theme-merchandise-serie-tv';
     } else if (categoryKey === 'elite-gaming-gear') {
         themeClass = 'theme-blinding-lights';
     } else if (categoryKey === 'moda-donna') {
@@ -2517,30 +2321,25 @@ function showComboMessage() {
         // Usa le combo del database
         const randomCombo = comboData.combos[Math.floor(Math.random() * comboData.combos.length)];
         
-        // Verifica che product1 e product2 esistano
-        if (!randomCombo.product1 || !randomCombo.product2 || !randomCombo.product1.link || !randomCombo.product2.link) {
-            console.log('Invalid combo data - missing products or links, using fallback');
-        } else {
-            const message = `
-                <div class="urgency-combo-message">
-                    <p>${randomCombo.message}</p>
-                    <div class="combo-container">
-                        <div class="combo-title">📦 Combo consigliata:</div>
-                        <div>
-                            <a href="${randomCombo.product1.link}" target="_blank" onclick="trackComboClick('${context}', 1)" class="combo-link">
-                                1. ${randomCombo.product1.name}
-                            </a>
-                            <a href="${randomCombo.product2.link}" target="_blank" onclick="trackComboClick('${context}', 2)" class="combo-link">
-                                2. ${randomCombo.product2.name}
-                            </a>
-                        </div>
+        const message = `
+            <div class="urgency-combo-message">
+                <p>${randomCombo.message}</p>
+                <div class="combo-container">
+                    <div class="combo-title">📦 Combo consigliata:</div>
+                    <div>
+                        <a href="${randomCombo.product1.link}" target="_blank" onclick="trackComboClick('${context}', 1)" class="combo-link">
+                            1. ${randomCombo.product1.name}
+                        </a>
+                        <a href="${randomCombo.product2.link}" target="_blank" onclick="trackComboClick('${context}', 2)" class="combo-link">
+                            2. ${randomCombo.product2.name}
+                        </a>
                     </div>
                 </div>
-            `;
-            
-            addMessage(message, 'bot');
-            return;
-        }
+            </div>
+        `;
+        
+        addMessage(message, 'bot');
+        return;
     }
     
     // Fallback: usa il sistema vecchio con catalogoProdotti
@@ -2765,17 +2564,17 @@ const macroCategories = {
     'tech-lifestyle': {
         name: 'Tech & Lifestyle',
         icon: '💻',
-        categories: ['smartphone-tech', 'tech', 'fotografia-mobile', 'ufficio-produttivo']
+        categories: ['smartphone-tech', 'tech', 'studio-fotografico', 'ufficio-produttivo']
     },
     'hobby-svago': {
         name: 'Hobby & Svago',
         icon: '🎮',
         categories: ['elite-gaming-gear', 'giochi-da-tavolo', 'libri-ereader']
     },
-    'abbigliamento-serie-tv-film': {
-        name: 'Abbigliamento Serie TV & Film',
+    'merchandise-serie-tv': {
+        name: 'Merchandise Serie TV',
         icon: '📺',
-        categories: ['abbigliamento-serie-tv-film', 'dvd-bluray']
+        categories: ['merchandise-serie-tv', 'dvd-bluray']
     },
     'moda': {
         name: 'Moda',
@@ -2804,9 +2603,9 @@ const relatedCategories = {
     'cucina-elettrodomestici': ['smart-home-domotica', 'arredamento-casa', 'snack-bevande'],
     'smart-home-domotica': ['cucina-elettrodomestici', 'tech', 'snack-bevande'],
     'fitness-casa': ['smartphone-tech', 'tech', 'snack-bevande'],
-    'elite-gaming-gear': ['smartphone-tech', 'tech', 'abbigliamento-serie-tv-film', 'snack-bevande', 'manga-anime'],
+    'elite-gaming-gear': ['smartphone-tech', 'tech', 'merchandise-serie-tv', 'snack-bevande', 'manga-anime'],
     'pet-care-intelligente': ['arredamento-casa', 'outdoor-camping', 'snack-bevande'],
-    'abbigliamento-serie-tv-film': ['tech', 'smartphone-tech', 'snack-bevande', 'manga-anime', 'musica-vinili'],
+    'merchandise-serie-tv': ['tech', 'smartphone-tech', 'snack-bevande', 'manga-anime', 'musica-vinili'],
     'snack-bevande': ['fitness-casa', 'mare-spiaggia', 'outdoor-camping', 'caldo-rinfrescamento'],
     'smartphone-tech': ['tech', 'fitness-casa', 'elite-gaming-gear', 'snack-bevande'],
     'moda-donna': ['accessori-moda', 'profumi-bellezza', 'manga-anime', 'parrucchiere-barbiere', 'snack-bevande'],
@@ -2815,16 +2614,18 @@ const relatedCategories = {
     'accessori-moda': ['moda-donna', 'moda-uomo', 'parrucchiere-barbiere', 'snack-bevande'],
     'arredamento-casa': ['smart-home-domotica', 'benessere-cura-personale', 'snack-bevande'],
     'benessere-cura-personale': ['profumi-bellezza', 'arredamento-casa', 'parrucchiere-barbiere', 'snack-bevande'],
-    'dvd-bluray': ['abbigliamento-serie-tv-film', 'snack-bevande'],
-    'fotografia-mobile': ['tech', 'smartphone-tech', 'snack-bevande'],
+    'dvd-bluray': ['merchandise-serie-tv', 'snack-bevande'],
+    'studio-fotografico': ['tech', 'smartphone-tech', 'snack-bevande'],
+    'fai-da-te': ['tech', 'snack-bevande', 'outdoor-camping'],
+    'cinema-tv': ['tech', 'smartphone-tech', 'snack-bevande'],
     'giochi-da-tavolo': ['elite-gaming-gear', 'snack-bevande'],
     'libri-ereader': ['tech', 'smartphone-tech', 'manga-anime', 'snack-bevande'],
     'mare-spiaggia': ['viaggi-vacanze', 'outdoor-camping', 'snack-bevande'],
     'outdoor-camping': ['viaggi-vacanze', 'mare-spiaggia', 'snack-bevande'],
     'biciclette-mobilita': ['fitness-casa', 'outdoor-camping', 'tech', 'snack-bevande'],
     'parrucchiere-barbiere': ['benessere-cura-personale', 'moda-donna', 'moda-uomo', 'accessori-moda', 'snack-bevande'],
-    'manga-anime': ['abbigliamento-serie-tv-film', 'libri-ereader', 'moda-donna', 'moda-uomo', 'elite-gaming-gear', 'snack-bevande'],
-    'musica-vinili': ['abbigliamento-serie-tv-film', 'tech', 'benessere-cura-personale', 'snack-bevande'],
+    'manga-anime': ['merchandise-serie-tv', 'libri-ereader', 'moda-donna', 'moda-uomo', 'elite-gaming-gear', 'snack-bevande'],
+    'musica-vinili': ['merchandise-serie-tv', 'tech', 'benessere-cura-personale', 'snack-bevande'],
     'profumi-bellezza': ['moda-donna', 'moda-uomo', 'benessere-cura-personale', 'parrucchiere-barbiere', 'snack-bevande'],
     'sostenibilita-eco-friendly': ['arredamento-casa', 'tech', 'snack-bevande'],
     'tech': ['smartphone-tech', 'fitness-casa', 'elite-gaming-gear', 'musica-vinili', 'snack-bevande'],
@@ -2843,26 +2644,14 @@ function toggleChat() {
     }
     
     if (chatWindow.classList.contains('active')) {
-        // Show friendly closing message if user has interacted
-        const chatMessages = document.getElementById('chat-messages');
-        if (chatMessages && chatMessages.children.length > 0) {
-            addMessage(getFriendlyClosing(), 'bot');
-            // Close chat after showing closing message
-            setTimeout(() => {
-                chatWindow.classList.remove('active');
-                chatButton.classList.remove('active');
-                chatOpen = false;
-            }, 1500);
-        } else {
-            chatWindow.classList.remove('active');
-            chatButton.classList.remove('active');
-            chatOpen = false;
-        }
+        chatWindow.classList.remove('active');
+        chatButton.classList.remove('active');
+        chatOpen = false;
     } else {
         chatWindow.classList.add('active');
         chatButton.classList.add('active');
         chatOpen = true;
-
+        
         // Track bot opening in Google Analytics
         if (typeof gtag !== 'undefined') {
             gtag('event', 'bot_open', {
@@ -2870,59 +2659,13 @@ function toggleChat() {
                 'event_label': 'chat_opened'
             });
         }
-
+        
         // Show welcome message with macro-categories on first open
         const chatMessages = document.getElementById('chat-messages');
-        
-        // Always show welcome message when chat is opened
-        if (chatMessages) {
+        if (chatMessages && chatMessages.children.length === 0) {
             showWelcomeMessage();
         }
     }
-}
-
-// Get current special occasion based on date (seasonal only, no personal occasions)
-function getCurrentOccasion() {
-    const now = new Date();
-    const month = now.getMonth() + 1; // 1-12
-    const day = now.getDate();
-    
-    // Christmas (December 20-31)
-    if (month === 12 && day >= 20) {
-        return 'christmas';
-    }
-    
-    // Valentine's Day (February 10-15)
-    if (month === 2 && day >= 10 && day <= 15) {
-        return 'valentine';
-    }
-    
-    // Halloween (October 25-31)
-    if (month === 10 && day >= 25) {
-        return 'halloween';
-    }
-    
-    // Easter (variable, approximate for March-April)
-    if (month === 3 || (month === 4 && day <= 15)) {
-        return 'easter';
-    }
-    
-    // Summer (June 15 - September 15)
-    if ((month === 6 && day >= 15) || month === 7 || month === 8 || (month === 9 && day <= 15)) {
-        return 'summer';
-    }
-    
-    // Back to school (August 25 - September 15)
-    if ((month === 8 && day >= 25) || (month === 9 && day <= 15)) {
-        return 'back_to_school';
-    }
-    
-    // Winter (December 1 - February 28)
-    if (month === 12 || month === 1 || (month === 2 && day <= 28)) {
-        return 'winter';
-    }
-    
-    return null;
 }
 
 // Show welcome message with macro-categories
@@ -2931,29 +2674,16 @@ function showWelcomeMessage() {
     const personalizedGreeting = getPersonalizedGreeting();
     addMessage(personalizedGreeting, 'bot');
     
-    // Show "Pausa Ristoro 🥤" immediately after welcome (Strategy: break the ice with low-cost impulse purchase)
-    setTimeout(() => {
-        addMessage("<div style='padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);'><strong style='font-size: 1.1em; display: block; margin-bottom: 8px;'>✨ Pausa Smart</strong><p style='margin: 0; font-size: 0.95em; line-height: 1.5;'>Mentre esplori, i nostri clienti più fedeli scelgono questi must-have per ricaricare le energie:</p><div style='margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;'><a href='https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>⚡ Powerade</a><a href='https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>🥤 Pepsi Max</a></div></div>", 'bot');
-    }, 400);
-    
-    // Check for seasonal occasion (no personal occasions like birthdays)
-    const currentOccasion = getCurrentOccasion();
-    if (currentOccasion) {
-        setTimeout(() => {
-            addMessage(getSpecialOccasionMessage(currentOccasion), 'bot');
-        }, 700);
-    }
-    
     // Show smart suggestions based on learning
     const totalVisits = Object.values(userPreferences.visits || {}).reduce((a, b) => a + b, 0);
     if (totalVisits > 0) {
         setTimeout(() => {
             showSmartSuggestions();
-        }, 1200);
+        }, 800);
     } else {
         setTimeout(() => {
             showMacroCategories();
-        }, 900);
+        }, 500);
     }
 }
 
@@ -3120,7 +2850,7 @@ function applyBotTheme(categoryKey) {
         'theme-summer', 'theme-adventure', 'theme-fashion', 'theme-wellness',
         'theme-gaming-theme', 'theme-entertainment', 'theme-technical', 'theme-caring',
         'theme-aesthetic', 'theme-intellectual', 'theme-elegant', 'theme-eco',
-        'theme-professional', 'theme-travel', 'theme-creative', 'theme-abbigliamento-serie-tv-film',
+        'theme-professional', 'theme-travel', 'theme-creative', 'theme-merchandise-serie-tv',
         'theme-blinding-lights', 'theme-as-it-was', 'theme-midnight-city', 'theme-parrucchiere',
         'theme-biciclette'
     ];
@@ -3153,8 +2883,8 @@ function applyBotTheme(categoryKey) {
     
     // Special case for Merchandise Serie TV - use synthwave theme
     let themeClass = personalityToTheme[personality] || 'theme-default';
-    if (categoryKey === 'abbigliamento-serie-tv-film') {
-        themeClass = 'theme-abbigliamento-serie-tv-film';
+    if (categoryKey === 'merchandise-serie-tv') {
+        themeClass = 'theme-merchandise-serie-tv';
     } else if (categoryKey === 'elite-gaming-gear') {
         themeClass = 'theme-blinding-lights';
     } else if (categoryKey === 'moda-donna') {
@@ -3263,9 +2993,6 @@ async function sendMessage() {
     addMessage(message, 'user');
     chatInput.value = '';
     
-    // Show typing indicator
-    showTypingIndicator();
-    
     // Reset abandonment timer on user interaction
     resetAbandonmentTimer();
     
@@ -3277,9 +3004,6 @@ async function sendMessage() {
     
     // Remove loading indicator
     removeLoadingIndicator();
-    
-    // Hide typing indicator
-    hideTypingIndicator();
     
     setTimeout(async () => {
         if (category) {
@@ -3403,27 +3127,6 @@ function addMessage(text, sender) {
     // Track conversation for learning
     if (sender === 'user') {
         trackUserInteraction(text);
-    }
-}
-
-// Show typing indicator
-function showTypingIndicator() {
-    const chatMessages = document.getElementById('chat-messages');
-    if (!chatMessages) return;
-    
-    const typingDiv = document.createElement('div');
-    typingDiv.className = 'chat-message bot loading';
-    typingDiv.id = 'typing-indicator';
-    typingDiv.innerHTML = '<div class="typing-indicator"><span style="animation: typing 0.6s infinite">●</span><span style="animation: typing 0.6s 0.2s infinite">●</span><span style="animation: typing 0.6s 0.4s infinite">●</span></div>';
-    chatMessages.appendChild(typingDiv);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-
-// Hide typing indicator
-function hideTypingIndicator() {
-    const typingIndicator = document.getElementById('typing-indicator');
-    if (typingIndicator) {
-        typingIndicator.remove();
     }
 }
 
@@ -3704,50 +3407,6 @@ function getPersonalityResponse(categoryKey, personality, categoryName) {
     return responses[Math.floor(Math.random() * responses.length)];
 }
 
-// Get professional follow-up questions to understand customer needs better
-function getProfessionalFollowUp(categoryName) {
-    const followUpQuestions = [
-        `Per aiutarti meglio con ${categoryName}, mi potresti dire qual è il tuo budget? Così ti mostro le opzioni più adatte.`,
-        `Lo usi per lavoro, per tempo libero o per un regalo? Questo mi aiuta a suggerirti il prodotto giusto per ${categoryName}.`,
-        `Hai già qualcosa di simile o è la prima volta che acquisti questo tipo di prodotto?`,
-        `Cosa ti importa di più in questo prodotto: qualità, prezzo, design o funzionalità specifiche?`
-    ];
-    return followUpQuestions[Math.floor(Math.random() * followUpQuestions.length)];
-}
-
-// Get professional consultation message
-function getProfessionalConsultation(categoryName, reason) {
-    const consultations = [
-        `In base a quello che mi hai detto, ti consiglio questo prodotto per ${categoryName} perché ${reason}. È una scelta affidabile per le tue esigenze.`,
-        `Attenzione: questo prodotto per ${categoryName} ha una caratteristica particolare che potrebbe fare al caso tuo: ${reason}.`
-    ];
-    return consultations[Math.floor(Math.random() * consultations.length)];
-}
-
-// Get friendly closing message
-function getFriendlyClosing() {
-    const closings = [
-        "Grazie per aver visitato! Torna presto per nuove offerte. 😊",
-        "È stato un piacere aiutarti! Se hai bisogno di altro, sono a disposizione. A presto! 👋",
-        "Grazie per la fiducia! Torna a trovarci quando vuoi. Ci vediamo! 🌟"
-    ];
-    return closings[Math.floor(Math.random() * closings.length)];
-}
-
-// Get special occasion message (seasonal only - no personal occasions)
-function getSpecialOccasionMessage(occasion) {
-    const occasions = {
-        'christmas': "🎄 Buone feste! Ecco alcune idee regalo perfette per il Natale.",
-        'valentine': "💕 San Valentino si avvicina! Ecco i prodotti perfetti per la persona che ami.",
-        'halloween': "🎃 Halloween è arrivato! Ecco i prodotti perfetti per la festa più spaventosa dell'anno!",
-        'easter': "🐣 Pasqua è in arrivo! Ecco i prodotti ideali per festeggiare la primavera.",
-        'summer': "☀️ L'estate è arrivata! Ecco i prodotti più venduti per goderti al meglio la stagione.",
-        'back_to_school': "📚 Torniamo a scuola! Ecco tutto ciò che ti serve per iniziare nel migliore dei modi.",
-        'winter': "❄️ L'inverno è arrivato! Ecco i prodotti perfetti per affrontare il freddo con stile."
-    };
-    return occasions[occasion] || "Ecco i prodotti perfetti per questa occasione speciale!";
-}
-
 // Show follow-up suggestions after category selection
 function showFollowUpSuggestions(categoryKey) {
     const chatMessages = document.getElementById('chat-messages');
@@ -3938,57 +3597,47 @@ function selectCategoryFromButton(categoryKey) {
         setTimeout(() => {
             addMessage(responseText, 'bot');
             setTimeout(() => {
-                // Add professional follow-up question
-                addMessage(getProfessionalFollowUp(category.name), 'bot');
-                setTimeout(() => {
-                    addCategoryLink(category);
-                    
-                    // Add professional consultation
-                    const reason = nicheData && nicheData.valueProp ? nicheData.valueProp : "ha ottime recensioni e un ottimo rapporto qualità-prezzo";
-                    setTimeout(() => {
-                        addMessage(getProfessionalConsultation(category.name, reason), 'bot');
-                    }, 500);
+                addCategoryLink(category);
                 
-                    // Add follow-up with song reference
-                    if (nicheData && nicheData.song && (nicheData.songLinkSpotify || nicheData.songLinkAmazon)) {
-                        setTimeout(() => {
-                            const songMessage = `
-                                <div style="margin: 10px 0;">
-                                    <p style="margin-bottom: 8px;">Per abbinare al meglio i prodotti di ${category.name}, ti consiglio questo sound iconico come sottofondo.</p>
-                                    <p style="margin-bottom: 8px; font-weight: bold;">🎵 Ascolta subito:</p>
-                                    ${nicheData.songLinkSpotify ? `
-                                    <p style="margin-bottom: 8px;">
-                                        <button onclick="showSpotifyPlayer('${nicheData.songLinkSpotify}', '${nicheData.song}')" 
-                                                style="background: #1DB954; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px;">
-                                            ▶ Play su Spotify
-                                        </button>
-                                    </p>` : ''}
-                                    ${(categoryKey === 'libri-ereader' || categoryKey === 'manga-anime') && nicheData.kindleLink ? `
-                                    <div class="premium-box" style="margin-top:12px; border:1px solid #007185; padding:10px; background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%); border-radius: 8px; font-size: 0.9em; color: #007185; text-align: center;">
-                                        📚 <strong>Vuoi un modo migliore per leggere?</strong> 
-                                        <br><a href="${nicheData.kindleLink}" target="_blank" onclick="trackKindleClick()" style="color: #007185; font-weight: bold; text-decoration: underline;">Prova Kindle Unlimited con migliaia di libri</a>
-                                    </div>` : ''}
-                                    ${nicheData.songLinkAmazon ? `
-                                    <div class="premium-box" style="margin-top:12px; border:1px solid gold; padding:10px; background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%); border-radius: 8px; font-size: 0.9em; color: #856404; text-align: center;">
-                                        💎 <strong>Vuoi l'esperienza in alta qualità?</strong> 
-                                        <br><a href="${nicheData.songLinkAmazon}" target="_blank" onclick="trackAmazonMusicClick()" style="color: #d4a017; font-weight: bold; text-decoration: underline;">Ascolta su Amazon Music Unlimited</a>
-                                    </div>
-                                    ` : ''}
+                // Add follow-up with song reference
+                if (nicheData && nicheData.song && (nicheData.songLinkSpotify || nicheData.songLinkAmazon)) {
+                    setTimeout(() => {
+                        const songMessage = `
+                            <div style="margin: 10px 0;">
+                                <p style="margin-bottom: 8px;">Per abbinare al meglio i prodotti di ${category.name}, ti consiglio questo sound iconico come sottofondo.</p>
+                                <p style="margin-bottom: 8px; font-weight: bold;">🎵 Ascolta subito:</p>
+                                ${nicheData.songLinkSpotify ? `
+                                <p style="margin-bottom: 8px;">
+                                    <button onclick="showSpotifyPlayer('${nicheData.songLinkSpotify}', '${nicheData.song}')" 
+                                            style="background: #1DB954; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px;">
+                                        ▶ Play su Spotify
+                                    </button>
+                                </p>` : ''}
+                                ${(categoryKey === 'libri-ereader' || categoryKey === 'manga-anime') && nicheData.kindleLink ? `
+                                <div class="premium-box" style="margin-top:12px; border:1px solid #007185; padding:10px; background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%); border-radius: 8px; font-size: 0.9em; color: #007185; text-align: center;">
+                                    📚 <strong>Vuoi un modo migliore per leggere?</strong> 
+                                    <br><a href="${nicheData.kindleLink}" target="_blank" onclick="trackKindleClick()" style="color: #007185; font-weight: bold; text-decoration: underline;">Prova Kindle Unlimited con migliaia di libri</a>
+                                </div>` : ''}
+                                ${nicheData.songLinkAmazon ? `
+                                <div class="premium-box" style="margin-top:12px; border:1px solid gold; padding:10px; background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%); border-radius: 8px; font-size: 0.9em; color: #856404; text-align: center;">
+                                    💎 <strong>Vuoi l'esperienza in alta qualità?</strong> 
+                                    <br><a href="${nicheData.songLinkAmazon}" target="_blank" onclick="trackAmazonMusicClick()" style="color: #d4a017; font-weight: bold; text-decoration: underline;">Ascolta su Amazon Music Unlimited</a>
                                 </div>
-                            `;
-                            addMessage(songMessage, 'bot');
-                            
-                            // Show related categories as follow-up
-                            setTimeout(() => {
-                                showFollowUpSuggestions(categoryKey);
-                            }, 1500);
-                        }, 1000);
-                    } else {
+                                ` : ''}
+                            </div>
+                        `;
+                        addMessage(songMessage, 'bot');
+                        
+                        // Show related categories as follow-up
                         setTimeout(() => {
                             showFollowUpSuggestions(categoryKey);
-                        }, 1000);
-                    }
-                }, 500);
+                        }, 1500);
+                    }, 1000);
+                } else {
+                    setTimeout(() => {
+                        showFollowUpSuggestions(categoryKey);
+                    }, 1000);
+                }
             }, 500);
         }, 500);
     }
@@ -4029,9 +3678,9 @@ document.addEventListener('DOMContentLoaded', function() {
     //     startUrgencyTimer();
     // }, 2000);
     
-    // Disable scroll detection for combo messages
+    // Add scroll detection
     window.addEventListener('scroll', detectScroll);
-    // window.addEventListener('scroll', detectComboScroll);
+    window.addEventListener('scroll', detectComboScroll);
     
     // Add click outside to close proactive bubble
     document.addEventListener('click', function(event) {
