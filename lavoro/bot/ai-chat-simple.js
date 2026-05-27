@@ -723,12 +723,12 @@ const NicheDatabase = {
             }
         ]
     },
-    "fotografia-mobile": {
-        name: "Fotografia Mobile",
-        tags: ["fotografia", "mobile", "fotocamera", "camera", "smartphone", "foto", "video", "lente", "obiettivo", "treppiede", "selfie", "stick", "gimbal", "stabilizzatore", "microfono", "esterno", "light", "ring", "flash", "kit", "fotografia"],
-        url: "/fotografia-mobile/index.html",
+    "studio-fotografico": {
+        name: "Studio Fotografico",
+        tags: ["fotografia", "studio", "illuminazione", "softbox", "light", "rgb", "led", "video", "vlogging", "streaming", "professionale", "fotocamera", "camera", "treppiede", "impermeabile", "valigetta", "custodia", "kit"],
+        url: "/studio-fotografico/index.html",
         personality: "creative",
-        valueProp: "Ho selezionato i migliori prodotti per migliorare la tua fotografia mobile.",
+        valueProp: "Ho selezionato i migliori prodotti per il tuo studio fotografico professionale.",
         song: "Photograph - Ed Sheeran",
         songLinkSpotify: "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
@@ -1335,7 +1335,7 @@ const catalogoProdotti = {
         link: "https://www.amazon.it/dp/B07Z9Y0X1W?th=1&linkCode=ll2&tag=l0c39-21&linkId=stu012vwx123&ref=_as_li_ss_tl",
         messaggio: "Valigia robusta per i tuoi viaggi."
     },
-    // FOTOGRAFIA MOBILE
+    // STUDIO FOTOGRAFICO
     "obiettivo_macro": {
         nome: "Obiettivo Macro per Smartphone",
         categoria: "fotografia",
