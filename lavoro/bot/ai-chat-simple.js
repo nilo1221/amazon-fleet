@@ -765,6 +765,16 @@ const NicheDatabase = {
             }
         ]
     },
+    "cinema-tv": {
+        name: "Cinema & TV",
+        tags: ["cinema", "tv", "televisione", "proiettore", "home", "theater", "film", "serie", "4k", "ultra", "hd", "smart", "tv", "schermo", "video", "streaming"],
+        url: "/cinema-tv/index.html",
+        personality: "entertainment",
+        valueProp: "Ho selezionato i migliori prodotti per il tuo home cinema e intrattenimento.",
+        song: "Video Killed the Radio Star - The Buggles",
+        songLinkSpotify: "https://open.spotify.com/track/6t1FIJlZWTQfIZhsGjaulM",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+    },
     "dvd-bluray": {
         name: "DVD & Blu-ray",
         tags: ["dvd", "bluray", "film", "serie", "tv", "collezione", "box", "set", "4k", "ultra", "hd"],
@@ -1849,8 +1859,11 @@ function getContesto() {
     if (currentPath.includes('viaggi-vacanze') || currentUrl.includes('viaggi') || currentUrl.includes('vacanze') || currentUrl.includes('valigie')) {
         return 'viaggi';
     }
-    if (currentPath.includes('fotografia-mobile') || currentUrl.includes('fotografia') || currentUrl.includes('foto') || currentUrl.includes('camera')) {
-        return 'fotografia';
+    if (currentPath.includes('studio-fotografico') || currentUrl.includes('studio') || currentUrl.includes('fotografia') || currentUrl.includes('foto') || currentUrl.includes('camera')) {
+        return 'studio-fotografico';
+    }
+    if (currentPath.includes('cinema-tv') || currentUrl.includes('cinema') || currentUrl.includes('tv') || currentUrl.includes('televisione') || currentUrl.includes('proiettore') || currentUrl.includes('home') || currentUrl.includes('theater')) {
+        return 'cinema-tv';
     }
     if (currentPath.includes('dvd-bluray') || currentUrl.includes('dvd') || currentUrl.includes('bluray') || currentUrl.includes('film')) {
         return 'dvd';
@@ -1864,6 +1877,15 @@ function getContesto() {
     // Bibite & Bevande - ora ha proprio database entry
     if (currentPath.includes('snack-bevande') || currentUrl.includes('bibite') || currentUrl.includes('bevande')) {
         return 'snack-bevande';
+    }
+    if (currentPath.includes('fai-da-te') || currentUrl.includes('fai') || currentUrl.includes('da') || currentUrl.includes('te') || currentUrl.includes('attrezzi') || currentUrl.includes('bricolage')) {
+        return 'fai-da-te';
+    }
+    if (currentPath.includes('abbigliamento-ciclismo') || currentUrl.includes('ciclismo') || currentUrl.includes('abbigliamento') || currentUrl.includes('sport')) {
+        return 'abbigliamento-ciclismo';
+    }
+    if (currentPath.includes('biciclette-mobilita') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
+        return 'biciclette-mobilita';
     }
     
     // Default: homepage o contesto non identificato
