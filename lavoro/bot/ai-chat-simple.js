@@ -284,6 +284,12 @@ const NicheDatabase = {
                 description: "Demon Slayer è una delle serie più amate dai lettori di ogni età",
                 icon: "fa-tablet-alt",
                 link: "https://www.amazon.it/Demon-Slayer-Kimetsu-yaiba-Digital-ebook/dp/B088Z1P21C?&linkCode=ll2&tag=l0c39-21&linkId=f8ad4b971ceeec377887c6e6da92d926&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Fire Punch Complete Box",
+                description: "Edizione completa della serie acclamata dalla critica di Tatsuki Fujimoto",
+                icon: "fa-box",
+                link: "https://www.amazon.it/Fire-punch-Complete-Tatsuki-Fujimoto/dp/8822626656?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.R3TQEJ-TKD2eCa47iSUOUT0FZDxCgIdEWGSgLTMK9RcZ6Nf-gPEuaBgi0-bJSnKXcr48-ATkLYz_U-t5_xZczCx-pO3j2xbp5FDtKguSD061snnOeUoRSGIwsERaPtSRPsL7Z7VjHAsXUt5SlO-LFXhIRtpnpPrJRAWgGzM7az_mdqLvSvAInVM8l2bgcOYSKUetDzOd44thZPYYHh4WbS8k7rWCNhRutbVNrJuAtBw.xKmVT_y4Zjh4S2eOZSh_s1wzSu7AIc4z1zDe4BCIZxo&dib_tag=se&keywords=box&qid=1779861347&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-2&ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=b9db34d67b703d5f2797b6c0c79a7b0a&ref=_as_li_ss_tl"
             }
         ]
     },
