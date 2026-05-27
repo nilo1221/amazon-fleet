@@ -786,6 +786,42 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/IBK-Bicicletta-Mountain-Alluminio-Ammortizzata/dp/B08HWGW7SG?dib=eyJ2IjoiMSJ9.qDw6yrJXU1txWqQl1ewOnWLXIasRXObMGYNw4OLmadyFuZBqskI6X3xnEoMd80oT2RpkWO5IN_fIk0Hn5OEREkXDIw4jhCEeLObcZLlEIybXRjt06fitE7vByulRW82xT1N9YHSl-kpJPE6TEJi0nwcF_Y2vQK8F-1Ht7iMIuYxXE1cagiKEKcDxyaQolowqpnV20GtPo57I77oqju7VC8qO1ikICc2lOXH8alnfe0Mp80jT0U5oxcgQ8Xbih1hn5l0Zf-C1-77mr4gK9bjrNrSmTnWjZuxr2OrW1nC3XD8.bdKRfArYhgK-HAkPkG85J-yv4Xr3WSZIG9QuiyiKB_w&dib_tag=se&keywords=bici&qid=1779723129&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&aref=OaqTfWA1fP&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=59626a720eeaee58a3db43e048bbaaea&ref=_as_li_ss_tl"
             }
         ]
+    },
+    "abbigliamento-ciclismo": {
+        name: "Abbigliamento Ciclismo",
+        tags: ["abbigliamento", "ciclismo", "tuta", "salopette", "pantaloncini", "maglia", "jersey", "impermeabile", "antipioggia", "guanti", "occhiali", "casco", "calzamaglia", "scarpe", "bici", "mtb", "strada", "corsa", "gel", "imbottitura", "traspirante", "estivo", "invernale", "protezione", "sicurezza"],
+        url: "/abbigliamento-ciclismo/index.html",
+        personality: "sporty",
+        valueProp: "Ho selezionato gli abbigliamenti tecnici migliori per il ciclismo. Comfort, traspirabilità e protezione sono i fattori chiave.",
+        song: "Ride Like the Wind - Christopher Cross",
+        songLinkSpotify: "https://open.spotify.com/track/4n7Pi8Xf7dHhJvFJQ5h7jV",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: [
+            {
+                name: "HOMTOL Abbigliamento Ciclismo Set Manica Corta",
+                description: "Tuta completa per ciclismo estivo con pantaloncini imbottiti in gel",
+                icon: "fa-tshirt",
+                link: "https://www.amazon.it/HOMTOL-Abbigliamento-Pantaloncini-Traspirante-Asciugatura/dp/B09WTTT4DB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-8&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=a9e628388e8936065229065d0a285e1d&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Tuta Ciclismo Completa con Guanti e Occhiali",
+                description: "Set completo con tuta, pantaloncini 9D gel imbottito, guanti e occhiali",
+                icon: "fa-bicycle",
+                link: "https://www.amazon.it/Abbigliamento-Ciclismo-Pantaloncini-imbottito-MTB%EF%BC%8BGuanti/dp/B0CTDGVJ3L?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-12&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6e353cbe213e027be887cb9aab1aef8&ref=_as_li_ss_tl"
+            },
+            {
+                name: "X-TIGER Ciclismo Uomo 5D Gel Salopette",
+                description: "Salopette con imbottitura 5D gel per massimo comfort durante il ciclismo",
+                icon: "fa-user-circle",
+                link: "https://www.amazon.it/dp/B08TBD3TDJ?pd_rd_i=B08TBD3TDJ&pd_rd_w=aglq3&content-id=amzn1.sym.1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_p=1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_r=XTV7YVW7B28ED089QK7Q&pd_rd_wg=FvYuM&pd_rd_r=1358c35d-d9ef-4322-91ed-17f27df3c651&aref=O7aTTOb90U&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6ab1ef2b3389860a033474173b56b3f&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Tuta Impermeabile Antipioggia",
+                description: "Set giacca e pantalone impermeabile per protezione completa dalla pioggia",
+                icon: "fa-cloud-rain",
+                link: "https://www.amazon.it/Auto-Accessori-Lupex-Impermeabile-Antipioggia/dp/B0BF5MXH19?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-47&th=1&linkCode=ll2&tag=l0c39-21&linkId=739862a3e171c23c5193803bc66f1de4&ref=_as_li_ss_tl"
+            }
+        ]
     }
 };
 
