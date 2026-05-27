@@ -2660,8 +2660,8 @@
                         return;
                     } */
                     
-                    // Mostra timer se gli elementi esistono
-                    if (stripItem) {
+                    // Timer completamente disabilitato - non mostrare più i countdown
+                    /* if (stripItem) {
                         let timerElement = stripItem.querySelector('.timer-display');
                         if (!timerElement) {
                             timerElement = document.createElement('div');
@@ -2680,13 +2680,13 @@
                             cardBody.appendChild(timerElement);
                         }
                         timerElement.textContent = `⏱ Tempo rimanente: ${formatTime(currentTimeLeft)}`;
-                    }
+                    } */
                 });
             }
             
-            // Aggiorna ogni secondo
-            updateTimer();
-            setInterval(updateTimer, 1000);
+            // Timer completamente disabilitato - non mostrare più i countdown e non aggiornare
+            /* updateTimer();
+            setInterval(updateTimer, 1000); */
         });
 
         // Dynamic carousel link update based on active slide
