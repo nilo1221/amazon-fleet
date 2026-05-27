@@ -314,6 +314,26 @@ const NicheDatabase = {
         song: "Bohemian Rhapsody - Queen",
         songLinkSpotify: "https://open.spotify.com/track/7tFiyTwD0nx5a1eklYtX2J",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: [
+            {
+                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
+                description: "Kit pietre massaggio naturali basalto caldo per SPA",
+                icon: "fa-spa",
+                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
+            },
+            {
+                name: "CIICII Forbici Parrucchiere Professionali",
+                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
+                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
+                icon: "fa-bottle-droplet",
+                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
+            }
+        ]
         primaryColor: "#1a1a2e",
         accentColor: "#e94560",
         secondaryColor: "#16213e",
@@ -369,6 +389,26 @@ const NicheDatabase = {
         song: "Summer Vibes Deep House Mix",
         songLinkSpotify: "https://open.spotify.com/playlist/53FHC0FredNfhyXUVl2mb8",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: [
+            {
+                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
+                description: "Kit pietre massaggio naturali basalto caldo per SPA",
+                icon: "fa-spa",
+                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
+            },
+            {
+                name: "CIICII Forbici Parrucchiere Professionali",
+                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
+                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
+                icon: "fa-bottle-droplet",
+                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
+            }
+        ]
         primaryColor: "#00CED1",
         accentColor: "#FF6B35",
         secondaryColor: "#FF1493",
@@ -440,6 +480,26 @@ const NicheDatabase = {
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         topProducts: [
             {
+                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
+                description: "Kit pietre massaggio naturali basalto caldo per SPA",
+                icon: "fa-spa",
+                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
+            },
+            {
+                name: "CIICII Forbici Parrucchiere Professionali",
+                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
+                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
+                icon: "fa-bottle-droplet",
+                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
+            }
+        ]
+        topProducts: [
+            {
                 name: "Columbia Crestwood Mid Waterproof Scarponi da Trekking Uomo",
                 description: "Scarponi da trekking ed escursionismo impermeabili a vita media uomo",
                 icon: "fa-hiking",
@@ -508,6 +568,26 @@ const NicheDatabase = {
         song: "Beautiful - Christina Aguilera",
         songLinkSpotify: "https://open.spotify.com/track/3TCauNPqFiniaYHBvEVoHG",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
+        topProducts: [
+            {
+                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
+                description: "Kit pietre massaggio naturali basalto caldo per SPA",
+                icon: "fa-spa",
+                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
+            },
+            {
+                name: "CIICII Forbici Parrucchiere Professionali",
+                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
+                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
+                icon: "fa-bottle-droplet",
+                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
+            }
+        ]
     },
     "giochi-da-tavolo": {
         name: "Giochi da Tavolo",
@@ -538,6 +618,26 @@ const NicheDatabase = {
         song: "Smooth Operator - Sade",
         songLinkSpotify: "https://open.spotify.com/track/0f9h8awV1X4jSllHXXYdfX",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: [
+            {
+                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
+                description: "Kit pietre massaggio naturali basalto caldo per SPA",
+                icon: "fa-spa",
+                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
+            },
+            {
+                name: "CIICII Forbici Parrucchiere Professionali",
+                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
+                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
+                icon: "fa-bottle-droplet",
+                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
+            }
+        ]
         primaryColor: "#1a1a2e",
         accentColor: "#D4AF37",
         secondaryColor: "#f8f9fa",
