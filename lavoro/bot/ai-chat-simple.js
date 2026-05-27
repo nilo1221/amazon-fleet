@@ -626,35 +626,6 @@ const NicheDatabase = {
             }
         ]
     },
-    "fai-da-te": {
-        name: "Fai da Te",
-        tags: ["fai", "da", "te", "fai-da-te", "bricolage", "attrezzi", "utensili", "trapano", "avvitatore", "cassetta", "attrezzi", "lavori", "domestici", "ferramenta", "strumenti", "manuali", "elettrici", "batteria", "pun", "viti", "chiave", "cacciavite", "martello", "pinza"],
-        url: "/fai-da-te/index.html",
-        personality: "practical",
-        valueProp: "Ho selezionato i migliori attrezzi e utensili per i tuoi lavori di fai da te e bricolage.",
-        song: "Working for the Weekend - Loverboy",
-        songLinkSpotify: "https://open.spotify.com/track/7l8Rd8O3x2d5q6d5l8R9d5l",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        topProducts: [
-            {
-                name: "DEKO Cassetta Attrezzi Completa con Trapano Avvitatore Batteria 12V, 238 Pezzi",
-                description: "Cassetta attrezzi completa con trapano avvitatore a batteria 12V e set di 238 pezzi",
-                icon: "fa-tools",
-                link: "https://www.amazon.it/DEKO-Cassetta-Attrezzi-Avvitatore-Valigetta/dp/B0CW5CH1QJ?linkCode=ll2&tag=l0c39-21&linkId=71c09eaa6530ec3c52e33c09cf7947af&ref=_as_li_ss_tl"
-            }
-        ]
-    },
-    "cinema-tv": {
-        name: "Cinema & TV",
-        tags: ["cinema", "tv", "televisione", "proiettore", "home", "theater", "film", "serie", "4k", "ultra", "hd", "smart", "tv", "schermo", "video", "streaming"],
-        url: "/cinema-tv/index.html",
-        personality: "entertainment",
-        valueProp: "Ho selezionato i migliori prodotti per il tuo home cinema e intrattenimento.",
-        song: "Video Killed the Radio Star - The Buggles",
-        songLinkSpotify: "https://open.spotify.com/track/6t1FIJlZWTQfIZhsGjaulM",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        topProducts: []
-    },
     "dvd-bluray": {
         name: "DVD & Blu-ray",
         tags: ["dvd", "bluray", "film", "serie", "tv", "collezione", "box", "set", "4k", "ultra", "hd"],
@@ -1685,18 +1656,6 @@ function getContesto() {
     if (currentPath.includes('giochi-da-tavolo') || currentUrl.includes('giochi') || currentUrl.includes('tavolo') || currentUrl.includes('board')) {
         return 'giochi';
     }
-    if (currentPath.includes('cinema-tv') || currentUrl.includes('cinema') || currentUrl.includes('tv') || currentUrl.includes('televisione') || currentUrl.includes('proiettore') || currentUrl.includes('film')) {
-        return 'cinema-tv';
-    }
-    if (currentPath.includes('fai-da-te') || currentUrl.includes('fai') || currentUrl.includes('da') || currentUrl.includes('te') || currentUrl.includes('attrezzi') || currentUrl.includes('bricolage')) {
-        return 'fai-da-te';
-    }
-    if (currentPath.includes('abbigliamento-ciclismo') || currentUrl.includes('ciclismo') || currentUrl.includes('abbigliamento') || currentUrl.includes('sport')) {
-        return 'abbigliamento-ciclismo';
-    }
-    if (currentPath.includes('biciclette-mobilita') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
-        return 'biciclette-mobilita';
-    }
     if (currentPath.includes('libri-ereader') || currentUrl.includes('libri') || currentUrl.includes('ereader') || currentUrl.includes('lettura')) {
         return 'libri';
     }
@@ -2660,8 +2619,6 @@ const relatedCategories = {
     'benessere-cura-personale': ['profumi-bellezza', 'arredamento-casa', 'parrucchiere-barbiere', 'snack-bevande'],
     'dvd-bluray': ['abbigliamento-serie-tv-film', 'snack-bevande'],
     'studio-fotografico': ['tech', 'smartphone-tech', 'snack-bevande'],
-    'fai-da-te': ['tech', 'snack-bevande', 'outdoor-camping'],
-    'cinema-tv': ['tech', 'smartphone-tech', 'snack-bevande'],
     'giochi-da-tavolo': ['elite-gaming-gear', 'snack-bevande'],
     'libri-ereader': ['tech', 'smartphone-tech', 'manga-anime', 'snack-bevande'],
     'mare-spiaggia': ['viaggi-vacanze', 'outdoor-camping', 'snack-bevande'],
