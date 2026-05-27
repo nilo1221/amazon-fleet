@@ -52,16 +52,53 @@ function trackCategoryVisit(categoryKey) {
     saveUserPreferences();
 }
 
+// Get category name from context
+function getCategoryNameFromContext() {
+    const context = getContesto();
+    
+    // Map context codes to category names
+    const contextNames = {
+        'homepage': 'Smart Choices Guide',
+        'mare': 'Mare & Spiaggia',
+        'pc': 'Elite Gaming Gear',
+        'fitness': 'Fitness Casa',
+        'smart-home': 'Smart Home & Domotica',
+        'pet-care': 'Pet Care Intelligente',
+        'parrucchiere-barbiere': 'Parrucchiere & Barbiere',
+        'abbigliamento-serie-tv-film': 'Cinema & TV',
+        'biciclette-mobilita': 'Biciclette & Mobilità',
+        'smartphone': 'Smartphone & Tech',
+        'tech': 'Tech',
+        'moda-donna': 'Moda Donna',
+        'moda-uomo': 'Moda Uomo',
+        'arredamento': 'Arredamento Casa',
+        'accessori': 'Accessori Moda',
+        'benessere': 'Benessere & Cura Personale',
+        'cucina': 'Cucina Moderna & Tech',
+        'libri': 'Libri & E-Reader',
+        'outdoor': 'Outdoor & Camping',
+        'ufficio': 'Ufficio Produttivo',
+        'viaggi': 'Viaggi & Vacanze',
+        'giochi': 'Giochi da Tavolo',
+        'profumi': 'Profumi & Bellezza',
+        'sostenibilita': 'Sostenibilità & Eco-Friendly',
+        'dvd': 'DVD & Blu-ray'
+    };
+    
+    return contextNames[context] || 'questa categoria';
+}
+
 // Get personalized greeting based on visit history
 function getPersonalizedGreeting() {
     const totalVisits = Object.values(userPreferences.visits || {}).reduce((a, b) => a + b, 0);
+    const categoryName = getCategoryNameFromContext();
     
     if (totalVisits === 0) {
-        return 'Ehi ciao! 👋 Stavo giusto guardando questi prodotti su Amazon, ci sono un sacco di cose interessanti. Dimmi, cosa ti serve oggi? Se mi dici cosa stai cercando, ti faccio vedere quello che secondo me vale la pena.';
+        return `Ciao! Sei qui per approfondire ${categoryName}? Posso mostrarti il kit che stanno scegliendo tutti oggi. Vuoi dare un'occhiata?`;
     } else if (totalVisits < 3) {
-        return 'Ehi bentornato! 👋 È bello rivederti. Vuoi continuare a guardare dove avevi lasciato o cerchi qualcosa di nuovo oggi?';
+        return `Ciao bentornato! Sei qui per approfondire ${categoryName}? Posso mostrarti il kit che stanno scegliendo tutti oggi. Vuoi dare un'occhiata?`;
     } else {
-        return 'Ehi bentornato! 👋 Ti conosco già fammi indovinare... vuoi vedere i prodotti che ti hanno interessato di più l\'altra volta?';
+        return `Ciao bentornato! Sei qui per approfondire ${categoryName}? Posso mostrarti il kit che stanno scegliendo tutti oggi. Vuoi dare un'occhiata?`;
     }
 }
 
@@ -1565,6 +1602,11 @@ function getContesto() {
     const currentPath = window.location.pathname;
     const currentUrl = window.location.href.toLowerCase();
     
+    // Homepage
+    if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html')) {
+        return 'homepage';
+    }
+    
     // Controlla se siamo in una pagina specifica
     if (currentPath.includes('mare-spiaggia') || currentUrl.includes('mare') || currentUrl.includes('spiaggia')) {
         return 'mare';
@@ -1613,9 +1655,6 @@ function getContesto() {
     }
     if (currentPath.includes('giochi-da-tavolo') || currentUrl.includes('giochi') || currentUrl.includes('tavolo') || currentUrl.includes('board')) {
         return 'giochi';
-    }
-    if (currentPath.includes('parrucchiere-barbiere') || currentUrl.includes('parrucchiere') || currentUrl.includes('barbiere') || currentUrl.includes('salone') || currentUrl.includes('forbici') || currentUrl.includes('rasoio')) {
-        return 'parrucchiere-barbiere';
     }
     if (currentPath.includes('libri-ereader') || currentUrl.includes('libri') || currentUrl.includes('ereader') || currentUrl.includes('lettura')) {
         return 'libri';
@@ -2280,25 +2319,30 @@ function showComboMessage() {
         // Usa le combo del database
         const randomCombo = comboData.combos[Math.floor(Math.random() * comboData.combos.length)];
         
-        const message = `
-            <div class="urgency-combo-message">
-                <p>${randomCombo.message}</p>
-                <div class="combo-container">
-                    <div class="combo-title">📦 Combo consigliata:</div>
-                    <div>
-                        <a href="${randomCombo.product1.link}" target="_blank" onclick="trackComboClick('${context}', 1)" class="combo-link">
-                            1. ${randomCombo.product1.name}
-                        </a>
-                        <a href="${randomCombo.product2.link}" target="_blank" onclick="trackComboClick('${context}', 2)" class="combo-link">
-                            2. ${randomCombo.product2.name}
-                        </a>
+        // Verifica che product1 e product2 esistano
+        if (!randomCombo.product1 || !randomCombo.product2 || !randomCombo.product1.link || !randomCombo.product2.link) {
+            console.log('Invalid combo data - missing products or links, using fallback');
+        } else {
+            const message = `
+                <div class="urgency-combo-message">
+                    <p>${randomCombo.message}</p>
+                    <div class="combo-container">
+                        <div class="combo-title">📦 Combo consigliata:</div>
+                        <div>
+                            <a href="${randomCombo.product1.link}" target="_blank" onclick="trackComboClick('${context}', 1)" class="combo-link">
+                                1. ${randomCombo.product1.name}
+                            </a>
+                            <a href="${randomCombo.product2.link}" target="_blank" onclick="trackComboClick('${context}', 2)" class="combo-link">
+                                2. ${randomCombo.product2.name}
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
-        
-        addMessage(message, 'bot');
-        return;
+            `;
+            
+            addMessage(message, 'bot');
+            return;
+        }
     }
     
     // Fallback: usa il sistema vecchio con catalogoProdotti
@@ -2631,16 +2675,10 @@ function toggleChat() {
 
         // Show welcome message with macro-categories on first open
         const chatMessages = document.getElementById('chat-messages');
-        if (chatMessages && chatMessages.children.length === 0) {
+        
+        // Always show welcome message when chat is opened
+        if (chatMessages) {
             showWelcomeMessage();
-        } else if (chatMessages) {
-            // If chat has messages but no categories visible, show macro-categories
-            const hasQuickReplies = chatMessages.querySelector('.quick-replies');
-            if (!hasQuickReplies) {
-                setTimeout(() => {
-                    showMacroCategories();
-                }, 300);
-            }
         }
     }
 }
@@ -2697,7 +2735,7 @@ function showWelcomeMessage() {
     
     // Show "Pausa Ristoro 🥤" immediately after welcome (Strategy: break the ice with low-cost impulse purchase)
     setTimeout(() => {
-        addMessage("Ti stai godendo la navigazione? 😊 Ecco i prodotti preferiti degli altri utenti per una pausa veloce mentre esplori le altre categorie. La sessione si fa intensa? Recupera le energie con i nostri must-have per la pausa! <a href='https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl' target='_blank' style='color: #007bff; text-decoration: none;'>⚡ Powerade Sport Drink</a> | <a href='https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl' target='_blank' style='color: #007bff; text-decoration: none;'>🥤 Pepsi Max</a>", 'bot');
+        addMessage("<div style='padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);'><strong style='font-size: 1.1em; display: block; margin-bottom: 8px;'>✨ Pausa Smart</strong><p style='margin: 0; font-size: 0.95em; line-height: 1.5;'>Mentre esplori, i nostri clienti più fedeli scelgono questi must-have per ricaricare le energie:</p><div style='margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;'><a href='https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>⚡ Powerade</a><a href='https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>🥤 Pepsi Max</a></div></div>", 'bot');
     }, 400);
     
     // Check for seasonal occasion (no personal occasions like birthdays)
@@ -3027,6 +3065,9 @@ async function sendMessage() {
     addMessage(message, 'user');
     chatInput.value = '';
     
+    // Show typing indicator
+    showTypingIndicator();
+    
     // Reset abandonment timer on user interaction
     resetAbandonmentTimer();
     
@@ -3038,6 +3079,9 @@ async function sendMessage() {
     
     // Remove loading indicator
     removeLoadingIndicator();
+    
+    // Hide typing indicator
+    hideTypingIndicator();
     
     setTimeout(async () => {
         if (category) {
@@ -3161,6 +3205,27 @@ function addMessage(text, sender) {
     // Track conversation for learning
     if (sender === 'user') {
         trackUserInteraction(text);
+    }
+}
+
+// Show typing indicator
+function showTypingIndicator() {
+    const chatMessages = document.getElementById('chat-messages');
+    if (!chatMessages) return;
+    
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'chat-message bot loading';
+    typingDiv.id = 'typing-indicator';
+    typingDiv.innerHTML = '<div class="typing-indicator"><span style="animation: typing 0.6s infinite">●</span><span style="animation: typing 0.6s 0.2s infinite">●</span><span style="animation: typing 0.6s 0.4s infinite">●</span></div>';
+    chatMessages.appendChild(typingDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Hide typing indicator
+function hideTypingIndicator() {
+    const typingIndicator = document.getElementById('typing-indicator');
+    if (typingIndicator) {
+        typingIndicator.remove();
     }
 }
 
@@ -3766,9 +3831,9 @@ document.addEventListener('DOMContentLoaded', function() {
     //     startUrgencyTimer();
     // }, 2000);
     
-    // Add scroll detection
+    // Disable scroll detection for combo messages
     window.addEventListener('scroll', detectScroll);
-    window.addEventListener('scroll', detectComboScroll);
+    // window.addEventListener('scroll', detectComboScroll);
     
     // Add click outside to close proactive bubble
     document.addEventListener('click', function(event) {
