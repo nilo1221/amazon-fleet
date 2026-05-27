@@ -1795,10 +1795,6 @@
                 <!-- Horizontal Product Strip (Blocco B) - Scelte della Redazione (Selezione Fissa) -->
                 <div class="mb-5">
                     <div class="d-flex flex-nowrap overflow-auto gap-3 pb-2 justify-content-center">
-                        <a href="snack-bevande/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
-                            <i class="fas fa-glass-water fa-2xl text-info mb-2"></i>
-                            <div class="fw-bold small">Pausa Ristoro 🥤</div>
-                        </a>
                         <a href="abbigliamento-serie-tv-film/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
                             <i class="fas fa-film fa-2xl text-danger mb-2"></i>
                             <div class="fw-bold small">Manga, Anime & Serie TV</div>
@@ -1811,46 +1807,42 @@
                             <i class="fas fa-utensils fa-2xl text-success mb-2"></i>
                             <div class="fw-bold small">Cucina Moderna & Tech</div>
                         </a>
-                        <a href="biciclette-mobilita/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener" id="biciclette-novita-item">
+                        <a href="biciclette-mobilita/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
                             <i class="fas fa-bicycle fa-2xl text-success mb-2"></i>
                             <div class="fw-bold small">Biciclette & Mobilità</div>
+                        </a>
+                        <a href="abbigliamento-ciclismo/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener" id="abbigliamento-ciclismo-novita-item">
+                            <i class="fas fa-tshirt fa-2xl text-primary mb-2"></i>
+                            <div class="fw-bold small">Abbigliamento Ciclismo</div>
                             <span class="badge rounded-pill bg-danger" style="font-size: 0.65rem;">Novità</span>
-                            <div class="text-muted" style="font-size: 0.65rem; font-weight: 600; margin-top: 4px;" id="biciclette-countdown">Caricamento...</div>
+                            <div class="text-muted" style="font-size: 0.65rem; font-weight: 600; margin-top: 4px;" id="abbigliamento-ciclismo-countdown">Caricamento...</div>
                         </a>
                     </div>
                 </div>
 
                 <script>
                     (function() {
-                        // Reset localStorage per far ripartire il timer
-                        localStorage.removeItem('biciclette_mobilita_created');
-                        
-                        // Timer 24 ore per Biciclette & Mobilità
-                        let bicicletteCreated = localStorage.getItem('biciclette_mobilita_created');
+                        // Timer 24 ore per Abbigliamento Ciclismo
+                        let abbigliamentoCreated = localStorage.getItem('abbigliamento_ciclismo_created');
                         const now = new Date().getTime();
                         
-                        if (!bicicletteCreated) {
-                            bicicletteCreated = now;
-                            localStorage.setItem('biciclette_mobilita_created', bicicletteCreated);
+                        if (!abbigliamentoCreated) {
+                            abbigliamentoCreated = now;
+                            localStorage.setItem('abbigliamento_ciclismo_created', abbigliamentoCreated);
                         }
                         
-                        const createdTime = parseInt(bicicletteCreated);
+                        const createdTime = parseInt(abbigliamentoCreated);
                         const expiryTime = createdTime + (24 * 60 * 60 * 1000); // 24 ore
                         
-                        function updateBiciclettesCountdown() {
+                        function updateAbbigliamentoCountdown() {
                             const currentTime = new Date().getTime();
                             const timeLeft = expiryTime - currentTime;
                             
                             if (timeLeft <= 0) {
                                 // Rimuovi dalla striscia orizzontale
-                                const item = document.getElementById('biciclette-novita-item');
+                                const item = document.getElementById('abbigliamento-ciclismo-novita-item');
                                 if (item) {
                                     item.style.display = 'none';
-                                }
-                                // Mostra la card nella sezione delle nicchie fisse
-                                const card = document.getElementById('biciclette-card');
-                                if (card) {
-                                    card.style.display = 'block';
                                 }
                                 return;
                             }
@@ -1859,15 +1851,15 @@
                             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
                             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
                             
-                            const countdownElement = document.getElementById('biciclette-countdown');
+                            const countdownElement = document.getElementById('abbigliamento-ciclismo-countdown');
                             if (countdownElement) {
                                 countdownElement.textContent = 
                                     `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
                             }
                         }
                         
-                        setInterval(updateBiciclettesCountdown, 1000);
-                        updateBiciclettesCountdown();
+                        setInterval(updateAbbigliamentoCountdown, 1000);
+                        updateAbbigliamentoCountdown();
                     })();
                 </script>
                 
