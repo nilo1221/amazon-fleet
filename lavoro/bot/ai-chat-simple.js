@@ -322,11 +322,6 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
             },
             {
-                name: "CIICII Forbici Parrucchiere Professionali",
-                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
-                icon: "fa-cut",
-                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
-            },
             {
                 name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
                 description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
@@ -335,6 +330,20 @@ const NicheDatabase = {
             }
         ]
         primaryColor: "#1a1a2e",
+        topProducts: [
+            {
+                name: "SCHWERTKRONE Rasoio a Mano Libera con Manico Prezioso",
+                description: "Rasoio tradizionale premium con 100 lame Derby incluse",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/SCHWERTKRONE-Prezioso-Barbiere-Rasatura-Definizione/dp/B0957WPKP4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-3-spons&aref=6byR8fHsbO&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ba67fb8d666610e44040abf78006017&ref=_as_li_ss_tl"
+            },
+            {
+                name: "CIICII Forbici Parrucchiere Professionali",
+                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
+            }
+        ]
         accentColor: "#e94560",
         secondaryColor: "#16213e",
         topProducts: [
@@ -397,11 +406,6 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
             },
             {
-                name: "CIICII Forbici Parrucchiere Professionali",
-                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
-                icon: "fa-cut",
-                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
-            },
             {
                 name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
                 description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
@@ -486,11 +490,6 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
             },
             {
-                name: "CIICII Forbici Parrucchiere Professionali",
-                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
-                icon: "fa-cut",
-                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
-            },
             {
                 name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
                 description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
@@ -576,11 +575,6 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
             },
             {
-                name: "CIICII Forbici Parrucchiere Professionali",
-                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
-                icon: "fa-cut",
-                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
-            },
             {
                 name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
                 description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
@@ -626,11 +620,6 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
             },
             {
-                name: "CIICII Forbici Parrucchiere Professionali",
-                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
-                icon: "fa-cut",
-                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
-            },
             {
                 name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
                 description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
@@ -639,6 +628,20 @@ const NicheDatabase = {
             }
         ]
         primaryColor: "#1a1a2e",
+        topProducts: [
+            {
+                name: "SCHWERTKRONE Rasoio a Mano Libera con Manico Prezioso",
+                description: "Rasoio tradizionale premium con 100 lame Derby incluse",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/SCHWERTKRONE-Prezioso-Barbiere-Rasatura-Definizione/dp/B0957WPKP4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-3-spons&aref=6byR8fHsbO&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ba67fb8d666610e44040abf78006017&ref=_as_li_ss_tl"
+            },
+            {
+                name: "CIICII Forbici Parrucchiere Professionali",
+                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
+            }
+        ]
         accentColor: "#D4AF37",
         secondaryColor: "#f8f9fa",
         topProducts: [
