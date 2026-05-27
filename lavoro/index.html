@@ -2651,13 +2651,14 @@
                     const stripItem = document.querySelector(`a[href="${niche.url}"].featured-strip-item`);
                     const card = document.querySelector(`.card-body:has(.${niche.iconClass})`).closest('.col-lg-4');
                     
-                    if (currentTimeLeft <= 0) {
+                    // Timer disabilitato - le categorie fisse sono sempre visibili
+                    /* if (currentTimeLeft <= 0) {
                         // Timer scaduto - nascondi la nicchia dalla striscia orizzontale
                         if (stripItem) {
                             stripItem.style.display = 'none';
                         }
                         return;
-                    }
+                    } */
                     
                     // Mostra timer se gli elementi esistono
                     if (stripItem) {
