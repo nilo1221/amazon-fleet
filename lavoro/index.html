@@ -2597,33 +2597,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             const TIMER_HOURS = 24;
             
-            // Configurazione nicchie con timer
+            // Configurazione nicchie con timer (solo per NICCHIE NUOVE - 24 ore)
             const nichesWithTimer = [
-                {
-                    key: 'bibite_bevande_created',
-                    url: 'snack-bevande/index.html',
-                    iconClass: 'fa-can-food'
-                },
-                {
-                    key: 'musica_vinili_created',
-                    url: 'musica-vinili/index.html',
-                    iconClass: 'fa-compact-disc'
-                },
-                {
-                    key: 'biciclette_mobilita_created',
-                    url: 'biciclette-mobilita/index.html',
-                    iconClass: 'fa-bicycle'
-                },
-                {
-                    key: 'parrucchiere_barbiere_created',
-                    url: 'parrucchiere-barbiere/index.html',
-                    iconClass: 'fa-cut'
-                },
-                {
-                    key: 'manga_anime_created',
-                    url: 'manga-anime/index.html',
-                    iconClass: 'fa-book-open'
-                }
+                // Array vuoto - le categorie fisse non hanno timer
+                // Aggiungere solo NICCHIE NUOVE quando create
             ];
             
             // Funzione per formattare il tempo
