@@ -774,6 +774,7 @@ const NicheDatabase = {
         song: "Video Killed the Radio Star - The Buggles",
         songLinkSpotify: "https://open.spotify.com/track/6t1FIJlZWTQfIZhsGjaulM",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: []
     },
     "dvd-bluray": {
         name: "DVD & Blu-ray",
