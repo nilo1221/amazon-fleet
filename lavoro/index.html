@@ -125,6 +125,16 @@
             background-color: var(--table-light);
             transform: scale(1.01);
         }
+        
+        /* Glow effect per icone carosello */
+        .featured-strip-item i {
+            transition: all 0.3s ease;
+        }
+        
+        .featured-strip-item:hover i {
+            filter: drop-shadow(0 0 12px currentColor);
+            transform: scale(1.15);
+        }
     </style>
     <link rel="stylesheet" href="bot/ai-chat-simple.css">
 </head>
@@ -1786,23 +1796,23 @@
                 <div class="mb-5">
                     <div class="d-flex flex-nowrap overflow-auto gap-3 pb-2 justify-content-center">
                         <a href="snack-bevande/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
-                            <i class="fas fa-glass-water fa-2x text-info mb-2"></i>
+                            <i class="fas fa-glass-water fa-2xl text-info mb-2"></i>
                             <div class="fw-bold small">Pausa Ristoro 🥤</div>
                         </a>
                         <a href="abbigliamento-serie-tv-film/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
-                            <i class="fas fa-book-open fa-2x text-danger mb-2"></i>
+                            <i class="fas fa-film fa-2xl text-danger mb-2"></i>
                             <div class="fw-bold small">Manga, Anime & Serie TV</div>
                         </a>
                         <a href="parrucchiere-barbiere/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
-                            <i class="fas fa-scissors fa-2x text-warning mb-2"></i>
+                            <i class="fas fa-scissors fa-2xl text-warning mb-2"></i>
                             <div class="fw-bold small">Parrucchiere & Barbiere</div>
                         </a>
                         <a href="cucina-elettrodomestici/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
-                            <i class="fas fa-fire-burner fa-2x text-success mb-2"></i>
+                            <i class="fas fa-utensils fa-2xl text-success mb-2"></i>
                             <div class="fw-bold small">Cucina Moderna & Tech</div>
                         </a>
                         <a href="ufficio-produttivo/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
-                            <i class="fas fa-book-reader fa-2x text-primary mb-2"></i>
+                            <i class="fas fa-book-reader fa-2xl text-primary mb-2"></i>
                             <div class="fw-bold small">Ufficio Produttivo & E-Reader</div>
                         </a>
                     </div>
