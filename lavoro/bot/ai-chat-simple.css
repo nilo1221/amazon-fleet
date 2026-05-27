@@ -46,6 +46,40 @@
     }
 }
 
+/* Fade-in animation for chat messages */
+@keyframes messageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse animation for bot button when inactive */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+    }
+}
+
+/* Typing indicator animation */
+@keyframes typing {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
 .urgency-combo-message {
     animation: smoothFadeIn 1s ease-out;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -126,15 +160,18 @@
     z-index: 9999;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
 }
 
 #ai-chat-button:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
+    animation: none;
 }
 
 #ai-chat-button.active {
     background: var(--bot-current-bg);
+    animation: none;
 }
 
 /* Dynamic color themes for bot button */
@@ -269,11 +306,11 @@
 }
 
 #ai-chat-window {
-    position: fixed;
-    bottom: 100px;
-    right: 30px;
+    position: fixed !important;
+    bottom: 100px !important;
+    right: 30px !important;
     width: 500px;
-    max-height: 650px;
+    max-height: 700px;
     background: white;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
@@ -517,6 +554,7 @@
     font-size: 16px;
     line-height: 1.5;
     word-wrap: break-word;
+    animation: messageFadeIn 0.3s ease-out;
 }
 
 .chat-message.user {
@@ -817,28 +855,35 @@
 
 /* Quick Replies */
 .quick-replies {
-    margin: 10px 0;
+    margin: 15px 0;
+    animation: messageFadeIn 0.3s ease-out;
 }
 
 .quick-replies-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 10px;
 }
 
 #ai-chat-window .quick-reply-card {
     background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 12px;
-    padding: 8px;
+    padding: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
-    min-height: 60px;
+    gap: 6px;
+    min-height: 70px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#ai-chat-window .quick-reply-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+    border-color: rgba(102, 126, 234, 0.3);
 }
 
 #ai-chat-window .quick-reply-card:active {
