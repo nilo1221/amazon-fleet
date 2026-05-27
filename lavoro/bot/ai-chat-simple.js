@@ -280,6 +280,24 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/Naruto-1-Masashi-Kishimoto-ebook/dp/B0BWCVY8PS?&linkCode=ll2&tag=l0c39-21&linkId=469bd1c492b998b84a0a2ca7915d22dc&ref=_as_li_ss_tl"
             },
             {
+                name: "Fire Punch Complete Box",
+                description: "Edizione completa della serie acclamata dalla critica di Tatsuki Fujimoto",
+                icon: "fa-box",
+                link: "https://www.amazon.it/Fire-punch-Complete-Tatsuki-Fujimoto/dp/8822626656?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.R3TQEJ-TKD2eCa47iSUOUT0FZDxCgIdEWGSgLTMK9RcZ6Nf-gPEuaBgi0-bJSnKXcr48-ATkLYz_U-t5_xZczCx-pO3j2xbp5FDtKguSD061snnOeUoRSGIwsERaPtSRPsL7Z7VjHAsXUt5SlO-LFXhIRtpnpPrJRAWgGzM7az_mdqLvSvAInVM8l2bgcOYSKUetDzOd44thZPYYHh4WbS8k7rWCNhRutbVNrJuAtBw.xKmVT_y4Zjh4S2eOZSh_s1wzSu7AIc4z1zDe4BCIZxo&dib_tag=se&keywords=box&qid=1779861347&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-2-ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=b9db34d67b703d5f2797b6c0c79a7b0a&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Suzume Complete Box",
+                description: "Edizione completa del manga acclamato di Makoto Shinkai",
+                icon: "fa-box",
+                link: "https://www.amazon.it/Suzume-Complete-box-Makoto-Shinkai/dp/882264896X?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.FwUc2l1f7JvDSyF0IpLxVXi-xEVohdrAkWozVq5tEBMZ6Nf-gPEuaBgi0-bJSnKXoRHJbk9Sq60N9y1ubzhHHGw43KxH8S9g_oZ8ripBw_z0zpmFutLCLV7NbvFM2OfVGGOT8Jk0-F1akLwjOeOQiLXQPIP076VzEdZyASG776CKadOEe9-51SPFEFUcSiqrSJwxjkORGjc5gjT36QtBHWjHuk4-DDRGgQPG7Tle4vc.f5WzoLFZvE4DkHMKzt18IEtTh7-kspFZamSufV8ReSw&dib_tag=se&keywords=box&qid=1779861402&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-6-ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=a92b6706e6de73c53c15e8c3b9422571&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Tex 75. Box legno. Con shopper in tela, cartolina",
+                description: "Edizione premium del fumetto western italiano in box legno",
+                icon: "fa-box",
+                link: "https://www.amazon.it/Tex-legno-shopper-tela-cartolina/dp/8869618862?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.FwUc2l1f7JvDSyF0IpLxVXi-xEVohdrAkWozVq5tEBMZ6Nf-gPEuaBgi0-bJSnKXoRHJbk9Sq60N9y1ubzhHHGw43KxH8S9g_oZ8ripBw_z0zpmFutLCLV7NbvFM2OfVGGOT8Jk0-F1akLwjOeOQiLXQPIP076VzEdZyASG776CKadOEe9-51SPFEFUcSiqrSJwxjkORGjc5gjT36QtBHWjHuk4-DDRGgQPG7Tle4vc.f5WzoLFZvE4DkHMKzt18IEtTh7-kspFZamSufV8ReSw&dib_tag=se&keywords=box&qid=1779861402&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-8-ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=1f8c36f87dbc7dbe6949b07e8214364b&ref=_as_li_ss_tl"
+            },
+            {
                 name: "Demon Slayer - Kimetsu no yaiba 1: Digital Edition eBook",
                 description: "Demon Slayer è una delle serie più amate dai lettori di ogni età",
                 icon: "fa-tablet-alt",
@@ -311,6 +329,18 @@ const NicheDatabase = {
                 description: "Edizione 30° anniversario del Black Album dei Metallica in vinile",
                 icon: "fa-bluetooth-b",
                 link: "https://www.amazon.it/Black-Album-30Th-Anniversary-Libro/dp/B097NP5HXH?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-9&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=a091a665e57f1afbdd3aa256f99c69a3&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
+                description: "Kit pietre massaggio naturali basalto caldo per SPA",
+                icon: "fa-spa",
+                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
+                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
+                icon: "fa-bottle-droplet",
+                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
             }
         ]
     },
@@ -535,6 +565,12 @@ const NicheDatabase = {
                 description: "Forbici capelli in acciaio inossidabile con design ergonomico",
                 icon: "fa-cut",
                 link: "https://www.amazon.it/Parrucchiere-Professionali-6Pollici-Inossidabile-Barbiere/dp/B088BCF6NP?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-4-spons&aref=c8jD8vrstC&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=8fb2796e9175ae201e4e22f53eb542b7&ref=_as_li_ss_tl"
+            },
+            {
+                name: "CIICII Forbici Parrucchiere Professionali",
+                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
+                icon: "fa-cut",
+                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
             },
             {
                 name: "Carrello Parrucchiere Professionale Cassetti Estraibili",
