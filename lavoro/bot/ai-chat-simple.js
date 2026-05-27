@@ -642,9 +642,9 @@ const NicheDatabase = {
         url: "/biciclette-mobilita/index.html",
         personality: "adventure",
         valueProp: "Ho analizzato le specifiche tecniche per te. Telaio, batteria, autonomia e freni sono i fattori chiave per la tua mobilità.",
-        song: "Bicycle Race - Queen",
-        songLinkSpotify: "https://open.spotify.com/track/1g9sK0mV7zHlXhJz8m5W8m",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        song: "Born to Be Wild - Steppenwolf",
+        songLinkSpotify: "https://open.spotify.com/track/2VPGmrcBw5X4yAu3B8UZNE",
+        songLinkAmazon: "https://www.amazon.it/Born-Be-Wild-Steppenwolf/dp/B084T91B1W?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         topProducts: [
             {
                 name: "IBK Bicicletta Bici MTB 26\" Mountain Bike BIAMMORTIZZATA",
