@@ -8,6 +8,76 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../bot/ai-chat-simple.css">
+    <style>
+        :root {
+            --primary-color: #00ff88;
+            --secondary-color: #1a1a2e;
+            --accent-color: #ffcc00;
+            --success-color: #00ff88;
+            --cycling-color: #00ff88;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #00ff88 50%, #ffcc00 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.5);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4e 100%);
+            color: white;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+            color: #1a1a2e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #00ff88 0%, #ffcc00 100%);
+            color: #1a1a2e;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-amazon:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.5);
+        }
+        
+        .card-title {
+            color: #00ff88;
+        }
+        
+        .text-muted {
+            color: #a0a0c0 !important;
+        }
+    </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYTD10EV8T"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -23,7 +93,7 @@
             <a class="navbar-brand" href="../index.html">
                 <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -40,7 +110,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section bg-gradient" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px 0;">
+    <section class="hero-section">
         <div class="container text-center text-white">
             <h1 class="display-4 fw-bold mb-3"><i class="fas fa-bicycle me-3"></i>Abbigliamento Ciclismo</h1>
             <p class="lead mb-4">La guida completa all'abbigliamento e accessori per il ciclismo. Trova tutto ciò che serve per pedalare in sicurezza e comfort.</p>
@@ -61,7 +131,7 @@
             <!-- HOMTOL Tuta Ciclismo -->
             <div class="row mt-4">
                 <div class="col-lg-8 mx-auto">
-                    <div class="product-card product-card-biciclette card">
+                    <div class="product-card card">
                         <div class="card-body p-4">
                             <span class="category-badge">
                                 <i class="fas fa-tshirt me-1"></i>Abbigliamento
@@ -101,7 +171,7 @@
                                 </div>
                             </div>
                             
-                            <a href="https://www.amazon.it/HOMTOL-Abbigliamento-Pantaloncini-Traspirante-Asciugatura/dp/B09WTTT4DB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-8&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=a9e628388e8936065229065d0a285e1d&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100" onclick="gtag('event', 'affiliate_click', { 'product_name': 'HOMTOL Tuta Ciclismo', 'category': 'abbigliamento-ciclismo' });">
+                            <a href="https://www.amazon.it/HOMTOL-Abbigliamento-Pantaloncini-Traspirante-Asciugatura/dp/B09WTTT4DB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-8&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=a9e628388e8936065229065d0a285e1d&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon w-100" onclick="gtag('event', 'affiliate_click', { 'product_name': 'HOMTOL Tuta Ciclismo', 'category': 'abbigliamento-ciclismo' });">
                                 <i class="fab fa-amazon me-2"></i>Acquista su Amazon
                             </a>
                         </div>
@@ -112,7 +182,7 @@
             <!-- Tuta Ciclismo Completa con Guanti e Occhiali -->
             <div class="row mt-4">
                 <div class="col-lg-8 mx-auto">
-                    <div class="product-card product-card-biciclette card">
+                    <div class="product-card card">
                         <div class="card-body p-4">
                             <span class="category-badge">
                                 <i class="fas fa-tshirt me-1"></i>Abbigliamento
@@ -152,7 +222,7 @@
                                 </div>
                             </div>
                             
-                            <a href="https://www.amazon.it/Abbigliamento-Ciclismo-Pantaloncini-imbottito-MTB%EF%BC%8BGuanti/dp/B0CTDGVJ3L?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-12&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6e353cbe213e027be887cb9aab1aef8&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100" onclick="gtag('event', 'affiliate_click', { 'product_name': 'Tuta Ciclismo Completa con Guanti', 'category': 'abbigliamento-ciclismo' });">
+                            <a href="https://www.amazon.it/Abbigliamento-Ciclismo-Pantaloncini-imbottito-MTB%EF%BC%8BGuanti/dp/B0CTDGVJ3L?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-12&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6e353cbe213e027be887cb9aab1aef8&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon w-100" onclick="gtag('event', 'affiliate_click', { 'product_name': 'Tuta Ciclismo Completa con Guanti', 'category': 'abbigliamento-ciclismo' });">
                                 <i class="fab fa-amazon me-2"></i>Acquista su Amazon
                             </a>
                         </div>
@@ -163,7 +233,7 @@
             <!-- X-TIGER Ciclismo Uomo 5D Gel Salopette -->
             <div class="row mt-4">
                 <div class="col-lg-8 mx-auto">
-                    <div class="product-card product-card-biciclette card">
+                    <div class="product-card card">
                         <div class="card-body p-4">
                             <span class="category-badge">
                                 <i class="fas fa-tshirt me-1"></i>Abbigliamento
@@ -203,7 +273,7 @@
                                 </div>
                             </div>
                             
-                            <a href="https://www.amazon.it/dp/B08TBD3TDJ?pd_rd_i=B08TBD3TDJ&pd_rd_w=aglq3&content-id=amzn1.sym.1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_p=1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_r=XTV7YVW7B28ED089QK7Q&pd_rd_wg=FvYuM&pd_rd_r=1358c35d-d9ef-4322-91ed-17f27df3c651&aref=O7aTTOb90U&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6ab1ef2b3389860a033474173b56b3f&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100" onclick="gtag('event', 'affiliate_click', { 'product_name': 'X-TIGER Ciclismo Uomo 5D Gel Salopette', 'category': 'abbigliamento-ciclismo' });">
+                            <a href="https://www.amazon.it/dp/B08TBD3TDJ?pd_rd_i=B08TBD3TDJ&pd_rd_w=aglq3&content-id=amzn1.sym.1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_p=1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_r=XTV7YVW7B28ED089QK7Q&pd_rd_wg=FvYuM&pd_rd_r=1358c35d-d9ef-4322-91ed-17f27df3c651&aref=O7aTTOb90U&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6ab1ef2b3389860a033474173b56b3f&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon w-100" onclick="gtag('event', 'affiliate_click', { 'product_name': 'X-TIGER Ciclismo Uomo 5D Gel Salopette', 'category': 'abbigliamento-ciclismo' });">
                                 <i class="fab fa-amazon me-2"></i>Acquista su Amazon
                             </a>
                         </div>
@@ -214,7 +284,7 @@
             <!-- Tuta Impermeabile Antipioggia -->
             <div class="row mt-4">
                 <div class="col-lg-8 mx-auto">
-                    <div class="product-card product-card-biciclette card">
+                    <div class="product-card card">
                         <div class="card-body p-4">
                             <span class="category-badge">
                                 <i class="fas fa-cloud-rain me-1"></i>Protezione Pioggia
@@ -254,7 +324,7 @@
                                 </div>
                             </div>
                             
-                            <a href="https://www.amazon.it/Auto-Accessori-Lupex-Impermeabile-Antipioggia/dp/B0BF5MXH19?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-47&th=1&linkCode=ll2&tag=l0c39-21&linkId=739862a3e171c23c5193803bc66f1de4&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100" onclick="gtag('event', 'affiliate_click', { 'product_name': 'Tuta Impermeabile Antipioggia', 'category': 'abbigliamento-ciclismo' });">
+                            <a href="https://www.amazon.it/Auto-Accessori-Lupex-Impermeabile-Antipioggia/dp/B0BF5MXH19?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-47&th=1&linkCode=ll2&tag=l0c39-21&linkId=739862a3e171c23c5193803bc66f1de4&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon w-100" onclick="gtag('event', 'affiliate_click', { 'product_name': 'Tuta Impermeabile Antipioggia', 'category': 'abbigliamento-ciclismo' });">
                                 <i class="fab fa-amazon me-2"></i>Acquista su Amazon
                             </a>
                         </div>
@@ -279,7 +349,7 @@
                 </div>
                 <div class="chat-subtitle">Abbigliamento Ciclismo</div>
             </div>
-            <button class="close-btn" onclick="toggleChat()">
+            <button class="close-btn" onclick="toggleChat()" title="Chiudi chat">
                 <i class="fas fa-times"></i>
             </button>
         </div>

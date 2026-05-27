@@ -66,6 +66,7 @@ function getCategoryNameFromContext() {
         'pet-care': 'Pet Care Intelligente',
         'parrucchiere-barbiere': 'Parrucchiere & Barbiere',
         'abbigliamento-serie-tv-film': 'Cinema & TV',
+        'abbigliamento-ciclismo': 'Abbigliamento Ciclismo',
         'biciclette-mobilita': 'Biciclette & Mobilità',
         'smartphone': 'Smartphone & Tech',
         'tech': 'Tech',
@@ -371,6 +372,45 @@ const NicheDatabase = {
         song: "Eye of the Tiger - Survivor",
         songLinkSpotify: "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
+    },
+    "abbigliamento-ciclismo": {
+        name: "Abbigliamento Ciclismo",
+        tags: ["ciclismo", "bici", "bicicletta", "mtb", "mountain", "bike", "abbigliamento", "tuta", "pantaloncini", "salopette", "maglietta", "guanti", "occhiali", "casco", "impermeabile", "antipioggia", "antivento", "giacca", "pantalone", "traspirante", "gel", "imbottito", "bretelle", "estivo", "invernale", "strada", "corsa", "pedalare", "sport", "outdoor"],
+        url: "/abbigliamento-ciclismo/index.html",
+        personality: "athletic",
+        valueProp: "Ho selezionato i migliori abbigliamenti e accessori per il ciclismo. Comfort, traspirabilità e protezione sono i criteri che ho considerato.",
+        song: "Bicycle Race - Queen",
+        songLinkSpotify: "https://open.spotify.com/track/1B2V4Q5uG7S8Y9Z0A1B2C3",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        primaryColor: "#00ff88",
+        accentColor: "#ffcc00",
+        secondaryColor: "#1a1a2e",
+        topProducts: [
+            {
+                name: "HOMTOL Abbigliamento Ciclismo Set Manica Corta Tuta Completa",
+                description: "Tuta completa per il ciclismo estivo con pantaloncini imbottiti in gel traspirante",
+                icon: "fa-bicycle",
+                link: "https://www.amazon.it/HOMTOL-Abbigliamento-Pantaloncini-Traspirante-Asciugatura/dp/B09WTTT4DB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-8&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=a9e628388e8936065229065d0a285e1d&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Tuta Ciclismo Completa Set+Pantaloncini 9D Gel Imbottito con Guanti e Occhiali",
+                description: "Set completo con tuta, pantaloncini imbottiti 9D gel, guanti e occhiali",
+                icon: "fa-bicycle",
+                link: "https://www.amazon.it/Abbigliamento-Ciclismo-Pantaloncini-imbottito-MTB%EF%BC%8BGuanti/dp/B0CTDGVJ3L?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-12&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6e353cbe213e027be887cb9aab1aef8&ref=_as_li_ss_tl"
+            },
+            {
+                name: "X-TIGER Ciclismo Uomo 5D Gel Salopette Pantaloncini Corti Imbottiti",
+                description: "Salopette con imbottitura 5D gel premium per massimo comfort",
+                icon: "fa-bicycle",
+                link: "https://www.amazon.it/dp/B08TBD3TDJ?pd_rd_i=B08TBD3TDJ&pd_rd_w=aglq3&content-id=amzn1.sym.1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_p=1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_r=XTV7YVW7B28ED089QK7Q&pd_rd_wg=FvYuM&pd_rd_r=1358c35d-d9ef-4322-91ed-17f27df3c651&aref=O7aTTOb90U&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6ab1ef2b3389860a033474173b56b3f&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Tuta Impermeabile Antipioggia Antivento - Set Giacca e Pantalone",
+                description: "Protezione completa dalla pioggia per moto e bicicletta",
+                icon: "fa-cloud-rain",
+                link: "https://www.amazon.it/Auto-Accessori-Lupex-Impermeabile-Antipioggia/dp/B0BF5MXH19?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-47&th=1&linkCode=ll2&tag=l0c39-21&linkId=739862a3e171c23c5193803bc66f1de4&ref=_as_li_ss_tl"
+            }
+        ]
     },
     "snack-bevande": {
         name: "Snack & Bevande",
@@ -1619,6 +1659,12 @@ const comboMessages = {
         "Ti piace andare in bici? 🚴 Guarda, per la mobilità perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
         "Vuoi muoverti in libertà? 🌳 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
     ]
+    ,
+    "abbigliamento-ciclismo": [
+        "Ehi, ami il ciclismo! 🚴 Guarda, se pedali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il mio giro e una scorta di {prodottoAncora} per la manutenzione. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
+        "Ti piace andare in bici? 🚲 Guarda, per il ciclismo perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
+        "Vuoi pedalare in libertà? 🌳 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ]
 };
 
 // Funzione per ottenere prodotti dal catalogo in base alla categoria
@@ -1664,6 +1710,9 @@ function getContesto() {
     }
     if (currentPath.includes('abbigliamento-serie-tv-film') || currentUrl.includes('abbigliamento') || currentUrl.includes('serie') || currentUrl.includes('tv') || currentUrl.includes('film')) {
         return 'abbigliamento-serie-tv-film';
+    if (currentPath.includes('abbigliamento-ciclismo') || currentUrl.includes('ciclismo') || currentUrl.includes('bici') || currentUrl.includes('bicicletta') || currentUrl.includes('mtb') || currentUrl.includes('mountain') || currentUrl.includes('bike') || currentUrl.includes('abbigliamento') || currentUrl.includes('tuta') || currentUrl.includes('pantaloncini') || currentUrl.includes('salopette')) {
+        return 'abbigliamento-ciclismo';
+    }
     }
     if (currentPath.includes('biciclette-mobilita') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
         return 'biciclette-mobilita';
