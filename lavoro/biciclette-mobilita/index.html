@@ -24,28 +24,30 @@
     
     <style>
         :root {
-            --primary-color: #2E7D32;
-            --secondary-color: #f8f9fa;
-            --accent-color: #FF6F00;
-            --success-color: #4CAF50;
-            --mobility-color: #2E7D32;
+            --primary-color: #FF6F00;
+            --secondary-color: #1a1a1a;
+            --accent-color: #FFD700;
+            --success-color: #FF6F00;
+            --mobility-color: #333333;
+            --text-color: #FFFFFF;
         }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--secondary-color);
+            color: var(--text-color);
         }
         
         .hero-section {
-            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 50%, #FF6F00 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #333333 50%, #FF6F00 100%);
             color: white;
             padding: 80px 0;
             margin-bottom: 40px;
-            box-shadow: 0 4px 20px rgba(46, 125, 50, 0.5);
+            box-shadow: 0 4px 20px rgba(255, 111, 0, 0.5);
         }
         
         .btn-amazon {
-            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            background: linear-gradient(135deg, #FF6F00 0%, #FF8F00 100%);
             color: white;
             border: none;
             padding: 18px 45px;
@@ -53,23 +55,28 @@
             font-weight: bold;
             font-size: 1.2em;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.5);
+            box-shadow: 0 6px 20px rgba(255, 111, 0, 0.5);
         }
         
         .btn-amazon:hover {
-            background: linear-gradient(135deg, #FF6F00 0%, #FF8F00 100%);
+            background: linear-gradient(135deg, #FFD700 0%, #FF6F00 100%);
             transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(255, 111, 0, 0.7);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.7);
         }
         
         .category-badge {
-            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
-            color: white;
+            background: linear-gradient(135deg, #FFD700 0%, #FF6F00 100%);
+            color: #1a1a1a;
             padding: 6px 18px;
             border-radius: 20px;
             font-size: 0.9em;
             font-weight: 600;
-            box-shadow: 0 2px 8px rgba(46, 125, 50, 0.4);
+            box-shadow: 0 2px 8px rgba(255, 111, 0, 0.4);
+        }
+        
+        .product-card {
+            background-color: #333333;
+            border: 2px solid #FF6F00;
         }
     </style>
     <link rel="stylesheet" href="../bot/ai-chat-simple.css">
