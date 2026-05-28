@@ -2744,16 +2744,16 @@ function toggleChat() {
     }
     
     if (chatWindow.classList.contains('active')) {
-        // Show friendly closing message if user has interacted
+        // Show feedback question when closing
         const chatMessages = document.getElementById('chat-messages');
-        if (chatMessages && chatMessages.children.length > 0) {
-            addMessage(getFriendlyClosing(), 'bot');
-            // Close chat after showing closing message
+        if (chatMessages) {
+            addMessage("Hai trovato le specifiche tecniche che cercavi? Rispondi 'sì' o 'no' per aiutarci a migliorare.", 'bot');
+            // Close chat after showing feedback question
             setTimeout(() => {
                 chatWindow.classList.remove('active');
                 chatButton.classList.remove('active');
                 chatOpen = false;
-            }, 1500);
+            }, 3000);
         } else {
             chatWindow.classList.remove('active');
             chatButton.classList.remove('active');
@@ -3148,8 +3148,23 @@ async function sendMessage() {
     
     if (!chatInput || !chatMessages) return;
     
-    const message = chatInput.value.trim();
+    const message = chatInput.value.trim().toLowerCase();
     if (!message) return;
+    
+    // Check for feedback responses
+    if (message === 'sì' || message === 'si' || message === 'yes') {
+        addMessage(message, 'user');
+        chatInput.value = '';
+        addMessage("Grazie per il feedback! Ci aiuta a migliorare le nostre selezioni tecniche.", 'bot');
+        return;
+    }
+    
+    if (message === 'no') {
+        addMessage(message, 'user');
+        chatInput.value = '';
+        addMessage("Ci dispiace. Cosa stavi cercando specificamente? Ti aiuteremo a trovarlo.", 'bot');
+        return;
+    }
     
     // Track user message in GA4
     if (typeof gtag !== 'undefined') {
