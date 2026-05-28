@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Acquatici | Smart Choices Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../bot/ai-chat-simple.css">
+    <style>
+        :root {
+            --primary-color: #00a8e8;
+            --secondary-color: #ffffff;
+            --accent-color: #00d4ff;
+            --success-color: #00a8e8;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #ffffff 0%, #00a8e8 50%, #00d4ff 100%);
+            color: #1a1a2e;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0, 168, 232, 0.5);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 168, 232, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            color: #1a1a2e;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 168, 232, 0.4);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #00a8e8 0%, #0088c8 100%);
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #00a8e8 0%, #00d4ff 100%);
+            color: #1a1a2e;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-amazon:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 168, 232, 0.5);
+        }
+        
+        .card-title {
+            color: #00a8e8;
+        }
+        
+        .text-muted {
+            color: #6c757d !important;
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYTD10EV8T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CYTD10EV8T');
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-home me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Prodotti</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3"><i class="fas fa-water me-3"></i>Sport Acquatici</h1>
+            <p class="lead mb-4">La guida completa agli sport acquatici. Trova tutto ciò che serve per kayak, paddleboard, snorkeling e molto altro.</p>
+            <a href="#products" class="btn btn-light btn-lg fw-bold shadow-lg px-4 py-3">
+                <i class="fas fa-arrow-down me-2"></i>Vedi i Prodotti
+            </a>
+        </div>
+    </section>
+
+    <section id="products" class="container my-5">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-3">
+                            <span class="category-badge">Kayak</span>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Kayak Gonfiabile</h4>
+                        <p class="card-text text-muted mb-4">Kayak gonfiabile portatile, perfetto per escursioni in mare e fiumi</p>
+                        <a href="https://www.amazon.it/s?k=kayak+gonfiabile&tag=l0c39-21" class="btn btn-amazon btn-lg fw-bold w-100" rel="noopener">
+                            <i class="fas fa-shopping-cart me-2"></i>Acquista su Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-3">
+                            <span class="category-badge">Paddleboard</span>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Paddleboard Gonfiabile</h4>
+                        <p class="card-text text-muted mb-4">Stand-up paddleboard gonfiabile con pagaia inclusa</p>
+                        <a href="https://www.amazon.it/s?k=paddleboard+gonfiabile&tag=l0c39-21" class="btn btn-amazon btn-lg fw-bold w-100" rel="noopener">
+                            <i class="fas fa-shopping-cart me-2"></i>Acquista su Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-3">
+                            <span class="category-badge">Snorkeling</span>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Set Snorkeling</h4>
+                        <p class="card-text text-muted mb-4">Maschera, boccaglio e pinne per snorkeling professionale</p>
+                        <a href="https://www.amazon.it/s?k=set+snorkeling&tag=l0c39-21" class="btn btn-amazon btn-lg fw-bold w-100" rel="noopener">
+                            <i class="fas fa-shopping-cart me-2"></i>Acquista su Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Smart Choices Guide. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../bot/ai-chat-simple.js"></script>
+    
+    <!-- AI Chat Button -->
+    <div id="ai-chat-button" onclick="toggleChat()" title="Chatta con noi">
+        <img src="../images/logo.png" alt="Smart Choices Guide" class="chat-button-logo">
+    </div>
+
+    <!-- AI Chat Window -->
+    <div id="ai-chat-window">
+        <div class="chat-header">
+            <div class="chat-header-content">
+                <div class="chat-title">
+                    <i class="fas fa-robot me-2"></i>
+                    Smart Assistant
+                </div>
+                <button class="close-btn" onclick="toggleChat()" title="Chiudi chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Scrivi un messaggio..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()" class="send-btn" title="Invia messaggio">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
