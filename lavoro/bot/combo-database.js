@@ -501,6 +501,132 @@ const ComboDatabase = {
                 message: "Vuoi un buon libro? 📖 Guarda, con il bestseller e Coca-Cola Zero hai storia emozionante e relax. Ecco i link, è fantastico!"
             }
         ]
+    },
+    "pesca": {
+        name: "Pesca Sportiva",
+        triggerKeywords: ["pesca", "canna", "mulinello", "esca", "fiume", "lago", "mare", "pescare"],
+        song: "Sailing - Rod Stewart",
+        songLink: "https://www.youtube.com/watch?v=kft2qW3F5QY",
+        songLinkSpotify: "https://open.spotify.com/track/0T5x6p1p1p1p1p1p1p1p1",
+        songLinkAmazon: "https://music.amazon.com/songs/B00XXXXXXX",
+        combos: [
+            {
+                product1: {
+                    name: "Kolpo Canna Pesca Bolognese Tripudio",
+                    link: "https://www.amazon.it/Kolpo-Canna-pesca-Bolognese-Tripudio/dp/B0CTTKKMHX?&linkCode=ll2&tag=l0c39-21&linkId=9453c29e1b25860b012181eab40279d8&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "BNTTEAM Canna Telescopica Carbonio",
+                    link: "https://www.amazon.it/dp/B0CTTKKMHX?&linkCode=ll2&tag=l0c39-21&linkId=9453c29e1b25860b012181eab40279d8&ref=_as_li_ss_tl"
+                },
+                message: "Ti piace la pesca? 🎣 Con la canna bolognese Kolpo e la telescopica BNTTEAM hai tutto per le tue sessioni. Ecco i link!"
+            }
+        ]
+    },
+    "immersioni": {
+        name: "Immersioni Subacquee",
+        triggerKeywords: ["immersione", "sub", "snorkeling", "maschera", "boccaglio", "pinne", "acqua", "mare"],
+        song: "Under the Sea - The Little Mermaid",
+        songLink: "https://www.youtube.com/watch?v=VqqkE1QrD8g",
+        songLinkSpotify: "https://open.spotify.com/track/0T5x6p1p1p1p1p1p1p1p1",
+        songLinkAmazon: "https://music.amazon.com/songs/B00XXXXXXX",
+        combos: [
+            {
+                product1: {
+                    name: "Cressi Planet Occhialini Premium",
+                    link: "https://www.amazon.it/Cressi-Occhialini-Premium-Triathlon-Acquatici/dp/B01BNOL5MI?th=1&linkCode=ll2&tag=l0c39-21&linkId=e2e1afab0b2551503359758131d2e5e4&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Cressi GALILEO Occhialini",
+                    link: "https://www.amazon.it/Cressi-GALILEO-Occhialini-Temperato-Prodotti/dp/B000O2R8F4?th=1&linkCode=ll2&tag=l0c39-21&linkId=7c3e750bc199d63302e51bd70f272f25&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi esplorare il fondo del mare? 🤿 Con gli occhialini Cressi Planet e GALILEO hai visione perfetta. Ecco i link!"
+            }
+        ]
+    },
+    "tennis": {
+        name: "Tennis",
+        triggerKeywords: ["tennis", "racchetta", "campo", "pallina", "sport", "gioco"],
+        song: "Tennis Court - Lorde",
+        songLink: "https://www.youtube.com/watch?v=znLbgL2W2Wg",
+        songLinkSpotify: "https://open.spotify.com/track/0T5x6p1p1p1p1p1p1p1p1",
+        songLinkAmazon: "https://music.amazon.com/songs/B00XXXXXXX",
+        combos: [
+            {
+                product1: {
+                    name: "Racchetta Tennis",
+                    link: "https://www.amazon.it/dp/B0B6JPRNMT?aref=2KVn4Fibde&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=f0150831c5a4d917d297b5e20040704b&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Get Grip Non-slip Overgrip",
+                    link: "https://www.amazon.it/Get-Grip-personalizzato-anti-scivolo-prefabbricata/dp/B09ZMSWNF2?th=1&linkCode=ll2&tag=l0c39-21&linkId=a647ab72545f74c7d30b4078b444e62f&ref=_as_li_ss_tl"
+                },
+                message: "Ti piace il tennis? 🎾 Con la racchetta e l'overgrip Get Grip hai controllo perfetto. Ecco i link!"
+            }
+        ]
+    },
+    "padel": {
+        name: "Padel",
+        triggerKeywords: ["padel", "racchetta", "pallina", "campo", "sport", "gioco"],
+        song: "Viva la Vida - Coldplay",
+        songLink: "https://www.youtube.com/watch?v=dvgZkm9x2PE",
+        songLinkSpotify: "https://open.spotify.com/track/0T5x6p1p1p1p1p1p1p1p1",
+        songLinkAmazon: "https://music.amazon.com/songs/B00XXXXXXX",
+        combos: [
+            {
+                product1: {
+                    name: "Joma Open Padel Racquet",
+                    link: "https://www.amazon.it/Joma-RACCHETTA-PADEL-Multicolor-Taglia/dp/B09QH68YYN?&linkCode=ll2&tag=l0c39-21&linkId=f74bdcc7bdd696a71c20e61c1a2b6d7b&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "MAS Padel Rival 100",
+                    link: "https://www.amazon.it/MAS-Padel-Racchetta-Arancione-Rivestimento/dp/B09DQ63K9W?&linkCode=ll2&tag=l0c39-21&linkId=bbdbe899557937cb36312cd7b6720ca9&ref=_as_li_ss_tl"
+                },
+                message: "Sei un appassionato di padel? 🎾 Con la racchetta Joma Open e MAS Rival 100 hai tutto per giocare. Ecco i link!"
+            }
+        ]
+    },
+    "beach-volley": {
+        name: "Beach Volley",
+        triggerKeywords: ["beach", "volley", "pallavolo", "spiaggia", "sabbia", "rete", "palla"],
+        song: "Waka Waka - Shakira",
+        songLink: "https://www.youtube.com/watch?v=pRpeEdMmmQ0",
+        songLinkSpotify: "https://open.spotify.com/track/0T5x6p1p1p1p1p1p1p1p1",
+        songLinkAmazon: "https://music.amazon.com/songs/B00XXXXXXX",
+        combos: [
+            {
+                product1: {
+                    name: "Kit Linee di Campo Beach Volley",
+                    link: "https://www.amazon.it/Volley-Allenamento-Segnalettica-Deliminatori-Beach-Volley/dp/B07NPMBKY5?th=1&linkCode=ll2&tag=l0c39-21&linkId=5b247fe1ecc04303f040f0982e8b2795&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Ti piace il beach volley? 🏐 Con il kit linee di campo e Coca-Cola Zero hai tutto per giocare. Ecco i link!"
+            }
+        ]
+    },
+    "arrampicata": {
+        name: "Arrampicata & Climbing",
+        triggerKeywords: ["arrampicata", "climbing", "parete", "corda", "imbracatura", "scalare", "montagna"],
+        song: "The Climb - Miley Cyrus",
+        songLink: "https://www.youtube.com/watch?v=NG2zyeVRcbs",
+        songLinkSpotify: "https://open.spotify.com/track/0T5x6p1p1p1p1p1p1p1p1",
+        songLinkAmazon: "https://music.amazon.com/songs/B00XXXXXXX",
+        combos: [
+            {
+                product1: {
+                    name: "SOB Imbracatura Arrampicata Anticaduta",
+                    link: "https://www.amazon.it/SOB-Imbracatura-Arrampicata-Anticaduta-Speleologia/dp/B0CFL3Q766?&linkCode=ll2&tag=l0c39-21&linkId=77414f32cc7d1c4d2123bd1a71525d68&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi scalare in sicurezza? 🧗 Con l'imbracatura SOB e Coca-Cola Zero hai protezione e idratazione. Ecco i link!"
+            }
+        ]
     }
 };
 
