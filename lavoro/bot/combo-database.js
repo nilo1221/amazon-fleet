@@ -519,7 +519,7 @@ const ComboDatabase = {
                     name: "BNTTEAM Canna Telescopica Carbonio",
                     link: "https://www.amazon.it/dp/B0CTTKKMHX?&linkCode=ll2&tag=l0c39-21&linkId=9453c29e1b25860b012181eab40279d8&ref=_as_li_ss_tl"
                 },
-                message: "Ti piace la pesca? 🎣 Con la canna bolognese Kolpo e la telescopica BNTTEAM hai tutto per le tue sessioni. Ecco i link!"
+                message: "Le specifiche tecniche indicano che la canna bolognese Kolpo e la telescopica BNTTEAM offrono resistenza alla corrosione e bilanciamento ottimizzato per diverse condizioni di pesca. Ecco i link tecnici."
             }
         ]
     },
@@ -540,7 +540,7 @@ const ComboDatabase = {
                     name: "Cressi GALILEO Occhialini",
                     link: "https://www.amazon.it/Cressi-GALILEO-Occhialini-Temperato-Prodotti/dp/B000O2R8F4?th=1&linkCode=ll2&tag=l0c39-21&linkId=7c3e750bc199d63302e51bd70f272f25&ref=_as_li_ss_tl"
                 },
-                message: "Vuoi esplorare il fondo del mare? 🤿 Con gli occhialini Cressi Planet e GALILEO hai visione perfetta. Ecco i link!"
+                message: "Le caratteristiche tecniche degli occhialini Cressi Planet e GALILEO indicano ottimizzazione della visibilità subacquea e resistenza all'acqua salata per snorkeling e diving. Ecco i link tecnici."
             }
         ]
     },
@@ -561,7 +561,7 @@ const ComboDatabase = {
                     name: "Get Grip Non-slip Overgrip",
                     link: "https://www.amazon.it/Get-Grip-personalizzato-anti-scivolo-prefabbricata/dp/B09ZMSWNF2?th=1&linkCode=ll2&tag=l0c39-21&linkId=a647ab72545f74c7d30b4078b444e62f&ref=_as_li_ss_tl"
                 },
-                message: "Ti piace il tennis? 🎾 Con la racchetta e l'overgrip Get Grip hai controllo perfetto. Ecco i link!"
+                message: "Le specifiche tecniche indicano che la racchetta e l'overgrip Get Grip offrono bilanciamento ottimizzato e controllo migliorato per il gioco competitivo. Ecco i link tecnici."
             }
         ]
     },
@@ -582,7 +582,7 @@ const ComboDatabase = {
                     name: "MAS Padel Rival 100",
                     link: "https://www.amazon.it/MAS-Padel-Racchetta-Arancione-Rivestimento/dp/B09DQ63K9W?&linkCode=ll2&tag=l0c39-21&linkId=bbdbe899557937cb36312cd7b6720ca9&ref=_as_li_ss_tl"
                 },
-                message: "Sei un appassionato di padel? 🎾 Con la racchetta Joma Open e MAS Rival 100 hai tutto per giocare. Ecco i link!"
+                message: "Le caratteristiche tecniche indicano che le racchette Joma Open e MAS Rival 100 offrono controllo di palla e materiali compositi per il gioco dinamico. Ecco i link tecnici."
             }
         ]
     },
@@ -603,7 +603,7 @@ const ComboDatabase = {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
-                message: "Ti piace il beach volley? 🏐 Con il kit linee di campo e Coca-Cola Zero hai tutto per giocare. Ecco i link!"
+                message: "Le specifiche tecniche indicano che il kit linee di campo offre resistenza alle condizioni estive e idratazione ottimale per il beach volley. Ecco i link tecnici."
             }
         ]
     },
@@ -624,7 +624,7 @@ const ComboDatabase = {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
-                message: "Vuoi scalare in sicurezza? 🧗 Con l'imbracatura SOB e Coca-Cola Zero hai protezione e idratazione. Ecco i link!"
+                message: "Le certificazioni di sicurezza indicano che l'imbracatura SOB offre protezione certificata per climbing, con materiali ad alte prestazioni. Ecco i link tecnici."
             }
         ]
     }
