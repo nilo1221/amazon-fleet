@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Estivi - Guida alle Attività Sportive Estive | Smart Choices Guide</title>
+    <meta name="description" content="Scopri i migliori sport estivi: tennis, padel, running, surf, vela, canoa, immersioni e molto altro. Tutto per godersi l'estate all'aria aperta.">
+    <meta name="keywords" content="sport estivi, tennis, padel, running, surf, vela, canoa, kayak, immersioni, beach volleyball, arrampicata">
+    <meta name="author" content="Smart Choices Guide">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://amazon-fleet.vercel.app/sport-estivi/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sport Estivi - Guida alle Attività Sportive Estive">
+    <meta property="og:description" content="Scopri i migliori sport estivi: tennis, padel, running, surf, vela, canoa, immersioni e molto altro.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amazon-fleet.vercel.app/sport-estivi/">
+    <meta property="og:image" content="https://amazon-fleet.vercel.app/og-image.jpg">
+    <meta property="og:locale" content="it_IT">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sport Estivi - Guida alle Attività Sportive Estive">
+    <meta name="twitter:description" content="Scopri i migliori sport estivi: tennis, padel, running, surf, vela, canoa, immersioni e molto altro.">
+    <meta name="twitter:image" content="https://amazon-fleet.vercel.app/og-image.jpg">
+    
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYTD10EV8T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CYTD10EV8T');
+    </script>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    </noscript>
+    
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .sport-card {
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .sport-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .sport-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-compass text-primary me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Sport Estivi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">
+                <i class="fas fa-sun me-3"></i>Sport Estivi
+            </h1>
+            <p class="lead mb-4">Tutto ciò che serve per goderti i tuoi sport preferiti all'aria aperta durante l'estate</p>
+            
+            <!-- Trust Banner -->
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports Grid Section -->
+    <section class="container my-5">
+        <div class="row g-4">
+            <!-- Nuoto & Piscina -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-swimming-pool sport-icon text-info"></i>
+                        <h5 class="card-title fw-bold mb-2">Nuoto & Piscina</h5>
+                        <p class="card-text text-muted small mb-3">Costumi, occhiali e accessori per il nuoto</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Surf & Windsurf -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-water sport-icon text-primary"></i>
+                        <h5 class="card-title fw-bold mb-2">Surf & Windsurf</h5>
+                        <p class="card-text text-muted small mb-3">Tavole, mute e attrezzatura per surf</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canoa & Kayak -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-ship sport-icon text-success"></i>
+                        <h5 class="card-title fw-bold mb-2">Canoa & Kayak</h5>
+                        <p class="card-text text-muted small mb-3">Kayak, pagaie e accessori nautici</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vela -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-sailboat sport-icon text-warning"></i>
+                        <h5 class="card-title fw-bold mb-2">Vela</h5>
+                        <p class="card-text text-muted small mb-3">Attrezzatura e accessori per la vela</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Immersioni Subacquee -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-fish sport-icon text-info"></i>
+                        <h5 class="card-title fw-bold mb-2">Immersioni Subacquee</h5>
+                        <p class="card-text text-muted small mb-3">Maschere, boccagli e attrezzatura diving</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Running & Jogging -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-running sport-icon text-danger"></i>
+                        <h5 class="card-title fw-bold mb-2">Running & Jogging</h5>
+                        <p class="card-text text-muted small mb-3">Scarpe, abbigliamento e accessori running</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beach Volleyball -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-volleyball-ball sport-icon text-warning"></i>
+                        <h5 class="card-title fw-bold mb-2">Beach Volleyball</h5>
+                        <p class="card-text text-muted small mb-3">Palle, reti e abbigliamento beach volley</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tennis -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-table-tennis sport-icon text-success"></i>
+                        <h5 class="card-title fw-bold mb-2">Tennis</h5>
+                        <p class="card-text text-muted small mb-3">Racchette, palline e abbigliamento tennis</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Padel -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-table-tennis sport-icon text-primary"></i>
+                        <h5 class="card-title fw-bold mb-2">Padel</h5>
+                        <p class="card-text text-muted small mb-3">Racchette, palline e abbigliamento padel</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arrampicata & Climbing -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-mountain sport-icon text-dark"></i>
+                        <h5 class="card-title fw-bold mb-2">Arrampicata & Climbing</h5>
+                        <p class="card-text text-muted small mb-3">Imbracature, corde e attrezzatura climbing</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skateboarding -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-skating sport-icon text-secondary"></i>
+                        <h5 class="card-title fw-bold mb-2">Skateboarding</h5>
+                        <p class="card-text text-muted small mb-3">Skateboard, ruote e protezioni</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yoga All'Aperto -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-spa sport-icon text-purple"></i>
+                        <h5 class="card-title fw-bold mb-2">Yoga All'Aperto</h5>
+                        <p class="card-text text-muted small mb-3">Tappetini, abbigliamento e accessori yoga</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nordic Walking -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card sport-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-hiking sport-icon text-success"></i>
+                        <h5 class="card-title fw-bold mb-2">Nordic Walking</h5>
+                        <p class="card-text text-muted small mb-3">Bastoncini, scarpe e accessori nordic walking</p>
+                        <span class="badge bg-secondary">Prossimamente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2026 Smart Choices Guide. Tutti i diritti riservati.</p>
+            <p class="small text-muted mb-0">Partecipiamo al Programma Affiliati Amazon EU</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

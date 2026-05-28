@@ -80,6 +80,7 @@ function getCategoryNameFromContext() {
         'outdoor': 'Outdoor & Camping',
         'ufficio': 'Ufficio Produttivo',
         'viaggi': 'Viaggi & Vacanze',
+        'sport-estivi': 'Sport Estivi',
         'giochi': 'Giochi da Tavolo',
         'profumi': 'Profumi & Bellezza',
         'sostenibilita': 'Sostenibilità & Eco-Friendly',
@@ -411,6 +412,19 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/Auto-Accessori-Lupex-Impermeabile-Antipioggia/dp/B0BF5MXH19?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-47&th=1&linkCode=ll2&tag=l0c39-21&linkId=739862a3e171c23c5193803bc66f1de4&ref=_as_li_ss_tl"
             }
         ]
+    },
+    "sport-estivi": {
+        name: "Sport Estivi",
+        tags: ["sport", "estivo", "estate", "tennis", "padel", "running", "jogging", "surf", "windsurf", "vela", "canoa", "kayak", "nuoto", "piscina", "immersioni", "subacquea", "beach", "volleyball", "arrampicata", "climbing", "skate", "skateboard", "yoga", "nordic", "walking", "all'aperto", "outdoor", "attività", "fisica", "allenamento", "competizione", "gioco", "divertimento"],
+        url: "/sport-estivi/index.html",
+        personality: "energetic",
+        valueProp: "Ho selezionato i migliori sport estivi per goderti l'aria aperta. Tennis, padel, running, surf e molto altro per una estate attiva.",
+        song: "Summer of '69 - Bryan Adams",
+        songLinkSpotify: "https://open.spotify.com/track/1B2V4Q5uG7S8Y9Z0A1B2C3",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        primaryColor: "#667eea",
+        accentColor: "#764ba2",
+        secondaryColor: "#f093fb"
     },
     "snack-bevande": {
         name: "Snack & Bevande",
