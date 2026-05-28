@@ -1792,74 +1792,97 @@
                     <p class="lead text-muted">Le 5 categorie fisse selezionate per bilanciare Passione, Risparmio e Servizio</p>
                 </div>
                 
-                <!-- Horizontal Product Strip (Blocco B) - Scelte della Redazione (Selezione Fissa) -->
+                <!-- Horizontal Product Strip (Blocco B) - Scelte della Redazione (Stagionale) -->
                 <div class="mb-5">
-                    <div class="d-flex flex-nowrap overflow-auto gap-3 pb-2 justify-content-center">
-                        <a href="abbigliamento-serie-tv-film/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
-                            <i class="fas fa-film fa-2xl text-danger mb-2"></i>
-                            <div class="fw-bold small">Manga, Anime & Serie TV</div>
+                    <div class="d-flex flex-nowrap overflow-auto gap-3 pb-2 justify-content-center" id="seasonal-strip">
+                        <!-- Nicchie Estive -->
+                        <a href="mare-spiaggia/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
+                            <i class="fas fa-umbrella-beach fa-2xl text-info mb-2"></i>
+                            <div class="fw-bold small">Mare & Spiaggia</div>
                         </a>
-                        <a href="parrucchiere-barbiere/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
-                            <i class="fas fa-scissors fa-2xl text-warning mb-2"></i>
-                            <div class="fw-bold small">Parrucchiere & Barbiere</div>
+                        <a href="outdoor-camping/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
+                            <i class="fas fa-campground fa-2xl text-success mb-2"></i>
+                            <div class="fw-bold small">Outdoor & Camping</div>
                         </a>
-                        <a href="cucina-elettrodomestici/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
-                            <i class="fas fa-utensils fa-2xl text-success mb-2"></i>
-                            <div class="fw-bold small">Cucina Moderna & Tech</div>
-                        </a>
-                        <a href="biciclette-mobilita/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener">
+                        <a href="biciclette-mobilita/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
                             <i class="fas fa-bicycle fa-2xl text-success mb-2"></i>
                             <div class="fw-bold small">Biciclette & Mobilità</div>
                         </a>
-                        <a href="abbigliamento-ciclismo/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item" rel="noopener" id="abbigliamento-ciclismo-novita-item">
+                        <a href="abbigliamento-ciclismo/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
                             <i class="fas fa-tshirt fa-2xl text-primary mb-2"></i>
                             <div class="fw-bold small">Abbigliamento Ciclismo</div>
-                            <span class="badge rounded-pill bg-danger" style="font-size: 0.65rem;">Novità</span>
-                            <div class="text-muted" style="font-size: 0.65rem; font-weight: 600; margin-top: 4px;" id="abbigliamento-ciclismo-countdown">Caricamento...</div>
+                        </a>
+                        <a href="viaggi-vacanze/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
+                            <i class="fas fa-plane fa-2xl text-warning mb-2"></i>
+                            <div class="fw-bold small">Viaggi & Vacanze</div>
+                        </a>
+                        
+                        <!-- Nicchie Invernali -->
+                        <a href="fitness-casa/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
+                            <i class="fas fa-dumbbell fa-2xl text-info mb-2"></i>
+                            <div class="fw-bold small">Fitness Casa</div>
+                        </a>
+                        <a href="giochi-da-tavolo/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
+                            <i class="fas fa-chess fa-2xl text-warning mb-2"></i>
+                            <div class="fw-bold small">Giochi da Tavolo</div>
+                        </a>
+                        <a href="libri-ereader/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
+                            <i class="fas fa-book fa-2xl text-warning mb-2"></i>
+                            <div class="fw-bold small">Libri & E-Reader</div>
+                        </a>
+                        <a href="cucina-elettrodomestici/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
+                            <i class="fas fa-utensils fa-2xl text-success mb-2"></i>
+                            <div class="fw-bold small">Cucina Moderna & Tech</div>
+                        </a>
+                        <a href="arredamento-casa/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
+                            <i class="fas fa-couch fa-2xl text-secondary mb-2"></i>
+                            <div class="fw-bold small">Arredamento Casa</div>
                         </a>
                     </div>
                 </div>
 
                 <script>
                     (function() {
-                        // Timer 24 ore per Abbigliamento Ciclismo
-                        let abbigliamentoCreated = localStorage.getItem('abbigliamento_ciclismo_created');
-                        const now = new Date().getTime();
-                        
-                        if (!abbigliamentoCreated) {
-                            abbigliamentoCreated = now;
-                            localStorage.setItem('abbigliamento_ciclismo_created', abbigliamentoCreated);
-                        }
-                        
-                        const createdTime = parseInt(abbigliamentoCreated);
-                        const expiryTime = createdTime + (24 * 60 * 60 * 1000); // 24 ore
-                        
-                        function updateAbbigliamentoCountdown() {
-                            const currentTime = new Date().getTime();
-                            const timeLeft = expiryTime - currentTime;
+                        // Sistema stagionale per la striscia orizzontale
+                        function getSeason() {
+                            const month = new Date().getMonth() + 1; // 1-12
                             
-                            if (timeLeft <= 0) {
-                                // Rimuovi dalla striscia orizzontale
-                                const item = document.getElementById('abbigliamento-ciclismo-novita-item');
-                                if (item) {
-                                    item.style.display = 'none';
-                                }
-                                return;
+                            // Estate: giugno (6), luglio (7), agosto (8), settembre (9)
+                            if (month >= 6 && month <= 9) {
+                                return 'summer';
                             }
-                            
-                            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-                            
-                            const countdownElement = document.getElementById('abbigliamento-ciclismo-countdown');
-                            if (countdownElement) {
-                                countdownElement.textContent = 
-                                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                            // Inverno: dicembre (12), gennaio (1), febbraio (2)
+                            else if (month === 12 || month <= 2) {
+                                return 'winter';
+                            }
+                            // Primavera/Autunno: default a estate (maggio) o inverno (novembre)
+                            else if (month === 5) {
+                                return 'summer'; // Maggio è pre-estate
+                            }
+                            else if (month === 10 || month === 11) {
+                                return 'winter'; // Ottobre/Novembre è pre-inverno
+                            }
+                            else {
+                                return 'summer'; // Default a estate per primavera (marzo-aprile)
                             }
                         }
-                        
-                        setInterval(updateAbbigliamentoCountdown, 1000);
-                        updateAbbigliamentoCountdown();
+
+                        function updateSeasonalStrip() {
+                            const season = getSeason();
+                            const summerItems = document.querySelectorAll('.seasonal-summer');
+                            const winterItems = document.querySelectorAll('.seasonal-winter');
+
+                            if (season === 'summer') {
+                                summerItems.forEach(item => item.style.display = 'flex');
+                                winterItems.forEach(item => item.style.display = 'none');
+                            } else if (season === 'winter') {
+                                summerItems.forEach(item => item.style.display = 'none');
+                                winterItems.forEach(item => item.style.display = 'flex');
+                            }
+                        }
+
+                        // Esegui al caricamento
+                        updateSeasonalStrip();
                     })();
                 </script>
                 
