@@ -298,6 +298,39 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi un kit completo con marsupio per la pesca? 🎒 Ho trovato questo set 85 pezzi con marsupio impermeabile, pinze, esche e bilancia digitale. Con Coca-Cola Zero hai tutto l'occorrente e relax!"
+            },
+            {
+                product1: {
+                    name: "Avilia Rete da Pesca Portatile Profonda 75 cm",
+                    link: "https://www.amazon.it/Avilia-Resistente-Ricreativa-Utilizzare-Trasportare/dp/B0G2MFR7WR?adgrpid=124708390037&dib=eyJ2IjoiMSJ9._FRLa5fl_JtxJtFWEBX5PM3p2YNOoSPWi0gCMOTQroRLcbwf_XThqWuo8paXXj31ChxYywvj7IbhckgnYAWlTSGjM628SHT157hJbX_GNI4rFBWT1z2gvpFzH0As0chETNT1n2K-tIEJuYekQ2MNccoWbr6iJmh-fGDdf72okPKLzIiVfwKwne7uZ7nfwxjT2UcxNmghx45W_oQMQ_fJ0UasE0rLKnvWt-hzmRSd5G7pG_nLaWydWG29s8QJ6IwLfjXS04iq2kfN6wlHmkPnHBldQXjVNePCn6hVlollFjE.JukTDI6UXtb3XZpC9WuweJ4PhGb2KZbjMYr2X9SILnY&dib_tag=se&hvadid=591166418377&hvdev=c&hvexpln=0&hvlocphy=9190900&hvnetw=g&hvocijid=2724230052571550670--&hvqmt=e&hvrand=2724230052571550670&hvtargid=kwd-359942218975&hydadcr=8194_2249375&keywords=pesca+amazon&mcid=38a4311fdc04398984b206b17df2d853&qid=1780088260&sr=8-4-spons&aref=aFxjzMh3um&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=a91b9b1cfa047d3d58212a30f2e740c2&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi una rete da pesca portatile con cassa? 🎣 Ho trovato questa rete 75 cm in PP resistente, facile da trasportare con cassa inclusa. Con Coca-Cola Zero hai la pesca in tasca e relax!"
+            },
+            {
+                product1: {
+                    name: "Mitchell Tanager Camouflage Set da pesca telescopico",
+                    link: "https://www.amazon.it/Mitchell-Tanager-Camo-T-210-Light/dp/B092W4R9TN?adgrpid=124708390037&dib=eyJ2IjoiMSJ9._FRLa5fl_JtxJtFWEBX5PM3p2YNOoSPWi0gCMOTQroRLcbwf_XThqWuo8paXXj31ChxYywvj7IbhckgnYAWlTSGjM628SHT157hJbX_GNI4rFBWT1z2gvpFzH0As0chETNT1n2K-tIEJuYekQ2MNccoWbr6iJmh-fGDdf72okPKLzIiVfwKwne7uZ7nfwxjT2UcxNmghx45W_oQMQ_fJ0UasE0rLKnvWt-hzmRSd5G7pG_nLaWydWG29s8QJ6IwLfjXS04iq2kfN6wlHmkPnHBldQXjVNePCn6hVlollFjE.JukTDI6UXtb3XZpC9WuweJ4PhGb2KZbjMYr2X9SILnY&dib_tag=se&hvadid=591166418377&hvdev=c&hvexpln=0&hvlocphy=9190900&hvnetw=g&hvocijid=2724230052571550670--&hvqmt=e&hvrand=2724230052571550670&hvtargid=kwd-359942218975&hydadcr=8194_2249375&keywords=pesca+amazon&mcid=38a4311fdc04398984b206b17df2d853&qid=1780088260&sr=8-8&ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=95a3cbdf69fabf24bb75f5e7a462edf2&ref_=as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi iniziare a pescare con un set completo? 🎯 Ho trovato questo set telescopico con canna, mulinello, lenza ed esche per trota e persico. Con Coca-Cola Zero hai tutto l'occorrente e relax!"
+            },
+            {
+                product1: {
+                    name: "DaddyGoFish Kids Canna da Pesca Telescopica Spincast Combo",
+                    link: "https://www.amazon.it/DaddyGoFish-Telescopica-Spincast-pieghevole-Portacanna/dp/B09FTG456X?adgrpid=124708390037&content-id=amzn1.sym.3f7677f6-d6aa-4de0-8287-6bb7b9730f20%3Aamzn1.sym.3f7677f6-d6aa-4de0-8287-6bb7b9730f20&cv_ct_cx=pesca%2Bamazon&hvadid=591166418377&hvdev=c&hvexpln=0&hvlocphy=9190900&hvnetw=g&hvocijid=2724230052571550670--&hvqmt=e&hvrand=2724230052571550670&hvtargid=kwd-359942218975&hydadcr=8194_2249375&keywords=pesca%2Bamazon&mcid=38a4311fdc04398984b206b17df2d853&pd_rd_i=B09FTG456X&pd_rd_r=e99fcdc8-4135-4cbd-92de-cfc5c7167455&pd_rd_w=QFHb9&pd_rd_wg=lnKHt&pf_rd_p=3f7677f6-d6aa-4de0-8287-6bb7b9730f20&pf_rd_r=CB59SQ8F283BHW476R1K&qid=1780088260&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-2-50840d04-82cc-4adf-b6cc-9f330c77868e-spons&aref=SdQTGtoibi&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=71a2c225c10b067190d2c86afb932100&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi un kit di pesca completo per i bambini? 🧒 Ho trovato questo set con canna telescopica, sedia pieghevole, portacanna e tackle box. Con Coca-Cola Zero i piccoli pescatori hanno tutto e relax!"
             }
         ]
     },
