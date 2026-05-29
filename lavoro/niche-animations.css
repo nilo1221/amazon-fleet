@@ -23,24 +23,9 @@
     --niche-text-light: #ffffff;
 }
 
-/* Sfondo con Pattern e Gradiente - Colori Nicchia */
+/* Sfondo Bianco - Stile Ibrido */
 body {
-    background:
-        linear-gradient(135deg, var(--niche-dark-bg) 0%, var(--niche-accent) 50%, var(--niche-primary) 100%),
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 2px,
-            rgba(255, 255, 255, 0.03) 2px,
-            rgba(255, 255, 255, 0.03) 4px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 2px,
-            rgba(255, 255, 255, 0.03) 2px,
-            rgba(255, 255, 255, 0.03) 4px
-        );
+    background: #ffffff;
     background-attachment: fixed;
     min-height: 100vh;
     font-family: var(--niche-font);
