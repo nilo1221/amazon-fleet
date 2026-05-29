@@ -15,24 +15,9 @@
     --gaming-card-bg: rgba(255, 255, 255, 0.95);
 }
 
-/* Sfondo Gaming con Pattern e Gradiente */
+/* Sfondo Gaming - Bianco */
 body {
-    background: 
-        linear-gradient(135deg, var(--gaming-dark-bg) 0%, #1a1a3e 50%, var(--gaming-accent) 100%),
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 2px,
-            rgba(0, 240, 255, 0.03) 2px,
-            rgba(0, 240, 255, 0.03) 4px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 2px,
-            rgba(157, 0, 255, 0.03) 2px,
-            rgba(157, 0, 255, 0.03) 4px
-        );
+    background: #ffffff;
     background-attachment: fixed;
     min-height: 100vh;
 }
