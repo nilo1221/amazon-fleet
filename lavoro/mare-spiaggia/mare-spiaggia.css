@@ -22,31 +22,11 @@ body {
 
 /* Hero Section Mare & Spiaggia */
 .hero-section {
-    background: 
-        linear-gradient(135deg, var(--niche-dark-bg) 0%, var(--niche-primary) 50%, var(--niche-secondary) 100%),
-        radial-gradient(circle at 20% 50%, rgba(0, 255, 204, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 50%, rgba(255, 153, 0, 0.3) 0%, transparent 50%);
+    background: #ffffff;
     position: relative;
     overflow: hidden;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 2px,
-            rgba(255, 255, 255, 0.05) 2px,
-            rgba(255, 255, 255, 0.05) 4px
-        );
-    pointer-events: none;
-}
 
 /* Product Card Mare & Spiaggia - Animazioni Hover Migliorate */
 .product-card {
