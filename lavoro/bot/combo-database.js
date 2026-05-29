@@ -468,6 +468,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/SWEET-VIEW-Spruzzatore-Spruzzino-Friggitrice/dp/B0D25YFS8F?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.mCgL5q0Kyg8v-VS8-P8xECtYqA7gfJhkSU4Sr9zSgDjDuKQ8xdxoEArGacTBlTUjQxVrmdYxIW577YRKMgFYl52_FD3KGBli1ItgrJ7eOsjzWr0DAj7vC91px3hA1vmmBWNYz099WQsnG5XT67O7UKGe4KXihZVPEF6f25t3CNhegY_1sb0Binix0aoGBkPUbhsdMdUrPnb27P32HuFaKWrTXN6ib5680EpIFuWadrjl7c-gH_2zjGCQ7MpqojKJ0AjWVxgvqrgekdgfg97Q-v_V4seqcC0PKLUlYQAJLFY.d-Uhwfyp8KzP3Mi8pFflR3_jdBe4WZdx04Lt58vUH6I&dib_tag=se&keywords=cucina&qid=1780085651&sr=8-21&th=1&linkCode=ll2&tag=l0c39-21&linkId=8a46719ea2ec087c034f42dbc149b811&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi la cucina perfetta? ❄️ Ho trovato la macchina ghiaccio ICEMAN per bevande fresche e lo spruzzatore SWEET VIEW per cucinare con meno olio. Con questa combo hai freschezza e cottura sana!"
+            },
+            {
+                product1: {
+                    name: "MasterChef Bilancia con temperatura Spegnimento Automatico",
+                    link: "https://www.amazon.it/MasterChef-Bilancia-temperato-Spegnimento-Automatico/dp/B09GFM52DK?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.mCgL5q0Kyg8v-VS8-P8xECtYqA7gfJhkSU4Sr9zSgDjDuKQ8xdxoEArGacTBlTUjQxVrmdYxIW577YRKMgFYl52_FD3KGBli1ItgrJ7eOsjzWr0DAj7vC91px3hA1vmmBWNYz099WQsnG5XT67O7UKGe4KXihZVPEF6f25t3CNhegY_1sb0Binix0aoGBkPUbhsdMdUrPnb27P32HuFaKWrTXN6ib5680EpIFuWadrjl7c-gH_2zjGCQ7MpqojKJ0AjWVxgvqrgekdgfg97Q-v_V4seqcC0PKLUlYQAJLFY.d-Uhwfyp8KzP3Mi8pFflR3_jdBe4WZdx04Lt58vUH6I&dib_tag=se&keywords=cucina&qid=1780085651&sr=8-27&th=1&linkCode=ll2&tag=l0c39-21&linkId=ba62b8de749671cbd621e02e8ef4bbd2&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Cucini con precisione e sicurezza? 🌡️ Ho trovato questa bilancia MasterChef con sensore di temperatura e spegnimento automatico. Con Coca-Cola Zero hai cotture perfette e relax!"
             }
         ]
     },
