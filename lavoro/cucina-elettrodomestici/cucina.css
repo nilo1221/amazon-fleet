@@ -45,47 +45,16 @@ body {
     pointer-events: none;
 }
 
-/* Product Card Cucina - Stile pulito e professionale con effetti Elite Gaming */
+/* Product Card Cucina - Stile pulito e professionale */
 .product-card {
     background: var(--kitchen-card-bg);
     border: 2px solid var(--kitchen-primary);
     border-radius: 20px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 4px 15px rgba(45, 106, 79, 0.1);
-    min-height: 450px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.product-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, var(--kitchen-primary) 0%, var(--kitchen-secondary) 50%, var(--kitchen-accent) 100%);
-    opacity: 0.03;
-    z-index: -1;
-    border-radius: 20px;
-    transition: opacity 0.4s ease;
-}
-
-.product-card::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(45, 106, 79, 0.1) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
 }
 
 .product-card .card-body {
@@ -94,32 +63,19 @@ body {
     flex-direction: column;
 }
 
-.product-card .d-flex.justify-content-between {
+.product-card .btn-amazon {
     margin-top: auto;
 }
 
 .product-card:hover {
-    transform: translateY(-12px) rotateX(3deg) rotateY(3deg);
-    box-shadow: 
-        0 20px 50px rgba(45, 106, 79, 0.3),
-        0 0 30px rgba(82, 183, 136, 0.2),
-        0 0 0 3px rgba(82, 183, 136, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(45, 106, 79, 0.25);
     border-color: var(--kitchen-secondary);
 }
 
-.product-card:hover::before {
-    opacity: 0.08;
-}
-
-.product-card:hover::after {
-    opacity: 1;
-}
-
 .product-card:active {
-    transform: translateY(-5px) scale(0.98);
-    box-shadow: 
-        0 10px 30px rgba(45, 106, 79, 0.4),
-        0 0 20px rgba(82, 183, 136, 0.3);
+    transform: translateY(-4px) scale(0.98);
+    box-shadow: 0 8px 20px rgba(45, 106, 79, 0.3);
 }
 
 /* Icone Animate - Clean & Professional con effetti Elite Gaming */
