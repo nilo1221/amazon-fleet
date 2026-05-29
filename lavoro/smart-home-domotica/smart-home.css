@@ -22,7 +22,7 @@ body {
 
 /* Hero Section Smart Home */
 .hero-section {
-    background: #ffffff;
+    background: var(--niche-primary);
     position: relative;
     overflow: hidden;
 }

@@ -22,7 +22,7 @@ body {
 
 /* Hero Section Mare & Spiaggia */
 .hero-section {
-    background: #ffffff;
+    background: var(--niche-primary);
     position: relative;
     overflow: hidden;
 }
