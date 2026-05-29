@@ -148,11 +148,25 @@
 }
 
 .chat-button-logo {
+    display: none;
+}
+
+.chat-button-icon {
+    font-size: 28px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    padding: 0;
+    background: linear-gradient(135deg, var(--atlas-secondary) 0%, var(--atlas-accent) 100%);
     border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.chat-button-icon::before {
+    content: '✨';
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 #ai-chat-button {
@@ -161,8 +175,8 @@
     right: 30px;
     width: 60px;
     height: 60px;
-    background: var(--atlas-secondary);
-    border: 1px solid var(--atlas-border);
+    background: linear-gradient(135deg, var(--atlas-secondary) 0%, var(--atlas-accent) 100%);
+    border: 2px solid var(--atlas-border);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -171,7 +185,17 @@
     transition: all 0.3s ease;
     z-index: 9999;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(255, 140, 0, 0.3), 0 0 40px rgba(0, 212, 255, 0.1);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 #ai-chat-button.thinking {
@@ -192,10 +216,14 @@
 }
 
 #ai-chat-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 8px 30px rgba(255, 140, 0, 0.5), 0 0 60px rgba(0, 212, 255, 0.2);
     animation: none;
-    border-color: var(--atlas-border-active);
+    border-color: var(--atlas-accent);
+}
+
+#ai-chat-button:hover .chat-button-icon {
+    transform: rotate(15deg) scale(1.1);
 }
 
 #ai-chat-button.active {
@@ -340,15 +368,27 @@
     right: 30px !important;
     width: 500px;
     max-height: 700px;
-    background: rgba(26, 26, 26, 0.95);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.98) 0%, rgba(40, 40, 40, 0.95) 100%);
+    backdrop-filter: blur(20px);
     border: 1px solid var(--atlas-border);
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4), 0 0 100px rgba(255, 140, 0, 0.1);
     display: none;
     flex-direction: column;
     z-index: 9998;
     overflow: hidden;
+    animation: windowFadeIn 0.3s ease-out;
+}
+
+@keyframes windowFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 #ai-chat-window.active {
@@ -357,7 +397,7 @@
 }
 
 .chat-header {
-    background: var(--atlas-secondary);
+    background: linear-gradient(135deg, var(--atlas-secondary) 0%, var(--atlas-primary) 100%);
     color: var(--atlas-text-light);
     padding: 15px 20px;
     display: flex;
@@ -366,6 +406,29 @@
     transition: background 0.3s ease;
     border-bottom: 1px solid var(--atlas-border);
     font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.chat-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: headerShine 3s infinite;
+}
+
+@keyframes headerShine {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
 }
 
 /* Dynamic color themes for bot using CSS variables */
@@ -480,16 +543,29 @@
 }
 
 .chat-bot-logo {
+    display: none;
+}
+
+.chat-bot-icon {
     width: 50px;
     height: 50px;
-    object-fit: cover;
     border-radius: 50%;
     border: 2px solid #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--atlas-secondary) 0%, var(--atlas-accent) 100%);
+    font-size: 24px;
 }
 
-.chat-bot-logo::after {
+.chat-bot-icon::before {
+    content: '🤖';
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+}
+
+.chat-bot-icon::after {
     content: '';
     position: absolute;
     bottom: 2px;
@@ -502,7 +578,11 @@
     animation: pulse 2s infinite;
 }
 
-.chat-bot-logo.proactive-notification::before {
+.chat-bot-icon.proactive-notification::before {
+    content: '🔔';
+}
+
+.chat-bot-icon.proactive-notification::after {
     content: '';
     position: absolute;
     top: -6px;
@@ -517,8 +597,9 @@
     z-index: 10;
 }
 
-.chat-bot-logo:hover {
+.chat-bot-icon:hover {
     box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    transform: scale(1.05);
     transition: all 0.3s ease;
 }
 
@@ -554,8 +635,8 @@
 }
 
 .close-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
     width: 35px;
     height: 35px;
@@ -564,11 +645,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
 .close-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.25);
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .chat-messages {
@@ -578,20 +662,53 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background: rgba(26, 26, 26, 0.98);
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.98) 0%, rgba(20, 20, 20, 0.95) 100%);
     font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
+    scrollbar-width: thin;
+    scrollbar-color: var(--atlas-border) rgba(26, 26, 26, 0.5);
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: rgba(26, 26, 26, 0.5);
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: var(--atlas-border);
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: var(--atlas-border-active);
 }
 
 .chat-message {
     max-width: 85%;
     padding: 12px 16px;
-    border-radius: 8px;
+    border-radius: 12px;
     margin: 8px 0;
     font-size: 14px;
     line-height: 1.5;
     word-wrap: break-word;
     animation: messageFadeIn 0.3s ease-out;
     font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes messageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .chat-message.user {
@@ -979,33 +1096,36 @@
 
 .chat-input {
     padding: 15px 20px;
-    background: var(--atlas-secondary);
+    background: linear-gradient(135deg, var(--atlas-secondary) 0%, var(--atlas-primary) 100%);
     border-top: 1px solid var(--atlas-border);
     display: flex;
     gap: 10px;
     align-items: center;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .chat-input input {
     flex: 1;
     padding: 12px 15px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
     border: 1px solid var(--atlas-accent-data);
-    border-radius: 8px;
+    border-radius: 25px;
     font-size: 14px;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
     color: var(--atlas-text-light);
     font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
+    backdrop-filter: blur(10px);
+}
+
+.chat-input input:focus {
+    border-color: var(--atlas-accent);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .chat-input input::placeholder {
     color: rgba(255, 255, 255, 0.4);
-}
-
-.chat-input input:focus {
-    border-color: var(--atlas-border-active);
-    background: rgba(255, 255, 255, 0.08);
 }
 
 .chat-input button {

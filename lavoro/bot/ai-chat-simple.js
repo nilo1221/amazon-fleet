@@ -2048,7 +2048,7 @@ function startAbandonmentTimer() {
     abandonmentTimer = setTimeout(() => {
         const chatMessages = document.getElementById('chat-messages');
         const chatWindow = document.getElementById('ai-chat-window');
-        const botLogo = document.querySelector('.chat-bot-logo');
+        const botLogo = document.querySelector('.chat-bot-icon');
         
         // Only show if chat is open and user hasn't interacted recently
         if (chatWindow && chatWindow.classList.contains('active')) {
