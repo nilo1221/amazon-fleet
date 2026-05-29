@@ -386,6 +386,39 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi una maxi scorta di batterie per il tuo outdoor? 🔋 Ho trovato queste 36 batterie AAA alcaline ad alte prestazioni, 1,5 Volt con durata di 10 anni. Con Coca-Cola Zero hai energia in tasca e relax!"
+            },
+            {
+                product1: {
+                    name: "DURACELL Batterie Plus AAA (30)",
+                    link: "https://www.amazon.it/DURACELL-Plus-Batteries-Pack-Storage-MN2400/dp/B0FG7S82VH?rdc=1&linkCode=ll2&tag=l0c39-21&linkId=18a6fb2de3027d4660afcf2df66b09b8&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi batterie premium con POWER BOOST? ⚡ Ho trovato queste 30 batterie DURACELL AAA con fino al 100% di durata extra, 1,5 V per dispositivi di uso quotidiano. Con Coca-Cola Zero hai potenza extra e relax!"
+            },
+            {
+                product1: {
+                    name: "VARTA Pile AA (40)",
+                    link: "https://www.amazon.it/confezione-imballaggio-ecologico-accessori-dispositivi/dp/B07PCDSBZM?pd_rd_w=MhbnV&content-id=amzn1.sym.d722d3de-d4c8-4e66-895f-3bb9d4887258&pf_rd_p=d722d3de-d4c8-4e66-895f-3bb9d4887258&pf_rd_r=XRQ46VF40NE6CV75QT9Q&pd_rd_wg=n0z0L&pd_rd_r=ae320756-c794-4ad5-bdeb-0a0d01e83436&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&aref=ZIq2OEbXoW&th=1&linkCode=ll2&tag=l0c39-21&linkId=1f47668527d2de1a89e5727c34089840&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi batterie ecologiche made in Germany? 🇩🇪 Ho trovato queste 40 pile VARTA AA Power on Demand, 1,5V con imballaggio ecologico. Con Coca-Cola Zero hai qualità tedesca e relax!"
+            },
+            {
+                product1: {
+                    name: "Energizer Alkaline Power AA (48)",
+                    link: "https://www.amazon.it/Energizer-batterie-AA-Batterie-Confezione/dp/B07ZQVWZKG?th=1&linkCode=ll2&tag=l0c39-21&linkId=eb6d4da8226aad77fbfa99f408ae4588&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi una maxi scorta eco-friendly? ♻️ Ho trovato queste 48 batterie Energizer AA 1,5V con 7 anni di conservazione e imballaggio 100% riciclabile. Con Coca-Cola Zero hai sostenibilità e relax!"
             }
         ]
     },
