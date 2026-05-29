@@ -306,6 +306,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi illuminazione smart? 💡 Guarda, con le luci WiFi e Coca-Cola Zero hai atmosfera perfetta. Ecco i link, è fantastico!"
+            },
+            {
+                product1: {
+                    name: "Guarnizione Finestra Condizionatore asciugatrice Mantenere",
+                    link: "https://www.amazon.it/Guarnizione-Finestra-Condizionatore-asciugatrice-Mantenere/dp/B0GRTBGHPN?pd_rd_w=r4MYu&content-id=amzn1.sym.7df8515a-b6ea-489f-99c4-dc8ee9c9a18c&pf_rd_p=7df8515a-b6ea-489f-99c4-dc8ee9c9a18c&pf_rd_r=VY37SCFVV7VFWZQQ27JT&pd_rd_wg=T8Wcy&pd_rd_r=46e28d5b-5e6e-4c92-a7b1-51a3d6efb23a&pd_rd_i=B0GRTBGHPN&th=1&linkCode=ll2&tag=l0c39-21&linkId=ee250e1718f315ed10ab84367894aa1f&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi risparmiare energia? 💨 Ho trovato questa guarnizione per condizionatore che mantiene l'efficienza. Con Coca-Cola Zero hai casa fresca e relax!"
             }
         ]
     },
