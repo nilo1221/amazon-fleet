@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Pet Care Intelligente - Benessere & Cura */
+/* Variabili Specifiche Pet Care Intelligente - Who Let the Dogs Out (Baha Men) */
 :root {
-    --niche-primary: #66CCFF;
-    --niche-secondary: #00CCFF;
-    --niche-accent: #FF66CC;
-    --niche-dark-bg: #0a1a2a;
+    --niche-primary: #FFD700;
+    --niche-secondary: #FFA500;
+    --niche-accent: #FF8C00;
+    --niche-dark-bg: #996600;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

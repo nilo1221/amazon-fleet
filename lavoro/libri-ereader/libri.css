@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Libri & E-Reader - Intrattenimento */
+/* Variabili Specifiche Libri & E-Reader - Brown Eyed Girl (Van Morrison) */
 :root {
-    --niche-primary: #9900FF;
-    --niche-secondary: #FF00CC;
-    --niche-accent: #00FF99;
-    --niche-dark-bg: #1a0a2a;
+    --niche-primary: #8B4513;
+    --niche-secondary: #A0522D;
+    --niche-accent: #CD853F;
+    --niche-dark-bg: #654321;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

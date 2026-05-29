@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Arredamento Casa - Casa & Arredamento */
+/* Variabili Specifiche Arredamento Casa - Home (Michael Bublé) */
 :root {
-    --niche-primary: #FF6600;
-    --niche-secondary: #FFCC00;
-    --niche-accent: #CC6600;
-    --niche-dark-bg: #2a1a0a;
+    --niche-primary: #DEB887;
+    --niche-secondary: #D2B48C;
+    --niche-accent: #F5DEB3;
+    --niche-dark-bg: #8B7355;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

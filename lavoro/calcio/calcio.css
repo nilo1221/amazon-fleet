@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Calcio - Sport */
+/* Variabili Specifiche Calcio - Colore Verde Brillante */
 :root {
-    --niche-primary: #1A5F1A;
-    --niche-secondary: #00AA00;
-    --niche-accent: #FFD700;
-    --niche-dark-bg: #0a1a0a;
+    --niche-primary: #00FF00;
+    --niche-secondary: #32CD32;
+    --niche-accent: #228B22;
+    --niche-dark-bg: #006600;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

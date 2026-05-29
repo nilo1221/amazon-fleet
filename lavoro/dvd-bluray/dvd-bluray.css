@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche DVD & Blu-ray - Intrattenimento */
+/* Variabili Specifiche DVD & Blu-ray - Colore Viola Scuro */
 :root {
-    --niche-primary: #9900FF;
-    --niche-secondary: #FF00CC;
-    --niche-accent: #00FF99;
-    --niche-dark-bg: #1a0a2a;
+    --niche-primary: #8B008B;
+    --niche-secondary: #9932CC;
+    --niche-accent: #BA55D3;
+    --niche-dark-bg: #4B0082;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

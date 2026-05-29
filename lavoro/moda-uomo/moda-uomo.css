@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Moda Uomo - Moda & Accessori */
+/* Variabili Specifiche Moda Uomo - Sharp Dressed Man (ZZ Top) */
 :root {
-    --niche-primary: #FF0066;
-    --niche-secondary: #9900CC;
-    --niche-accent: #FFCC00;
-    --niche-dark-bg: #2a0a2a;
+    --niche-primary: #2F4F4F;
+    --niche-secondary: #696969;
+    --niche-accent: #708090;
+    --niche-dark-bg: #1a2a2a;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

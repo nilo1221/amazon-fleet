@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Smart Home - Tecnologia & Elettronica */
+/* Variabili Specifiche Smart Home - Automaton (Jamiroquai) */
 :root {
-    --niche-primary: #0066CC;
-    --niche-secondary: #00CCFF;
-    --niche-accent: #FF0066;
-    --niche-dark-bg: #0a0a2e;
+    --niche-primary: #00FFFF;
+    --niche-secondary: #00CED1;
+    --niche-accent: #20B2AA;
+    --niche-dark-bg: #006666;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

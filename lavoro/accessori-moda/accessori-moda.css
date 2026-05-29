@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Accessori Moda - Moda & Accessori */
+/* Variabili Specifiche Accessori Moda - Fashion (David Bowie) */
 :root {
-    --niche-primary: #FF0066;
-    --niche-secondary: #9900CC;
-    --niche-accent: #FFCC00;
-    --niche-dark-bg: #2a0a2a;
+    --niche-primary: #C0C0C0;
+    --niche-secondary: #A9A9A9;
+    --niche-accent: #D3D3D3;
+    --niche-dark-bg: #696969;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

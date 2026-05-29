@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Benessere & Cura Personale - Benessere & Cura */
+/* Variabili Specifiche Benessere & Cura Personale - Beautiful (Christina Aguilera) */
 :root {
-    --niche-primary: #66CCFF;
-    --niche-secondary: #00CCFF;
-    --niche-accent: #FF66CC;
-    --niche-dark-bg: #0a1a2a;
+    --niche-primary: #E6E6FA;
+    --niche-secondary: #D8BFD8;
+    --niche-accent: #DDA0DD;
+    --niche-dark-bg: #9370DB;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

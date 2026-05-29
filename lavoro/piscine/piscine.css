@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Piscine - Sport & Relax */
+/* Variabili Specifiche Piscine - Colore Blu Cielo */
 :root {
-    --niche-primary: #0077BE;
-    --niche-secondary: #00A8E8;
-    --niche-accent: #00FFFF;
-    --niche-dark-bg: #0a1a2e;
+    --niche-primary: #00BFFF;
+    --niche-secondary: #1E90FF;
+    --niche-accent: #00CED1;
+    --niche-dark-bg: #006699;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
