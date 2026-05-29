@@ -619,6 +619,193 @@ const ComboDatabase = {
                 message: "Le certificazioni di sicurezza indicano che l'imbracatura SOB offre protezione certificata per climbing, con materiali ad alte prestazioni. Ecco i link tecnici."
             }
         ]
+    },
+    "abbigliamento-ciclismo": {
+        name: "Abbigliamento Ciclismo",
+        triggerKeywords: ["ciclismo", "bicicletta", "bici", "pedalare", "maglia ciclismo", "pantaloncini"],
+        combos: [
+            {
+                product1: {
+                    name: "Abbigliamento Ciclismo Professionale",
+                    link: "https://www.amazon.it/dp/B08TBD3TDJ?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Ti piace pedalare? 🚴‍♂️ Ho trovato questo abbigliamento ciclismo che ti fa risparmiare tempo e soldi. Perfetto per le tue uscite in bici!"
+            }
+        ]
+    },
+    "abbigliamento-lavoro": {
+        name: "Abbigliamento Lavoro",
+        triggerKeywords: ["lavoro", "abbigliamento lavoro", "tuta lavoro", "scarpe sicurezza", "casco"],
+        combos: [
+            {
+                product1: {
+                    name: "Abbigliamento da Lavoro Professionale",
+                    link: "https://www.amazon.it/dp/B0FQ69B1ZT?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Lavori in sicurezza? 👷‍♂️ Questo abbigliamento da lavoro è perfetto per proteggerti. Con Coca-Cola Zero hai l'energia giusta!"
+            }
+        ]
+    },
+    "abbigliamento-serie-tv-film": {
+        name: "Abbigliamento Serie TV & Film",
+        triggerKeywords: ["serie tv", "film", "maglietta", "t-shirt", "merchandise", "fan"],
+        combos: [
+            {
+                product1: {
+                    name: "Merchandise Serie TV Popolare",
+                    link: "https://www.amazon.it/dp/B0FSRZF8MJ?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Sei un fan di serie TV? 📺 Ho trovato questa maglietta merchandise che è perfetta per te. Con Coca-Cola Zero guardi le tue serie preferite!"
+            }
+        ]
+    },
+    "arredamento-casa": {
+        name: "Arredamento Casa",
+        triggerKeywords: ["arredamento", "casa", "mobili", "divano", "sedia", "tavolo", "decorazione"],
+        combos: [
+            {
+                product1: {
+                    name: "Mobile Arredamento Moderno",
+                    link: "https://www.amazon.it/dp/B0BG2XMTFC?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi rinnovare la casa? 🏠 Questo mobile arredamento è perfetto per il tuo salotto. Con Coca-Cola Zero goditi il tuo nuovo spazio!"
+            }
+        ]
+    },
+    "benessere": {
+        name: "Benessere & Cura Personale",
+        triggerKeywords: ["benessere", "cura personale", "salute", "skincare", "cosmetici", "beauty"],
+        combos: [
+            {
+                product1: {
+                    name: "Prodotto Cura Personale Premium",
+                    link: "https://www.amazon.it/dp/B0CWRZC81F?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Ti prendi cura di te? 💆‍♀️ Questo prodotto cura personale è perfetto per la tua routine. Con Coca-Cola Zero ti senti fresco tutto il giorno!"
+            }
+        ]
+    },
+    "biciclette": {
+        name: "Biciclette & Mobilità",
+        triggerKeywords: ["bicicletta", "bici", "mobilità", "e-bike", "monopattino", "trasporti"],
+        combos: [
+            {
+                product1: {
+                    name: "Bicicletta o Accessorio Mobilità",
+                    link: "https://www.amazon.it/dp/B08TBD3TDJ?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Ti muovi in bici? 🚴 Ho trovato questo accessorio mobilità che ti facilita gli spostamenti. Con Coca-Cola Zero hai l'energia giusta!"
+            }
+        ]
+    },
+    "profumi": {
+        name: "Profumi & Bellezza",
+        triggerKeywords: ["profumo", "fragranza", "profumo uomo", "profumo donna", "essenza", "parfum"],
+        combos: [
+            {
+                product1: {
+                    name: "Profumo Premium",
+                    link: "https://www.amazon.it/dp/B000GIJ1XS?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi un profumo speciale? 🌹 Ho trovato questo profumo premium che lascia il segno. Con Coca-Cola Zero sei sempre fresco!"
+            }
+        ]
+    },
+    "smartphone": {
+        name: "Smartphone & Tech",
+        triggerKeywords: ["smartphone", "telefono", "cellulare", "tech", "tecnologia", "gadget"],
+        combos: [
+            {
+                product1: {
+                    name: "Smartphone o Gadget Tech",
+                    link: "https://www.amazon.it/dp/B0BV396HKH?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Ti piace la tecnologia? 📱 Ho trovato questo smartphone che è perfetto per te. Con Coca-Cola Zero sei sempre connesso!"
+            }
+        ]
+    },
+    "fotografia": {
+        name: "Studio Fotografico",
+        triggerKeywords: ["fotografia", "foto", "camera", "obiettivo", "lente", "fotocamera", "shooting"],
+        combos: [
+            {
+                product1: {
+                    name: "Attrezzatura Fotografica",
+                    link: "https://www.amazon.it/dp/B08G1JJVJJ?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Ti piace fare foto? 📸 Ho trovato questa attrezzatura fotografica che è perfetta per i tuoi scatti. Con Coca-Cola Zero catturi ogni momento!"
+            }
+        ]
+    },
+    "ufficio": {
+        name: "Ufficio Produttivo",
+        triggerKeywords: ["ufficio", "lavoro", "scrivania", "sedia ufficio", "produttività", "organizzazione"],
+        combos: [
+            {
+                product1: {
+                    name: "Attrezzatura Ufficio",
+                    link: "https://www.amazon.it/dp/B0D9KJNTTK?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Lavori in ufficio? 💼 Ho trovato questa attrezzatura che ti aiuta a essere più produttivo. Con Coca-Cola Zero hai l'energia giusta!"
+            }
+        ]
+    },
+    "viaggi": {
+        name: "Viaggi & Vacanze",
+        triggerKeywords: ["viaggio", "vacanza", "turismo", "valigia", "zaino", "destinazione"],
+        combos: [
+            {
+                product1: {
+                    name: "Accessorio Viaggio",
+                    link: "https://www.amazon.it/dp/B0CY1XT58Z?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Ti piace viaggiare? ✈️ Ho trovato questo accessorio viaggio che è perfetto per le tue avventure. Con Coca-Cola Zero goditi ogni destinazione!"
+            }
+        ]
     }
 };
 

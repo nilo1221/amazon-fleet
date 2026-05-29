@@ -2128,6 +2128,20 @@ function showUrgencyComboMessage(context) {
     addMessage(message, 'bot');
 }
 
+// Funzione per generare intervallo casuale tra 18-24 minuti (Variabilità Temporale)
+function getRandomInterval() {
+    const minTime = 18 * 60 * 1000; // 18 minuti
+    const maxTime = 24 * 60 * 1000; // 24 minuti
+    return Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
+}
+
+// Funzione per controllare se è orario dormiente (22:00-08:00)
+function isSleepTime() {
+    const now = new Date();
+    const hour = now.getHours();
+    return hour >= 22 || hour < 8;
+}
+
 // Funzione per tracciare i click sulle combos (logica amico)
 function trackComboClick(context, productNumber) {
     if (!userPreferences.comboClicks) {
@@ -2157,14 +2171,14 @@ function trackComboClick(context, productNumber) {
         addMessage("Grazie per aver dato un'occhiata! 😊 Ti piace il prodotto? Vuoi che ti mostri alternative simili?", 'bot');
     }, 1000);
     
-    // Ferma il timer delle combo per 10 minuti (non essere molesto)
+    // Stop Intelligente: ferma il timer delle combo per 2 ore (non essere molesto)
     if (comboInterval) {
         clearInterval(comboInterval);
         setTimeout(() => {
             comboInterval = setInterval(() => {
                 showComboMessage();
-            }, 30000); // 30 secondi
-        }, 10 * 60 * 1000); // 10 minuti
+            }, getRandomInterval()); // Variabilità temporale 18-24 minuti
+        }, 2 * 60 * 60 * 1000); // 2 ore
     }
 }
 
@@ -2605,14 +2619,20 @@ function detectComboScroll() {
         // Mostra il messaggio combo subito al 50%
         showComboMessage();
         
-        // Poi mostra ogni 30 secondi
+        // Poi mostra con variabilità temporale 18-24 minuti
         comboInterval = setInterval(() => {
             showComboMessage();
-        }, 30000); // 30 secondi
+        }, getRandomInterval()); // 18-24 minuti
     }
 }
 
 function showComboMessage() {
+    // Orario Dormiente: non mostrare combo tra 22:00 e 08:00
+    if (isSleepTime()) {
+        console.log('Sleep time - no combo messages');
+        return;
+    }
+    
     // Ottieni il contesto corrente
     let context = getContesto();
     

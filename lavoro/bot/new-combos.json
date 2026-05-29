@@ -1,0 +1,145 @@
+[
+  {
+    "key": "abbigliamento-ciclismo",
+    "name": "Abbigliamento Ciclismo",
+    "product1": {
+      "name": "Product B08TBD3TDJ",
+      "link": "https://www.amazon.it/dp/B08TBD3TDJ?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+    },
+    "product2": {
+      "name": "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+      "link": "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+    },
+    "message": "Scopri i migliori prodotti per abbigliamento ciclismo! Ecco la combo perfetta."
+  },
+  {
+    "key": "abbigliamento-lavoro",
+    "name": "Abbigliamento Lavoro",
+    "product1": {
+      "name": "Product B0FQ69B1ZT",
+      "link": "https://www.amazon.it/dp/B0FQ69B1ZT?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+    },
+    "product2": {
+      "name": "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+      "link": "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+    },
+    "message": "Scopri i migliori prodotti per abbigliamento lavoro! Ecco la combo perfetta."
+  },
+  {
+    "key": "abbigliamento-serie-tv-film",
+    "name": "Abbigliamento Serie Tv Film",
+    "product1": {
+      "name": "Product B0FSRZF8MJ",
+      "link": "https://www.amazon.it/dp/B0FSRZF8MJ?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+    },
+    "product2": {
+      "name": "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+      "link": "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+    },
+    "message": "Scopri i migliori prodotti per abbigliamento serie tv film! Ecco la combo perfetta."
+  },
+  {
+    "key": "arredamento-casa",
+    "name": "Arredamento Casa",
+    "product1": {
+      "name": "Product B0BG2XMTFC",
+      "link": "https://www.amazon.it/dp/B0BG2XMTFC?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+    },
+    "product2": {
+      "name": "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+      "link": "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+    },
+    "message": "Scopri i migliori prodotti per arredamento casa! Ecco la combo perfetta."
+  },
+  {
+    "key": "benessere",
+    "name": "Benessere Cura Personale",
+    "product1": {
+      "name": "Product B0CWRZC81F",
+      "link": "https://www.amazon.it/dp/B0CWRZC81F?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+    },
+    "product2": {
+      "name": "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+      "link": "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+    },
+    "message": "Scopri i migliori prodotti per benessere cura personale! Ecco la combo perfetta."
+  },
+  {
+    "key": "biciclette",
+    "name": "Biciclette Mobilita",
+    "product1": {
+      "name": "Product B08TBD3TDJ",
+      "link": "https://www.amazon.it/dp/B08TBD3TDJ?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+    },
+    "product2": {
+      "name": "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+      "link": "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+    },
+    "message": "Scopri i migliori prodotti per biciclette mobilita! Ecco la combo perfetta."
+  },
+  {
+    "key": "profumi",
+    "name": "Profumi Bellezza",
+    "product1": {
+      "name": "Product B000GIJ1XS",
+      "link": "https://www.amazon.it/dp/B000GIJ1XS?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+    },
+    "product2": {
+      "name": "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+      "link": "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+    },
+    "message": "Scopri i migliori prodotti per profumi bellezza! Ecco la combo perfetta."
+  },
+  {
+    "key": "smartphone",
+    "name": "Smartphone Tech",
+    "product1": {
+      "name": "Product B0BV396HKH",
+      "link": "https://www.amazon.it/dp/B0BV396HKH?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+    },
+    "product2": {
+      "name": "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+      "link": "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+    },
+    "message": "Scopri i migliori prodotti per smartphone tech! Ecco la combo perfetta."
+  },
+  {
+    "key": "fotografia",
+    "name": "Studio Fotografico",
+    "product1": {
+      "name": "Product B08G1JJVJJ",
+      "link": "https://www.amazon.it/dp/B08G1JJVJJ?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+    },
+    "product2": {
+      "name": "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+      "link": "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+    },
+    "message": "Scopri i migliori prodotti per studio fotografico! Ecco la combo perfetta."
+  },
+  {
+    "key": "ufficio",
+    "name": "Ufficio Produttivo",
+    "product1": {
+      "name": "Product B0D9KJNTTK",
+      "link": "https://www.amazon.it/dp/B0D9KJNTTK?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+    },
+    "product2": {
+      "name": "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+      "link": "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+    },
+    "message": "Scopri i migliori prodotti per ufficio produttivo! Ecco la combo perfetta."
+  },
+  {
+    "key": "viaggi",
+    "name": "Viaggi Vacanze",
+    "product1": {
+      "name": "Product B0CY1XT58Z",
+      "link": "https://www.amazon.it/dp/B0CY1XT58Z?&linkCode=ll2&tag=l0c39-21&linkId=auto&ref=_as_li_ss_tl"
+    },
+    "product2": {
+      "name": "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+      "link": "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+    },
+    "message": "Scopri i migliori prodotti per viaggi vacanze! Ecco la combo perfetta."
+  }
+]
