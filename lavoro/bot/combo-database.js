@@ -331,6 +331,28 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi un kit di pesca completo per i bambini? 🧒 Ho trovato questo set con canna telescopica, sedia pieghevole, portacanna e tackle box. Con Coca-Cola Zero i piccoli pescatori hanno tutto e relax!"
+            },
+            {
+                product1: {
+                    name: "COSTWAY Tavola da Surf 33\"/37\"/41\"",
+                    link: "https://www.amazon.it/COSTWAY-Bambini-Tavoletta-Disponibile-Turchese/dp/B0C288X16N?th=1&linkCode=ll2&tag=l0c39-21&linkId=ee15584efb51912e9810d0f7603a661a&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi divertirti in mare con una tavola da surf? 🏄 Ho trovato questa tavola 33\"/37\"/41\" in XPE, EPS e HDPE con leash per polso, portata 85 kg. Con Coca-Cola Zero hai il mare in tasca e relax!"
+            },
+            {
+                product1: {
+                    name: "HUIIKE Tavola Sup Gonfiabile Adulti con Accessori Inclusi",
+                    link: "https://www.amazon.it/dp/B0F3J435PC?aref=4lgsuI7u43&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=54a49591e45fecd6d6f1f7392c39e829&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi fare SUP con una tavola gonfiabile completa? 🏄‍♂️ Ho trovato questo SUP 305 x 84 x 15 cm con pagaia, pinne e pompa, carico massimo 130 kg. Con Coca-Cola Zero hai il mare in tasca e relax!"
             }
         ]
     },
