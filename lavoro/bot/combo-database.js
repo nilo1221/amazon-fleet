@@ -375,6 +375,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi fare immersioni profonde con una luce video? 🎥 Ho trovato questa luce 1200 lumen con fascio 140 gradi, impermeabile fino a 150 m con blocco di sicurezza. Con Coca-Cola Zero hai l'illuminazione perfetta e relax!"
+            },
+            {
+                product1: {
+                    name: "Amazon Basics 36 batterie alcaline AAA",
+                    link: "https://www.amazon.it/Amazon-Basics-Alkaline-High-Performance-Batteries/dp/B00LH3DMUO?pd_rd_w=qlggz&content-id=amzn1.sym.4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_p=4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_r=YHJ89Y2B4S2FAWNWN9C4&pd_rd_wg=AzXCS&pd_rd_r=1e0ac033-7201-4d10-aacb-744002d4ccad&pd_rd_i=B00LH3DMUO&th=1&linkCode=ll2&tag=l0c39-21&linkId=7890a27219eebd958f66211c20064734&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi una maxi scorta di batterie per il tuo outdoor? 🔋 Ho trovato queste 36 batterie AAA alcaline ad alte prestazioni, 1,5 Volt con durata di 10 anni. Con Coca-Cola Zero hai energia in tasca e relax!"
             }
         ]
     },
