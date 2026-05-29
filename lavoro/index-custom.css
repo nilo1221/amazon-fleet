@@ -90,6 +90,7 @@
 
 .bento-card-gaming {
     border-color: var(--bento-gaming);
+    background: linear-gradient(135deg, rgba(139, 0, 139, 0.05) 0%, rgba(139, 0, 139, 0.1) 100%);
 }
 
 .bento-card-gaming:hover {
@@ -99,6 +100,7 @@
 
 .bento-card-smart-home {
     border-color: var(--bento-smart-home);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(0, 255, 255, 0.1) 100%);
 }
 
 .bento-card-smart-home:hover {
@@ -108,6 +110,7 @@
 
 .bento-card-fitness {
     border-color: var(--bento-fitness);
+    background: linear-gradient(135deg, rgba(50, 205, 50, 0.05) 0%, rgba(50, 205, 50, 0.1) 100%);
 }
 
 .bento-card-fitness:hover {
@@ -117,6 +120,7 @@
 
 .bento-card-mare {
     border-color: var(--bento-mare);
+    background: linear-gradient(135deg, rgba(0, 206, 209, 0.05) 0%, rgba(0, 206, 209, 0.1) 100%);
 }
 
 .bento-card-mare:hover {
@@ -126,6 +130,7 @@
 
 .bento-card-cucina {
     border-color: var(--bento-cucina);
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.05) 0%, rgba(255, 182, 193, 0.1) 100%);
 }
 
 .bento-card-cucina:hover {
@@ -135,6 +140,7 @@
 
 .bento-card-tech {
     border-color: var(--bento-tech);
+    background: linear-gradient(135deg, rgba(112, 128, 144, 0.05) 0%, rgba(112, 128, 144, 0.1) 100%);
 }
 
 .bento-card-tech:hover {
@@ -144,6 +150,7 @@
 
 .bento-card-moda {
     border-color: var(--bento-moda);
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.05) 0%, rgba(255, 105, 180, 0.1) 100%);
 }
 
 .bento-card-moda:hover {
@@ -153,6 +160,7 @@
 
 .bento-card-sport {
     border-color: var(--bento-sport);
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.05) 0%, rgba(0, 255, 0, 0.1) 100%);
 }
 
 .bento-card-sport:hover {
@@ -162,6 +170,7 @@
 
 .bento-card-pet {
     border-color: var(--bento-pet);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 215, 0, 0.1) 100%);
 }
 
 .bento-card-pet:hover {
@@ -171,6 +180,7 @@
 
 .bento-card-libri {
     border-color: var(--bento-libri);
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(139, 69, 19, 0.1) 100%);
 }
 
 .bento-card-libri:hover {
@@ -180,6 +190,7 @@
 
 .bento-card-arredamento {
     border-color: var(--bento-arredamento);
+    background: linear-gradient(135deg, rgba(222, 184, 135, 0.05) 0%, rgba(222, 184, 135, 0.1) 100%);
 }
 
 .bento-card-arredamento:hover {
@@ -189,6 +200,7 @@
 
 .bento-card-benessere {
     border-color: var(--bento-benessere);
+    background: linear-gradient(135deg, rgba(230, 230, 250, 0.05) 0%, rgba(230, 230, 250, 0.1) 100%);
 }
 
 .bento-card-benessere:hover {
