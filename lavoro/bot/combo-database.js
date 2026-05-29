@@ -501,6 +501,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi il caffè ovunque? 🚀 Ho trovato questa macchina espresso portatile con capsule. Con Coca-Cola Zero hai caffè perfetto e bevande fresche ovunque tu sia!"
+            },
+            {
+                product1: {
+                    name: "Mutital ricambio completamente automatiche dellacqua",
+                    link: "https://www.amazon.it/Mutital-ricambio-completamente-automatiche-dellacqua/dp/B0F8J1FJWB?keywords=Macchine%2Bda%2Bcaff%C3%A8&pf_rd_p=5cf7e89d-be4f-4a60-a94f-67425bc592ec&pf_rd_r=N8N8AZCTQG8DAVE9HFGY&aref=UFBmA4ADAV&sp_csd=d2lkZ2V0TmFtZT1zcF9hcGJfZGVza3RvcF9icm93c2VfaW5saW5lX2F0Zg&th=1&linkCode=ll2&tag=l0c39-21&linkId=8f1db1961f0b5770ccf8d2087996cdca&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi il caffè perfetto automatico? ⚙️ Ho trovato la macchina Mutital completamente automatica con ricambio acqua. Con Coca-Cola Zero hai caffè professionale e relax!"
             }
         ]
     },
