@@ -15,27 +15,8 @@
     --cucina-card-bg: rgba(255, 255, 255, 0.95);
 }
 
-/* Sfondo Cucina con Pattern e Gradiente */
-body {
-    background: 
-        linear-gradient(135deg, var(--cucina-dark-bg) 0%, #3a2a1a 50%, var(--cucina-accent) 100%),
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 2px,
-            rgba(255, 140, 0, 0.03) 2px,
-            rgba(255, 140, 0, 0.03) 4px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 2px,
-            rgba(139, 69, 19, 0.03) 2px,
-            rgba(139, 69, 19, 0.03) 4px
-        );
-    background-attachment: fixed;
-    min-height: 100vh;
-}
+/* Sfondo Cucina - Usa sfondo globale #F8F9FA */
+/* body background rimossa per usare quello globale */
 
 /* Hero Section Cucina */
 .hero-section {
