@@ -353,6 +353,28 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi fare SUP con una tavola gonfiabile completa? 🏄‍♂️ Ho trovato questo SUP 305 x 84 x 15 cm con pagaia, pinne e pompa, carico massimo 130 kg. Con Coca-Cola Zero hai il mare in tasca e relax!"
+            },
+            {
+                product1: {
+                    name: "Suptig Luce subacquea 84 LED",
+                    link: "https://www.amazon.it/dp/B07C2VN39R?_encoding=UTF8&ie=UTF8&psc=1&sp_csd=d2lkZ2V0TmFtZT1zcF9icm93c2VfdGhlbWF0aWM%3D&sp_cr=ZAZ&aref=ASq7YI8YZu&pd_rd_w=ERdEK&content-id=amzn1.sym.08afed49-48a0-436c-b3e7-8f2dafa3caeb&pf_rd_p=08afed49-48a0-436c-b3e7-8f2dafa3caeb&pf_rd_r=J30G46053W1NR2S3MD9F&pd_rd_wg=pu4Xr&pd_rd_r=57a6eec8-77f6-4821-9402-a7471ca4bb9e&linkCode=ll2&tag=l0c39-21&linkId=583722cc3b7ed601ecf012c1cf3ea4ef&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi fare immersioni con una luce potente? 💡 Ho trovato questa luce subacquea 84 LED dimmerabile, impermeabile fino a 50 m, compatibile con GoPro e fotocamere. Con Coca-Cola Zero hai l'illuminazione perfetta e relax!"
+            },
+            {
+                product1: {
+                    name: "ORCATORCH D530V 1200 Lumen Scuba Diving Video Light",
+                    link: "https://www.amazon.it/dp/B07XT9687F?psc=1&aref=zfPW43hyCQ&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=1dbc0de6461d400644c896dd774df57a&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi fare immersioni profonde con una luce video? 🎥 Ho trovato questa luce 1200 lumen con fascio 140 gradi, impermeabile fino a 150 m con blocco di sicurezza. Con Coca-Cola Zero hai l'illuminazione perfetta e relax!"
             }
         ]
     },
