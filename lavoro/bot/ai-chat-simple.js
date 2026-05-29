@@ -67,7 +67,7 @@ function getCategoryNameFromContext() {
         'parrucchiere-barbiere': 'Parrucchiere & Barbiere',
         'abbigliamento-serie-tv-film': 'Cinema & TV',
         'abbigliamento-ciclismo': 'Abbigliamento Ciclismo',
-        'biciclette-mobilita': 'Biciclette & Mobilità',
+        'veicoli': 'Biciclette & Mobilità',
         'smartphone': 'Smartphone & Tech',
         'tech': 'Tech',
         'moda-donna': 'Moda Donna',
@@ -858,10 +858,10 @@ const NicheDatabase = {
         songLinkSpotify: "https://open.spotify.com/track/6t1FIJlZWTQfIZhsGjaulM",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
     },
-    "biciclette-mobilita": {
+    "veicoli": {
         name: "Biciclette & Mobilità",
         tags: ["bicicletta", "bici", "bicycle", "bike", "mtb", "mountain", "bike", "e-bike", "ebike", "elettrica", "elettrico", "pendolare", "urbano", "mobilità", "mobilita", "ciclismo", "ciclista", "corsa", "spinning", "trail", "off-road", "offroad", "alluminio", "freni", "disco", "idraulico", "cambio", "velocità", "velocita", "batteria", "autonomia", "ricaricabile", "impermeabile", "sospensioni", "ammortizzata", "biammortizzata", "ruote", "pneumatici", "sellino", "manubrio", "pedali", "casco", "luci", "campanello", "portapacchi", "borraccia"],
-        url: "/biciclette-mobilita/index.html",
+        url: "/veicoli/index.html",
         personality: "adventure",
         valueProp: "Ho analizzato le specifiche tecniche per te. Telaio, batteria, autonomia e freni sono i fattori chiave per la tua mobilità.",
         song: "Bicycle Race - Queen",
@@ -1856,7 +1856,7 @@ const comboMessages = {
         "Sei un otaku? 🎌 Guarda, per la collezione perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è imperdibile!",
         "Vuoi storie epiche? ⚔️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
     ],
-    "biciclette-mobilita": [
+    "veicoli": [
         "Ehi, ami le biciclette! 🚲 Guarda, se pedali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il mio giro e una scorta di {prodottoAncora} per la manutenzione. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
         "Ti piace andare in bici? 🚴 Guarda, per la mobilità perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
         "Vuoi muoverti in libertà? 🌳 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
@@ -1919,8 +1919,8 @@ function getContesto() {
         return 'abbigliamento-ciclismo';
     }
     }
-    if (currentPath.includes('biciclette-mobilita') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
-        return 'biciclette-mobilita';
+    if (currentPath.includes('veicoli') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
+        return 'veicoli';
     }
     if (currentPath.includes('smartphone-tech') || currentUrl.includes('smartphone') || currentUrl.includes('telefono') || currentUrl.includes('mobile')) {
         return 'smartphone';
@@ -2473,7 +2473,7 @@ function applyThemeOnLoad() {
         themeClass = 'theme-blinding-lights';
     } else if (categoryKey === 'moda-donna') {
         themeClass = 'theme-as-it-was';
-    } else if (categoryKey === 'biciclette-mobilita') {
+    } else if (categoryKey === 'veicoli') {
         themeClass = 'theme-biciclette';
     } else if (categoryKey === 'parrucchiere-barbiere') {
         themeClass = 'theme-parrucchiere';
@@ -2952,7 +2952,7 @@ const relatedCategories = {
     'libri-ereader': ['tech', 'smartphone-tech', 'manga-anime', 'snack-bevande'],
     'mare-spiaggia': ['viaggi-vacanze', 'outdoor-camping', 'snack-bevande'],
     'outdoor-camping': ['viaggi-vacanze', 'mare-spiaggia', 'snack-bevande'],
-    'biciclette-mobilita': ['fitness-casa', 'outdoor-camping', 'tech', 'snack-bevande'],
+    'veicoli': ['fitness-casa', 'outdoor-camping', 'tech', 'snack-bevande'],
     'parrucchiere-barbiere': ['benessere-cura-personale', 'moda-donna', 'moda-uomo', 'accessori-moda', 'snack-bevande'],
     'manga-anime': ['abbigliamento-serie-tv-film', 'libri-ereader', 'moda-donna', 'moda-uomo', 'elite-gaming-gear', 'snack-bevande'],
     'musica-vinili': ['abbigliamento-serie-tv-film', 'tech', 'benessere-cura-personale', 'snack-bevande'],
@@ -3290,7 +3290,7 @@ function applyBotTheme(categoryKey) {
         themeClass = 'theme-blinding-lights';
     } else if (categoryKey === 'moda-donna') {
         themeClass = 'theme-as-it-was';
-    } else if (categoryKey === 'biciclette-mobilita') {
+    } else if (categoryKey === 'veicoli') {
         themeClass = 'theme-biciclette';
     } else if (categoryKey === 'parrucchiere-barbiere') {
         themeClass = 'theme-parrucchiere';

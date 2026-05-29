@@ -17,7 +17,7 @@
     
     // Determina la nicchia dall'URL
     let niche = 'generale';
-    if (currentPath.includes('/biciclette-mobilita/')) niche = 'biciclette-mobilita';
+    if (currentPath.includes('/veicoli/')) niche = 'veicoli';
     else if (currentPath.includes('/manga-anime/')) niche = 'manga-anime';
     else if (currentPath.includes('/parrucchiere-barbiere/')) niche = 'parrucchiere-barbiere';
     else if (currentPath.includes('/benessere-cura-personale/')) niche = 'benessere-cura-personale';

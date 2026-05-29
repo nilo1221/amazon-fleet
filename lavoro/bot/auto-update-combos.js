@@ -14,7 +14,7 @@ const nicheToComboKey = {
     'accessori-moda': 'moda',
     'arredamento-casa': 'arredamento-casa',
     'benessere-cura-personale': 'benessere',
-    'biciclette-mobilita': 'biciclette',
+    'veicoli': 'biciclette',
     'calcio': 'calcio',
     'cucina-elettrodomestici': 'cucina',
     'dvd-bluray': 'cinema',

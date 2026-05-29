@@ -815,9 +815,9 @@ const ComboDatabase = {
             }
         ]
     },
-    "biciclette": {
-        name: "Biciclette & Mobilità",
-        triggerKeywords: ["bicicletta", "bici", "mobilità", "e-bike", "monopattino", "trasporti"],
+    "veicoli": {
+        name: "Veicoli & Mobilità",
+        triggerKeywords: ["bicicletta", "bici", "mobilità", "e-bike", "monopattino", "trasporti", "motocicletta", "moto", "scooter", "veicolo"],
         combos: [
             {
                 product1: {

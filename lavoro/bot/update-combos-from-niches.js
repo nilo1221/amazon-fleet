@@ -13,7 +13,7 @@ const niches = [
     'accessori-moda',
     'arredamento-casa',
     'benessere-cura-personale',
-    'biciclette-mobilita',
+    'veicoli',
     'calcio',
     'cucina-elettrodomestici',
     'dvd-bluray',
