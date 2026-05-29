@@ -77,8 +77,106 @@
     <link rel="stylesheet" href="bot/ai-chat-simple.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#FF6B6B">
+    
+    <style>
+        /* Splash Screen Styles */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        #splash-screen.hidden {
+            opacity: 0;
+            transform: translateY(-100%);
+            pointer-events: none;
+        }
+        
+        .splash-logo {
+            width: 200px;
+            max-width: 40%;
+            opacity: 0;
+            animation: logoFadeIn 1.5s ease-out forwards;
+            filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.3));
+        }
+        
+        @keyframes logoFadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8) rotate(-5deg);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.05) rotate(2deg);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+        
+        .splash-system-text {
+            position: absolute;
+            bottom: 100px;
+            font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
+            font-size: 12px;
+            color: #1A1A1A;
+            opacity: 0;
+            animation: systemTextFadeIn 0.5s ease-out 1s forwards;
+        }
+        
+        @keyframes systemTextFadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0.6;
+            }
+        }
+        
+        /* Main content transition */
+        #main-content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        #main-content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .splash-logo {
+                width: 150px;
+                max-width: 35%;
+            }
+            
+            .splash-system-text {
+                bottom: 80px;
+                font-size: 10px;
+            }
+        }
+    </style>
 </head>
 <body style="background-color: #FAFAFA;">
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img src="images/logo.png" alt="Smart Choices Guide" class="splash-logo">
+        <div class="splash-system-text">> Inizializzazione sistema...</div>
+    </div>
+    
+    <!-- Main Content -->
+    <div id="main-content">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Navigazione principale">
         <div class="container d-flex align-items-center">
@@ -1730,5 +1828,37 @@
 
 <!-- Tracking Globale GA4 -->
     <script src="js/tracking-globale.js"></script>
+
+<!-- Splash Screen Script -->
+<script>
+    (function() {
+        // Check if user has already visited
+        const hasVisited = sessionStorage.getItem('hasVisited');
+        
+        const splashScreen = document.getElementById('splash-screen');
+        const mainContent = document.getElementById('main-content');
+        
+        if (hasVisited) {
+            // Skip splash screen for returning visitors
+            splashScreen.style.display = 'none';
+            mainContent.classList.add('visible');
+        } else {
+            // Show splash screen for first-time visitors
+            sessionStorage.setItem('hasVisited', 'true');
+            
+            // Hide splash screen after 2 seconds
+            setTimeout(() => {
+                splashScreen.classList.add('hidden');
+                
+                // Show main content after splash screen animation
+                setTimeout(() => {
+                    mainContent.classList.add('visible');
+                }, 300);
+            }, 2000);
+        }
+    })();
+</script>
+
+    </div>
 </body>
 </html>
