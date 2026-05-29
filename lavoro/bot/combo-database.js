@@ -829,6 +829,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Ti muovi in bici? 🚴 Ho trovato questo accessorio mobilità che ti facilita gli spostamenti. Con Coca-Cola Zero hai l'energia giusta!"
+            },
+            {
+                product1: {
+                    name: "Maizjok Impermeabile Poliestere Motocicletta 245x105x125",
+                    link: "https://www.amazon.it/Maizjok-Impermeabile-Poliestere-Motocicletta-245x105x125/dp/B0CGDN6WCY?th=1&linkCode=ll2&tag=l0c39-21&linkId=194e40235cd56b682a453b8d4ba9e8ea&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi proteggere la tua moto? 🏍️ Ho trovato questa copertura impermeabile che protegge da pioggia e polvere. Con Coca-Cola Zero hai la moto al sicuro e relax!"
             }
         ]
     },
