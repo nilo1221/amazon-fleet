@@ -321,6 +321,392 @@
         </div>
     </section>
 
+    <!-- Categorie in Evidenza - Bento Grid con Filtri -->
+    <section class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">
+                <i class="fas fa-th-large text-primary me-3" aria-hidden="true"></i>Categorie in Evidenza
+            </h2>
+            <p class="lead text-muted">Esplora le nostre guide all'acquisto specializzate</p>
+        </div>
+        
+        <!-- Category Filter Tabs -->
+        <div class="category-filter-tabs justify-content-center">
+            <button class="category-filter-tab active" data-filter="all">Tutte</button>
+            <button class="category-filter-tab" data-filter="tecnologia">Tecnologia</button>
+            <button class="category-filter-tab" data-filter="casa">Casa</button>
+            <button class="category-filter-tab" data-filter="sport">Sport</button>
+            <button class="category-filter-tab" data-filter="moda">Moda</button>
+            <button class="category-filter-tab" data-filter="benessere">Benessere</button>
+        </div>
+        
+        <!-- Bento Grid -->
+        <div class="bento-grid" id="bentoGrid">
+            <!-- Atlas - Motore di Ricerca Intelligente (Medium 2x1) -->
+            <div class="bento-card bento-card-medium bento-card-atlas" data-category="all">
+                <div class="bento-card-content">
+                    <i class="fas fa-search bento-card-icon" style="color: var(--industrial-orange);"></i>
+                    <h3 class="bento-card-title">Atlas</h3>
+                    <p class="bento-card-description">Motore di ricerca intelligente - Trova prodotti in tutte le nicchie</p>
+                    <span class="bento-card-badge">AI</span>
+                    <button onclick="openAtlas()" class="btn">Cerca</button>
+                </div>
+            </div>
+            
+            <!-- Elite Gaming Gear - TOP (Large 2x2) -->
+            <div class="bento-card bento-card-large bento-card-gaming" data-category="tecnologia">
+                <div class="bento-card-content">
+                    <i class="fas fa-gamepad bento-card-icon" style="color: var(--bento-gaming);"></i>
+                    <h3 class="bento-card-title">Elite Gaming Gear</h3>
+                    <p class="bento-card-description">50 prodotti - Periferiche e accessori per gaming professionale</p>
+                    <span class="bento-card-badge">TOP</span>
+                    <a href="elite-gaming-gear/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Smart Home & Domotica - TOP (Medium 2x1) -->
+            <div class="bento-card bento-card-medium bento-card-smart-home" data-category="tecnologia">
+                <div class="bento-card-content">
+                    <i class="fas fa-home bento-card-icon" style="color: var(--bento-smart-home);"></i>
+                    <h3 class="bento-card-title">Smart Home & Domotica</h3>
+                    <p class="bento-card-description">12 prodotti - Automazione casa intelligente</p>
+                    <span class="bento-card-badge">TOP</span>
+                    <a href="smart-home-domotica/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Fitness Casa - TOP (Medium 2x1) -->
+            <div class="bento-card bento-card-medium bento-card-fitness" data-category="sport">
+                <div class="bento-card-content">
+                    <i class="fas fa-dumbbell bento-card-icon" style="color: var(--bento-fitness);"></i>
+                    <h3 class="bento-card-title">Fitness Casa</h3>
+                    <p class="bento-card-description">15 prodotti - Attrezzatura per workout domestico</p>
+                    <span class="bento-card-badge">TOP</span>
+                    <a href="fitness-casa/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Cucina Moderna & Tech - TOP (Wide 4x2) -->
+            <div class="bento-card bento-card-wide bento-card-cucina" data-category="casa">
+                <div class="bento-card-content">
+                    <i class="fas fa-utensils bento-card-icon" style="color: var(--bento-cucina);"></i>
+                    <h3 class="bento-card-title">Cucina Moderna & Tech</h3>
+                    <p class="bento-card-description">28 prodotti - Elettrodomestici intelligenti per la cucina moderna</p>
+                    <span class="bento-card-badge">TOP</span>
+                    <a href="cucina-elettrodomestici/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Mare & Spiaggia - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-mare" data-category="sport">
+                <div class="bento-card-content">
+                    <i class="fas fa-umbrella-beach bento-card-icon" style="color: var(--bento-mare);"></i>
+                    <h3 class="bento-card-title">Mare & Spiaggia</h3>
+                    <p class="bento-card-description">Prodotti per spiaggia</p>
+                    <a href="mare-spiaggia/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Smartphone & Tech - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-tech" data-category="tecnologia">
+                <div class="bento-card-content">
+                    <i class="fas fa-mobile-alt bento-card-icon" style="color: var(--bento-tech);"></i>
+                    <h3 class="bento-card-title">Smartphone & Tech</h3>
+                    <p class="bento-card-description">9 prodotti - Dispositivi tech</p>
+                    <a href="smartphone-tech/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Moda Donna - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
+                <div class="bento-card-content">
+                    <i class="fas fa-female bento-card-icon" style="color: var(--bento-moda);"></i>
+                    <h3 class="bento-card-title">Moda Donna</h3>
+                    <p class="bento-card-description">Abbigliamento donna</p>
+                    <a href="moda-donna/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Moda Uomo - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
+                <div class="bento-card-content">
+                    <i class="fas fa-male bento-card-icon" style="color: var(--bento-moda);"></i>
+                    <h3 class="bento-card-title">Moda Uomo</h3>
+                    <p class="bento-card-description">Abbigliamento uomo</p>
+                    <a href="moda-uomo/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Accessori Moda - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
+                <div class="bento-card-content">
+                    <i class="fas fa-glasses bento-card-icon" style="color: var(--bento-moda);"></i>
+                    <h3 class="bento-card-title">Accessori Moda</h3>
+                    <p class="bento-card-description">Occhiali, cinture, gioielli</p>
+                    <a href="accessori-moda/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Abbigliamento Serie TV & Film - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
+                <div class="bento-card-content">
+                    <i class="fas fa-film bento-card-icon" style="color: var(--bento-moda);"></i>
+                    <h3 class="bento-card-title">Serie TV & Film</h3>
+                    <p class="bento-card-description">Merchandise e abbigliamento</p>
+                    <a href="abbigliamento-serie-tv-film/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Abbigliamento Ciclismo - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
+                <div class="bento-card-content">
+                    <i class="fas fa-bicycle bento-card-icon" style="color: var(--bento-moda);"></i>
+                    <h3 class="bento-card-title">Abbigliamento Ciclismo</h3>
+                    <p class="bento-card-description">Tute, salopette, impermeabili</p>
+                    <a href="abbigliamento-ciclismo/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Abbigliamento Lavoro - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
+                <div class="bento-card-content">
+                    <i class="fas fa-hard-hat bento-card-icon" style="color: var(--bento-moda);"></i>
+                    <h3 class="bento-card-title">Abbigliamento Lavoro</h3>
+                    <p class="bento-card-description">Capi professionali e sicurezza</p>
+                    <a href="abbigliamento-lavoro/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Pet Care Intelligente - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-pet" data-category="casa">
+                <div class="bento-card-content">
+                    <i class="fas fa-paw bento-card-icon" style="color: var(--bento-pet);"></i>
+                    <h3 class="bento-card-title">Pet Care</h3>
+                    <p class="bento-card-description">Prodotti per animali</p>
+                    <a href="pet-care-intelligente/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Libri & E-Reader - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-libri" data-category="benessere">
+                <div class="bento-card-content">
+                    <i class="fas fa-book bento-card-icon" style="color: var(--bento-libri);"></i>
+                    <h3 class="bento-card-title">Libri & E-Reader</h3>
+                    <p class="bento-card-description">17 prodotti - Lettura digitale</p>
+                    <a href="libri-ereader/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Arredamento Casa - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-arredamento" data-category="casa">
+                <div class="bento-card-content">
+                    <i class="fas fa-couch bento-card-icon" style="color: var(--bento-arredamento);"></i>
+                    <h3 class="bento-card-title">Arredamento Casa</h3>
+                    <p class="bento-card-description">Mobili e decorazioni</p>
+                    <a href="arredamento-casa/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Benessere & Cura Personale - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-benessere" data-category="benessere">
+                <div class="bento-card-content">
+                    <i class="fas fa-spa bento-card-icon" style="color: var(--bento-benessere);"></i>
+                    <h3 class="bento-card-title">Benessere</h3>
+                    <p class="bento-card-description">Cura personale</p>
+                    <a href="benessere-cura-personale/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Manga & Anime - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-tech" data-category="tecnologia">
+                <div class="bento-card-content">
+                    <i class="fas fa-book-open bento-card-icon" style="color: var(--bento-tech);"></i>
+                    <h3 class="bento-card-title">Manga & Anime</h3>
+                    <p class="bento-card-description">Fumetti giapponesi</p>
+                    <a href="manga-anime/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Piscine - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-sport" data-category="sport">
+                <div class="bento-card-content">
+                    <i class="fas fa-swimming-pool bento-card-icon" style="color: var(--bento-sport);"></i>
+                    <h3 class="bento-card-title">Piscine</h3>
+                    <p class="bento-card-description">Piscine e accessori</p>
+                    <a href="piscine/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- DVD & Blu-ray - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-tech" data-category="tecnologia">
+                <div class="bento-card-content">
+                    <i class="fas fa-compact-disc bento-card-icon" style="color: var(--bento-tech);"></i>
+                    <h3 class="bento-card-title">DVD & Blu-ray</h3>
+                    <p class="bento-card-description">Film e serie</p>
+                    <a href="dvd-bluray/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Musica Vinili - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-libri" data-category="benessere">
+                <div class="bento-card-content">
+                    <i class="fas fa-record-vinyl bento-card-icon" style="color: var(--bento-libri);"></i>
+                    <h3 class="bento-card-title">Musica Vinili</h3>
+                    <p class="bento-card-description">Vinili e musica</p>
+                    <a href="musica-vinili/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Snack & Bevande - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-cucina" data-category="casa">
+                <div class="bento-card-content">
+                    <i class="fas fa-cookie-bite bento-card-icon" style="color: var(--bento-cucina);"></i>
+                    <h3 class="bento-card-title">Snack & Bevande</h3>
+                    <p class="bento-card-description">Snack e bevande</p>
+                    <a href="snack-bevande/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Softair - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-sport" data-category="sport">
+                <div class="bento-card-content">
+                    <i class="fas fa-crosshairs bento-card-icon" style="color: var(--bento-sport);"></i>
+                    <h3 class="bento-card-title">Softair</h3>
+                    <p class="bento-card-description">Repliche softair</p>
+                    <a href="softair/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Sostenibilità Eco-Friendly - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-sport" data-category="casa">
+                <div class="bento-card-content">
+                    <i class="fas fa-leaf bento-card-icon" style="color: var(--bento-sport);"></i>
+                    <h3 class="bento-card-title">Sostenibilità</h3>
+                    <p class="bento-card-description">Prodotti eco-friendly</p>
+                    <a href="sostenibilita-eco-friendly/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Studio Fotografico - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-tech" data-category="tecnologia">
+                <div class="bento-card-content">
+                    <i class="fas fa-camera bento-card-icon" style="color: var(--bento-tech);"></i>
+                    <h3 class="bento-card-title">Studio Fotografico</h3>
+                    <p class="bento-card-description">Fotografia</p>
+                    <a href="studio-fotografico/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Tech - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-tech" data-category="tecnologia">
+                <div class="bento-card-content">
+                    <i class="fas fa-microchip bento-card-icon" style="color: var(--bento-tech);"></i>
+                    <h3 class="bento-card-title">Tech</h3>
+                    <p class="bento-card-description">Tecnologia</p>
+                    <a href="tech/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Ufficio Produttivo - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-arredamento" data-category="casa">
+                <div class="bento-card-content">
+                    <i class="fas fa-briefcase bento-card-icon" style="color: var(--bento-arredamento);"></i>
+                    <h3 class="bento-card-title">Ufficio Produttivo</h3>
+                    <p class="bento-card-description">Ufficio e produttività</p>
+                    <a href="ufficio-produttivo/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Viaggi & Vacanze - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-mare" data-category="sport">
+                <div class="bento-card-content">
+                    <i class="fas fa-plane bento-card-icon" style="color: var(--bento-mare);"></i>
+                    <h3 class="bento-card-title">Viaggi & Vacanze</h3>
+                    <p class="bento-card-description">Viaggi e vacanze</p>
+                    <a href="viaggi-vacanze/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Fai-da-Te - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-arredamento" data-category="casa">
+                <div class="bento-card-content">
+                    <i class="fas fa-tools bento-card-icon" style="color: var(--bento-arredamento);"></i>
+                    <h3 class="bento-card-title">Fai-da-Te</h3>
+                    <p class="bento-card-description">Fai-da-te</p>
+                    <a href="fai-da-te/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Giochi da Tavolo - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-gaming" data-category="tecnologia">
+                <div class="bento-card-content">
+                    <i class="fas fa-dice bento-card-icon" style="color: var(--bento-gaming);"></i>
+                    <h3 class="bento-card-title">Giochi da Tavolo</h3>
+                    <p class="bento-card-description">Giochi da tavolo</p>
+                    <a href="giochi-da-tavolo/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Outdoor & Camping - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-mare" data-category="sport">
+                <div class="bento-card-content">
+                    <i class="fas fa-campground bento-card-icon" style="color: var(--bento-mare);"></i>
+                    <h3 class="bento-card-title">Outdoor & Camping</h3>
+                    <p class="bento-card-description">Camping e outdoor</p>
+                    <a href="outdoor-camping/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Profumi & Bellezza - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-benessere" data-category="benessere">
+                <div class="bento-card-content">
+                    <i class="fas fa-spray-can bento-card-icon" style="color: var(--bento-benessere);"></i>
+                    <h3 class="bento-card-title">Profumi & Bellezza</h3>
+                    <p class="bento-card-description">Profumi e bellezza</p>
+                    <a href="profumi-bellezza/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Calcio - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-sport" data-category="sport">
+                <div class="bento-card-content">
+                    <i class="fas fa-futbol bento-card-icon" style="color: var(--bento-sport);"></i>
+                    <h3 class="bento-card-title">Calcio</h3>
+                    <p class="bento-card-description">Calcio</p>
+                    <a href="calcio/index.html" class="btn">Scopri</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Function to open Atlas (AI Chat)
+        function openAtlas() {
+            toggleChat();
+        }
+        
+        // Category Filter Functionality
+        document.querySelectorAll('.category-filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.category-filter-tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const cards = document.querySelectorAll('.bento-card');
+                
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
     <!-- Carosello Automatico Prodotti -->
     <section class="container my-5">
         <div class="text-center mb-4">
@@ -712,392 +1098,6 @@
         
         // Carica le categorie al caricamento della pagina
         document.addEventListener('DOMContentLoaded', loadCategoriesForCarousel);
-    </script>
-
-    <!-- Categorie in Evidenza - Bento Grid con Filtri -->
-    <section class="container my-5">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">
-                <i class="fas fa-th-large text-primary me-3" aria-hidden="true"></i>Categorie in Evidenza
-            </h2>
-            <p class="lead text-muted">Esplora le nostre guide all'acquisto specializzate</p>
-        </div>
-        
-        <!-- Category Filter Tabs -->
-        <div class="category-filter-tabs justify-content-center">
-            <button class="category-filter-tab active" data-filter="all">Tutte</button>
-            <button class="category-filter-tab" data-filter="tecnologia">Tecnologia</button>
-            <button class="category-filter-tab" data-filter="casa">Casa</button>
-            <button class="category-filter-tab" data-filter="sport">Sport</button>
-            <button class="category-filter-tab" data-filter="moda">Moda</button>
-            <button class="category-filter-tab" data-filter="benessere">Benessere</button>
-        </div>
-        
-        <!-- Bento Grid -->
-        <div class="bento-grid" id="bentoGrid">
-            <!-- Atlas - Motore di Ricerca Intelligente (Medium 2x1) -->
-            <div class="bento-card bento-card-medium bento-card-atlas" data-category="all">
-                <div class="bento-card-content">
-                    <i class="fas fa-search bento-card-icon" style="color: var(--industrial-orange);"></i>
-                    <h3 class="bento-card-title">Atlas</h3>
-                    <p class="bento-card-description">Motore di ricerca intelligente - Trova prodotti in tutte le nicchie</p>
-                    <span class="bento-card-badge">AI</span>
-                    <button onclick="openAtlas()" class="btn">Cerca</button>
-                </div>
-            </div>
-            
-            <!-- Elite Gaming Gear - TOP (Large 2x2) -->
-            <div class="bento-card bento-card-large bento-card-gaming" data-category="tecnologia">
-                <div class="bento-card-content">
-                    <i class="fas fa-gamepad bento-card-icon" style="color: var(--bento-gaming);"></i>
-                    <h3 class="bento-card-title">Elite Gaming Gear</h3>
-                    <p class="bento-card-description">50 prodotti - Periferiche e accessori per gaming professionale</p>
-                    <span class="bento-card-badge">TOP</span>
-                    <a href="elite-gaming-gear/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Smart Home & Domotica - TOP (Medium 2x1) -->
-            <div class="bento-card bento-card-medium bento-card-smart-home" data-category="tecnologia">
-                <div class="bento-card-content">
-                    <i class="fas fa-home bento-card-icon" style="color: var(--bento-smart-home);"></i>
-                    <h3 class="bento-card-title">Smart Home & Domotica</h3>
-                    <p class="bento-card-description">12 prodotti - Automazione casa intelligente</p>
-                    <span class="bento-card-badge">TOP</span>
-                    <a href="smart-home-domotica/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Fitness Casa - TOP (Medium 2x1) -->
-            <div class="bento-card bento-card-medium bento-card-fitness" data-category="sport">
-                <div class="bento-card-content">
-                    <i class="fas fa-dumbbell bento-card-icon" style="color: var(--bento-fitness);"></i>
-                    <h3 class="bento-card-title">Fitness Casa</h3>
-                    <p class="bento-card-description">15 prodotti - Attrezzatura per workout domestico</p>
-                    <span class="bento-card-badge">TOP</span>
-                    <a href="fitness-casa/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Cucina Moderna & Tech - TOP (Wide 4x2) -->
-            <div class="bento-card bento-card-wide bento-card-cucina" data-category="casa">
-                <div class="bento-card-content">
-                    <i class="fas fa-utensils bento-card-icon" style="color: var(--bento-cucina);"></i>
-                    <h3 class="bento-card-title">Cucina Moderna & Tech</h3>
-                    <p class="bento-card-description">28 prodotti - Elettrodomestici intelligenti per la cucina moderna</p>
-                    <span class="bento-card-badge">TOP</span>
-                    <a href="cucina-elettrodomestici/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Mare & Spiaggia - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-mare" data-category="sport">
-                <div class="bento-card-content">
-                    <i class="fas fa-umbrella-beach bento-card-icon" style="color: var(--bento-mare);"></i>
-                    <h3 class="bento-card-title">Mare & Spiaggia</h3>
-                    <p class="bento-card-description">Prodotti per spiaggia</p>
-                    <a href="mare-spiaggia/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Smartphone & Tech - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-tech" data-category="tecnologia">
-                <div class="bento-card-content">
-                    <i class="fas fa-mobile-alt bento-card-icon" style="color: var(--bento-tech);"></i>
-                    <h3 class="bento-card-title">Smartphone & Tech</h3>
-                    <p class="bento-card-description">9 prodotti - Dispositivi tech</p>
-                    <a href="smartphone-tech/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Moda Donna - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
-                <div class="bento-card-content">
-                    <i class="fas fa-female bento-card-icon" style="color: var(--bento-moda);"></i>
-                    <h3 class="bento-card-title">Moda Donna</h3>
-                    <p class="bento-card-description">Abbigliamento donna</p>
-                    <a href="moda-donna/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Moda Uomo - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
-                <div class="bento-card-content">
-                    <i class="fas fa-male bento-card-icon" style="color: var(--bento-moda);"></i>
-                    <h3 class="bento-card-title">Moda Uomo</h3>
-                    <p class="bento-card-description">Abbigliamento uomo</p>
-                    <a href="moda-uomo/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Accessori Moda - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
-                <div class="bento-card-content">
-                    <i class="fas fa-glasses bento-card-icon" style="color: var(--bento-moda);"></i>
-                    <h3 class="bento-card-title">Accessori Moda</h3>
-                    <p class="bento-card-description">Occhiali, cinture, gioielli</p>
-                    <a href="accessori-moda/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Abbigliamento Serie TV & Film - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
-                <div class="bento-card-content">
-                    <i class="fas fa-film bento-card-icon" style="color: var(--bento-moda);"></i>
-                    <h3 class="bento-card-title">Serie TV & Film</h3>
-                    <p class="bento-card-description">Merchandise e abbigliamento</p>
-                    <a href="abbigliamento-serie-tv-film/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Abbigliamento Ciclismo - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
-                <div class="bento-card-content">
-                    <i class="fas fa-bicycle bento-card-icon" style="color: var(--bento-moda);"></i>
-                    <h3 class="bento-card-title">Abbigliamento Ciclismo</h3>
-                    <p class="bento-card-description">Tute, salopette, impermeabili</p>
-                    <a href="abbigliamento-ciclismo/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Abbigliamento Lavoro - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
-                <div class="bento-card-content">
-                    <i class="fas fa-hard-hat bento-card-icon" style="color: var(--bento-moda);"></i>
-                    <h3 class="bento-card-title">Abbigliamento Lavoro</h3>
-                    <p class="bento-card-description">Capi professionali e sicurezza</p>
-                    <a href="abbigliamento-lavoro/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Pet Care Intelligente - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-pet" data-category="casa">
-                <div class="bento-card-content">
-                    <i class="fas fa-paw bento-card-icon" style="color: var(--bento-pet);"></i>
-                    <h3 class="bento-card-title">Pet Care</h3>
-                    <p class="bento-card-description">Prodotti per animali</p>
-                    <a href="pet-care-intelligente/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Libri & E-Reader - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-libri" data-category="benessere">
-                <div class="bento-card-content">
-                    <i class="fas fa-book bento-card-icon" style="color: var(--bento-libri);"></i>
-                    <h3 class="bento-card-title">Libri & E-Reader</h3>
-                    <p class="bento-card-description">17 prodotti - Lettura digitale</p>
-                    <a href="libri-ereader/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Arredamento Casa - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-arredamento" data-category="casa">
-                <div class="bento-card-content">
-                    <i class="fas fa-couch bento-card-icon" style="color: var(--bento-arredamento);"></i>
-                    <h3 class="bento-card-title">Arredamento Casa</h3>
-                    <p class="bento-card-description">Mobili e decorazioni</p>
-                    <a href="arredamento-casa/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Benessere & Cura Personale - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-benessere" data-category="benessere">
-                <div class="bento-card-content">
-                    <i class="fas fa-spa bento-card-icon" style="color: var(--bento-benessere);"></i>
-                    <h3 class="bento-card-title">Benessere</h3>
-                    <p class="bento-card-description">Cura personale</p>
-                    <a href="benessere-cura-personale/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Manga & Anime - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-tech" data-category="tecnologia">
-                <div class="bento-card-content">
-                    <i class="fas fa-book-open bento-card-icon" style="color: var(--bento-tech);"></i>
-                    <h3 class="bento-card-title">Manga & Anime</h3>
-                    <p class="bento-card-description">Fumetti giapponesi</p>
-                    <a href="manga-anime/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Piscine - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-sport" data-category="sport">
-                <div class="bento-card-content">
-                    <i class="fas fa-swimming-pool bento-card-icon" style="color: var(--bento-sport);"></i>
-                    <h3 class="bento-card-title">Piscine</h3>
-                    <p class="bento-card-description">Piscine e accessori</p>
-                    <a href="piscine/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- DVD & Blu-ray - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-tech" data-category="tecnologia">
-                <div class="bento-card-content">
-                    <i class="fas fa-compact-disc bento-card-icon" style="color: var(--bento-tech);"></i>
-                    <h3 class="bento-card-title">DVD & Blu-ray</h3>
-                    <p class="bento-card-description">Film e serie</p>
-                    <a href="dvd-bluray/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Musica Vinili - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-libri" data-category="benessere">
-                <div class="bento-card-content">
-                    <i class="fas fa-record-vinyl bento-card-icon" style="color: var(--bento-libri);"></i>
-                    <h3 class="bento-card-title">Musica Vinili</h3>
-                    <p class="bento-card-description">Vinili e musica</p>
-                    <a href="musica-vinili/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Snack & Bevande - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-cucina" data-category="casa">
-                <div class="bento-card-content">
-                    <i class="fas fa-cookie-bite bento-card-icon" style="color: var(--bento-cucina);"></i>
-                    <h3 class="bento-card-title">Snack & Bevande</h3>
-                    <p class="bento-card-description">Snack e bevande</p>
-                    <a href="snack-bevande/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Softair - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-sport" data-category="sport">
-                <div class="bento-card-content">
-                    <i class="fas fa-crosshairs bento-card-icon" style="color: var(--bento-sport);"></i>
-                    <h3 class="bento-card-title">Softair</h3>
-                    <p class="bento-card-description">Repliche softair</p>
-                    <a href="softair/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Sostenibilità Eco-Friendly - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-sport" data-category="casa">
-                <div class="bento-card-content">
-                    <i class="fas fa-leaf bento-card-icon" style="color: var(--bento-sport);"></i>
-                    <h3 class="bento-card-title">Sostenibilità</h3>
-                    <p class="bento-card-description">Prodotti eco-friendly</p>
-                    <a href="sostenibilita-eco-friendly/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Studio Fotografico - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-tech" data-category="tecnologia">
-                <div class="bento-card-content">
-                    <i class="fas fa-camera bento-card-icon" style="color: var(--bento-tech);"></i>
-                    <h3 class="bento-card-title">Studio Fotografico</h3>
-                    <p class="bento-card-description">Fotografia</p>
-                    <a href="studio-fotografico/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Tech - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-tech" data-category="tecnologia">
-                <div class="bento-card-content">
-                    <i class="fas fa-microchip bento-card-icon" style="color: var(--bento-tech);"></i>
-                    <h3 class="bento-card-title">Tech</h3>
-                    <p class="bento-card-description">Tecnologia</p>
-                    <a href="tech/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Ufficio Produttivo - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-arredamento" data-category="casa">
-                <div class="bento-card-content">
-                    <i class="fas fa-briefcase bento-card-icon" style="color: var(--bento-arredamento);"></i>
-                    <h3 class="bento-card-title">Ufficio Produttivo</h3>
-                    <p class="bento-card-description">Ufficio e produttività</p>
-                    <a href="ufficio-produttivo/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Viaggi & Vacanze - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-mare" data-category="sport">
-                <div class="bento-card-content">
-                    <i class="fas fa-plane bento-card-icon" style="color: var(--bento-mare);"></i>
-                    <h3 class="bento-card-title">Viaggi & Vacanze</h3>
-                    <p class="bento-card-description">Viaggi e vacanze</p>
-                    <a href="viaggi-vacanze/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Fai-da-Te - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-arredamento" data-category="casa">
-                <div class="bento-card-content">
-                    <i class="fas fa-tools bento-card-icon" style="color: var(--bento-arredamento);"></i>
-                    <h3 class="bento-card-title">Fai-da-Te</h3>
-                    <p class="bento-card-description">Fai-da-te</p>
-                    <a href="fai-da-te/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Giochi da Tavolo - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-gaming" data-category="tecnologia">
-                <div class="bento-card-content">
-                    <i class="fas fa-dice bento-card-icon" style="color: var(--bento-gaming);"></i>
-                    <h3 class="bento-card-title">Giochi da Tavolo</h3>
-                    <p class="bento-card-description">Giochi da tavolo</p>
-                    <a href="giochi-da-tavolo/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Outdoor & Camping - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-mare" data-category="sport">
-                <div class="bento-card-content">
-                    <i class="fas fa-campground bento-card-icon" style="color: var(--bento-mare);"></i>
-                    <h3 class="bento-card-title">Outdoor & Camping</h3>
-                    <p class="bento-card-description">Camping e outdoor</p>
-                    <a href="outdoor-camping/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Profumi & Bellezza - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-benessere" data-category="benessere">
-                <div class="bento-card-content">
-                    <i class="fas fa-spray-can bento-card-icon" style="color: var(--bento-benessere);"></i>
-                    <h3 class="bento-card-title">Profumi & Bellezza</h3>
-                    <p class="bento-card-description">Profumi e bellezza</p>
-                    <a href="profumi-bellezza/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-            
-            <!-- Calcio - Secondary (Small 1x1) -->
-            <div class="bento-card bento-card-small bento-card-sport" data-category="sport">
-                <div class="bento-card-content">
-                    <i class="fas fa-futbol bento-card-icon" style="color: var(--bento-sport);"></i>
-                    <h3 class="bento-card-title">Calcio</h3>
-                    <p class="bento-card-description">Calcio</p>
-                    <a href="calcio/index.html" class="btn">Scopri</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <script>
-        // Function to open Atlas (AI Chat)
-        function openAtlas() {
-            toggleChat();
-        }
-        
-        // Category Filter Functionality
-        document.querySelectorAll('.category-filter-tab').forEach(tab => {
-            tab.addEventListener('click', function() {
-                // Remove active class from all tabs
-                document.querySelectorAll('.category-filter-tab').forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                this.classList.add('active');
-                
-                const filter = this.getAttribute('data-filter');
-                const cards = document.querySelectorAll('.bento-card');
-                
-                cards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
     </script>
 
 
