@@ -23,9 +23,9 @@
     --niche-text-light: #ffffff;
 }
 
-/* Sfondo Bianco - Stile Ibrido */
+/* Sfondo Panna - Stile Ibrido */
 body {
-    background: #ffffff;
+    background: #F5F5DC;
     background-attachment: fixed;
     min-height: 100vh;
     font-family: var(--niche-font);
