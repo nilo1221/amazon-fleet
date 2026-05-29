@@ -1,0 +1,14 @@
+/* ============================================
+   OUTDOOR & CAMPING - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Outdoor & Camping */
+:root {
+    --niche-primary: #228B22;
+    --niche-secondary: #8B4513;
+    --niche-accent: #87CEEB;
+    --niche-dark-bg: #1a2a1a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

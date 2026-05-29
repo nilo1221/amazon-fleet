@@ -1,0 +1,14 @@
+/* ============================================
+   MARE E SPIAGGIA - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Mare e Spiaggia */
+:root {
+    --niche-primary: #20B2AA;
+    --niche-secondary: #FF6347;
+    --niche-accent: #D2691E;
+    --niche-dark-bg: #0a2a2a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

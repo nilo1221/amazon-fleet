@@ -1,0 +1,14 @@
+/* ============================================
+   BENESSERE & CURA PERSONALE - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Benessere & Cura Personale */
+:root {
+    --niche-primary: #E6B3B3;
+    --niche-secondary: #DAA520;
+    --niche-accent: #F5F5F5;
+    --niche-dark-bg: #2a1a1a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

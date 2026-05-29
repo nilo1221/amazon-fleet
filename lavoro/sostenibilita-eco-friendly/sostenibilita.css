@@ -1,0 +1,14 @@
+/* ============================================
+   SOSTENIBILITÀ & ECO-FRIENDLY - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Sostenibilità & Eco-Friendly */
+:root {
+    --niche-primary: #228B22;
+    --niche-secondary: #32CD32;
+    --niche-accent: #006400;
+    --niche-dark-bg: #0a1a0a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

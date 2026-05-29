@@ -1,0 +1,14 @@
+/* ============================================
+   STUDIO FOTOGRAFICO - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Studio Fotografico */
+:root {
+    --niche-primary: #4682B4;
+    --niche-secondary: #DB7093;
+    --niche-accent: #FFA500;
+    --niche-dark-bg: #1a2a3a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,14 @@
+/* ============================================
+   TECH - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Tech */
+:root {
+    --niche-primary: #008B8B;
+    --niche-secondary: #708090;
+    --niche-accent: #9932CC;
+    --niche-dark-bg: #1a2a2a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

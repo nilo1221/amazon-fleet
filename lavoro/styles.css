@@ -7,12 +7,41 @@
     --accent-color: #FF4500;
     --accent-gold: #FFA500;
     --text-color: #1a1a2e;
+    --focus-outline: 3px solid #005fcc;
+    --focus-offset: 2px;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #faf9f6;
     color: var(--text-color);
+}
+
+/* Focus states custom per accessibilità WCAG */
+*:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-offset);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-offset);
+    box-shadow: 0 0 0 4px rgba(0, 95, 204, 0.2);
+}
+
+.btn:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-offset);
+    box-shadow: 0 0 0 4px rgba(0, 95, 204, 0.3);
+}
+
+.nav-link:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-offset);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Niche identity bar - filo conduttore unificante */

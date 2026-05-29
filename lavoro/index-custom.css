@@ -1,0 +1,93 @@
+/* Custom Styles for Homepage */
+:root {
+    --table-primary: #2E5C8A;
+    --table-secondary: #5BA3F2;
+    --table-success: #FFD700;
+    --table-warning: #DAA520;
+    --table-info: #0A0A2E;
+    --table-danger: #FF0033;
+    --table-light: #F5F5F5;
+}
+
+.table-custom thead.table-primary-custom {
+    background: linear-gradient(135deg, var(--table-primary) 0%, var(--table-secondary) 100%);
+    color: white;
+}
+
+.table-custom thead.table-info-custom {
+    background: linear-gradient(135deg, var(--table-info) 0%, var(--table-primary) 100%);
+    color: white;
+}
+
+.table-custom thead.table-success-custom {
+    background: linear-gradient(135deg, var(--table-success) 0%, var(--table-info) 100%);
+    color: white;
+}
+
+.table-custom thead.table-danger-custom {
+    background: linear-gradient(135deg, var(--table-danger) 0%, var(--table-info) 100%);
+    color: white;
+}
+
+.table-custom thead.table-warning-custom {
+    background: linear-gradient(135deg, var(--table-warning) 0%, var(--table-success) 100%);
+    color: white;
+}
+
+.badge-custom-primary {
+    background-color: var(--table-primary);
+    color: white;
+}
+
+.badge-custom-success {
+    background-color: var(--table-success);
+    color: white;
+}
+
+.badge-custom-warning {
+    background-color: var(--table-warning);
+    color: white;
+}
+
+.badge-custom-info {
+    background-color: var(--table-info);
+    color: white;
+}
+
+.badge-custom-secondary {
+    background-color: var(--table-secondary);
+    color: white;
+}
+
+.table-custom {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-custom thead th {
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+
+.table-custom tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table-custom tbody tr:hover {
+    background-color: var(--table-light);
+    transform: scale(1.01);
+}
+
+/* Glow effect per icone carosello */
+.featured-strip-item i {
+    transition: all 0.3s ease;
+}
+
+.featured-strip-item:hover i {
+    filter: drop-shadow(0 0 12px currentColor);
+    transform: scale(1.15);
+}

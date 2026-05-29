@@ -1,0 +1,14 @@
+/* ============================================
+   MODA DONNA - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Moda Donna */
+:root {
+    --niche-primary: #ffb6c1;
+    --niche-secondary: #ffd700;
+    --niche-accent: #87ceeb;
+    --niche-dark-bg: #3d2a2a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

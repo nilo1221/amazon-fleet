@@ -1,0 +1,14 @@
+/* ============================================
+   SMARTPHONE & TECH - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Smartphone & Tech */
+:root {
+    --niche-primary: #000000;
+    --niche-secondary: #808080;
+    --niche-accent: #FF69B4;
+    --niche-dark-bg: #0a0a0a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

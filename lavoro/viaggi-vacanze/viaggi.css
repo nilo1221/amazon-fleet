@@ -1,0 +1,14 @@
+/* ============================================
+   VIAGGI & VACANZE - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Viaggi & Vacanze */
+:root {
+    --niche-primary: #8B4513;
+    --niche-secondary: #FFA500;
+    --niche-accent: #FFD700;
+    --niche-dark-bg: #2a1a0a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

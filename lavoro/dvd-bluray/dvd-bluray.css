@@ -1,0 +1,14 @@
+/* ============================================
+   DVD & BLU-RAY - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche DVD & Blu-ray */
+:root {
+    --niche-primary: #00CED1;
+    --niche-secondary: #BA55D3;
+    --niche-accent: #F0E68C;
+    --niche-dark-bg: #0a1a2a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

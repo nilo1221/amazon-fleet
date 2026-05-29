@@ -1,0 +1,14 @@
+/* ============================================
+   ARREDAMENTO CASA - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Arredamento Casa */
+:root {
+    --niche-primary: #A0522D;
+    --niche-secondary: #E8E4C9;
+    --niche-accent: #DAA520;
+    --niche-dark-bg: #2a1a0a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

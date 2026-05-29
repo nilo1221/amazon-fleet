@@ -1,0 +1,14 @@
+/* ============================================
+   FAI DA TE - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Fai da Te */
+:root {
+    --niche-primary: #FF6B35;
+    --niche-secondary: #F7C59F;
+    --niche-accent: #2ECC71;
+    --niche-dark-bg: #2a1a0a;
+    --niche-card-bg: rgba(255, 255, 255, 0.95);
+    --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
