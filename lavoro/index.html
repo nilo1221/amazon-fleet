@@ -208,7 +208,7 @@
         </div>
     </section>
 
-    <!-- Categorie in Evidenza -->
+    <!-- Categorie in Evidenza - Bento Grid con Filtri -->
     <section class="container my-5">
         <div class="text-center mb-5">
             <h2 class="display-5 fw-bold mb-3">
@@ -216,59 +216,167 @@
             </h2>
             <p class="lead text-muted">Esplora le nostre guide all'acquisto specializzate</p>
         </div>
-        <style>
-            .category-card {
-                transition: all 0.3s ease;
-                border: 2px solid transparent;
-            }
-            .category-card:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-                border-color: var(--bs-primary);
-            }
-            .category-card .card-icon {
-                transition: transform 0.3s ease;
-            }
-            .category-card:hover .card-icon {
-                transform: scale(1.2);
-            }
-        </style>
-        <div class="row g-4">
-            <!-- Gaming Gear -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm category-card">
-                    <div class="card-body text-center p-5">
-                        <i class="fas fa-gamepad fa-4x text-warning mb-4 card-icon"></i>
-                        <h5 class="fw-bold mb-3 home-section-title">Gaming Gear</h5>
-                        <p class="text-muted mb-4">Periferiche e accessori per gaming professionale</p>
-                        <a href="elite-gaming-gear/index.html" class="btn btn-warning fw-bold px-4">Scopri</a>
-                    </div>
+        
+        <!-- Category Filter Tabs -->
+        <div class="category-filter-tabs justify-content-center">
+            <button class="category-filter-tab active" data-filter="all">Tutte</button>
+            <button class="category-filter-tab" data-filter="tecnologia">Tecnologia</button>
+            <button class="category-filter-tab" data-filter="casa">Casa</button>
+            <button class="category-filter-tab" data-filter="sport">Sport</button>
+            <button class="category-filter-tab" data-filter="moda">Moda</button>
+            <button class="category-filter-tab" data-filter="benessere">Benessere</button>
+        </div>
+        
+        <!-- Bento Grid -->
+        <div class="bento-grid" id="bentoGrid">
+            <!-- Elite Gaming Gear - TOP (Large 2x2) -->
+            <div class="bento-card bento-card-large bento-card-gaming" data-category="tecnologia">
+                <div class="bento-card-content">
+                    <i class="fas fa-gamepad bento-card-icon" style="color: var(--bento-gaming);"></i>
+                    <h3 class="bento-card-title">Elite Gaming Gear</h3>
+                    <p class="bento-card-description">50 prodotti - Periferiche e accessori per gaming professionale</p>
+                    <span class="bento-card-badge">TOP</span>
+                    <a href="elite-gaming-gear/index.html" class="btn btn-primary mt-3">Scopri</a>
                 </div>
             </div>
-            <!-- Sport Estivi -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm category-card">
-                    <div class="card-body text-center p-5">
-                        <i class="fas fa-sun fa-4x text-primary mb-4 card-icon"></i>
-                        <h5 class="fw-bold mb-3 home-section-title">Sport Estivi</h5>
-                        <p class="text-muted mb-4">7 nicchie: Pesca, Tennis, Padel, Immersioni, Running, Beach Volley, Arrampicata</p>
-                        <a href="sport-estivi/index.html" class="btn btn-primary fw-bold px-4">Scopri</a>
-                    </div>
+            
+            <!-- Smart Home & Domotica - TOP (Medium 2x1) -->
+            <div class="bento-card bento-card-medium bento-card-smart-home" data-category="tecnologia">
+                <div class="bento-card-content">
+                    <i class="fas fa-home bento-card-icon" style="color: var(--bento-smart-home);"></i>
+                    <h3 class="bento-card-title">Smart Home & Domotica</h3>
+                    <p class="bento-card-description">12 prodotti - Automazione casa intelligente</p>
+                    <span class="bento-card-badge">TOP</span>
+                    <a href="smart-home-domotica/index.html" class="btn btn-primary mt-3">Scopri</a>
                 </div>
             </div>
-            <!-- Cucina -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm category-card">
-                    <div class="card-body text-center p-5">
-                        <i class="fas fa-utensils fa-4x text-success mb-4 card-icon"></i>
-                        <h5 class="fw-bold mb-3 home-section-title">Cucina</h5>
-                        <p class="text-muted mb-4">Elettrodomestici e accessori per la cucina moderna</p>
-                        <a href="cucina-elettrodomestici/index.html" class="btn btn-success fw-bold px-4">Scopri</a>
-                    </div>
+            
+            <!-- Fitness Casa - TOP (Medium 2x1) -->
+            <div class="bento-card bento-card-medium bento-card-fitness" data-category="sport">
+                <div class="bento-card-content">
+                    <i class="fas fa-dumbbell bento-card-icon" style="color: var(--bento-fitness);"></i>
+                    <h3 class="bento-card-title">Fitness Casa</h3>
+                    <p class="bento-card-description">15 prodotti - Attrezzatura per workout domestico</p>
+                    <span class="bento-card-badge">TOP</span>
+                    <a href="fitness-casa/index.html" class="btn btn-primary mt-3">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Mare & Spiaggia - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-mare" data-category="sport">
+                <div class="bento-card-content">
+                    <i class="fas fa-umbrella-beach bento-card-icon" style="color: var(--bento-mare);"></i>
+                    <h3 class="bento-card-title">Mare & Spiaggia</h3>
+                    <p class="bento-card-description">Prodotti per spiaggia</p>
+                    <a href="mare-spiaggia/index.html" class="btn btn-primary mt-3">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Cucina Moderna & Tech - TOP (Medium 2x1) -->
+            <div class="bento-card bento-card-medium bento-card-cucina" data-category="casa">
+                <div class="bento-card-content">
+                    <i class="fas fa-utensils bento-card-icon" style="color: var(--bento-cucina);"></i>
+                    <h3 class="bento-card-title">Cucina Moderna & Tech</h3>
+                    <p class="bento-card-description">28 prodotti - Elettrodomestici intelligenti</p>
+                    <span class="bento-card-badge">TOP</span>
+                    <a href="cucina-elettrodomestici/index.html" class="btn btn-primary mt-3">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Smartphone & Tech - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-tech" data-category="tecnologia">
+                <div class="bento-card-content">
+                    <i class="fas fa-mobile-alt bento-card-icon" style="color: var(--bento-tech);"></i>
+                    <h3 class="bento-card-title">Smartphone & Tech</h3>
+                    <p class="bento-card-description">9 prodotti - Dispositivi tech</p>
+                    <a href="smartphone-tech/index.html" class="btn btn-primary mt-3">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Moda Donna - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
+                <div class="bento-card-content">
+                    <i class="fas fa-female bento-card-icon" style="color: var(--bento-moda);"></i>
+                    <h3 class="bento-card-title">Moda Donna</h3>
+                    <p class="bento-card-description">Abbigliamento donna</p>
+                    <a href="moda-donna/index.html" class="btn btn-primary mt-3">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Moda Uomo - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-moda" data-category="moda">
+                <div class="bento-card-content">
+                    <i class="fas fa-male bento-card-icon" style="color: var(--bento-moda);"></i>
+                    <h3 class="bento-card-title">Moda Uomo</h3>
+                    <p class="bento-card-description">Abbigliamento uomo</p>
+                    <a href="moda-uomo/index.html" class="btn btn-primary mt-3">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Pet Care Intelligente - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-pet" data-category="casa">
+                <div class="bento-card-content">
+                    <i class="fas fa-paw bento-card-icon" style="color: var(--bento-pet);"></i>
+                    <h3 class="bento-card-title">Pet Care</h3>
+                    <p class="bento-card-description">Prodotti per animali</p>
+                    <a href="pet-care-intelligente/index.html" class="btn btn-primary mt-3">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Libri & E-Reader - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-libri" data-category="benessere">
+                <div class="bento-card-content">
+                    <i class="fas fa-book bento-card-icon" style="color: var(--bento-libri);"></i>
+                    <h3 class="bento-card-title">Libri & E-Reader</h3>
+                    <p class="bento-card-description">17 prodotti - Lettura digitale</p>
+                    <a href="libri-ereader/index.html" class="btn btn-primary mt-3">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Arredamento Casa - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-arredamento" data-category="casa">
+                <div class="bento-card-content">
+                    <i class="fas fa-couch bento-card-icon" style="color: var(--bento-arredamento);"></i>
+                    <h3 class="bento-card-title">Arredamento Casa</h3>
+                    <p class="bento-card-description">Mobili e decorazioni</p>
+                    <a href="arredamento-casa/index.html" class="btn btn-primary mt-3">Scopri</a>
+                </div>
+            </div>
+            
+            <!-- Benessere & Cura Personale - Secondary (Small 1x1) -->
+            <div class="bento-card bento-card-small bento-card-benessere" data-category="benessere">
+                <div class="bento-card-content">
+                    <i class="fas fa-spa bento-card-icon" style="color: var(--bento-benessere);"></i>
+                    <h3 class="bento-card-title">Benessere</h3>
+                    <p class="bento-card-description">Cura personale</p>
+                    <a href="benessere-cura-personale/index.html" class="btn btn-primary mt-3">Scopri</a>
                 </div>
             </div>
         </div>
     </section>
+    
+    <script>
+        // Category Filter Functionality
+        document.querySelectorAll('.category-filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.category-filter-tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const cards = document.querySelectorAll('.bento-card');
+                
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 
     <!-- Dynamic Comparison Carousel -->
     <section class="container my-5">
