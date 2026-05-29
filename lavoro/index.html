@@ -415,17 +415,18 @@
                             min-width: 220px;
                             max-width: 240px;
                             background: #0D0D0D;
-                            border: 2px solid var(--industrial-orange);
+                            border: 2px solid #1a1a1a;
                             border-radius: 16px;
                             padding: 40px 25px;
                             text-align: center;
                             transition: all 0.3s ease;
                             position: relative;
                             overflow: visible;
-                            box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 20px var(--industrial-orange-glow);
+                            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
                         }
                         .micro-card:hover {
-                            border-color: var(--industrial-orange);
+                            outline: 2px solid var(--industrial-orange);
+                            outline-offset: -2px;
                             box-shadow: 0 0 40px var(--industrial-orange-glow), 0 0 60px rgba(255, 107, 0, 0.2);
                             transform: translateY(-5px);
                         }
