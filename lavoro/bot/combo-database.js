@@ -155,6 +155,61 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/Outsunny-Campeggio-Famigliare-Impermeabile-Trasporto/dp/B0F29BC3LJ?dib=eyJ2IjoiMSJ9.ulozInvSluYgmjL7E4H17-nAjJHzYRjROTEnqlFpGL9rcTv1HvBYllPgdkIOoBc-SXEeDIUidIWqJE4AeJTHcZ5kpcfb-CbXWSuWBnlEGux0SYwJl5CN6KjwbGkcf5LYtfkWYLYhp-VRNrNS39zryi-GS8GUlm9wertELzYFRsAg71Q6fOgEh7TBpUI6u8QHOJUlu2meJDnywkKi1X5bXBNiXNAhAwJKJ9bqCG3l-8t4IkuYs_y0pQC-xviQ1KLrXxRPf2HuWEFd42TvQJZTycFqjyjdOxHq0ZCX6PoU80I.EZDBto_kC4Hujwih7D6p-5SlIOd0DLRboEy_uZX_9X0&dib_tag=se&keywords=tenda%2Btunnel%2Bcampeggio%2Bpremium&qid=1779588392&sr=8-7&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&th=1&linkCode=ll2&tag=l0c39-21&linkId=b50732e0036a8492066b30d1254d5733&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi viaggiare con la bici? 🚴 Guarda, con il portabici Thule Easyfold Xt e la tenda Outsunny hai tutto per avventure indimenticabili. Ecco i link!"
+            },
+            {
+                product1: {
+                    name: "HEIMUNI Fodera Impermeabile Divano Esterno a Forma di L",
+                    link: "https://www.amazon.it/HEIMUNI-Impermeabile-Antipolvere-Copridivano-300x300x100x90/dp/B0CGDHRWP2?pd_rd_w=sWfgZ&content-id=amzn1.sym.4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_p=4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_r=ASHVM5144K53AV3ZX6V8&pd_rd_wg=gIXvw&pd_rd_r=c6a59c9e-d95b-4e9a-afc9-8a11f5edc778&pd_rd_i=B0CGDHRWP2&th=1&linkCode=ll2&tag=l0c39-21&linkId=385b314c385cac4c4155952d2d21be7d&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi proteggere i mobili da giardino? 🌳 Ho trovato questa fodera impermeabile anti UV per il divano esterno. Con Coca-Cola Zero hai il giardino protetto e relax!"
+            },
+            {
+                product1: {
+                    name: "vidaXL Tavolino da Giardino 45x45x36 cm in Legno Massello di Acacia",
+                    link: "https://www.amazon.it/dp/B09M699WPP?ie=UTF8&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=6ABG84R14M3M1BH8PB04&pd_rd_wg=Pp5ab&pd_rd_w=qZT7C&pd_rd_r=6872a229-ddcc-4575-b2cd-0d22818ba1c5&aref=Em0oo0yggK&th=1&linkCode=ll2&tag=l0c39-21&linkId=1068cfb1fb47bbeac014a4efc7f4db6e&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi un tavolino elegante per il giardino? 🪑 Ho trovato questo tavolino in legno di acacia perfetto per il tuo outdoor. Con Coca-Cola Zero goditi il tuo giardino!"
+            },
+            {
+                product1: {
+                    name: "AXT SHADE Vela Ombreggiante Impermeabile Triangolo Rettangolo",
+                    link: "https://www.amazon.it/AXT-SHADE-Impermeabile-Triangolare-Protezione/dp/B07YKCZBS5?pd_rd_w=ybAKY&content-id=amzn1.sym.4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_p=4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_r=9XS1VVR9NMPX09GM8JMD&pd_rd_wg=WUW9G&pd_rd_r=f2040e99-3c52-4dba-a214-217981d7db87&pd_rd_i=B07YKCZBS5&th=1&linkCode=ll2&tag=l0c39-21&linkId=4225dd1fcadb0eedc240817936f7a904&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi ombra elegante nel giardino? ☀️ Ho trovato questa vela ombreggiante impermeabile anti UV per terrazza e giardino. Con Coca-Cola Zero hai ombra fresca e relax!"
+            },
+            {
+                product1: {
+                    name: "GardenMate 3x 85L Sacchi per Rifiuti da Giardino Pop Up",
+                    link: "https://www.amazon.it/GardenMate-85L-Sacchi-rifiuti-giardino/dp/B00K79T3OS?pf_rd_p=5cf7e89d-be4f-4a60-a94f-67425bc592ec&pf_rd_r=CZPD0FM6BCR2DGB6F11W&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&linkCode=ll2&tag=l0c39-21&linkId=78951b51fd462f7c2ba145032894eb13&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi raccogliere foglie e sterpaglie? 🍂 Ho trovato questi sacchi pop up resistenti per il giardinaggio. Con Coca-Cola Zero hai il giardino pulito e relax!"
+            },
+            {
+                product1: {
+                    name: "Eurhomewit 3 x 120 L Sacchi Giardinaggio con Coperchio e Maniglie",
+                    link: "https://www.amazon.it/dp/B0CW2WT9HY?aref=YyzE14YW4k&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=6cc581867f2306d9adc8118ab54eb5fc&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi sacchi grandi per il giardinaggio? 🌿 Ho trovato questi sacchi 120L con coperchio per foglie e erba. Con Coca-Cola Zero hai il giardino in ordine e relax!"
             }
         ]
     },
@@ -806,6 +861,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi rinnovare la casa? 🏠 Questo mobile arredamento è perfetto per il tuo salotto. Con Coca-Cola Zero goditi il tuo nuovo spazio!"
+            },
+            {
+                product1: {
+                    name: "Granbest Copridivano Altamente Elasticizzato Moderno Jacquard",
+                    link: "https://www.amazon.it/Granbest-copridivano-Elasticizzato-Elasticit%C3%A0-Protezione/dp/B08CD9CHQ6?pd_rd_w=zVPzd&content-id=amzn1.sym.4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_p=4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_r=TCQVCY99GWAMDGS5M2E7&pd_rd_wg=A4ktL&pd_rd_r=b489bd23-1890-4dc9-bd40-b77900e31ad6&pd_rd_i=B08CD9CHQ6&th=1&linkCode=ll2&tag=l0c39-21&linkId=3cb6925a36f120271b4a3991a895a0bc&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi proteggere il divano? 🛋️ Ho trovato questo copridivano elasticizzato che protegge da cani e animali. Con Coca-Cola Zero hai casa protetta e relax!"
             }
         ]
     },
