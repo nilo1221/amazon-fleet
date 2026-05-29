@@ -414,24 +414,24 @@
                         .micro-card {
                             min-width: 220px;
                             max-width: 240px;
-                            background: #fff;
-                            border: 3px solid #dee2e6;
+                            background: #0D0D0D;
+                            border: 2px solid var(--industrial-orange);
                             border-radius: 16px;
                             padding: 40px 25px;
                             text-align: center;
                             transition: all 0.3s ease;
                             position: relative;
                             overflow: visible;
-                            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                            box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 20px var(--industrial-orange-glow);
                         }
                         .micro-card:hover {
                             border-color: var(--industrial-orange);
-                            box-shadow: 0 0 30px var(--industrial-orange-glow);
+                            box-shadow: 0 0 40px var(--industrial-orange-glow), 0 0 60px rgba(255, 107, 0, 0.2);
                             transform: translateY(-5px);
                         }
                         .micro-card-icon {
                             font-size: 4rem;
-                            color: #343a40;
+                            color: #fff;
                             margin-bottom: 20px;
                             transition: color 0.3s ease;
                         }
@@ -441,15 +441,23 @@
                         .micro-card-title {
                             font-weight: 800;
                             font-size: 1.1rem;
-                            color: #000;
-                            margin-bottom: 25px;
+                            color: #fff;
+                            margin-bottom: 15px;
                             text-transform: uppercase;
                             letter-spacing: 0.5px;
                             line-height: 1.3;
                         }
+                        .micro-card-terminal {
+                            font-family: 'Courier New', monospace;
+                            font-size: 0.7rem;
+                            color: #00ff00;
+                            margin-bottom: 20px;
+                            opacity: 0.8;
+                            letter-spacing: 0.3px;
+                        }
                         .micro-card-progress {
                             height: 4px;
-                            background: #dee2e6;
+                            background: #1a1a1a;
                             border-radius: 2px;
                             overflow: hidden;
                             margin-top: auto;
@@ -463,26 +471,37 @@
                             position: absolute;
                             top: 12px;
                             right: 12px;
-                            font-size: 0.85rem;
+                            font-size: 0.8rem;
                             font-weight: 800;
                             padding: 6px 14px;
                             border-radius: 14px;
                             text-transform: uppercase;
                             letter-spacing: 0.5px;
                             box-shadow: 0 2px 8px rgba(255, 107, 0, 0.3);
+                            font-family: 'Courier New', monospace;
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
                         }
                         .status-badge-live {
                             background: var(--industrial-orange);
                             color: #fff;
-                            animation: pulse 2s infinite;
                         }
-                        .status-badge-ending {
-                            background: #ff4444;
+                        .status-badge-live::before {
+                            content: '';
+                            width: 8px;
+                            height: 8px;
+                            background: #fff;
+                            border-radius: 50%;
+                            animation: pulse-dot 1.5s infinite;
+                        }
+                        .status-badge-new {
+                            background: #343a40;
                             color: #fff;
                         }
-                        @keyframes pulse {
+                        @keyframes pulse-dot {
                             0%, 100% { opacity: 1; transform: scale(1); }
-                            50% { opacity: 0.85; transform: scale(1.05); }
+                            50% { opacity: 0.5; transform: scale(0.8); }
                         }
                     </style>
                     
@@ -492,6 +511,7 @@
                             <span class="status-badge status-badge-live" id="softair-status-badge">LIVE</span>
                             <i class="fas fa-crosshairs micro-card-icon"></i>
                             <div class="micro-card-title">Softair</div>
+                            <div class="micro-card-terminal">Atlas: Scansionato 1h fa. Nuovi arrivi rilevati.</div>
                             <div class="micro-card-progress">
                                 <div class="micro-card-progress-fill" id="softair-progress-fill" style="width: 0%;"></div>
                             </div>
