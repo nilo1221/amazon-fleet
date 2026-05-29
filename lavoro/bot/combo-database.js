@@ -419,6 +419,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi una maxi scorta eco-friendly? ♻️ Ho trovato queste 48 batterie Energizer AA 1,5V con 7 anni di conservazione e imballaggio 100% riciclabile. Con Coca-Cola Zero hai sostenibilità e relax!"
+            },
+            {
+                product1: {
+                    name: "VARTA Batterie AAA (150)",
+                    link: "https://www.amazon.it/dp/B0BTYTGH2D?pd_rd_i=B0BTYTGH2D&pd_rd_w=Pz82R&content-id=amzn1.sym.c0d2267b-8fb3-49e6-be76-fdd6b43efaa4&pf_rd_p=c0d2267b-8fb3-49e6-be76-fdd6b43efaa4&pf_rd_r=XRQ46VF40NE6CV75QT9Q&pd_rd_wg=n0z0L&pd_rd_r=ae320756-c794-4ad5-bdeb-0a0d01e83436&aref=MO9txFNRAp&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1&linkCode=ll2&tag=l0c39-21&linkId=29ebfcf56286e953df7e0c87411238dc&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi una maxi scorta enorme? 🔋 Ho trovato queste 150 batterie VARTA AAA Power on Demand, 1,5V con pacco di stoccaggio made in Germany. Con Coca-Cola Zero hai energia infinita e relax!"
             }
         ]
     },
