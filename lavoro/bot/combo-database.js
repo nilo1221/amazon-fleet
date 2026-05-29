@@ -243,6 +243,50 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi sacchi grandi per il giardinaggio? 🌿 Ho trovato questi sacchi 120L con coperchio per foglie e erba. Con Coca-Cola Zero hai il giardino in ordine e relax!"
+            },
+            {
+                product1: {
+                    name: "LUDHEP Cucchiaini da Pesca Esche 16 Pezzi",
+                    link: "https://www.amazon.it/LUDHEP-Cucchiaini-Pesca-Esche-Ciondoli/dp/B0GWJY8K96?adgrpid=124708390037&dib=eyJ2IjoiMSJ9._FRLa5fl_JtxJtFWEBX5PM3p2YNOoSPWi0gCMOTQroRLcbwf_XThqWuo8paXXj31ChxYywvj7IbhckgnYAWlTSGjM628SHT157hJbX_GNI4rFBWT1z2gvpFzH0As0chETNT1n2K-tIEJuYekQ2MNccoWbr6iJmh-fGDdf72okPKLzIiVfwKwne7uZ7nfwxjT2UcxNmghx45W_oQMQ_fJ0UasE0rLKnvWt-hzmRSd5G7pG_nLaWydWG29s8QJ6IwLfjXS04iq2kfN6wlHmkPnHBldQXjVNePCn6hVlollFjE.JukTDI6UXtb3XZpC9WuweJ4PhGb2KZbjMYr2X9SILnY&dib_tag=se&hvadid=591166418377&hvdev=c&hvexpln=0&hvlocphy=9190900&hvnetw=g&hvocijid=2724230052571550670--&hvqmt=e&hvrand=2724230052571550670&hvtargid=kwd-359942218975&hydadcr=8194_2249375&keywords=pesca+amazon&mcid=38a4311fdc04398984b206b17df2d853&qid=1780088260&sr=8-3-spons&aref=rqtXYv48n6&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=563dd46a99b4a4e93f38f0c59dda4fb3&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi pescare la trota? 🎣 Ho trovato questi cucchiaini da pesca con ciondoli da 2.5g e 5g. Con Coca-Cola Zero hai pesca e relax!"
+            },
+            {
+                product1: {
+                    name: "Vicloon Kit Accessori Pesca 191Pz",
+                    link: "https://www.amazon.it/Vicloon-Accessori-Attrezzatura-Cuscinetto-Connettori/dp/B087M7B9XF?adgrpid=124708390037&dib=eyJ2IjoiMSJ9._FRLa5fl_JtxJtFWEBX5PM3p2YNOoSPWi0gCMOTQroRLcbwf_XThqWuo8paXXj31ChxYywvj7IbhckgnYAWlTSGjM628SHT157hJbX_GNI4rFBWT1z2gvpFzH0As0chETNT1n2K-tIEJuYekQ2MNccoWbr6iJmh-fGDdf72okPKLzIiVfwKwne7uZ7nfwxjT2UcxNmghx45W_oQMQ_fJ0UasE0rLKnvWt-hzmRSd5G7pG_nLaWydWG29s8QJ6IwLfjXS04iq2kfN6wlHmkPnHBldQXjVNePCn6hVlollFjE.JukTDI6UXtb3XZpC9WuweJ4PhGb2KZbjMYr2X9SILnY&dib_tag=se&hvadid=591166418377&hvdev=c&hvexpln=0&hvlocphy=9190900&hvnetw=g&hvocijid=2724230052571550670--&hvqmt=e&hvrand=2724230052571550670&hvtargid=kwd-359942218975&hydadcr=8194_2249375&keywords=pesca+amazon&mcid=38a4311fdc04398984b206b17df2d853&qid=1780088260&sr=8-6&linkCode=ll2&tag=l0c39-21&linkId=91af1844c7821d3c5c90c1cce2d7a146&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi un kit completo per la pesca? 🎯 Ho trovato questo kit 191 pezzi con girevoli, sinker e ganci. Con Coca-Cola Zero hai tutto l'occorrente e relax!"
+            },
+            {
+                product1: {
+                    name: "Vicloon Esche da Pesca 120 Pezzi",
+                    link: "https://www.amazon.it/Vicloon-Pesca%EF%BC%8C101-Artificiali-Crankbaits-Stickbait/dp/B0716SR6RF?pd_rd_w=UKvso&content-id=amzn1.sym.f96af5e8-edb1-4e92-a8cb-5aa09b1fe9d9&pf_rd_p=f96af5e8-edb1-4e92-a8cb-5aa09b1fe9d9&pf_rd_r=FRZ8ARX5DZXZXF6495RW&pd_rd_wg=7vuln&pd_rd_r=ecfddc6e-e6c2-46ec-b35c-acac90e4638f&pd_rd_i=B0716SR6RF&th=1&linkCode=ll2&tag=l0c39-21&linkId=2ae24d7c6c727f2e3a08367096efcd1e&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi esche artificiali per ogni tipo di pesca? 🐟 Ho trovato questo set 120 pezzi con crankbaits, stickbait e vermi. Con Coca-Cola Zero hai esche infinite e relax!"
+            },
+            {
+                product1: {
+                    name: "HOTUT Pesca Accessori Set 204 Pezzi",
+                    link: "https://www.amazon.it/HOTUT-Accessori-Scatola-Girevole-Spaziale/dp/B0FHJ3M5Y6?pd_rd_w=UKvso&content-id=amzn1.sym.f96af5e8-edb1-4e92-a8cb-5aa09b1fe9d9&pf_rd_p=f96af5e8-edb1-4e92-a8cb-5aa09b1fe9d9&pf_rd_r=FRZ8ARX5DZXZXF6495RW&pd_rd_wg=7vuln&pd_rd_r=ecfddc6e-e6c2-46ec-b35c-acac90e4638f&pd_rd_i=B0FHJ3M5Y6&psc=1&linkCode=ll2&tag=l0c39-21&linkId=3f7ab40c2ea1b9fdd7deb9a264f0afe9&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi un kit completo con scatola per la pesca in mare? 🌊 Ho trovato questo set 204 pezzi con ottone di rame pesante e scatola. Con Coca-Cola Zero hai il mare in tasca e relax!"
             }
         ]
     },
