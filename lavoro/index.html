@@ -412,13 +412,14 @@
                 
                 <!-- Novità Section (Timer) - Sfondo più scuro per distinguere -->
                 <div class="mb-5" style="background: #0D0D0D; padding: 30px; border-radius: 12px;">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
+                    <div class="d-flex align-items-center justify-content-center mb-2">
                         <h2 class="display-6 fw-bold mb-0 me-3 text-white">
                             <i class="fas fa-bolt text-warning me-2" aria-hidden="true"></i>Novità in Evidenza
                         </h2>
                         <img src="images/logo.png" alt="Atlas" style="width: 32px; height: 32px; border-radius: 50%;" class="me-2">
                         <span style="width: 10px; height: 10px; background: #00ff00; border-radius: 50%; display: inline-block; box-shadow: 0 0 10px #00ff00;"></span>
                     </div>
+                    <p class="text-center text-muted mb-4" style="font-size: 0.9rem;">Le ultime aggiunte in evidenza per 24 ore</p>
                     
                     <style>
                         .micro-card {
@@ -439,7 +440,7 @@
                             transform: translateY(-5px);
                         }
                         .micro-card-icon {
-                            font-size: 2.5rem;
+                            font-size: 3rem;
                             color: #888;
                             margin-bottom: 12px;
                             transition: color 0.3s ease;
@@ -471,9 +472,9 @@
                             position: absolute;
                             top: 8px;
                             right: 8px;
-                            font-size: 0.65rem;
+                            font-size: 0.75rem;
                             font-weight: 700;
-                            padding: 3px 8px;
+                            padding: 4px 10px;
                             border-radius: 10px;
                             text-transform: uppercase;
                             letter-spacing: 0.5px;
@@ -503,6 +504,33 @@
                                 <div class="micro-card-progress-fill" id="softair-progress-fill" style="width: 0%;"></div>
                             </div>
                         </a>
+                        
+                        <!-- Mare & Spiaggia - LIVE -->
+                        <a href="mare-spiaggia/index.html" class="flex-shrink-0 micro-card text-decoration-none" rel="noopener" id="mare-micro-card">
+                            <span class="status-badge status-badge-live">LIVE</span>
+                            <i class="fas fa-umbrella-beach micro-card-icon"></i>
+                            <div class="micro-card-title">Mare & Spiaggia</div>
+                            <div class="micro-card-progress">
+                                <div class="micro-card-progress-fill" style="width: 15%;"></div>
+                            </div>
+                        </a>
+                        
+                        <!-- Outdoor & Camping - LIVE -->
+                        <a href="outdoor-camping/index.html" class="flex-shrink-0 micro-card text-decoration-none" rel="noopener" id="outdoor-micro-card">
+                            <span class="status-badge status-badge-live">LIVE</span>
+                            <i class="fas fa-campground micro-card-icon"></i>
+                            <div class="micro-card-title">Outdoor & Camping</div>
+                            <div class="micro-card-progress">
+                                <div class="micro-card-progress-fill" style="width: 30%;"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Separatore visivo tra Novità e Categorie fisse -->
+                <div class="mb-5" style="position: relative; height: 1px; background: linear-gradient(90deg, transparent, var(--industrial-orange), transparent);">
+                    <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #fff; padding: 0 20px; color: var(--industrial-orange); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-star me-2"></i>Categorie Fisse
                     </div>
                 </div>
 
