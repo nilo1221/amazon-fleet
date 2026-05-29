@@ -2150,6 +2150,18 @@
                 <!-- Horizontal Product Strip (Blocco B) - Scelte della Redazione (Stagionale) -->
                 <div class="mb-5">
                     <style>
+                        .countdown-timer {
+                            font-weight: 700;
+                            color: var(--industrial-orange) !important;
+                            font-size: 0.75rem !important;
+                            background: rgba(255, 107, 0, 0.1);
+                            padding: 4px 12px;
+                            border-radius: 20px;
+                            margin-top: 8px;
+                            text-transform: uppercase;
+                            letter-spacing: 0.5px;
+                            border: 1px solid var(--industrial-orange);
+                        }
                         .featured-strip-item {
                             min-width: 180px;
                             max-width: 200px;
@@ -2159,17 +2171,8 @@
                         }
                         .featured-strip-item:hover {
                             transform: translateY(-8px) scale(1.05);
-                            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-                            border-color: var(--bs-primary);
-                        }
-                        .countdown-timer {
-                            font-weight: 700;
-                            color: #dc3545 !important;
-                            font-size: 1rem !important;
-                            background: rgba(220, 53, 69, 0.1);
-                            padding: 4px 12px;
-                            border-radius: 20px;
-                            margin-top: 8px;
+                            box-shadow: 0 12px 30px var(--industrial-orange-glow);
+                            border-color: var(--industrial-orange);
                         }
                         #seasonal-strip {
                             padding: 20px 10px;
@@ -2295,16 +2298,32 @@
                             const timeLeft = expirationDate - now;
 
                             if (timeLeft <= 0) {
-                                softairStripItem.style.display = 'none';
-                                softairCountdown.textContent = '';
+                                // Transizione dolce: fade out
+                                softairStripItem.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                                softairStripItem.style.opacity = '0';
+                                softairStripItem.style.transform = 'scale(0.9)';
+                                
+                                setTimeout(() => {
+                                    softairStripItem.style.display = 'none';
+                                    // La nicchia appare nella Bento Grid con tag arancione
+                                    const bentoCard = document.querySelector('.bento-card[data-category="sport"]');
+                                    if (bentoCard) {
+                                        bentoCard.style.transition = 'all 0.5s ease';
+                                        bentoCard.style.boxShadow = '0 0 30px var(--industrial-orange-glow)';
+                                        bentoCard.style.borderColor = 'var(--industrial-orange)';
+                                    }
+                                }, 500);
                                 return;
                             }
 
                             const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-                            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                            softairCountdown.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                            
+                            // Mostra "NEW DROP: Xh" invece del countdown completo
+                            if (hours >= 24) {
+                                softairCountdown.textContent = 'NEW DROP: 24h';
+                            } else {
+                                softairCountdown.textContent = `NEW DROP: ${hours}h`;
+                            }
                         }
 
                         updateCountdown();
