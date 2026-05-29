@@ -1,7 +1,18 @@
-/* Simple AI Chat Styles */
+/* Simple AI Chat Styles - Deep Industrial Tech Theme */
 
 /* CSS Variables for dynamic theming */
 :root {
+    /* Deep Industrial Tech Palette */
+    --atlas-primary: #FF8C00;
+    --atlas-secondary: #1A1A1A;
+    --atlas-accent-data: #00D4FF;
+    --atlas-accent-green: #00FF88;
+    --atlas-text-light: #FFFFFF;
+    --atlas-text-dark: #1A1A1A;
+    --atlas-border: #FF8C00;
+    --atlas-border-active: #FF8C00;
+    
+    /* Legacy themes (for compatibility) */
     --bot-bg-default: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --bot-bg-moda: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     --bot-bg-tech: linear-gradient(135deg, #00d4ff 0%, #090979 100%);
@@ -150,8 +161,8 @@
     right: 30px;
     width: 60px;
     height: 60px;
-    background: #FFFFFF;
-    border: 1px solid var(--industrial-orange);
+    background: var(--atlas-secondary);
+    border: 1px solid var(--atlas-border);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -165,28 +176,30 @@
 
 #ai-chat-button.thinking {
     animation: borderPulse 1.5s infinite;
+    border-color: var(--atlas-border-active);
 }
 
 @keyframes borderPulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.4);
+        box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.4);
     }
     70% {
-        box-shadow: 0 0 0 10px rgba(255, 107, 0, 0);
+        box-shadow: 0 0 0 10px rgba(255, 140, 0, 0);
     }
     100% {
-        box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
+        box-shadow: 0 0 0 0 rgba(255, 140, 0, 0);
     }
 }
 
 #ai-chat-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
     animation: none;
+    border-color: var(--atlas-border-active);
 }
 
 #ai-chat-button.active {
-    background: var(--bot-current-bg);
+    background: var(--atlas-primary);
     animation: none;
 }
 
@@ -327,9 +340,11 @@
     right: 30px !important;
     width: 500px;
     max-height: 700px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--atlas-border);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     display: none;
     flex-direction: column;
     z-index: 9998;
@@ -338,16 +353,19 @@
 
 #ai-chat-window.active {
     display: flex;
+    border-color: var(--atlas-border-active);
 }
 
 .chat-header {
-    background: var(--bot-current-bg);
-    color: white;
-    padding: 20px;
+    background: var(--atlas-secondary);
+    color: var(--atlas-text-light);
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: background 0.3s ease;
+    border-bottom: 1px solid var(--atlas-border);
+    font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
 }
 
 /* Dynamic color themes for bot using CSS variables */
@@ -560,65 +578,80 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    background: rgba(26, 26, 26, 0.98);
+    font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
 }
 
 .chat-message {
-    max-width: 80%;
+    max-width: 85%;
     padding: 12px 16px;
-    border-radius: 15px;
+    border-radius: 8px;
     margin: 8px 0;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     word-wrap: break-word;
     animation: messageFadeIn 0.3s ease-out;
+    font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
 }
 
 .chat-message.user {
     align-self: flex-end;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-bottom-right-radius: 5px;
+    background: var(--atlas-primary);
+    color: var(--atlas-text-light);
+    border-bottom-right-radius: 2px;
+    border: 1px solid var(--atlas-border);
 }
 
 .chat-message.bot {
     align-self: flex-start;
-    background: linear-gradient(135deg, #3498DB 0%, #2980B9 50%, #1A5276 100%);
-    color: white;
-    border-bottom-left-radius: 5px;
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--atlas-text-light);
+    border-bottom-left-radius: 2px;
+    border: 1px solid var(--atlas-accent-data);
+}
+
+.chat-message.bot::after {
+    content: '_';
+    animation: blink 1s infinite;
+    margin-left: 2px;
+}
+
+.chat-message.bot.typing::after {
+    display: none;
 }
 
 .chat-message.bot.proactive {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 50%, #dc3545 100%);
-    animation: pulse-red 2s ease-in-out infinite;
+    background: rgba(255, 140, 0, 0.15);
+    border-color: var(--atlas-primary);
+    animation: pulse-orange 2s ease-in-out infinite;
 }
 
 .chat-message.bot.proactive::before {
     display: none;
 }
 
-@keyframes pulse-red {
+@keyframes pulse-orange {
     0%, 100% {
-        box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+        box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
     }
     50% {
-        box-shadow: 0 4px 25px rgba(220, 53, 69, 0.8);
+        box-shadow: 0 4px 25px rgba(255, 140, 0, 0.6);
     }
 }
 
 @keyframes blink {
     0%, 100% {
         opacity: 1;
-        transform: scale(1);
     }
     50% {
-        opacity: 0.5;
-        transform: scale(0.9);
+        opacity: 0;
     }
 }
 
 .chat-message.bot.loading {
-    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
-    color: #333;
+    background: rgba(0, 255, 136, 0.1);
+    border-color: var(--atlas-accent-green);
+    color: var(--atlas-accent-green);
 }
 
 .typing-indicator {
@@ -709,48 +742,49 @@
 
 /* Product Cards */
 #ai-chat-window .product-card {
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--atlas-accent-data);
+    border-radius: 8px;
     padding: 15px;
     margin: 10px 0;
     transition: all 0.3s ease;
 }
 
 #ai-chat-window .product-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.2);
     transform: translateY(-2px);
+    border-color: var(--atlas-accent-data);
 }
 
 #ai-chat-window .product-name {
     font-weight: 600;
     font-size: 14px;
-    color: #333;
+    color: var(--atlas-text-light);
     margin-bottom: 8px;
 }
 
 #ai-chat-window .product-desc {
     font-size: 13px;
-    color: #666;
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 10px;
     line-height: 1.4;
 }
 
 .product-specs {
     font-size: 12px;
-    color: #555;
+    color: rgba(255, 255, 255, 0.6);
     margin-bottom: 10px;
 }
 
 .spec-item {
     margin: 4px 0;
     padding-left: 10px;
-    border-left: 2px solid #667eea;
+    border-left: 2px solid var(--atlas-accent-data);
 }
 
 .product-advice {
-    background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
-    border-left: 4px solid #ffc107;
+    background: rgba(255, 140, 0, 0.1);
+    border-left: 4px solid var(--atlas-primary);
     padding: 12px;
     margin: 10px 0;
     border-radius: 8px;
@@ -945,7 +979,8 @@
 
 .chat-input {
     padding: 15px 20px;
-    border-top: 1px solid #e0e0e0;
+    background: var(--atlas-secondary);
+    border-top: 1px solid var(--atlas-border);
     display: flex;
     gap: 10px;
     align-items: center;
@@ -954,50 +989,61 @@
 .chat-input input {
     flex: 1;
     padding: 12px 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--atlas-accent-data);
+    border-radius: 8px;
     font-size: 14px;
     outline: none;
     transition: border-color 0.3s ease;
+    color: var(--atlas-text-light);
+    font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
+}
+
+.chat-input input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .chat-input input:focus {
-    border-color: #667eea;
+    border-color: var(--atlas-border-active);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .chat-input button {
     padding: 12px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--atlas-primary);
     border: none;
-    border-radius: 25px;
-    color: white;
+    border-radius: 8px;
+    color: var(--atlas-text-light);
     cursor: pointer;
     font-size: 14px;
     transition: all 0.3s ease;
+    font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
+    font-weight: 600;
 }
 
 .chat-input button:hover {
+    background: #e67e00;
     transform: scale(1.05);
 }
 
 #mic-button {
     padding: 12px;
-    background: #f0f0f0;
-    border: none;
-    border-radius: 50%;
-    color: #666;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--atlas-accent-data);
+    border-radius: 8px;
+    color: var(--atlas-text-light);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 #mic-button:hover {
-    background: #e0e0e0;
-    color: #333;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--atlas-border-active);
 }
 
 #mic-button.active {
-    background: var(--bot-current-bg);
-    color: white;
+    background: var(--atlas-primary);
+    border-color: var(--atlas-border-active);
 }
 
 /* Typing indicator for bot "thinking" state */
@@ -1005,16 +1051,20 @@
     display: flex;
     gap: 4px;
     padding: 10px 15px;
-    background: #f0f0f0;
-    border-radius: 10px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid var(--atlas-accent-green);
+    border-radius: 8px;
     max-width: fit-content;
     margin: 10px 0;
+    color: var(--atlas-accent-green);
+    font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
+    font-size: 12px;
 }
 
 .typing-indicator .dot {
     width: 8px;
     height: 8px;
-    background: #999;
+    background: var(--atlas-accent-green);
     border-radius: 50%;
     animation: bounce 1.4s infinite ease-in-out;
 }
@@ -1366,11 +1416,11 @@
 }
 
 .btn-product-view {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: var(--atlas-primary);
+    color: var(--atlas-text-light);
     width: 30px;
     height: 30px;
-    border-radius: 50%;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1380,6 +1430,65 @@
 }
 
 .btn-product-view:hover {
+    background: #e67e00;
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.5);
+}
+
+/* Analysis Data Stream - Visual feedback for analysis */
+.analysis-stream {
+    display: flex;
+    gap: 2px;
+    padding: 8px 12px;
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid var(--atlas-accent-data);
+    border-radius: 4px;
+    margin: 10px 0;
+    font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
+    font-size: 10px;
+    color: var(--atlas-accent-data);
+}
+
+.analysis-dot {
+    width: 4px;
+    height: 4px;
+    background: var(--atlas-accent-data);
+    border-radius: 50%;
+    animation: dataFlow 1.5s infinite;
+}
+
+.analysis-dot:nth-child(1) { animation-delay: 0s; }
+.analysis-dot:nth-child(2) { animation-delay: 0.1s; }
+.analysis-dot:nth-child(3) { animation-delay: 0.2s; }
+.analysis-dot:nth-child(4) { animation-delay: 0.3s; }
+.analysis-dot:nth-child(5) { animation-delay: 0.4s; }
+.analysis-dot:nth-child(6) { animation-delay: 0.5s; }
+.analysis-dot:nth-child(7) { animation-delay: 0.6s; }
+.analysis-dot:nth-child(8) { animation-delay: 0.7s; }
+
+@keyframes dataFlow {
+    0%, 100% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* System Messages - Hidden technical output */
+.system-message {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: 'Courier New', 'Fira Code', 'Roboto Mono', monospace;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    margin: 5px 0;
+    border-left: 2px solid var(--atlas-accent-data);
+}
+
+.system-message::before {
+    content: '> ';
+    color: var(--atlas-accent-data);
 }
