@@ -506,18 +506,143 @@
                     </style>
                     
                     <div class="d-flex flex-nowrap overflow-auto gap-4 pb-5 justify-content-center" id="novita-strip">
-                        <!-- Softair - LIVE -->
-                        <a href="softair/index.html" class="flex-shrink-0 micro-card text-decoration-none" rel="noopener" id="softair-micro-card">
-                            <span class="status-badge status-badge-live" id="softair-status-badge">LIVE</span>
-                            <i class="fas fa-crosshairs micro-card-icon"></i>
-                            <div class="micro-card-title">Softair</div>
-                            <div class="micro-card-terminal">Atlas: Scansionato 1h fa. Nuovi arrivi rilevati.</div>
-                            <div class="micro-card-progress">
-                                <div class="micro-card-progress-fill" id="softair-progress-fill" style="width: 0%;"></div>
-                            </div>
-                        </a>
+                        <!-- Le card delle nicchie verranno generate dinamicamente via JavaScript -->
                     </div>
                 </div>
+                
+                <script>
+                    // Carica i dati delle nicchie dal JSON
+                    async function loadNichieData() {
+                        try {
+                            const response = await fetch('nichie-data.json');
+                            const data = await response.json();
+                            return data.nichie;
+                        } catch (error) {
+                            console.error('Errore nel caricamento dei dati delle nicchie:', error);
+                            return [];
+                        }
+                    }
+
+                    // Calcola il tempo rimanente per una nicchia LIVE
+                    function calculateTimeRemaining(creationDate) {
+                        const now = new Date();
+                        const creation = new Date(creationDate);
+                        const diff = now - creation;
+                        const liveDuration = 24 * 60 * 60 * 1000; // 24 ore in millisecondi
+                        const remaining = liveDuration - diff;
+                        
+                        if (remaining <= 0) {
+                            return { expired: true, hours: 0, minutes: 0, seconds: 0 };
+                        }
+                        
+                        const hours = Math.floor(remaining / (1000 * 60 * 60));
+                        const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+                        
+                        return { expired: false, hours, minutes, seconds };
+                    }
+
+                    // Formatta il tempo rimanente
+                    function formatTimeRemaining(timeRemaining) {
+                        if (timeRemaining.expired) {
+                            return '00:00:00';
+                        }
+                        return `${String(timeRemaining.hours).padStart(2, '0')}:${String(timeRemaining.minutes).padStart(2, '0')}:${String(timeRemaining.seconds).padStart(2, '0')}`;
+                    }
+
+                    // Calcola la percentuale di progresso
+                    function calculateProgress(creationDate) {
+                        const now = new Date();
+                        const creation = new Date(creationDate);
+                        const diff = now - creation;
+                        const liveDuration = 24 * 60 * 60 * 1000;
+                        const progress = Math.min((diff / liveDuration) * 100, 100);
+                        return progress;
+                    }
+
+                    // Genera il HTML per una card nicchia
+                    function generateNichieCard(nicchia) {
+                        const timeRemaining = calculateTimeRemaining(nicchia.data_creazione);
+                        const progress = calculateProgress(nicchia.data_creazione);
+                        
+                        let statusBadge = '';
+                        let statusClass = '';
+                        
+                        if (nicchia.stato === 'LIVE' && !timeRemaining.expired) {
+                            statusBadge = `<span class="status-badge status-badge-live">LIVE</span>`;
+                            statusClass = 'status-badge-live';
+                        } else if (nicchia.stato === 'LIVE' && timeRemaining.expired) {
+                            statusBadge = `<span class="status-badge status-badge-new">NEW</span>`;
+                            statusClass = 'status-badge-new';
+                        }
+                        
+                        const terminalText = nicchia.stato === 'LIVE' && !timeRemaining.expired 
+                            ? `<div class="micro-card-terminal">Atlas: Scansionato 1h fa. Nuovi arrivi rilevati.</div>` 
+                            : '';
+                        
+                        return `
+                            <a href="${nicchia.link}" class="flex-shrink-0 micro-card text-decoration-none" rel="noopener" data-creation="${nicchia.data_creazione}" data-stato="${nicchia.stato}">
+                                ${statusBadge}
+                                <i class="fas ${nicchia.icon} micro-card-icon"></i>
+                                <div class="micro-card-title">${nicchia.nome_nicchia}</div>
+                                ${terminalText}
+                                <div class="micro-card-progress">
+                                    <div class="micro-card-progress-fill" style="width: ${progress}%;"></div>
+                                </div>
+                            </a>
+                        `;
+                    }
+
+                    // Renderizza le nicchie nella sezione Novità
+                    async function renderNichie() {
+                        const nichie = await loadNichieData();
+                        const novitaStrip = document.getElementById('novita-strip');
+                        
+                        // Filtra solo le nicchie LIVE o recenti
+                        const featuredNichie = nichie.filter(n => n.stato === 'LIVE' || n.is_featured);
+                        
+                        if (featuredNichie.length === 0) {
+                            novitaStrip.innerHTML = '<p class="text-muted">Nessuna novità al momento.</p>';
+                            return;
+                        }
+                        
+                        novitaStrip.innerHTML = featuredNichie.map(nicchia => generateNichieCard(nicchia)).join('');
+                        
+                        // Avvia il timer per aggiornare le card LIVE
+                        startTimerUpdate();
+                    }
+
+                    // Aggiorna i timer delle card LIVE
+                    function startTimerUpdate() {
+                        setInterval(() => {
+                            const cards = document.querySelectorAll('.micro-card[data-stato="LIVE"]');
+                            cards.forEach(card => {
+                                const creationDate = card.dataset.creation;
+                                const timeRemaining = calculateTimeRemaining(creationDate);
+                                const progress = calculateProgress(creationDate);
+                                
+                                const progressFill = card.querySelector('.micro-card-progress-fill');
+                                if (progressFill) {
+                                    progressFill.style.width = `${progress}%`;
+                                }
+                                
+                                const statusBadge = card.querySelector('.status-badge');
+                                if (statusBadge && timeRemaining.expired) {
+                                    statusBadge.className = 'status-badge status-badge-new';
+                                    statusBadge.textContent = 'NEW';
+                                    
+                                    const terminalText = card.querySelector('.micro-card-terminal');
+                                    if (terminalText) {
+                                        terminalText.remove();
+                                    }
+                                }
+                            });
+                        }, 1000);
+                    }
+
+                    // Inizializza al caricamento della pagina
+                    document.addEventListener('DOMContentLoaded', renderNichie);
+                </script>
                 
                 <!-- Separatore visivo tra Novità e Categorie fisse -->
                 <div class="mb-5" style="position: relative; height: 1px; background: linear-gradient(90deg, transparent, var(--industrial-orange), transparent);">
@@ -526,76 +651,6 @@
                     </div>
                 </div>
 
-                <script>
-                    // Timer 24 ore per Softair con barra di progresso e badge LIVE/ENDING SOON
-                    (function() {
-                        const softairCreatedKey = 'softair_created';
-                        const softairMicroCard = document.getElementById('softair-micro-card');
-                        const softairStatusBadge = document.getElementById('softair-status-badge');
-                        const softairProgressFill = document.getElementById('softair-progress-fill');
-
-                        if (!softairMicroCard || !softairStatusBadge || !softairProgressFill) return;
-
-                        // Imposta data di creazione se non esiste
-                        if (!localStorage.getItem(softairCreatedKey)) {
-                            localStorage.setItem(softairCreatedKey, new Date().toISOString());
-                        }
-
-                        const createdDate = new Date(localStorage.getItem(softairCreatedKey));
-                        const expirationDate = new Date(createdDate.getTime() + 24 * 60 * 60 * 1000); // 24 ore
-                        const totalDuration = 24 * 60 * 60 * 1000; // 24 ore in millisecondi
-
-                        function updateStatus() {
-                            const now = new Date();
-                            const timeLeft = expirationDate - now;
-                            const elapsedTime = now - createdDate;
-
-                            if (timeLeft <= 0) {
-                                // Transizione dolce: fade out
-                                softairMicroCard.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                                softairMicroCard.style.opacity = '0';
-                                softairMicroCard.style.transform = 'scale(0.9)';
-                                
-                                setTimeout(() => {
-                                    softairMicroCard.style.display = 'none';
-                                    // La nicchia appare nella Bento Grid con tag arancione
-                                    const bentoCard = document.querySelector('.bento-card[data-category="sport"]');
-                                    if (bentoCard) {
-                                        bentoCard.style.transition = 'all 0.5s ease';
-                                        bentoCard.style.boxShadow = '0 0 30px var(--industrial-orange-glow)';
-                                        bentoCard.style.borderColor = 'var(--industrial-orange)';
-                                    }
-                                }, 500);
-                                return;
-                            }
-
-                            // Calcola percentuale di progresso (0% = nuovo, 100% = scaduto)
-                            const percentage = Math.min((elapsedTime / totalDuration) * 100, 100);
-                            softairProgressFill.style.width = `${percentage}%`;
-
-                            // Aggiorna badge di stato
-                            const hoursLeft = Math.floor(timeLeft / (1000 * 60 * 60));
-                            
-                            if (hoursLeft >= 20) {
-                                // Prime 4 ore: LIVE
-                                softairStatusBadge.textContent = 'LIVE';
-                                softairStatusBadge.className = 'status-badge status-badge-live';
-                            } else if (hoursLeft <= 3) {
-                                // Ultime 3 ore: ENDING SOON
-                                softairStatusBadge.textContent = 'ENDING SOON';
-                                softairStatusBadge.className = 'status-badge status-badge-ending';
-                            } else {
-                                // In mezzo: LIVE
-                                softairStatusBadge.textContent = 'LIVE';
-                                softairStatusBadge.className = 'status-badge status-badge-live';
-                            }
-                        }
-
-                        updateStatus();
-                        setInterval(updateStatus, 1000);
-                    })();
-                </script>
-                
                 <div class="row g-4" id="nicchie-fisse-container">
                     <div class="col-lg-4 col-md-6">
                         <div class="product-card card h-100 shadow-lg border-0 hover-lift">

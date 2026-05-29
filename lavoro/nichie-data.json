@@ -1,0 +1,28 @@
+{
+  "nichie": [
+    {
+      "nome_nicchia": "Softair",
+      "data_creazione": "2026-05-29T09:00:00Z",
+      "stato": "LIVE",
+      "is_featured": true,
+      "icon": "fa-crosshairs",
+      "link": "softair/index.html"
+    },
+    {
+      "nome_nicchia": "Mare & Spiaggia",
+      "data_creazione": "2026-05-20T10:00:00Z",
+      "stato": "STANDARD",
+      "is_featured": false,
+      "icon": "fa-umbrella-beach",
+      "link": "mare-spiaggia/index.html"
+    },
+    {
+      "nome_nicchia": "Outdoor & Camping",
+      "data_creazione": "2026-05-15T14:00:00Z",
+      "stato": "STANDARD",
+      "is_featured": false,
+      "icon": "fa-campground",
+      "link": "outdoor-camping/index.html"
+    }
+  ]
+}
