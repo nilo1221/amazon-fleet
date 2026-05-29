@@ -257,6 +257,142 @@ footer::before {
     pointer-events: none;
 }
 
+/* Prodotto Re Section */
+.product-hero-image {
+    position: relative;
+    display: inline-block;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--cucina-cream) 0%, white 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(201, 169, 97, 0.15);
+}
+
+.rating-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating-badge-inline {
+    background: white;
+    padding: 6px 14px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(201, 169, 97, 0.15);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9em;
+}
+
+/* FAQ Section - Accordion */
+.accordion {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(201, 169, 97, 0.1);
+}
+
+.accordion-item {
+    border: 1px solid var(--cucina-primary);
+    border-bottom: none;
+}
+
+.accordion-item:last-child {
+    border-bottom: 1px solid var(--cucina-primary);
+}
+
+.accordion-button {
+    background: var(--cucina-cream);
+    color: var(--cucina-text);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, var(--cucina-primary) 0%, var(--cucina-accent) 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.2);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(201, 169, 97, 0.25);
+}
+
+.accordion-body {
+    background: white;
+    color: var(--cucina-text-light);
+    line-height: 1.7;
+}
+
+/* Divisore Strategico - AI Assistant */
+.strategic-divider {
+    background: linear-gradient(135deg, var(--cucina-cream) 0%, white 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(201, 169, 97, 0.15);
+    border: 2px solid var(--cucina-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.strategic-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(201, 169, 97, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.strategic-divider .btn-primary {
+    background: linear-gradient(135deg, var(--cucina-primary) 0%, var(--cucina-accent) 100%);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.2);
+}
+
+.strategic-divider .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(201, 169, 97, 0.3);
+}
+
+/* Top Categorie Section */
+.category-block {
+    background: white;
+    border: 2px solid var(--cucina-primary);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(201, 169, 97, 0.1);
+    cursor: pointer;
+    height: 100%;
+}
+
+.category-block:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(201, 169, 97, 0.2);
+    border-color: var(--cucina-accent);
+}
+
+.category-block i {
+    transition: all 0.3s ease;
+}
+
+.category-block:hover i {
+    transform: scale(1.1);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .product-card:hover {
@@ -275,5 +411,22 @@ footer::before {
     
     .hero-section {
         padding: 80px 0;
+    }
+    
+    .product-hero-image {
+        padding: 30px;
+    }
+    
+    .rating-badge {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+    
+    .strategic-divider {
+        padding: 30px 20px;
+    }
+    
+    .category-block {
+        padding: 30px 20px;
     }
 }
