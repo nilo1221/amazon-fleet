@@ -1,0 +1,14 @@
+/* Calcio Niche Styles */
+
+.product-card-calcio {
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(26, 95, 26, 0.1);
+}
+
+.product-card-calcio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(26, 95, 26, 0.2);
+}
