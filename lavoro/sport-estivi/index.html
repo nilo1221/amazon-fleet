@@ -42,82 +42,108 @@
     </noscript>
     
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../bot/ai-chat-simple.css">
     <style>
         body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #FAFAFA;
             min-height: 100vh;
         }
         .sport-card {
             transition: all 0.3s ease;
             border: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            background: #FFFFFF;
             border-radius: 20px;
             overflow: hidden;
+            position: relative;
+            cursor: pointer;
         }
         .sport-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
         .sport-icon {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #1a1a1a;
+            transition: color 0.3s ease;
+        }
+        .sport-card:hover .sport-icon {
+            color: var(--industrial-orange, #FF8C00);
         }
         .hero-section {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #0ea5e9 100%);
-            color: white;
-            padding: 100px 0 80px 0;
-            margin-bottom: 60px;
+            background: #FFFFFF;
+            color: #1a1a1a;
+            padding: 60px 0 40px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e5e7eb;
         }
-        .product-card-sport {
-            background: white;
+        .atlas-badge {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: var(--industrial-orange, #FF8C00);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .command-center {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffffff 100%);
+            border: 2px solid var(--industrial-orange, #FF8C00);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        .command-center h3 {
+            color: #1a1a1a;
+            font-weight: 800;
+        }
+        .command-center p {
+            color: #4B5563;
+        }
+        .btn-command {
+            background: var(--industrial-orange, #FF8C00);
+            color: white;
             border: none;
-            border-radius: 15px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
         }
-        .product-card-sport:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-        .btn-amazon {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: none;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .btn-amazon:hover {
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-            color: white;
+        .btn-command:hover {
+            background: #e67e00;
             transform: scale(1.05);
-        }
-        .category-badge {
-            background: rgba(255,255,255,0.2);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
             color: white;
-            padding: 8px 20px;
-            border-radius: 25px;
+        }
+        footer {
+            background: #FFFFFF;
+            color: #9CA3AF;
+            padding: 40px 0;
+            border-top: 1px solid #e5e7eb;
+        }
+        footer p {
+            color: #9CA3AF;
+        }
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #4B5563;
             font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-            border: 1px solid rgba(255,255,255,0.3);
         }
-        .category-badge:hover {
-            background: rgba(255,255,255,0.3);
-        }
-        .alert-light {
-            border: none;
-            border-radius: 15px;
-            background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        .trust-badge i {
+            color: var(--industrial-orange, #FF8C00);
         }
     </style>
 </head>
@@ -147,32 +173,10 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-4">
-                <i class="fas fa-sun me-3"></i>Sport Estivi
+            <h1 class="display-4 fw-bold mb-3" style="color: #1a1a1a;">
+                <i class="fas fa-sun me-3" style="color: var(--industrial-orange, #FF8C00);"></i>Sport Estivi
             </h1>
-            <p class="lead mb-4">Tutto ciò che serve per goderti i tuoi sport preferiti all'aria aperta durante l'estate</p>
-
-            <!-- Trust Banner -->
-            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
-                <i class="fab fa-amazon fa-lg me-2"></i>
-                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
-                <i class="fas fa-shield-alt ms-2"></i>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="d-flex justify-content-center gap-3">
-                        <span class="category-badge">
-                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
-                        </span>
-                        <span class="category-badge">
-                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
-                        </span>
-                        <span class="category-badge">
-                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
-                        </span>
-                    </div>
-                </div>
-            </div>
+            <p class="lead mb-4" style="color: #4B5563;">Seleziona la tua disciplina e lascia che Atlas trovi il miglior setup tecnico</p>
         </div>
     </section>
 
@@ -181,111 +185,94 @@
         <div class="row g-4">
             <!-- Pesca (Alta accessoriazione) -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card sport-card h-100 text-center p-3 shadow-sm" onclick="triggerBot('pesca')">
-                    <i class="fas fa-fish fa-3x mb-3 text-primary"></i>
-                    <h5 class="fw-bold">Pesca</h5>
-                    <p class="small text-muted">Canne, mulinelli e attrezzatura professionale per ogni tipo di pesca.</p>
-                    <button class="btn btn-outline-primary btn-sm">Scopri i Kit</button>
-                </div>
-                <div class="alert alert-light mt-2 small text-muted">
-                    <i class="fas fa-lightbulb text-warning me-1"></i>
-                    Non sai quale canna scegliere? Il bot ha i 3 kit pronti per lago, mare e fiume.
+                <div class="card sport-card h-100 text-center p-4" onclick="triggerBot('pesca')">
+                    <i class="fas fa-fish sport-icon"></i>
+                    <h5 class="fw-bold mb-2" style="color: #1a1a1a;">Pesca</h5>
+                    <p class="small mb-0" style="color: #4B5563;">Canne, mulinelli e attrezzatura professionale</p>
+                    <span class="atlas-badge">+ ATLAS KIT</span>
                 </div>
             </div>
 
             <!-- Tennis (Alta accessoriazione) -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card sport-card h-100 text-center p-3 shadow-sm" onclick="triggerBot('tennis')">
-                    <i class="fas fa-table-tennis fa-3x mb-3 text-success"></i>
-                    <h5 class="fw-bold">Tennis</h5>
-                    <p class="small text-muted">Racchette, palline, abbigliamento e accessori per ogni livello di gioco.</p>
-                    <button class="btn btn-outline-success btn-sm">Scopri i Kit</button>
-                </div>
-                <div class="alert alert-light mt-2 small text-muted">
-                    <i class="fas fa-lightbulb text-warning me-1"></i>
-                    Le racchette che stanno dominando i campi quest'estate, con rapporto qualità/prezzo imbattibile.
+                <div class="card sport-card h-100 text-center p-4" onclick="triggerBot('tennis')">
+                    <i class="fas fa-table-tennis sport-icon"></i>
+                    <h5 class="fw-bold mb-2" style="color: #1a1a1a;">Tennis</h5>
+                    <p class="small mb-0" style="color: #4B5563;">Racchette, palline e accessori per ogni livello</p>
+                    <span class="atlas-badge">+ TOP PICKS</span>
                 </div>
             </div>
 
             <!-- Padel (Alta accessoriazione) -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card sport-card h-100 text-center p-3 shadow-sm" onclick="triggerBot('padel')">
-                    <i class="fas fa-table-tennis fa-3x mb-3 text-info"></i>
-                    <h5 class="fw-bold">Padel</h5>
-                    <p class="small text-muted">Racchette, palline, borse e accessori per il padel professionale.</p>
-                    <button class="btn btn-outline-info btn-sm">Scopri i Kit</button>
-                </div>
-                <div class="alert alert-light mt-2 small text-muted">
-                    <i class="fas fa-lightbulb text-warning me-1"></i>
-                    Le racchette più performanti del momento, ideali per giocatori di tutti i livelli.
+                <div class="card sport-card h-100 text-center p-4" onclick="triggerBot('padel')">
+                    <i class="fas fa-table-tennis sport-icon"></i>
+                    <h5 class="fw-bold mb-2" style="color: #1a1a1a;">Padel</h5>
+                    <p class="small mb-0" style="color: #4B5563;">Racchette e accessori per il padel professionale</p>
+                    <span class="atlas-badge">+ ATLAS KIT</span>
                 </div>
             </div>
 
             <!-- Immersioni Subacquee -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card sport-card h-100 text-center p-3 shadow-sm" onclick="triggerBot('immersioni')">
-                    <i class="fas fa-fish fa-3x mb-3 text-info"></i>
-                    <h5 class="fw-bold">Immersioni</h5>
-                    <p class="small text-muted">Maschere, pinne, boccagli e attrezzatura per snorkeling e diving.</p>
-                    <button class="btn btn-outline-info btn-sm">Scopri i Kit</button>
-                </div>
-                <div class="alert alert-light mt-2 small text-muted">
-                    <i class="fas fa-lightbulb text-warning me-1"></i>
-                    Kit completi Cressi per subacquea: maschere, pinne e boccagli di qualità professionale.
+                <div class="card sport-card h-100 text-center p-4" onclick="triggerBot('immersioni')">
+                    <i class="fas fa-fish sport-icon"></i>
+                    <h5 class="fw-bold mb-2" style="color: #1a1a1a;">Immersioni</h5>
+                    <p class="small mb-0" style="color: #4B5563;">Maschere, pinne e attrezzatura diving</p>
+                    <span class="atlas-badge">+ ATLAS KIT</span>
                 </div>
             </div>
 
             <!-- Running & Jogging -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card sport-card h-100 text-center p-3 shadow-sm" onclick="triggerBot('running')">
-                    <i class="fas fa-running fa-3x mb-3 text-danger"></i>
-                    <h5 class="fw-bold">Running</h5>
-                    <p class="small text-muted">Scarpe, abbigliamento tecnico e accessori per ogni distanza.</p>
-                    <button class="btn btn-outline-danger btn-sm">Scopri i Kit</button>
-                </div>
-                <div class="alert alert-light mt-2 small text-muted">
-                    <i class="fas fa-lightbulb text-warning me-1"></i>
-                    Usa il tool di selezione: ho filtrato le migliori scarpe basate sul tipo di terreno e distanza.
+                <div class="card sport-card h-100 text-center p-4" onclick="triggerBot('running')">
+                    <i class="fas fa-running sport-icon"></i>
+                    <h5 class="fw-bold mb-2" style="color: #1a1a1a;">Running</h5>
+                    <p class="small mb-0" style="color: #4B5563;">Scarpe e abbigliamento tecnico</p>
+                    <span class="atlas-badge">+ ATLAS KIT</span>
                 </div>
             </div>
 
             <!-- Beach Volleyball -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card sport-card h-100 text-center p-3 shadow-sm" onclick="triggerBot('beach-volley')">
-                    <i class="fas fa-volleyball-ball fa-3x mb-3 text-warning"></i>
-                    <h5 class="fw-bold">Beach Volley</h5>
-                    <p class="small text-muted">Palle, reti, abbigliamento e accessori per il beach volley.</p>
-                    <button class="btn btn-outline-warning btn-sm">Scopri i Kit</button>
-                </div>
-                <div class="alert alert-light mt-2 small text-muted">
-                    <i class="fas fa-lightbulb text-warning me-1"></i>
-                    Kit completi per il beach volley: palle, reti e accessori professionali per la spiaggia.
+                <div class="card sport-card h-100 text-center p-4" onclick="triggerBot('beach-volley')">
+                    <i class="fas fa-volleyball-ball sport-icon"></i>
+                    <h5 class="fw-bold mb-2" style="color: #1a1a1a;">Beach Volley</h5>
+                    <p class="small mb-0" style="color: #4B5563;">Palle, reti e accessori per la spiaggia</p>
+                    <span class="atlas-badge">+ ATLAS KIT</span>
                 </div>
             </div>
 
             <!-- Arrampicata & Climbing -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card sport-card h-100 text-center p-3 shadow-sm" onclick="triggerBot('arrampicata')">
-                    <i class="fas fa-mountain fa-3x mb-3 text-dark"></i>
-                    <h5 class="fw-bold">Arrampicata</h5>
-                    <p class="small text-muted">Imbracature, corde, moschettoni e attrezzatura per climbing.</p>
-                    <button class="btn btn-outline-dark btn-sm">Scopri i Kit</button>
-                </div>
-                <div class="alert alert-light mt-2 small text-muted">
-                    <i class="fas fa-lightbulb text-warning me-1"></i>
-                    Attrezzatura certificata per climbing: imbracature, corde e accessori professionali.
+                <div class="card sport-card h-100 text-center p-4" onclick="triggerBot('arrampicata')">
+                    <i class="fas fa-mountain sport-icon"></i>
+                    <h5 class="fw-bold mb-2" style="color: #1a1a1a;">Arrampicata</h5>
+                    <p class="small mb-0" style="color: #4B5563;">Imbracature, corde e attrezzatura climbing</p>
+                    <span class="atlas-badge">+ ATLAS KIT</span>
                 </div>
             </div>
 
             <!-- Vela (Prossimamente) -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card sport-card h-100 text-center p-3 shadow-sm opacity-50">
-                    <i class="fas fa-sailboat fa-3x mb-3 text-secondary"></i>
-                    <h5 class="fw-bold">Vela</h5>
-                    <p class="small text-muted">Attrezzatura, accessori e equipaggiamento per la vela.</p>
+                <div class="card sport-card h-100 text-center p-4 opacity-50" style="cursor: not-allowed;">
+                    <i class="fas fa-sailboat sport-icon" style="color: #9CA3AF;"></i>
+                    <h5 class="fw-bold mb-2" style="color: #9CA3AF;">Vela</h5>
+                    <p class="small mb-0" style="color: #9CA3AF;">Attrezzatura e equipaggiamento</p>
                     <span class="badge bg-secondary">Prossimamente</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Atlas Command Center -->
+    <section class="container">
+        <div class="command-center text-center">
+            <h3 class="mb-3"><i class="fas fa-robot me-2" style="color: var(--industrial-orange, #FF8C00);"></i>Atlas Command Center</h3>
+            <p class="mb-4">Il tuo assistente AI personale per analisi tecniche e consigli su equipaggiamento sportivo</p>
+            <button class="btn btn-command" onclick="toggleChat()">
+                <i class="fas fa-play me-2"></i>AVVIA ANALISI GEAR
+            </button>
         </div>
     </section>
 
@@ -305,6 +292,29 @@
             }
         }
     </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-2">© 2026 Smart Choices Guide. Tutti i diritti riservati.</p>
+            <p class="small mb-3">Partecipiamo al Programma Affiliati Amazon EU</p>
+            
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fab fa-amazon"></i>
+                    <span>Prodotti Amazon</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-truck"></i>
+                    <span>Spedizione Gratuita</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Garanzia Amazon</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- AI Chat Scripts -->
     <script src="../bot/combo-database.js"></script>
@@ -341,13 +351,5 @@
             <button onclick="sendMessage()">Invia</button>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">© 2026 Smart Choices Guide. Tutti i diritti riservati.</p>
-            <p class="small text-muted mb-0">Partecipiamo al Programma Affiliati Amazon EU</p>
-        </div>
-    </footer>
 </body>
 </html>
