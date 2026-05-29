@@ -1,0 +1,52 @@
+/* Moda & Accessori - Editorial Magazine con layout asimmetrico */
+
+/* Card body styling for Editorial Magazine style */
+.bento-product-card .card-body {
+    font-family: 'Georgia', serif;
+    background: #ffffff;
+    border-left: 4px solid #DB7093;
+    padding: 2rem;
+}
+
+/* Text colors for editorial readability */
+.bento-product-card .card-text,
+.bento-product-card .text-muted {
+    color: #333 !important;
+}
+
+.bento-product-card .small {
+    color: #666 !important;
+}
+
+/* Icon colors for fashion accent */
+.bento-product-card .fa-glasses,
+.bento-product-card .fa-ring,
+.bento-product-card .fa-gem,
+.bento-product-card .fa-clock {
+    color: #DB7093;
+}
+
+/* Check icons */
+.bento-product-card .fa-check-circle {
+    color: #8B008B;
+}
+
+/* Category badge styling */
+.bento-product-card .category-badge {
+    background: linear-gradient(135deg, #DB7093, #8B008B);
+    color: white;
+    border: none;
+}
+
+/* Amazon button styling for Moda */
+.bento-product-card .btn-amazon {
+    background: linear-gradient(135deg, #DB7093 0%, #8B008B 100%);
+    color: white;
+    border: none;
+}
+
+.bento-product-card .btn-amazon:hover {
+    background: linear-gradient(135deg, #8B008B 0%, #708090 100%);
+    transform: scale(1.05);
+    color: white;
+}

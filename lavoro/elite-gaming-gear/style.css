@@ -1,0 +1,82 @@
+/* Elite Gaming & Tech - Dark Mode con accenti luminosi (neon/cyberpunk) */
+
+/* Card body styling for Elite Gaming */
+.product-card .card-body {
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b4e 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+    color: white;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card .card-body:hover {
+    border-color: rgba(0, 212, 255, 0.6); /* Il bordo diventa Cyan al passaggio */
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4), 0 0 10px rgba(0, 212, 255, 0.2);
+    transform: translateY(-5px); /* Leggera elevazione 3D */
+}
+
+/* Icon colors for luminous neon effect */
+.product-card .fa-desktop,
+.product-card .fa-headset,
+.product-card .fa-keyboard,
+.product-card .fa-mouse,
+.product-card .fa-hdd,
+.product-card .fa-wifi,
+.product-card .fa-fan,
+.product-card .fa-microchip,
+.product-card .fa-gamepad,
+.product-card .fa-vr-cardboard,
+.product-card .fa-headphones,
+.product-card .fa-plug {
+    color: #00d4ff; /* Cyan neon */
+}
+
+/* Check icons for luminous effect */
+.product-card .fa-check {
+    color: #ff9f43; /* Orange-yellow neon */
+}
+
+/* Text colors for dark mode */
+.product-card .card-text,
+.product-card .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.product-card .small {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Category badge styling */
+.product-card .category-badge {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    color: white;
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+/* Amazon button styling for Elite Gaming */
+.product-card .btn-amazon {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    color: white;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.product-card .btn-amazon:hover {
+    background: linear-gradient(135deg, #a78bfa 0%, #818cf8 100%);
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Micro-animazione per le Icone (Focus Attenzione) */
+.product-card [class*="fa-"]:hover {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}

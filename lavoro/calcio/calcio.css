@@ -1,0 +1,219 @@
+/* ============================================
+   CALCIO - CSS Specifico
+   Smart Choices Guide
+   Tema Musicale: Stadium Energy
+   ============================================ */
+
+/* Variabili Specifiche Calcio - Tema Stadio */
+:root {
+    --calcio-primary: #2E7D32; /* Verde campo */
+    --calcio-secondary: #1B5E20; /* Verde scuro */
+    --calcio-accent: #FFD700; /* Oro/Giallo */
+    --calcio-danger: #FF0000; /* Rosso cartellino */
+    --calcio-white: #FFFFFF;
+    --calcio-black: #000000;
+    --calcio-neon-green: #00FF88;
+    --calcio-neon-blue: #00BFFF;
+    --calcio-card-bg: rgba(255, 255, 255, 0.95);
+    --calcio-gradient-start: #2E7D32;
+    --calcio-gradient-end: #1B5E20;
+}
+
+/* Sfondo Calcio - Campo Verde */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Hero Section Calcio - Stadio Energy */
+.hero-section {
+    background: 
+        linear-gradient(135deg, var(--calcio-primary) 0%, var(--calcio-secondary) 50%, var(--calcio-accent) 100%),
+        radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(0, 191, 255, 0.3) 0%, transparent 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.05) 2px,
+            rgba(255, 255, 255, 0.05) 4px
+        );
+    pointer-events: none;
+}
+
+/* Product Card Calcio - Animazioni Hover Migliorate */
+.product-card {
+    border: 2px solid var(--calcio-primary);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: var(--calcio-card-bg);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    box-shadow: 
+        0 4px 15px rgba(46, 125, 50, 0.1),
+        0 0 0 0 rgba(255, 215, 0, 0);
+}
+
+/* Parallasse 3D - Focus sull'Oggetto */
+.product-card .card-body {
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-card:hover .card-body {
+    transform: translateZ(30px);
+}
+
+.product-card:hover .card-title {
+    transform: translateZ(50px) translateX(5px);
+}
+
+.product-card:hover .fa-4x {
+    transform: translateZ(70px) scale(1.15) rotate(5deg);
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--calcio-primary) 0%, var(--calcio-secondary) 50%, var(--calcio-accent) 100%);
+    opacity: 0.03;
+    z-index: -1;
+    border-radius: 20px;
+    transition: opacity 0.4s ease;
+}
+
+.product-card:hover::before {
+    opacity: 0.08;
+}
+
+/* Glow Neon Selection - Cyber-Neon Style */
+.product-card:hover {
+    box-shadow: 
+        0 8px 30px rgba(46, 125, 50, 0.3),
+        0 0 20px rgba(255, 215, 0, 0.4),
+        0 0 40px rgba(0, 255, 136, 0.2);
+    border-color: var(--calcio-accent);
+}
+
+/* Pulse Animation per Amazon Button */
+.btn-amazon {
+    background: linear-gradient(135deg, var(--calcio-primary) 0%, var(--calcio-secondary) 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-amazon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-amazon:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-amazon:hover {
+    background: linear-gradient(135deg, var(--calcio-accent) 0%, var(--calcio-primary) 100%);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(46, 125, 50, 0.4);
+}
+
+/* Category Badge */
+.category-badge {
+    background: linear-gradient(135deg, var(--calcio-primary) 0%, var(--calcio-secondary) 100%);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(46, 125, 50, 0.3);
+}
+
+/* Icon Animation */
+.fa-futbol,
+.fa-shield-alt,
+.fa-book,
+.fa-dumbbell,
+.fa-running {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-card:hover .fa-futbol {
+    animation: bounce 0.6s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Card Title Enhancement */
+.card-title {
+    transition: all 0.4s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover .card-title {
+    color: var(--calcio-primary);
+    text-shadow: 0 2px 8px rgba(46, 125, 50, 0.3);
+}
+
+/* Feature List Enhancement */
+.list-unstyled li {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .list-unstyled li {
+    transform: translateX(5px);
+}
+
+/* Footer Enhancement */
+footer {
+    background: linear-gradient(135deg, var(--calcio-primary) 0%, var(--calcio-secondary) 100%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-card:hover .card-body {
+        transform: translateZ(15px);
+    }
+    
+    .product-card:hover .fa-4x {
+        transform: translateZ(30px) scale(1.1);
+    }
+}

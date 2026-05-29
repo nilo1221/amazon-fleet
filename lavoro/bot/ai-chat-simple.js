@@ -84,7 +84,8 @@ function getCategoryNameFromContext() {
         'giochi': 'Giochi da Tavolo',
         'profumi': 'Profumi & Bellezza',
         'sostenibilita': 'Sostenibilità & Eco-Friendly',
-        'dvd': 'DVD & Blu-ray'
+        'dvd': 'DVD & Blu-ray',
+        'pugilato': 'Pugilato & Boxe'
     };
     
     return contextNames[context] || 'questa categoria';
@@ -189,6 +190,54 @@ const NicheDatabase = {
                 description: "Set di 3 padelle con finitura legno-pietra elegante",
                 icon: "fa-utensils",
                 link: "https://www.amazon.it/SET-3-PADELLE-WOOD-STONE/dp/B07S1VRNG6?&linkCode=ll2&tag=l0c39-21&linkId=73df7c30a54f668e5084df48bb9712eb&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Tescoma 605068 Bistecchiera SmartClick",
+                description: "Bistecchiera antiaderente compatibile con induzione, 42 x 28 cm",
+                icon: "fa-fire",
+                link: "https://www.amazon.it/gp/aw/d/B07GZW2TSG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=7dc27841508e75f261485dd30d9a04c8&hsa_cr_id=5870737910002&qid=1780064650&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=uuzvb5Gdfu&pd_rd_w=zUrrb&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=SEP63DWQX9G6792Z83RY&pd_rd_wg=YfBCd&pd_rd_r=0342669c-e13c-488e-9b3c-3b2e6a89726c&th=1&linkCode=ll2&tag=l0c39-21&linkId=b1884104894a670571d4089205acc9ea&ref_=as_li_ss_tl"
+            },
+            {
+                name: "ANW HOME Lavandino Cucina 40x45 cm",
+                description: "Lavello cucina 1 vasca da incasso in acciaio inox 304 con rivestimento nano",
+                icon: "fa-sink",
+                link: "https://www.amazon.it/ANW-HOME-Lavandino-Rivestimento-Spessore/dp/B0GVG5WFQ4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=26SET29CLRJFD&dib=eyJ2IjoiMSJ9.xdeQ6GZpxTD-63c-NXH7KwHpqxPCbjhCej8iFJI5zwG9i1G4URkoPOHsyMTwJ7bBnv4QKDNc4EpKZjJTsqsGNSrqMpc4P2FMEwuXLZfSSo03D2EaodHpUk49Nf_6ZvF7jIvzsNRnyTuZO2LoYYuoJ7yCX-cCCYU4KCVCHoZoBJ4Oi0JB9D6HP69jBefNU-n2FgYEWweuw4dkvlTL108HREOKC7_SeRLzDVg_xe2YrMXxPru57ReTKjzoCOjQxEtYhW2a-JZSSmoB6y9x-SdJxTVwKA6sKggYmxuNJRuRdys.KRfPnVvUO230o7ZtXV9gPcJIRLYevJ3Z7WoUoqQi6pQ&dib_tag=se&keywords=cucina&qid=1780064713&sprefix=cucin%2Caps%2C148&sr=8-3-spons&aref=LXfvo4t7LB&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=0cc8c0157db4fc77751e679c6c234857&ref_=as_li_ss_tl"
+            },
+            {
+                name: "SCOLAPIATTI DA INCASSO 76,4 cm",
+                description: "Scolapiatti per pensili 80 cm con telaio regolabile in alluminio, Made in Italy",
+                icon: "fa-utensils",
+                link: "https://www.amazon.it/dp/B0C4FSW8TV?ie=UTF8&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=XHSG6VASBAFVBM7MVRQX&pd_rd_wg=IoCnQ&pd_rd_w=hrx5e&pd_rd_r=19a271fe-c364-46fe-b0e7-05247e95a697&aref=ATS0NMs4IP&th=1&linkCode=ll2&tag=l0c39-21&linkId=abbcbe5add7f82603511c15f90ec5a7a&ref_=as_li_ss_tl"
+            },
+            {
+                name: "Fullstar Taglia Verdure e Mandolina Affetta Verdure",
+                description: "Tritatutto manuale multifunzione 6-in-1 per cubetti, julienne e grattugia",
+                icon: "fa-carrot",
+                link: "https://www.amazon.it/Fullstar-Taglia-Verdure-Mandolina-Affetta/dp/B0BHSXFTGH?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&content-id=amzn1.sym.c71bc1e7-e222-401d-a8ef-851fd29a92dd%3Aamzn1.sym.c71bc1e7-e222-401d-a8ef-851fd29a92dd&crid=26SET29CLRJFD&cv_ct_cx=cucina&keywords=cucina&pd_rd_i=B0BHSXFTGH&pd_rd_r=202151dd-c853-482f-8da3-bfde7452ace1&pd_rd_w=Aewm3&pd_rd_wg=ybBpS&pf_rd_p=c71bc1e7-e222-401d-a8ef-851fd29a92dd&pf_rd_r=0GFQFG7HKY6S040NG2G2&qid=1780064713&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=cucin%2Caps%2C148&sr=1-1-ca22f3c3-0606-4173-afab-fb32ddc038f9-spons&aref=ZpouZiTq86&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=l0c39-21&linkId=84cbeb1203f4d916a5de8f8db993cfc5&ref_=as_li_ss_tl"
+            },
+            {
+                name: "YASHE Affettatrice Elettrica",
+                description: "Affettatrice da carne e pane 250W con lame 19 cm, spessore regolabile 0-15 mm",
+                icon: "fa-bacon",
+                link: "https://www.amazon.it/dp/B0F8VZFXL8?ie=UTF8&psc=1&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=JRMMSMNWG7C0HT37NCWY&pd_rd_wg=kn3yU&pd_rd_w=IXhzH&pd_rd_r=6c93c712-5fe9-412b-900a-7f0c4326b37c&aref=nwNECywzBw&linkCode=ll2&tag=l0c39-21&linkId=01c7fc574e9dca763f2ab84bc3c1b2d3&ref_=as_li_ss_tl"
+            },
+            {
+                name: "Utensili da cucina in silicone 22 pezzi",
+                description: "Set utensili per pentole antiaderenti, al calore e antiaderenti con manico in legno",
+                icon: "fa-spoon",
+                link: "https://www.amazon.it/Utensili-silicone-utensili-pentole-antiaderenti/dp/B0CXHYLVT5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=26SET29CLRJFD&dib=eyJ2IjoiMSJ9.xdeQ6GZpxTD-63c-NXH7KwHpqxPCbjhCej8iFJI5zwG9i1G4URkoPOHsyMTwJ7bBnv4QKDNc4EpKZjJTsqsGNSrqMpc4P2FMEwuXLZfSSo03D2EaodHpUk49Nf_6ZvF7jIvzsNRnyTuZO2LoYYuoJ7yCX-cCCYU4KCVCHoZoBJ4Oi0JB9D6HP69jBefNU-n2FgYEWweuw4dkvlTL108HREOKC7_SeRLzDVg_xe2YrMXxPru57ReTKjzoCOjQxEtYhW2a-JZSSmoB6y9x-SdJxTVwKA6sKggYmxuNJRuRdys.KRfPnVvUO230o7ZtXV9gPcJIRLYevJ3Z7WoUoqQi6pQ&dib_tag=se&keywords=cucina&qid=1780064713&sprefix=cucin%2Caps%2C148&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=9997e0e52a3941ac9bf4250ed98680a0&ref_=as_li_ss_tl"
+            },
+            {
+                name: "INOXLM Tagliere Spianatoia per impastare",
+                description: "Piano da lavoro in acciaio inox varie misure per cucina, bar e ristorante",
+                icon: "fa-cutting-board",
+                link: "https://www.amazon.it/dp/B0878WZXDR?ie=UTF8&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=TNQ8RWFNKEEV2XHT0C5B&pd_rd_wg=QaOqQ&pd_rd_w=OYThO&pd_rd_r=c9a083f9-308b-4df3-8855-1317245e3bed&aref=m9WgIxXWOQ&th=1&linkCode=ll2&tag=l0c39-21&linkId=e54d93d509939823c43ee02de2a67947&ref_=as_li_ss_tl"
+            },
+            {
+                name: "JPshop Kit 4 Piattelli Smaltati Fornelli",
+                description: "Kit 4 piattelli smaltati per cucina e piano cottura compatibile con Rex Electrolux",
+                icon: "fa-fire-burner",
+                link: "https://www.amazon.it/JPshop-Piattelli-Smaltati-compatibile-Electrolux/dp/B0F4DCMZ5M?keywords=Bistecchiere+reversibili&pf_rd_p=5cf7e89d-be4f-4a60-a94f-67425bc592ec&pf_rd_r=E4CXKAW8PQX4V739CJ3B&aref=yOqHmHxMwF&sp_csd=d2lkZ2V0TmFtZT1zcF9hcGJfZGVza3RvcF9icm93c2VfaW5saW5lX2F0Zg&psc=1&linkCode=ll2&tag=l0c39-21&linkId=3ba018c5fcdbbc8e5243d9eb0820e0f6&ref_=as_li_ss_tl"
             }
         ]
     },
@@ -415,7 +464,7 @@ const NicheDatabase = {
     },
     "sport-estivi": {
         name: "Sport Estivi",
-        tags: ["sport", "estivo", "estate", "tennis", "padel", "running", "jogging", "surf", "windsurf", "vela", "canoa", "kayak", "nuoto", "piscina", "immersioni", "subacquea", "beach", "volleyball", "arrampicata", "climbing", "skate", "skateboard", "yoga", "nordic", "walking", "all'aperto", "outdoor", "attività", "fisica", "allenamento", "competizione", "gioco", "divertimento"],
+        tags: ["sport", "estivo", "estate", "tennis", "padel", "running", "jogging", "surf", "windsurf", "vela", "canoa", "kayak", "nuoto", "piscina", "immersioni", "subacquea", "beach", "volleyball", "arrampicata", "climbing", "skate", "skateboard", "yoga", "nordic", "walking", "all'aperto", "outdoor", "attività", "fisica", "allenamento", "competizione", "gioco", "divertimento", "calcio", "pallone", "parastinchi", "allenamento calcio"],
         url: "/sport-estivi/index.html",
         personality: "energetic",
         valueProp: "Ho selezionato i migliori sport estivi per goderti l'aria aperta. Tennis, padel, running, surf e molto altro per una estate attiva.",
@@ -424,7 +473,90 @@ const NicheDatabase = {
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         primaryColor: "#667eea",
         accentColor: "#764ba2",
-        secondaryColor: "#f093fb"
+        secondaryColor: "#f093fb",
+        topProducts: [
+            {
+                name: "Amazon Basics Pallone da Calcio con Pompa",
+                description: "Pallone da allenamento con pompa inclusa, PVC resistente, uso interno/esterno",
+                icon: "fa-futbol",
+                link: "https://www.amazon.it/Amazon-Basics-Palloni-Allenamento-Macchina/dp/B0F4K9DR1P?dib=eyJ2IjoiMSJ9.KqxiS9pfLM8Ue1ht40YCIZuAlkxR2wPsgMo0b-zQ0wlZOrNkr066HmZR_w7xxLnJMWf1Od9fbmR44Y4w9V04fPzuQ0CuKHmn2VjrIo_sp4VFmnoVY4oXFip_LibBvj5jfVuAEe8Vdfw4mVm5NZ6wmOGSvX-lwApDUxfq12LihvdwDiiZ6YTEzXP3R2Fl2WAR2KldwKO4gSLiVqklRm5MRv-hKmQCMULAm1E0Wvz4rxTi2Rk7d79JmpFx68zzwO2XDdrRPNznxKAvUCC9iQ4uCgTinerd9WeL43uc7r-SRDk.Byx4UQtSf7Igk6xcomb-diGLu-8UVlRtpW5wjvNGkuo&dib_tag=se&keywords=calcio&qid=1780065044&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&aref=vunziAZ3dN&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=659c4bdd9097f77c299083854629b00f&ref_=as_li_ss_tl"
+            },
+            {
+                name: "Mini Parastinchi Calcio",
+                description: "Ultra leggeri, resistenti e personalizzabili, usati da calciatori Serie A",
+                icon: "fa-shield-alt",
+                link: "https://www.amazon.it/Mini-Parastinchi-Calcio-Resistenti-Personalizzabili/dp/B0FF9PKLLW?dib=eyJ2IjoiMSJ9.KqxiS9pfLM8Ue1ht40YCIZuAlkxR2wPsgMo0b-zQ0wlZOrNkr066HmZR_w7xxLnJMWf1Od9fbmR44Y4w9V04fPzuQ0CuKHmn2VjrIo_sp4VFmnoVY4oXFip_LibBvj5jfVuAEe8Vdfw4mVm5NZ6wmOGSvX-lwApDUxfq12LihvdwDiiZ6YTEzXP3R2Fl2WAR2KldwKO4gSLiVqklRm5MRv-hKmQCMULAm1E0Wvz4rxTi2Rk7d79JmpFx68zzwO2XDdrRPNznxKAvUCC9iQ4uCgTinerd9WeL43uc7r-SRDk.Byx4UQtSf7Igk6xcomb-diGLu-8UVlRtpW5wjvNGkuo&dib_tag=se&keywords=calcio&qid=1780065044&sr=8-5-spons&aref=fGxgQ4kFF0&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=464e6caba65dbb575c7825517f769bd0&ref_=as_li_ss_tl"
+            },
+            {
+                name: "Un Sogno Chiamato Calcio",
+                description: "Libro sul calcio per bambini delle elementari, per la fiducia in se stessi",
+                icon: "fa-book",
+                link: "https://www.amazon.it/Sogno-Chiamato-Calcio-Elementari-Bellezza/dp/B0DDH5BM3M?dib=eyJ2IjoiMSJ9.KqxiS9pfLM8Ue1ht40YCIZuAlkxR2wPsgMo0b-zQ0wlZOrNkr066HmZR_w7xxLnJMWf1Od9fbmR44Y4w9V04fPzuQ0CuKHmn2VjrIo_sp4VFmnoVY4oXFip_LibBvj5jfVuAEe8Vdfw4mVm5NZ6wmOGSvX-lwApDUxfq12LihvdwDiiZ6YTEzXP3R2Fl2WAR2KldwKO4gSLiVqklRm5MRv-hKmQCMULAm1E0Wvz4rxTi2Rk7d79JmpFx68zzwO2XDdrRPNznxKAvUCC9iQ4uCgTinerd9WeL43uc7r-SRDk.Byx4UQtSf7Igk6xcomb-diGLu-8UVlRtpW5wjvNGkuo&dib_tag=se&keywords=calcio&qid=1780065044&sr=8-9&linkCode=ll2&tag=l0c39-21&linkId=f9abf243492bfa98a37753e5dd8176c3&ref_=as_li_ss_tl"
+            },
+            {
+                name: "EUREKA BODIFY Kit Allenamento Calcio e Agilità",
+                description: "Kit completo con 10 cinesini, scala agilità 6m, paracadute, bande elastiche, corda",
+                icon: "fa-dumbbell",
+                link: "https://www.amazon.it/EUREKA-BODIFY-Allenamento-Calcio-Agilit%C3%A0/dp/B0DB5PHBMB?content-id=amzn1.sym.3f7677f6-d6aa-4de0-8287-6bb7b9730f20%3Aamzn1.sym.3f7677f6-d6aa-4de0-8287-6bb7b9730f20&cv_ct_cx=calcio&keywords=calcio&pd_rd_i=B0DB5PHBMB&pd_rd_r=532379c4-a0b6-49af-af7f-5fe61dec4b75&pd_rd_w=LG6h9&pd_rd_wg=bWx9K&pf_rd_p=3f7677f6-d6aa-4de0-8287-6bb7b9730f20&pf_rd_r=8GT57XAXK4YCA4JCY7JY&qid=1780065044&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-3-50840d04-82cc-4adf-b6cc-9f330c77868e-spons&aref=HAqAT4sl3G&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&psc=1&linkCode=ll2&tag=l0c39-21&linkId=1ca05c30fc94d0dc8b3261fa5628e136&ref_=as_li_ss_tl"
+            },
+            {
+                name: "Ainiv Soccer Bungee Trainer",
+                description: "Cintura di allenamento per calcio con 5 artigli, per bambini e adulti",
+                icon: "fa-running",
+                link: "https://www.amazon.it/Ainiv-Allenamento-Allenatore-Regolabile-Principianti/dp/B09Z3XHS7S?dib=eyJ2IjoiMSJ9.KqxiS9pfLM8Ue1ht40YCIZuAlkxR2wPsgMo0b-zQ0wlZOrNkr066HmZR_w7xxLnJMWf1Od9fbmR44Y4w9V04fPzuQ0CuKHmn2VjrIo_sp4VFmnoVY4oXFip_LibBvj5jfVuAEe8Vdfw4mVm5NZ6wmOGSvX-lwApDUxfq12LihvdwDiiZ6YTEzXP3R2Fl2WAR2KldwKO4gSLiVqklRm5MRv-hKmQCMULAm1E0Wvz4rxTi2Rk7d79JmpFx68zzwO2XDdrRPNznxKAvUCC9iQ4uCgTinerd9WeL43uc7r-SRDk.Byx4UQtSf7Igk6xcomb-diGLu-8UVlRtpW5wjvNGkuo&dib_tag=se&keywords=calcio&qid=1780065044&sr=8-11&th=1&linkCode=ll2&tag=l0c39-21&linkId=49c73b928f3c60c89aaeffbebbb54d55&ref_=as_li_ss_tl"
+            }
+        ]
+    },
+    "pugilato": {
+        name: "Pugilato & Boxe",
+        tags: ["pugilato", "boxe", "guantoni", "sacco", "boxe", "parastinchi", "casco", "paradenti", "bende", "allenamento", "palestra", "combattimento", "sport", "combattimento", "ring", "match", "gara", "competizione", "mma", "kickboxing", "thai", "boxe", "thailandese", "art", "marziali", "difesa", "personale", "fitness", "cardio", "forza", "resistenza"],
+        url: "/pugilato/index.html",
+        personality: "energetic",
+        valueProp: "Ho selezionato l'attrezzatura migliore per il tuo allenamento di pugilato. Guantoni, sacchi, protezioni e accessori per allenarti come un vero campione.",
+        song: "Eye of the Tiger - Survivor",
+        songLinkSpotify: "https://open.spotify.com/track/4fIQKpxc2X8XUKz5dQG9OZ",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        primaryColor: "#FFD700",
+        accentColor: "#000000",
+        secondaryColor: "#C9A227",
+        topProducts: [
+            {
+                name: "LEONE 1947 Guanti Boxe",
+                description: "Guanti da boxe professionali LEONE 1947, qualità italiana per campioni",
+                icon: "fa-boxing-glove",
+                link: "https://www.amazon.it/gp/aw/d/B07WQ22G2D?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=a9806ff03c4c9e1d788f11c6c05492df&hsa_cr_id=0&qid=1780066711&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=yyN3CsdAZf&pd_rd_w=hHUd7&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=FY47W3KBHG049AG1VQNC&pd_rd_wg=WThQT&pd_rd_r=18859471-92f8-4895-9a7a-073ecfba3c41&th=1&linkCode=ll2&tag=l0c39-21&linkId=68ded6d756d5c19f0037b7fa8d0aa552&ref=_as_li_ss_tl"
+            },
+            {
+                name: "RDX Palla Veloce Boxe",
+                description: "Pera da boxe in vacchetta pelle con gancio soffitto, perfetta per allenamento velocità Muay Thai MMA",
+                icon: "fa-circle",
+                link: "https://www.amazon.it/RDX-velocit%C3%A0-Allenamento-Pugilato-Soffitto/dp/B01N1JLNML?&linkCode=ll2&tag=l0c39-21&linkId=ecd6f7cf50d7492e000ec988038a6a58&ref=_as_li_ss_tl"
+            },
+            {
+                name: "RDX Corpetto Protettivo",
+                description: "Corpetto in Maya Hide pelle per protezione torace, perfetto per boxe, MMA, kickboxing e arti marziali",
+                icon: "fa-shield-alt",
+                link: "https://www.amazon.it/RDX-Protettivo-Allenamento-Combattimento-Kickboxing/dp/B0B2Q3JQ2S?&linkCode=ll2&tag=l0c39-21&linkId=633170b76cf3dbde22ac7de5fb0bbb79&ref=_as_li_ss_tl"
+            },
+            {
+                name: "Sacco da Boxe Pieghevole",
+                description: "Sacco da boxe con base riempibile, perfetto per allenamento a casa e in palestra",
+                icon: "fa-dumbbell",
+                link: "https://www.amazon.it/s?k=sacco+boxe&tag=l0c39-21"
+            },
+            {
+                name: "Parastinchi da Boxe",
+                description: "Parastinchi professionali con protezione completa per tibia e collo del piede",
+                icon: "fa-shield-alt",
+                link: "https://www.amazon.it/s?k=parastinchi+boxe&tag=l0c39-21"
+            },
+            {
+                name: "Bende da Boxe",
+                description: "Bende elastiche professionali per proteggere polsi e mani durante l'allenamento",
+                icon: "fa-hand-rock",
+                link: "https://www.amazon.it/s?k=bende+boxe&tag=l0c39-21"
+            }
+        ]
     },
     "snack-bevande": {
         name: "Snack & Bevande",
@@ -753,6 +885,57 @@ const NicheDatabase = {
                 description: "Mountain bike 29 pollici in alluminio con freni a disco idraulici",
                 icon: "fa-mountain",
                 link: "https://www.amazon.it/IBK-Bicicletta-Mountain-Alluminio-Ammortizzata/dp/B08HWGW7SG?dib=eyJ2IjoiMSJ9.qDw6yrJXU1txWqQl1ewOnWLXIasRXObMGYNw4OLmadyFuZBqskI6X3xnEoMd80oT2RpkWO5IN_fIk0Hn5OEREkXDIw4jhCEeLObcZLlEIybXRjt06fitE7vByulRW82xT1N9YHSl-kpJPE6TEJi0nwcF_Y2vQK8F-1Ht7iMIuYxXE1cagiKEKcDxyaQolowqpnV20GtPo57I77oqju7VC8qO1ikICc2lOXH8alnfe0Mp80jT0U5oxcgQ8Xbih1hn5l0Zf-C1-77mr4gK9bjrNrSmTnWjZuxr2OrW1nC3XD8.bdKRfArYhgK-HAkPkG85J-yv4Xr3WSZIG9QuiyiKB_w&dib_tag=se&keywords=bici&qid=1779723129&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&aref=OaqTfWA1fP&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=59626a720eeaee58a3db43e048bbaaea&ref=_as_li_ss_tl"
+            }
+        ]
+    },
+    "pugilato": {
+        name: "Pugilato & Boxe",
+        tags: ["pugilato", "boxe", "guantoni", "sacco", "allenamento", "sport", "combattimento", "ring", "match", "gara", "competizione", "protezioni", "parastinchi", "casco", "dentista", "bende", "fitness", "cardio", "forza", "potenza", "velocità", "agilità", "resistenza", "colpi", "hook", "jab", "uppercut", "knockout", "campione", "champion", "titolo", "cintura", "palestra", "gym", "workout", "training"],
+        url: "/pugilato/index.html",
+        personality: "champion",
+        valueProp: "Ho selezionato l'attrezzatura professionale per campioni. Qualità, sicurezza e performance sono i fattori chiave.",
+        song: "Eye of the Tiger - Survivor",
+        songLinkSpotify: "https://open.spotify.com/track/4r9g2Z8XShl5eGZ3qF5p7k",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        primaryColor: "#FFD700",
+        accentColor: "#1a1a1a",
+        secondaryColor: "#B8860B",
+        topProducts: [
+            {
+                name: "Guantoni da Boxe Professionali",
+                description: "Guantoni in pelle sintetica con imbottitura in gel, ideali per allenamento e competizione",
+                icon: "fa-boxing-glove",
+                link: "https://www.amazon.it/s?k=guantoni+boxe&tag=l0c39-21"
+            },
+            {
+                name: "Sacco da Boxe Pieghevole",
+                description: "Sacco da boxe con base riempibile, perfetto per allenamento a casa e in palestra",
+                icon: "fa-dumbbell",
+                link: "https://www.amazon.it/s?k=sacco+boxe&tag=l0c39-21"
+            },
+            {
+                name: "Parastinchi da Boxe",
+                description: "Parastinchi professionali con protezione completa per tibia e collo del piede",
+                icon: "fa-shield-alt",
+                link: "https://www.amazon.it/s?k=parastinchi+boxe&tag=l0c39-21"
+            },
+            {
+                name: "Casco da Boxe",
+                description: "Casco protettivo con visiera, per massima sicurezza durante l'allenamento",
+                icon: "fa-head-side-mask",
+                link: "https://www.amazon.it/s?k=casco+boxe&tag=l0c39-21"
+            },
+            {
+                name: "Paradenti da Boxe",
+                description: "Paradenti professionale con protezione per labbra e denti, conforme agli standard",
+                icon: "fa-tshirt",
+                link: "https://www.amazon.it/s?k=paradenti+boxe&tag=l0c39-21"
+            },
+            {
+                name: "Bende da Boxe",
+                description: "Bende elastiche professionali per proteggere polsi e mani durante l'allenamento",
+                icon: "fa-hand-rock",
+                link: "https://www.amazon.it/s?k=bende+boxe&tag=l0c39-21"
             }
         ]
     }
@@ -1658,6 +1841,11 @@ const comboMessages = {
         "Vuoi diventare un barbiere di elite? 🎩 Guarda, con {prodottoNicchia} e {prodottoAncora} hai tutto il necessario. Ti lascio i link, è l'investimento giusto!",
         "Sei appassionato di hair styling? ✨ Guarda, io uso {prodottoNicchia} e {prodottoAncora} per risultati professionali. Ti lascio i link!"
     ],
+    "pugilato": [
+        "Ehi, ti alleni come un vero campione! 🥊 Guarda, se ti alleni alla boxe come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per l'allenamento e una scorta di {prodottoAncora} per la protezione. Ti lascio qui i link a entrambi, ti assicuro che è essenziale per il ring!",
+        "Ami il pugilato? 👊 Guarda, per allenarti come un professionista servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
+        "Vuoi diventare un campione? 🏆 Guarda, io uso {prodottoNicchia} e {prodottoAncora} per il mio training. Ti lascio i link!"
+    ],
     "musica-vinili": [
         "Ehi, ami la musica analogica! 🎵 Guarda, se ascolti vinili come me, non posso fare a meno di due cose: un {prodottoNicchia} per la migliore qualità audio e una scorta di {prodottoAncora} per la mia collezione. Ti lascio qui i link a entrambi, ti assicuro che è un'esperienza unica!",
         "Ami i vinili? 🎶 Guarda, per una collezione da collezionista servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è pura magia!",
@@ -1722,6 +1910,9 @@ function getContesto() {
     if (currentPath.includes('parrucchiere-barbiere') || currentUrl.includes('parrucchiere') || currentUrl.includes('barbiere') || currentUrl.includes('forbici') || currentUrl.includes('rasoio')) {
         return 'parrucchiere-barbiere';
     }
+    if (currentPath.includes('pugilato') || currentUrl.includes('pugilato') || currentUrl.includes('boxe') || currentUrl.includes('boxing') || currentUrl.includes('guantoni') || currentUrl.includes('sacco')) {
+        return 'pugilato';
+    }
     if (currentPath.includes('abbigliamento-serie-tv-film') || currentUrl.includes('abbigliamento') || currentUrl.includes('serie') || currentUrl.includes('tv') || currentUrl.includes('film')) {
         return 'abbigliamento-serie-tv-film';
     if (currentPath.includes('abbigliamento-ciclismo') || currentUrl.includes('ciclismo') || currentUrl.includes('bici') || currentUrl.includes('bicicletta') || currentUrl.includes('mtb') || currentUrl.includes('mountain') || currentUrl.includes('bike') || currentUrl.includes('abbigliamento') || currentUrl.includes('tuta') || currentUrl.includes('pantaloncini') || currentUrl.includes('salopette')) {
@@ -1784,6 +1975,9 @@ function getContesto() {
     }
     if (currentPath.includes('cucina-elettrodomestici') || currentUrl.includes('condizionatore') || currentUrl.includes('ventilatore')) {
         return 'caldo';
+    }
+    if (currentPath.includes('pugilato') || currentUrl.includes('pugilato') || currentUrl.includes('boxe') || currentUrl.includes('guantoni') || currentUrl.includes('sacco') || currentUrl.includes('combattimento')) {
+        return 'pugilato';
     }
     // Bibite & Bevande - ora ha proprio database entry
     if (currentPath.includes('snack-bevande') || currentUrl.includes('bibite') || currentUrl.includes('bevande')) {

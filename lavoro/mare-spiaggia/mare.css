@@ -1,0 +1,281 @@
+/* ============================================
+   MARE SPIAGGIA - CSS Specifico
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Mare Spiaggia */
+:root {
+    --mare-primary: #00bcd4;
+    --mare-secondary: #00acc1;
+    --mare-accent: #0097a7;
+    --mare-neon-cyan: #00e5ff;
+    --mare-neon-blue: #00bfff;
+    --mare-dark-bg: #2c3e50;
+    --mare-card-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* Sfondo Mare Spiaggia - Bianco */
+body {
+    background: #ffffff;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Hero Section Mare Spiaggia */
+.hero-section {
+    background: 
+        linear-gradient(135deg, var(--mare-accent) 0%, var(--mare-primary) 50%, var(--mare-secondary) 100%),
+        radial-gradient(circle at 20% 50%, rgba(0, 229, 255, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(0, 191, 255, 0.3) 0%, transparent 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.05) 2px,
+            rgba(255, 255, 255, 0.05) 4px
+        );
+    pointer-events: none;
+}
+
+/* Product Card Mare Spiaggia - Animazioni Hover Migliorate */
+.product-card {
+    border: 2px solid var(--mare-primary);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: var(--mare-card-bg);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    box-shadow: 
+        0 4px 15px rgba(0, 188, 212, 0.1),
+        0 0 0 0 rgba(0, 229, 255, 0);
+}
+
+/* Parallasse 3D - Focus sull'Oggetto */
+.product-card .card-body {
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-card:hover .card-body {
+    transform: translateZ(30px);
+}
+
+.product-card:hover .card-title {
+    transform: translateZ(50px) translateX(5px);
+}
+
+.product-card:hover .fa-3x {
+    transform: translateZ(70px) scale(1.15) rotate(5deg);
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--mare-accent) 0%, var(--mare-primary) 50%, var(--mare-secondary) 100%);
+    opacity: 0.03;
+    z-index: -1;
+    border-radius: 20px;
+    transition: opacity 0.4s ease;
+}
+
+.product-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.product-card:hover {
+    transform: translateY(-12px) rotateX(3deg) rotateY(3deg);
+    box-shadow: 
+        0 20px 50px rgba(0, 188, 212, 0.3),
+        0 0 30px rgba(0, 229, 255, 0.2),
+        0 0 0 3px rgba(0, 229, 255, 0.3);
+    background: rgba(255, 255, 255, 0.98);
+    border-color: var(--mare-neon-cyan);
+    animation: cyber-neon-glow 2s ease-in-out infinite;
+}
+
+@keyframes cyber-neon-glow {
+    0%, 100% {
+        box-shadow: 
+            0 20px 50px rgba(0, 188, 212, 0.3),
+            0 0 30px rgba(0, 229, 255, 0.2),
+            0 0 0 3px rgba(0, 229, 255, 0.3);
+    }
+    50% {
+        box-shadow: 
+            0 20px 50px rgba(0, 188, 212, 0.4),
+            0 0 40px rgba(0, 229, 255, 0.4),
+            0 0 0 5px rgba(0, 229, 255, 0.5);
+    }
+}
+
+.product-card:hover::before {
+    opacity: 0.08;
+}
+
+.product-card:hover::after {
+    opacity: 1;
+}
+
+.product-card:active {
+    transform: translateY(-5px) scale(0.98);
+    box-shadow: 
+        0 10px 30px rgba(0, 188, 212, 0.4),
+        0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+/* Icone Animate */
+.product-card .fa-3x {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 0 0 rgba(0, 229, 255, 0));
+}
+
+.product-card:hover .fa-3x {
+    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.6));
+}
+
+/* Bottone Amazon con Colori Nicchia su Hover/Active */
+.btn-amazon {
+    background: linear-gradient(135deg, var(--mare-primary) 0%, var(--mare-secondary) 100%);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.3);
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    animation: pulse-cta 3s infinite ease-in-out;
+}
+
+@keyframes pulse-cta {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.btn-amazon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-amazon:hover::before {
+    left: 100%;
+}
+
+.btn-amazon:hover {
+    background: linear-gradient(135deg, var(--mare-secondary) 0%, var(--mare-primary) 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 10px 30px rgba(0, 188, 212, 0.5),
+        0 0 20px rgba(0, 229, 255, 0.4);
+    color: white;
+    animation: none;
+}
+
+.btn-amazon:active {
+    background: linear-gradient(135deg, var(--mare-accent) 0%, var(--mare-primary) 100%);
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 
+        0 5px 15px rgba(0, 188, 212, 0.6),
+        0 0 15px rgba(0, 229, 255, 0.5);
+}
+
+/* Effetto Speciale per Prodotti TOP */
+.product-card.top-product {
+    position: relative;
+    border: 3px solid #ffd700;
+    box-shadow: 
+        0 4px 20px rgba(255, 215, 0, 0.3),
+        0 0 0 0 rgba(255, 215, 0, 0);
+}
+
+.product-card.top-product::before {
+    content: 'TOP';
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+    color: #333;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+    animation: top-badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes top-badge-pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 4px 25px rgba(255, 215, 0, 0.8);
+    }
+}
+
+.product-card.top-product:hover {
+    transform: translateY(-15px) rotateX(3deg) rotateY(3deg);
+    box-shadow: 
+        0 25px 60px rgba(0, 188, 212, 0.4),
+        0 0 40px rgba(255, 215, 0, 0.4),
+        0 0 0 5px rgba(255, 215, 0, 0.5);
+    border-color: #ffd700;
+    animation: top-card-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes top-card-glow {
+    0%, 100% {
+        box-shadow: 
+            0 25px 60px rgba(0, 188, 212, 0.4),
+            0 0 40px rgba(255, 215, 0, 0.4),
+            0 0 0 5px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        box-shadow: 
+            0 25px 60px rgba(0, 188, 212, 0.5),
+            0 0 50px rgba(255, 215, 0, 0.6),
+            0 0 0 7px rgba(255, 215, 0, 0.7);
+    }
+}
