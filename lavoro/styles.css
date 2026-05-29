@@ -221,6 +221,7 @@ body {
     overflow: hidden;
     margin-bottom: 30px;
     background: white;
+    position: relative;
 }
 
 .product-card:hover {
