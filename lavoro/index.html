@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Choices Guide - Guide di Acquisto Specializzate | Gaming, Sport, Cucina</title>
-    <meta name="description" content="Guide all'acquisto specializzate per Gaming Gear, Sport Estivi (Pesca, Tennis, Padel, Immersioni, Running, Beach Volley, Arrampicata) e Cucina. Selezione tecnica di prodotti Amazon.">
-    <meta name="keywords" content="guide acquisto, gaming gear, sport estivi, pesca, tennis, padel, immersioni, running, beach volley, arrampicata, cucina, Amazon, recensioni prodotti">
+    <title>Smart Choices Guide - 312+ Prodotti Amazon Selezionati | Gaming, Cucina, Sport, Tech</title>
+    <meta name="description" content="Scopri le migliori guide d'acquisto Amazon 2026. 312+ prodotti selezionati in 24 categorie: Gaming Gear, Cucina Moderna, Sport Estivi, Tech, Pet Care e altro. Risparmia tempo con le nostre recensioni imparziali.">
+    <meta name="keywords" content="guide acquisto Amazon, recensioni prodotti, gaming gear, cucina elettrodomestici, sport estivi, tecnologia, pet care, offerte Amazon, migliori prodotti 2026">
     <meta name="author" content="Smart Choices Guide">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://amazon-fleet.vercel.app/">
+    <link rel="canonical" href="https://smart-choices-guide.vercel.app/">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Smart Choices Guide - Guide di Acquisto Specializzate">
-    <meta property="og:description" content="Guide all'acquisto specializzate per Gaming Gear, Sport Estivi e Cucina. Selezione tecnica di prodotti Amazon.">
+    <meta property="og:title" content="Smart Choices Guide - 312+ Prodotti Amazon Selezionati">
+    <meta property="og:description" content="Scopri le migliori guide d'acquisto Amazon 2026. 312+ prodotti selezionati in 24 categorie: Gaming Gear, Cucina Moderna, Sport Estivi, Tech, Pet Care e altro.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://amazon-fleet.vercel.app/">
-    <meta property="og:image" content="https://amazon-fleet.vercel.app/og-image.jpg">
+    <meta property="og:url" content="https://smart-choices-guide.vercel.app/">
+    <meta property="og:image" content="https://smart-choices-guide.vercel.app/og-image.jpg">
     <meta property="og:locale" content="it_IT">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Smart Choices Guide - Guide di Acquisto Specializzate">
-    <meta name="twitter:description" content="Guide all'acquisto specializzate per Gaming Gear, Sport Estivi e Cucina. Selezione tecnica di prodotti Amazon.">
-    <meta name="twitter:image" content="https://amazon-fleet.vercel.app/og-image.jpg">
+    <meta name="twitter:title" content="Smart Choices Guide - 312+ Prodotti Amazon Selezionati">
+    <meta name="twitter:description" content="Scopri le migliori guide d'acquisto Amazon 2026. 312+ prodotti selezionati in 24 categorie.">
+    <meta name="twitter:image" content="https://smart-choices-guide.vercel.app/og-image.jpg">
     
     <!-- Google Analytics GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYTD10EV8T"></script>
@@ -31,6 +31,37 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-CYTD10EV8T');
+    </script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Smart Choices Guide",
+        "url": "https://smart-choices-guide.vercel.app/",
+        "description": "312+ prodotti Amazon selezionati in 24 categorie: Gaming Gear, Cucina Moderna, Sport Estivi, Tech, Pet Care e altro",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://smart-choices-guide.vercel.app/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Smart Choices Guide",
+        "url": "https://smart-choices-guide.vercel.app/",
+        "logo": "https://smart-choices-guide.vercel.app/images/logo.png",
+        "sameAs": [],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service"
+        }
+    }
     </script>
     
     <!-- Preload Critical Resources -->
@@ -42,101 +73,10 @@
     </noscript>
     
     <link rel="stylesheet" href="styles.css">
-    <style>
-        :root {
-            --table-primary: #2E5C8A;
-            --table-secondary: #5BA3F2;
-            --table-success: #FFD700;
-            --table-warning: #DAA520;
-            --table-info: #0A0A2E;
-            --table-danger: #FF0033;
-            --table-light: #F5F5F5;
-        }
-        
-        .table-custom thead.table-primary-custom {
-            background: linear-gradient(135deg, var(--table-primary) 0%, var(--table-secondary) 100%);
-            color: white;
-        }
-        
-        .table-custom thead.table-info-custom {
-            background: linear-gradient(135deg, var(--table-info) 0%, var(--table-primary) 100%);
-            color: white;
-        }
-        
-        .table-custom thead.table-success-custom {
-            background: linear-gradient(135deg, var(--table-success) 0%, var(--table-info) 100%);
-            color: white;
-        }
-        
-        .table-custom thead.table-danger-custom {
-            background: linear-gradient(135deg, var(--table-danger) 0%, var(--table-info) 100%);
-            color: white;
-        }
-        
-        .table-custom thead.table-warning-custom {
-            background: linear-gradient(135deg, var(--table-warning) 0%, var(--table-success) 100%);
-            color: white;
-        }
-        
-        .badge-custom-primary {
-            background-color: var(--table-primary);
-            color: white;
-        }
-        
-        .badge-custom-success {
-            background-color: var(--table-success);
-            color: white;
-        }
-        
-        .badge-custom-warning {
-            background-color: var(--table-warning);
-            color: white;
-        }
-        
-        .badge-custom-info {
-            background-color: var(--table-info);
-            color: white;
-        }
-        
-        .badge-custom-secondary {
-            background-color: var(--table-secondary);
-            color: white;
-        }
-        
-        .table-custom {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        
-        .table-custom thead th {
-            border: none;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9em;
-            letter-spacing: 0.5px;
-        }
-        
-        .table-custom tbody tr {
-            transition: all 0.3s ease;
-        }
-        
-        .table-custom tbody tr:hover {
-            background-color: var(--table-light);
-            transform: scale(1.01);
-        }
-        
-        /* Glow effect per icone carosello */
-        .featured-strip-item i {
-            transition: all 0.3s ease;
-        }
-        
-        .featured-strip-item:hover i {
-            filter: drop-shadow(0 0 12px currentColor);
-            transform: scale(1.15);
-        }
-    </style>
+    <link rel="stylesheet" href="index-custom.css">
     <link rel="stylesheet" href="bot/ai-chat-simple.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#FF6B6B">
 </head>
 <body>
     <!-- Navigation -->
@@ -144,7 +84,7 @@
         <div class="container d-flex align-items-center">
             <!-- Logo Block (Left) -->
             <a class="navbar-logo-block d-flex align-items-center text-decoration-none" href="index.html" aria-label="Smart Choices Guide - Home">
-                <img src="images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon">
+                <img src="images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon" loading="lazy">
                 <div class="navbar-logo-text">
                     <div class="navbar-logo-title">SMART CHOICES GUIDE</div>
                     <div class="navbar-logo-subtitle">Migliori Guide d'Acquisto Amazon | Recensioni e Offerte</div>
@@ -276,37 +216,54 @@
             </h2>
             <p class="lead text-muted">Esplora le nostre guide all'acquisto specializzate</p>
         </div>
+        <style>
+            .category-card {
+                transition: all 0.3s ease;
+                border: 2px solid transparent;
+            }
+            .category-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+                border-color: var(--bs-primary);
+            }
+            .category-card .card-icon {
+                transition: transform 0.3s ease;
+            }
+            .category-card:hover .card-icon {
+                transform: scale(1.2);
+            }
+        </style>
         <div class="row g-4">
             <!-- Gaming Gear -->
             <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm hover-lift">
-                    <div class="card-body text-center p-4">
-                        <i class="fas fa-gamepad fa-3x text-warning mb-3"></i>
-                        <h5 class="fw-bold mb-2">Gaming Gear</h5>
-                        <p class="small text-muted mb-3">Periferiche e accessori per gaming professionale</p>
-                        <a href="elite-gaming-gear/index.html" class="btn btn-outline-warning btn-sm">Scopri</a>
+                <div class="card h-100 border-0 shadow-sm category-card">
+                    <div class="card-body text-center p-5">
+                        <i class="fas fa-gamepad fa-4x text-warning mb-4 card-icon"></i>
+                        <h5 class="fw-bold mb-3 home-section-title">Gaming Gear</h5>
+                        <p class="text-muted mb-4">Periferiche e accessori per gaming professionale</p>
+                        <a href="elite-gaming-gear/index.html" class="btn btn-warning fw-bold px-4">Scopri</a>
                     </div>
                 </div>
             </div>
             <!-- Sport Estivi -->
             <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm hover-lift">
-                    <div class="card-body text-center p-4">
-                        <i class="fas fa-sun fa-3x text-primary mb-3"></i>
-                        <h5 class="fw-bold mb-2">Sport Estivi</h5>
-                        <p class="small text-muted mb-3">7 nicchie: Pesca, Tennis, Padel, Immersioni, Running, Beach Volley, Arrampicata</p>
-                        <a href="sport-estivi/index.html" class="btn btn-outline-primary btn-sm">Scopri</a>
+                <div class="card h-100 border-0 shadow-sm category-card">
+                    <div class="card-body text-center p-5">
+                        <i class="fas fa-sun fa-4x text-primary mb-4 card-icon"></i>
+                        <h5 class="fw-bold mb-3 home-section-title">Sport Estivi</h5>
+                        <p class="text-muted mb-4">7 nicchie: Pesca, Tennis, Padel, Immersioni, Running, Beach Volley, Arrampicata</p>
+                        <a href="sport-estivi/index.html" class="btn btn-primary fw-bold px-4">Scopri</a>
                     </div>
                 </div>
             </div>
             <!-- Cucina -->
             <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm hover-lift">
-                    <div class="card-body text-center p-4">
-                        <i class="fas fa-utensils fa-3x text-success mb-3"></i>
-                        <h5 class="fw-bold mb-2">Cucina</h5>
-                        <p class="small text-muted mb-3">Elettrodomestici e accessori per la cucina moderna</p>
-                        <a href="cucina-elettrodomestici/index.html" class="btn btn-outline-success btn-sm">Scopri</a>
+                <div class="card h-100 border-0 shadow-sm category-card">
+                    <div class="card-body text-center p-5">
+                        <i class="fas fa-utensils fa-4x text-success mb-4 card-icon"></i>
+                        <h5 class="fw-bold mb-3 home-section-title">Cucina</h5>
+                        <p class="text-muted mb-4">Elettrodomestici e accessori per la cucina moderna</p>
+                        <a href="cucina-elettrodomestici/index.html" class="btn btn-success fw-bold px-4">Scopri</a>
                     </div>
                 </div>
             </div>
@@ -319,6 +276,35 @@
             <div class="col-lg-12">
                 <div class="card shadow-lg border-0">
                     <div class="card-body p-5">
+                        <style>
+                            .carousel-item {
+                                transition: transform 0.6s ease-in-out;
+                            }
+                            .table-custom thead th {
+                                font-size: 0.95rem;
+                                font-weight: 600;
+                                padding: 12px;
+                            }
+                            .table-custom tbody td {
+                                padding: 12px;
+                                vertical-align: middle;
+                            }
+                            .table-custom tbody tr {
+                                transition: background-color 0.2s ease;
+                            }
+                            .table-custom tbody tr:hover {
+                                background-color: rgba(0,0,0,0.05);
+                            }
+                            .carousel-control-prev,
+                            .carousel-control-next {
+                                transition: all 0.3s ease;
+                            }
+                            .carousel-control-prev:hover,
+                            .carousel-control-next:hover {
+                                background-color: rgba(0,0,0,0.7) !important;
+                                transform: scale(1.1);
+                            }
+                        </style>
                         <div class="text-center mb-4">
                             <h2 class="display-5 fw-bold mb-3">
                                 <i class="fas fa-fire-burner text-warning me-3" aria-hidden="true"></i>Confronto Prodotti Cucina
@@ -662,11 +648,11 @@
                                 <!-- Slide 9: Musica & Vinili -->
                                 <div class="carousel-item" data-niche-url="musica-vinili/index.html" data-niche-name="Musica & Vinili" data-niche-icon="fa-compact-disc" data-niche-color="warning">
                                     <div class="text-center mb-3">
-                                        <h3 class="fw-bold"><i class="fas fa-compact-disc" style="color: #d4af37; me-2;"></i>Musica & Vinili</h3>
+                                        <h3 class="fw-bold"><i class="fas fa-compact-disc music-icon-gold me-2"></i>Musica & Vinili</h3>
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table table-custom table-hover table-bordered align-middle">
-                                            <thead style="background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%); color: white;">
+                                            <thead class="table-header-gold">
                                                 <tr>
                                                     <th>Prodotto</th>
                                                     <th>Artista</th>
@@ -678,28 +664,28 @@
                                             <tbody>
                                                 <tr>
                                                     <td><a href="musica-vinili/index.html" class="text-decoration-none text-dark" target="_blank" rel="noopener"><strong>Complete Studio Album Collection</strong><br><small class="text-muted">Gold Vinyl Box Set</small></a></td>
-                                                    <td class="text-center"><span class="badge fs-6" style="background-color: #d4af37; color: white;">Oasis</span></td>
+                                                    <td class="text-center"><span class="badge fs-6 badge-gold">Oasis</span></td>
                                                     <td class="text-center"><span class="badge badge-custom-warning fs-6">Amazon Exclusive</span></td>
                                                     <td>Vinile 180g</td>
                                                     <td class="text-center"><strong>€€€</strong></td>
                                                 </tr>
                                                 <tr>
                                                     <td><a href="musica-vinili/index.html" class="text-decoration-none text-dark" target="_blank" rel="noopener"><strong>The Black Album</strong><br><small class="text-muted">30Th Anniversary Ltd</small></a></td>
-                                                    <td class="text-center"><span class="badge fs-6" style="background-color: #d4af37; color: white;">Metallica</span></td>
+                                                    <td class="text-center"><span class="badge fs-6 badge-gold">Metallica</span></td>
                                                     <td class="text-center"><span class="badge badge-custom-warning fs-6">30th Anniversary</span></td>
                                                     <td>LP + Libro</td>
                                                     <td class="text-center"><strong>€€€</strong></td>
                                                 </tr>
                                                 <tr>
                                                     <td><a href="musica-vinili/index.html" class="text-decoration-none text-dark" target="_blank" rel="noopener"><strong>Album Collection 2: 1987-1996</strong><br><small class="text-muted">Vinyl Collection Vol 2</small></a></td>
-                                                    <td class="text-center"><span class="badge fs-6" style="background-color: #d4af37; color: white;">Bruce Springsteen</span></td>
+                                                    <td class="text-center"><span class="badge fs-6 badge-gold">Bruce Springsteen</span></td>
                                                     <td class="text-center"><span class="badge badge-custom-warning fs-6">Box Set</span></td>
                                                     <td>Vinile 150g</td>
                                                     <td class="text-center"><strong>€€€</strong></td>
                                                 </tr>
                                                 <tr>
                                                     <td><a href="musica-vinili/index.html" class="text-decoration-none text-dark" target="_blank" rel="noopener"><strong>Queen II Collector's Edition</strong><br><small class="text-muted">5 CD/180g 2 LP Box Set</small></a></td>
-                                                    <td class="text-center"><span class="badge fs-6" style="background-color: #d4af37; color: white;">Queen</span></td>
+                                                    <td class="text-center"><span class="badge fs-6 badge-gold">Queen</span></td>
                                                     <td class="text-center"><span class="badge badge-custom-warning fs-6">Collector's Edition</span></td>
                                                     <td>5 CD + 2 LP</td>
                                                     <td class="text-center"><strong>€€€</strong></td>
@@ -730,21 +716,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="smart-home-domotica/index.html" class="text-decoration-none text-dark"><strong>TP-Link Tapo Smart Plug</strong><br><small class="text-muted">Presa intelligente Wi-Fi</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #009688; color: white;">TP-Link</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-teal">TP-Link</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-info fs-6">Smart Plug</span></td>
                                                 <td>Wi-Fi, App Control</td>
                                                 <td class="text-center"><strong>€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="smart-home-domotica/index.html" class="text-decoration-none text-dark"><strong>Philips Hue White</strong><br><small class="text-muted">Kit illuminazione smart</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #009688; color: white;">Philips</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-teal">Philips</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-info fs-6">Smart Light</span></td>
                                                 <td>LED, App Control</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="smart-home-domotica/index.html" class="text-decoration-none text-dark"><strong>Amazon Echo Dot</strong><br><small class="text-muted">Assistente vocale</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #ff9900; color: white;">Amazon</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-orange">Amazon</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">Smart Speaker</span></td>
                                                 <td>Alexa, Bluetooth</td>
                                                 <td class="text-center"><strong>€€</strong></td>
@@ -774,21 +760,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="fitness-casa/index.html" class="text-decoration-none text-dark"><strong>Yoga Mat Premium</strong><br><small class="text-muted">Tappetino yoga antiscivolo</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #4CAF50; color: white;">Generic</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-green">Generic</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-success fs-6">Yoga</span></td>
                                                 <td>6mm, Antiscivolo</td>
                                                 <td class="text-center"><strong>€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="fitness-casa/index.html" class="text-decoration-none text-dark"><strong>Pesi Manubri Set</strong><br><small class="text-muted">Set pesi regolabili</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #4CAF50; color: white;">Generic</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-green">Generic</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-success fs-6">Pesi</span></td>
                                                 <td>2-20kg, Regolabile</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="fitness-casa/index.html" class="text-decoration-none text-dark"><strong>Bande Elastiche</strong><br><small class="text-muted">Set bande resistenza</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #4CAF50; color: white;">Generic</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-green">Generic</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-success fs-6">Bande</span></td>
                                                 <td>5 livelli, Portatile</td>
                                                 <td class="text-center"><strong>€</strong></td>
@@ -818,21 +804,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="elite-gaming-gear/index.html" class="text-decoration-none text-dark"><strong>Logitech G Pro X</strong><br><small class="text-muted">Cuffie gaming wireless</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BFFF; color: white;">Logitech</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-deep-sky-blue">Logitech</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-danger fs-6">Cuffie</span></td>
                                                 <td>Wireless, 7.1 Surround</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="elite-gaming-gear/index.html" class="text-decoration-none text-dark"><strong>Razer DeathAdder V3</strong><br><small class="text-muted">Mouse gaming ottico</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BFFF; color: white;">Razer</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-deep-sky-blue">Razer</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-danger fs-6">Mouse</span></td>
                                                 <td>30K DPI, Wireless</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="elite-gaming-gear/index.html" class="text-decoration-none text-dark"><strong>ASUS ROG Strix</strong><br><small class="text-muted">Tastiera meccanica RGB</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BFFF; color: white;">ASUS</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-deep-sky-blue">ASUS</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-danger fs-6">Tastiera</span></td>
                                                 <td>Mechanical, RGB</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
@@ -862,21 +848,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="mare-spiaggia/index.html" class="text-decoration-none text-dark"><strong>Ombrellone da Spiaggia</strong><br><small class="text-muted">Ombrellone inclinabile</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BCD4; color: white;">Generic</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-cyan">Generic</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-info fs-6">Ombrellone</span></td>
                                                 <td>210cm, Inclinabile</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="mare-spiaggia/index.html" class="text-decoration-none text-dark"><strong>Telo da Spiaggia</strong><br><small class="text-muted">Telo sabbia prova</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BCD4; color: white;">Generic</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-cyan">Generic</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-info fs-6">Telo</span></td>
                                                 <td>Sabbia prova, Grande</td>
                                                 <td class="text-center"><strong>€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="mare-spiaggia/index.html" class="text-decoration-none text-dark"><strong>Cooler Portatile</strong><br><small class="text-muted">Borsa frigo termica</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BCD4; color: white;">Generic</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-cyan">Generic</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-info fs-6">Cooler</span></td>
                                                 <td>30L, Termico</td>
                                                 <td class="text-center"><strong>€€</strong></td>
@@ -906,21 +892,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="libri-ereader/index.html" class="text-decoration-none text-dark"><strong>Kindle Paperwhite</strong><br><small class="text-muted">E-reader con luce</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">Amazon</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">Amazon</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">E-Reader</span></td>
                                                 <td>6.8", Waterproof</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="libri-ereader/index.html" class="text-decoration-none text-dark"><strong>Kindle Oasis</strong><br><small class="text-muted">E-reader premium</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">Amazon</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">Amazon</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">E-Reader</span></td>
                                                 <td>7", Audible</td>
                                                 <td class="text-center"><strong>€€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="libri-ereader/index.html" class="text-decoration-none text-dark"><strong>Kindle Scribe</strong><br><small class="text-muted">E-reader con penna</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">Amazon</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">Amazon</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">E-Reader</span></td>
                                                 <td>10.2", Stylus</td>
                                                 <td class="text-center"><strong>€€€€</strong></td>
@@ -950,21 +936,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="pet-care/index.html" class="text-decoration-none text-dark"><strong>PETKIT Pura Max 2</strong><br><small class="text-muted">Lettiera gatto autopulente</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #9E9E9E; color: white;">PETKIT</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-gray">PETKIT</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-secondary fs-6">Lettiera</span></td>
                                                 <td>Autopulente, App</td>
                                                 <td class="text-center"><strong>€€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="pet-care/index.html" class="text-decoration-none text-dark"><strong>Fockety Mangiatoia</strong><br><small class="text-muted">Mangiatoia automatica</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #9E9E9E; color: white;">Fockety</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-gray">Fockety</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-secondary fs-6">Mangiatoia</span></td>
                                                 <td>Automatica, Timer</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="pet-care/index.html" class="text-decoration-none text-dark"><strong>Spazzola Togli Peli</strong><br><small class="text-muted">Spazzola autolavante</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #9E9E9E; color: white;">Generic</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-gray">Generic</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-secondary fs-6">Spazzola</span></td>
                                                 <td>Autolavante, USB</td>
                                                 <td class="text-center"><strong>€€</strong></td>
@@ -994,21 +980,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="outdoor-camping/index.html" class="text-decoration-none text-dark"><strong>Tenda da Campeggio</strong><br><small class="text-muted">Tenda 4 persone</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #4CAF50; color: white;">Generic</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-green">Generic</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-success fs-6">Tenda</span></td>
                                                 <td>4 persone, Impermeabile</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="outdoor-camping/index.html" class="text-decoration-none text-dark"><strong>BBQ a Gas Portatile</strong><br><small class="text-muted">Grill portatile</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #4CAF50; color: white;">Generic</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-green">Generic</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-success fs-6">BBQ</span></td>
                                                 <td>Gas, Portatile</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="outdoor-camping/index.html" class="text-decoration-none text-dark"><strong>Sacco a Pelo</strong><br><small class="text-muted">Sacco a pelo 3 stagioni</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #4CAF50; color: white;">Generic</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-green">Generic</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-success fs-6">Sacco</span></td>
                                                 <td>3 stagioni, Leggero</td>
                                                 <td class="text-center"><strong>€€</strong></td>
@@ -1038,21 +1024,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="moda-donna/index.html" class="text-decoration-none text-dark"><strong>Borsa Donna Premium</strong><br><small class="text-muted">Borsa in pelle</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #E91E63; color: white;">Premium</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-pink">Premium</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-pink fs-6">Borsa</span></td>
                                                 <td>Pelle, Spaziosa</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="moda-donna/index.html" class="text-decoration-none text-dark"><strong>Scarpa Donna Sport</strong><br><small class="text-muted">Scarpa running</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #E91E63; color: white;">Sport</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-pink">Sport</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-pink fs-6">Scarpa</span></td>
                                                 <td>Running, Comoda</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="moda-donna/index.html" class="text-decoration-none text-dark"><strong>Accessorio Donna</strong><br><small class="text-muted">Collana elegante</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #E91E63; color: white;">Elegante</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-pink">Elegante</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-pink fs-6">Accessorio</span></td>
                                                 <td>Argento, Design</td>
                                                 <td class="text-center"><strong>€€</strong></td>
@@ -1082,21 +1068,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="moda-uomo/index.html" class="text-decoration-none text-dark"><strong>Cintura Uomo Premium</strong><br><small class="text-muted">Cintura in pelle</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">Premium</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">Premium</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">Cintura</span></td>
                                                 <td>Pelle, Regolabile</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="moda-uomo/index.html" class="text-decoration-none text-dark"><strong>Scarpa Uomo Casual</strong><br><small class="text-muted">Scarpa casual</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">Casual</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">Casual</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">Scarpa</span></td>
                                                 <td>Casual, Comoda</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="moda-uomo/index.html" class="text-decoration-none text-dark"><strong>Accessorio Uomo</strong><br><small class="text-muted">Orologio elegante</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">Elegante</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">Elegante</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">Accessorio</span></td>
                                                 <td>Quartz, Design</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
@@ -1126,21 +1112,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="viaggi-vacanze/index.html" class="text-decoration-none text-dark"><strong>Valigia Rigida</strong><br><small class="text-muted">Valigia cabina</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BCD4; color: white;">Travel</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-cyan">Travel</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-info fs-6">Valigia</span></td>
                                                 <td>Cabina, Rigida</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="viaggi-vacanze/index.html" class="text-decoration-none text-dark"><strong>Zaino da Viaggio</strong><br><small class="text-muted">Zaino 40L</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BCD4; color: white;">Travel</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-cyan">Travel</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-info fs-6">Zaino</span></td>
                                                 <td>40L, Impermeabile</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="viaggi-vacanze/index.html" class="text-decoration-none text-dark"><strong>Adattatore Viaggio</strong><br><small class="text-muted">Adattatore universale</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BCD4; color: white;">Travel</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-cyan">Travel</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-info fs-6">Adattatore</span></td>
                                                 <td>Universale, USB</td>
                                                 <td class="text-center"><strong>€</strong></td>
@@ -1170,21 +1156,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="ufficio-produttivo/index.html" class="text-decoration-none text-dark"><strong>Monitor 27" 4K</strong><br><small class="text-muted">Monitor IPS 4K</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">Tech</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">Tech</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">Monitor</span></td>
                                                 <td>27", 4K IPS</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="ufficio-produttivo/index.html" class="text-decoration-none text-dark"><strong>Tastiera Meccanica</strong><br><small class="text-muted">Tastiera wireless</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">Tech</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">Tech</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">Tastiera</span></td>
                                                 <td>Wireless, RGB</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="ufficio-produttivo/index.html" class="text-decoration-none text-dark"><strong>Sedia Ergonomica</strong><br><small class="text-muted">Sedia ufficio</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">Office</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">Office</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">Sedia</span></td>
                                                 <td>Ergonomica, Regolabile</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
@@ -1214,22 +1200,22 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="abbigliamento-serie-tv-film/index.html" class="text-decoration-none text-dark"><strong>Squid Game Logo T-Shirt</strong><br><small class="text-muted">Must-have</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #F44336; color: white;">Netflix</span></td>
-                                                <td class="text-center"><span class="badge badge-custom-danger fs-6" style="background-color: #F44336; color: white;">T-Shirt</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-red">Netflix</span></td>
+                                                <td class="text-center"><span class="badge badge-custom-danger fs-6 badge-red">T-Shirt</span></td>
                                                 <td>Merchandise più popolare</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="abbigliamento-serie-tv-film/index.html" class="text-decoration-none text-dark"><strong>Wednesday Nevermore Academy T-Shirt</strong><br><small class="text-muted">Alternativa Smart</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #F44336; color: white;">Netflix</span></td>
-                                                <td class="text-center"><span class="badge badge-custom-danger fs-6" style="background-color: #F44336; color: white;">T-Shirt</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-red">Netflix</span></td>
+                                                <td class="text-center"><span class="badge badge-custom-danger fs-6 badge-red">T-Shirt</span></td>
                                                 <td>Trend attuale</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="https://www.amazon.it/amazonprime?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref_=as_li_ss_tl" class="text-decoration-none text-dark"><strong>Amazon Prime</strong><br><small class="text-muted">Servizio</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #F44336; color: white;">Amazon</span></td>
-                                                <td class="text-center"><span class="badge badge-custom-danger fs-6" style="background-color: #F44336; color: white;">Abbonamento</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-red">Amazon</span></td>
+                                                <td class="text-center"><span class="badge badge-custom-danger fs-6 badge-red">Abbonamento</span></td>
                                                 <td>Spedizione gratuita, commissioni ricorrenti</td>
                                                 <td class="text-center"><strong>€</strong></td>
                                             </tr>
@@ -1258,21 +1244,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="smartphone-tech/index.html" class="text-decoration-none text-dark"><strong>Smartphone 5G</strong><br><small class="text-muted">Smartphone flagship</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">Tech</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">Tech</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">Smartphone</span></td>
                                                 <td>5G, 128GB</td>
                                                 <td class="text-center"><strong>€€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="smartphone-tech/index.html" class="text-decoration-none text-dark"><strong>Power Bank 20000mAh</strong><br><small class="text-muted">Power bank wireless</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">Tech</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">Tech</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">Power Bank</span></td>
                                                 <td>20000mAh, Wireless</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="smartphone-tech/index.html" class="text-decoration-none text-dark"><strong>Custodia Smartphone</strong><br><small class="text-muted">Cover premium</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">Tech</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">Tech</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">Cover</span></td>
                                                 <td>Premium, Protezione</td>
                                                 <td class="text-center"><strong>€</strong></td>
@@ -1302,21 +1288,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="sostenibilita-eco-friendly/index.html" class="text-decoration-none text-dark"><strong>Borraccia Riutilizzabile</strong><br><small class="text-muted">Borraccia in acciaio</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #4CAF50; color: white;">Eco</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-green">Eco</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-success fs-6">Borraccia</span></td>
                                                 <td>Acciaio, 500ml</td>
                                                 <td class="text-center"><strong>€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="sostenibilita-eco-friendly/index.html" class="text-decoration-none text-dark"><strong>Borsa Eco</strong><br><small class="text-muted">Borsa riutilizzabile</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #4CAF50; color: white;">Eco</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-green">Eco</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-success fs-6">Borsa</span></td>
                                                 <td>Cotone, Riutilizzabile</td>
                                                 <td class="text-center"><strong>€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="sostenibilita-eco-friendly/index.html" class="text-decoration-none text-dark"><strong>Pannolini Eco</strong><br><small class="text-muted">Pannolini biodegradabili</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #4CAF50; color: white;">Eco</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-green">Eco</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-success fs-6">Pannolini</span></td>
                                                 <td>Biodegradabili, Sicuri</td>
                                                 <td class="text-center"><strong>€€</strong></td>
@@ -1346,21 +1332,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="profumi-bellezza/index.html" class="text-decoration-none text-dark"><strong>Profumo Donna Premium</strong><br><small class="text-muted">EDP 50ml</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #E91E63; color: white;">Premium</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-pink">Premium</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-pink fs-6">Profumo</span></td>
                                                 <td>EDP, 50ml</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="profumi-bellezza/index.html" class="text-decoration-none text-dark"><strong>Crema Viso</strong><br><small class="text-muted">Crema idratante</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #E91E63; color: white;">Skincare</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-pink">Skincare</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-pink fs-6">Crema</span></td>
                                                 <td>Idratante, 50ml</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="profumi-bellezza/index.html" class="text-decoration-none text-dark"><strong>Siero Viso</strong><br><small class="text-muted">Siero anti-age</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #E91E63; color: white;">Skincare</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-pink">Skincare</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-pink fs-6">Siero</span></td>
                                                 <td>Anti-age, 30ml</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
@@ -1390,21 +1376,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="giochi-tavolo/index.html" class="text-decoration-none text-dark"><strong>D&D Starter Set</strong><br><small class="text-muted">Dungeons & Dragons</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">WotC</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">WotC</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">RPG</span></td>
                                                 <td>Starter, 5E</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="giochi-tavolo/index.html" class="text-decoration-none text-dark"><strong>Catan</strong><br><small class="text-muted">Gioco da tavolo</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">Kosmos</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">Kosmos</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">Strategy</span></td>
                                                 <td>3-4 giocatori, 60min</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="giochi-tavolo/index.html" class="text-decoration-none text-dark"><strong>Ticket to Ride</strong><br><small class="text-muted">Gioco da tavolo</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">Days of Wonder</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">Days of Wonder</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">Strategy</span></td>
                                                 <td>2-5 giocatori, 45min</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
@@ -1434,21 +1420,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="accessori-moda/index.html" class="text-decoration-none text-dark"><strong>Occhiali da Sole</strong><br><small class="text-muted">Occhiali UV400</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #9C27B0; color: white;">Fashion</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-purple">Fashion</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-purple fs-6">Occhiali</span></td>
                                                 <td>UV400, Polarizzati</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="accessori-moda/index.html" class="text-decoration-none text-dark"><strong>Sciarpa Premium</strong><br><small class="text-muted">Sciarpa in lana</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #9C27B0; color: white;">Fashion</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-purple">Fashion</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-purple fs-6">Sciarpa</span></td>
                                                 <td>Lana, Morbida</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="accessori-moda/index.html" class="text-decoration-none text-dark"><strong>Cappello Elegante</strong><br><small class="text-muted">Cappello in feltro</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #9C27B0; color: white;">Fashion</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-purple">Fashion</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-purple fs-6">Cappello</span></td>
                                                 <td>Feltro, Classico</td>
                                                 <td class="text-center"><strong>€€</strong></td>
@@ -1478,21 +1464,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="dvd-blu-ray/index.html" class="text-decoration-none text-dark"><strong>Box Set Blu-ray</strong><br><small class="text-muted">Collezione completa</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #607D8B; color: white;">Studio</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue-gray">Studio</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-secondary fs-6">Blu-ray</span></td>
                                                 <td>4K, Box Set</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="dvd-blu-ray/index.html" class="text-decoration-none text-dark"><strong>DVD Classic</strong><br><small class="text-muted">Film classico</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #607D8B; color: white;">Studio</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue-gray">Studio</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-secondary fs-6">DVD</span></td>
                                                 <td>Classic, Remastered</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="dvd-blu-ray/index.html" class="text-decoration-none text-dark"><strong>Serie TV Box</strong><br><small class="text-muted">Stagione completa</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #607D8B; color: white;">Studio</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue-gray">Studio</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-secondary fs-6">Box Set</span></td>
                                                 <td>Stagione, Blu-ray</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
@@ -1522,21 +1508,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="studio-fotografico/index.html" class="text-decoration-none text-dark"><strong>Lente Macro</strong><br><small class="text-muted">Lente smartphone</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BCD4; color: white;">Photo</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-cyan">Photo</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-info fs-6">Lente</span></td>
                                                 <td>Macro, LED</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="studio-fotografico/index.html" class="text-decoration-none text-dark"><strong>Treppiede Smartphone</strong><br><small class="text-muted">Treppiede estensibile</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BCD4; color: white;">Photo</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-cyan">Photo</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-info fs-6">Treppiede</span></td>
                                                 <td>180cm, Bluetooth</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="studio-fotografico/index.html" class="text-decoration-none text-dark"><strong>Valigetta Fotografica</strong><br><small class="text-muted">Custodia impermeabile</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #00BCD4; color: white;">K&F</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-cyan">K&F</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-info fs-6">Valigetta</span></td>
                                                 <td>IP67, Schiuma</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
@@ -1566,21 +1552,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="tech/index.html" class="text-decoration-none text-dark"><strong>SSD 1TB NVMe</strong><br><small class="text-muted">Disco SSD veloce</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">Tech</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">Tech</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">SSD</span></td>
                                                 <td>1TB, NVMe</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="tech/index.html" class="text-decoration-none text-dark"><strong>RAM 32GB DDR5</strong><br><small class="text-muted">Memoria RAM</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">Tech</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">Tech</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">RAM</span></td>
                                                 <td>32GB, DDR5</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="tech/index.html" class="text-decoration-none text-dark"><strong>GPU RTX 4070</strong><br><small class="text-muted">Scheda video</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">NVIDIA</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">NVIDIA</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">GPU</span></td>
                                                 <td>12GB, RTX</td>
                                                 <td class="text-center"><strong>€€€€</strong></td>
@@ -1610,21 +1596,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="benessere-cura-personale/index.html" class="text-decoration-none text-dark"><strong>Spazzola Elettrica</strong><br><small class="text-muted">Spazzola capelli</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #E91E63; color: white;">Beauty</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-pink">Beauty</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-pink fs-6">Spazzola</span></td>
                                                 <td>Elettrica, Ionica</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="benessere-cura-personale/index.html" class="text-decoration-none text-dark"><strong>Epilatore</strong><br><small class="text-muted">Epilatore IPL</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #E91E63; color: white;">Beauty</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-pink">Beauty</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-pink fs-6">Epilatore</span></td>
                                                 <td>IPL, Wireless</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="benessere-cura-personale/index.html" class="text-decoration-none text-dark"><strong>Massaggiatore</strong><br><small class="text-muted">Massaggiatore cervicale</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #E91E63; color: white;">Wellness</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-pink">Wellness</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-pink fs-6">Massaggiatore</span></td>
                                                 <td>Cervicale, Calore</td>
                                                 <td class="text-center"><strong>€€</strong></td>
@@ -1654,21 +1640,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="arredamento-casa/index.html" class="text-decoration-none text-dark"><strong>Vaso Decorativo</strong><br><small class="text-muted">Vaso in ceramica</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">Home</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">Home</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">Vaso</span></td>
                                                 <td>Ceramica, Design</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="arredamento-casa/index.html" class="text-decoration-none text-dark"><strong>Lampada da Tavolo</strong><br><small class="text-muted">Lampada LED</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">Home</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">Home</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">Lampada</span></td>
                                                 <td>LED, Dimmer</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="arredamento-casa/index.html" class="text-decoration-none text-dark"><strong>Tappeto Moderno</strong><br><small class="text-muted">Tappeto design</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #FF9800; color: white;">Home</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-dark-orange">Home</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-warning fs-6">Tappeto</span></td>
                                                 <td>Design, Morbido</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
@@ -1698,21 +1684,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="abbigliamento-lavoro/index.html" class="text-decoration-none text-dark"><strong>Gilet da Lavoro</strong><br><small class="text-muted">Gilets antinfortunistico</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #607D8B; color: white;">Work</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue-gray">Work</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-secondary fs-6">Gilet</span></td>
                                                 <td>Antinfortunistico, Riflettente</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="abbigliamento-lavoro/index.html" class="text-decoration-none text-dark"><strong>Scarpe da Lavoro</strong><br><small class="text-muted">Scarpe antinfortunistiche</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #607D8B; color: white;">Work</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue-gray">Work</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-secondary fs-6">Scarpe</span></td>
                                                 <td>S3, Punta Acciaio</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="abbigliamento-lavoro/index.html" class="text-decoration-none text-dark"><strong>Guanti da Lavoro</strong><br><small class="text-muted">Guanti protettivi</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #607D8B; color: white;">Work</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue-gray">Work</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-secondary fs-6">Guanti</span></td>
                                                 <td>Protettivi, Resistente</td>
                                                 <td class="text-center"><strong>€</strong></td>
@@ -1742,21 +1728,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="parrucchiere-barbiere/index.html" class="text-decoration-none text-dark"><strong>Forbici Professionali</strong><br><small class="text-muted">Forbici capelli</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">Pro</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">Pro</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">Forbici</span></td>
                                                 <td>Acciaio, Affilate</td>
                                                 <td class="text-center"><strong>€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="parrucchiere-barbiere/index.html" class="text-decoration-none text-dark"><strong>Tagliacapelli</strong><br><small class="text-muted">Tagliacapelli professionale</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">Pro</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">Pro</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">Tagliacapelli</span></td>
                                                 <td>Cordless, Regolabile</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="parrucchiere-barbiere/index.html" class="text-decoration-none text-dark"><strong>Asciugacapelli</strong><br><small class="text-muted">Asciugacapelli professionale</small></a></td>
-                                                <td class="text-center"><span class="badge fs-6" style="background-color: #2196F3; color: white;">Pro</span></td>
+                                                <td class="text-center"><span class="badge fs-6 badge-blue">Pro</span></td>
                                                 <td class="text-center"><span class="badge badge-custom-primary fs-6">Asciugacapelli</span></td>
                                                 <td>2200W, Ionico</td>
                                                 <td class="text-center"><strong>€€€</strong></td>
@@ -1808,14 +1794,58 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                <div class="carousel-niche-button-container"></div>
-                            </div>
+                                    <div class="carousel-niche-button-container"></div>
+                                </div>
+
+                                <!-- Slide: Softair -->
+                                <div class="carousel-item" data-niche-url="softair/index.html" data-niche-name="Softair" data-niche-icon="fa-crosshairs" data-niche-color="danger">
+                                    <div class="text-center mb-3">
+                                        <h3 class="fw-bold"><i class="fas fa-crosshairs text-danger me-2"></i>Softair</h3>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-custom table-hover table-bordered align-middle">
+                                            <thead class="table-danger-custom">
+                                                <tr>
+                                                    <th>Prodotto</th>
+                                                    <th>Potenza</th>
+                                                    <th>Tipo</th>
+                                                    <th>Caratteristiche</th>
+                                                    <th>Prezzo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="softair/index.html" class="text-decoration-none text-dark"><strong>M4 con RIS</strong><br><small class="text-muted">Entry Level</small></a></td>
+                                                    <td class="text-center"><span class="badge badge-custom-danger fs-6">0,9 J</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-primary fs-6">Elettrico</span></td>
+                                                    <td>Sistema RIS 4 slitte 20mm, maneggevole</td>
+                                                    <td class="text-center"><strong>€€</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="softair/index.html" class="text-decoration-none text-dark"><strong>M47D Bundle</strong><br><small class="text-muted">Completo</small></a></td>
+                                                    <td class="text-center"><span class="badge badge-custom-warning fs-6">N/D</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-success fs-6">A Pompa</span></td>
+                                                    <td>Bundle completo: fucile, caricatore, 1000 pallini</td>
+                                                    <td class="text-center"><strong>€</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="softair/index.html" class="text-decoration-none text-dark"><strong>HK416-D Umarex</strong><br><small class="text-muted">Advanced</small></a></td>
+                                                    <td class="text-center"><span class="badge badge-custom-danger fs-6">N/D</span></td>
+                                                    <td class="text-center"><span class="badge badge-custom-info fs-6">Raffica</span></td>
+                                                    <td>Replica HECKLER & KOCH, Semi/Full Auto</td>
+                                                    <td class="text-center"><strong>€€€</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="carousel-niche-button-container"></div>
+                                </div>
                             
-                            <button class="carousel-control-prev" type="button" data-bs-target="#comparisonCarousel" data-bs-slide="prev" style="background-color: rgba(0,0,0,0.5); width: 50px; height: 50px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#comparisonCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#comparisonCarousel" data-bs-slide="next" style="background-color: rgba(0,0,0,0.5); width: 50px; height: 50px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+                            <button class="carousel-control-next" type="button" data-bs-target="#comparisonCarousel" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
@@ -1839,49 +1869,83 @@
                 
                 <!-- Horizontal Product Strip (Blocco B) - Scelte della Redazione (Stagionale) -->
                 <div class="mb-5">
-                    <div class="d-flex flex-nowrap overflow-auto gap-3 pb-2 justify-content-center" id="seasonal-strip">
+                    <style>
+                        .featured-strip-item {
+                            min-width: 180px;
+                            max-width: 200px;
+                            transition: all 0.3s ease;
+                            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                            border: 2px solid rgba(0,0,0,0.1);
+                        }
+                        .featured-strip-item:hover {
+                            transform: translateY(-8px) scale(1.05);
+                            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+                            border-color: var(--bs-primary);
+                        }
+                        .countdown-timer {
+                            font-weight: 700;
+                            color: #dc3545 !important;
+                            font-size: 1rem !important;
+                            background: rgba(220, 53, 69, 0.1);
+                            padding: 4px 12px;
+                            border-radius: 20px;
+                            margin-top: 8px;
+                        }
+                        #seasonal-strip {
+                            padding: 20px 10px;
+                            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                            border-radius: 12px;
+                        }
+                    </style>
+                    <div class="d-flex flex-nowrap overflow-auto gap-4 pb-2 justify-content-center" id="seasonal-strip">
                         <!-- Nicchie Estive -->
-                        <a href="mare-spiaggia/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
-                            <i class="fas fa-umbrella-beach fa-2xl text-info mb-2"></i>
-                            <div class="fw-bold small">Mare & Spiaggia</div>
+                        <a href="softair/index.html" class="flex-shrink-0 p-5 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer position-relative" rel="noopener" id="softair-strip-item">
+                            <span class="badge bg-danger position-absolute top-0 start-0 rounded-pill px-4 py-2 featured-strip-badge">Novità</span>
+                            <i class="fas fa-crosshairs fa-4x text-danger mb-4"></i>
+                            <div class="fw-bold mb-2 featured-strip-title">Softair</div>
+                            <div class="countdown-timer" id="softair-countdown"></div>
                         </a>
-                        <a href="outdoor-camping/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
-                            <i class="fas fa-campground fa-2xl text-success mb-2"></i>
-                            <div class="fw-bold small">Outdoor & Camping</div>
+                        <a href="mare-spiaggia/index.html" class="flex-shrink-0 p-5 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
+                            <i class="fas fa-umbrella-beach fa-4x text-info mb-4"></i>
+                            <div class="fw-bold featured-strip-title">Mare & Spiaggia</div>
                         </a>
-                        <a href="biciclette-mobilita/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
-                            <i class="fas fa-bicycle fa-2xl text-success mb-2"></i>
-                            <div class="fw-bold small">Biciclette & Mobilità</div>
+                        <a href="outdoor-camping/index.html" class="flex-shrink-0 p-5 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
+                            <i class="fas fa-campground fa-4x text-success mb-4"></i>
+                            <div class="fw-bold featured-strip-title">Outdoor & Camping</div>
                         </a>
-                        <a href="abbigliamento-ciclismo/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
-                            <i class="fas fa-tshirt fa-2xl mb-2" style="color: #ff0000;"></i>
-                            <div class="fw-bold small">Abbigliamento Ciclismo</div>
+                        <a href="biciclette-mobilita/index.html" class="flex-shrink-0 p-5 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
+                            <i class="fas fa-bicycle fa-4x text-success mb-4"></i>
+                            <div class="fw-bold featured-strip-title">Biciclette & Mobilità</div>
                         </a>
-                        <a href="viaggi-vacanze/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
-                            <i class="fas fa-plane fa-2xl text-warning mb-2"></i>
-                            <div class="fw-bold small">Viaggi & Vacanze</div>
+                        <a href="abbigliamento-ciclismo/index.html" class="flex-shrink-0 p-5 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
+                            <i class="fas fa-tshirt fa-4x mb-4 icon-red"></i>
+                            <div class="fw-bold featured-strip-title">Abbigliamento Ciclismo</div>
                         </a>
-                        
+                        <a href="viaggi-vacanze/index.html" class="flex-shrink-0 p-5 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-summer" rel="noopener">
+                            <i class="fas fa-plane fa-4x text-warning mb-4"></i>
+                            <div class="fw-bold featured-strip-title">Viaggi & Vacanze</div>
+                        </a>
+
                         <!-- Nicchie Invernali -->
-                        <a href="fitness-casa/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
-                            <i class="fas fa-dumbbell fa-2xl text-info mb-2"></i>
-                            <div class="fw-bold small">Fitness Casa</div>
+                        <a href="fitness-casa/index.html" class="flex-shrink-0 p-5 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
+                            <i class="fas fa-dumbbell fa-4x text-info mb-4"></i>
+                            <div class="fw-bold featured-strip-title">Fitness Casa</div>
                         </a>
-                        <a href="giochi-da-tavolo/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
-                            <i class="fas fa-chess fa-2xl text-warning mb-2"></i>
-                            <div class="fw-bold small">Giochi da Tavolo</div>
+                        <a href="giochi-da-tavolo/index.html" class="flex-shrink-0 p-5 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
+                            <i class="fas fa-chess fa-4x text-warning mb-4"></i>
+                            <div class="fw-bold featured-strip-title">Giochi da Tavolo</div>
                         </a>
-                        <a href="libri-ereader/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
-                            <i class="fas fa-book fa-2xl text-warning mb-2"></i>
-                            <div class="fw-bold small">Libri & E-Reader</div>
+                        <a href="libri-ereader/index.html" class="flex-shrink-0 p-5 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
+                            <i class="fas fa-book fa-4x text-warning mb-4"></i>
+                            <div class="fw-bold featured-strip-title">Libri & E-Reader</div>
                         </a>
-                        <a href="cucina-elettrodomestici/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
-                            <i class="fas fa-utensils fa-2xl text-success mb-2"></i>
-                            <div class="fw-bold small">Cucina Moderna & Tech</div>
+                        <a href="cucina-elettrodomestici/index.html" class="flex-shrink-0 p-5 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
+                            <i class="fas fa-utensils fa-4x text-success mb-4"></i>
+                            <div class="fw-bold featured-strip-title">Cucina Moderna & Tech</div>
                         </a>
-                        <a href="arredamento-casa/index.html" class="flex-shrink-0 p-3 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
-                            <i class="fas fa-couch fa-2xl text-secondary mb-2"></i>
-                            <div class="fw-bold small">Arredamento Casa</div>
+                        <a href="arredamento-casa/index.html" class="flex-shrink-0 p-5 bg-white rounded border hover-lift text-decoration-none text-center featured-strip-item seasonal-winter" rel="noopener">
+                            <i class="fas fa-couch fa-4x text-secondary mb-4"></i>
+                            <div class="fw-bold featured-strip-title">Arredamento Casa</div>
                         </a>
                     </div>
                 </div>
@@ -1928,6 +1992,43 @@
 
                         // Esegui al caricamento
                         updateSeasonalStrip();
+                    })();
+
+                    // Timer 24 ore per Softair
+                    (function() {
+                        const softairCreatedKey = 'softair_created';
+                        const softairStripItem = document.getElementById('softair-strip-item');
+                        const softairCountdown = document.getElementById('softair-countdown');
+
+                        if (!softairStripItem || !softairCountdown) return;
+
+                        // Imposta data di creazione se non esiste
+                        if (!localStorage.getItem(softairCreatedKey)) {
+                            localStorage.setItem(softairCreatedKey, new Date().toISOString());
+                        }
+
+                        const createdDate = new Date(localStorage.getItem(softairCreatedKey));
+                        const expirationDate = new Date(createdDate.getTime() + 24 * 60 * 60 * 1000); // 24 ore
+
+                        function updateCountdown() {
+                            const now = new Date();
+                            const timeLeft = expirationDate - now;
+
+                            if (timeLeft <= 0) {
+                                softairStripItem.style.display = 'none';
+                                softairCountdown.textContent = '';
+                                return;
+                            }
+
+                            const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                            softairCountdown.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                        }
+
+                        updateCountdown();
+                        setInterval(updateCountdown, 1000);
                     })();
                 </script>
                 
@@ -2062,7 +2163,7 @@
                         <div class="product-card card h-100 shadow-lg border-0 hover-lift">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
-                                    <i class="fas fa-tools fa-4x" style="color: #FF6B35;" aria-hidden="true"></i>
+                                    <i class="fas fa-tools fa-4x icon-orange" aria-hidden="true"></i>
                                 </div>
                                 <h4 class="card-title fw-bold mb-3">Fai da Te</h4>
                                 <p class="card-text text-muted mb-4">1 prodotto • Attrezzi, Utensili, Bricolage</p>
@@ -2192,48 +2293,107 @@
         </div>
     </section>
 
-    <!-- Top Products Direct Section -->
-    <section class="container my-5">
-        <div class="row">
-            <!-- Main Content -->
-            <div class="col-lg-12">
-                <div class="row mb-4">
-                    <div class="col-12 text-center">
-                        <h2 class="display-5 fw-bold mb-3">
-                            <i class="fas fa-fire text-warning me-3" aria-hidden="true"></i>Le Migliori Scelte del Momento
-                        </h2>
-                        <p class="lead text-muted">Aggiornati ogni 30 minuti - <span class="product-count">...</span> prodotti selezionati</p>
-                    </div>
-                </div>
-                <!-- Rotation Note -->
-                <div class="row mb-4">
-                    <div class="col-12 text-center">
-                        <small class="text-muted">
-                            <i class="fas fa-sync-alt me-1"></i>Prodotti aggiornati ogni ora - <span class="product-count">...</span> prodotti selezionati
-                        </small>
-                    </div>
-                </div>
-                
-                <!-- Carousel Navigation -->
-                <div class="row mb-3">
-                    <div class="col-12 text-center">
-                        <div class="d-flex justify-content-center align-items-center gap-3">
-                            <button id="prev-products" class="btn btn-outline-primary btn-sm" aria-label="Prodotti precedenti">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <span class="text-muted small">Naviga tra le migliori scelte</span>
-                            <button id="next-products" class="btn btn-outline-primary btn-sm" aria-label="Prodotti successivi">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
+    <!-- Top Products Direct Section - Rivoluzione del Layout -->
+    <section class="container py-5">
+        
+        <!-- Fascia 1: Il Prodotto Re (Elite Gaming Gear) -->
+        <div class="row mb-5">
+            <div class="col-12 col-lg-10 mx-auto">
+                <div class="card shadow-lg p-4 border-0 main-product-hero" style="background: linear-gradient(135deg, #0a0a2e 0%, #ff0033 50%, #ff6b35 100%);">
+                    <div class="card-body text-white">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center mb-4 mb-md-0">
+                                <i class="fas fa-gamepad fa-5x mb-3" style="opacity: 0.9;"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <span class="badge bg-warning text-dark mb-2">⭐ PRODOTTO RE</span>
+                                <h2 class="display-5 fw-bold mb-3">Elite Gaming Gear</h2>
+                                <p class="lead mb-4">Porta la tua esperienza di gioco al livello successivo con il meglio dell'hardware. Monitor, periferiche e accessori per gamers esigenti.</p>
+                                <div class="d-flex gap-3 flex-wrap">
+                                    <a href="elite-gaming-gear/index.html" class="btn btn-light btn-lg fw-bold">
+                                        <i class="fas fa-gamepad me-2"></i>Scopri Gaming Gear
+                                    </a>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fab fa-amazon fa-2x me-2"></i>
+                                        <span class="fw-bold">50+ prodotti selezionati</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="row g-4" id="featured-products">
-                    <!-- Products will be loaded dynamically from products.json -->
+            </div>
+        </div>
+
+        <!-- Fascia 2: Il Divisore Strategico (AI Assistant) -->
+        <div class="row my-4 bg-light p-4 rounded text-center">
+            <div class="col-12">
+                <h4 class="fw-bold mb-2"><i class="fas fa-robot text-primary me-2"></i>Ancora indeciso?</h4>
+                <p class="text-muted mb-3">Fai una domanda al mio assistente virtuale per trovare il gear perfetto per te!</p>
+                <button onclick="toggleChat()" class="btn btn-primary btn-lg">
+                    <i class="fas fa-comments me-2"></i>Chatta con l'Assistente
+                </button>
+            </div>
+        </div>
+
+        <!-- Fascia 3: Il Catalogo (Griglia 2x2) -->
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-utensils fa-3x text-success"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Cucina Moderna & Tech</h4>
+                        <p class="card-text text-muted mb-4">28 prodotti • Elettrodomestici intelligenti e accessori per la cucina</p>
+                        <a href="cucina-elettrodomestici/index.html" class="btn btn-success fw-bold w-100">
+                            <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
+                        </a>
+                    </div>
                 </div>
             </div>
-
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-plug fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Smart Home & Domotica</h4>
+                        <p class="card-text text-muted mb-4">12 prodotti • Prese smart, telecamere e sistemi di sicurezza</p>
+                        <a href="smart-home-domotica/index.html" class="btn btn-primary fw-bold w-100">
+                            <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-dumbbell fa-3x text-info"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Fitness Casa</h4>
+                        <p class="card-text text-muted mb-4">12 prodotti • Attrezzatura per allenamenti domestici professionali</p>
+                        <a href="fitness-casa/index.html" class="btn btn-info fw-bold w-100">
+                            <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-mobile-alt fa-3x text-warning"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Smartphone & Tech</h4>
+                        <p class="card-text text-muted mb-4">9 prodotti • Dispositivi tech e accessori smart</p>
+                        <a href="smartphone-tech/index.html" class="btn btn-warning fw-bold w-100">
+                            <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2631,7 +2791,7 @@
 
                     function renderProducts() {
                         let filteredProducts = filterProductsBySearch(allProducts, currentSearch);
-                        
+
                         // Se non ci sono prodotti filtrati, torna a tutti
                         if (filteredProducts.length === 0) {
                             filteredProducts = allProducts;
@@ -2639,48 +2799,23 @@
 
                         // Mostra tutte le categorie per rotazione (rimosso filtro highValue)
 
-                        // Se c'è una ricerca attiva, mostra i risultati filtrati senza rotazione
-                        if (currentSearch) {
-                            const featuredProducts = [];
-                            for (let i = 0; i < Math.min(featuredCount, filteredProducts.length); i++) {
-                                featuredProducts.push(filteredProducts[i]);
-                            }
-                            const featuredContainer = document.querySelector('#featured-products');
-                            if (featuredContainer) {
-                                featuredContainer.innerHTML = featuredProducts.map((product, index) => {
-                                    return `
-                                    <div class="col-md-6">
-                                        <div class="product-card card h-100 border-0 shadow-sm">
-                                            <div class="card-body p-4 text-center">
-                                                <div class="text-primary mb-3">
-                                                    <i class="fas ${product.icon} fa-3x"></i>
-                                                </div>
-                                                <h5 class="card-title fw-bold">${product.name}</h5>
-                                                <p class="card-text text-muted small">${product.category}</p>
-                                                                                                <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
-                                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                `}).join('');
-                            }
-                        } else {
-                            // Rotazione basata su tutti i prodotti (incluso nicchie meno fondamentali)
-                            const featuredProducts = [];
+                        const featuredContainer = document.querySelector('#featured-products');
+                        if (!featuredContainer) return;
 
-                            if (filteredProducts.length > 0) {
-                                for (let i = 0; i < featuredCount; i++) {
-                                    const index = (rotationIndex + i) % filteredProducts.length;
-                                    featuredProducts.push(filteredProducts[index]);
+                        // Animazione fade-out
+                        featuredContainer.style.opacity = '0';
+                        featuredContainer.style.transition = 'opacity 0.3s ease';
+
+                        setTimeout(() => {
+                            // Se c'è una ricerca attiva, mostra i risultati filtrati senza rotazione
+                            if (currentSearch) {
+                                const featuredProducts = [];
+                                for (let i = 0; i < Math.min(featuredCount, filteredProducts.length); i++) {
+                                    featuredProducts.push(filteredProducts[i]);
                                 }
-                                // Avanza l'indice per la prossima rotazione
-                                rotationIndex = (rotationIndex + featuredCount) % filteredProducts.length;
-                            }
-
-                            const featuredContainer = document.querySelector('#featured-products');
-                            if (featuredContainer) {
                                 featuredContainer.innerHTML = featuredProducts.map((product, index) => {
+                                    const rating = (Math.random() * (5 - 4) + 4).toFixed(1);
+                                    const reviews = Math.floor(Math.random() * 5000) + 100;
                                     return `
                                     <div class="col-md-6">
                                         <div class="product-card card h-100 border-0 shadow-sm">
@@ -2690,6 +2825,54 @@
                                                 </div>
                                                 <h5 class="card-title fw-bold">${product.name}</h5>
                                                 <p class="card-text text-muted small">${product.category}</p>
+                                                <div class="mb-2">
+                                                    <span class="text-warning">
+                                                        ${'★'.repeat(Math.floor(rating))}${'☆'.repeat(5 - Math.floor(rating))}
+                                                    </span>
+                                                    <span class="text-muted small ms-1">${rating}</span>
+                                                    <span class="text-muted small">(${reviews.toLocaleString()})</span>
+                                                </div>
+                                                <p class="card-text text-muted small mb-3">${product.description || 'Prodotto di alta qualità con recensioni positive'}</p>
+                                                                                                <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
+                                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `}).join('');
+                            } else {
+                                // Rotazione basata su tutti i prodotti (incluso nicchie meno fondamentali)
+                                const featuredProducts = [];
+
+                                if (filteredProducts.length > 0) {
+                                    for (let i = 0; i < featuredCount; i++) {
+                                        const index = (rotationIndex + i) % filteredProducts.length;
+                                        featuredProducts.push(filteredProducts[index]);
+                                    }
+                                    // Avanza l'indice per la prossima rotazione
+                                    rotationIndex = (rotationIndex + featuredCount) % filteredProducts.length;
+                                }
+
+                                featuredContainer.innerHTML = featuredProducts.map((product, index) => {
+                                    const rating = (Math.random() * (5 - 4) + 4).toFixed(1);
+                                    const reviews = Math.floor(Math.random() * 5000) + 100;
+                                    return `
+                                    <div class="col-md-6">
+                                        <div class="product-card card h-100 border-0 shadow-sm">
+                                            <div class="card-body p-4 text-center">
+                                                <div class="text-primary mb-3">
+                                                    <i class="fas ${product.icon} fa-3x"></i>
+                                                </div>
+                                                <h5 class="card-title fw-bold">${product.name}</h5>
+                                                <p class="card-text text-muted small">${product.category}</p>
+                                                <div class="mb-2">
+                                                    <span class="text-warning">
+                                                        ${'★'.repeat(Math.floor(rating))}${'☆'.repeat(5 - Math.floor(rating))}
+                                                    </span>
+                                                    <span class="text-muted small ms-1">${rating}</span>
+                                                    <span class="text-muted small">(${reviews.toLocaleString()})</span>
+                                                </div>
+                                                <p class="card-text text-muted small mb-3">${product.description || 'Prodotto di alta qualità con recensioni positive'}</p>
                                                                                                 <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
                                                     <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                                                 </a>
@@ -2698,14 +2881,48 @@
                                     </div>
                                 `}).join('');
                             }
+
+                            // Animazione fade-in
+                            setTimeout(() => {
+                                featuredContainer.style.opacity = '1';
+                            }, 50);
+
+                            // Aggiorna dots
+                            updateDots(filteredProducts.length, rotationIndex, featuredCount);
+                        }, 300);
+                    }
+
+                    // Funzione per aggiornare i dots
+                    function updateDots(totalProducts, currentIndex, productsPerPage) {
+                        const dotsContainer = document.getElementById('carousel-dots');
+                        if (!dotsContainer) return;
+
+                        const totalPages = Math.ceil(totalProducts / productsPerPage);
+                        const currentPage = Math.floor(currentIndex / productsPerPage);
+
+                        dotsContainer.innerHTML = '';
+                        for (let i = 0; i < totalPages; i++) {
+                            const dot = document.createElement('button');
+                            dot.className = `btn btn-sm rounded-circle ${i === currentPage ? 'btn-primary' : 'btn-outline-secondary'}`;
+                            dot.style.width = '10px';
+                            dot.style.height = '10px';
+                            dot.style.padding = '0';
+                            dot.style.margin = '0 2px';
+                            dot.setAttribute('aria-label', `Pagina ${i + 1}`);
+                            dot.addEventListener('click', () => {
+                                clearInterval(rotationInterval);
+                                rotationIndex = i * productsPerPage;
+                                renderProducts();
+                            });
+                            dotsContainer.appendChild(dot);
                         }
                     }
 
                     // Renderizza prodotti iniziali
                     renderProducts();
-                    
-                    // Rotazione automatica ogni 5 secondi
-                    let rotationInterval = setInterval(renderProducts, 5 * 1000);
+
+                    // Rotazione automatica ogni 8 secondi
+                    let rotationInterval = setInterval(renderProducts, 8 * 1000);
                     
                     // Fermare rotazione su hover o touch
                     const featuredContainer = document.querySelector('#featured-products');
@@ -2735,14 +2952,14 @@
                     if (prevBtn && nextBtn) {
                         prevBtn.addEventListener('click', () => {
                             clearInterval(rotationInterval);
-                            rotationIndex = (rotationIndex - featuredCount) % highValueProducts.length;
-                            if (rotationIndex < 0) rotationIndex += highValueProducts.length;
+                            rotationIndex = (rotationIndex - featuredCount) % filteredProducts.length;
+                            if (rotationIndex < 0) rotationIndex += filteredProducts.length;
                             renderProducts();
                         });
-                        
+
                         nextBtn.addEventListener('click', () => {
                             clearInterval(rotationInterval);
-                            rotationIndex = (rotationIndex + featuredCount) % highValueProducts.length;
+                            rotationIndex = (rotationIndex + featuredCount) % filteredProducts.length;
                             renderProducts();
                         });
                     }
@@ -2896,7 +3113,7 @@
     <script src="bot/ai-chat-simple.js"></script>
     <!-- AI Chat Button -->
     <div id="ai-chat-button" onclick="toggleChat()">
-        <img src="images/logo.png" alt="Smart Choices Guide" class="chat-button-logo">
+        <img src="images/logo.png" alt="Smart Choices Guide" class="chat-button-logo" loading="lazy">
     </div>
     
     <!-- AI Chat Window -->
@@ -2904,7 +3121,7 @@
         <!-- Chat Header -->
         <div class="chat-header">
             <div class="header-content">
-                <img src="images/logo.png" alt="Smart Choices Guide Logo" class="chat-bot-logo">
+                <img src="images/logo.png" alt="Smart Choices Guide Logo" class="chat-bot-logo" loading="lazy">
                 <div>
                     <h5>Assistente Smart</h5>
                     <small>Online</small>
@@ -2927,6 +3144,21 @@
             </button>
         </div>
     </div>
+
+<!-- Service Worker Registration -->
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('Service Worker registered: ', registration);
+                })
+                .catch(registrationError => {
+                    console.log('Service Worker registration failed: ', registrationError);
+                });
+        });
+    }
+</script>
 
 <!-- Tracking Globale GA4 -->
     <script src="js/tracking-globale.js"></script>
