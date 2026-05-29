@@ -10,16 +10,134 @@ Quando un utente interagisce con queste categorie, il tuo compito è fornire con
 
 Se l'utente dovesse chiedere specificamente un film o una serie TV da guardare, rispondi gentilmente chiarendo che il sito è specializzato in moda e stile a tema.`;
 
+// Voice Chat Configuration
+let voiceEnabled = false;
+let speechSynthesis = window.speechSynthesis;
+let speechRecognition = null;
+let isListening = false;
+
+// Initialize Speech Recognition
+function initSpeechRecognition() {
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        speechRecognition = new SpeechRecognition();
+        speechRecognition.lang = 'it-IT';
+        speechRecognition.continuous = false;
+        speechRecognition.interimResults = false;
+        
+        speechRecognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            const chatInput = document.getElementById('chat-input');
+            if (chatInput) {
+                chatInput.value = transcript;
+                sendMessage();
+            }
+        };
+        
+        speechRecognition.onerror = (event) => {
+            console.error('Speech recognition error:', event.error);
+            stopListening();
+        };
+        
+        speechRecognition.onend = () => {
+            stopListening();
+        };
+    }
+}
+
+// Text-to-Speech: Make bot speak
+function speakText(text) {
+    if (!voiceEnabled || !speechSynthesis) return;
+    
+    // Cancel any ongoing speech
+    speechSynthesis.cancel();
+    
+    // Clean text from HTML tags
+    const cleanText = text.replace(/<[^>]*>/g, '').replace(/\n/g, ' ');
+    
+    const utterance = new SpeechSynthesisUtterance(cleanText);
+    utterance.lang = 'it-IT';
+    utterance.rate = 1;
+    utterance.pitch = 1;
+    
+    // Try to use Italian voice
+    const voices = speechSynthesis.getVoices();
+    const italianVoice = voices.find(voice => voice.lang.includes('it'));
+    if (italianVoice) {
+        utterance.voice = italianVoice;
+    }
+    
+    speechSynthesis.speak(utterance);
+}
+
+// Start voice recognition
+function startListening() {
+    if (!speechRecognition) {
+        alert('Il tuo browser non supporta il riconoscimento vocale. Usa Chrome o Edge.');
+        return;
+    }
+    
+    if (isListening) return;
+    
+    isListening = true;
+    speechRecognition.start();
+    
+    const micButton = document.getElementById('mic-button');
+    if (micButton) {
+        micButton.classList.add('listening');
+        micButton.innerHTML = '<i class="fas fa-stop"></i>';
+    }
+}
+
+// Stop voice recognition
+function stopListening() {
+    if (speechRecognition) {
+        speechRecognition.stop();
+    }
+    
+    isListening = false;
+    
+    const micButton = document.getElementById('mic-button');
+    if (micButton) {
+        micButton.classList.remove('listening');
+        micButton.innerHTML = '<i class="fas fa-microphone"></i>';
+    }
+}
+
+// Toggle voice chat
+function toggleVoiceChat() {
+    voiceEnabled = !voiceEnabled;
+    
+    const voiceButton = document.getElementById('voice-button');
+    if (voiceButton) {
+        voiceButton.classList.toggle('active', voiceEnabled);
+        voiceButton.innerHTML = voiceEnabled ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-volume-mute"></i>';
+    }
+    
+    // Initialize speech recognition on first enable
+    if (voiceEnabled && !speechRecognition) {
+        initSpeechRecognition();
+    }
+    
+    // Load voices for text-to-speech
+    if (voiceEnabled) {
+        speechSynthesis.getVoices();
+    }
+}
+
 // State
 let chatOpen = false;
 let lastInteractionTime = Date.now();
 let abandonmentTimer = null;
 let pageLoadTime = Date.now();
 let pageScrollTriggered = false;
-let conversationHistory = [];
+let conversationHistory = []; // Extended memory for longer conversation
 let userPreferences = {};
 let currentNiche = null;
 let urgencyTimerStarted = false;
+let userAestheticPreferences = {}; // Color, style preferences
+let userInteractionHistory = []; // Track user interactions for learning
+const MAX_CONVERSATION_HISTORY = 20; // Keep last 20 messages
 
 // Load user preferences from localStorage
 function loadUserPreferences() {
@@ -31,6 +149,26 @@ function loadUserPreferences() {
     } catch (e) {
         console.log('Unable to load preferences:', e);
     }
+    
+    // Load interaction history
+    try {
+        const savedInteractions = localStorage.getItem('smartChoicesBotInteractions');
+        if (savedInteractions) {
+            userInteractionHistory = JSON.parse(savedInteractions);
+        }
+    } catch (e) {
+        console.log('Unable to load interactions:', e);
+    }
+    
+    // Load aesthetic preferences
+    try {
+        const savedAesthetic = localStorage.getItem('smartChoicesBotAesthetic');
+        if (savedAesthetic) {
+            userAestheticPreferences = JSON.parse(savedAesthetic);
+        }
+    } catch (e) {
+        console.log('Unable to load aesthetic preferences:', e);
+    }
 }
 
 // Save user preferences to localStorage
@@ -40,6 +178,137 @@ function saveUserPreferences() {
     } catch (e) {
         console.log('Unable to save preferences:', e);
     }
+}
+
+// Save aesthetic preferences to localStorage
+function saveAestheticPreferences() {
+    try {
+        localStorage.setItem('smartChoicesBotAesthetic', JSON.stringify(userAestheticPreferences));
+    } catch (e) {
+        console.log('Unable to save aesthetic preferences:', e);
+    }
+}
+
+// Function to record user feedback on products
+function recordProductFeedback(category, helpful) {
+    if (!userPreferences.feedback) {
+        userPreferences.feedback = {};
+    }
+    
+    if (!userPreferences.feedback[category]) {
+        userPreferences.feedback[category] = { positive: 0, negative: 0 };
+    }
+    
+    if (helpful) {
+        userPreferences.feedback[category].positive++;
+    } else {
+        userPreferences.feedback[category].negative++;
+    }
+    
+    saveUserPreferences();
+}
+
+// Function to show feedback buttons after product suggestions
+function showFeedbackButtons(category) {
+    const chatMessages = document.getElementById('chat-messages');
+    if (!chatMessages) return;
+    
+    const feedbackDiv = document.createElement('div');
+    feedbackDiv.className = 'feedback-buttons';
+    feedbackDiv.innerHTML = `
+        <div class="feedback-question">Questi prodotti ti sono stati utili?</div>
+        <div class="feedback-options">
+            <button class="feedback-btn positive" onclick="handleFeedback('${category}', true)">
+                <i class="fas fa-thumbs-up"></i> Sì
+            </button>
+            <button class="feedback-btn negative" onclick="handleFeedback('${category}', false)">
+                <i class="fas fa-thumbs-down"></i> No
+            </button>
+        </div>
+    `;
+    
+    chatMessages.appendChild(feedbackDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Handle user feedback
+function handleFeedback(category, helpful) {
+    recordProductFeedback(category, helpful);
+    
+    // Remove feedback buttons
+    const feedbackDiv = document.querySelector('.feedback-buttons');
+    if (feedbackDiv) {
+        feedbackDiv.remove();
+    }
+    
+    // Add response
+    if (helpful) {
+        addMessage('Grazie per il feedback! 😊 Cercherò di suggerirti prodotti simili in futuro.', 'bot');
+    } else {
+        addMessage('Grazie per il feedback! Cercherò di migliorare le mie raccomandazioni. Vuoi vedere altre opzioni?', 'bot');
+    }
+}
+
+// Function to show follow-up question
+function showFollowUp(category) {
+    setTimeout(() => {
+        addMessage('Vuoi vedere altre opzioni o preferisci esplorare una categoria diversa?', 'bot');
+        
+        const chatMessages = document.getElementById('chat-messages');
+        if (!chatMessages) return;
+        
+        const followUpDiv = document.createElement('div');
+        followUpDiv.className = 'quick-replies';
+        followUpDiv.innerHTML = `
+            <div class="quick-replies-grid">
+                <button class="quick-reply-card" onclick="showMoreOptions('${category}')">
+                    <div class="quick-reply-name">Altre opzioni</div>
+                </button>
+                <button class="quick-reply-card" onclick="showMacroCategories()">
+                    <div class="quick-reply-name">Cambia categoria</div>
+                </button>
+            </div>
+        `;
+        
+        chatMessages.appendChild(followUpDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 2000);
+}
+
+// Show more options for current category
+function showMoreOptions(category) {
+    const categoryData = NicheDatabase[category];
+    if (!categoryData || !categoryData.topProducts) {
+        addMessage('Non ho altre opzioni disponibili per questa categoria.', 'bot');
+        return;
+    }
+    
+    // Show next 3 products
+    const products = categoryData.topProducts.slice(3, 6);
+    if (products.length === 0) {
+        addMessage('Ho mostrato tutti i prodotti disponibili per questa categoria. Vuoi esplorare un\'altra categoria?', 'bot');
+        return;
+    }
+    
+    let message = `<div class="product-suggestions">`;
+    products.forEach(product => {
+        message += `
+            <div class="product-card">
+                <div class="product-icon"><i class="fas ${product.icon || 'fa-box'}"></i></div>
+                <div class="product-info">
+                    <div class="product-name">${product.name}</div>
+                    <div class="product-description">${product.description}</div>
+                    <a href="${product.link}" target="_blank" class="product-link">Vedi su Amazon</a>
+                </div>
+            </div>
+        `;
+    });
+    message += `</div>`;
+    
+    addMessage(message, 'bot');
+    
+    // Show follow-up again
+    showFollowUp(category);
 }
 
 // Track category visit
@@ -512,7 +781,7 @@ const NicheDatabase = {
         tags: ["pugilato", "boxe", "guantoni", "sacco", "boxe", "parastinchi", "casco", "paradenti", "bende", "allenamento", "palestra", "combattimento", "sport", "combattimento", "ring", "match", "gara", "competizione", "mma", "kickboxing", "thai", "boxe", "thailandese", "art", "marziali", "difesa", "personale", "fitness", "cardio", "forza", "resistenza"],
         url: "/pugilato/index.html",
         personality: "energetic",
-        valueProp: "Ho selezionato l'attrezzatura migliore per il tuo allenamento di pugilato. Guantoni, sacchi, protezioni e accessori per allenarti come un vero campione.",
+        valueProp: "Ho selezionato l'attrezzatura perfetta per scaricare lo stress e costruire la disciplina. Il pugilato non è solo sport, è la tua via per la forza mentale e il rilassamento dopo una giornata intensa.",
         song: "Eye of the Tiger - Survivor",
         songLinkSpotify: "https://open.spotify.com/track/4fIQKpxc2X8XUKz5dQG9OZ",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
@@ -832,7 +1101,7 @@ const NicheDatabase = {
         valueProp: "Ho selezionato i migliori prodotti per il tuo studio fotografico, dall'illuminazione agli accessori.",
         song: "Photograph - Ed Sheeran",
         songLinkSpotify: "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
         topProducts: [
             {
                 name: "Obiettivo Macro Evil Eye Con Luce Di Riempimento",
@@ -845,6 +1114,30 @@ const NicheDatabase = {
                 description: "Valigetta fotografica impermeabile IP67 con schiuma pretagliata a griglia",
                 icon: "fa-suitcase",
                 link: "https://www.amazon.it/CONCEPT-Fotografica-Pretagliata-Impermeabile-34-5x29x13-5cm/dp/B0GHLV5ZJZ?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&aref=G9fj9vwxVf&content-id=amzn1.sym.dfdb39a7-e98b-4667-8017-e39a2a492092%3Aamzn1.sym.dfdb39a7-e98b-4667-8017-e39a2a492092&crid=1WV8WGITIH1UU&cv_ct_cx=film%2Bbox&keywords=film%2Bbox&pd_rd_i=B0GHLV5ZJZ&pd_rd_r=57e5801d-b00b-4bc4-9b56-42635dd3bc0f&pd_rd_w=3iitb&pd_rd_wg=DcJn1&pf_rd_p=dfdb39a7-e98b-4667-8017-e39a2a492092&pf_rd_r=4MJTNHYNR4J21YK0JKMM&qid=1779683958&s=music&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=film%2Bbox%2Cpopular%2C120&sr=1-1-07652b71-81e3-41f8-9097-e46726928fb7&th=1&linkCode=ll2&tag=l0c39-21&linkId=7d17fb4083863c75bdd08800596a9914&ref=_as_li_ss_tl"
+            }
+        ]
+    },
+    "festività": {
+        name: "Festività & Regali",
+        tags: ["festività", "regalo", "natale", "san valentino", "valentino", "festa della mamma", "madre", "festa del papà", "padre", "carnevale", "halloween", "pasqua", "ferragosto", "capodanno", "compleanno", "anniversario", "donna", "dolce", "amore", "cuore", "festa", "decorazioni", "costumi", "maschere"],
+        url: "/festività/index.html",
+        personality: "festive",
+        valueProp: "Ho selezionato i migliori prodotti per celebrare ogni occasione speciale, dai regali alle decorazioni.",
+        song: "Celebration - Kool & The Gang",
+        songLinkSpotify: "https://open.spotify.com/track/0e7G9KqY1LbXgjL4O0H2L3",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
+        topProducts: [
+            {
+                name: "KODAK Cornice Digitale WiFi 10.1 Pollici",
+                description: "Cornice digitale WiFi con batteria 4000mAh per condividere foto e ricordi",
+                icon: "fa-images",
+                link: "https://www.amazon.it/KODAK-Integrata-1920x1200-Condivisione-Istantanea/dp/B0F82ZPNTL?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&aref=OcMuxEQQXe&content-id=amzn1.sym.dfdb39a7-e98b-4667-8017-e39a2a492092%3Aamzn1.sym.dfdb39a7-e98b-4667-8017-e39a2a492092&crid=3SUMJ6Z1UGNMF&cv_ct_cx=foto&keywords=foto&pd_rd_i=B0F82ZPNTL&pd_rd_r=32d1d361-702e-4e6e-8f99-b55fe7ae2627&pd_rd_w=CkcfJ&pd_rd_wg=0YcX1&pf_rd_p=dfdb39a7-e98b-4667-8017-e39a2a492092&pf_rd_r=CC53P1NGK7MRYMFEMAMK&qid=1780090073&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=foto%2Caps%2C170&sr=1-1-07652b71-81e3-41f8-9097-e46726928fb7&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&th=1&linkCode=ll2&tag=l0c39-21&linkId=cd7b78c369baa1ac83c3e988e4616c8d&ref=_as_li_ss_tl"
+            },
+            {
+                name: "KODAK Mini 2 Retro 4PASS Stampante Fotografica Portatile",
+                description: "Stampante fotografica portatile per ricordi istantanei",
+                icon: "fa-print",
+                link: "https://www.amazon.it/KODAK-Stampante-Fotografica-Portatile-5-3x8-6cm/dp/B08FST3H95?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3SUMJ6Z1UGNMF&dib=eyJ2IjoiMSJ9.weGHfbNj2H9gOtYfC0nAcGh2usr1Z_CnLl57fNsBg6dSr5M3mgpFvK8YgeLIB1Wl4ARSy34F3yQlQZ4J1KCWjsxdfbZoAB89of4m4P82bsdNuQts17Ik-V4rnKeqeE7LEUnTzk82mcmoJywENgz4wTPpN2nr8uOz1nmrqGrKfomccfCV0Gwxua1KPU4yKopYQyDAkUVLJZTQ80HqhP8hiZRul4EvOc0XERxxGZw3bvNwM8H_wGWMUoTTL27-RuLAb6NYqJNyh0bNdPK4SYqvmfkf5dlBu-z2RYDErOtY2eA.TIP3Ps1SwFgdiN4n9RdIu2YAebUZp15dXaAhx38da4Y&dib_tag=se&keywords=foto&qid=1780090073&sprefix=foto%2Caps%2C170&sr=8-24&th=1&linkCode=ll2&tag=l0c39-21&linkId=3a7d1451fa05a746d69fa22bbe6f7042&ref=_as_li_ss_tl"
             }
         ]
     },
@@ -893,7 +1186,7 @@ const NicheDatabase = {
         tags: ["pugilato", "boxe", "guantoni", "sacco", "allenamento", "sport", "combattimento", "ring", "match", "gara", "competizione", "protezioni", "parastinchi", "casco", "dentista", "bende", "fitness", "cardio", "forza", "potenza", "velocità", "agilità", "resistenza", "colpi", "hook", "jab", "uppercut", "knockout", "campione", "champion", "titolo", "cintura", "palestra", "gym", "workout", "training"],
         url: "/pugilato/index.html",
         personality: "champion",
-        valueProp: "Ho selezionato l'attrezzatura professionale per campioni. Qualità, sicurezza e performance sono i fattori chiave.",
+        valueProp: "Ho selezionato l'attrezzatura perfetta per scaricare lo stress e costruire la disciplina. Il pugilato non è solo sport, è la tua via per la forza mentale e il rilassamento dopo una giornata intensa.",
         song: "Eye of the Tiger - Survivor",
         songLinkSpotify: "https://open.spotify.com/track/4r9g2Z8XShl5eGZ3qF5p7k",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
@@ -1828,6 +2121,11 @@ const comboMessages = {
         "Ami la fotografia? 📸 Guarda, per scatti migliori servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
         "Vuoi scattare foto? 📷 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
     ],
+    "festività": [
+        "Ehi, cerchi un regalo speciale! 🎁 Guarda, se vuoi sorprendere qualcuno come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il regalo e una scorta di {prodottoAncora} per festeggiare. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
+        "Cerchi un regalo? 🎉 Guarda, per celebrare servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
+        "Vuoi fare un regalo? 🎁 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+    ],
     "dvd": [
         "Ehi, vuoi guardare film! 🎞️ Guarda, se ami il cinema come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la collezione e una scorta di {prodottoAncora} per lo snack. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
         "Ami i DVD? 📀 Guarda, per la collezione servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fantastico!",
@@ -1966,6 +2264,9 @@ function getContesto() {
     }
     if (currentPath.includes('studio-fotografico') || currentUrl.includes('fotografia') || currentUrl.includes('foto') || currentUrl.includes('camera')) {
         return 'fotografia';
+    }
+    if (currentPath.includes('festività') || currentUrl.includes('festività') || currentUrl.includes('festivita') || currentUrl.includes('regalo') || currentUrl.includes('natale') || currentUrl.includes('valentino') || currentUrl.includes('carnevale') || currentUrl.includes('halloween')) {
+        return 'festività';
     }
     if (currentPath.includes('dvd-bluray') || currentUrl.includes('dvd') || currentUrl.includes('bluray') || currentUrl.includes('film')) {
         return 'dvd';
@@ -2128,10 +2429,10 @@ function showUrgencyComboMessage(context) {
     addMessage(message, 'bot');
 }
 
-// Funzione per generare intervallo casuale tra 18-24 minuti (Variabilità Temporale)
+// Funzione per generare intervallo casuale tra 3 minuti (Variabilità Temporale)
 function getRandomInterval() {
-    const minTime = 18 * 60 * 1000; // 18 minuti
-    const maxTime = 24 * 60 * 1000; // 24 minuti
+    const minTime = 3 * 60 * 1000; // 3 minuti
+    const maxTime = 3 * 60 * 1000; // 3 minuti
     return Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
 }
 
@@ -2144,6 +2445,9 @@ function isSleepTime() {
 
 // Funzione per tracciare i click sulle combos (logica amico)
 function trackComboClick(context, productNumber) {
+    // Pause bot for conversion cooldown after user clicks
+    pauseBotForConversion();
+    
     if (!userPreferences.comboClicks) {
         userPreferences.comboClicks = {};
     }
@@ -2166,9 +2470,15 @@ function trackComboClick(context, productNumber) {
     
     console.log(`Combo click tracked: ${context} - product ${productNumber}`);
     
-    // Logica amico: ringrazia e chiede feedback
+    // Logica amico: ringrazia e chiede feedback in modo conversazionale
     setTimeout(() => {
-        addMessage("Grazie per aver dato un'occhiata! 😊 Ti piace il prodotto? Vuoi che ti mostri alternative simili?", 'bot');
+        const feedbackMessages = [
+            "Grazie per aver dato un'occhiata! 😊 Ti piace il prodotto? Vuoi che ti mostri alternative simili?",
+            "Perfetto! Grazie per aver cliccato. Ti interessa vedere altro nella stessa categoria?",
+            "Ottimo! Grazie per l'interesse. Vuoi che ti suggerisca qualcosa di simile?",
+            "Bene! Grazie per aver guardato. Ti va se ti mostro altre opzioni?"
+        ];
+        addMessage(feedbackMessages[Math.floor(Math.random() * feedbackMessages.length)], 'bot');
     }, 1000);
     
     // Stop Intelligente: ferma il timer delle combo per 2 ore (non essere molesto)
@@ -2177,7 +2487,7 @@ function trackComboClick(context, productNumber) {
         setTimeout(() => {
             comboInterval = setInterval(() => {
                 showComboMessage();
-            }, getRandomInterval()); // Variabilità temporale 18-24 minuti
+            }, getRandomInterval()); // Variabilità temporale 3 minuti
         }, 2 * 60 * 60 * 1000); // 2 ore
     }
 }
@@ -2613,28 +2923,41 @@ function detectComboScroll() {
     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercentage = (scrollTop / scrollHeight) * 100;
     
-    if (scrollPercentage >= 50) {
+    if (scrollPercentage >= 30) {
         comboTimerStarted = true;
         
-        // Mostra il messaggio combo subito al 50%
+        // Mostra il messaggio combo subito al 30%
         showComboMessage();
         
-        // Poi mostra con variabilità temporale 18-24 minuti
+        // Poi mostra con variabilità temporale 3 minuti
         comboInterval = setInterval(() => {
             showComboMessage();
-        }, getRandomInterval()); // 18-24 minuti
+        }, getRandomInterval()); // 3 minuti
     }
 }
 
 function showComboMessage() {
-    // Orario Dormiente: non mostrare combo tra 22:00 e 08:00
-    if (isSleepTime()) {
-        console.log('Sleep time - no combo messages');
+    // Check if bot is paused for conversion cooldown
+    if (isBotPaused()) {
+        console.log('Bot is paused for conversion cooldown, skipping combo message');
         return;
     }
     
-    // Ottieni il contesto corrente
+    // Orario Dormiente: RIMOSSO - bot attivo 24/7 per massimizzare conversioni
+    // if (isSleepTime()) {
+    //     console.log('Sleep time - no combo messages');
+    //     return;
+    // }
+    
+    // Controlla se c'è una festività in corso - priorità alta
+    const currentOccasion = getCurrentOccasion();
     let context = getContesto();
+    
+    // Se c'è una festività, usa la categoria festività
+    if (currentOccasion) {
+        context = 'festività';
+        console.log('Special occasion detected, using festività category:', currentOccasion);
+    }
     
     // Fallback: se contesto è null, usa 'mare' come default
     if (!context) {
@@ -2645,16 +2968,20 @@ function showComboMessage() {
     const comboData = getComboData(context);
     
     if (comboData && comboData.combos && comboData.combos.length > 0) {
-        // Usa le combo del database
+        // Usa le combo del database con sistema sequenziale
         const randomCombo = comboData.combos[Math.floor(Math.random() * comboData.combos.length)];
         
         // Verifica che product1 e product2 esistano
         if (!randomCombo.product1 || !randomCombo.product2 || !randomCombo.product1.link || !randomCombo.product2.link) {
             console.log('Invalid combo data - missing products or links, using fallback');
         } else {
+            // Get sequential message type (educational → social proof → urgency)
+            const messageType = getCurrentComboMessageType();
+            const sequentialMessage = generateSequentialComboMessage(randomCombo.product1, randomCombo.product2, messageType);
+            
             const message = `
                 <div class="urgency-combo-message">
-                    <p>${randomCombo.message}</p>
+                    <p>${sequentialMessage}</p>
                     <div class="combo-container">
                         <div class="combo-title">📦 Combo consigliata:</div>
                         <div>
@@ -3018,9 +3345,14 @@ function getCurrentOccasion() {
     const month = now.getMonth() + 1; // 1-12
     const day = now.getDate();
     
-    // Christmas (December 20-31)
-    if (month === 12 && day >= 20) {
-        return 'christmas';
+    // Capodanno (December 31 - January 1)
+    if ((month === 12 && day >= 30) || (month === 1 && day <= 2)) {
+        return 'new_year';
+    }
+    
+    // Epifania/Befana (January 6)
+    if (month === 1 && day >= 5 && day <= 7) {
+        return 'epiphany';
     }
     
     // Valentine's Day (February 10-15)
@@ -3028,14 +3360,79 @@ function getCurrentOccasion() {
         return 'valentine';
     }
     
+    // Carnevale (variable, approximate February-March, 40 days before Easter)
+    if ((month === 2 && day >= 15) || (month === 3 && day <= 5)) {
+        return 'carnival';
+    }
+    
+    // Festa della Donna (March 8)
+    if (month === 3 && day >= 7 && day <= 9) {
+        return 'womens_day';
+    }
+    
+    // Father's Day (March 19 in Italy)
+    if (month === 3 && day >= 18 && day <= 20) {
+        return 'fathers_day';
+    }
+    
+    // Easter (variable, approximate March-April)
+    if (month === 3 || (month === 4 && day <= 15)) {
+        return 'easter';
+    }
+    
+    // Festa della Liberazione (April 25)
+    if (month === 4 && day >= 24 && day <= 26) {
+        return 'liberation';
+    }
+    
+    // Festa del Lavoro (May 1)
+    if (month === 5 && day >= 1 && day <= 2) {
+        return 'labor_day';
+    }
+    
+    // Mother's Day (second Sunday of May - approximate May 8-14)
+    if (month === 5 && day >= 8 && day <= 14) {
+        return 'mothers_day';
+    }
+    
+    // Festa della Repubblica (June 2)
+    if (month === 6 && day >= 1 && day <= 3) {
+        return 'republic';
+    }
+    
+    // San Pietro e Paolo (June 29 - Rome)
+    if (month === 6 && day >= 28 && day <= 30) {
+        return 'saints_peter_paul';
+    }
+    
+    // Ferragosto/Assunzione (August 15)
+    if (month === 8 && day >= 14 && day <= 16) {
+        return 'ferragosto';
+    }
+    
     // Halloween (October 25-31)
     if (month === 10 && day >= 25) {
         return 'halloween';
     }
     
-    // Easter (variable, approximate for March-April)
-    if (month === 3 || (month === 4 && day <= 15)) {
-        return 'easter';
+    // Ognissanti/Tutti i Santi (November 1)
+    if (month === 11 && day >= 1 && day <= 2) {
+        return 'all_saints';
+    }
+    
+    // Immacolata Concezione (December 8)
+    if (month === 12 && day >= 7 && day <= 9) {
+        return 'immaculate';
+    }
+    
+    // Christmas (December 20-31)
+    if (month === 12 && day >= 20) {
+        return 'christmas';
+    }
+    
+    // Santo Stefano (December 26)
+    if (month === 12 && day >= 25 && day <= 27) {
+        return 'saint_stephen';
     }
     
     // Summer (June 15 - September 15)
@@ -3064,7 +3461,11 @@ function showWelcomeMessage() {
     
     // Show "Pausa Ristoro 🥤" immediately after welcome (Strategy: break the ice with low-cost impulse purchase)
     setTimeout(() => {
-        addMessage("<div style='padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);'><strong style='font-size: 1.1em; display: block; margin-bottom: 8px;'>✨ Pausa Smart</strong><p style='margin: 0; font-size: 0.95em; line-height: 1.5;'>Mentre esplori, i nostri clienti più fedeli scelgono questi must-have per ricaricare le energie:</p><div style='margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;'><a href='https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>⚡ Powerade</a><a href='https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>🥤 Pepsi Max</a></div></div>", 'bot');
+        const conversationalPausa = [
+            "<div style='padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);'><strong style='font-size: 1.1em; display: block; margin-bottom: 8px;'>✨ Pausa Smart</strong><p style='margin: 0; font-size: 0.95em; line-height: 1.5;'>Senti, mentre esplori, i nostri clienti più fedeli scelgono questi must-have per ricaricare le energie:</p><div style='margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;'><a href='https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>⚡ Powerade</a><a href='https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>🥤 Pepsi Max</a></div></div>",
+            "<div style='padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);'><strong style='font-size: 1.1em; display: block; margin-bottom: 8px;'>✨ Pausa Smart</strong><p style='margin: 0; font-size: 0.95em; line-height: 1.5;'>Guarda, mentre guardi, i nostri clienti più fedeli prendono sempre questi per ricaricarsi:</p><div style='margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;'><a href='https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>⚡ Powerade</a><a href='https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>🥤 Pepsi Max</a></div></div>"
+        ];
+        addMessage(conversationalPausa[Math.floor(Math.random() * conversationalPausa.length)], 'bot');
     }, 400);
     
     // Check for seasonal occasion (no personal occasions like birthdays)
@@ -3303,6 +3704,582 @@ function applyBotTheme(categoryKey) {
     chatButton.classList.add(themeClass);
 }
 
+// Track conversation state for follow-up questions
+let conversationState = {
+    waitingForInterests: false,
+    recipient: null,
+    occasion: null,
+    giftMode: false,
+    giftStep: 0, // 0: initial, 1: asking preferences, 2: showing products
+    giftPreferences: {},
+    personalShopperObject: null,
+    personalShopperFlow: null
+};
+
+// Conversion cooldown: bot pauses after user clicks (freno a mano)
+let botPausedUntil = 0;
+const CONVERSION_COOLDOWN_MS = 30 * 60 * 1000; // 30 minutes cooldown after click
+
+// Sequential combo tracking
+let comboSequenceIndex = 0;
+const comboSequence = ['educational', 'social_proof', 'urgency'];
+
+// Function to pause bot after user interaction (click on product)
+function pauseBotForConversion() {
+    botPausedUntil = Date.now() + CONVERSION_COOLDOWN_MS;
+    console.log('Bot paused for conversion until:', new Date(botPausedUntil));
+}
+
+// Function to check if bot is paused
+function isBotPaused() {
+    return Date.now() < botPausedUntil;
+}
+
+// Function to detect emoji in message
+function detectEmojiSentiment(message) {
+    const emojiPatterns = {
+        positive: ['😊', '😄', '😃', '🙂', '😍', '🥰', '😎', '👍', '👌', '✨', '🎉', '🎊', '💖', '❤️', '🔥', '⭐', '🌟'],
+        negative: ['😔', '😢', '😭', '😞', '😠', '😡', '👎', '❌', '💔', '😤'],
+        excited: ['🤩', '😆', '🥳', '🎁', '🎈', '🎂', '🎀', '💫'],
+        neutral: ['🤔', '😐', '🤷', '🙄', '😶']
+    };
+    
+    const detected = {
+        positive: false,
+        negative: false,
+        excited: false,
+        neutral: false,
+        emojis: []
+    };
+    
+    for (const [sentiment, emojis] of Object.entries(emojiPatterns)) {
+        for (const emoji of emojis) {
+            if (message.includes(emoji)) {
+                detected[sentiment] = true;
+                detected.emojis.push({ emoji, sentiment });
+            }
+        }
+    }
+    
+    return detected;
+}
+
+// Function to detect aesthetic preferences (color, style)
+function detectAestheticPreferences(message) {
+    const lowerMessage = message.toLowerCase();
+    const preferences = {
+        colors: [],
+        styles: [],
+        materials: []
+    };
+    
+    // Color detection
+    const colorKeywords = {
+        'rosso': 'rosso',
+        'blu': 'blu',
+        'verde': 'verde',
+        'giallo': 'giallo',
+        'nero': 'nero',
+        'bianco': 'bianco',
+        'grigio': 'grigio',
+        'marrone': 'marrone',
+        'rosa': 'rosa',
+        'viola': 'viola',
+        'arancione': 'arancione',
+        'azzurro': 'azzurro',
+        'beige': 'beige',
+        'oro': 'oro',
+        'argento': 'argento'
+    };
+    
+    for (const [keyword, color] of Object.entries(colorKeywords)) {
+        if (lowerMessage.includes(keyword)) {
+            preferences.colors.push(color);
+        }
+    }
+    
+    // Style detection
+    const styleKeywords = {
+        'moderno': 'moderno',
+        'classico': 'classico',
+        'elegante': 'elegante',
+        'minimal': 'minimal',
+        'vintage': 'vintage',
+        'rustico': 'rustico',
+        'industriale': 'industriale',
+        'scandinavo': 'scandinavo',
+        'sportivo': 'sportivo',
+        'casual': 'casual',
+        'formale': 'formale',
+        'bohemien': 'bohemien',
+        'contemporaneo': 'contemporaneo'
+    };
+    
+    for (const [keyword, style] of Object.entries(styleKeywords)) {
+        if (lowerMessage.includes(keyword)) {
+            preferences.styles.push(style);
+        }
+    }
+    
+    // Material detection
+    const materialKeywords = {
+        'legno': 'legno',
+        'metallo': 'metallo',
+        'plastica': 'plastica',
+        'vetro': 'vetro',
+        'tessuto': 'tessuto',
+        'pelle': 'pelle',
+        'cotone': 'cotone',
+        'lino': 'lino',
+        'seta': 'seta',
+        'acciaio': 'acciaio',
+        'ceramica': 'ceramica'
+    };
+    
+    for (const [keyword, material] of Object.entries(materialKeywords)) {
+        if (lowerMessage.includes(keyword)) {
+            preferences.materials.push(material);
+        }
+    }
+    
+    return preferences;
+}
+
+// Function to get current page context
+function getCurrentPageContext() {
+    const currentPath = window.location.pathname;
+    const currentUrl = window.location.href;
+    
+    // Detect category from URL
+    for (const [categoryKey, categoryData] of Object.entries(NicheDatabase)) {
+        if (categoryData.url && currentPath.includes(categoryData.url.replace('/index.html', '').replace('/', ''))) {
+            return {
+                category: categoryKey,
+                categoryName: categoryData.name,
+                personality: categoryData.personality,
+                valueProp: categoryData.valueProp
+            };
+        }
+    }
+    
+    return null;
+}
+
+// Function to track user interaction for learning
+function trackUserInteraction(message, category, productsShown) {
+    const interaction = {
+        timestamp: Date.now(),
+        message: message,
+        category: category,
+        productsShown: productsShown,
+        pageContext: getCurrentPageContext()
+    };
+    
+    userInteractionHistory.push(interaction);
+    
+    // Keep only last 50 interactions
+    if (userInteractionHistory.length > 50) {
+        userInteractionHistory.shift();
+    }
+    
+    // Save to localStorage
+    try {
+        localStorage.setItem('smartChoicesBotInteractions', JSON.stringify(userInteractionHistory));
+    } catch (e) {
+        console.log('Unable to save interactions:', e);
+    }
+}
+
+// Function to get recommendations based on navigation history
+function getRecommendationsFromHistory() {
+    if (userInteractionHistory.length === 0) return [];
+    
+    // Count category frequency
+    const categoryCount = {};
+    for (const interaction of userInteractionHistory) {
+        if (interaction.category) {
+            categoryCount[interaction.category] = (categoryCount[interaction.category] || 0) + 1;
+        }
+    }
+    
+    // Get top 3 categories
+    const sortedCategories = Object.entries(categoryCount)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 3)
+        .map(([category]) => category);
+    
+    return sortedCategories;
+}
+
+// Function to detect niche from message using NicheDatabase tags (dynamic system)
+function detectNicheFromMessage(message) {
+    const lowerMessage = message.toLowerCase();
+    
+    // Use NicheDatabase tags for dynamic niche detection
+    let bestMatch = null;
+    let highestScore = 0;
+    
+    for (const [categoryKey, categoryData] of Object.entries(NicheDatabase)) {
+        if (!categoryData.tags || !Array.isArray(categoryData.tags)) continue;
+        
+        let score = 0;
+        for (const tag of categoryData.tags) {
+            // Exact match - high score
+            if (lowerMessage.includes(tag)) {
+                score += 10;
+            }
+        }
+        
+        if (score > highestScore) {
+            highestScore = score;
+            bestMatch = categoryKey;
+        }
+    }
+    
+    return bestMatch || null;
+}
+
+// Function to trigger gift mode with conversational flow
+function triggerGiftMode(recipient, niche) {
+    conversationState.giftMode = true;
+    conversationState.giftStep = 1;
+    conversationState.recipient = recipient;
+    conversationState.giftPreferences = { niche }; // Save niche for later use
+    
+    // Domande specifiche per categoria
+    const categoryQuestions = {
+        'auto': `Grande, un regalo per ${recipient} che ama le auto! Ma che tipo di "automobilista" è? È uno che ama la velocità, uno che cura la sua auto come un gioiello, o magari un appassionato di simulazioni di guida?`,
+        'sport': `Perfetto, ${recipient} ama lo sport! Ma che tipo di sportivo è? È uno che ama la competizione, uno che si allena per il fitness, o magari un appassionato di sport all'aria aperta?`,
+        'tecnologia': `Ottimo, ${recipient} ama la tecnologia! Ma che tipo di tech enthusiast è? È uno che ama i gadget, uno che cerca performance, o magari un appassionato di gaming?`,
+        'musica': `Fantastico, ${recipient} ama la musica! Ma che tipo di musicista è? È uno che suona, uno che ascolta, o magari un collezionista di vinili?`,
+        'cucina': `Bella idea, ${recipient} ama la cucina! Ma che tipo di cuoco è? È uno che ama sperimentare, uno che cerca praticità, o magari un appassionato di dolci?`,
+        'viaggi': `Perfetto, ${recipient} ama viaggiare! Ma che tipo di viaggiatore è? È uno che ama l'avventura, uno che cerca comfort, o magari un appassionato di città d'arte?`,
+        'pesca': `Ottima idea, ${recipient} ama la pesca! Ma che tipo di pescatore è? È uno che ama la pesca sportiva, uno che preferisce la pesca in mare, o magari un appassionato di pesca in fiume?`,
+        'parrucchiere': `Ottima idea, ${recipient} ama la cura dei capelli! Ma che tipo di prodotti preferisce? È più per styling professionale, per cura quotidiana, o magari per trattamenti specifici?`,
+        'sostenibilita': `Perfetto, ${recipient} ama la sostenibilità! Ma che tipo di prodotti eco-friendly preferisce? È più per energia solare, per riduzione plastica, o magari per materiali riciclati?`,
+        'default': `Ottima scelta! Per non sbagliare, preferisci qualcosa di utile per la manutenzione o un accessorio che aggiunga stile?`
+    };
+    
+    const question = niche && categoryQuestions[niche] ? categoryQuestions[niche] : categoryQuestions['default'];
+    return `🎁 ${question}`;
+}
+
+// Function to generate emotional product descriptions
+function generateEmotionalDescription(product, recipient) {
+    const emotionalDescriptions = {
+        'auto': `Fai brillare la sua auto come se fosse appena uscita dal concessionario. Questo è il regalo che ogni amante delle auto sogna.`,
+        'sport': `Fai sentire ${recipient} un vero atleta. Questo accessorio trasformerà ogni allenamento in un momento speciale.`,
+        'tecnologia': `Regala a ${recipient} la tecnologia che sogna. Questo gadget non è solo utile, è un'esperienza.`,
+        'musica': `Fai vivere a ${recipient} la musica come mai prima. Questo oggetto crea ricordi indelebili.`,
+        'cucina': `Trasforma ogni momento in cucina in un'esperienza gourmet. Questo è il regalo che ogni cuoco sogna.`,
+        'viaggi': `Rendi ogni viaggio di ${recipient} un'avventura indimenticabile. Questo accessorio fa la differenza.`,
+        'default': `Questo è il regalo perfetto per ${recipient}. Non è solo un oggetto, è un'emozione.`
+    };
+    
+    return emotionalDescriptions['default']; // Default fallback
+}
+
+// Function to get "safe choice" message
+function getSafeChoiceMessage(product) {
+    return `⭐ Questo è il mio prodotto più venduto per i regali. Non si sbaglia mai - è la scelta sicura per fare bella figura.`;
+}
+
+// Function to generate gift mode response based on user's answer
+function generateGiftModeResponse(recipient, niche, userResponse) {
+    const lowerResponse = userResponse.toLowerCase();
+    
+    // Check if user specified a specific object (like "canna da pesca")
+    const objectKeywords = {
+        'canna': 'pesca',
+        'orologio': 'tecnologia',
+        'profumo': 'moda',
+        'gioiello': 'moda',
+        'scarpe': 'moda',
+        'borsa': 'moda'
+    };
+    
+    let detectedNiche = niche;
+    for (const [object, objectNiche] of Object.entries(objectKeywords)) {
+        if (lowerResponse.includes(object)) {
+            detectedNiche = objectNiche;
+            break;
+        }
+    }
+    
+    // Get products from NicheDatabase for the detected niche
+    let nicheData = NicheDatabase[detectedNiche];
+    let topProducts = [];
+    
+    // If niche doesn't exist in database, use fallback products
+    if (!nicheData) {
+        console.log(`Niche ${detectedNiche} not found in database, using fallback`);
+        if (detectedNiche === 'pesca') {
+            // Fallback products for pesca
+            topProducts = [
+                {
+                    name: "Canna da Pesca Telescopica",
+                    description: "Canna da pesca telescopica in carbonio, ideale per pesca in mare e fiume",
+                    icon: "fa-water",
+                    link: "https://www.amazon.it/s?k=canna+pesca&tag=l0c39-21"
+                },
+                {
+                    name: "Mulinello da Pesca Professionale",
+                    description: "Mulinello da pesca con frizione regolabile, perfetto per spinning e surfcasting",
+                    icon: "fa-cog",
+                    link: "https://www.amazon.it/s?k=mulinello+pesca&tag=l0c39-21"
+                },
+                {
+                    name: "Kit Accessori Pesca Completo",
+                    description: "Kit completo con ami, lenze, galleggianti e piombi per iniziare a pescare",
+                    icon: "fa-toolbox",
+                    link: "https://www.amazon.it/s?k=kit+accessori+pesca&tag=l0c39-21"
+                }
+            ];
+        } else {
+            // Use default niche as fallback
+            nicheData = NicheDatabase['default'];
+            topProducts = nicheData.topProducts || [];
+        }
+    } else {
+        topProducts = nicheData.topProducts || [];
+    }
+    
+    // Generate product list HTML
+    let productListHTML = '';
+    if (topProducts.length > 0) {
+        productListHTML = '<div class="gift-products-list" style="margin-top: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px;">';
+        productListHTML += '<div style="font-weight: bold; margin-bottom: 10px;">📦 Prodotti consigliati:</div>';
+        
+        topProducts.slice(0, 3).forEach((product, index) => {
+            if (product.link) {
+                productListHTML += `
+                    <div style="margin-bottom: 8px;">
+                        <a href="${product.link}" target="_blank" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da;">
+                            ${index + 1}. ${product.name}
+                        </a>
+                    </div>
+                `;
+            }
+        });
+        
+        // Add link to niche page for those who want to explore more
+        const nicheUrls = {
+            'pesca': 'https://smart-choices-guide.vercel.app/pesca/index.html',
+            'auto': 'https://smart-choices-guide.vercel.app/auto-moto/index.html',
+            'sport': 'https://smart-choices-guide.vercel.app/sport-estivi/index.html',
+            'tecnologia': 'https://smart-choices-guide.vercel.app/tech-gadgets/index.html',
+            'musica': 'https://smart-choices-guide.vercel.app/musica-vinili/index.html',
+            'cucina': 'https://smart-choices-guide.vercel.app/cucina-elettrodomestici/index.html',
+            'viaggi': 'https://smart-choices-guide.vercel.app/viaggi-vacanze/index.html'
+        };
+        
+        const nicheUrl = nicheUrls[detectedNiche] || 'https://smart-choices-guide.vercel.app/';
+        productListHTML += `
+            <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid #dee2e6;">
+                <a href="${nicheUrl}" target="_blank" style="color: #032B44; text-decoration: none; font-size: 0.9em; display: block; text-align: center; padding: 6px; background: #e9ecef; border-radius: 6px;">
+                    🔍 Non sei convinto? Vedi tutti i prodotti per ${detectedNiche}
+                </a>
+            </div>
+        `;
+        
+        productListHTML += '</div>';
+    }
+    
+    // Analyze user's response to understand preferences
+    let preferenceType = 'general';
+    if (lowerResponse.includes('velocità') || lowerResponse.includes('veloce') || lowerResponse.includes('performance')) {
+        preferenceType = 'performance';
+    } else if (lowerResponse.includes('cura') || lowerResponse.includes('maniacale') || lowerResponse.includes('dettaglio')) {
+        preferenceType = 'detail';
+    } else if (lowerResponse.includes('simulazione') || lowerResponse.includes('gaming') || lowerResponse.includes('virtuale')) {
+        preferenceType = 'simulation';
+    }
+    
+    // Generate emotional response based on preference
+    const emotionalResponses = {
+        'auto': {
+            'performance': `Ah, un amante della velocità! Allora non gli regalare il solito accessorio. Ho selezionato 3 prodotti che migliorano davvero le performance: kit di potenziamento, accessori aerodinamici e gadget per la guida sportiva. Fai sentire ${recipient} un vero pilota!`,
+            'detail': `Ah, un purista! Allora non gli regalare il solito profumino. Ho selezionato 3 kit di detailing professionale o accessori per interni che fanno davvero la differenza. Fai brillare la sua auto come se fosse appena uscita dal concessionario.`,
+            'simulation': `Ah, un appassionato di simulazioni! Ho selezionato 3 accessori per trasformare la sua esperienza di guida virtuale in qualcosa di incredibile. Volanti professionali, pedaliere e sistemi di force feedback che fanno la differenza.`,
+            'general': `Perfetto! Ho selezionato 3 prodotti che ogni amante delle auto sogna. Dagli un'occhiata, sono scelti apposta per ${recipient}.`
+        },
+        'sport': {
+            'performance': `Ah, uno che ama la competizione! Ho selezionato 3 accessori per migliorare le performance: abbigliamento tecnico, attrezzi professionali e gadget per il monitoraggio. Fai sentire ${recipient} un vero atleta!`,
+            'detail': `Ah, uno che cura ogni dettaglio! Ho selezionato 3 accessori per l'allenamento perfetto: strumenti professionali, kit di recupero e gadget per il tracking. La qualità fa la differenza.`,
+            'general': `Perfetto! Ho selezionato 3 prodotti che ogni sportivo sogna. Dagli un'occhiata, sono scelti apposta per ${recipient}.`
+        },
+        'pesca': {
+            'general': `Ottima scelta! Ho selezionato 3 prodotti che ogni pescatore sogna. Dagli un'occhiata, sono scelti apposta per ${recipient}.`
+        },
+        'default': {
+            'general': `Perfetto! Ho selezionato 3 prodotti che fanno davvero la differenza. Dagli un'occhiata, sono scelti apposta per ${recipient}.`
+        }
+    };
+    
+    const nicheResponses = emotionalResponses[detectedNiche] || emotionalResponses['default'];
+    const response = nicheResponses[preferenceType] || nicheResponses['general'];
+    
+    return `🎁 ${response} ${getSafeChoiceMessage()} ${productListHTML}`;
+}
+
+// Personal Shopper function - intercepts specific objects and activates conversational flow
+function gestisciPersonalShopper(input, recipient) {
+    const inputLower = input.toLowerCase();
+    
+    // Object-specific conversational flows
+    const objectFlows = {
+        'borsa': {
+            validate: "Ottima scelta! Una borsa è un regalo che non passa mai di moda e che lei userà ogni giorno.",
+            qualify: "Per essere sicuri di prenderne una che lei adori davvero, ha uno stile più 'pratico per tutti i giorni' (tipo una shopper spaziosa) o preferisce qualcosa di più 'elegante e compatto' per le occasioni speciali?",
+            propose: "Ho dato un'occhiata alle collezioni più amate quest'anno e questa borsa ha un design che sta spopolando proprio perché è ultra-versatile. Ti lascio il link per vederla da vicino, secondo me per tua moglie sarebbe perfetta."
+        },
+        'orologio': {
+            validate: "Ottima scelta! Un orologio è un regalo che dura nel tempo e che ricorda ogni momento speciale.",
+            qualify: "Per fare centro, preferisce uno stile più 'classico ed elegante' (tipo un cronografo tradizionale) o qualcosa di più 'moderno e sportivo' con funzioni smart?",
+            propose: "Ho visto che questo orologio è tra i più apprezzati quest'anno perché combina design italiano con precisione svizzera. Ti lascio il link, secondo me sarebbe perfetto per lui."
+        },
+        'profumo': {
+            validate: "Ottima scelta! Un profumo è un regalo molto personale che crea ricordi indelebili.",
+            qualify: "Per non sbagliare, preferisce fragranze più 'fresche e agrumate' per il giorno, o qualcosa di più 'intenso e avvolgente' per la sera?",
+            propose: "Ho dato un'occhiata alle fragranze più amate e questo profumo ha note che stanno spopolando proprio perché sono versatili e durature. Ti lascio il link, secondo me sarebbe perfetto."
+        },
+        'gioiello': {
+            validate: "Ottima scelta! Un gioiello è un regalo che tramanda emozioni e ricordi speciali.",
+            qualify: "Per essere sicuri, preferisce qualcosa di più 'classico e discreto' (tipo un bracciale sottile) o un pezzo più 'audace e di carattere'?",
+            propose: "Ho visto che questo gioiello è tra i più desiderati quest'anno perché ha un design che unisce tradizione e modernità. Ti lascio il link, secondo me sarebbe perfetto."
+        },
+        'scarpe': {
+            validate: "Ottima scelta! Le scarpe giuste possono trasformare completamente un outfit e far sentire speciale.",
+            qualify: "Per fare centro, preferisce qualcosa di più 'comodo per tutti i giorni' (tipo sneakers o scarpe da passeggio) o un paio più 'elegante per occasioni speciali'?",
+            propose: "Ho dato un'occhiata ai modelli più amati e queste scarpe hanno un design che sta spopolando proprio perché unisce comfort e stile. Ti lascio il link, secondo me sarebbero perfette."
+        }
+    };
+    
+    // Check if input contains any of the objects
+    for (const [object, flow] of Object.entries(objectFlows)) {
+        if (inputLower.includes(object)) {
+            // Activate personal shopper mode
+            conversationState.giftMode = true;
+            conversationState.giftStep = 1;
+            conversationState.personalShopperObject = object;
+            conversationState.personalShopperFlow = flow;
+            
+            return {
+                type: 'personal_shopper',
+                object,
+                message: `🎁 ${flow.validate} ${flow.qualify}`
+            };
+        }
+    }
+    
+    return null;
+}
+
+// Function to get current combo message type (sequential)
+function getCurrentComboMessageType() {
+    const messageType = comboSequence[comboSequenceIndex];
+    comboSequenceIndex = (comboSequenceIndex + 1) % comboSequence.length; // Cycle through sequence
+    return messageType;
+}
+
+// Function to generate sequential combo message
+function generateSequentialComboMessage(product1, product2, messageType) {
+    const messages = {
+        'educational': [
+            `Sapevi che ${product1.name} è perfetto per risolvere il problema X?`,
+            `Ti dico una cosa: ${product1.name} ha una caratteristica incredibile che cambia tutto.`,
+            `Guarda, ${product1.name} è stato progettato specificamente per chi cerca qualità.`
+        ],
+        'social_proof': [
+            `Ho visto che ${product1.name} è il più venduto nella sua categoria.`,
+            `Sai cosa ti dico? ${product1.name} ha migliaia di recensioni positive.`,
+            `Ti assicuro, ${product1.name} è il preferito dai nostri clienti.`
+        ],
+        'urgency': [
+            `Occhio, l'offerta per ${product1.name} scade presto!`,
+            `Attenzione: ${product1.name} è in offerta limitata.`,
+            `Fidati, il prezzo di ${product1.name} potrebbe cambiare da un momento all'altro.`
+        ]
+    };
+    
+    const messageArray = messages[messageType] || messages['educational'];
+    return messageArray[Math.floor(Math.random() * messageArray.length)];
+}
+
+// Analyze interests from user response
+function analyzeInterests(message) {
+    const lowerMessage = message.toLowerCase();
+    const interests = [];
+    
+    const interestKeywords = {
+        'animali': ['animale', 'animali', 'cane', 'gatto', 'cucciolo', 'pet', 'zoo', 'natura'],
+        'gioielli': ['gioiello', 'gioielli', 'anello', 'collana', 'bracciale', 'oro', 'argento', 'diamante'],
+        'libri': ['libro', 'libri', 'lettura', 'romanzo', 'storia', 'narrativa'],
+        'sport': ['sport', 'calcio', 'basket', 'tennis', 'palestra', 'fitness', 'corsa', 'nuoto'],
+        'tecnologia': ['tecnologia', 'tech', 'computer', 'smartphone', 'tablet', 'gadget', 'elettronica'],
+        'musica': ['musica', 'canzone', 'chitarra', 'piano', 'strumento', 'vinile', 'cd'],
+        'arte': ['arte', 'quadro', 'pittura', 'disegno', 'creativo', 'design'],
+        'cucina': ['cucina', 'cucinare', 'ricetta', 'pentole', 'elettrodomestici', 'food'],
+        'viaggi': ['viaggio', 'viaggiare', 'valigia', 'borsa', 'turismo', 'vacanza'],
+        'moda': ['moda', 'abbigliamento', 'vestiti', 'scarpe', 'borsa', 'accessorio'],
+        'giardinaggio': ['giardino', 'pianta', 'fiori', 'giardinaggio', 'orto', 'natura'],
+        'fai da te': ['fai da te', 'bricolage', 'strumenti', 'riparare', 'costruire']
+    };
+    
+    for (const [interest, keywords] of Object.entries(interestKeywords)) {
+        for (const keyword of keywords) {
+            if (lowerMessage.includes(keyword)) {
+                if (!interests.includes(interest)) {
+                    interests.push(interest);
+                }
+                break;
+            }
+        }
+    }
+    
+    return interests;
+}
+
+// Generate response based on interests
+function generateInterestBasedResponse(recipient, interests) {
+    if (interests.length === 0) {
+        const defaultSuggestions = recipientProductSuggestions[recipient] || [];
+        const randomSuggestion = defaultSuggestions[Math.floor(Math.random() * defaultSuggestions.length)];
+        return `🎁 Capisco! Per ${recipient}, ti consiglio ${randomSuggestion}. Ecco i prodotti selezionati per te:`;
+    }
+    
+    const interestProductMap = {
+        'animali': ['un peluche', 'un accessorio per animali', 'un libro sugli animali', 'un quadro con animali'],
+        'gioielli': ['un anello', 'una collana', 'un bracciale', 'un set di gioielli'],
+        'libri': ['un libro', 'un kindle', 'un set di libri', 'un libro raro'],
+        'sport': ['un accessorio sportivo', 'un abbigliamento sportivo', 'un attrezzo ginnico', 'un gadget sportivo'],
+        'tecnologia': ['un gadget tech', 'un accessorio elettronico', 'un dispositivo smart', 'un gadget innovativo'],
+        'musica': ['un vinile', 'un strumento musicale', 'un accessorio musicale', 'un gadget musicale'],
+        'arte': ['un quadro', 'un set artistico', 'un oggetto decorativo', 'un kit creativo'],
+        'cucina': ['un elettrodomestico', 'un accessorio cucina', 'un set pentole', 'un gadget cucina'],
+        'viaggi': ['una valigia', 'un accessorio viaggio', 'un borsone', 'un gadget da viaggio'],
+        'moda': ['un accessorio moda', 'un abbigliamento', 'una borsa', 'un paio di scarpe'],
+        'giardinaggio': ['una pianta', 'un accessorio giardinaggio', 'un vaso', 'un set fiori'],
+        'fai da te': ['un kit fai da te', 'degli strumenti', 'un progetto creativo', 'un accessorio bricolage']
+    };
+    
+    const suggestions = [];
+    for (const interest of interests) {
+        const products = interestProductMap[interest] || [];
+        if (products.length > 0) {
+            const randomProduct = products[Math.floor(Math.random() * products.length)];
+            suggestions.push(randomProduct);
+        }
+    }
+    
+    if (suggestions.length === 0) {
+        return `🎁 Capisco! Per ${recipient}, ecco i prodotti selezionati per te:`;
+    }
+    
+    const suggestionsText = suggestions.slice(0, 2).join(' o ');
+    return `🎁 Perfetto! Per ${recipient} che ama ${interests.join(' e ')}, ti consiglio ${suggestionsText}. Ecco i prodotti selezionati per te:`;
+}
+
 // Analyze message and find category with intelligent fallback using NicheDatabase
 async function analyzeMessage(message) {
     if (!message || typeof message !== 'string') return null;
@@ -3310,15 +4287,183 @@ async function analyzeMessage(message) {
     const lowerMessage = message.toLowerCase();
     const words = lowerMessage.split(/\s+/);
     
+    // High priority intent detection (ignora stop words)
+    const highPriorityKeywords = ['comprare', 'acquisto', 'acquistare', 'compra', 'voglio', 'desidero', 'cerco', 'serve', 'mi serve', 'ho bisogno', 'necessito', 'vorrei', 'mi piacerebbe', 'sto cercando', 'sta cercando', 'vuole', 'desidera', 'cerca', 'trovare', 'cercare', 'scoprire', 'vedere', 'guardare', 'vorrebbe', 'desidererebbe', 'cercherebbe', 'necessiterebbe', 'piacerebbe', 'starebbe cercando'];
+    const hasHighPriorityIntent = highPriorityKeywords.some(keyword => lowerMessage.includes(keyword));
+    
     // Filter out stop words
     const meaningfulWords = words.filter(word => word.length > 2 && !stopWords.includes(word));
     
-    // If message only contains stop words, return null
-    if (meaningfulWords.length === 0) {
+    // If message only contains stop words BUT has high priority intent, continue processing
+    if (meaningfulWords.length === 0 && !hasHighPriorityIntent) {
         return null;
     }
     
     let context = null;
+    let giftContext = null;
+    let recipient = null;
+    let occasion = null;
+    
+    // Detect gift intention
+    const giftKeywords = ['regalo', 'donare', 'presente', 'offrire', 'sorprendere', 'festeggiare', 'compleanno', 'natale', 'valentino'];
+    const hasGiftIntention = giftKeywords.some(keyword => lowerMessage.includes(keyword));
+    
+    // Detect specific occasions
+    const occasionKeywords = {
+        'anniversario': 'anniversario',
+        'compleanno': 'compleanno',
+        'natale': 'natale',
+        'san valentino': 'san_valentino',
+        'valentino': 'san_valentino',
+        'festa della mamma': 'festa_della_mamma',
+        'festa del papà': 'festa_del_papà',
+        'pasqua': 'pasqua',
+        'carnevale': 'carnevale',
+        'halloween': 'halloween',
+        'capodanno': 'capodanno'
+    };
+    
+    for (const [keyword, occasionType] of Object.entries(occasionKeywords)) {
+        if (lowerMessage.includes(keyword)) {
+            occasion = occasionType;
+            break;
+        }
+    }
+    
+    // Detect recipient - with conversational variants
+    const recipientKeywords = {
+        'figlio': 'figlio',
+        'figlia': 'figlia',
+        'bambino': 'bambino',
+        'bambina': 'bambina',
+        'moglie': 'moglie',
+        'marito': 'marito',
+        'padre': 'padre',
+        'madre': 'madre',
+        'mamma': 'madre',
+        'papà': 'padre',
+        'amico': 'amico',
+        'amica': 'amica',
+        'fidanzata': 'fidanzata',
+        'fidanzato': 'fidanzato',
+        'sorella': 'sorella',
+        'fratello': 'fratello',
+        'nonno': 'nonno',
+        'nonna': 'nonna',
+        'zio': 'zio',
+        'zia': 'zia',
+        'cugino': 'cugino',
+        'cugina': 'cugina',
+        'nipote': 'nipote',
+        'nipotino': 'nipotino',
+        'nipotina': 'nipotina',
+        'genero': 'genero',
+        'nuora': 'nuora',
+        'suocero': 'suocero',
+        'suocera': 'suocera',
+        'cognato': 'cognato',
+        'cognata': 'cognata',
+        'collega': 'collega',
+        'compagno': 'compagno',
+        'compagna': 'compagna',
+        'partner': 'partner',
+        'familiare': 'familiare',
+        'parente': 'parente',
+        // Conversational variants
+        'mio figlio': 'figlio',
+        'mia figlia': 'figlia',
+        'mio padre': 'padre',
+        'mia madre': 'madre',
+        'mio marito': 'marito',
+        'mia moglie': 'moglie',
+        'mio nonno': 'nonno',
+        'mia nonna': 'nonna',
+        'mio fratello': 'fratello',
+        'mia sorella': 'sorella',
+        'mio amico': 'amico',
+        'mia amica': 'amica',
+        'mio fidanzato': 'fidanzato',
+        'mia fidanzata': 'fidanzata',
+        'tuo figlio': 'figlio',
+        'tua figlia': 'figlia',
+        'tuo padre': 'padre',
+        'tua madre': 'madre',
+        'tuo marito': 'marito',
+        'tua moglie': 'moglie',
+        'tuo nonno': 'nonno',
+        'tua nonna': 'nonna',
+        'tuo fratello': 'fratello',
+        'tua sorella': 'sorella',
+        'tuo amico': 'amico',
+        'tua amica': 'amica',
+        'tuo fidanzato': 'fidanzato',
+        'tua fidanzata': 'fidanzata',
+        'mio zio': 'zio',
+        'mia zia': 'zia',
+        'mio cugino': 'cugino',
+        'mia cugina': 'cugina',
+        'mio nipote': 'nipote',
+        'tuo zio': 'zio',
+        'tua zia': 'zia',
+        'tuo cugino': 'cugino',
+        'tua cugina': 'cugina',
+        'tuo nipote': 'nipote'
+    };
+    
+    for (const [keyword, recipientType] of Object.entries(recipientKeywords)) {
+        if (lowerMessage.includes(keyword)) {
+            recipient = recipientType;
+            break;
+        }
+    }
+    
+    // Product suggestions based on recipient
+    const recipientProductSuggestions = {
+        'nonna': ['un bel quadro', 'un vaso decorativo', 'una pianta', 'un maglione caldo', 'un libro'],
+        'nonno': ['un orologio', 'un libro', 'un cappello', 'una sciarpa', 'un portafoglio'],
+        'mamma': ['un profumo', 'un gioiello', 'un libro', 'una pianta', 'un quadro'],
+        'padre': ['un orologio', 'un portafoglio', 'un libro', 'una cintura', 'un accessorio tech'],
+        'moglie': ['un gioiello', 'un profumo', 'un bouquet di fiori', 'un accessorio moda', 'un oggetto per la casa'],
+        'marito': ['un orologio', 'un accessorio tech', 'un portafoglio', 'un libro', 'un gadget'],
+        'figlio': ['un videogioco', 'un gadget tech', 'un giocattolo', 'un libro', 'un accessorio sportivo'],
+        'figlia': ['un gioiello', 'un accessorio moda', 'un libro', 'un giocattolo', 'un oggetto decorativo'],
+        'amico': ['un gadget tech', 'un libro', 'un accessorio sportivo', 'un gioco', 'un gadget divertente'],
+        'amica': ['un accessorio moda', 'un profumo', 'un libro', 'un oggetto decorativo', 'un gioiello'],
+        'fidanzata': ['un gioiello', 'un profumo', 'un bouquet di fiori', 'un accessorio moda', 'un oggetto romantico'],
+        'fidanzato': ['un orologio', 'un accessorio tech', 'un portafoglio', 'un gadget', 'un oggetto romantico'],
+        'sorella': ['un accessorio moda', 'un libro', 'un oggetto decorativo', 'un profumo', 'un gioiello'],
+        'fratello': ['un gadget tech', 'un libro', 'un accessorio sportivo', 'un gioco', 'un gadget divertente']
+    };
+    
+    // If gift intention detected, set context to festività
+    if (hasGiftIntention) {
+        context = 'gift';
+        // Get product suggestions for this recipient
+        const suggestions = recipientProductSuggestions[recipient] || [];
+        giftContext = { hasGiftIntention, recipient, occasion, suggestions };
+        
+        // Check for Personal Shopper objects first
+        const personalShopperResponse = gestisciPersonalShopper(lowerMessage, recipient);
+        if (personalShopperResponse) {
+            return personalShopperResponse;
+        }
+        
+        // Activate gift mode with conversational flow (PRIORITÀ ALTA)
+        // Always activate gift mode when we have a recipient and gift intention
+        if (recipient && !occasion) {
+            // Simple message like "voglio fare un regalo per mio figlio"
+            // Activate gift mode and ask specific questions
+            const niche = detectNicheFromMessage(lowerMessage);
+            const giftQuestion = triggerGiftMode(recipient, niche);
+            
+            return {
+                type: 'gift_mode',
+                recipient,
+                niche,
+                message: giftQuestion
+            };
+        }
+    }
     
     // Detect context keywords
     if (lowerMessage.includes('economic') || lowerMessage.includes('economico') || lowerMessage.includes('economiche')) {
@@ -3354,9 +4499,9 @@ async function analyzeMessage(message) {
     // Sort by score (highest first)
     categoryScores.sort((a, b) => b.score - a.score);
     
-    // If we have a clear winner (score >= 10), return it
-    if (categoryScores.length > 0 && categoryScores[0].score >= 10) {
-        return { ...categoryScores[0].categoryData, context, id: categoryScores[0].categoryKey };
+    // If we have a clear winner (score >= 5), return it (lowered threshold from 10)
+    if (categoryScores.length > 0 && categoryScores[0].score >= 5) {
+        return { ...categoryScores[0].categoryData, context, giftContext, id: categoryScores[0].categoryKey };
     }
     
     // Otherwise, return the top 3 suggestions for intelligent fallback
@@ -3364,7 +4509,8 @@ async function analyzeMessage(message) {
         return { 
             type: 'suggestions', 
             suggestions: categoryScores.slice(0, 3).map(s => ({ ...s.categoryData, id: s.categoryKey })),
-            context 
+            context,
+            giftContext
         };
     }
     
@@ -3378,18 +4524,36 @@ async function sendMessage() {
     
     if (!chatInput || !chatMessages) return;
     
-    const message = chatInput.value.trim().toLowerCase();
+    const message = chatInput.value.trim();
     if (!message) return;
     
+    // Detect emoji sentiment
+    const emojiSentiment = detectEmojiSentiment(message);
+    
+    // Detect aesthetic preferences
+    const aestheticPrefs = detectAestheticPreferences(message);
+    
+    // Save aesthetic preferences if detected
+    if (aestheticPrefs.colors.length > 0 || aestheticPrefs.styles.length > 0 || aestheticPrefs.materials.length > 0) {
+        userAestheticPreferences = {
+            ...userAestheticPreferences,
+            colors: [...new Set([...(userAestheticPreferences.colors || []), ...aestheticPrefs.colors])],
+            styles: [...new Set([...(userAestheticPreferences.styles || []), ...aestheticPrefs.styles])],
+            materials: [...new Set([...(userAestheticPreferences.materials || []), ...aestheticPrefs.materials])]
+        };
+        saveAestheticPreferences();
+    }
+    
     // Check for feedback responses
-    if (message === 'sì' || message === 'si' || message === 'yes') {
+    const lowerMessage = message.toLowerCase();
+    if (lowerMessage === 'sì' || lowerMessage === 'si' || lowerMessage === 'yes') {
         addMessage(message, 'user');
         chatInput.value = '';
         addMessage("Grazie per il feedback! Ci aiuta a migliorare le nostre selezioni tecniche.", 'bot');
         return;
     }
     
-    if (message === 'no') {
+    if (lowerMessage === 'no') {
         addMessage(message, 'user');
         chatInput.value = '';
         addMessage("Ci dispiace. Cosa stavi cercando specificamente? Ti aiuteremo a trovarlo.", 'bot');
@@ -3401,7 +4565,8 @@ async function sendMessage() {
         gtag('event', 'bot_message_sent', {
             'message_length': message.length,
             'event_category': 'bot_interaction',
-            'event_label': 'user_message'
+            'event_label': 'user_message',
+            'emoji_sentiment': emojiSentiment.positive ? 'positive' : emojiSentiment.negative ? 'negative' : 'neutral'
         });
     }
     
@@ -3429,6 +4594,83 @@ async function sendMessage() {
     
     setTimeout(async () => {
         if (category) {
+            // Check if it's a personal shopper response
+            if (category.type === 'personal_shopper') {
+                addMessage(category.message, 'bot');
+                conversationState.giftMode = true;
+                conversationState.giftStep = 1;
+                return;
+            }
+            
+            // Check if we're in personal shopper mode and waiting for response
+            if (conversationState.giftMode && conversationState.personalShopperFlow && conversationState.giftStep === 1) {
+                // Generate explosive confirmation response
+                const recipient = conversationState.recipient;
+                const flow = conversationState.personalShopperFlow;
+                const proposeMessage = flow.propose;
+                
+                addMessage(`🎁 ${proposeMessage}`, 'bot');
+                
+                // Reset personal shopper mode
+                conversationState.giftMode = false;
+                conversationState.giftStep = 0;
+                conversationState.personalShopperObject = null;
+                conversationState.personalShopperFlow = null;
+                return;
+            }
+            
+            // Check if it's a gift mode response
+            if (category.type === 'gift_mode') {
+                addMessage(category.message, 'bot');
+                conversationState.giftMode = true;
+                conversationState.giftStep = 1;
+                return;
+            }
+            
+            // Check if we're in gift mode and waiting for response
+            if (conversationState.giftMode && conversationState.giftStep === 1) {
+                // Analyze the user's response about preferences
+                const recipient = conversationState.recipient;
+                const niche = conversationState.giftPreferences.niche || 'default';
+                
+                // Generate emotional response with product suggestions
+                const emotionalResponse = generateGiftModeResponse(recipient, niche, message);
+                addMessage(emotionalResponse, 'bot');
+                
+                // Reset gift mode
+                conversationState.giftMode = false;
+                conversationState.giftStep = 0;
+                conversationState.giftPreferences = {};
+                return;
+            }
+            
+            // Check if it's a follow-up question about interests
+            if (category.type === 'follow_up') {
+                addMessage(category.message, 'bot');
+                conversationState.waitingForInterests = true;
+                return;
+            }
+            
+            // Check if we're waiting for interests response
+            if (conversationState.waitingForInterests) {
+                // Analyze the interests response
+                const interests = analyzeInterests(message);
+                conversationState.waitingForInterests = false;
+                
+                // Generate response based on interests
+                const recipient = conversationState.recipient;
+                const interestResponse = generateInterestBasedResponse(recipient, interests);
+                addMessage(interestResponse, 'bot');
+                
+                // Reset conversation state
+                conversationState = {
+                    waitingForInterests: false,
+                    recipient: null,
+                    occasion: null
+                };
+                return;
+            }
+            
             // Check if it's a suggestions response (intelligent fallback)
             if (category.type === 'suggestions') {
                 addMessage('Non sono sicuro di cosa intendi, ma potresti essere interessato a queste categorie:', 'bot');
@@ -3460,28 +4702,205 @@ async function sendMessage() {
             } else {
                 // Normal category match with dynamic personality-based tone from NicheDatabase
                 const context = category.context;
+                const giftContext = category.giftContext;
                 const categoryKey = category.id;
                 const nicheData = NicheDatabase[categoryKey];
                 
                 let responseText = '';
                 
-                // Use valueProp from NicheDatabase for dynamic consultant tone
-                if (nicheData && nicheData.valueProp) {
-                    responseText = `${nicheData.valueProp}`;
+                // Gift context - consulente per regali
+                if (giftContext && giftContext.hasGiftIntention) {
+                    const recipient = giftContext.recipient;
+                    const suggestions = giftContext.suggestions || [];
+                    let occasion = giftContext.occasion;
                     
-                    if (context === 'budget') {
-                        responseText += ' Ecco alcune opzioni economiche:';
-                    } else if (context === 'best') {
-                        responseText += ' Ecco i migliori prodotti:';
-                    } else {
-                        responseText += ' Ecco i prodotti selezionati:';
+                    // Se l'utente non ha specificato un'occasione, usa quella corrente
+                    if (!occasion) {
+                        const currentOccasion = getCurrentOccasion();
+                        if (currentOccasion) {
+                            // Mappa le occasioni del sistema con quelle del bot
+                            const occasionMapping = {
+                                'valentine': 'san_valentino',
+                                'new_year': 'capodanno',
+                                'carnival': 'carnevale',
+                                'easter': 'pasqua',
+                                'christmas': 'natale'
+                            };
+                            occasion = occasionMapping[currentOccasion] || currentOccasion;
+                        }
                     }
+                    
+                    const recipientText = recipient ? `per ${recipient}` : '';
+                    
+                    // Genera suggerimento prodotto specifico
+                    let productSuggestion = '';
+                    if (suggestions.length > 0) {
+                        const randomSuggestion = suggestions[Math.floor(Math.random() * suggestions.length)];
+                        productSuggestion = `Ti consiglio ${randomSuggestion}. `;
+                    }
+                    
+                    // Complimenti e messaggi specifici per ogni occasione
+                    const occasionMessages = {
+                        'anniversario': {
+                            intro: `🎁 Anniversario${recipientText}. `,
+                            compliment: '',
+                            suggestion: 'Per un anniversario, ti consiglio qualcosa di romantico e significativo.'
+                        },
+                        'compleanno': {
+                            intro: `🎁 Compleanno${recipientText}. `,
+                            compliment: '',
+                            suggestion: 'Per il compleanno, qualcosa di divertente e personale sarebbe perfetto.'
+                        },
+                        'natale': {
+                            intro: `🎁 Natale${recipientText}. `,
+                            compliment: 'Buone feste! ',
+                            suggestion: 'Per Natale, qualcosa di caldo e accogliente sarebbe ideale.'
+                        },
+                        'san_valentino': {
+                            intro: `🎁 San Valentino${recipientText}. `,
+                            compliment: 'Auguri! ',
+                            suggestion: 'Per San Valentino, qualcosa di dolce e romantico è perfetto.'
+                        },
+                        'festa_della_mamma': {
+                            intro: `🎁 Festa della mamma${recipientText}. `,
+                            compliment: '',
+                            suggestion: 'Per la festa della mamma, qualcosa di pensieroso e premuroso.'
+                        },
+                        'festa_del_papà': {
+                            intro: `🎁 Festa del papà${recipientText}. `,
+                            compliment: '',
+                            suggestion: 'Per la festa del papà, qualcosa di pratico e utile sarebbe perfetto.'
+                        },
+                        'capodanno': {
+                            intro: `🎁 Capodanno${recipientText}. `,
+                            compliment: 'Buon anno! ',
+                            suggestion: 'Per Capodanno, qualcosa di speciale per iniziare bene l\'anno.'
+                        },
+                        'pasqua': {
+                            intro: `🎁 Pasqua${recipientText}. `,
+                            compliment: 'Buona Pasqua! ',
+                            suggestion: 'Per Pasqua, qualcosa di tradizionale e dolce sarebbe perfetto.'
+                        },
+                        'carnevale': {
+                            intro: `🎁 Carnevale${recipientText}. `,
+                            compliment: 'Buon Carnevale! ',
+                            suggestion: 'Per Carnevale, qualcosa di divertente e colorato sarebbe ideale.'
+                        }
+                    };
+                    
+                    const occasionData = occasionMessages[occasion] || {
+                        intro: `🎁 Ah, capisco! Vuoi fare un regalo${recipientText}. `,
+                        compliment: '',
+                        suggestion: 'Ho selezionato i prodotti perfetti per questa occasione.'
+                    };
+                    
+                    // Solo mostrare prodotti se abbiamo dettagli sufficienti (non per messaggi semplici)
+                    if (meaningfulWords.length < 5 && !occasion) {
+                        // Non mostrare prodotti per messaggi semplici come "voglio fare un regalo a mio figlio"
+                        // Questo viene gestito dalla modalità regalo conversazionale
+                        return null;
+                    }
+                    
+                    // Messaggi più vari per evitare ripetizioni
+                    const giftResponses = [
+                        `${occasionData.intro}Senti, ti dico la verità: ${occasionData.compliment}${productSuggestion}${occasionData.suggestion} `,
+                        `${occasionData.intro}Guarda, ${occasionData.compliment}${productSuggestion}${occasionData.suggestion} `,
+                        `${occasionData.intro}Sai cosa ti dico? ${occasionData.compliment}${productSuggestion}${occasionData.suggestion} `,
+                        `${occasionData.intro}Ti dico una cosa: ${occasionData.compliment}${productSuggestion}${occasionData.suggestion} `,
+                        `${occasionData.intro}Ehi, ascolta: ${occasionData.compliment}${productSuggestion}${occasionData.suggestion} `
+                    ];
+                    responseText = giftResponses[Math.floor(Math.random() * giftResponses.length)];
+                    
+                    if (nicheData && nicheData.valueProp) {
+                        responseText += nicheData.valueProp;
+                    }
+                    
+                    const persuasiveEndings = [
+                        ' Dai un\'occhiata, ti assicuro che non te ne pentirai!',
+                        ' Scommetto che gli piaceranno un sacco!',
+                        ' Se vuoi fare bella figura, questi sono quelli giusti.',
+                        ' Ti lascio i link, sono davvero top!',
+                        ' Fidati, sono prodotti selezionati apposta per te.'
+                    ];
+                    responseText += persuasiveEndings[Math.floor(Math.random() * persuasiveEndings.length)];
                 } else {
-                    // Fallback if nicheData not found
-                    responseText = `Ho trovato prodotti nella categoria ${category.name}. Ecco i prodotti disponibili:`;
+                    // Use valueProp from NicheDatabase for dynamic consultant tone
+                    if (nicheData && nicheData.valueProp) {
+                        const conversationalOpenings = [
+                            `Senti, ${nicheData.valueProp}`,
+                            `Guarda, ${nicheData.valueProp}`,
+                            `Ti dico la verità, ${nicheData.valueProp}`
+                        ];
+                        responseText = conversationalOpenings[Math.floor(Math.random() * conversationalOpenings.length)];
+                        
+                        if (context === 'budget') {
+                            responseText += ' E se vuoi risparmiare senza rinunciare alla qualità, questi sono perfetti:';
+                        } else if (context === 'best') {
+                            responseText += ' Questi sono davvero i migliori, te lo dico io:';
+                        } else {
+                            responseText += ' Dai un\'occhiata a questi:';
+                        }
+                    } else {
+                        // Fallback if nicheData not found
+                        responseText = `Ho trovato prodotti nella categoria ${category.name}. Ecco i prodotti disponibili:`;
+                    }
+                }
+                
+                // Add product list HTML for ALL responses (not just gift mode)
+                let productListHTML = '';
+                if (nicheData && nicheData.topProducts && nicheData.topProducts.length > 0) {
+                    productListHTML = '<div class="products-list" style="margin-top: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px;">';
+                    productListHTML += '<div style="font-weight: bold; margin-bottom: 10px;">📦 Prodotti consigliati:</div>';
+                    
+                    nicheData.topProducts.slice(0, 3).forEach((product, index) => {
+                        if (product.link) {
+                            productListHTML += `
+                                <div style="margin-bottom: 8px;">
+                                    <a href="${product.link}" target="_blank" style="color: #032B44; text-decoration: none; font-weight: bold; display: block; padding: 8px; background: white; border-radius: 6px; border: 1px solid #ced4da;">
+                                        ${index + 1}. ${product.name}
+                                    </a>
+                                </div>
+                            `;
+                        }
+                    });
+                    
+                    // Add link to niche page for those who want to explore more
+                    const nicheUrl = category.url.startsWith('/') ? 'https://smart-choices-guide.vercel.app' + category.url : 'https://smart-choices-guide.vercel.app/' + category.url;
+                    productListHTML += `
+                        <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid #dee2e6;">
+                            <a href="${nicheUrl}" target="_blank" style="color: #032B44; text-decoration: none; font-size: 0.9em; display: block; text-align: center; padding: 6px; background: #e9ecef; border-radius: 6px;">
+                                🔍 Non sei convinto? Vedi tutti i prodotti per ${category.name}
+                            </a>
+                        </div>
+                    `;
+                    
+                    productListHTML += '</div>';
                 }
                 
                 addMessage(responseText, 'bot');
+                
+                // Add product list if available
+                if (productListHTML) {
+                    setTimeout(() => {
+                        addMessage(productListHTML, 'bot');
+                        
+                        // Track products shown for learning
+                        if (nicheData && nicheData.topProducts) {
+                            const productsShown = nicheData.topProducts.slice(0, 3).map(p => p.name);
+                            trackUserInteraction(message, categoryKey, productsShown);
+                        }
+                        
+                        // Show feedback buttons after product suggestions
+                        setTimeout(() => {
+                            showFeedbackButtons(categoryKey);
+                        }, 500);
+                        
+                        // Show follow-up question
+                        setTimeout(() => {
+                            showFollowUp(categoryKey);
+                        }, 3000);
+                    }, 300);
+                }
                 
                 // Apply dynamic color theme based on category
                 applyBotTheme(categoryKey);
@@ -3546,9 +4965,21 @@ function addMessage(text, sender) {
     chatMessages.appendChild(messageDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
     
+    // Add to conversation history with extended memory
+    conversationHistory.push({
+        text: text.replace(/<[^>]*>/g, ''), // Remove HTML tags for storage
+        sender: sender,
+        timestamp: Date.now()
+    });
+    
+    // Keep only last MAX_CONVERSATION_HISTORY messages
+    if (conversationHistory.length > MAX_CONVERSATION_HISTORY) {
+        conversationHistory.shift();
+    }
+    
     // Track conversation for learning
     if (sender === 'user') {
-        trackUserInteraction(text);
+        trackUserInteraction(text, currentNiche, []);
     }
 }
 
@@ -3883,10 +5314,24 @@ function getFriendlyClosing() {
 // Get special occasion message (seasonal only - no personal occasions)
 function getSpecialOccasionMessage(occasion) {
     const occasions = {
-        'christmas': "🎄 Buone feste! Ecco alcune idee regalo perfette per il Natale.",
+        'new_year': "🎊 Buon anno! Festeggia il Capodanno con champagne, prosecco e botti! Ecco i prodotti perfetti per la notte più speciale dell'anno!",
+        'epiphany': "🎄 La Befana è arrivata! Ecco i regali perfetti per l'Epifania!",
         'valentine': "💕 San Valentino si avvicina! Ecco i prodotti perfetti per la persona che ami.",
-        'halloween': "🎃 Halloween è arrivato! Ecco i prodotti perfetti per la festa più spaventosa dell'anno!",
+        'carnival': "🎭 Carnevale è arrivato! Ecco i prodotti perfetti per festeggiare con maschere, costumi e divertimento!",
+        'womens_day': "🌸 Buona festa della donna! Ecco i regali perfetti per celebrare tutte le donne speciali.",
+        'fathers_day': "👨 Oggi è la festa del papà! Ecco i regali ideali per celebrare tuo padre.",
         'easter': "🐣 Pasqua è in arrivo! Ecco i prodotti ideali per festeggiare la primavera.",
+        'liberation': "🇮🇹 Festa della Liberazione! Ecco i prodotti per celebrare insieme.",
+        'labor_day': "👷 Festa del Lavoro! Ecco i prodotti per celebrare i lavoratori.",
+        'mothers_day': "💐 Oggi è la festa della mamma! Ecco i regali perfetti per rendere speciale la tua dolce metà.",
+        'republic': "🇮🇹 Festa della Repubblica! Ecco i prodotti per celebrare l'Italia.",
+        'saints_peter_paul': "⛪ San Pietro e Paolo! Ecco i prodotti per celebrare i santi patroni di Roma.",
+        'ferragosto': "☀️ Ferragosto è arrivato! Ecco i prodotti perfetti per goderti il ferragosto al mare o in montagna!",
+        'halloween': "🎃 Halloween è arrivato! Ecco i prodotti perfetti per la festa più spaventosa dell'anno!",
+        'all_saints': "🕯️ Ognissanti! Ecco i prodotti per ricordare i cari defunti.",
+        'immaculate': "🕯️ Immacolata Concezione! Ecco i prodotti per celebrare la festa religiosa.",
+        'christmas': "🎄 Buone feste! Ecco alcune idee regalo perfette per il Natale.",
+        'saint_stephen': "🎄 Santo Stefano! Continua le feste natalizie con questi prodotti perfetti!",
         'summer': "☀️ L'estate è arrivata! Ecco i prodotti più venduti per goderti al meglio la stagione.",
         'back_to_school': "📚 Torniamo a scuola! Ecco tutto ciò che ti serve per iniziare nel migliore dei modi.",
         'winter': "❄️ L'inverno è arrivato! Ecco i prodotti perfetti per affrontare il freddo con stile."
@@ -4177,7 +5622,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Disable scroll detection for combo messages
     window.addEventListener('scroll', detectScroll);
-    // window.addEventListener('scroll', detectComboScroll);
+    window.addEventListener('scroll', detectComboScroll);
     
     // Add click outside to close proactive bubble
     document.addEventListener('click', function(event) {
