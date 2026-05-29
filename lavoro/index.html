@@ -78,7 +78,7 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#FF6B6B">
 </head>
-<body>
+<body style="background-color: #FAFAFA;">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Navigazione principale">
         <div class="container d-flex align-items-center">
@@ -406,25 +406,25 @@
                         .micro-card {
                             min-width: 220px;
                             max-width: 240px;
-                            background: #0D0D0D;
-                            border: 2px solid #1a1a1a;
-                            border-radius: 16px;
+                            background: #FFFFFF;
+                            border: none;
+                            border-bottom: 2px solid transparent;
+                            border-radius: 20px;
                             padding: 40px 25px;
                             text-align: center;
                             transition: all 0.3s ease;
                             position: relative;
                             overflow: visible;
-                            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+                            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
                         }
                         .micro-card:hover {
-                            outline: 2px solid var(--industrial-orange);
-                            outline-offset: -2px;
-                            box-shadow: 0 0 40px var(--industrial-orange-glow), 0 0 60px rgba(255, 107, 0, 0.2);
-                            transform: translateY(-5px);
+                            border-bottom: 2px solid var(--industrial-orange);
+                            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+                            transform: translateY(-3px);
                         }
                         .micro-card-icon {
                             font-size: 4rem;
-                            color: #fff;
+                            color: #1a1a1a;
                             margin-bottom: 20px;
                             transition: color 0.3s ease;
                         }
@@ -434,7 +434,7 @@
                         .micro-card-title {
                             font-weight: 800;
                             font-size: 1.1rem;
-                            color: #fff;
+                            color: #1a1a1a;
                             margin-bottom: 15px;
                             text-transform: uppercase;
                             letter-spacing: 0.5px;
@@ -443,14 +443,14 @@
                         .micro-card-terminal {
                             font-family: 'Courier New', monospace;
                             font-size: 0.7rem;
-                            color: var(--industrial-orange);
+                            color: #4B5563;
                             margin-bottom: 20px;
                             opacity: 0.8;
                             letter-spacing: 0.3px;
                         }
                         .micro-card-progress {
                             height: 4px;
-                            background: #1a1a1a;
+                            background: #e5e7eb;
                             border-radius: 2px;
                             overflow: hidden;
                             margin-top: auto;
@@ -646,140 +646,140 @@
 
                 <div class="row g-4" id="nicchie-fisse-container">
                     <div class="col-lg-4 col-md-6">
-                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-sm border-0 hover-lift" style="background: #FFFFFF; border-radius: 20px;">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
-                                    <i class="fas fa-utensils fa-4x text-warning" aria-hidden="true"></i>
+                                    <i class="fas fa-utensils fa-4x" style="color: #1a1a1a;" aria-hidden="true"></i>
                                 </div>
-                                <h4 class="card-title fw-bold mb-3">Cucina Moderna & Tech</h4>
-                                <p class="card-text text-muted mb-4">28 prodotti • Friggitrici ad Aria, Pentole, Robot da Cucina</p>
-                                <a href="cucina-elettrodomestici/index.html" class="btn btn-warning btn-lg fw-bold w-100">
+                                <h4 class="card-title fw-bold mb-3" style="color: #1a1a1a;">Cucina Moderna & Tech</h4>
+                                <p class="card-text mb-4" style="color: #4B5563;">28 prodotti • Friggitrici ad Aria, Pentole, Robot da Cucina</p>
+                                <a href="cucina-elettrodomestici/index.html" class="btn btn-lg fw-bold w-100" style="background: var(--industrial-orange); color: #fff; border: none;">
                                     <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-sm border-0 hover-lift" style="background: #FFFFFF; border-radius: 20px;">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
-                                    <i class="fas fa-gamepad fa-4x text-danger" aria-hidden="true"></i>
+                                    <i class="fas fa-gamepad fa-4x" style="color: #1a1a1a;" aria-hidden="true"></i>
                                 </div>
-                                <h4 class="card-title fw-bold mb-3">Elite Gaming Gear</h4>
-                                <p class="card-text text-muted mb-4">50 prodotti • Monitor, Cuffie, Tastiere, Mouse</p>
-                                <a href="elite-gaming-gear/index.html" class="btn btn-danger btn-lg fw-bold w-100">
+                                <h4 class="card-title fw-bold mb-3" style="color: #1a1a1a;">Elite Gaming Gear</h4>
+                                <p class="card-text mb-4" style="color: #4B5563;">50 prodotti • Monitor, Cuffie, Tastiere, Mouse</p>
+                                <a href="elite-gaming-gear/index.html" class="btn btn-lg fw-bold w-100" style="background: var(--industrial-orange); color: #fff; border: none;">
                                     <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-sm border-0 hover-lift" style="background: #FFFFFF; border-radius: 20px;">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
-                                    <i class="fas fa-box fa-4x text-success" aria-hidden="true"></i>
+                                    <i class="fas fa-box fa-4x" style="color: #1a1a1a;" aria-hidden="true"></i>
                                 </div>
-                                <h4 class="card-title fw-bold mb-3">Smart Home & Domotica</h4>
-                                <p class="card-text text-muted mb-4">12 prodotti • Termostati, Luci, Telecamere, Sicurezza</p>
-                                <a href="smart-home-domotica/index.html" class="btn btn-success btn-lg fw-bold w-100">
+                                <h4 class="card-title fw-bold mb-3" style="color: #1a1a1a;">Smart Home & Domotica</h4>
+                                <p class="card-text mb-4" style="color: #4B5563;">12 prodotti • Termostati, Luci, Telecamere, Sicurezza</p>
+                                <a href="smart-home-domotica/index.html" class="btn btn-lg fw-bold w-100" style="background: var(--industrial-orange); color: #fff; border: none;">
                                     <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-sm border-0 hover-lift" style="background: #FFFFFF; border-radius: 20px;">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
-                                    <i class="fas fa-film fa-4x text-danger" aria-hidden="true"></i>
+                                    <i class="fas fa-film fa-4x" style="color: #1a1a1a;" aria-hidden="true"></i>
                                 </div>
-                                <h4 class="card-title fw-bold mb-3">Abbigliamento Serie TV & Film</h4>
-                                <p class="card-text text-muted mb-4">41 prodotti • Abbigliamento Serie TV & Film, Merchandise</p>
-                                <a href="abbigliamento-serie-tv-film/index.html" class="btn btn-danger btn-lg fw-bold w-100">
+                                <h4 class="card-title fw-bold mb-3" style="color: #1a1a1a;">Abbigliamento Serie TV & Film</h4>
+                                <p class="card-text mb-4" style="color: #4B5563;">41 prodotti • Abbigliamento Serie TV & Film, Merchandise</p>
+                                <a href="abbigliamento-serie-tv-film/index.html" class="btn btn-lg fw-bold w-100" style="background: var(--industrial-orange); color: #fff; border: none;">
                                     <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-sm border-0 hover-lift" style="background: #FFFFFF; border-radius: 20px;">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
-                                    <i class="fas fa-dumbbell fa-4x text-info" aria-hidden="true"></i>
+                                    <i class="fas fa-dumbbell fa-4x" style="color: #1a1a1a;" aria-hidden="true"></i>
                                 </div>
-                                <h4 class="card-title fw-bold mb-3">Fitness Casa</h4>
-                                <p class="card-text text-muted mb-4">15 prodotti • Smartwatch, Tapis Roulant, Cyclette, Pesi</p>
-                                <a href="fitness-casa/index.html" class="btn btn-info btn-lg fw-bold w-100">
+                                <h4 class="card-title fw-bold mb-3" style="color: #1a1a1a;">Fitness Casa</h4>
+                                <p class="card-text mb-4" style="color: #4B5563;">15 prodotti • Smartwatch, Tapis Roulant, Cyclette, Pesi</p>
+                                <a href="fitness-casa/index.html" class="btn btn-lg fw-bold w-100" style="background: var(--industrial-orange); color: #fff; border: none;">
                                     <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-sm border-0 hover-lift" style="background: #FFFFFF; border-radius: 20px;">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
-                                    <i class="fas fa-mobile-alt fa-4x text-secondary" aria-hidden="true"></i>
+                                    <i class="fas fa-mobile-alt fa-4x" style="color: #1a1a1a;" aria-hidden="true"></i>
                                 </div>
-                                <h4 class="card-title fw-bold mb-3">Smartphone & Tech</h4>
-                                <p class="card-text text-muted mb-4">9 prodotti • Smartphone, Accessori, Gadget</p>
-                                <a href="smartphone-tech/index.html" class="btn btn-secondary btn-lg fw-bold w-100">
+                                <h4 class="card-title fw-bold mb-3" style="color: #1a1a1a;">Smartphone & Tech</h4>
+                                <p class="card-text mb-4" style="color: #4B5563;">9 prodotti • Smartphone, Accessori, Gadget</p>
+                                <a href="smartphone-tech/index.html" class="btn btn-lg fw-bold w-100" style="background: var(--industrial-orange); color: #fff; border: none;">
                                     <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-sm border-0 hover-lift" style="background: #FFFFFF; border-radius: 20px;">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
-                                    <i class="fas fa-book fa-4x text-warning" aria-hidden="true"></i>
+                                    <i class="fas fa-book fa-4x" style="color: #1a1a1a;" aria-hidden="true"></i>
                                 </div>
-                                <h4 class="card-title fw-bold mb-3">Libri & E-Reader</h4>
-                                <p class="card-text text-muted mb-4">17 prodotti • Kindle, E-Reader, Libri Popolari</p>
-                                <a href="libri-ereader/index.html" class="btn btn-warning btn-lg fw-bold w-100">
+                                <h4 class="card-title fw-bold mb-3" style="color: #1a1a1a;">Libri & E-Reader</h4>
+                                <p class="card-text mb-4" style="color: #4B5563;">17 prodotti • Kindle, E-Reader, Libri Popolari</p>
+                                <a href="libri-ereader/index.html" class="btn btn-lg fw-bold w-100" style="background: var(--industrial-orange); color: #fff; border: none;">
                                     <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-sm border-0 hover-lift" style="background: #FFFFFF; border-radius: 20px;">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
-                                    <i class="fas fa-bicycle fa-4x text-success" aria-hidden="true"></i>
+                                    <i class="fas fa-bicycle fa-4x" style="color: #1a1a1a;" aria-hidden="true"></i>
                                 </div>
-                                <h4 class="card-title fw-bold mb-3">Biciclette e mobilità</h4>
-                                <p class="card-text text-muted mb-4">3 prodotti • Kit Riparazione, Attrezzi, Pulizia</p>
-                                <a href="biciclette-mobilita/index.html" class="btn btn-success btn-lg fw-bold w-100">
+                                <h4 class="card-title fw-bold mb-3" style="color: #1a1a1a;">Biciclette e mobilità</h4>
+                                <p class="card-text mb-4" style="color: #4B5563;">3 prodotti • Kit Riparazione, Attrezzi, Pulizia</p>
+                                <a href="biciclette-mobilita/index.html" class="btn btn-lg fw-bold w-100" style="background: var(--industrial-orange); color: #fff; border: none;">
                                     <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-sm border-0 hover-lift" style="background: #FFFFFF; border-radius: 20px;">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
-                                    <i class="fas fa-tshirt fa-4x text-primary" aria-hidden="true"></i>
+                                    <i class="fas fa-tshirt fa-4x" style="color: #1a1a1a;" aria-hidden="true"></i>
                                 </div>
-                                <h4 class="card-title fw-bold mb-3">Abbigliamento Ciclismo</h4>
-                                <p class="card-text text-muted mb-4">4 prodotti • Tute, Salopette, Impermeabili</p>
-                                <a href="abbigliamento-ciclismo/index.html" class="btn btn-primary btn-lg fw-bold w-100">
+                                <h4 class="card-title fw-bold mb-3" style="color: #1a1a1a;">Abbigliamento Ciclismo</h4>
+                                <p class="card-text mb-4" style="color: #4B5563;">4 prodotti • Tute, Salopette, Impermeabili</p>
+                                <a href="abbigliamento-ciclismo/index.html" class="btn btn-lg fw-bold w-100" style="background: var(--industrial-orange); color: #fff; border: none;">
                                     <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="product-card card h-100 shadow-lg border-0 hover-lift">
+                        <div class="product-card card h-100 shadow-sm border-0 hover-lift" style="background: #FFFFFF; border-radius: 20px;">
                             <div class="card-body p-4 text-center">
                                 <div class="mb-3">
-                                    <i class="fas fa-tools fa-4x icon-orange" aria-hidden="true"></i>
+                                    <i class="fas fa-tools fa-4x" style="color: #1a1a1a;" aria-hidden="true"></i>
                                 </div>
-                                <h4 class="card-title fw-bold mb-3">Fai da Te</h4>
-                                <p class="card-text text-muted mb-4">1 prodotto • Attrezzi, Utensili, Bricolage</p>
-                                <a href="fai-da-te/index.html" class="btn btn-warning btn-lg fw-bold w-100">
+                                <h4 class="card-title fw-bold mb-3" style="color: #1a1a1a;">Fai da Te</h4>
+                                <p class="card-text mb-4" style="color: #4B5563;">1 prodotto • Attrezzi, Utensili, Bricolage</p>
+                                <a href="fai-da-te/index.html" class="btn btn-lg fw-bold w-100" style="background: var(--industrial-orange); color: #fff; border: none;">
                                     <i class="fas fa-arrow-right me-2"></i>Scopri Offerte
                                 </a>
                             </div>
@@ -1440,22 +1440,22 @@
                                     const reviews = Math.floor(Math.random() * 5000) + 100;
                                     return `
                                     <div class="col-md-6">
-                                        <div class="product-card card h-100 border-0 shadow-sm">
+                                        <div class="product-card card h-100 border-0 shadow-sm" style="background: #FFFFFF; border-radius: 20px;">
                                             <div class="card-body p-4 text-center">
-                                                <div class="text-primary mb-3">
-                                                    <i class="fas ${product.icon} fa-3x"></i>
+                                                <div class="mb-3">
+                                                    <i class="fas ${product.icon} fa-3x" style="color: #1a1a1a;"></i>
                                                 </div>
-                                                <h5 class="card-title fw-bold">${product.name}</h5>
-                                                <p class="card-text text-muted small">${product.category}</p>
+                                                <h5 class="card-title fw-bold" style="color: #1a1a1a;">${product.name}</h5>
+                                                <p class="card-text small" style="color: #4B5563;">${product.category}</p>
                                                 <div class="mb-2">
-                                                    <span class="text-warning">
+                                                    <span style="color: var(--industrial-orange);">
                                                         ${'★'.repeat(Math.floor(rating))}${'☆'.repeat(5 - Math.floor(rating))}
                                                     </span>
-                                                    <span class="text-muted small ms-1">${rating}</span>
-                                                    <span class="text-muted small">(${reviews.toLocaleString()})</span>
+                                                    <span class="small ms-1" style="color: #4B5563;">${rating}</span>
+                                                    <span class="small" style="color: #4B5563;">(${reviews.toLocaleString()})</span>
                                                 </div>
-                                                <p class="card-text text-muted small mb-3">${product.description || 'Prodotto di alta qualità con recensioni positive'}</p>
-                                                                                                <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
+                                                <p class="card-text small mb-3" style="color: #4B5563;">${product.description || 'Prodotto di alta qualità con recensioni positive'}</p>
+                                                                                                <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn fw-bold mt-3" style="background: var(--industrial-orange); color: #fff; border: none;">
                                                     <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                                                 </a>
                                             </div>
@@ -1480,22 +1480,22 @@
                                     const reviews = Math.floor(Math.random() * 5000) + 100;
                                     return `
                                     <div class="col-md-6">
-                                        <div class="product-card card h-100 border-0 shadow-sm">
+                                        <div class="product-card card h-100 border-0 shadow-sm" style="background: #FFFFFF; border-radius: 20px;">
                                             <div class="card-body p-4 text-center">
-                                                <div class="text-primary mb-3">
-                                                    <i class="fas ${product.icon} fa-3x"></i>
+                                                <div class="mb-3">
+                                                    <i class="fas ${product.icon} fa-3x" style="color: #1a1a1a;"></i>
                                                 </div>
-                                                <h5 class="card-title fw-bold">${product.name}</h5>
-                                                <p class="card-text text-muted small">${product.category}</p>
+                                                <h5 class="card-title fw-bold" style="color: #1a1a1a;">${product.name}</h5>
+                                                <p class="card-text small" style="color: #4B5563;">${product.category}</p>
                                                 <div class="mb-2">
-                                                    <span class="text-warning">
+                                                    <span style="color: var(--industrial-orange);">
                                                         ${'★'.repeat(Math.floor(rating))}${'☆'.repeat(5 - Math.floor(rating))}
                                                     </span>
-                                                    <span class="text-muted small ms-1">${rating}</span>
-                                                    <span class="text-muted small">(${reviews.toLocaleString()})</span>
+                                                    <span class="small ms-1" style="color: #4B5563;">${rating}</span>
+                                                    <span class="small" style="color: #4B5563;">(${reviews.toLocaleString()})</span>
                                                 </div>
-                                                <p class="card-text text-muted small mb-3">${product.description || 'Prodotto di alta qualità con recensioni positive'}</p>
-                                                                                                <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn btn-warning fw-bold mt-3">
+                                                <p class="card-text small mb-3" style="color: #4B5563;">${product.description || 'Prodotto di alta qualità con recensioni positive'}</p>
+                                                                                                <a href="${product.link}" target="_blank" rel="nofollow noopener" class="btn fw-bold mt-3" style="background: var(--industrial-orange); color: #fff; border: none;">
                                                     <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                                                 </a>
                                             </div>
