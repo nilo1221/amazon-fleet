@@ -479,6 +479,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Cucini con precisione e sicurezza? 🌡️ Ho trovato questa bilancia MasterChef con sensore di temperatura e spegnimento automatico. Con Coca-Cola Zero hai cotture perfette e relax!"
+            },
+            {
+                product1: {
+                    name: "NESCAFÉ Dolce Gusto Macchina Espresso",
+                    link: "https://www.amazon.it/NESCAFE%CC%81-DOLCE-GUSTO-Macchina-Espresso/dp/B08HSJY2JT?pd_rd_w=HGTYC&content-id=amzn1.sym.424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_p=424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_r=N8N8AZCTQG8DAVE9HFGY&pd_rd_wg=duv53&pd_rd_r=d2d3d7ed-69d0-42eb-b71d-d874bebd1228&pd_rd_i=B08HSJY2JT&linkCode=ll2&tag=l0c39-21&linkId=d1438fb0944c18bf072db77992c5b3dd&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Ti piace il caffè? ☕ Ho trovato la macchina NESCAFÉ Dolce Gusto per espresso perfetto. Con Coca-Cola Zero hai caffè e bevande fresche!"
             }
         ]
     },
