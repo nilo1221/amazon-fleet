@@ -317,6 +317,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi risparmiare energia? 💨 Ho trovato questa guarnizione per condizionatore che mantiene l'efficienza. Con Coca-Cola Zero hai casa fresca e relax!"
+            },
+            {
+                product1: {
+                    name: "Dyson Aspirapolvere Autonomia Tecnologia Anti-Groviglio",
+                    link: "https://www.amazon.it/Dyson-aspirapolvere-autonomia-tecnologia-anti-groviglio/dp/B0DF5QXDYP?pf_rd_r=V74C22SBT7M0R00HP32J&pf_rd_p=2bd53ec2-6771-4725-ad77-aabca72d950d&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&th=1&linkCode=ll2&tag=l0c39-21&linkId=294ff0e9dc6037374118423780b4342c&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi pulizia perfetta? 🧹 Ho trovato questo Dyson aspirapolvere con tecnologia anti-groviglio. Con Coca-Cola Zero hai casa pulita e relax!"
             }
         ]
     },
