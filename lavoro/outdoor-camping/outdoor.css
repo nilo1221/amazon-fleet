@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Outdoor & Camping */
+/* Variabili Specifiche Outdoor & Camping - Fitness & Sport */
 :root {
-    --niche-primary: #228B22;
-    --niche-secondary: #8B4513;
-    --niche-accent: #87CEEB;
-    --niche-dark-bg: #1a2a1a;
+    --niche-primary: #00CC66;
+    --niche-secondary: #FF9900;
+    --niche-accent: #00FFCC;
+    --niche-dark-bg: #0a2a1a;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

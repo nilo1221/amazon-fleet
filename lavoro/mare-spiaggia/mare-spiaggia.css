@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Mare e Spiaggia */
+/* Variabili Specifiche Mare e Spiaggia - Fitness & Sport */
 :root {
-    --niche-primary: #20B2AA;
-    --niche-secondary: #FF6347;
-    --niche-accent: #D2691E;
-    --niche-dark-bg: #0a2a2a;
+    --niche-primary: #00CC66;
+    --niche-secondary: #FF9900;
+    --niche-accent: #00FFCC;
+    --niche-dark-bg: #0a2a1a;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

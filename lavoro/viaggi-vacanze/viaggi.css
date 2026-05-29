@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Viaggi & Vacanze */
+/* Variabili Specifiche Viaggi & Vacanze - Intrattenimento */
 :root {
-    --niche-primary: #8B4513;
-    --niche-secondary: #FFA500;
-    --niche-accent: #FFD700;
-    --niche-dark-bg: #2a1a0a;
+    --niche-primary: #9900FF;
+    --niche-secondary: #FF00CC;
+    --niche-accent: #00FF99;
+    --niche-dark-bg: #1a0a2a;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Fitness Casa */
+/* Variabili Specifiche Fitness Casa - Fitness & Sport */
 :root {
-    --niche-primary: #3CB371;
-    --niche-secondary: #FF8C00;
-    --niche-accent: #2E8B57;
-    --niche-dark-bg: #1a3a2a;
+    --niche-primary: #00CC66;
+    --niche-secondary: #FF9900;
+    --niche-accent: #00FFCC;
+    --niche-dark-bg: #0a2a1a;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

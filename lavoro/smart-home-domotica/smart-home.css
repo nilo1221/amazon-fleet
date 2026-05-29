@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Smart Home */
+/* Variabili Specifiche Smart Home - Tecnologia & Elettronica */
 :root {
-    --niche-primary: #708090;
-    --niche-secondary: #4169E1;
-    --niche-accent: #9400D3;
-    --niche-dark-bg: #2a2a3a;
+    --niche-primary: #0066CC;
+    --niche-secondary: #00CCFF;
+    --niche-accent: #FF0066;
+    --niche-dark-bg: #0a0a2e;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

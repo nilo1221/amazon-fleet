@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Giochi da Tavolo */
+/* Variabili Specifiche Giochi da Tavolo - Intrattenimento */
 :root {
-    --niche-primary: #000000;
-    --niche-secondary: #808080;
-    --niche-accent: #DC143C;
-    --niche-dark-bg: #0a0a0a;
+    --niche-primary: #9900FF;
+    --niche-secondary: #FF00CC;
+    --niche-accent: #00FF99;
+    --niche-dark-bg: #1a0a2a;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

@@ -3,12 +3,12 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Pet Care Intelligente */
+/* Variabili Specifiche Pet Care Intelligente - Benessere & Cura */
 :root {
-    --niche-primary: #E9967A;
-    --niche-secondary: #DAA520;
-    --niche-accent: #8B4513;
-    --niche-dark-bg: #3d2b1f;
+    --niche-primary: #66CCFF;
+    --niche-secondary: #00CCFF;
+    --niche-accent: #FF66CC;
+    --niche-dark-bg: #0a1a2a;
     --niche-card-bg: rgba(255, 255, 255, 0.95);
     --niche-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
