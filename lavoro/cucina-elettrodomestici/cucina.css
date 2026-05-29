@@ -3,29 +3,30 @@
    Smart Choices Guide
    ============================================ */
 
-/* Variabili Specifiche Cucina - Stile Lusso/Accogliente/Sereno */
+/* Variabili Specifiche Cucina - Stile Clean & Warm */
 :root {
-    --cucina-primary: #C9A961;
-    --cucina-secondary: #8F9E8A;
-    --cucina-accent: #B87333;
-    --cucina-cream: #FAF7F2;
-    --cucina-white: #FFFAF5;
-    --cucina-text: #3D3D3D;
-    --cucina-text-light: #6B6B6B;
-    --cucina-card-bg: rgba(255, 250, 245, 0.98);
+    --kitchen-primary: #2d6a4f; /* Verde salvia professionale */
+    --kitchen-accent: #f4a261;  /* Arancio caldo per CTA */
+    --kitchen-bg: #f8f9fa;      /* Bianco sporco per non stancare */
+    --kitchen-secondary: #52b788;
+    --kitchen-cream: #faf9f6;
+    --kitchen-text: #2d3436;
+    --kitchen-text-light: #636e72;
+    --kitchen-card-bg: #ffffff;
 }
 
-/* Sfondo Cucina - Crema caldo accogliente */
+/* Sfondo Cucina - Clean & Warm */
 body {
-    background: #FAF7F2;
+    background: var(--kitchen-bg);
     background-attachment: fixed;
     min-height: 100vh;
+    line-height: 1.6;
 }
 
-/* Hero Section Cucina - Lusso elegante */
+/* Hero Section Cucina - Clean & Professional */
 .hero-section {
     background: 
-        linear-gradient(135deg, var(--cucina-primary) 0%, var(--cucina-secondary) 50%, var(--cucina-accent) 100%);
+        linear-gradient(135deg, var(--kitchen-primary) 0%, var(--kitchen-secondary) 50%, var(--kitchen-accent) 100%);
     color: white;
     padding: 100px 0;
     margin-bottom: 50px;
@@ -44,17 +45,13 @@ body {
     pointer-events: none;
 }
 
-/* Product Card Cucina - Stile elegante morbido */
+/* Product Card Cucina - Stile pulito e professionale */
 .product-card {
-    border: 1px solid var(--cucina-primary);
-    border-radius: 16px;
-    transition: all 0.5s ease-out;
-    background: var(--cucina-card-bg);
-    overflow: hidden;
-    position: relative;
-    box-shadow: 
-        0 4px 20px rgba(201, 169, 97, 0.1),
-        0 2px 8px rgba(0, 0, 0, 0.05);
+    background: var(--kitchen-card-bg);
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     min-height: 450px;
     display: flex;
     flex-direction: column;
@@ -70,69 +67,47 @@ body {
     margin-top: auto;
 }
 
-.product-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, var(--cucina-primary) 0%, var(--cucina-secondary) 100%);
-    opacity: 0;
-    z-index: -1;
-    border-radius: 16px;
-    transition: opacity 0.5s ease-out;
-}
-
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 
-        0 12px 40px rgba(201, 169, 97, 0.2),
-        0 6px 20px rgba(0, 0, 0, 0.08);
-    border-color: var(--cucina-accent);
-}
-
-.product-card:hover::before {
-    opacity: 0.05;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    border-color: var(--kitchen-primary);
 }
 
 .product-card:active {
-    transform: translateY(-4px);
-    box-shadow: 
-        0 8px 30px rgba(201, 169, 97, 0.15),
-        0 4px 15px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.08);
 }
 
-/* Icone Animate - Morbide e fluide */
+/* Icone Animate - Clean & Professional */
 .product-card .fa-3x {
-    transition: all 0.5s ease-out;
-    color: var(--cucina-primary);
+    transition: all 0.2s ease-in-out;
+    color: var(--kitchen-primary);
 }
 
 .product-card:hover .fa-3x {
-    transform: scale(1.1);
-    color: var(--cucina-accent);
+    transform: scale(1.05);
+    color: var(--kitchen-accent);
 }
 
-/* Badge Categoria - Eleganti e sobri */
+/* Badge Categoria - Clean & Professional */
 .category-badge {
-    background: linear-gradient(135deg, var(--cucina-primary) 0%, var(--cucina-accent) 100%);
+    background: linear-gradient(135deg, var(--kitchen-primary) 0%, var(--kitchen-secondary) 100%);
     color: white;
     padding: 6px 18px;
     border-radius: 20px;
     font-size: 0.8em;
     font-weight: 500;
     letter-spacing: 0.5px;
-    box-shadow: 0 2px 10px rgba(201, 169, 97, 0.2);
+    box-shadow: 0 2px 10px rgba(45, 106, 79, 0.15);
     display: inline-block;
-    transition: all 0.5s ease-out;
+    transition: all 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
 }
 
 .category-badge:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(45, 106, 79, 0.25);
 }
 
 /* Colori specifici per categoria - Tonalità calde */
@@ -168,18 +143,18 @@ body {
     background: linear-gradient(135deg, #8B5A2B 0%, #6B4423 100%);
 }
 
-/* Bottone Amazon - Elegante */
+/* Bottone Amazon - Clean & Professional (.btn-kitchen) */
 .btn-amazon {
-    background: linear-gradient(135deg, var(--cucina-primary) 0%, var(--cucina-accent) 100%);
+    background-color: var(--kitchen-accent);
     color: white;
     border: none;
-    padding: 14px 35px;
-    border-radius: 25px;
+    padding: 10px 20px;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 1em;
     letter-spacing: 0.5px;
-    transition: all 0.5s ease-out;
-    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.2);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 8px rgba(244, 162, 97, 0.3);
     display: inline-block;
     text-decoration: none;
     position: relative;
@@ -187,49 +162,58 @@ body {
 }
 
 .btn-amazon:hover {
-    background: linear-gradient(135deg, var(--cucina-accent) 0%, var(--cucina-primary) 100%);
+    background-color: #e76f51;
     transform: translateY(-2px);
-    box-shadow: 
-        0 8px 25px rgba(201, 169, 97, 0.3),
-        0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(244, 162, 97, 0.4);
     color: white;
 }
 
 .btn-amazon:active {
     transform: translateY(-1px);
-    box-shadow: 
-        0 4px 15px rgba(201, 169, 97, 0.25),
-        0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px rgba(244, 162, 97, 0.3);
 }
 
-/* Miglioramenti Tipografici - Serif elegante */
+/* Miglioramenti Tipografici - Clean & Professional */
 .card-title {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     letter-spacing: 0.3px;
-    transition: all 0.5s ease-out;
-    color: var(--cucina-text);
+    transition: all 0.2s ease-in-out;
+    color: var(--kitchen-text);
 }
 
 .product-card:hover .card-title {
-    color: var(--cucina-primary);
-    transform: translateX(3px);
+    color: var(--kitchen-primary);
+    transform: translateX(2px);
 }
 
 .card-text {
-    color: var(--cucina-text-light);
+    color: var(--kitchen-text-light);
     line-height: 1.7;
 }
 
 /* Checkmark - Colori salvia */
 .product-card .fa-check {
-    transition: all 0.5s ease-out;
-    color: var(--cucina-secondary);
+    transition: all 0.2s ease-in-out;
+    color: var(--kitchen-secondary);
 }
 
 .product-card:hover .fa-check {
-    color: var(--cucina-primary);
-    transform: scale(1.15);
+    color: var(--kitchen-primary);
+    transform: scale(1.1);
+}
+
+/* Trust Badge - Fiducia per la Cucina */
+.trust-badge {
+    color: var(--kitchen-primary);
+    font-size: 0.85rem;
+    font-weight: bold;
+    background: #e9f5ef;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
 
 /* Section Container */
@@ -238,10 +222,10 @@ body {
     z-index: 1;
 }
 
-/* Footer Cucina - Elegante */
+/* Footer Cucina - Clean & Professional */
 footer {
-    background: linear-gradient(135deg, var(--cucina-primary) 0%, var(--cucina-secondary) 100%);
-    border-top: 2px solid var(--cucina-accent);
+    background: linear-gradient(135deg, var(--kitchen-primary) 0%, var(--kitchen-secondary) 100%);
+    border-top: 2px solid var(--kitchen-accent);
     position: relative;
     overflow: hidden;
 }
@@ -262,9 +246,9 @@ footer::before {
     position: relative;
     display: inline-block;
     padding: 40px;
-    background: linear-gradient(135deg, var(--cucina-cream) 0%, white 100%);
+    background: linear-gradient(135deg, var(--kitchen-cream) 0%, white 100%);
     border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(201, 169, 97, 0.15);
+    box-shadow: 0 8px 30px rgba(45, 106, 79, 0.1);
 }
 
 .rating-badge {
@@ -285,7 +269,7 @@ footer::before {
     background: white;
     padding: 6px 14px;
     border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(201, 169, 97, 0.15);
+    box-shadow: 0 2px 10px rgba(45, 106, 79, 0.1);
     font-weight: 600;
     display: inline-flex;
     align-items: center;
@@ -297,47 +281,47 @@ footer::before {
 .accordion {
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(201, 169, 97, 0.1);
+    box-shadow: 0 4px 20px rgba(45, 106, 79, 0.1);
 }
 
 .accordion-item {
-    border: 1px solid var(--cucina-primary);
+    border: 1px solid var(--kitchen-primary);
     border-bottom: none;
 }
 
 .accordion-item:last-child {
-    border-bottom: 1px solid var(--cucina-primary);
+    border-bottom: 1px solid var(--kitchen-primary);
 }
 
 .accordion-button {
-    background: var(--cucina-cream);
-    color: var(--cucina-text);
+    background: var(--kitchen-cream);
+    color: var(--kitchen-text);
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-in-out;
 }
 
 .accordion-button:not(.collapsed) {
-    background: linear-gradient(135deg, var(--cucina-primary) 0%, var(--cucina-accent) 100%);
+    background: linear-gradient(135deg, var(--kitchen-primary) 0%, var(--kitchen-secondary) 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.2);
+    box-shadow: 0 4px 15px rgba(45, 106, 79, 0.2);
 }
 
 .accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(201, 169, 97, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(45, 106, 79, 0.25);
 }
 
 .accordion-body {
     background: white;
-    color: var(--cucina-text-light);
+    color: var(--kitchen-text-light);
     line-height: 1.7;
 }
 
 /* Divisore Strategico - AI Assistant */
 .strategic-divider {
-    background: linear-gradient(135deg, var(--cucina-cream) 0%, white 100%);
+    background: linear-gradient(135deg, var(--kitchen-cream) 0%, white 100%);
     border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(201, 169, 97, 0.15);
-    border: 2px solid var(--cucina-primary);
+    box-shadow: 0 8px 30px rgba(45, 106, 79, 0.1);
+    border: 2px solid var(--kitchen-primary);
     position: relative;
     overflow: hidden;
 }
@@ -349,48 +333,48 @@ footer::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(201, 169, 97, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 50%, rgba(45, 106, 79, 0.05) 0%, transparent 70%);
     pointer-events: none;
 }
 
 .strategic-divider .btn-primary {
-    background: linear-gradient(135deg, var(--cucina-primary) 0%, var(--cucina-accent) 100%);
+    background: linear-gradient(135deg, var(--kitchen-primary) 0%, var(--kitchen-secondary) 100%);
     border: none;
     padding: 15px 40px;
     border-radius: 25px;
     font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.2);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 15px rgba(45, 106, 79, 0.2);
 }
 
 .strategic-divider .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(201, 169, 97, 0.3);
+    box-shadow: 0 8px 25px rgba(45, 106, 79, 0.3);
 }
 
 /* Top Categorie Section */
 .category-block {
     background: white;
-    border: 2px solid var(--cucina-primary);
+    border: 2px solid var(--kitchen-primary);
     border-radius: 16px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(201, 169, 97, 0.1);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 20px rgba(45, 106, 79, 0.1);
     cursor: pointer;
     height: 100%;
 }
 
 .category-block:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(201, 169, 97, 0.2);
-    border-color: var(--cucina-accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(45, 106, 79, 0.15);
+    border-color: var(--kitchen-accent);
 }
 
 .category-block i {
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-in-out;
 }
 
 .category-block:hover i {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Responsive */
