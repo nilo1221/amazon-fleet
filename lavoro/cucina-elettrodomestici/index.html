@@ -20,8 +20,82 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../niche-animations.css">
-    <link rel="stylesheet" href="cucina.css">
+    <!-- AI Chat CSS -->
+    <style>
+        :root {
+            --primary-color: #E6B3B3;
+            --secondary-color: #f8f9fa;
+            --accent-color: #F5DEB3;
+            --success-color: #F5F5F5;
+            --trust-color: #E6B3B3;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #FFD700 0%, #FFC107 50%, #FFE135 100%);
+            color: #333;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(230, 179, 179, 0.3);
+        }
+        
+        
+        
+        
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #C0392B 0%, #D35400 100%);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(192, 57, 43, 0.5);
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.7);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #E74C3C 0%, #F39C12 100%);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+        }
+        
+        .no-images {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .no-images i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    </style>
     <link rel="stylesheet" href="../bot/ai-chat-simple.css">
 </head>
 <body>
@@ -29,7 +103,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="../index.html"><i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation menu" title="Toggle navigation menu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -51,8 +125,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-4">Cucina senza sforzo: i migliori elettrodomestici che ti salvano il tempo</h1>
-            <p class="lead mb-4">Strumenti intelligenti per cucinare meglio, più velocemente e con meno fatica.</p>
+            <h1 class="display-4 fw-bold mb-4">Cucina Moderna & Tech</h1>
+            <p class="lead mb-4">I migliori gadget per rendere la tua cucina intelligente e funzionale.</p>
             
             <!-- Trust Banner -->
             <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
@@ -63,15 +137,15 @@
             
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <div class="d-flex justify-content-center gap-3">
                         <span class="category-badge">
-                            <i class="fas fa-award me-1"></i>Scelti dai Professionisti
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
                         </span>
                         <span class="category-badge">
-                            <i class="fas fa-star me-1"></i>Top Recensiti
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
                         </span>
                         <span class="category-badge">
-                            <i class="fas fa-leaf me-1"></i>Risparmio Energetico
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
                         </span>
                     </div>
                 </div>
@@ -79,182 +153,61 @@
         </div>
     </section>
 
-    <!-- Prodotto Re Section -->
-    <section class="container my-5">
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center mb-4 mb-md-0">
-                <div class="product-hero-image">
-                    <i class="fas fa-fire-burner fa-10x text-warning mb-4"></i>
-                    <div class="rating-badge">
-                        <i class="fas fa-star text-warning"></i>
-                        <span class="fw-bold">4.7</span>
-                        <span class="text-muted small">/ 5</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <span class="category-badge mb-3 d-inline-block">
-                    <i class="fas fa-crown me-1"></i>Prodotto Re
-                </span>
-                <h2 class="display-5 fw-bold mb-4">COSORI Turbo Blaze Friggitrice ad Aria 6L</h2>
-                <p class="lead text-muted mb-4">Cibi croccanti senza grassi. Goditi patatine, ali di pollo e fritti croccanti con fino all'85% meno grassi.</p>
-                
-                <ul class="list-unstyled mb-4">
-                    <li class="mb-3">
-                        <i class="fas fa-check-circle text-success me-2 fa-lg"></i>
-                        <strong>Risparmia l'85% di olio:</strong> Cibi croccanti e salutari
-                    </li>
-                    <li class="mb-3">
-                        <i class="fas fa-check-circle text-success me-2 fa-lg"></i>
-                        <strong>Si pulisce in 2 minuti:</strong> Cestello rimovibile antiaderente
-                    </li>
-                    <li class="mb-3">
-                        <i class="fas fa-check-circle text-success me-2 fa-lg"></i>
-                        <strong>Ideale per famiglie:</strong> 6 litri di capacità
-                    </li>
-                </ul>
-                
-                <a href="https://www.amazon.it/COSORI-Turbo-Blaze-Friggitrice-Elettrica/dp/B0C7KQZJXW?th=1&linkCode=ll2&tag=l0c39-21&linkId=249b95bd5fc47a61d3403272535940ac&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon btn-lg w-100">
-                    <i class="fab fa-amazon me-2"></i>Vedi Offerta Amazon
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section - Accordion -->
-    <section class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <h3 class="text-center mb-4">Domande Frequenti</h3>
-                <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                <i class="fas fa-question-circle me-2 text-primary"></i>
-                                Quali dimensioni ha la friggitrice?
-                            </button>
-                        </h2>
-                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                La COSORI Turbo Blaze ha dimensioni di 35.5 x 33 x 30.5 cm, perfetta per qualsiasi cucina senza occupare troppo spazio.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                <i class="fas fa-question-circle me-2 text-primary"></i>
-                                È compatibile con tutti i fornelli?
-                            </button>
-                        </h2>
-                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Sì, questa friggitrice ad aria funziona con qualsiasi presa elettrica standard (220-240V). Non richiede gas o fornelli speciali.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                <i class="fas fa-question-circle me-2 text-primary"></i>
-                                Qual è la garanzia del prodotto?
-                            </button>
-                        </h2>
-                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                La COSORI offre 2 anni di garanzia dalla data di acquisto, con supporto clienti dedicato per qualsiasi problema.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Divisore Strategico - AI Assistant -->
-    <section class="container my-5">
-        <div class="strategic-divider text-center py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <i class="fas fa-robot fa-4x text-primary mb-4"></i>
-                    <h3 class="display-6 fw-bold mb-3">Non sai quale robot da cucina scegliere per le tue ricette?</h3>
-                    <p class="lead text-muted mb-4">Chiedi al mio assistente in base al tuo budget!</p>
-                    <button onclick="toggleChat()" class="btn btn-primary btn-lg">
-                        <i class="fas fa-comments me-2"></i>Apri Assistente Cucina
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Top Categorie Section -->
-    <section class="container my-5">
-        <h2 class="text-center mb-5">Top Categorie</h2>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="category-block text-center p-4 rounded">
-                    <i class="fas fa-blender fa-4x text-primary mb-3"></i>
-                    <h4 class="fw-bold mb-2">Preparazione</h4>
-                    <p class="text-muted">Robot, frullatori, impastatrici</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="category-block text-center p-4 rounded">
-                    <i class="fas fa-fire-burner fa-4x text-warning mb-3"></i>
-                    <h4 class="fw-bold mb-2">Cottura</h4>
-                    <p class="text-muted">Friggitrici ad aria, forni, piastre</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="category-block text-center p-4 rounded">
-                    <i class="fas fa-utensils fa-4x text-success mb-3"></i>
-                    <h4 class="fw-bold mb-2">Accessori Essenziali</h4>
-                    <p class="text-muted">Coltelli, pentole, organizer</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="category-block text-center p-4 rounded">
-                    <i class="fas fa-mug-hot fa-4x text-info mb-3"></i>
-                    <h4 class="fw-bold mb-2">Caffè & Colazione</h4>
-                    <p class="text-muted">Macchine caffè, tostapane</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section - Griglia Unica -->
+    
+    
+    <!-- Products Section -->
     <section class="container">
-        <div class="row g-4">
-            <div class="col-lg-6 col-md-6">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
                 
                 <!-- Nuovo Prodotto 2 -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
-                            <i class="fas fa-utensils fa-4x text-primary"></i>
+                            <i class="fas fa-blender fa-4x text-primary"></i>
                         </div>
                         <span class="category-badge mb-3 d-inline-block">
                             Macchine per Pasta
                         </span>
                         <h3 class="card-title fw-bold mb-3">Philips Macchina Per La Pasta Serie 7000</h3>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                            </div>
+                            <div class="col-md-6 text-end">
+                                <div class="mb-2">
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <p class="card-text text-muted mb-4"><strong>Pasta fresca fatta in casa, automaticamente.</strong> Philips Macchina Per La Pasta Serie 7000 con Tecnologia ProExtrude, Completamente Automatica, Tecnologia Di Miscelazione Perfetta, 6 Trafile, Bianco (HR2660/00). Crea pasta fresca in pochi minuti con facilità.</p>
                         
                         <div class="mb-4">
                             <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
                             <ul class="list-unstyled">
-                                <li><i class="fas fa-check-circle text-success me-2"></i><strong>Tecnologia ProExtrude:</strong> Pasta perfetta ogni volta</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i><strong>6 Trafile incluse:</strong> Spaghetti, penne, fettuccine e altro</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i><strong>Miscelazione perfetta:</strong> Impasto omogeneo automatico</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i><strong>Design bianco:</strong> Elegante e moderno</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Tecnologia:</strong> ProExtrude automatica</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Trafile:</strong> 6 trafile incluse</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Miscelazione:</strong> Tecnologia perfetta</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Colore:</strong> Bianco elegante</li>
                             </ul>
                         </div>
                         
-                        <div class="d-flex justify-content-between align-items-center mt-4">
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-shipping-fast text-success me-2"></i>
+                                    <span>Spedizione Gratuita Prime</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <i class="fas fa-check-circle text-success me-2"></i>
-                                <span class="text-success">Prodotto disponibile</span>
+                                <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B0B82KWHDL?psc=1&m=a11il2pnwyju7h&linkCode=ll2&tag=l0c39-21&linkId=1cd3b30ec8fe9993b516fdbef8538e65&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B0B82KWHDL?psc=1&m=a11il2pnwyju7h&linkCode=ll2&tag=l0c39-21&linkId=1cd3b30ec8fe9993b516fdbef8538e65&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -262,7 +215,7 @@
                 </div>
                 
                 <!-- Prodotto Esistente 1 -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-utensils fa-4x text-primary"></i>
@@ -322,7 +275,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/Amazon-Basics-14-Piece-Knife-Block/dp/B00R3Z49G6?adgrpid=71918728474&dib=eyJ2IjoiMSJ9.HeeJ_8TvPYcUHwPkTExQBnlM_s9imGa8ZLy59K5N3jEMPULKx0jdwkHtLQ1REHm80Vdt13h3mhOFPEczXFAe9cCJ8PZwwSRtpd1joP1sL0Rb430MAVwijFgLEE-gNCAVwhyMAFKcooWE-bm8Op-Wd75mkzNyjLBnZuG-2DEct_7J6JJtlvgdtMvUcBgt0qC9aRAErQ_m8qvWeeB_X5WyiG9U7HYq7O0Xur64iuYxS4rcL2ptSp_Wm3eofa4fS5BCwTmV9ip9FoLztuwY2tIpvieWR_Bgu5UERm9f0fP4A4I.lSB6IjPpSBRADph-FSCPkFhliKae8bMXfXJHt6zJhPs&dib_tag=se&hvadid=343499019552&hvdev=c&hvexpln=0&hvlocphy=9190900&hvnetw=g&hvocijid=6768069318496106532--&hvqmt=e&hvrand=6768069318496106532&hvtargid=kwd-320279418868&hydadcr=29093_1755272&keywords=cucina%2Bamazon&mcid=88cc2e582fef3f50add4d3ca23df35a0&qid=1777897138&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=feb5159c3f3e9e7a0c140a4354f9ecf5&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Amazon-Basics-14-Piece-Knife-Block/dp/B00R3Z49G6?adgrpid=71918728474&dib=eyJ2IjoiMSJ9.HeeJ_8TvPYcUHwPkTExQBnlM_s9imGa8ZLy59K5N3jEMPULKx0jdwkHtLQ1REHm80Vdt13h3mhOFPEczXFAe9cCJ8PZwwSRtpd1joP1sL0Rb430MAVwijFgLEE-gNCAVwhyMAFKcooWE-bm8Op-Wd75mkzNyjLBnZuG-2DEct_7J6JJtlvgdtMvUcBgt0qC9aRAErQ_m8qvWeeB_X5WyiG9U7HYq7O0Xur64iuYxS4rcL2ptSp_Wm3eofa4fS5BCwTmV9ip9FoLztuwY2tIpvieWR_Bgu5UERm9f0fP4A4I.lSB6IjPpSBRADph-FSCPkFhliKae8bMXfXJHt6zJhPs&dib_tag=se&hvadid=343499019552&hvdev=c&hvexpln=0&hvlocphy=9190900&hvnetw=g&hvocijid=6768069318496106532--&hvqmt=e&hvrand=6768069318496106532&hvtargid=kwd-320279418868&hydadcr=29093_1755272&keywords=cucina%2Bamazon&mcid=88cc2e582fef3f50add4d3ca23df35a0&qid=1777897138&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=feb5159c3f3e9e7a0c140a4354f9ecf5&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -330,7 +283,7 @@
                 </div>
                 
                 <!-- Prodotto Esistente 2 -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-blender fa-4x text-success"></i>
@@ -390,7 +343,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B0D981M5ZQ?psc=1&pd_rd_i=B0D981M5ZQ&pd_rd_w=J0wVo&content-id=amzn1.sym.27357f71-bd5d-4a5b-ba8c-4ad04b414c62&pf_rd_p=27357f71-bd5d-4a5b-ba8c-4ad04b414c62&pf_rd_r=154CS88T5629WBZ0K48H&pd_rd_wg=hXTmy&pd_rd_r=4133be0f-8adf-45ff-b082-58481e9fd6a4&aref=Tgyz5eIe83&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&linkCode=ll2&tag=l0c39-21&linkId=957f8b9b23cbd01d20c30710e0f9b2de&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B0D981M5ZQ?psc=1&pd_rd_i=B0D981M5ZQ&pd_rd_w=J0wVo&content-id=amzn1.sym.27357f71-bd5d-4a5b-ba8c-4ad04b414c62&pf_rd_p=27357f71-bd5d-4a5b-ba8c-4ad04b414c62&pf_rd_r=154CS88T5629WBZ0K48H&pd_rd_wg=hXTmy&pd_rd_r=4133be0f-8adf-45ff-b082-58481e9fd6a4&aref=Tgyz5eIe83&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&linkCode=ll2&tag=l0c39-21&linkId=957f8b9b23cbd01d20c30710e0f9b2de&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -398,7 +351,7 @@
                 </div>
                 
                 <!-- Nuovo Prodotto 1: Affilacoltelli -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-cut fa-4x text-danger"></i>
@@ -458,7 +411,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/MITSUMOTO-SAKARI-Affilacoltelli-Professionale-Multifunzionale/dp/B09XDT7ZJB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=YFOH57WYRAAF&dib=eyJ2IjoiMSJ9.s69G-4F7KrOxAdkevc9dou0Vlknzwcb45PJxNTQ-yzAqrd0kE_lcoIyHVpjCN9dprflsx2chM6eg0kpp4GGFvLk2ZxKf7yF172YVX4MYjzo1NKYyKvYe8jXg2ARK_vCjkVp8Jeqf8I0ti1RizK3Xd7HeoEWLUvbXBQJmcvIwfJF34ncxfErOk6YSpOc8vxKCQEEquogaUuZdbJcPFFWmtMKnuPc5ar3NbooaPS_SHR3O1lgsSFvxaq0V25FNewm_aFQYYZ1HRmRiEieEH-KueZ57ZXhqNB1Y3wNVazRPvBo.haQ0sDCy932JDVcOU_0lts4drg-jsDuU_CKe4RcREbo&dib_tag=se&keywords=cucina&qid=1778008414&sprefix=cucina%2Caps%2C163&sr=8-3-spons&aref=ps8DujlEbn&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=211b5c5062c50b4d7cb9bc1623928a6d&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/MITSUMOTO-SAKARI-Affilacoltelli-Professionale-Multifunzionale/dp/B09XDT7ZJB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=YFOH57WYRAAF&dib=eyJ2IjoiMSJ9.s69G-4F7KrOxAdkevc9dou0Vlknzwcb45PJxNTQ-yzAqrd0kE_lcoIyHVpjCN9dprflsx2chM6eg0kpp4GGFvLk2ZxKf7yF172YVX4MYjzo1NKYyKvYe8jXg2ARK_vCjkVp8Jeqf8I0ti1RizK3Xd7HeoEWLUvbXBQJmcvIwfJF34ncxfErOk6YSpOc8vxKCQEEquogaUuZdbJcPFFWmtMKnuPc5ar3NbooaPS_SHR3O1lgsSFvxaq0V25FNewm_aFQYYZ1HRmRiEieEH-KueZ57ZXhqNB1Y3wNVazRPvBo.haQ0sDCy932JDVcOU_0lts4drg-jsDuU_CKe4RcREbo&dib_tag=se&keywords=cucina&qid=1778008414&sprefix=cucina%2Caps%2C163&sr=8-3-spons&aref=ps8DujlEbn&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=211b5c5062c50b4d7cb9bc1623928a6d&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -466,7 +419,7 @@
                 </div>
                 
                 <!-- Nuovo Prodotto 3: Hecef Coltelli da Cucina Professionali -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-cut fa-4x text-success"></i>
@@ -526,7 +479,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/hecef-Coltelli-Coltello-Inossidabile-Professionale/dp/B087CX21PN?mcid=0af6ca8f5aa63327b23b824160eeb14c&hvadid=700890057289&hvpos=&hvnetw=g&hvrand=17078890465600233366&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-930322494638&hvocijid=17078890465600233366-B087CX21PN-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=da4430a35c18c3c69f4ad34935723243&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/hecef-Coltelli-Coltello-Inossidabile-Professionale/dp/B087CX21PN?mcid=0af6ca8f5aa63327b23b824160eeb14c&hvadid=700890057289&hvpos=&hvnetw=g&hvrand=17078890465600233366&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-930322494638&hvocijid=17078890465600233366-B087CX21PN-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=da4430a35c18c3c69f4ad34935723243&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -534,7 +487,7 @@
                 </div>
                 
                 <!-- Nuovo Prodotto 2: Frullatore -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-blender fa-4x text-info"></i>
@@ -594,7 +547,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/Frullatore-Immersione-Multifunzione-Bonsenkitchen-Regolabili/dp/B09SHN8F2Y?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=YFOH57WYRAAF&dib=eyJ2IjoiMSJ9.s69G-4F7KrOxAdkevc9dou0Vlknzwcb45PJxNTQ-yzAqrd0kE_lcoIyHVpjCN9dprflsx2chM6eg0kpp4GGFvLk2ZxKf7yF172YVX4MYjzo1NKYyKvYe8jXg2ARK_vCjkVp8Jeqf8I0ti1RizK3Xd7HeoEWLUvbXBQJmcvIwfJF34ncxfErOk6YSpOc8vxKCQEEquogaUuZdbJcPFFWmtMKnuPc5ar3NbooaPS_SHR3O1lgsSFvxaq0V25FNewm_aFQYYZ1HRmRiEieEH-KueZ57ZXhqNB1Y3wNVazRPvBo.haQ0sDCy932JDVcOU_0lts4drg-jsDuU_CKe4RcREbo&dib_tag=se&keywords=cucina&qid=1778008414&sprefix=cucina%2Caps%2C163&sr=8-7&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ce2ed571b66b82e3676607b273face2&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Frullatore-Immersione-Multifunzione-Bonsenkitchen-Regolabili/dp/B09SHN8F2Y?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=YFOH57WYRAAF&dib=eyJ2IjoiMSJ9.s69G-4F7KrOxAdkevc9dou0Vlknzwcb45PJxNTQ-yzAqrd0kE_lcoIyHVpjCN9dprflsx2chM6eg0kpp4GGFvLk2ZxKf7yF172YVX4MYjzo1NKYyKvYe8jXg2ARK_vCjkVp8Jeqf8I0ti1RizK3Xd7HeoEWLUvbXBQJmcvIwfJF34ncxfErOk6YSpOc8vxKCQEEquogaUuZdbJcPFFWmtMKnuPc5ar3NbooaPS_SHR3O1lgsSFvxaq0V25FNewm_aFQYYZ1HRmRiEieEH-KueZ57ZXhqNB1Y3wNVazRPvBo.haQ0sDCy932JDVcOU_0lts4drg-jsDuU_CKe4RcREbo&dib_tag=se&keywords=cucina&qid=1778008414&sprefix=cucina%2Caps%2C163&sr=8-7&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ce2ed571b66b82e3676607b273face2&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -602,7 +555,7 @@
                 </div>
                 
                 <!-- Nuovo Prodotto 4: Bosch Frullatore Immersione -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-blender fa-4x text-primary"></i>
@@ -662,7 +615,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/Bosch-Frullatore-Immersione-MSM24100-Impugnatura/dp/B01FZAVFB2?mcid=5435a2b7e2423f13ae7995c237ffdddc&hvadid=700789413798&hvpos=&hvnetw=g&hvrand=4664976799502394951&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-422763004981&hvocijid=4664976799502394951-B01FZAVFB2-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ae49896a4c29dd6c7bc0bd7b59e409d&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Bosch-Frullatore-Immersione-MSM24100-Impugnatura/dp/B01FZAVFB2?mcid=5435a2b7e2423f13ae7995c237ffdddc&hvadid=700789413798&hvpos=&hvnetw=g&hvrand=4664976799502394951&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-422763004981&hvocijid=4664976799502394951-B01FZAVFB2-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ae49896a4c29dd6c7bc0bd7b59e409d&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -670,7 +623,7 @@
                 </div>
                 
                 <!-- Nuovo Prodotto 5: Moulinex Frullatore Immersione -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-blender fa-4x text-success"></i>
@@ -730,7 +683,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/Moulinex-DD4521-Immersione-Accessorio-Impostazioni/dp/B07PJVCWC2?mcid=4e411a42fa53353599592de713f9e8e8&hvadid=802274319589&hvpos=&hvnetw=g&hvrand=10876228115023223966&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2475481218673&psc=1&hvocijid=10876228115023223966-B07PJVCWC2-&hvexpln=0&hvsb=player2&gad_source=1&gad_campaignid=23689510032&gbraid=0AAAAADx79Dxk0W_yeL71iRt9klNlLqZvn&gclid=CjwKCAjwzevPBhBaEiwAplAxvjG33ISJB5sQozP1hHpiI3tXzoK3iyAO3bVIIQFv5VPPBu7zt1wAKRoC96AQAvD_BwE&linkCode=ll2&tag=l0c39-21&linkId=fd63666333eafcd0759434d7d8f21c4d&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Moulinex-DD4521-Immersione-Accessorio-Impostazioni/dp/B07PJVCWC2?mcid=4e411a42fa53353599592de713f9e8e8&hvadid=802274319589&hvpos=&hvnetw=g&hvrand=10876228115023223966&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2475481218673&psc=1&hvocijid=10876228115023223966-B07PJVCWC2-&hvexpln=0&hvsb=player2&gad_source=1&gad_campaignid=23689510032&gbraid=0AAAAADx79Dxk0W_yeL71iRt9klNlLqZvn&gclid=CjwKCAjwzevPBhBaEiwAplAxvjG33ISJB5sQozP1hHpiI3tXzoK3iyAO3bVIIQFv5VPPBu7zt1wAKRoC96AQAvD_BwE&linkCode=ll2&tag=l0c39-21&linkId=fd63666333eafcd0759434d7d8f21c4d&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -738,7 +691,7 @@
                 </div>
                 
                 <!-- Nuovo Prodotto 3: Portaspezie -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-boxes fa-4x text-secondary"></i>
@@ -798,7 +751,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/DUNSOO-Portaspezie-Frigorifero-Salvaspazio-Corridoio/dp/B0BY8RWMRQ?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=YFOH57WYRAAF&dib=eyJ2IjoiMSJ9.s69G-4F7KrOxAdkevc9dou0Vlknzwcb45PJxNTQ-yzAqrd0kE_lcoIyHVpjCN9dprflsx2chM6eg0kpp4GGFvLk2ZxKf7yF172YVX4MYjzo1NKYyKvYe8jXg2ARK_vCjkVp8Jeqf8I0ti1RizK3Xd7HeoEWLUvbXBQJmcvIwfJF34ncxfErOk6YSpOc8vxKCQEEquogaUuZdbJcPFFWmtMKnuPc5ar3NbooaPS_SHR3O1lgsSFvxaq0V25FNewm_aFQYYZ1HRmRiEieEH-KueZ57ZXhqNB1Y3wNVazRPvBo.haQ0sDCy932JDVcOU_0lts4drg-jsDuU_CKe4RcREbo&dib_tag=se&keywords=cucina&qid=1778008414&sprefix=cucina%2Caps%2C163&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=57d110944c08f32f608f070e01061049&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/DUNSOO-Portaspezie-Frigorifero-Salvaspazio-Corridoio/dp/B0BY8RWMRQ?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=YFOH57WYRAAF&dib=eyJ2IjoiMSJ9.s69G-4F7KrOxAdkevc9dou0Vlknzwcb45PJxNTQ-yzAqrd0kE_lcoIyHVpjCN9dprflsx2chM6eg0kpp4GGFvLk2ZxKf7yF172YVX4MYjzo1NKYyKvYe8jXg2ARK_vCjkVp8Jeqf8I0ti1RizK3Xd7HeoEWLUvbXBQJmcvIwfJF34ncxfErOk6YSpOc8vxKCQEEquogaUuZdbJcPFFWmtMKnuPc5ar3NbooaPS_SHR3O1lgsSFvxaq0V25FNewm_aFQYYZ1HRmRiEieEH-KueZ57ZXhqNB1Y3wNVazRPvBo.haQ0sDCy932JDVcOU_0lts4drg-jsDuU_CKe4RcREbo&dib_tag=se&keywords=cucina&qid=1778008414&sprefix=cucina%2Caps%2C163&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=57d110944c08f32f608f070e01061049&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -806,7 +759,7 @@
                 </div>
                 
                 <!-- Nuovo Prodotto 4: Termometro Bluetooth -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-thermometer-half fa-4x text-warning"></i>
@@ -866,7 +819,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/Inkbird-Bluetooth-Termometro-Temperatura-Grigliate/dp/B06WGMDSBL?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&content-id=amzn1.sym.95ba151b-8273-4002-ad46-a207e6eca9cf%3Aamzn1.sym.95ba151b-8273-4002-ad46-a207e6eca9cf&crid=YFOH57WYRAAF&cv_ct_cx=cucina&keywords=cucina&pd_rd_i=B06WGMDSBL&pd_rd_r=295e9d13-d73a-4cd7-a114-80cbf3742c98&pd_rd_w=ZZwn2&pd_rd_wg=5MOWO&pf_rd_p=95ba151b-8273-4002-ad46-a207e6eca9cf&pf_rd_r=FGEPN8MY0M23YQG34T05&qid=1778008414&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=cucina%2Caps%2C163&sr=1-3-50840d04-82cc-4adf-b6cc-9f330c77868e-spons&aref=VZEFI9YPtq&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=l0c39-21&linkId=58a534f4314028b6fbb27a5bf2b1e572&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Inkbird-Bluetooth-Termometro-Temperatura-Grigliate/dp/B06WGMDSBL?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&content-id=amzn1.sym.95ba151b-8273-4002-ad46-a207e6eca9cf%3Aamzn1.sym.95ba151b-8273-4002-ad46-a207e6eca9cf&crid=YFOH57WYRAAF&cv_ct_cx=cucina&keywords=cucina&pd_rd_i=B06WGMDSBL&pd_rd_r=295e9d13-d73a-4cd7-a114-80cbf3742c98&pd_rd_w=ZZwn2&pd_rd_wg=5MOWO&pf_rd_p=95ba151b-8273-4002-ad46-a207e6eca9cf&pf_rd_r=FGEPN8MY0M23YQG34T05&qid=1778008414&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=cucina%2Caps%2C163&sr=1-3-50840d04-82cc-4adf-b6cc-9f330c77868e-spons&aref=VZEFI9YPtq&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=l0c39-21&linkId=58a534f4314028b6fbb27a5bf2b1e572&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -874,7 +827,7 @@
                 </div>
                 
                 <!-- COSORI Friggitrice -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -934,7 +887,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B0DPPT99LJ?tag=l0c39-21" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B0DPPT99LJ?tag=l0c39-21" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -942,7 +895,7 @@
                 </div>
                 
                 <!-- Fairy Pastiglie Lavastoviglie -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-pump-soap fa-4x text-warning"></i>
@@ -1006,7 +959,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B0F8BRNGX1?th=1&linkCode=ll2&tag=l0c39-21&linkId=43424e9bf6f27daebbd55166df087e29&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B0F8BRNGX1?th=1&linkCode=ll2&tag=l0c39-21&linkId=43424e9bf6f27daebbd55166df087e29&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1014,7 +967,7 @@
                 </div>
                 
                 <!-- Bosch Sbattitore Elettrico MFQ3030 -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-utensils fa-4x text-primary"></i>
@@ -1074,7 +1027,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B0017HJD4O?th=1&linkCode=ll2&tag=l0c39-21&linkId=4e7a58782c1b61e2cbfb5f73c6db3802&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B0017HJD4O?th=1&linkCode=ll2&tag=l0c39-21&linkId=4e7a58782c1b61e2cbfb5f73c6db3802&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1082,10 +1035,14 @@
                 </div>
                 
             </div>
+        </div>
+    </section>
 
-            <!-- Friggitrici ad Aria -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- Friggitrici ad Aria Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1094,24 +1051,14 @@
                         <span class="category-badge mb-3 d-inline-block">
                             Friggitrice ad Aria
                         </span>
-                        <p class="card-text text-muted mb-4">COSORI Turbo Blaze Friggitrice ad Aria 6L - <strong>Cibi croccanti senza grassi.</strong> Goditi patatine, ali di pollo e fritti croccanti con fino al 85% meno grassi. Tecnologia di riscaldamento rapido per risparmiare tempo. 12 programmi preimpostati per ogni ricetta. Perfetta per famiglie fino a 4 persone - mangia sano senza rinunciare al gusto.</p>
-                        
-                        <div class="mb-4">
-                            <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check-circle text-success me-2"></i><strong>6 litri di capacità:</strong> Perfetta per famiglie fino a 4 persone</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i><strong>12 programmi preimpostati:</strong> Per ogni tipo di ricetta</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i><strong>Riscaldamento rapido:</strong> Risparmia tempo in cucina</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i><strong>85% meno grassi:</strong> Cibi croccanti e salutari</li>
-                            </ul>
-                        </div>
+                        <p class="card-text text-muted">COSORI Turbo Blaze Friggitrice ad Aria 6L - <strong>Cibi croccanti senza grassi.</strong> Goditi patatine, ali di pollo e fritti croccanti con fino al 85% meno grassi. Tecnologia di riscaldamento rapido per risparmiare tempo. 12 programmi preimpostati per ogni ricetta. Perfetta per famiglie fino a 4 persone - mangia sano senza rinunciare al gusto.</p>
                         
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <div>
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/COSORI-Friggitrice-Tecnologia-Automatica-Ingredienti/dp/B0DX1GQK9J?mcid=56f24c1f2ab6350ab988579288cb5576&hvadid=722786726072&hvpos=&hvnetw=g&hvrand=9567507632885230834&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2406035948544&hvocijid=9567507632885230834-B0DX1GQK9J-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=d910cfadb6fa5ea89310b33552d6a5f0&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/COSORI-Friggitrice-Tecnologia-Automatica-Ingredienti/dp/B0DX1GQK9J?mcid=56f24c1f2ab6350ab988579288cb5576&hvadid=722786726072&hvpos=&hvnetw=g&hvrand=9567507632885230834&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2406035948544&hvocijid=9567507632885230834-B0DX1GQK9J-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=d910cfadb6fa5ea89310b33552d6a5f0&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1119,8 +1066,8 @@
                 </div>
             </div>
             
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1136,7 +1083,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/Ninja-Friggitrice-Antiaderente-Croccantezza-AF300EU/dp/B08GC1QZ5W?ie=UTF8&hvadid=722187028311&hvpos=&hvexid=&hvnetw=g&hvrand=5851704191900702564&hvpone=&hvptwo=&hvqmt=&hvdev=c&adgrpid=170593183899&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=dsa-1599129282449&hydadcr=&mcid=&gad_source=1&th=1&linkCode=ll2&tag=l0c39-21&linkId=249b95bd5fc47a61d3403272535940ac&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Ninja-Friggitrice-Antiaderente-Croccantezza-AF300EU/dp/B08GC1QZ5W?ie=UTF8&hvadid=722187028311&hvpos=&hvexid=&hvnetw=g&hvrand=5851704191900702564&hvpone=&hvptwo=&hvqmt=&hvdev=c&adgrpid=170593183899&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=dsa-1599129282449&hydadcr=&mcid=&gad_source=1&th=1&linkCode=ll2&tag=l0c39-21&linkId=249b95bd5fc47a61d3403272535940ac&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1144,8 +1091,8 @@
                 </div>
             </div>
             
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1161,7 +1108,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/dreame-Friggitrice-Croccante-Riscaldamento-Preimpostate/dp/B0D31X4H99?mcid=512ea7d3e4fe37e691c91264cd31184a&hvadid=700979566526&hvpos=&hvnetw=g&hvrand=8994056019320349340&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2324759303196&hvocijid=8994056019320349340-B0D31X4H99-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=8c881e159e54bfb4f586053f8f0e7262&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dreame-Friggitrice-Croccante-Riscaldamento-Preimpostate/dp/B0D31X4H99?mcid=512ea7d3e4fe37e691c91264cd31184a&hvadid=700979566526&hvpos=&hvnetw=g&hvrand=8994056019320349340&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2324759303196&hvocijid=8994056019320349340-B0D31X4H99-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=8c881e159e54bfb4f586053f8f0e7262&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1169,8 +1116,8 @@
                 </div>
             </div>
             
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1186,7 +1133,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/Moulinex-Friggitrice-Removibile-Programmi-Tecnologia/dp/B0CG6DL1RL?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2F9YBQDBLKK7V&dib=eyJ2IjoiMSJ9.oetiSZTWDEKDpMMRRTiEezo6A2aFbJkpB_IhAVhT-BIOkL1cy0HJW8sfsrJiuCA3wBQ17EIrmtAB2MDc7DTNCHvKQrPQviN3C0suzykHjdhlgjM9iWIdBFg_-BTI1-eD3JpRg8aqs703R_g20ZmaiM0dtvUJ0SDljp0RZLYifINVE5-BbZNtERX_6lnye4x3dfChRRtLoSCHwD1xawWfKZinI_M0RZOWoR45kDUfwSI.BiwMBIwGs3WKphsyxjMj1qeADrOwgexKYtu2tzgNWEU&dib_tag=se&keywords=Moulinex%2BEasy%2BFry%2BPrecision%2B4.2L&qid=1778079449&s=kitchen&sprefix=moulinex%2Beasy%2Bfry%2Bprecision%2B4.2l%2Ckitchen%2C146&sr=1-2&ufe=app_do%3Aamzn1.fos.d9b6a10d-e3a2-448c-a21b-086faff5973f&th=1&linkCode=ll2&tag=l0c39-21&linkId=7829cc639a122169f4dd84262b82482c&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Moulinex-Friggitrice-Removibile-Programmi-Tecnologia/dp/B0CG6DL1RL?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2F9YBQDBLKK7V&dib=eyJ2IjoiMSJ9.oetiSZTWDEKDpMMRRTiEezo6A2aFbJkpB_IhAVhT-BIOkL1cy0HJW8sfsrJiuCA3wBQ17EIrmtAB2MDc7DTNCHvKQrPQviN3C0suzykHjdhlgjM9iWIdBFg_-BTI1-eD3JpRg8aqs703R_g20ZmaiM0dtvUJ0SDljp0RZLYifINVE5-BbZNtERX_6lnye4x3dfChRRtLoSCHwD1xawWfKZinI_M0RZOWoR45kDUfwSI.BiwMBIwGs3WKphsyxjMj1qeADrOwgexKYtu2tzgNWEU&dib_tag=se&keywords=Moulinex%2BEasy%2BFry%2BPrecision%2B4.2L&qid=1778079449&s=kitchen&sprefix=moulinex%2Beasy%2Bfry%2Bprecision%2B4.2l%2Ckitchen%2C146&sr=1-2&ufe=app_do%3Aamzn1.fos.d9b6a10d-e3a2-448c-a21b-086faff5973f&th=1&linkCode=ll2&tag=l0c39-21&linkId=7829cc639a122169f4dd84262b82482c&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1194,8 +1141,8 @@
                 </div>
             </div>
             
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-blender fa-4x text-warning"></i>
@@ -1211,7 +1158,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/Bosch-MC812M844-Cucina-Multifunzione-Alluminio/dp/B07HPRQJL1?th=1&linkCode=ll2&tag=l0c39-21&linkId=2acaa6b678bac18747a2cdac25e75848&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Bosch-MC812M844-Cucina-Multifunzione-Alluminio/dp/B07HPRQJL1?th=1&linkCode=ll2&tag=l0c39-21&linkId=2acaa6b678bac18747a2cdac25e75848&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1219,8 +1166,8 @@
                 </div>
             </div>
             
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-mug-hot fa-4x text-warning"></i>
@@ -1236,17 +1183,21 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/DeLonghi-ECAM-22-110-B-superautomatica-cappuccinatore/dp/B00400OMU0?th=1&linkCode=ll2&tag=l0c39-21&linkId=c4c63beb2b7eb467e265380304081467&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/DeLonghi-ECAM-22-110-B-superautomatica-cappuccinatore/dp/B00400OMU0?th=1&linkCode=ll2&tag=l0c39-21&linkId=c4c63beb2b7eb467e265380304081467&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Sant'Orsola Prosecco -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- Nuovo Prodotto: Sant'Orsola Prosecco D.O.C. Millesimato Extra Dry -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-wine-glass fa-4x text-warning"></i>
@@ -1273,17 +1224,21 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B07252WF1X?th=1&linkCode=ll2&tag=l0c39-21&linkId=c22449c7c53ed031a59fb212e612bfff&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B07252WF1X?th=1&linkCode=ll2&tag=l0c39-21&linkId=c22449c7c53ed031a59fb212e612bfff&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Finish Ultimate PLUS -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- Nuovo Prodotto: Finish Ultimate PLUS Infinity Shine Pastiglie Lavastoviglie -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-sparkles fa-4x text-info"></i>
@@ -1310,17 +1265,21 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B0C8GRMMQ6?th=1&linkCode=ll2&tag=l0c39-21&linkId=3494430d7116f097ec6672173201896c&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B0C8GRMMQ6?th=1&linkCode=ll2&tag=l0c39-21&linkId=3494430d7116f097ec6672173201896c&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Finish Ultimate Infinity -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- Nuovo Prodotto: Finish Ultimate Infinity Shine Pastiglie Lavastoviglie 160 Capsule -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-sparkles fa-4x text-info"></i>
@@ -1347,17 +1306,21 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B09HV58YR5?th=1&linkCode=ll2&tag=l0c39-21&linkId=0684acb07b1156024bc2e752aa2f3014&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B09HV58YR5?th=1&linkCode=ll2&tag=l0c39-21&linkId=0684acb07b1156024bc2e752aa2f3014&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- FR 2461 Friggitrice -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- Nuovo Prodotto: FR 2461 Friggitrice ad aria calda Black Line Single -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1384,17 +1347,21 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B0F9TRBWPD?th=1&linkCode=ll2&tag=l0c39-21&linkId=e4eba26a535c983c4e07840efa208f84&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B0F9TRBWPD?th=1&linkCode=ll2&tag=l0c39-21&linkId=e4eba26a535c983c4e07840efa208f84&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- KASANOVA Evolution -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- KASANOVA Evolution Cookware Set -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1421,17 +1388,21 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B0DB5F1TSC?th=1&linkCode=ll2&tag=l0c39-21&linkId=6bb20f44951b8ba0c585777641d7a799&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B0DB5F1TSC?th=1&linkCode=ll2&tag=l0c39-21&linkId=6bb20f44951b8ba0c585777641d7a799&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Coca-Cola Zero -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- Coca-Cola Zero -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1457,17 +1428,21 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Bio Presto -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- Bio Presto -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1493,17 +1468,21 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B0C62QTBJQ?&linkCode=ll2&tag=l0c39-21&linkId=30a528684b2562add6b4629d00e671b1&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B0C62QTBJQ?&linkCode=ll2&tag=l0c39-21&linkId=30a528684b2562add6b4629d00e671b1&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Ventilatore Tavolo Silenzioso -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- Ventilatori -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1529,17 +1508,20 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/Ventilatore-Silenzioso-Ricaricabile-Pieghevole-Telecomando/dp/B0DZ5ZB59N?th=1&linkCode=ll2&tag=l0c39-21&linkId=e5e746f4698bf8950b8c872ed5e18a5f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Ventilatore-Silenzioso-Ricaricabile-Pieghevole-Telecomando/dp/B0DZ5ZB59N?th=1&linkCode=ll2&tag=l0c39-21&linkId=e5e746f4698bf8950b8c872ed5e18a5f&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Ventilatore Tavolo 4 Velocità -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1565,17 +1547,20 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/Ventilator-Silenzioso-Ventilatori-Ricaricabile-Rotazione/dp/B0CP27G3V5?th=1&linkCode=ll2&tag=l0c39-21&linkId=d36fd176303a9&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Ventilator-Silenzioso-Ventilatori-Ricaricabile-Rotazione/dp/B0CP27G3V5?th=1&linkCode=ll2&tag=l0c39-21&linkId=d36fd176303a9&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Ventilatore OCOOPA USB -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1601,17 +1586,21 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/Ventilator-silenzioso-ventilatore-regolabile-automatica/dp/B0BTGXCQ2Y?&linkCode=ll2&tag=l0c39-21&linkId=f3332b76d1e8539b8d1563ac8609d0b4&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Ventilator-silenzioso-ventilatore-regolabile-automatica/dp/B0BTGXCQ2Y?&linkCode=ll2&tag=l0c39-21&linkId=f3332b76d1e8539b8d1563ac8609d0b4&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Ventilatore da Soffitto a LED -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- Ventilatori da Soffitto -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1637,17 +1626,20 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/Ventilator-silenzioso-dimmerabile-regolabile-telecomando/dp/B09WZ1PSFK?th=1&linkCode=ll2&tag=l0c39-21&linkId=4d5c4079d2f06a1d6cfe3b2875dc9e98&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Ventilator-silenzioso-dimmerabile-regolabile-telecomando/dp/B09WZ1PSFK?th=1&linkCode=ll2&tag=l0c39-21&linkId=4d5c4079d2f06a1d6cfe3b2875dc9e98&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Ventilatore da Soffitto Moderno -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1673,17 +1665,21 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B0F3WRGS6Q?aref=zgAEC14TVU&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=999d2589787266c709acb2859be10813&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B0F3WRGS6Q?aref=zgAEC14TVU&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=999d2589787266c709acb2859be10813&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Ventilatore da Soffitto 152cm -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- Ventilatori da Soffitto Economici -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1709,17 +1705,20 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/Ventilator-ventilatore-telecomando-reversibile-silenzioso/dp/B0BHSGM9GQ?th=1&linkCode=ll2&tag=l0c39-21&linkId=b8363beb9ba63c059d0b4d1ca3160922&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Ventilator-ventilatore-telecomando-reversibile-silenzioso/dp/B0BHSGM9GQ?th=1&linkCode=ll2&tag=l0c39-21&linkId=b8363beb9ba63c059d0b4d1ca3160922&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Lrenjon 80CM Ventilatore -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-fire-burner fa-4x text-warning"></i>
@@ -1745,17 +1744,21 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success">Prodotto disponibile</span>
                             </div>
-                            <a href="https://www.amazon.it/Lrenjon-Ventilator-Telecomando-Dimmerabile-Soggiorno-White/dp/B0D733ZRBY?th=1&linkCode=ll2&tag=l0c39-21&linkId=d02abd3c9f32eeb00dc883250b03a369&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Lrenjon-Ventilator-Telecomando-Dimmerabile-Soggiorno-White/dp/B0D733ZRBY?th=1&linkCode=ll2&tag=l0c39-21&linkId=d02abd3c9f32eeb00dc883250b03a369&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Condizionatore Portatile 3-in-1 -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <!-- Condizionatori Portatili -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-snowflake fa-4x text-info"></i>
@@ -1775,15 +1778,18 @@
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success">Prodotto disponibile</span></div>
-                            <a href="https://www.amazon.it/dp/B0D3PP64JS?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=HPJ8v9XaEK&linkCode=ll2&tag=l0c39-21&linkId=9f8aac727b8af31fe8eb8ae08e38ba65&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                            <a href="https://www.amazon.it/dp/B0D3PP64JS?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=HPJ8v9XaEK&linkCode=ll2&tag=l0c39-21&linkId=9f8aac727b8af31fe8eb8ae08e38ba65&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Condizionatore Portatile 4-in-1 -->
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="product-card product-card-cucina card">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-snowflake fa-4x text-info"></i>
@@ -1803,7 +1809,7 @@
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success">Prodotto disponibile</span></div>
-                            <a href="https://www.amazon.it/dp/B0D2GPMDTL?psc=1&aref=XLhMSgF8DX&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=55fd5b24fbbdba1151431f468264766f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                            <a href="https://www.amazon.it/dp/B0D2GPMDTL?psc=1&aref=XLhMSgF8DX&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=55fd5b24fbbdba1151431f468264766f&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
                         </div>
                     </div>
                 </div>
@@ -1812,47 +1818,47 @@
     </section>
 
     <!-- Guida all'Acquisto Section -->
-    <section class="guida-scelta-section py-5 mt-5">
+    <section class="guida-scelta-section py-5 mt-5" style="background: #f8f9fa;">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="guida-scelta-title">
-                    <i class="fas fa-bullseye me-3 guida-scelta-icon"></i>Scegli il Tuo Profilo
+                <h2 class="guida-scelta-title" style="font-size: 2.5rem; font-weight: bold; color: #1a1a2e; margin-bottom: 1rem;">
+                    <i class="fas fa-bullseye me-3" style="color: #FF6B35;"></i>Scegli il Tuo Profilo
                 </h2>
                 <p class="lead text-muted">Tre profili pensati per ogni tipo di cucina. Trova quello che fa per te.</p>
             </div>
-            <div class="guida-profile-grid">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
                 <!-- Premium Profile -->
-                <div class="guida-profile-card">
-                    <div class="guida-profile-header">
-                        <span class="guida-profile-badge">Premium</span>
-                        <h3 class="guida-profile-title">La Cucina Pro</h3>
+                <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                    <div style="padding: 30px; color: white; text-align: center; background: linear-gradient(135deg, #FF6B35 0%, #FF9500 50%, #FFB800 100%);">
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.2); padding: 8px 20px; border-radius: 30px; font-size: 0.85rem; font-weight: bold; margin-bottom: 15px;">Premium</span>
+                        <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0;">La Cucina Pro</h3>
                     </div>
-                    <div class="guida-profile-body">
-                        <p class="guida-profile-description">Per chi vuole il massimo in cucina. Prodotti premium con funzioni avanzate e materiali di alta qualità per preparazioni complesse.</p>
+                    <div style="padding: 30px;">
+                        <p style="color: #666; font-size: 1rem; line-height: 1.6; margin-bottom: 25px;">Per chi vuole il massimo in cucina. Prodotti premium con funzioni avanzate e materiali di alta qualità per preparazioni complesse.</p>
                         
-                        <div class="guida-profile-section">
-                            <h5 class="guida-profile-section-title"><i class="fas fa-check-circle text-success me-2"></i>Pro</h5>
-                            <ul class="guida-profile-section-list">
-                                <li class="guida-profile-list-item">Oltre 45 funzioni diverse</li>
-                                <li class="guida-profile-list-item">1000W di potenza massima</li>
-                                <li class="guida-profile-list-item">Ciotola XXL 3.9L inclusa</li>
-                                <li class="guida-profile-list-item">Blender 1.5L incluso</li>
-                                <li class="guida-profile-list-item">Design compatto ma potente</li>
+                        <div style="margin-bottom: 25px;">
+                            <h5 style="font-size: 1rem; font-weight: bold; margin-bottom: 15px;"><i class="fas fa-check-circle text-success me-2"></i>Pro</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Oltre 45 funzioni diverse</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">1000W di potenza massima</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Ciotola XXL 3.9L inclusa</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Blender 1.5L incluso</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Design compatto ma potente</li>
                             </ul>
                         </div>
                         
-                        <div class="guida-profile-section">
-                            <h5 class="guida-profile-section-title"><i class="fas fa-times-circle text-danger me-2"></i>Contro</h5>
-                            <ul class="guida-profile-section-list">
-                                <li class="guida-profile-section-list-item">Prezzo elevato</li>
-                                <li class="guida-profile-section-list-item">Potrebbe essere eccessivo per uso semplice</li>
+                        <div style="margin-bottom: 25px;">
+                            <h5 style="font-size: 1rem; font-weight: bold; margin-bottom: 15px;"><i class="fas fa-times-circle text-danger me-2"></i>Contro</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Prezzo elevato</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Potrebbe essere eccessivo per uso semplice</li>
                             </ul>
                         </div>
                         
-                        <div class="guida-product-recommendation">
-                            <h5 class="guida-product-title">Prodotto Consigliato</h5>
-                            <p class="guida-product-description">Bosch MultiTalent 8 Compact Multifunction Food Processor - Oltre 45 funzioni con 1000W di potenza, ciotola XXL 3.9L e blender 1.5L incluso. Perfetto per preparazioni complesse in cucina.</p>
-                            <a href="https://www.amazon.it/Bosch-MC812M844-Cucina-Multifunzione-Alluminio/dp/B07HPRQJL1?th=1&linkCode=ll2&tag=l0c39-21&linkId=2acaa6b678bac18747a2cdac25e75848&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="guida-product-link">
+                        <div style="background: #fff8f0; padding: 20px; border-radius: 15px; border-left: 4px solid #FF6B35; margin-top: 20px;">
+                            <h5 style="font-size: 1rem; font-weight: bold; margin-bottom: 10px; color: #333;">Prodotto Consigliato</h5>
+                            <p style="font-size: 0.95rem; color: #666; line-height: 1.6; margin-bottom: 0;">Bosch MultiTalent 8 Compact Multifunction Food Processor - Oltre 45 funzioni con 1000W di potenza, ciotola XXL 3.9L e blender 1.5L incluso. Perfetto per preparazioni complesse in cucina.</p>
+                            <a href="https://www.amazon.it/Bosch-MC812M844-Cucina-Multifunzione-Alluminio/dp/B07HPRQJL1?th=1&linkCode=ll2&tag=l0c39-21&linkId=2acaa6b678bac18747a2cdac25e75848&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #FF6B35 0%, #FF9500 50%, #FFB800 100%); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 15px; transition: all 0.3s ease;">
                                 <i class="fab fa-amazon me-2"></i>Acquista su Amazon
                             </a>
                         </div>
@@ -1860,37 +1866,37 @@
                 </div>
 
                 <!-- Mid Profile -->
-                <div class="guida-profile-card">
-                    <div class="guida-profile-header">
-                        <span class="guida-profile-badge">Consigliato</span>
-                        <h3 class="guida-profile-title">Cucina Equilibrata</h3>
+                <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                    <div style="padding: 30px; color: white; text-align: center; background: linear-gradient(135deg, #FF6B35 0%, #FF9500 50%, #FFB800 100%);">
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.2); padding: 8px 20px; border-radius: 30px; font-size: 0.85rem; font-weight: bold; margin-bottom: 15px;">Consigliato</span>
+                        <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0;">Cucina Equilibrata</h3>
                     </div>
-                    <div class="guida-profile-body">
-                        <p class="guida-profile-description">Per chi cerca il perfetto rapporto qualità/prezzo. Prodotti bilanciati con ottime prestazioni per cucinare sano senza rinunciare al gusto.</p>
+                    <div style="padding: 30px;">
+                        <p style="color: #666; font-size: 1rem; line-height: 1.6; margin-bottom: 25px;">Per chi cerca il perfetto rapporto qualità/prezzo. Prodotti bilanciati con ottime prestazioni per cucinare sano senza rinunciare al gusto.</p>
                         
-                        <div class="guida-profile-section">
-                            <h5 class="guida-profile-section-title"><i class="fas fa-check-circle text-success me-2"></i>Pro</h5>
-                            <ul class="guida-profile-section-list">
-                                <li class="guida-profile-section-list-item">Capacità 6 litri</li>
-                                <li class="guida-profile-section-list-item">Tecnologia di riscaldamento rapido</li>
-                                <li class="guida-profile-section-list-item">12 programmi preimpostati</li>
-                                <li class="guida-profile-section-list-item">Adatta per famiglie fino a 4 persone</li>
-                                <li class="guida-profile-section-list-item">Facile da usare</li>
+                        <div style="margin-bottom: 25px;">
+                            <h5 style="font-size: 1rem; font-weight: bold; margin-bottom: 15px;"><i class="fas fa-check-circle text-success me-2"></i>Pro</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Capacità 6 litri</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Tecnologia di riscaldamento rapido</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">12 programmi preimpostati</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Adatta per famiglie fino a 4 persone</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Facile da usare</li>
                             </ul>
                         </div>
                         
-                        <div class="guida-profile-section">
-                            <h5 class="guida-profile-section-title"><i class="fas fa-times-circle text-danger me-2"></i>Contro</h5>
-                            <ul class="guida-profile-section-list">
-                                <li class="guida-profile-section-list-item">Occupa più spazio rispetto a modelli più piccoli</li>
-                                <li class="guida-profile-section-list-item">Non ha tutte le funzioni premium</li>
+                        <div style="margin-bottom: 25px;">
+                            <h5 style="font-size: 1rem; font-weight: bold; margin-bottom: 15px;"><i class="fas fa-times-circle text-danger me-2"></i>Contro</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Occupa più spazio rispetto a modelli più piccoli</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Non ha tutte le funzioni premium</li>
                             </ul>
                         </div>
                         
-                        <div class="guida-product-recommendation">
-                            <h5 class="guida-product-title">Prodotto Consigliato</h5>
-                            <p class="guida-product-description">COSORI Turbo Blaze Friggitrice ad Aria 6L. Tecnologia di riscaldamento rapido e 12 programmi preimpostati.</p>
-                            <a href="https://www.amazon.it/COSORI-Friggitrice-Tecnologia-Automatica-Ingredienti/dp/B0DX1GQK9J?mcid=56f24c1f2ab6350ab988579288cb5576&hvadid=722786726072&hvpos=&hvnetw=g&hvrand=9567507632885230834&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2406035948544&hvocijid=9567507632885230834-B0DX1GQK9J-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=d910cfadb6fa5ea89310b33552d6a5f0&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="guida-product-link">
+                        <div style="background: #fff8f0; padding: 20px; border-radius: 15px; border-left: 4px solid #FF6B35; margin-top: 20px;">
+                            <h5 style="font-size: 1rem; font-weight: bold; margin-bottom: 10px; color: #333;">Prodotto Consigliato</h5>
+                            <p style="font-size: 0.95rem; color: #666; line-height: 1.6; margin-bottom: 0;">COSORI Turbo Blaze Friggitrice ad Aria 6L. Tecnologia di riscaldamento rapido e 12 programmi preimpostati.</p>
+                            <a href="https://www.amazon.it/COSORI-Friggitrice-Tecnologia-Automatica-Ingredienti/dp/B0DX1GQK9J?mcid=56f24c1f2ab6350ab988579288cb5576&hvadid=722786726072&hvpos=&hvnetw=g&hvrand=9567507632885230834&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2406035948544&hvocijid=9567507632885230834-B0DX1GQK9J-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=d910cfadb6fa5ea89310b33552d6a5f0&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #FF6B35 0%, #FF9500 50%, #FFB800 100%); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 15px; transition: all 0.3s ease;">
                                 <i class="fab fa-amazon me-2"></i>Acquista su Amazon
                             </a>
                         </div>
@@ -1898,37 +1904,37 @@
                 </div>
 
                 <!-- Entry Profile -->
-                <div class="guida-profile-card">
-                    <div class="guida-profile-header">
-                        <span class="guida-profile-badge">Entry Level</span>
-                        <h3 class="guida-profile-title">Cucina Smart</h3>
+                <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                    <div style="padding: 30px; color: white; text-align: center; background: linear-gradient(135deg, #FF6B35 0%, #FF9500 50%, #FFB800 100%);">
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.2); padding: 8px 20px; border-radius: 30px; font-size: 0.85rem; font-weight: bold; margin-bottom: 15px;">Entry Level</span>
+                        <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0;">Cucina Smart</h3>
                     </div>
-                    <div class="guida-profile-body">
-                        <p class="guida-profile-description">Per chi vuole spendere poco e iniziare subito. Prodotti accessibili perfetti per chi si avvicina alla cucina moderna.</p>
+                    <div style="padding: 30px;">
+                        <p style="color: #666; font-size: 1rem; line-height: 1.6; margin-bottom: 25px;">Per chi vuole spendere poco e iniziare subito. Prodotti accessibili perfetti per chi si avvicina alla cucina moderna.</p>
                         
-                        <div class="guida-profile-section">
-                            <h5 class="guida-profile-section-title"><i class="fas fa-check-circle text-success me-2"></i>Pro</h5>
-                            <ul class="guida-profile-section-list">
-                                <li class="guida-profile-section-list-item">Prezzo accessibile</li>
-                                <li class="guida-profile-section-list-item">400W di potenza affidabile</li>
-                                <li class="guida-profile-section-list-item">Impugnatura ergonomica</li>
-                                <li class="guida-profile-section-list-item">Piede anti-schizzi per pulizia facile</li>
-                                <li class="guida-profile-section-list-item">Leggero e compatto</li>
+                        <div style="margin-bottom: 25px;">
+                            <h5 style="font-size: 1rem; font-weight: bold; margin-bottom: 15px;"><i class="fas fa-check-circle text-success me-2"></i>Pro</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Prezzo accessibile</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">400W di potenza affidabile</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Impugnatura ergonomica</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Piede anti-schizzi per pulizia facile</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Leggero e compatto</li>
                             </ul>
                         </div>
                         
-                        <div class="guida-profile-section">
-                            <h5 class="guida-profile-section-title"><i class="fas fa-times-circle text-danger me-2"></i>Contro</h5>
-                            <ul class="guida-profile-section-list">
-                                <li class="guida-profile-section-list-item">Funzionalità limitate rispetto a modelli premium</li>
-                                <li class="guida-profile-section-list-item">Non adatto per preparazioni complesse</li>
+                        <div style="margin-bottom: 25px;">
+                            <h5 style="font-size: 1rem; font-weight: bold; margin-bottom: 15px;"><i class="fas fa-times-circle text-danger me-2"></i>Contro</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Funzionalità limitate rispetto a modelli premium</li>
+                                <li style="padding: 8px 0; font-size: 0.95rem; color: #555;">Non adatto per preparazioni complesse</li>
                             </ul>
                         </div>
                         
-                        <div class="guida-product-recommendation">
-                            <h5 class="guida-product-title">Prodotto Consigliato</h5>
-                            <p class="guida-product-description">Bosch Frullatore Immersione MSM24100 - 400W di potenza affidabile con impugnatura ergonomica per uso confortevole. Piede anti-schizzi per pulizia facile, leggero e compatto. Qualità tedesca Bosch.</p>
-                            <a href="https://www.amazon.it/Bosch-Frullatore-Immersione-MSM24100-Impugnatura/dp/B01FZAVFB2?mcid=5435a2b7e2423f13ae7995c237ffdddc&hvadid=700789413798&hvpos=&hvnetw=g&hvrand=4664976799502394951&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-422763004981&hvocijid=4664976799502394951-B01FZAVFB2-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ae49896a4c29dd6c7bc0bd7b59e409d&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="guida-product-link">
+                        <div style="background: #fff8f0; padding: 20px; border-radius: 15px; border-left: 4px solid #FF6B35; margin-top: 20px;">
+                            <h5 style="font-size: 1rem; font-weight: bold; margin-bottom: 10px; color: #333;">Prodotto Consigliato</h5>
+                            <p style="font-size: 0.95rem; color: #666; line-height: 1.6; margin-bottom: 0;">Bosch Frullatore Immersione MSM24100 - 400W di potenza affidabile con impugnatura ergonomica per uso confortevole. Piede anti-schizzi per pulizia facile, leggero e compatto. Qualità tedesca Bosch.</p>
+                            <a href="https://www.amazon.it/Bosch-Frullatore-Immersione-MSM24100-Impugnatura/dp/B01FZAVFB2?mcid=5435a2b7e2423f13ae7995c237ffdddc&hvadid=700789413798&hvpos=&hvnetw=g&hvrand=4664976799502394951&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-422763004981&hvocijid=4664976799502394951-B01FZAVFB2-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=7ae49896a4c29dd6c7bc0bd7b59e409d&ref=_as_li_ss_tl" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #FF6B35 0%, #FF9500 50%, #FFB800 100%); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 15px; transition: all 0.3s ease;">
                                 <i class="fab fa-amazon me-2"></i>Acquista su Amazon
                             </a>
                         </div>
@@ -1936,7 +1942,7 @@
                 </div>
 
                 <!-- Nuovo Prodotto 6: PRESTIGE Set di 9 padelle antiaderenti -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-utensils fa-4x text-primary"></i>
@@ -1996,7 +2002,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/Prestige-antiaderenti-resistenti-induzione-impugnare/dp/B0C49TJKJ5?th=1&linkCode=ll2&tag=l0c39-21&linkId=1334e0ede6f625ea3ce52d4ef9a163fb&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Prestige-antiaderenti-resistenti-induzione-impugnare/dp/B0C49TJKJ5?th=1&linkCode=ll2&tag=l0c39-21&linkId=1334e0ede6f625ea3ce52d4ef9a163fb&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -2004,7 +2010,7 @@
                 </div>
 
                 <!-- Nuovo Prodotto 7: MAGEFESA Jordan Set di padelle -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-utensils fa-4x text-success"></i>
@@ -2064,7 +2070,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/Magefesa-Jordan-padelle-Acciaio-vetrificato/dp/B07DP4L6NT?&linkCode=ll2&tag=l0c39-21&linkId=6d538f31dbc2d0705703cc94dcc2ebd4&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Magefesa-Jordan-padelle-Acciaio-vetrificato/dp/B07DP4L6NT?&linkCode=ll2&tag=l0c39-21&linkId=6d538f31dbc2d0705703cc94dcc2ebd4&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -2072,7 +2078,7 @@
                 </div>
 
                 <!-- Nuovo Prodotto 8: SET 3 PADELLE WOOD&STONE -->
-                <div class="product-card product-card-cucina card h-100">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-utensils fa-4x text-info"></i>
@@ -2132,7 +2138,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/SET-3-PADELLE-WOOD-STONE/dp/B07S1VRNG6?&linkCode=ll2&tag=l0c39-21&linkId=73df7c30a54f668e5084df48bb9712eb&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/SET-3-PADELLE-WOOD-STONE/dp/B07S1VRNG6?&linkCode=ll2&tag=l0c39-21&linkId=73df7c30a54f668e5084df48bb9712eb&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -2144,9 +2150,9 @@
 
     <!-- Product: Macchina per il Gelato -->
     <section class="container mt-5">
-        <div class="row g-4">
-            <div class="col-lg-6 col-md-6">
-                <div class="product-card product-card-cucina card h-100">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="product-card product-card-cucina card mb-4">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
                             <i class="fas fa-ice-cream fa-4x text-primary"></i>
@@ -2169,7 +2175,7 @@
                             </ul>
                         </div>
                         
-                        <a href="https://www.amazon.it/Macchina-Domestica-Display-Modalit%C3%A0-Famiglia/dp/B0D4YZ27T9?&linkCode=ll2&tag=l0c39-21&linkId=21cfb29d001a9eef9332499aa6de0c5b&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                        <a href="https://www.amazon.it/Macchina-Domestica-Display-Modalit%C3%A0-Famiglia/dp/B0D4YZ27T9?&linkCode=ll2&tag=l0c39-21&linkId=21cfb29d001a9eef9332499aa6de0c5b&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
                     </div>
                 </div>
             </div>
