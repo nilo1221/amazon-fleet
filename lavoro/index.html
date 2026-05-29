@@ -438,46 +438,107 @@
                         
                         <div id="comparisonCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
                             <div class="carousel-inner">
-                                <!-- Slide 1: Friggitrici ad Aria -->
+                                <!-- Slide 1: Friggitrici ad Aria - Technical Cards -->
                                 <div class="carousel-item active" data-niche-url="cucina-elettrodomestici/index.html" data-niche-name="Cucina" data-niche-icon="fa-utensils" data-niche-color="warning">
                                     <div class="text-center mb-3">
                                         <h3 class="fw-bold"><i class="fas fa-fire-burner text-warning me-2"></i>Friggitrici ad Aria</h3>
                                     </div>
-                                    <div class="table-responsive">
-                                        <table class="table table-custom table-hover table-bordered align-middle">
-                                            <thead class="table-warning-custom">
-                                                <tr>
-                                                    <th>Prodotto</th>
-                                                    <th>Capacità</th>
-                                                    <th>Potenza</th>
-                                                    <th>Caratteristiche</th>
-                                                    <th>Prezzo</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><a href="cucina-elettrodomestici/index.html" class="text-decoration-none text-dark"><strong>Philips Pasta Maker</strong><br><small class="text-muted">Must-have</small></a></td>
-                                                    <td class="text-center"><span class="badge badge-custom-success fs-6">N/D</span></td>
-                                                    <td class="text-center"><span class="badge badge-custom-primary fs-6">N/D</span></td>
-                                                    <td>Prodotto top categoria, pasta fresca automatica</td>
-                                                    <td class="text-center"><strong>€€€</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="cucina-elettrodomestici/index.html" class="text-decoration-none text-dark"><strong>Amazon Basics 14-Piece Knife Block</strong><br><small class="text-muted">Alternativa Smart</small></a></td>
-                                                    <td class="text-center"><span class="badge badge-custom-warning fs-6">14 pezzi</span></td>
-                                                    <td class="text-center"><span class="badge badge-custom-secondary fs-6">N/D</span></td>
-                                                    <td>Rapporto qualità-prezzo eccellente</td>
-                                                    <td class="text-center"><strong>€€</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="https://www.amazon.it/amazonprime?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref_=as_li_ss_tl" class="text-decoration-none text-dark"><strong>Amazon Prime</strong><br><small class="text-muted">Servizio</small></a></td>
-                                                    <td class="text-center"><span class="badge badge-custom-info fs-6">Abbonamento</span></td>
-                                                    <td class="text-center"><span class="badge badge-custom-secondary fs-6">Mensile</span></td>
-                                                    <td>Spedizione gratuita, commissioni ricorrenti</td>
-                                                    <td class="text-center"><strong>€</strong></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                        <!-- Card 1: Philips Pasta Maker -->
+                                        <div class="carousel-technical-card" style="min-width: 280px; max-width: 320px;">
+                                            <div class="carousel-technical-card-header">
+                                                <i class="fas fa-blender carousel-technical-card-icon"></i>
+                                                <span class="carousel-technical-card-badge">TOP PICK</span>
+                                            </div>
+                                            <h4 class="carousel-technical-card-title">Philips Pasta Maker</h4>
+                                            <div class="carousel-technical-card-body">
+                                                <div class="carousel-technical-card-spec">
+                                                    <span class="carousel-technical-card-spec-label">TYPE:</span>
+                                                    <span class="carousel-technical-card-spec-value">AUTOMATIC</span>
+                                                </div>
+                                                <div class="carousel-technical-card-spec">
+                                                    <span class="carousel-technical-card-spec-label">CAP:</span>
+                                                    <span class="carousel-technical-card-spec-value">N/D</span>
+                                                </div>
+                                                <div class="carousel-technical-card-spec">
+                                                    <span class="carousel-technical-card-spec-label">FEAT:</span>
+                                                    <span class="carousel-technical-card-spec-value">PASTA FRESCA</span>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-technical-card-progress">
+                                                <div class="carousel-technical-card-progress-bar">
+                                                    <div class="carousel-technical-card-progress-fill" style="width: 95%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-technical-card-footer">
+                                                <a href="cucina-elettrodomestici/index.html" class="carousel-technical-card-cta">Vedi su Amazon</a>
+                                                <button onclick="openAtlas()" class="carousel-technical-card-compare">Confronta</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Card 2: Amazon Basics Knife Block -->
+                                        <div class="carousel-technical-card" style="min-width: 280px; max-width: 320px;">
+                                            <div class="carousel-technical-card-header">
+                                                <i class="fas fa-utensils carousel-technical-card-icon"></i>
+                                                <span class="carousel-technical-card-badge">BEST BUY</span>
+                                            </div>
+                                            <h4 class="carousel-technical-card-title">Amazon Basics 14-Piece</h4>
+                                            <div class="carousel-technical-card-body">
+                                                <div class="carousel-technical-card-spec">
+                                                    <span class="carousel-technical-card-spec-label">TYPE:</span>
+                                                    <span class="carousel-technical-card-spec-value">KNIFE SET</span>
+                                                </div>
+                                                <div class="carousel-technical-card-spec">
+                                                    <span class="carousel-technical-card-spec-label">CAP:</span>
+                                                    <span class="carousel-technical-card-spec-value">14 PCS</span>
+                                                </div>
+                                                <div class="carousel-technical-card-spec">
+                                                    <span class="carousel-technical-card-spec-label">FEAT:</span>
+                                                    <span class="carousel-technical-card-spec-value">HIGH QUALITY</span>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-technical-card-progress">
+                                                <div class="carousel-technical-card-progress-bar">
+                                                    <div class="carousel-technical-card-progress-fill" style="width: 85%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-technical-card-footer">
+                                                <a href="cucina-elettrodomestici/index.html" class="carousel-technical-card-cta">Vedi su Amazon</a>
+                                                <button onclick="openAtlas()" class="carousel-technical-card-compare">Confronta</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Card 3: Amazon Prime -->
+                                        <div class="carousel-technical-card" style="min-width: 280px; max-width: 320px;">
+                                            <div class="carousel-technical-card-header">
+                                                <i class="fas fa-star carousel-technical-card-icon"></i>
+                                                <span class="carousel-technical-card-badge">SERVICE</span>
+                                            </div>
+                                            <h4 class="carousel-technical-card-title">Amazon Prime</h4>
+                                            <div class="carousel-technical-card-body">
+                                                <div class="carousel-technical-card-spec">
+                                                    <span class="carousel-technical-card-spec-label">TYPE:</span>
+                                                    <span class="carousel-technical-card-spec-value">SUBSCRIPTION</span>
+                                                </div>
+                                                <div class="carousel-technical-card-spec">
+                                                    <span class="carousel-technical-card-spec-label">CAP:</span>
+                                                    <span class="carousel-technical-card-spec-value">MONTHLY</span>
+                                                </div>
+                                                <div class="carousel-technical-card-spec">
+                                                    <span class="carousel-technical-card-spec-label">FEAT:</span>
+                                                    <span class="carousel-technical-card-spec-value">FREE SHIPPING</span>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-technical-card-progress">
+                                                <div class="carousel-technical-card-progress-bar">
+                                                    <div class="carousel-technical-card-progress-fill" style="width: 90%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-technical-card-footer">
+                                                <a href="https://www.amazon.it/amazonprime?&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref_=as_li_ss_tl" class="carousel-technical-card-cta">Vedi su Amazon</a>
+                                                <button onclick="openAtlas()" class="carousel-technical-card-compare">Confronta</button>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="carousel-niche-button-container"></div>
                                 </div>

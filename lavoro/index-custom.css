@@ -330,6 +330,160 @@
     color: white;
 }
 
+/* Technical Modular Card System for Carousel */
+.carousel-technical-card {
+    background: #1A1A1A;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid #2A2A2A;
+    position: relative;
+    scroll-snap-align: center;
+}
+
+.carousel-technical-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--industrial-orange-glow);
+    border-color: var(--industrial-orange);
+}
+
+.carousel-technical-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.carousel-technical-card-icon {
+    font-size: 1.5rem;
+    color: var(--industrial-orange);
+}
+
+.carousel-technical-card-badge {
+    background: var(--industrial-orange);
+    color: #000000;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.carousel-technical-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.carousel-technical-card-body {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: #B0B0B0;
+    margin-bottom: 16px;
+}
+
+.carousel-technical-card-spec {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+.carousel-technical-card-spec:last-child {
+    border-bottom: none;
+}
+
+.carousel-technical-card-spec-label {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.carousel-technical-card-spec-value {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.carousel-technical-card-progress {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.carousel-technical-card-progress-bar {
+    height: 6px;
+    background: #2A2A2A;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.carousel-technical-card-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--industrial-orange) 0%, #FF8C00 100%);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.carousel-technical-card-footer {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.carousel-technical-card-cta {
+    flex: 1;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, var(--industrial-orange) 0%, #FF8C00 100%);
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-technical-card-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--industrial-orange-glow);
+}
+
+.carousel-technical-card-compare {
+    padding: 10px 16px;
+    background: transparent;
+    border: 1px solid var(--industrial-orange);
+    color: var(--industrial-orange);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-technical-card-compare:hover {
+    background: var(--industrial-orange);
+    color: #000000;
+}
+
+/* Carousel with Scroll Snap */
+.carousel-inner {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.carousel-item {
+    scroll-snap-align: center;
+}
+
 .table-custom thead.table-primary-custom {
     background: linear-gradient(135deg, var(--table-primary) 0%, var(--table-secondary) 100%);
     color: white;
