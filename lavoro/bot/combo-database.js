@@ -224,6 +224,17 @@ const ComboDatabase = {
             },
             {
                 product1: {
+                    name: "Oderra Torcia Frontale LED Ricaricabile",
+                    link: "https://www.amazon.it/Oderra-Ricaricabile-Illuminazione-Indicatore-Impermeabile/dp/B0DMN26WY2?adgrpid=124708390037&dib=eyJ2IjoiMSJ9._FRLa5fl_JtxJtFWEBX5PM3p2YNOoSPWi0gCMOTQroRLcbwf_XThqWuo8paXXj31ChxYywvj7IbhckgnYAWlTSGjM628SHT157hJbX_GNI4rFBWT1z2gvpFzH0As0chETNT1n2K-tIEJuYekQ2MNccoWbr6iJmh-fGDdf72okPKLzIiVfwKwne7uZ7nfwxjT2UcxNmghx45W_oQMQ_fJ0UasE0rLKnvWt-hzmRSd5G7pG_nLaWydWG29s8QJ6IwLfjXS04iq2kfN6wlHmkPnHBldQXjVNePCn6hVlollFjE.JukTDI6UXtb3XZpC9WuweJ4PhGb2KZbjMYr2X9SILnY&dib_tag=se&hvadid=591166418377&hvdev=c&hvexpln=0&hvlocphy=9190900&hvnetw=g&hvocijid=2724230052571550670--&hvqmt=e&hvrand=2724230052571550670&hvtargid=kwd-359942218975&hydadcr=8194_2249375&keywords=pesca+amazon&mcid=38a4311fdc04398984b206b17df2d853&qid=1780088260&sr=8-1-spons&aref=Y9dt97cZ3d&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0268721484ae290eb70f6cec002ddfe7&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi illuminare il campeggio? 🔦 Ho trovato questa torcia frontale ricaricabile con sensore di movimento e 8 modalità. Con Coca-Cola Zero hai luce e relax!"
+            },
+            {
+                product1: {
                     name: "Eurhomewit 3 x 120 L Sacchi Giardinaggio con Coperchio e Maniglie",
                     link: "https://www.amazon.it/dp/B0CW2WT9HY?aref=YyzE14YW4k&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=6cc581867f2306d9adc8118ab54eb5fc&ref=_as_li_ss_tl"
                 },
