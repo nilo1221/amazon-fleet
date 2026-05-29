@@ -19,8 +19,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../niche-animations.css">
-    <link rel="stylesheet" href="fitness-casa.css">
     <!-- AI Chat CSS -->
     <style>
         :root {
@@ -104,7 +102,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="../index.html"><i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation menu" title="Toggle navigation menu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -160,11 +158,8 @@
                 <div class="col-lg-8 mx-auto">
                     <div class="product-card product-card-fitness card">
                         <div class="card-body p-4">
-                            <div class="text-center mb-4">
-                                <div class="custom-icon category-icon-large icon-fitness"></div>
-                            </div>
                             <span class="category-badge">
-                                <div class="custom-icon feature-icon icon-fitness"></div>Barrette Proteiche
+                                <i class="fas fa-pills me-1"></i>Barrette Proteiche
                             </span>
                             <h3 class="card-title fw-bold mb-3">NAMEDSPORT Proteinbar</h3>
                             
@@ -184,54 +179,33 @@
                             
                             <div class="mb-4">
                                 <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
-                                <div class="feature-progress">
-                                    <div class="feature-progress-label">
-                                        <span><i class="fas fa-check-circle text-success me-2"></i>Proteine 35%</span>
-                                        <span>95%</span>
-                                    </div>
-                                    <div class="feature-progress-bar">
-                                        <div class="feature-progress-fill progress-95"></div>
-                                    </div>
-                                </div>
-                                <div class="feature-progress">
-                                    <div class="feature-progress-label">
-                                        <span><i class="fas fa-check-circle text-success me-2"></i>Box 12x50g</span>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="feature-progress-bar">
-                                        <div class="feature-progress-fill progress-90"></div>
-                                    </div>
-                                </div>
-                                <div class="feature-progress">
-                                    <div class="feature-progress-label">
-                                        <span><i class="fas fa-check-circle text-success me-2"></i>Spuntino/Post workout</span>
-                                        <span>100%</span>
-                                    </div>
-                                    <div class="feature-progress-bar">
-                                        <div class="feature-progress-fill progress-100"></div>
-                                    </div>
-                                </div>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Proteine:</strong> 35% di proteine
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Confezione:</strong> Box da 12x50g
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Uso:</strong> Spuntino o post workout
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Senza:</strong> Glutine e olio di palma
+                                    </li>
+                                </ul>
                             </div>
-
-                            <!-- Trust Badges -->
-                            <div class="trust-badges mb-3">
-                                <div class="trust-badge">
-                                    <i class="fas fa-star"></i>
-                                    <span>4.5/5 su Amazon</span>
-                                </div>
-                                <div class="trust-badge">
-                                    <i class="fas fa-truck prime-icon"></i>
-                                    <span>Spedizione Prime</span>
-                                </div>
-                            </div>
-
+                            
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
                                     <i class="fas fa-check-circle text-success me-2"></i>
                                     <span class="text-success fw-bold">Disponibile su Amazon</span>
                                 </div>
-                                <a href="https://www.amazon.it/dp/B088CBGH2Y?ascsubtag=srctok-03e71a251493ad36&btn_ref=srctok-03e71a251493ad36&th=1&linkCode=ll2&tag=l0c39-21&linkId=e182e40481fe0812ca7512c0fde7f20b&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
-                                    <i class="fab fa-amazon me-2"></i>Vedi specifiche e prezzo
+                                <a href="https://www.amazon.it/dp/B088CBGH2Y?ascsubtag=srctok-03e71a251493ad36&btn_ref=srctok-03e71a251493ad36&th=1&linkCode=ll2&tag=l0c39-21&linkId=e182e40481fe0812ca7512c0fde7f20b&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                                    <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                                 </a>
                             </div>
                         </div>
@@ -294,7 +268,7 @@
                                     <i class="fas fa-check-circle text-success me-2"></i>
                                     <span class="text-success">Prodotto disponibile</span>
                                 </div>
-                                <a href="https://www.amazon.it/dp/B00T7L20AQ?th=1&linkCode=ll2&tag=l0c39-21&linkId=425913cbbff678f4faae0baf8f6c7bb4&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                                <a href="https://www.amazon.it/dp/B00T7L20AQ?th=1&linkCode=ll2&tag=l0c39-21&linkId=425913cbbff678f4faae0baf8f6c7bb4&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                     <i class="fab fa-amazon me-2"></i>Amazon
                                 </a>
                             </div>
@@ -349,7 +323,7 @@
                                     <i class="fas fa-check-circle text-success me-2"></i>
                                     <span class="text-success">Prodotto disponibile</span>
                                 </div>
-                                <a href="https://www.amazon.it/dp/B07Z42P2RG?ie=UTF8&psc=1&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=KZBA5VTTAYAD8EHRAXN5&pd_rd_wg=CdEOt&pd_rd_w=8BYvX&pd_rd_r=32878f6d-474d-43e9-99c1-9a4d9f2163bd&fpw=alm&almBrandId=QW1hem9uIEZyZXNo&aref=D92tQNMbIG&linkCode=ll2&tag=l0c39-21&linkId=11a56cb96b04f077bf5b107363f96f01&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                                <a href="https://www.amazon.it/dp/B07Z42P2RG?ie=UTF8&psc=1&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=KZBA5VTTAYAD8EHRAXN5&pd_rd_wg=CdEOt&pd_rd_w=8BYvX&pd_rd_r=32878f6d-474d-43e9-99c1-9a4d9f2163bd&fpw=alm&almBrandId=QW1hem9uIEZyZXNo&aref=D92tQNMbIG&linkCode=ll2&tag=l0c39-21&linkId=11a56cb96b04f077bf5b107363f96f01&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                     <i class="fab fa-amazon me-2"></i>Amazon
                                 </a>
                             </div>
@@ -487,7 +461,7 @@
                                     <i class="fas fa-check-circle text-success me-2"></i>
                                     <span class="text-success fw-bold">Disponibile su Amazon</span>
                                 </div>
-                                <a href="https://www.amazon.it/LEONE-Rashguard-Legionarivs-Crossfit-Grappling/dp/B081TCBGZJ?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&content-id=amzn1.sym.69bcbf4e-9f5f-4f78-ae2b-ceac62d1d26b%3Aamzn1.sym.69bcbf4e-9f5f-4f78-ae2b-ceac62d1d26b&crid=ZE816KX5HHF1&cv_ct_cx=abbigliamento&keywords=abbigliamento&pd_rd_i=B081TCBGZJ&pd_rd_r=37bcf570-6c32-4036-b35c-dcf683df9946&pd_rd_w=Ek3ja&pd_rd_wg=8BzOH&pf_rd_p=69bcbf4e-9f5f-4f78-ae2b-ceac62d1d26b&pf_rd_r=78YGFC531DJGAVFFC5XK&qid=1777909639&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=abbigliamento%2Caps%2C286&sr=1-1-ca22f3c3-0606-4173-afab-fb32ddc038f9-spons&aref=SH16nXjdQt&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=2b1996e1d6ba30f48dc01ce5355b7738&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                                <a href="https://www.amazon.it/LEONE-Rashguard-Legionarivs-Crossfit-Grappling/dp/B081TCBGZJ?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&content-id=amzn1.sym.69bcbf4e-9f5f-4f78-ae2b-ceac62d1d26b%3Aamzn1.sym.69bcbf4e-9f5f-4f78-ae2b-ceac62d1d26b&crid=ZE816KX5HHF1&cv_ct_cx=abbigliamento&keywords=abbigliamento&pd_rd_i=B081TCBGZJ&pd_rd_r=37bcf570-6c32-4036-b35c-dcf683df9946&pd_rd_w=Ek3ja&pd_rd_wg=8BzOH&pf_rd_p=69bcbf4e-9f5f-4f78-ae2b-ceac62d1d26b&pf_rd_r=78YGFC531DJGAVFFC5XK&qid=1777909639&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=abbigliamento%2Caps%2C286&sr=1-1-ca22f3c3-0606-4173-afab-fb32ddc038f9-spons&aref=SH16nXjdQt&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=2b1996e1d6ba30f48dc01ce5355b7738&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                     <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                                 </a>
                             </div>
@@ -574,7 +548,7 @@
                                     <i class="fas fa-check-circle text-success me-2"></i>
                                     <span class="text-success fw-bold">Disponibile su Amazon</span>
                                 </div>
-                                <a href="https://www.amazon.it/dp/B0FHQTXYQY?_encoding=UTF8&aref=d9QIKU67Vd&pd_rd_i=B0FHQTXYQY&qid=1777989150&pd_rd_w=bqwBj&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=VVRZGC0YWPC8F6BQQV70&pd_rd_wg=RZEFo&pd_rd_r=9b8a8cd0-9ace-405e-8392-6b70b92daaf3&pd_rd_plhdr=t&linkCode=ll2&tag=l0c39-21&linkId=61c48fd28f80c8d904ea3399a9edf0e4&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                                <a href="https://www.amazon.it/dp/B0FHQTXYQY?_encoding=UTF8&aref=d9QIKU67Vd&pd_rd_i=B0FHQTXYQY&qid=1777989150&pd_rd_w=bqwBj&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=VVRZGC0YWPC8F6BQQV70&pd_rd_wg=RZEFo&pd_rd_r=9b8a8cd0-9ace-405e-8392-6b70b92daaf3&pd_rd_plhdr=t&linkCode=ll2&tag=l0c39-21&linkId=61c48fd28f80c8d904ea3399a9edf0e4&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                     <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                                 </a>
                             </div>
@@ -643,7 +617,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/Tappetino-Spessore-Antiscivolo-KG-Qualit%C3%A0/dp/B01N67BRCF?th=1&linkCode=ll2&tag=l0c39-21&linkId=bb90c8bac4dbb7272f7d8192a73c4759&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Tappetino-Spessore-Antiscivolo-KG-Qualit%C3%A0/dp/B01N67BRCF?th=1&linkCode=ll2&tag=l0c39-21&linkId=bb90c8bac4dbb7272f7d8192a73c4759&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -711,7 +685,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/Under-Armour-Comp-T-Shirt-Black/dp/B0874WD2B2?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=48faccca3c1ed7624b21d01e648170ec&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Under-Armour-Comp-T-Shirt-Black/dp/B0874WD2B2?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=48faccca3c1ed7624b21d01e648170ec&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -779,7 +753,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/TECEUM-NUOVO-2023-Yoga-Strap/dp/B0BY2Z99RB?th=1&linkCode=ll2&tag=l0c39-21&linkId=d77cb16110470765e4b94cb4a0802bf8&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/TECEUM-NUOVO-2023-Yoga-Strap/dp/B0BY2Z99RB?th=1&linkCode=ll2&tag=l0c39-21&linkId=d77cb16110470765e4b94cb4a0802bf8&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -847,7 +821,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/unycos-Antiscivolo-Disponibili-Ergonomiche-Allenamento/dp/B0CD9NXFMZ?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=1439ab5b69a3908735f923089d9f5dfc&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/unycos-Antiscivolo-Disponibili-Ergonomiche-Allenamento/dp/B0CD9NXFMZ?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=1439ab5b69a3908735f923089d9f5dfc&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -915,7 +889,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/RE-manubri-regolabili-Chiusure-collegamento/dp/B09773F9BL?th=1&linkCode=ll2&tag=l0c39-21&linkId=a44d9f6049a02d0fe4b53915e085269f&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/RE-manubri-regolabili-Chiusure-collegamento/dp/B09773F9BL?th=1&linkCode=ll2&tag=l0c39-21&linkId=a44d9f6049a02d0fe4b53915e085269f&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -983,7 +957,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/Joma-Nobel-Allenamento-Unisex-Adulto/dp/B00IXMBTKC?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=67de91ddab09a654c237fb9f253e9dfc&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Joma-Nobel-Allenamento-Unisex-Adulto/dp/B00IXMBTKC?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=67de91ddab09a654c237fb9f253e9dfc&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1051,7 +1025,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/Panathletic-Elastici-Fitness-Set-Bande/dp/B016A9IUWY?th=1&linkCode=ll2&tag=l0c39-21&linkId=6dbdcb8523b4ed784a7fc3eb1c446af1&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/Panathletic-Elastici-Fitness-Set-Bande/dp/B016A9IUWY?th=1&linkCode=ll2&tag=l0c39-21&linkId=6dbdcb8523b4ed784a7fc3eb1c446af1&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1119,7 +1093,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B07ML1VMPD?th=1&keywords=yoga%2C%2Btappetino%2C%2Baccessori%2C%2Blibri&linkCode=ll2&tag=l0c39-21&linkId=4f41a3b8643f65c1e5fc7eea213d2207&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B07ML1VMPD?th=1&keywords=yoga%2C%2Btappetino%2C%2Baccessori%2C%2Blibri&linkCode=ll2&tag=l0c39-21&linkId=4f41a3b8643f65c1e5fc7eea213d2207&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1187,7 +1161,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B0D41P3BZH?aref=OYF8sw7Mbz&aaxitk=76691c34056cf1146ee8c584c086628e&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=XPZY3133T3BDNCMRWQS7&pd_rd_wg=UgafR&pd_rd_w=tGAxA&pd_rd_r=b05b64da-dd0d-42af-b2f9-8d218691bfcb&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=db369843375be2c8331549c24195ab63&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B0D41P3BZH?aref=OYF8sw7Mbz&aaxitk=76691c34056cf1146ee8c584c086628e&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=XPZY3133T3BDNCMRWQS7&pd_rd_wg=UgafR&pd_rd_w=tGAxA&pd_rd_r=b05b64da-dd0d-42af-b2f9-8d218691bfcb&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=db369843375be2c8331549c24195ab63&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1252,7 +1226,7 @@
                                 <i class="fas fa-check-circle text-success me-2"></i>
                                 <span class="text-success fw-bold">Disponibile su Amazon</span>
                             </div>
-                            <a href="https://www.amazon.it/dp/B078XXP3RH?tag=l0c39-21" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                            <a href="https://www.amazon.it/dp/B078XXP3RH?tag=l0c39-21" target="_blank" class="btn btn-amazon">
                                 <i class="fab fa-amazon me-2"></i>Vedi su Amazon
                             </a>
                         </div>
@@ -1290,7 +1264,7 @@
     <script src="../js/tracking-globale.js"></script>
     <!-- AI Chat Button -->
     <div id="ai-chat-button" onclick="toggleChat()">
-        <div class="chat-button-icon"></div>
+        <img src="../images/logo.png" alt="Smart Choices Guide" class="chat-button-logo">
     </div>
     
     <!-- AI Chat Window -->
@@ -1298,7 +1272,7 @@
         <!-- Chat Header -->
         <div class="chat-header">
             <div class="header-content">
-                <div class="chat-bot-icon"></div>
+                <img src="../images/logo.png" alt="Smart Choices Guide Logo" class="chat-bot-logo">
                 <div>
                     <h5>Assistente Smart</h5>
                     <small>Online</small>

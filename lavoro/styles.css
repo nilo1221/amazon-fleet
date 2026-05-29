@@ -7,41 +7,87 @@
     --accent-color: #FF4500;
     --accent-gold: #FFA500;
     --text-color: #1a1a2e;
-    --focus-outline: 3px solid #005fcc;
-    --focus-offset: 2px;
+    
+    /* Unified Spacing System */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #F8F9FA;
+    background: #faf9f6;
     color: var(--text-color);
 }
 
-/* Focus states custom per accessibilità WCAG */
-*:focus-visible {
-    outline: var(--focus-outline);
-    outline-offset: var(--focus-offset);
+/* Unified Button System */
+.btn {
+    font-family: inherit;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 12px 24px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible {
-    outline: var(--focus-outline);
-    outline-offset: var(--focus-offset);
-    box-shadow: 0 0 0 4px rgba(0, 95, 204, 0.2);
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
 }
 
-.btn:focus-visible {
-    outline: var(--focus-outline);
-    outline-offset: var(--focus-offset);
-    box-shadow: 0 0 0 4px rgba(0, 95, 204, 0.3);
+.btn-primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
 }
 
-.nav-link:focus-visible {
-    outline: var(--focus-outline);
-    outline-offset: var(--focus-offset);
-    background-color: rgba(255, 255, 255, 0.1);
+.btn-primary:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.1);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid #ccc;
+}
+
+.btn-outline:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(255, 107, 107, 0.05);
+}
+
+.btn-lg {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.9rem;
 }
 
 /* Niche identity bar - filo conduttore unificante */
