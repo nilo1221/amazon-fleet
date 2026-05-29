@@ -202,6 +202,28 @@ const ComboDatabase = {
             },
             {
                 product1: {
+                    name: "Sekey 100x220 cm Zanzariera Magnetica per Porta",
+                    link: "https://www.amazon.it/Sekey-Zanzariera-Magnetica-alluminio-installare/dp/B07PK3MJLB?pd_rd_w=Lxqmo&content-id=amzn1.sym.4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_p=4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_r=QC3SARN5RVTVABZP9N5Y&pd_rd_wg=VFUIJ&pd_rd_r=051f868f-931c-4081-ad02-53be0742c187&pd_rd_i=B07PK3MJLB&th=1&linkCode=ll2&tag=l0c39-21&linkId=4186d3a8c03bcbe6a4e1161eeb2c0528&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi proteggere la casa dagli insetti? 🦟 Ho trovato questa zanzariera magnetica facile da installare senza fori. Con Coca-Cola Zero hai casa protetta e relax!"
+            },
+            {
+                product1: {
+                    name: "Apalus Zanzariera con Magneti per Porte",
+                    link: "https://www.amazon.it/dp/B01GO5GX6O?ie=UTF8&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=QP0F3SCK6BP2YE8PPQFH&pd_rd_wg=YVGvY&pd_rd_w=sXZFD&pd_rd_r=ff6bb0e7-c64c-49fa-a0f2-9520bb9bf167&aref=ePdtT6grqD&th=1&linkCode=ll2&tag=l0c39-21&linkId=8fd685fa6596fb541c39441f03e2a84a&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi una zanzariera di alta qualità? 🚪 Ho trovato questa zanzariera Apalus che si chiude da sola con rete fine. Con Coca-Cola Zero hai protezione totale e relax!"
+            },
+            {
+                product1: {
                     name: "Eurhomewit 3 x 120 L Sacchi Giardinaggio con Coperchio e Maniglie",
                     link: "https://www.amazon.it/dp/B0CW2WT9HY?aref=YyzE14YW4k&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=6cc581867f2306d9adc8118ab54eb5fc&ref=_as_li_ss_tl"
                 },
@@ -567,6 +589,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Ti piace il caffè? ☕ Ho trovato la macchina NESCAFÉ Dolce Gusto per espresso perfetto. Con Coca-Cola Zero hai caffè e bevande fresche!"
+            },
+            {
+                product1: {
+                    name: "Utilissimi EDITACASA - Set tris Barattoli",
+                    link: "https://www.amazon.it/Utilissimi-EDITACASA-Barattoli-contenitori-portaspezie/dp/B0CKWHBYPJ?pd_rd_w=pTu3x&content-id=amzn1.sym.8e9cbc99-de35-4abc-8687-4abe6d4d44a0&pf_rd_p=8e9cbc99-de35-4abc-8687-4abe6d4d44a0&pf_rd_r=BRNGF5GN9Z6HW7G4J10R&pd_rd_wg=YVBpI&pd_rd_r=28b20346-f729-4a1f-b227-1d364182cbfe&pd_rd_i=B0CKWHBYPJ&psc=1&linkCode=ll2&tag=l0c39-21&linkId=44be6c43349d7fdcf73bb1841e2117c9&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi organizzare la cucina? 🫙 Ho trovato questo set tris di barattoli eleganti con decoro marmo per sale, zucchero e caffé. Con Coca-Cola Zero hai cucina ordinata e relax!"
             },
             {
                 product1: {
@@ -951,6 +984,39 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Ti piace la tecnologia? 📱 Ho trovato questo smartphone che è perfetto per te. Con Coca-Cola Zero sei sempre connesso!"
+            },
+            {
+                product1: {
+                    name: "2 Pacco Cuffie In Ear con Filo",
+                    link: "https://www.amazon.it/dp/B0FCY3DZPM?psc=1&aref=2C5hrob8lk&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=d89db8dea6c3bf7e2c415db1874bb82d&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi cuffie economiche e di qualità? 🎧 Ho trovato questo pacco di 2 cuffie con filo perfetto per avere sempre un paio di riserva. Con Coca-Cola Zero hai musica e relax!"
+            },
+            {
+                product1: {
+                    name: "XIAOMI REDMI Buds 8 Active",
+                    link: "https://www.amazon.it/XIAOMI-REDMI-Buds-Active-Semi/dp/B08N5WP9NP?th=1&linkCode=ll2&tag=l0c39-21&linkId=d7221ef5e61f3b85daa67b7b7199e402&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi auricolari wireless con bassi potenti? 🎵 Ho trovato i Redmi Buds 8 Active con driver titanio e 37h di autonomia. Con Coca-Cola Zero hai musica senza interruzioni!"
+            },
+            {
+                product1: {
+                    name: "Belkin SoundForm Mini Cuffie per Bambini",
+                    link: "https://www.amazon.it/Belkin-SoundForm-adattatore-Microfono-compatibili/dp/B0FKGTRKHT?th=1&linkCode=ll2&tag=l0c39-21&linkId=8f29b88a56afcee375e5b4e3a3b64701&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Cerchi cuffie sicure per i bambini? 👶 Ho trovato le Belkin SoundForm con limite volume 85dB per proteggere l'udito. Con Coca-Cola Zero hai sicurezza e relax!"
             }
         ]
     },
