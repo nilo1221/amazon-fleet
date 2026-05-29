@@ -2128,15 +2128,16 @@ function showUrgencyComboMessage(context) {
     addMessage(message, 'bot');
 }
 
-// Funzione per tracciare i click sulle combos
+// Funzione per tracciare i click sulle combos (logica amico)
 function trackComboClick(context, productNumber) {
     if (!userPreferences.comboClicks) {
         userPreferences.comboClicks = {};
     }
     if (!userPreferences.comboClicks[context]) {
-        userPreferences.comboClicks[context] = { product1: 0, product2: 0 };
+        userPreferences.comboClicks[context] = { product1: 0, product2: 0, clicked: false };
     }
     userPreferences.comboClicks[context][`product${productNumber}`]++;
+    userPreferences.comboClicks[context].clicked = true;
     saveUserPreferences();
     
     // Track combo click in GA4
@@ -2150,6 +2151,21 @@ function trackComboClick(context, productNumber) {
     }
     
     console.log(`Combo click tracked: ${context} - product ${productNumber}`);
+    
+    // Logica amico: ringrazia e chiede feedback
+    setTimeout(() => {
+        addMessage("Grazie per aver dato un'occhiata! 😊 Ti piace il prodotto? Vuoi che ti mostri alternative simili?", 'bot');
+    }, 1000);
+    
+    // Ferma il timer delle combo per 10 minuti (non essere molesto)
+    if (comboInterval) {
+        clearInterval(comboInterval);
+        setTimeout(() => {
+            comboInterval = setInterval(() => {
+                showComboMessage();
+            }, 30000); // 30 secondi
+        }, 10 * 60 * 1000); // 10 minuti
+    }
 }
 
 // Funzione per avviare il timer di urgenza (70-120 minuti)

@@ -207,14 +207,10 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B074QPKFYQ?psc=1&aref=2EsuFIfF7d&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=04d8b1b795bf1f526d3f2eddd0b7a866&ref=_as_li_ss_tl"
                 },
                 product2: {
-                    name: "Pomata Capelli Uomo Styling Professionale",
-                    link: "https://www.amazon.it/dp/B00XYZ5678?&linkCode=ll2&tag=l0c39-21&linkId=ghi789&ref=_as_li_ss_tl"
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
-                product3: {
-                    name: "Pettine Professionale in Carbonio",
-                    link: "https://www.amazon.it/dp/B00ABC9876?&linkCode=ll2&tag=l0c39-21&linkId=jkl012&ref=_as_li_ss_tl"
-                },
-                message: "Vuoi mantenere il taglio fresco come dal barbiere? 💈 Ho selezionato i 3 strumenti professionali che ti fanno risparmiare tempo e soldi a casa. Il tagliacapelli professionale per il look perfetto, la pomata styling per tenere tutto a posto, e il pettine in carbonio per la precisione. Non sai quale macchinetta scegliere? Rispondi con 'Capelli' o 'Barba' e ti mostro solo il kit specifico per te!"
+                message: "Vuoi mantenere il taglio fresco come dal barbiere? 💈 Ho selezionato il tagliacapelli professionale che ti fa risparmiare tempo e soldi a casa. Perfetto per il look preciso e veloce. Non sai quale macchinetta scegliere? Rispondi con 'Capelli' o 'Barba' e ti mostro il kit specifico per te!"
             }
         ]
     },
@@ -379,14 +375,10 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/Complete-Studio-Collection-Amazon-Exclusive/dp/B0F99ZJ52F?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683180&sprefix=set+vinili%2Caps%2C131&sr=8-4&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=14945c94044fd23f187315fd3cd6ad00&ref=_as_li_ss_tl"
                 },
                 product2: {
-                    name: "Audio-Technica AT-LP60XBT Giradischi Bluetooth",
-                    link: "https://www.amazon.it/Audio-Technica-AT-LP60XBT-Giradischi-Bluetooth/dp/B078GZP5CQ?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
-                product3: {
-                    name: "Spazzola Pulisci Vinili Antistatica",
-                    link: "https://www.amazon.it/Spazzola-Pulisci-Vinili-Antistatica/dp/B00XYZ1234?&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
-                },
-                message: "Stai dando un'occhiata a questa perla in vinile? 🎵 Ottima scelta! Il vinile non è solo un disco, è un'esperienza sensoriale. Molti audiofili che prendono questo disco aggiungono anche il giradischi Bluetooth e le protezioni antistatiche per farlo durare una vita. Vuoi vedere il kit completo per l'esperienza analogica perfetta?"
+                message: "Stai dando un'occhiata a questa perla in vinile? 🎵 Ottima scelta! Il vinile non è solo un disco, è un'esperienza sensoriale. Perfetto per le tue sessioni di ascolto con una bevanda rinfrescante."
             }
         ]
     },

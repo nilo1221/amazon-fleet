@@ -281,7 +281,6 @@ body {
     text-decoration: none;
     position: relative;
     overflow: hidden;
-    animation: pulse-cta 3s infinite ease-in-out;
 }
 
 @keyframes pulse-cta {

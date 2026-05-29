@@ -69,8 +69,19 @@ body {
 
 /* Parallasse 3D - Focus sull'Oggetto */
 .product-card .card-body {
+    background: linear-gradient(135deg, #1B4D3E 0%, #2E8B57 50%, #556B2F 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(46, 139, 87, 0.3);
+    box-shadow: 0 0 20px rgba(46, 139, 87, 0.2);
+    color: white;
     transform-style: preserve-3d;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card .card-body:hover {
+    border-color: rgba(0, 255, 0, 0.6);
+    box-shadow: 0 0 30px rgba(46, 139, 87, 0.4), 0 0 10px rgba(0, 255, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 .product-card:hover .card-body {
@@ -251,7 +262,6 @@ body {
     text-decoration: none;
     position: relative;
     overflow: hidden;
-    animation: pulse-cta 3s infinite ease-in-out;
 }
 
 @keyframes pulse-cta {
