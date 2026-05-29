@@ -123,13 +123,15 @@ body {
 }
 
 /* Icone Animate - Clean & Professional con effetti Elite Gaming */
-.product-card .fa-3x {
+.product-card .fa-3x,
+.product-card .fa-4x {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     color: var(--kitchen-primary);
     filter: drop-shadow(0 0 0 rgba(82, 183, 136, 0));
 }
 
-.product-card:hover .fa-3x {
+.product-card:hover .fa-3x,
+.product-card:hover .fa-4x {
     transform: scale(1.15) rotate(5deg);
     color: var(--kitchen-secondary);
     filter: drop-shadow(0 0 15px rgba(82, 183, 136, 0.6));
