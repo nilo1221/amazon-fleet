@@ -321,6 +321,180 @@
         </div>
     </section>
 
+    <!-- Carosello Automatico Prodotti -->
+    <section class="container my-5">
+        <div class="text-center mb-4">
+            <h3 class="fw-bold mb-2">
+                <i class="fas fa-fire text-warning me-2"></i>Prodotti in Evidenza
+            </h3>
+            <p class="text-muted">Scopri i migliori prodotti selezionati dalle nostre guide</p>
+        </div>
+        
+        <div class="position-relative">
+            <div id="products-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner" id="carousel-inner">
+                    <!-- I prodotti verranno caricati dinamicamente via JavaScript -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#products-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Precedente</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#products-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Successivo</span>
+                </button>
+            </div>
+            <div class="carousel-indicators-container mt-3 d-flex justify-content-center gap-2" id="carousel-dots">
+                <!-- I dots verranno generati dinamicamente -->
+            </div>
+        </div>
+    </section>
+
+    <style>
+        #products-carousel .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+        
+        .carousel-indicators-container button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #dee2e6;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-indicators-container button.active {
+            background-color: var(--industrial-orange);
+            transform: scale(1.2);
+        }
+        
+        .product-carousel-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .product-carousel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-carousel-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        
+        .product-carousel-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .product-carousel-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--industrial-orange);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .product-carousel-link:hover {
+            background: #e67e00;
+            transform: scale(1.05);
+        }
+    </style>
+
+    <script>
+        // Carica prodotti per il carosello automatico
+        async function loadProductsForCarousel() {
+            const carouselInner = document.getElementById('carousel-inner');
+            const carouselDots = document.getElementById('carousel-dots');
+            
+            // Lista di prodotti di esempio dalle varie categorie
+            const products = [
+                {
+                    name: "Logitech G Pro X Superlight",
+                    image: "https://images-na.ssl-images-amazon.com/images/I/61MkLpCzOJL._AC_SL1500_.jpg",
+                    link: "elite-gaming-gear/index.html"
+                },
+                {
+                    name: "Sony WH-1000XM5",
+                    image: "https://images-na.ssl-images-amazon.com/images/I/61SO3+G6PjL._AC_SL1500_.jpg",
+                    link: "smartphone-tech/index.html"
+                },
+                {
+                    name: "Kindle Paperwhite 11th Gen",
+                    image: "https://images-na.ssl-images-amazon.com/images/I/71+Pp3W0GOL._AC_SL1500_.jpg",
+                    link: "libri-ereader/index.html"
+                },
+                {
+                    name: "Nike Air Zoom Pegasus",
+                    image: "https://images-na.ssl-images-amazon.com/images/I/71Pp3+G6PjL._AC_SL1500_.jpg",
+                    link: "fitness-casa/index.html"
+                },
+                {
+                    name: "Philips Airfryer XXL",
+                    image: "https://images-na.ssl-images-amazon.com/images/I/61SO3+G6PjL._AC_SL1500_.jpg",
+                    link: "cucina-elettrodomestici/index.html"
+                },
+                {
+                    name: "Samsung Galaxy S24 Ultra",
+                    image: "https://images-na.ssl-images-amazon.com/images/I/61SO3+G6PjL._AC_SL1500_.jpg",
+                    link: "smartphone-tech/index.html"
+                }
+            ];
+            
+            const productsPerSlide = 3;
+            const totalSlides = Math.ceil(products.length / productsPerSlide);
+            
+            for (let i = 0; i < totalSlides; i++) {
+                const isActive = i === 0 ? 'active' : '';
+                const slideProducts = products.slice(i * productsPerSlide, (i + 1) * productsPerSlide);
+                
+                const slideHtml = `
+                    <div class="carousel-item ${isActive}">
+                        <div class="row g-4">
+                            ${slideProducts.map(product => `
+                                <div class="col-md-4">
+                                    <div class="product-carousel-card">
+                                        <img src="${product.image}" alt="${product.name}" class="product-carousel-image">
+                                        <h5 class="product-carousel-title">${product.name}</h5>
+                                        <a href="${product.link}" class="product-carousel-link">Vedi Dettagli</a>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                
+                carouselInner.innerHTML += slideHtml;
+                
+                // Aggiungi dot
+                const dotHtml = `
+                    <button type="button" data-bs-target="#products-carousel" data-bs-slide-to="${i}" class="${isActive}" aria-label="Slide ${i + 1}"></button>
+                `;
+                carouselDots.innerHTML += dotHtml;
+            }
+        }
+        
+        // Carica i prodotti al caricamento della pagina
+        document.addEventListener('DOMContentLoaded', loadProductsForCarousel);
+    </script>
+
     <!-- Carosello Categorie Navigabile -->
     <section class="container my-5">
         <div class="text-center mb-4">
@@ -2047,194 +2221,6 @@
             // Rimuovi eventuali timer-display esistenti dal DOM
             document.querySelectorAll('.timer-display').forEach(el => el.remove());
         });
-    </script>
-
-    <!-- Carosello Automatico Prodotti -->
-    <section class="container my-5">
-        <div class="text-center mb-4">
-            <h3 class="fw-bold mb-2">
-                <i class="fas fa-fire text-warning me-2"></i>Prodotti in Evidenza
-            </h3>
-            <p class="text-muted">Scopri i migliori prodotti selezionati dalle nostre guide</p>
-        </div>
-        
-        <div class="position-relative">
-            <div id="products-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-                <div class="carousel-inner" id="carousel-inner">
-                    <!-- I prodotti verranno caricati dinamicamente via JavaScript -->
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#products-carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Precedente</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#products-carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Successivo</span>
-                </button>
-            </div>
-            <div class="carousel-indicators-container mt-3 d-flex justify-content-center gap-2" id="carousel-dots">
-                <!-- I dots verranno generati dinamicamente -->
-            </div>
-        </div>
-    </section>
-
-    <style>
-        #products-carousel .carousel-item {
-            transition: transform 0.6s ease-in-out;
-        }
-        
-        .carousel-indicators-container button {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #dee2e6;
-            border: none;
-            transition: all 0.3s ease;
-        }
-        
-        .carousel-indicators-container button.active {
-            background-color: var(--industrial-orange);
-            transform: scale(1.2);
-        }
-        
-        .product-carousel-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-        }
-        
-        .product-carousel-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-        
-        .product-carousel-image {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
-        
-        .product-carousel-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 8px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        
-        .product-carousel-price {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--industrial-orange);
-            margin-bottom: 10px;
-        }
-        
-        .product-carousel-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--industrial-orange);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .product-carousel-link:hover {
-            background: #e67e00;
-            transform: scale(1.05);
-        }
-    </style>
-
-    <script>
-        // Carica prodotti per il carosello automatico
-        async function loadProductsForCarousel() {
-            const carouselInner = document.getElementById('carousel-inner');
-            const carouselDots = document.getElementById('carousel-dots');
-            
-            // Lista di prodotti di esempio dalle varie categorie
-            const products = [
-                {
-                    name: "Logitech G Pro X Superlight",
-                    price: "€129.99",
-                    image: "https://images-na.ssl-images-amazon.com/images/I/61MkLpCzOJL._AC_SL1500_.jpg",
-                    link: "elite-gaming-gear/index.html"
-                },
-                {
-                    name: "Sony WH-1000XM5",
-                    price: "€349.00",
-                    image: "https://images-na.ssl-images-amazon.com/images/I/61SO3+G6PjL._AC_SL1500_.jpg",
-                    link: "smartphone-tech/index.html"
-                },
-                {
-                    name: "Kindle Paperwhite 11th Gen",
-                    price: "€139.99",
-                    image: "https://images-na.ssl-images-amazon.com/images/I/71+Pp3W0GOL._AC_SL1500_.jpg",
-                    link: "libri-ereader/index.html"
-                },
-                {
-                    name: "Nike Air Zoom Pegasus",
-                    price: "€129.00",
-                    image: "https://images-na.ssl-images-amazon.com/images/I/71Pp3+G6PjL._AC_SL1500_.jpg",
-                    link: "fitness-casa/index.html"
-                },
-                {
-                    name: "Philips Airfryer XXL",
-                    price: "€299.00",
-                    image: "https://images-na.ssl-images-amazon.com/images/I/61SO3+G6PjL._AC_SL1500_.jpg",
-                    link: "cucina-elettrodomestici/index.html"
-                },
-                {
-                    name: "Samsung Galaxy S24 Ultra",
-                    price: "€1,299.00",
-                    image: "https://images-na.ssl-images-amazon.com/images/I/61SO3+G6PjL._AC_SL1500_.jpg",
-                    link: "smartphone-tech/index.html"
-                }
-            ];
-            
-            const productsPerSlide = 3;
-            const totalSlides = Math.ceil(products.length / productsPerSlide);
-            
-            for (let i = 0; i < totalSlides; i++) {
-                const isActive = i === 0 ? 'active' : '';
-                const slideProducts = products.slice(i * productsPerSlide, (i + 1) * productsPerSlide);
-                
-                const slideHtml = `
-                    <div class="carousel-item ${isActive}">
-                        <div class="row g-4">
-                            ${slideProducts.map(product => `
-                                <div class="col-md-4">
-                                    <div class="product-carousel-card">
-                                        <img src="${product.image}" alt="${product.name}" class="product-carousel-image">
-                                        <h5 class="product-carousel-title">${product.name}</h5>
-                                        <p class="product-carousel-price">${product.price}</p>
-                                        <a href="${product.link}" class="product-carousel-link">Vedi Dettagli</a>
-                                    </div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                `;
-                
-                carouselInner.innerHTML += slideHtml;
-                
-                // Aggiungi dot
-                const dotHtml = `
-                    <button type="button" data-bs-target="#products-carousel" data-bs-slide-to="${i}" class="${isActive}" aria-label="Slide ${i + 1}"></button>
-                `;
-                carouselDots.innerHTML += dotHtml;
-            }
-        }
-        
-        // Carica i prodotti al caricamento della pagina
-        document.addEventListener('DOMContentLoaded', loadProductsForCarousel);
     </script>
 
     <!-- Bot AI Script - Must load combo-database before ai-chat-simple -->
