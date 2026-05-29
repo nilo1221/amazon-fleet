@@ -287,6 +287,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi un kit completo con scatola per la pesca in mare? 🌊 Ho trovato questo set 204 pezzi con ottone di rame pesante e scatola. Con Coca-Cola Zero hai il mare in tasca e relax!"
+            },
+            {
+                product1: {
+                    name: "THKFISH Kit di attrezzi da pesca con marsupio 85 pezzi",
+                    link: "https://www.amazon.it/dp/B0DJVF3273?pd_rd_i=B0DJVF3273&pd_rd_w=rd3aw&content-id=amzn1.sym.1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_p=1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_r=TGZQMF6ZFYPT9ZCH17MY&pd_rd_wg=Q01fe&pd_rd_r=32a3f1e6-b491-4331-b8e2-93d71cd97ae8&aref=6jjo5ErOb2&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1&linkCode=ll2&tag=l0c39-21&linkId=ea6cddb84be614ed4435d92f067bb973&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi un kit completo con marsupio per la pesca? 🎒 Ho trovato questo set 85 pezzi con marsupio impermeabile, pinze, esche e bilancia digitale. Con Coca-Cola Zero hai tutto l'occorrente e relax!"
             }
         ]
     },
