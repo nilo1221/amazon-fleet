@@ -435,6 +435,39 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi facilità in cucina? 🥣 Guarda, con il robot multifunzione e Coca-Cola Zero hai preparazione rapida e relax. Ecco i link, è fantastico!"
+            },
+            {
+                product1: {
+                    name: "MasterChef Set Coltelli Universale con Portacoltelli",
+                    link: "https://www.amazon.it/MasterChef-Set-Coltelli-Universale-Portacoltelli/dp/B0CL9T2P5R?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3CCD80499GJT3&dib=eyJ2IjoiMSJ9.xdeQ6GZpxTD-63c-NXH7KxYz2qV_gXFPzUWLSpf_86XfKzE7tGvN_Ce--QlftWOTbCyPIE-5KQtQjls3jCg6BkgYZSXI5zRekyjt9PzNwH-UBnChywTZKSmdzE5YSCyHYR1R4mk955Xgh7CuLyf3hlPQcFVVRSha-attRbRa2J77edVtT4xJ0FKVG3wx-yUb-OmIK1xusnJV4VDnUKFikF_r6MjubVko1fvz14swUq5oE5tdC06bnusCHUAxQ4jCf48y_21IQt8Ya6bkSPT8GDVwKA6sKggYmxuNJRuRdys.K36GxuEtyMJ5VDr6R4XiAS-VGAWHK0EaL_peFGIoPf8&dib_tag=se&keywords=cucina&qid=1780085590&sprefix=cucina%2Caps%2C183&sr=8-5&ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&th=1&linkCode=ll2&tag=l0c39-21&linkId=e72bbc639442ee46d5903a404d26a1c8&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Spontex Spugna Abrasiva Piatti Fibraplus",
+                    link: "https://www.amazon.it/Spontex-Spugna-Abrasiva-Piatti-Fibraplus/dp/B0083FN358?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.mCgL5q0Kyg8v-VS8-P8xECtYqA7gfJhkSU4Sr9zSgDjDuKQ8xdxoEArGacTBlTUjQxVrmdYxIW577YRKMgFYl52_FD3KGBli1ItgrJ7eOsjzWr0DAj7vC91px3hA1vmmBWNYz099WQsnG5XT67O7UKGe4KXihZVPEF6f25t3CNhegY_1sb0Binix0aoGBkPUbhsdMdUrPnb27P32HuFaKWrTXN6ib5680EpIFuWadrjl7c-gH_2zjGCQ7MpqojKJ0AjWVxgvqrgekdgfg97Q-v_V4seqcC0PKLUlYQAJLFY.d-Uhwfyp8KzP3Mi8pFflR3_jdBe4WZdx04Lt58vUH6I&dib_tag=se&keywords=cucina&qid=1780085651&sr=8-14&th=1&linkCode=ll2&tag=l0c39-21&linkId=a49480b4fca2e5e7f888f0eb5c2a7c0c&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi il set completo per la cucina? 🔪 Ho trovato il set MasterChef di coltelli professionali e le spugne Spontex per la pulizia. Con questa combo hai preparazione e pulizia coperte!"
+            },
+            {
+                product1: {
+                    name: "Bilancia Digitale Elettronica Elegante Alimentare",
+                    link: "https://www.amazon.it/Bilancia-Digitale-Elettronica-Elegante-Alimentare/dp/B0C7G2YBGR?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.mCgL5q0Kyg8v-VS8-P8xECtYqA7gfJhkSU4Sr9zSgDjDuKQ8xdxoEArGacTBlTUjQxVrmdYxIW577YRKMgFYl52_FD3KGBli1ItgrJ7eOsjzWr0DAj7vC91px3hA1vmmBWNYz099WQsnG5XT67O7UKGe4KXihZVPEF6f25t3CNhegY_1sb0Binix0aoGBkPUbhsdMdUrPnb27P32HuFaKWrTXN6ib5680EpIFuWadrjl7c-gH_2zjGCQ7MpqojKJ0AjWVxgvqrgekdgfg97Q-v_V4seqcC0PKLUlYQAJLFY.d-Uhwfyp8KzP3Mi8pFflR3_jdBe4WZdx04Lt58vUH6I&dib_tag=se&keywords=cucina&qid=1780085651&sr=8-13&th=1&linkCode=ll2&tag=l0c39-21&linkId=37b77b3c5642900d0cb02deb39a69eab&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Cucini con precisione? ⚖️ Ho trovato questa bilancia digitale elegante per pesare gli ingredienti con accuratezza. Con Coca-Cola Zero hai precisione e relax!"
+            },
+            {
+                product1: {
+                    name: "ICEMAN Macchina ghiaccio doppiadimensione fabbricatoreghiaccio",
+                    link: "https://www.amazon.it/ICEMAN-Macchina-ghiaccio-doppiadimensione-fabbricatoreghiaccio/dp/B0DFYRJLN3?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.mCgL5q0Kyg8v-VS8-P8xECtYqA7gfJhkSU4Sr9zSgDjDuKQ8xdxoEArGacTBlTUjQxVrmdYxIW577YRKMgFYl52_FD3KGBli1ItgrJ7eOsjzWr0DAj7vC91px3hA1vmmBWNYz099WQsnG5XT67O7UKGe4KXihZVPEF6f25t3CNhegY_1sb0Binix0aoGBkPUbhsdMdUrPnb27P32HuFaKWrTXN6ib5680EpIFuWadrjl7c-gH_2zjGCQ7MpqojKJ0AjWVxgvqrgekdgfg97Q-v_V4seqcC0PKLUlYQAJLFY.d-Uhwfyp8KzP3Mi8pFflR3_jdBe4WZdx04Lt58vUH6I&dib_tag=se&keywords=cucina&qid=1780085651&sr=8-18-spons&aref=Yk6G8KLvUx&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=88e523279884e385bbce93639fb8a586&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "SWEET VIEW Spruzzatore Spruzzino Friggitrice",
+                    link: "https://www.amazon.it/SWEET-VIEW-Spruzzatore-Spruzzino-Friggitrice/dp/B0D25YFS8F?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.mCgL5q0Kyg8v-VS8-P8xECtYqA7gfJhkSU4Sr9zSgDjDuKQ8xdxoEArGacTBlTUjQxVrmdYxIW577YRKMgFYl52_FD3KGBli1ItgrJ7eOsjzWr0DAj7vC91px3hA1vmmBWNYz099WQsnG5XT67O7UKGe4KXihZVPEF6f25t3CNhegY_1sb0Binix0aoGBkPUbhsdMdUrPnb27P32HuFaKWrTXN6ib5680EpIFuWadrjl7c-gH_2zjGCQ7MpqojKJ0AjWVxgvqrgekdgfg97Q-v_V4seqcC0PKLUlYQAJLFY.d-Uhwfyp8KzP3Mi8pFflR3_jdBe4WZdx04Lt58vUH6I&dib_tag=se&keywords=cucina&qid=1780085651&sr=8-21&th=1&linkCode=ll2&tag=l0c39-21&linkId=8a46719ea2ec087c034f42dbc149b811&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi la cucina perfetta? ❄️ Ho trovato la macchina ghiaccio ICEMAN per bevande fresche e lo spruzzatore SWEET VIEW per cucinare con meno olio. Con questa combo hai freschezza e cottura sana!"
             }
         ]
     },
