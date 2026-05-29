@@ -311,7 +311,8 @@
     right: 30px !important;
     width: 500px;
     max-height: 700px;
-    background: white;
+    background: #f8f9fa;
+    border: 2px solid var(--bot-current-bg);
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     display: none;
