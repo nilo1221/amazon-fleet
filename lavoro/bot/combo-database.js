@@ -490,6 +490,17 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Ti piace il caffè? ☕ Ho trovato la macchina NESCAFÉ Dolce Gusto per espresso perfetto. Con Coca-Cola Zero hai caffè e bevande fresche!"
+            },
+            {
+                product1: {
+                    name: "Macchina espresso portatile capsule macinato",
+                    link: "https://www.amazon.it/Macchina-espresso-portatile-capsule-macinato/dp/B0GS51DD22?pd_rd_w=hGozp&content-id=amzn1.sym.7df8515a-b6ea-489f-99c4-dc8ee9c9a18c&pf_rd_p=7df8515a-b6ea-489f-99c4-dc8ee9c9a18c&pf_rd_r=N8N8AZCTQG8DAVE9HFGY&pd_rd_wg=duv53&pd_rd_r=d2d3d7ed-69d0-42eb-b71d-d874bebd1228&pd_rd_i=B0GS51DD22&linkCode=ll2&tag=l0c39-21&linkId=12fb29cbe0e5de619cfbbe842aaf3aea&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi il caffè ovunque? 🚀 Ho trovato questa macchina espresso portatile con capsule. Con Coca-Cola Zero hai caffè perfetto e bevande fresche ovunque tu sia!"
             }
         ]
     },
