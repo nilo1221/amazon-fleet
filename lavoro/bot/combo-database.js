@@ -512,6 +512,28 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
                 message: "Vuoi il caffè perfetto automatico? ⚙️ Ho trovato la macchina Mutital completamente automatica con ricambio acqua. Con Coca-Cola Zero hai caffè professionale e relax!"
+            },
+            {
+                product1: {
+                    name: "DeLonghi ECAM222-20-B Automatica Montalatte Preimpostate",
+                    link: "https://www.amazon.it/DeLonghi-ECAM222-20-B-Automatica-Montalatte-Preimpostate/dp/B0BV3B7T33?keywords=Macchine%2Bda%2Bcaff%C3%A8&pf_rd_p=5cf7e89d-be4f-4a60-a94f-67425bc592ec&pf_rd_r=N8N8AZCTQG8DAVE9HFGY&ufe=app_do%3Aamzn1.fos.d9b6a10d-e3a2-448c-a21b-086faff5973f&aref=XQ9ob51mry&sp_csd=d2lkZ2V0TmFtZT1zcF9hcGJfZGVza3RvcF9icm93c2VfaW5saW5lX2J0Zg&th=1&linkCode=ll2&tag=l0c39-21&linkId=41cb6fa1358ffa485cadede6da71b75c&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi cappuccino perfetto? ☕ Ho trovato la DeLonghi ECAM222-20-B con montalatte e preimpostate. Con Coca-Cola Zero hai caffè da bar e relax!"
+            },
+            {
+                product1: {
+                    name: "Macchina Caffè B0CDCL53KW",
+                    link: "https://www.amazon.it/dp/B0CDCL53KW?aref=RwQ61W3jVH&aaxitk=cbe5bc2f90eeec749338d8e5b8ca00c3&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=7ZW7QBD7R4NC62JX7WMB&pd_rd_wg=Gf86x&pd_rd_w=QFQ4q&pd_rd_r=4cd43771-f539-4f46-9d75-a29b5f4b46f5&th=1&linkCode=ll2&tag=l0c39-21&linkId=72913be6c1b69ead9279bf7623bccdbb&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
+                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi caffè versatile e moderno? 🏠 Ho trovato questa macchina caffè B0CDCL53KW efficiente e moderna. Con Coca-Cola Zero hai bevande di qualità e relax!"
             }
         ]
     },
