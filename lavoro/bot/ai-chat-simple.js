@@ -3325,7 +3325,13 @@ function addMessage(text, sender) {
 // Show typing indicator
 function showTypingIndicator() {
     const chatMessages = document.getElementById('chat-messages');
+    const chatButton = document.getElementById('ai-chat-button');
     if (!chatMessages) return;
+    
+    // Add thinking class to button for pulsing animation
+    if (chatButton) {
+        chatButton.classList.add('thinking');
+    }
     
     const typingDiv = document.createElement('div');
     typingDiv.className = 'chat-message bot loading';
@@ -3338,8 +3344,15 @@ function showTypingIndicator() {
 // Hide typing indicator
 function hideTypingIndicator() {
     const typingIndicator = document.getElementById('typing-indicator');
+    const chatButton = document.getElementById('ai-chat-button');
+    
     if (typingIndicator) {
         typingIndicator.remove();
+    }
+    
+    // Remove thinking class from button
+    if (chatButton) {
+        chatButton.classList.remove('thinking');
     }
 }
 
