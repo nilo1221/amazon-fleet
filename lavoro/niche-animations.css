@@ -326,6 +326,29 @@ footer a:hover {
     color: var(--niche-neon-blue);
 }
 
+/* Badge di Fiducia (Trust Signals) */
+.trust-badges {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 0.85em;
+    color: var(--niche-text-secondary);
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.trust-badge i {
+    color: #FFD700;
+}
+
+.trust-badge .prime-icon {
+    color: #00A8E1;
+}
+
 /* Checkmark animati */
 .product-card .fa-check {
     transition: all 0.3s ease;
