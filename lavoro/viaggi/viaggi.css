@@ -1,0 +1,522 @@
+/* ============================================
+   VIAGGI - CSS Specifico con Animazioni 3D
+   Smart Choices Guide
+   ============================================ */
+
+/* Variabili Specifiche Viaggi */
+:root {
+    --viaggi-primary: #00bcd4;
+    --viaggi-secondary: #4dd0e1;
+    --viaggi-accent: #006064;
+    --viaggi-neon-cyan: #00e5ff;
+    --viaggi-neon-teal: #1de9b6;
+    --viaggi-neon-blue: #2979ff;
+    --viaggi-dark-bg: #006064;
+    --viaggi-card-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* Sfondo Viaggi */
+body {
+    background: #ffffff;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Hero Section Viaggi */
+.hero-section {
+    background: 
+        linear-gradient(135deg, var(--viaggi-accent) 0%, var(--viaggi-primary) 50%, var(--viaggi-secondary) 100%),
+        radial-gradient(circle at 20% 50%, rgba(0, 229, 255, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(41, 121, 255, 0.3) 0%, transparent 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.05) 2px,
+            rgba(255, 255, 255, 0.05) 4px
+        );
+    pointer-events: none;
+}
+
+/* Hero Icon Animations */
+.hero-icon-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-icon-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hero-float-1 {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero-float-2 {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    animation: float 3s ease-in-out infinite 1s;
+}
+
+.hero-float-3 {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    animation: float 3s ease-in-out infinite 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Product Card Viaggi - Animazioni Hover 3D */
+.product-card {
+    border: 2px solid var(--viaggi-primary);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: var(--viaggi-card-bg);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    box-shadow: 
+        0 4px 15px rgba(0, 188, 212, 0.1),
+        0 0 0 0 rgba(0, 229, 255, 0);
+}
+
+/* Parallasse 3D */
+.product-card .card-body {
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-card:hover .card-body {
+    transform: translateZ(30px);
+}
+
+.product-card:hover .card-title {
+    transform: translateZ(50px) translateX(5px);
+}
+
+.product-card:hover .fa-3x {
+    transform: translateZ(70px) scale(1.15) rotate(5deg);
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--viaggi-accent) 0%, var(--viaggi-primary) 50%, var(--viaggi-secondary) 100%);
+    opacity: 0.03;
+    z-index: -1;
+    border-radius: 20px;
+    transition: opacity 0.4s ease;
+}
+
+.product-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.product-card:hover {
+    transform: translateY(-12px) rotateX(3deg) rotateY(3deg);
+    box-shadow: 
+        0 20px 50px rgba(0, 188, 212, 0.3),
+        0 0 30px rgba(0, 229, 255, 0.2),
+        0 0 0 3px rgba(0, 229, 255, 0.3);
+    background: rgba(255, 255, 255, 0.98);
+    border-color: var(--viaggi-neon-cyan);
+    animation: viaggi-neon-glow 2s ease-in-out infinite;
+}
+
+@keyframes viaggi-neon-glow {
+    0%, 100% {
+        box-shadow: 
+            0 20px 50px rgba(0, 188, 212, 0.3),
+            0 0 30px rgba(0, 229, 255, 0.2),
+            0 0 0 3px rgba(0, 229, 255, 0.3);
+    }
+    50% {
+        box-shadow: 
+            0 20px 50px rgba(0, 188, 212, 0.4),
+            0 0 40px rgba(0, 229, 255, 0.4),
+            0 0 0 5px rgba(29, 233, 182, 0.5);
+    }
+}
+
+.product-card:hover::before {
+    opacity: 0.08;
+}
+
+.product-card:hover::after {
+    opacity: 1;
+}
+
+.product-card:active {
+    transform: translateY(-5px) scale(0.98);
+    box-shadow: 
+        0 10px 30px rgba(0, 188, 212, 0.4),
+        0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+/* Icone Animate */
+.product-card .fa-3x {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 0 0 rgba(0, 229, 255, 0));
+}
+
+.product-card:hover .fa-3x {
+    transform: scale(1.15) rotate(5deg);
+    color: var(--viaggi-neon-cyan);
+    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.6));
+    animation: icon-pulse 1s ease-in-out infinite;
+}
+
+@keyframes icon-pulse {
+    0%, 100% {
+        transform: scale(1.15) rotate(5deg);
+    }
+    50% {
+        transform: scale(1.25) rotate(-5deg);
+    }
+}
+
+/* Badge Categoria Colorati con Gradiente */
+.category-badge {
+    background: linear-gradient(135deg, var(--viaggi-primary) 0%, var(--viaggi-secondary) 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.85em;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.category-badge:hover::before {
+    left: 100%;
+}
+
+.category-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.5);
+}
+
+/* Colori specifici per categoria */
+.category-badge.vacanze {
+    background: linear-gradient(135deg, #00bcd4 0%, #26c6da 100%);
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+
+.category-badge.camping {
+    background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.category-badge.mare {
+    background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.category-badge.veicoli {
+    background: linear-gradient(135deg, #ff5722 0%, #ff7043 100%);
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+}
+
+/* Bottone Amazon con Colori Viaggi su Hover/Active */
+.btn-amazon {
+    background: linear-gradient(135deg, var(--viaggi-primary) 0%, var(--viaggi-secondary) 100%);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.3);
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-amazon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-amazon:hover::before {
+    left: 100%;
+}
+
+.btn-amazon:hover {
+    background: linear-gradient(135deg, var(--viaggi-secondary) 0%, var(--viaggi-primary) 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 10px 30px rgba(0, 188, 212, 0.5),
+        0 0 20px rgba(77, 208, 225, 0.4);
+    color: white;
+}
+
+.btn-amazon:active {
+    background: linear-gradient(135deg, var(--viaggi-accent) 0%, var(--viaggi-primary) 100%);
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 
+        0 5px 15px rgba(0, 188, 212, 0.6),
+        0 0 15px rgba(0, 229, 255, 0.5);
+}
+
+/* Miglioramenti Tipografici */
+.card-title {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--viaggi-primary), var(--viaggi-secondary));
+    transition: width 0.3s ease;
+}
+
+.product-card:hover .card-title::after {
+    width: 100%;
+}
+
+.product-card:hover .card-title {
+    color: var(--viaggi-primary);
+    transform: translateX(5px);
+}
+
+/* Checkmark animati */
+.product-card .fa-check {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .fa-check {
+    transform: scale(1.3) rotate(10deg);
+    color: var(--viaggi-neon-teal);
+    filter: drop-shadow(0 0 5px rgba(29, 233, 182, 0.5));
+}
+
+/* Footer Viaggi */
+footer {
+    background: linear-gradient(135deg, var(--viaggi-accent) 0%, #00838f 100%);
+    border-top: 3px solid var(--viaggi-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 229, 255, 0.05) 2px,
+            rgba(0, 229, 255, 0.05) 4px
+        );
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-card:hover {
+        transform: translateY(-8px);
+    }
+    
+    .btn-amazon {
+        padding: 14px 30px;
+        font-size: 1em;
+    }
+    
+    .category-badge {
+        padding: 6px 16px;
+        font-size: 0.8em;
+    }
+}
+
+/* Effetto Speciale per Prodotti TOP */
+.product-card.top-product {
+    position: relative;
+    border: 3px solid #ffd700;
+    box-shadow: 
+        0 4px 20px rgba(255, 215, 0, 0.3),
+        0 0 0 0 rgba(255, 215, 0, 0);
+}
+
+.product-card.top-product::before {
+    content: 'TOP';
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+    color: #333;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+    animation: top-badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes top-badge-pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 4px 25px rgba(255, 215, 0, 0.8);
+    }
+}
+
+.product-card.top-product:hover {
+    transform: translateY(-15px) rotateX(3deg) rotateY(3deg);
+    box-shadow: 
+        0 25px 60px rgba(0, 188, 212, 0.4),
+        0 0 40px rgba(255, 215, 0, 0.4),
+        0 0 0 5px rgba(255, 215, 0, 0.5);
+    border-color: #ffd700;
+    animation: top-card-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes top-card-glow {
+    0%, 100% {
+        box-shadow: 
+            0 25px 60px rgba(0, 188, 212, 0.4),
+            0 0 40px rgba(255, 215, 0, 0.4),
+            0 0 0 5px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        box-shadow: 
+            0 25px 60px rgba(0, 188, 212, 0.5),
+            0 0 50px rgba(255, 215, 0, 0.6),
+            0 0 0 7px rgba(255, 215, 0, 0.7);
+    }
+}
+
+/* ============================================
+   LAYOUT MINIMAL - Thumbnail Grid
+   ============================================ */
+
+.product-minimal {
+    transition: transform 0.2s;
+    padding: 10px;
+}
+
+.product-minimal:hover {
+    transform: translateY(-5px);
+}
+
+.product-minimal .img-container {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+.product-minimal .btn-outline-dark {
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    border-color: var(--viaggi-primary);
+    color: var(--viaggi-primary);
+}
+
+.product-minimal .btn-outline-dark:hover {
+    background: var(--viaggi-primary);
+    color: white;
+    border-color: var(--viaggi-primary);
+}
+
+/* Linea divisoria elegante */
+hr {
+    margin-bottom: 30px;
+    opacity: 1;
+}
