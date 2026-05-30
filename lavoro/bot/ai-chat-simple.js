@@ -733,7 +733,7 @@ const NicheDatabase = {
     },
     "sport-estivi": {
         name: "Sport Estivi",
-        tags: ["sport", "estivo", "estate", "tennis", "padel", "running", "jogging", "surf", "windsurf", "vela", "canoa", "kayak", "nuoto", "piscina", "immersioni", "subacquea", "beach", "volleyball", "arrampicata", "climbing", "skate", "skateboard", "yoga", "nordic", "walking", "all'aperto", "outdoor", "attività", "fisica", "allenamento", "competizione", "gioco", "divertimento", "calcio", "pallone", "parastinchi", "allenamento calcio"],
+        tags: ["sport", "estivo", "estate", "tennis", "padel", "running", "jogging", "surf", "windsurf", "vela", "canoa", "kayak", "nuoto", "piscina", "immersioni", "subacquea", "beach", "volleyball", "arrampicata", "climbing", "skate", "skateboard", "yoga", "nordic", "walking", "all'aperto", "outdoor", "attività", "fisica", "allenamento", "competizione", "gioco", "divertimento", "calcio", "pallone", "parastinchi", "allenamento calcio", "softair", "airsoft", "kit softair", "pistola softair", "fucile softair", "softair"],
         url: "/sport-estivi/index.html",
         personality: "energetic",
         valueProp: "Ho selezionato i migliori sport estivi per goderti l'aria aperta. Tennis, padel, running, surf e molto altro per una estate attiva.",
