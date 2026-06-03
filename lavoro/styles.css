@@ -7,87 +7,12 @@
     --accent-color: #FF4500;
     --accent-gold: #FFA500;
     --text-color: #1a1a2e;
-    
-    /* Unified Spacing System */
-    --spacing-xs: 4px;
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
-    --spacing-2xl: 48px;
-    --spacing-3xl: 64px;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #faf9f6;
     color: var(--text-color);
-}
-
-/* Unified Button System */
-.btn {
-    font-family: inherit;
-    font-weight: 600;
-    border-radius: 12px;
-    padding: 12px 24px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-    color: white;
-    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
-}
-
-.btn-primary:active {
-    transform: translateY(0) scale(0.98);
-}
-
-.btn-secondary {
-    background: #ffffff;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.1);
-}
-
-.btn-secondary:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
-}
-
-.btn-outline {
-    background: transparent;
-    color: var(--text-color);
-    border: 2px solid #ccc;
-}
-
-.btn-outline:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    background: rgba(255, 107, 107, 0.05);
-}
-
-.btn-lg {
-    padding: 16px 32px;
-    font-size: 1.1rem;
-}
-
-.btn-sm {
-    padding: 8px 16px;
-    font-size: 0.9rem;
 }
 
 /* Niche identity bar - filo conduttore unificante */
@@ -221,7 +146,6 @@ body {
     overflow: hidden;
     margin-bottom: 30px;
     background: white;
-    position: relative;
 }
 
 .product-card:hover {
@@ -1055,127 +979,6 @@ footer a.text-white-50:hover {
 footer .amazon-disclaimer {
     background: rgba(255, 215, 0, 0.1) !important;
     border-left: 4px solid #FFD700;
-}
-
-/* Bento Card Styles */
-.bento-card {
-    border-radius: 20px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.bento-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.bento-card:hover::before {
-    opacity: 1;
-}
-
-.bento-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-/* Bento Product Card Styles */
-.bento-product-card {
-    border-radius: 20px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    border: none;
-}
-
-.bento-product-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.bento-product-card:hover::before {
-    opacity: 1;
-}
-
-.bento-product-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.bento-product-card .card-body {
-    position: relative;
-    z-index: 1;
-}
-
-.bento-product-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.bento-product-card .btn-amazon {
-    background: rgba(255, 255, 255, 0.95);
-    color: #333;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.bento-product-card .btn-amazon:hover {
-    background: #fff;
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Mobile Table Optimization */
-@media (max-width: 768px) {
-    .table-responsive {
-        border-radius: 10px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-    
-    .table thead th {
-        font-size: 0.75rem;
-        padding: 0.5rem;
-        white-space: nowrap;
-    }
-    
-    .table tbody td {
-        font-size: 0.8rem;
-        padding: 0.5rem;
-    }
-    
-    .table .badge {
-        font-size: 0.7rem;
-        padding: 0.25rem 0.5rem;
-    }
-    
-    .table small {
-        font-size: 0.7rem;
-    }
-    
-    .table strong {
-        font-size: 0.85rem;
-    }
 }
 
 /* Navbar Logo Styles */

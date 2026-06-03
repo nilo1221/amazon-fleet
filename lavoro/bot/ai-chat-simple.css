@@ -46,40 +46,6 @@
     }
 }
 
-/* Fade-in animation for chat messages */
-@keyframes messageFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Pulse animation for bot button when inactive */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
-    }
-}
-
-/* Typing indicator animation */
-@keyframes typing {
-    0%, 100% {
-        opacity: 0.3;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-
 .urgency-combo-message {
     animation: smoothFadeIn 1s ease-out;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -160,18 +126,15 @@
     z-index: 9999;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    animation: pulse 2s infinite;
 }
 
 #ai-chat-button:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
-    animation: none;
 }
 
 #ai-chat-button.active {
     background: var(--bot-current-bg);
-    animation: none;
 }
 
 /* Dynamic color themes for bot button */
@@ -306,13 +269,12 @@
 }
 
 #ai-chat-window {
-    position: fixed !important;
-    bottom: 100px !important;
-    right: 30px !important;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
     width: 500px;
-    max-height: 700px;
-    background: #f8f9fa;
-    border: 2px solid var(--bot-current-bg);
+    max-height: 650px;
+    background: white;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     display: none;
@@ -555,7 +517,6 @@
     font-size: 16px;
     line-height: 1.5;
     word-wrap: break-word;
-    animation: messageFadeIn 0.3s ease-out;
 }
 
 .chat-message.user {
@@ -856,35 +817,28 @@
 
 /* Quick Replies */
 .quick-replies {
-    margin: 15px 0;
-    animation: messageFadeIn 0.3s ease-out;
+    margin: 10px 0;
 }
 
 .quick-replies-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 8px;
 }
 
 #ai-chat-window .quick-reply-card {
     background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 12px;
-    padding: 12px;
+    padding: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
-    min-height: 70px;
+    gap: 4px;
+    min-height: 60px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-#ai-chat-window .quick-reply-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
-    border-color: rgba(102, 126, 234, 0.3);
 }
 
 #ai-chat-window .quick-reply-card:active {
@@ -1367,196 +1321,4 @@
 .btn-product-view:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(102, 126, 234, 0.5);
-}
-
-/* ============================================
-   3D ANIMATIONS - DESKTOP ONLY
-   ============================================ */
-@media (min-width: 768px) {
-    /* Chat Button con effetto 3D */
-    #ai-chat-button {
-        transform-style: preserve-3d;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    #ai-chat-button:hover {
-        transform: translateY(-5px) rotateX(10deg) rotateY(-10deg);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    }
-    
-    /* Chat Window con effetto 3D */
-    #ai-chat-window {
-        transform-style: preserve-3d;
-        perspective: 1000px;
-    }
-    
-    #ai-chat-window.active {
-        animation: slideIn3D 0.5s ease-out;
-    }
-    
-    @keyframes slideIn3D {
-        0% {
-            transform: translateX(100%) rotateY(-90deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translateX(0) rotateY(0deg);
-            opacity: 1;
-        }
-    }
-    
-    /* Chat Header con effetto glassmorphism 3D */
-    .chat-header {
-        background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.2);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Chat messages con effetto 3D */
-    .chat-messages {
-        transform-style: preserve-3d;
-    }
-    
-    .chat-message.user,
-    .chat-message.bot {
-        transform-style: preserve-3d;
-        transition: transform 0.3s ease;
-    }
-    
-    .chat-message.user:hover {
-        transform: translateZ(10px) scale(1.02);
-    }
-    
-    .chat-message.bot:hover {
-        transform: translateZ(10px) scale(1.02);
-    }
-    
-    /* Chat input con effetto 3D */
-    .chat-input {
-        transform-style: preserve-3d;
-    }
-    
-    .chat-input input:focus {
-        transform: translateZ(5px);
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* Logo con rotazione 3D */
-    .chat-bot-logo {
-        transition: transform 0.5s ease;
-    }
-    
-    .chat-bot-logo:hover {
-        transform: rotateY(360deg);
-    }
-    
-    /* Pulsante invio con effetto 3D */
-    .chat-input button {
-        transform-style: preserve-3d;
-        transition: transform 0.2s ease;
-    }
-    
-    .chat-input button:hover {
-        transform: translateZ(10px) scale(1.1);
-    }
-    
-    .chat-input button:active {
-        transform: translateZ(5px) scale(0.95);
-    }
-    
-    /* Product cards con effetto 3D */
-    #ai-chat-window .product-card {
-        transform-style: preserve-3d;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    #ai-chat-window .product-card:hover {
-        transform: translateZ(15px) translateY(-5px);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    }
-    
-    /* Quick reply cards con effetto 3D */
-    #ai-chat-window .quick-reply-card {
-        transform-style: preserve-3d;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    #ai-chat-window .quick-reply-card:hover {
-        transform: translateZ(10px) translateY(-3px);
-        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-    }
-    
-    /* Category consultation card con effetto 3D */
-    .category-consultation-card {
-        transform-style: preserve-3d;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .category-consultation-card:hover {
-        transform: translateZ(10px) translateY(-2px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-    
-    /* Amazon killer button con effetto 3D */
-    .btn-amazon-killer {
-        transform-style: preserve-3d;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .btn-amazon-killer:hover {
-        transform: translateZ(15px) scale(1.1) translateY(-3px);
-        box-shadow: 0 15px 40px rgba(255, 107, 53, 0.8);
-    }
-    
-    /* Top product items con effetto 3D */
-    .top-product-item {
-        transform-style: preserve-3d;
-        transition: transform 0.3s ease;
-    }
-    
-    .top-product-item:hover {
-        transform: translateZ(8px) translateX(5px);
-    }
-    
-    /* Close button con effetto 3D */
-    .close-btn {
-        transform-style: preserve-3d;
-        transition: transform 0.2s ease, background 0.3s ease;
-    }
-    
-    .close-btn:hover {
-        transform: translateZ(5px) rotate(90deg);
-    }
-    
-    /* Category buttons con effetto 3D */
-    #ai-chat-window .category-btn {
-        transform-style: preserve-3d;
-        transition: transform 0.2s ease;
-    }
-    
-    #ai-chat-window .category-btn:hover {
-        transform: translateZ(5px) scale(1.05);
-    }
-    
-    /* Suggestion buttons con effetto 3D */
-    #ai-chat-window .suggestion-btn {
-        transform-style: preserve-3d;
-        transition: transform 0.2s ease;
-    }
-    
-    #ai-chat-window .suggestion-btn:hover {
-        transform: translateZ(5px) scale(1.05);
-    }
-    
-    /* Filter buttons con effetto 3D */
-    #ai-chat-window .filter-btn {
-        transform-style: preserve-3d;
-        transition: transform 0.2s ease;
-    }
-    
-    #ai-chat-window .filter-btn:hover {
-        transform: translateZ(5px) scale(1.05);
-    }
 }

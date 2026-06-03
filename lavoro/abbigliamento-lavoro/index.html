@@ -19,7 +19,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="lavoro.css">
     <!-- AI Chat CSS -->
     <style>
         :root {
@@ -515,11 +514,9 @@
         <!-- Bot AI Script - Must load combo-database before ai-chat-simple -->
     <script src="../bot/combo-database.js"></script>
     <script src="../bot/ai-chat-simple.js"></script>
-    <!-- Tracking Globale GA4 -->
-    <script src="../js/tracking-globale.js"></script>
     <!-- AI Chat Button -->
     <div id="ai-chat-button" onclick="toggleChat()">
-        <img src="../images/logo.png" alt="Smart Choices Guide" class="chat-button-logo">
+        <img src="../logo/logo.png" alt="Smart Choices Guide" class="chat-button-logo">
     </div>
     
     <!-- AI Chat Window -->
@@ -527,7 +524,7 @@
         <!-- Chat Header -->
         <div class="chat-header">
             <div class="header-content">
-                <img src="../images/logo.png" alt="Smart Choices Guide Logo" class="chat-bot-logo">
+                <img src="../logo/logo.png" alt="Smart Choices Guide Logo" class="chat-bot-logo">
                 <div>
                     <h5>Assistente Smart</h5>
                     <small>Online</small>
@@ -540,6 +537,7 @@
 
         <!-- Chat Messages -->
         <div id="chat-messages" class="chat-messages">
+            <!-- Messages will be loaded dynamically via JavaScript -->
         </div>
 
         <!-- Chat Input -->
@@ -551,7 +549,5 @@
         </div>
     </div>
 
-    <!-- Tracking Globale GA4 -->
-    <script src="../../js/tracking-globale.js"></script>
 </body>
 </html>

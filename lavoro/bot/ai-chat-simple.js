@@ -52,56 +52,16 @@ function trackCategoryVisit(categoryKey) {
     saveUserPreferences();
 }
 
-// Get category name from context
-function getCategoryNameFromContext() {
-    const context = getContesto();
-    
-    // Map context codes to category names
-    const contextNames = {
-        'homepage': 'Smart Choices Guide',
-        'mare': 'Mare & Spiaggia',
-        'pc': 'Elite Gaming Gear',
-        'fitness': 'Fitness Casa',
-        'smart-home': 'Smart Home & Domotica',
-        'pet-care': 'Pet Care Intelligente',
-        'parrucchiere-barbiere': 'Parrucchiere & Barbiere',
-        'abbigliamento-serie-tv-film': 'Cinema & TV',
-        'abbigliamento-ciclismo': 'Abbigliamento Ciclismo',
-        'veicoli': 'Biciclette & Mobilità',
-        'smartphone': 'Smartphone & Tech',
-        'tech': 'Tech',
-        'moda-donna': 'Moda Donna',
-        'moda-uomo': 'Moda Uomo',
-        'arredamento': 'Arredamento Casa',
-        'accessori': 'Accessori Moda',
-        'benessere': 'Benessere & Cura Personale',
-        'cucina': 'Cucina Moderna & Tech',
-        'libri': 'Libri & E-Reader',
-        'outdoor': 'Outdoor & Camping',
-        'ufficio': 'Ufficio Produttivo',
-        'viaggi': 'Viaggi & Vacanze',
-        'sport-estivi': 'Sport Estivi',
-        'giochi': 'Giochi da Tavolo',
-        'profumi': 'Profumi & Bellezza',
-        'sostenibilita': 'Sostenibilità & Eco-Friendly',
-        'dvd': 'DVD & Blu-ray',
-        'pugilato': 'Pugilato & Boxe'
-    };
-    
-    return contextNames[context] || 'questa categoria';
-}
-
 // Get personalized greeting based on visit history
 function getPersonalizedGreeting() {
     const totalVisits = Object.values(userPreferences.visits || {}).reduce((a, b) => a + b, 0);
-    const categoryName = getCategoryNameFromContext();
     
     if (totalVisits === 0) {
-        return `Ciao! Sei qui per approfondire ${categoryName}? Posso mostrarti il kit che stanno scegliendo tutti oggi. Vuoi dare un'occhiata?`;
+        return 'Ehi ciao! 👋 Stavo giusto guardando questi prodotti su Amazon, ci sono un sacco di cose interessanti. Dimmi, cosa ti serve oggi? Se mi dici cosa stai cercando, ti faccio vedere quello che secondo me vale la pena.';
     } else if (totalVisits < 3) {
-        return `Ciao bentornato! Sei qui per approfondire ${categoryName}? Posso mostrarti il kit che stanno scegliendo tutti oggi. Vuoi dare un'occhiata?`;
+        return 'Ehi bentornato! 👋 È bello rivederti. Vuoi continuare a guardare dove avevi lasciato o cerchi qualcosa di nuovo oggi?';
     } else {
-        return `Ciao bentornato! Sei qui per approfondire ${categoryName}? Posso mostrarti il kit che stanno scegliendo tutti oggi. Vuoi dare un'occhiata?`;
+        return 'Ehi bentornato! 👋 Ti conosco già fammi indovinare... vuoi vedere i prodotti che ti hanno interessato di più l\'altra volta?';
     }
 }
 
@@ -190,54 +150,6 @@ const NicheDatabase = {
                 description: "Set di 3 padelle con finitura legno-pietra elegante",
                 icon: "fa-utensils",
                 link: "https://www.amazon.it/SET-3-PADELLE-WOOD-STONE/dp/B07S1VRNG6?&linkCode=ll2&tag=l0c39-21&linkId=73df7c30a54f668e5084df48bb9712eb&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Tescoma 605068 Bistecchiera SmartClick",
-                description: "Bistecchiera antiaderente compatibile con induzione, 42 x 28 cm",
-                icon: "fa-fire",
-                link: "https://www.amazon.it/gp/aw/d/B07GZW2TSG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=7dc27841508e75f261485dd30d9a04c8&hsa_cr_id=5870737910002&qid=1780064650&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=uuzvb5Gdfu&pd_rd_w=zUrrb&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=SEP63DWQX9G6792Z83RY&pd_rd_wg=YfBCd&pd_rd_r=0342669c-e13c-488e-9b3c-3b2e6a89726c&th=1&linkCode=ll2&tag=l0c39-21&linkId=b1884104894a670571d4089205acc9ea&ref_=as_li_ss_tl"
-            },
-            {
-                name: "ANW HOME Lavandino Cucina 40x45 cm",
-                description: "Lavello cucina 1 vasca da incasso in acciaio inox 304 con rivestimento nano",
-                icon: "fa-sink",
-                link: "https://www.amazon.it/ANW-HOME-Lavandino-Rivestimento-Spessore/dp/B0GVG5WFQ4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=26SET29CLRJFD&dib=eyJ2IjoiMSJ9.xdeQ6GZpxTD-63c-NXH7KwHpqxPCbjhCej8iFJI5zwG9i1G4URkoPOHsyMTwJ7bBnv4QKDNc4EpKZjJTsqsGNSrqMpc4P2FMEwuXLZfSSo03D2EaodHpUk49Nf_6ZvF7jIvzsNRnyTuZO2LoYYuoJ7yCX-cCCYU4KCVCHoZoBJ4Oi0JB9D6HP69jBefNU-n2FgYEWweuw4dkvlTL108HREOKC7_SeRLzDVg_xe2YrMXxPru57ReTKjzoCOjQxEtYhW2a-JZSSmoB6y9x-SdJxTVwKA6sKggYmxuNJRuRdys.KRfPnVvUO230o7ZtXV9gPcJIRLYevJ3Z7WoUoqQi6pQ&dib_tag=se&keywords=cucina&qid=1780064713&sprefix=cucin%2Caps%2C148&sr=8-3-spons&aref=LXfvo4t7LB&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=0cc8c0157db4fc77751e679c6c234857&ref_=as_li_ss_tl"
-            },
-            {
-                name: "SCOLAPIATTI DA INCASSO 76,4 cm",
-                description: "Scolapiatti per pensili 80 cm con telaio regolabile in alluminio, Made in Italy",
-                icon: "fa-utensils",
-                link: "https://www.amazon.it/dp/B0C4FSW8TV?ie=UTF8&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=XHSG6VASBAFVBM7MVRQX&pd_rd_wg=IoCnQ&pd_rd_w=hrx5e&pd_rd_r=19a271fe-c364-46fe-b0e7-05247e95a697&aref=ATS0NMs4IP&th=1&linkCode=ll2&tag=l0c39-21&linkId=abbcbe5add7f82603511c15f90ec5a7a&ref_=as_li_ss_tl"
-            },
-            {
-                name: "Fullstar Taglia Verdure e Mandolina Affetta Verdure",
-                description: "Tritatutto manuale multifunzione 6-in-1 per cubetti, julienne e grattugia",
-                icon: "fa-carrot",
-                link: "https://www.amazon.it/Fullstar-Taglia-Verdure-Mandolina-Affetta/dp/B0BHSXFTGH?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&content-id=amzn1.sym.c71bc1e7-e222-401d-a8ef-851fd29a92dd%3Aamzn1.sym.c71bc1e7-e222-401d-a8ef-851fd29a92dd&crid=26SET29CLRJFD&cv_ct_cx=cucina&keywords=cucina&pd_rd_i=B0BHSXFTGH&pd_rd_r=202151dd-c853-482f-8da3-bfde7452ace1&pd_rd_w=Aewm3&pd_rd_wg=ybBpS&pf_rd_p=c71bc1e7-e222-401d-a8ef-851fd29a92dd&pf_rd_r=0GFQFG7HKY6S040NG2G2&qid=1780064713&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=cucin%2Caps%2C148&sr=1-1-ca22f3c3-0606-4173-afab-fb32ddc038f9-spons&aref=ZpouZiTq86&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=l0c39-21&linkId=84cbeb1203f4d916a5de8f8db993cfc5&ref_=as_li_ss_tl"
-            },
-            {
-                name: "YASHE Affettatrice Elettrica",
-                description: "Affettatrice da carne e pane 250W con lame 19 cm, spessore regolabile 0-15 mm",
-                icon: "fa-bacon",
-                link: "https://www.amazon.it/dp/B0F8VZFXL8?ie=UTF8&psc=1&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=JRMMSMNWG7C0HT37NCWY&pd_rd_wg=kn3yU&pd_rd_w=IXhzH&pd_rd_r=6c93c712-5fe9-412b-900a-7f0c4326b37c&aref=nwNECywzBw&linkCode=ll2&tag=l0c39-21&linkId=01c7fc574e9dca763f2ab84bc3c1b2d3&ref_=as_li_ss_tl"
-            },
-            {
-                name: "Utensili da cucina in silicone 22 pezzi",
-                description: "Set utensili per pentole antiaderenti, al calore e antiaderenti con manico in legno",
-                icon: "fa-spoon",
-                link: "https://www.amazon.it/Utensili-silicone-utensili-pentole-antiaderenti/dp/B0CXHYLVT5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=26SET29CLRJFD&dib=eyJ2IjoiMSJ9.xdeQ6GZpxTD-63c-NXH7KwHpqxPCbjhCej8iFJI5zwG9i1G4URkoPOHsyMTwJ7bBnv4QKDNc4EpKZjJTsqsGNSrqMpc4P2FMEwuXLZfSSo03D2EaodHpUk49Nf_6ZvF7jIvzsNRnyTuZO2LoYYuoJ7yCX-cCCYU4KCVCHoZoBJ4Oi0JB9D6HP69jBefNU-n2FgYEWweuw4dkvlTL108HREOKC7_SeRLzDVg_xe2YrMXxPru57ReTKjzoCOjQxEtYhW2a-JZSSmoB6y9x-SdJxTVwKA6sKggYmxuNJRuRdys.KRfPnVvUO230o7ZtXV9gPcJIRLYevJ3Z7WoUoqQi6pQ&dib_tag=se&keywords=cucina&qid=1780064713&sprefix=cucin%2Caps%2C148&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=9997e0e52a3941ac9bf4250ed98680a0&ref_=as_li_ss_tl"
-            },
-            {
-                name: "INOXLM Tagliere Spianatoia per impastare",
-                description: "Piano da lavoro in acciaio inox varie misure per cucina, bar e ristorante",
-                icon: "fa-cutting-board",
-                link: "https://www.amazon.it/dp/B0878WZXDR?ie=UTF8&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=TNQ8RWFNKEEV2XHT0C5B&pd_rd_wg=QaOqQ&pd_rd_w=OYThO&pd_rd_r=c9a083f9-308b-4df3-8855-1317245e3bed&aref=m9WgIxXWOQ&th=1&linkCode=ll2&tag=l0c39-21&linkId=e54d93d509939823c43ee02de2a67947&ref_=as_li_ss_tl"
-            },
-            {
-                name: "JPshop Kit 4 Piattelli Smaltati Fornelli",
-                description: "Kit 4 piattelli smaltati per cucina e piano cottura compatibile con Rex Electrolux",
-                icon: "fa-fire-burner",
-                link: "https://www.amazon.it/JPshop-Piattelli-Smaltati-compatibile-Electrolux/dp/B0F4DCMZ5M?keywords=Bistecchiere+reversibili&pf_rd_p=5cf7e89d-be4f-4a60-a94f-67425bc592ec&pf_rd_r=E4CXKAW8PQX4V739CJ3B&aref=yOqHmHxMwF&sp_csd=d2lkZ2V0TmFtZT1zcF9hcGJfZGVza3RvcF9icm93c2VfaW5saW5lX2F0Zg&psc=1&linkCode=ll2&tag=l0c39-21&linkId=3ba018c5fcdbbc8e5243d9eb0820e0f6&ref_=as_li_ss_tl"
             }
         ]
     },
@@ -331,24 +243,6 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/Naruto-1-Masashi-Kishimoto-ebook/dp/B0BWCVY8PS?&linkCode=ll2&tag=l0c39-21&linkId=469bd1c492b998b84a0a2ca7915d22dc&ref=_as_li_ss_tl"
             },
             {
-                name: "Fire Punch Complete Box",
-                description: "Edizione completa della serie acclamata dalla critica di Tatsuki Fujimoto",
-                icon: "fa-box",
-                link: "https://www.amazon.it/Fire-punch-Complete-Tatsuki-Fujimoto/dp/8822626656?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.R3TQEJ-TKD2eCa47iSUOUT0FZDxCgIdEWGSgLTMK9RcZ6Nf-gPEuaBgi0-bJSnKXcr48-ATkLYz_U-t5_xZczCx-pO3j2xbp5FDtKguSD061snnOeUoRSGIwsERaPtSRPsL7Z7VjHAsXUt5SlO-LFXhIRtpnpPrJRAWgGzM7az_mdqLvSvAInVM8l2bgcOYSKUetDzOd44thZPYYHh4WbS8k7rWCNhRutbVNrJuAtBw.xKmVT_y4Zjh4S2eOZSh_s1wzSu7AIc4z1zDe4BCIZxo&dib_tag=se&keywords=box&qid=1779861347&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-2-ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=b9db34d67b703d5f2797b6c0c79a7b0a&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Suzume Complete Box",
-                description: "Edizione completa del manga acclamato di Makoto Shinkai",
-                icon: "fa-box",
-                link: "https://www.amazon.it/Suzume-Complete-box-Makoto-Shinkai/dp/882264896X?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.FwUc2l1f7JvDSyF0IpLxVXi-xEVohdrAkWozVq5tEBMZ6Nf-gPEuaBgi0-bJSnKXoRHJbk9Sq60N9y1ubzhHHGw43KxH8S9g_oZ8ripBw_z0zpmFutLCLV7NbvFM2OfVGGOT8Jk0-F1akLwjOeOQiLXQPIP076VzEdZyASG776CKadOEe9-51SPFEFUcSiqrSJwxjkORGjc5gjT36QtBHWjHuk4-DDRGgQPG7Tle4vc.f5WzoLFZvE4DkHMKzt18IEtTh7-kspFZamSufV8ReSw&dib_tag=se&keywords=box&qid=1779861402&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-6-ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=a92b6706e6de73c53c15e8c3b9422571&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Tex 75. Box legno. Con shopper in tela, cartolina",
-                description: "Edizione premium del fumetto western italiano in box legno",
-                icon: "fa-box",
-                link: "https://www.amazon.it/Tex-legno-shopper-tela-cartolina/dp/8869618862?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WSAAQSKTOWJ&dib=eyJ2IjoiMSJ9.FwUc2l1f7JvDSyF0IpLxVXi-xEVohdrAkWozVq5tEBMZ6Nf-gPEuaBgi0-bJSnKXoRHJbk9Sq60N9y1ubzhHHGw43KxH8S9g_oZ8ripBw_z0zpmFutLCLV7NbvFM2OfVGGOT8Jk0-F1akLwjOeOQiLXQPIP076VzEdZyASG776CKadOEe9-51SPFEFUcSiqrSJwxjkORGjc5gjT36QtBHWjHuk4-DDRGgQPG7Tle4vc.f5WzoLFZvE4DkHMKzt18IEtTh7-kspFZamSufV8ReSw&dib_tag=se&keywords=box&qid=1779861402&s=books&sprefix=box%2Cstripbooks%2C161&sr=1-8-ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&linkCode=ll2&tag=l0c39-21&linkId=1f8c36f87dbc7dbe6949b07e8214364b&ref=_as_li_ss_tl"
-            },
-            {
                 name: "Demon Slayer - Kimetsu no yaiba 1: Digital Edition eBook",
                 description: "Demon Slayer è una delle serie più amate dai lettori di ogni età",
                 icon: "fa-tablet-alt",
@@ -380,18 +274,6 @@ const NicheDatabase = {
                 description: "Edizione 30° anniversario del Black Album dei Metallica in vinile",
                 icon: "fa-bluetooth-b",
                 link: "https://www.amazon.it/Black-Album-30Th-Anniversary-Libro/dp/B097NP5HXH?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-9&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=a091a665e57f1afbdd3aa256f99c69a3&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Pietra Da Massaggio 16Pcs SPA Hot Stone Set",
-                description: "Kit pietre massaggio naturali basalto caldo per SPA",
-                icon: "fa-spa",
-                link: "https://www.amazon.it/Massaggio-Massage-Professionale-Naturali-Basalto/dp/B07KQCQ6Q1?&linkCode=ll2&tag=l0c39-21&linkId=4d4b3ae17b9dbd9d191bee219ffffc02&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Pantene Pro-V Lisci Effetto Seta Shampoo 3 in 1",
-                description: "Shampoo 3 in 1 per capelli crespi e opachi, 6x300 ml",
-                icon: "fa-bottle-droplet",
-                link: "https://www.amazon.it/dp/B08F7C5XQS?aref=oH1CAlqNnZ&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=b358d6404d44081d9d50fe256ec4f8dd&ref=_as_li_ss_tl"
             }
         ]
     },
@@ -422,141 +304,6 @@ const NicheDatabase = {
         song: "Eye of the Tiger - Survivor",
         songLinkSpotify: "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
-    },
-    "abbigliamento-ciclismo": {
-        name: "Abbigliamento Ciclismo",
-        tags: ["ciclismo", "bici", "bicicletta", "mtb", "mountain", "bike", "abbigliamento", "tuta", "pantaloncini", "salopette", "maglietta", "guanti", "occhiali", "casco", "impermeabile", "antipioggia", "antivento", "giacca", "pantalone", "traspirante", "gel", "imbottito", "bretelle", "estivo", "invernale", "strada", "corsa", "pedalare", "sport", "outdoor"],
-        url: "/abbigliamento-ciclismo/index.html",
-        personality: "athletic",
-        valueProp: "Ho selezionato i migliori abbigliamenti e accessori per il ciclismo. Comfort, traspirabilità e protezione sono i criteri che ho considerato.",
-        song: "Bicycle Race - Queen",
-        songLinkSpotify: "https://open.spotify.com/track/1B2V4Q5uG7S8Y9Z0A1B2C3",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        primaryColor: "#00ff88",
-        accentColor: "#ffcc00",
-        secondaryColor: "#1a1a2e",
-        topProducts: [
-            {
-                name: "HOMTOL Abbigliamento Ciclismo Set Manica Corta Tuta Completa",
-                description: "Tuta completa per il ciclismo estivo con pantaloncini imbottiti in gel traspirante",
-                icon: "fa-bicycle",
-                link: "https://www.amazon.it/HOMTOL-Abbigliamento-Pantaloncini-Traspirante-Asciugatura/dp/B09WTTT4DB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-8&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=a9e628388e8936065229065d0a285e1d&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Tuta Ciclismo Completa Set+Pantaloncini 9D Gel Imbottito con Guanti e Occhiali",
-                description: "Set completo con tuta, pantaloncini imbottiti 9D gel, guanti e occhiali",
-                icon: "fa-bicycle",
-                link: "https://www.amazon.it/Abbigliamento-Ciclismo-Pantaloncini-imbottito-MTB%EF%BC%8BGuanti/dp/B0CTDGVJ3L?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-12&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6e353cbe213e027be887cb9aab1aef8&ref=_as_li_ss_tl"
-            },
-            {
-                name: "X-TIGER Ciclismo Uomo 5D Gel Salopette Pantaloncini Corti Imbottiti",
-                description: "Salopette con imbottitura 5D gel premium per massimo comfort",
-                icon: "fa-bicycle",
-                link: "https://www.amazon.it/dp/B08TBD3TDJ?pd_rd_i=B08TBD3TDJ&pd_rd_w=aglq3&content-id=amzn1.sym.1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_p=1eb9f79a-a1f0-4047-9d3a-2c918f58aed5&pf_rd_r=XTV7YVW7B28ED089QK7Q&pd_rd_wg=FvYuM&pd_rd_r=1358c35d-d9ef-4322-91ed-17f27df3c651&aref=O7aTTOb90U&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c6ab1ef2b3389860a033474173b56b3f&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Tuta Impermeabile Antipioggia Antivento - Set Giacca e Pantalone",
-                description: "Protezione completa dalla pioggia per moto e bicicletta",
-                icon: "fa-cloud-rain",
-                link: "https://www.amazon.it/Auto-Accessori-Lupex-Impermeabile-Antipioggia/dp/B0BF5MXH19?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZNOVEVMB306U&dib=eyJ2IjoiMSJ9.DtEoGTp22XMwHden81oPKLL5ABd9xsOrq0-ctEV2ovNEpDFyv_WF4DwsqFQXxhgXPoqQbGainaKM-soXe57_MMGWVNTiTs6HJDkIR9gETXYkwdbXUewEXm1qfj8xJizHYhW6B3Q_Xs7szLeq0zeWSd4fy8J_fYczUdU7mXEyn0TAgrelqXuj5BYVKseZUXKy8RnofGm678Q5faQApoiImWtDJWbpfdY0IpzbwsbXA_DDBNTNp-bbdhW3rSUocLUmqO4_vtA9PN9z75RoC-i4nDbDnsgg9WxgG5UzroQ9Z3Q.WuUz05jsmLgCtg2TECUNeLSTwMcK_1uZTtU35DtBj8A&dib_tag=se&keywords=bici%2Bset&qid=1779867487&sprefix=bici%2Bdet%2Caps%2C173&sr=8-47&th=1&linkCode=ll2&tag=l0c39-21&linkId=739862a3e171c23c5193803bc66f1de4&ref=_as_li_ss_tl"
-            }
-        ]
-    },
-    "sport-estivi": {
-        name: "Sport Estivi",
-        tags: ["sport", "estivo", "estate", "tennis", "padel", "running", "jogging", "surf", "windsurf", "vela", "canoa", "kayak", "nuoto", "piscina", "immersioni", "subacquea", "beach", "volleyball", "arrampicata", "climbing", "skate", "skateboard", "yoga", "nordic", "walking", "all'aperto", "outdoor", "attività", "fisica", "allenamento", "competizione", "gioco", "divertimento", "calcio", "pallone", "parastinchi", "allenamento calcio"],
-        url: "/sport-estivi/index.html",
-        personality: "energetic",
-        valueProp: "Ho selezionato i migliori sport estivi per goderti l'aria aperta. Tennis, padel, running, surf e molto altro per una estate attiva.",
-        song: "Summer of '69 - Bryan Adams",
-        songLinkSpotify: "https://open.spotify.com/track/1B2V4Q5uG7S8Y9Z0A1B2C3",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        primaryColor: "#667eea",
-        accentColor: "#764ba2",
-        secondaryColor: "#f093fb",
-        topProducts: [
-            {
-                name: "Amazon Basics Pallone da Calcio con Pompa",
-                description: "Pallone da allenamento con pompa inclusa, PVC resistente, uso interno/esterno",
-                icon: "fa-futbol",
-                link: "https://www.amazon.it/Amazon-Basics-Palloni-Allenamento-Macchina/dp/B0F4K9DR1P?dib=eyJ2IjoiMSJ9.KqxiS9pfLM8Ue1ht40YCIZuAlkxR2wPsgMo0b-zQ0wlZOrNkr066HmZR_w7xxLnJMWf1Od9fbmR44Y4w9V04fPzuQ0CuKHmn2VjrIo_sp4VFmnoVY4oXFip_LibBvj5jfVuAEe8Vdfw4mVm5NZ6wmOGSvX-lwApDUxfq12LihvdwDiiZ6YTEzXP3R2Fl2WAR2KldwKO4gSLiVqklRm5MRv-hKmQCMULAm1E0Wvz4rxTi2Rk7d79JmpFx68zzwO2XDdrRPNznxKAvUCC9iQ4uCgTinerd9WeL43uc7r-SRDk.Byx4UQtSf7Igk6xcomb-diGLu-8UVlRtpW5wjvNGkuo&dib_tag=se&keywords=calcio&qid=1780065044&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.8a1562af-dabe-4f1d-8eb5-1ded1ace4ef7&aref=vunziAZ3dN&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=659c4bdd9097f77c299083854629b00f&ref_=as_li_ss_tl"
-            },
-            {
-                name: "Mini Parastinchi Calcio",
-                description: "Ultra leggeri, resistenti e personalizzabili, usati da calciatori Serie A",
-                icon: "fa-shield-alt",
-                link: "https://www.amazon.it/Mini-Parastinchi-Calcio-Resistenti-Personalizzabili/dp/B0FF9PKLLW?dib=eyJ2IjoiMSJ9.KqxiS9pfLM8Ue1ht40YCIZuAlkxR2wPsgMo0b-zQ0wlZOrNkr066HmZR_w7xxLnJMWf1Od9fbmR44Y4w9V04fPzuQ0CuKHmn2VjrIo_sp4VFmnoVY4oXFip_LibBvj5jfVuAEe8Vdfw4mVm5NZ6wmOGSvX-lwApDUxfq12LihvdwDiiZ6YTEzXP3R2Fl2WAR2KldwKO4gSLiVqklRm5MRv-hKmQCMULAm1E0Wvz4rxTi2Rk7d79JmpFx68zzwO2XDdrRPNznxKAvUCC9iQ4uCgTinerd9WeL43uc7r-SRDk.Byx4UQtSf7Igk6xcomb-diGLu-8UVlRtpW5wjvNGkuo&dib_tag=se&keywords=calcio&qid=1780065044&sr=8-5-spons&aref=fGxgQ4kFF0&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=464e6caba65dbb575c7825517f769bd0&ref_=as_li_ss_tl"
-            },
-            {
-                name: "Un Sogno Chiamato Calcio",
-                description: "Libro sul calcio per bambini delle elementari, per la fiducia in se stessi",
-                icon: "fa-book",
-                link: "https://www.amazon.it/Sogno-Chiamato-Calcio-Elementari-Bellezza/dp/B0DDH5BM3M?dib=eyJ2IjoiMSJ9.KqxiS9pfLM8Ue1ht40YCIZuAlkxR2wPsgMo0b-zQ0wlZOrNkr066HmZR_w7xxLnJMWf1Od9fbmR44Y4w9V04fPzuQ0CuKHmn2VjrIo_sp4VFmnoVY4oXFip_LibBvj5jfVuAEe8Vdfw4mVm5NZ6wmOGSvX-lwApDUxfq12LihvdwDiiZ6YTEzXP3R2Fl2WAR2KldwKO4gSLiVqklRm5MRv-hKmQCMULAm1E0Wvz4rxTi2Rk7d79JmpFx68zzwO2XDdrRPNznxKAvUCC9iQ4uCgTinerd9WeL43uc7r-SRDk.Byx4UQtSf7Igk6xcomb-diGLu-8UVlRtpW5wjvNGkuo&dib_tag=se&keywords=calcio&qid=1780065044&sr=8-9&linkCode=ll2&tag=l0c39-21&linkId=f9abf243492bfa98a37753e5dd8176c3&ref_=as_li_ss_tl"
-            },
-            {
-                name: "EUREKA BODIFY Kit Allenamento Calcio e Agilità",
-                description: "Kit completo con 10 cinesini, scala agilità 6m, paracadute, bande elastiche, corda",
-                icon: "fa-dumbbell",
-                link: "https://www.amazon.it/EUREKA-BODIFY-Allenamento-Calcio-Agilit%C3%A0/dp/B0DB5PHBMB?content-id=amzn1.sym.3f7677f6-d6aa-4de0-8287-6bb7b9730f20%3Aamzn1.sym.3f7677f6-d6aa-4de0-8287-6bb7b9730f20&cv_ct_cx=calcio&keywords=calcio&pd_rd_i=B0DB5PHBMB&pd_rd_r=532379c4-a0b6-49af-af7f-5fe61dec4b75&pd_rd_w=LG6h9&pd_rd_wg=bWx9K&pf_rd_p=3f7677f6-d6aa-4de0-8287-6bb7b9730f20&pf_rd_r=8GT57XAXK4YCA4JCY7JY&qid=1780065044&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-3-50840d04-82cc-4adf-b6cc-9f330c77868e-spons&aref=HAqAT4sl3G&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&psc=1&linkCode=ll2&tag=l0c39-21&linkId=1ca05c30fc94d0dc8b3261fa5628e136&ref_=as_li_ss_tl"
-            },
-            {
-                name: "Ainiv Soccer Bungee Trainer",
-                description: "Cintura di allenamento per calcio con 5 artigli, per bambini e adulti",
-                icon: "fa-running",
-                link: "https://www.amazon.it/Ainiv-Allenamento-Allenatore-Regolabile-Principianti/dp/B09Z3XHS7S?dib=eyJ2IjoiMSJ9.KqxiS9pfLM8Ue1ht40YCIZuAlkxR2wPsgMo0b-zQ0wlZOrNkr066HmZR_w7xxLnJMWf1Od9fbmR44Y4w9V04fPzuQ0CuKHmn2VjrIo_sp4VFmnoVY4oXFip_LibBvj5jfVuAEe8Vdfw4mVm5NZ6wmOGSvX-lwApDUxfq12LihvdwDiiZ6YTEzXP3R2Fl2WAR2KldwKO4gSLiVqklRm5MRv-hKmQCMULAm1E0Wvz4rxTi2Rk7d79JmpFx68zzwO2XDdrRPNznxKAvUCC9iQ4uCgTinerd9WeL43uc7r-SRDk.Byx4UQtSf7Igk6xcomb-diGLu-8UVlRtpW5wjvNGkuo&dib_tag=se&keywords=calcio&qid=1780065044&sr=8-11&th=1&linkCode=ll2&tag=l0c39-21&linkId=49c73b928f3c60c89aaeffbebbb54d55&ref_=as_li_ss_tl"
-            }
-        ]
-    },
-    "pugilato": {
-        name: "Pugilato & Boxe",
-        tags: ["pugilato", "boxe", "guantoni", "sacco", "boxe", "parastinchi", "casco", "paradenti", "bende", "allenamento", "palestra", "combattimento", "sport", "combattimento", "ring", "match", "gara", "competizione", "mma", "kickboxing", "thai", "boxe", "thailandese", "art", "marziali", "difesa", "personale", "fitness", "cardio", "forza", "resistenza"],
-        url: "/pugilato/index.html",
-        personality: "energetic",
-        valueProp: "Ho selezionato l'attrezzatura migliore per il tuo allenamento di pugilato. Guantoni, sacchi, protezioni e accessori per allenarti come un vero campione.",
-        song: "Eye of the Tiger - Survivor",
-        songLinkSpotify: "https://open.spotify.com/track/4fIQKpxc2X8XUKz5dQG9OZ",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        primaryColor: "#FFD700",
-        accentColor: "#000000",
-        secondaryColor: "#C9A227",
-        topProducts: [
-            {
-                name: "LEONE 1947 Guanti Boxe",
-                description: "Guanti da boxe professionali LEONE 1947, qualità italiana per campioni",
-                icon: "fa-boxing-glove",
-                link: "https://www.amazon.it/gp/aw/d/B07WQ22G2D?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=a9806ff03c4c9e1d788f11c6c05492df&hsa_cr_id=0&qid=1780066711&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=yyN3CsdAZf&pd_rd_w=hHUd7&content-id=amzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef%3Aamzn1.sym.82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_p=82ad90a9-a799-4307-862b-01edf8c319ef&pf_rd_r=FY47W3KBHG049AG1VQNC&pd_rd_wg=WThQT&pd_rd_r=18859471-92f8-4895-9a7a-073ecfba3c41&th=1&linkCode=ll2&tag=l0c39-21&linkId=68ded6d756d5c19f0037b7fa8d0aa552&ref=_as_li_ss_tl"
-            },
-            {
-                name: "RDX Palla Veloce Boxe",
-                description: "Pera da boxe in vacchetta pelle con gancio soffitto, perfetta per allenamento velocità Muay Thai MMA",
-                icon: "fa-circle",
-                link: "https://www.amazon.it/RDX-velocit%C3%A0-Allenamento-Pugilato-Soffitto/dp/B01N1JLNML?&linkCode=ll2&tag=l0c39-21&linkId=ecd6f7cf50d7492e000ec988038a6a58&ref=_as_li_ss_tl"
-            },
-            {
-                name: "RDX Corpetto Protettivo",
-                description: "Corpetto in Maya Hide pelle per protezione torace, perfetto per boxe, MMA, kickboxing e arti marziali",
-                icon: "fa-shield-alt",
-                link: "https://www.amazon.it/RDX-Protettivo-Allenamento-Combattimento-Kickboxing/dp/B0B2Q3JQ2S?&linkCode=ll2&tag=l0c39-21&linkId=633170b76cf3dbde22ac7de5fb0bbb79&ref=_as_li_ss_tl"
-            },
-            {
-                name: "Sacco da Boxe Pieghevole",
-                description: "Sacco da boxe con base riempibile, perfetto per allenamento a casa e in palestra",
-                icon: "fa-dumbbell",
-                link: "https://www.amazon.it/s?k=sacco+boxe&tag=l0c39-21"
-            },
-            {
-                name: "Parastinchi da Boxe",
-                description: "Parastinchi professionali con protezione completa per tibia e collo del piede",
-                icon: "fa-shield-alt",
-                link: "https://www.amazon.it/s?k=parastinchi+boxe&tag=l0c39-21"
-            },
-            {
-                name: "Bende da Boxe",
-                description: "Bende elastiche professionali per proteggere polsi e mani durante l'allenamento",
-                icon: "fa-hand-rock",
-                link: "https://www.amazon.it/s?k=bende+boxe&tag=l0c39-21"
-            }
-        ]
     },
     "snack-bevande": {
         name: "Snack & Bevande",
@@ -753,12 +500,6 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/Parrucchiere-Professionali-6Pollici-Inossidabile-Barbiere/dp/B088BCF6NP?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RQP9HXDEGOPJ&dib=eyJ2IjoiMSJ9.IwyQJKyxav7f_BtY-qgKtdA0Qjy3QG-_VqotbIsliD9YCqAFHYs1MQ0VABI67aULcmLXsqJ66_hek_moI5a3t4pVyFjeBKsnwg6Krm3nTzvgA6zyj9qUgU4_1OO8XNOij7ZOMLJHbGZLYSpFe6J9qzF8L4_1KRIEdIIlyayLo7vtG6FayOB5_PoV9CckaQCXaVKX4oa-tU748iGudJ0y8q0BVk5DT4BkYnaFYEhLYcyQD1N0Vd0F_2Kq0U7dvnE1vZWtLtu8w3wNgMFGqpTnyYc1CMC74_KwiuNb7bRhjHI.l65c0gl0YKMurbg4eQhS4Cd0ILCPC0SIWuJPlzrbVwU&dib_tag=se&keywords=parrucchiere&qid=1779681422&sprefix=parrucchiere%2Caps%2C164&sr=8-4-spons&aref=c8jD8vrstC&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=8fb2796e9175ae201e4e22f53eb542b7&ref=_as_li_ss_tl"
             },
             {
-                name: "CIICII Forbici Parrucchiere Professionali",
-                description: "Forbici parrucchiere professionali 440C, 6,7 pollici",
-                icon: "fa-cut",
-                link: "https://www.amazon.it/CIICII-C1319-6-Forbici-Parrucchiere-Professionali/dp/B0FQV6JZZY?crid=3OUPM4KL1KJGO&dib=eyJ2IjoiMSJ9.W_rgOTjrbSSZ2REPUkmIq9aClGtBGKq2BhHxba8AHiTIH6JnVMDVtWm86VA99I4f8QXyFpPwy0jgtKjJl0n3wQXwVAsOv96OkBl55eAVv72GG9prpChoSETI3ydCiEClWGe2dyjY7gfUn1sZrkWDbfWmJKzb9PIEluZg3HeW-5BB0Zytjb3plPupcvgdUMB5M5eunqzNpg2eyDc8nfbgWU6GXwleSemzN5t65Oy83JjU4UXzgFhR_DR0uq4flegNinBTA9mhpDtFJNJ5V0fVcoEOoJAIw9tH_FqohZsBFhE.UZtAhm4dSesV84mcpzneQq0dYtH_b6J10QGG70mBKGM&dib_tag=se&keywords=forbici+parrucchiere+professionali+yasaka&qid=1779864365&sprefix=yasaka+forbici%2Caps%2C116&sr=8-5-spons&aref=iktUgBTaXG&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0ee9f8c9b07f4ea2e14092a71418b440&ref=_as_li_ss_tl"
-            },
-            {
                 name: "Carrello Parrucchiere Professionale Cassetti Estraibili",
                 description: "Carrello professionale con cassetti estraibili per attrezzature",
                 icon: "fa-suitcase",
@@ -824,12 +565,12 @@ const NicheDatabase = {
             }
         ]
     },
-    "studio-fotografico": {
-        name: "Studio Fotografico",
-        tags: ["fotografia", "mobile", "fotocamera", "camera", "smartphone", "foto", "video", "lente", "obiettivo", "treppiede", "selfie", "stick", "gimbal", "stabilizzatore", "microfono", "esterno", "light", "ring", "flash", "kit", "fotografia", "studio", "illuminazione", "softbox", "luce", "rgb", "continua"],
-        url: "/studio-fotografico/index.html",
+    "fotografia-mobile": {
+        name: "Fotografia Mobile",
+        tags: ["fotografia", "mobile", "fotocamera", "camera", "smartphone", "foto", "video", "lente", "obiettivo", "treppiede", "selfie", "stick", "gimbal", "stabilizzatore", "microfono", "esterno", "light", "ring", "flash", "kit", "fotografia"],
+        url: "/fotografia-mobile/index.html",
         personality: "creative",
-        valueProp: "Ho selezionato i migliori prodotti per il tuo studio fotografico, dall'illuminazione agli accessori.",
+        valueProp: "Ho selezionato i migliori prodotti per migliorare la tua fotografia mobile.",
         song: "Photograph - Ed Sheeran",
         songLinkSpotify: "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
@@ -858,10 +599,10 @@ const NicheDatabase = {
         songLinkSpotify: "https://open.spotify.com/track/6t1FIJlZWTQfIZhsGjaulM",
         songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
     },
-    "veicoli": {
+    "biciclette-mobilita": {
         name: "Biciclette & Mobilità",
         tags: ["bicicletta", "bici", "bicycle", "bike", "mtb", "mountain", "bike", "e-bike", "ebike", "elettrica", "elettrico", "pendolare", "urbano", "mobilità", "mobilita", "ciclismo", "ciclista", "corsa", "spinning", "trail", "off-road", "offroad", "alluminio", "freni", "disco", "idraulico", "cambio", "velocità", "velocita", "batteria", "autonomia", "ricaricabile", "impermeabile", "sospensioni", "ammortizzata", "biammortizzata", "ruote", "pneumatici", "sellino", "manubrio", "pedali", "casco", "luci", "campanello", "portapacchi", "borraccia"],
-        url: "/veicoli/index.html",
+        url: "/biciclette-mobilita/index.html",
         personality: "adventure",
         valueProp: "Ho analizzato le specifiche tecniche per te. Telaio, batteria, autonomia e freni sono i fattori chiave per la tua mobilità.",
         song: "Bicycle Race - Queen",
@@ -885,57 +626,6 @@ const NicheDatabase = {
                 description: "Mountain bike 29 pollici in alluminio con freni a disco idraulici",
                 icon: "fa-mountain",
                 link: "https://www.amazon.it/IBK-Bicicletta-Mountain-Alluminio-Ammortizzata/dp/B08HWGW7SG?dib=eyJ2IjoiMSJ9.qDw6yrJXU1txWqQl1ewOnWLXIasRXObMGYNw4OLmadyFuZBqskI6X3xnEoMd80oT2RpkWO5IN_fIk0Hn5OEREkXDIw4jhCEeLObcZLlEIybXRjt06fitE7vByulRW82xT1N9YHSl-kpJPE6TEJi0nwcF_Y2vQK8F-1Ht7iMIuYxXE1cagiKEKcDxyaQolowqpnV20GtPo57I77oqju7VC8qO1ikICc2lOXH8alnfe0Mp80jT0U5oxcgQ8Xbih1hn5l0Zf-C1-77mr4gK9bjrNrSmTnWjZuxr2OrW1nC3XD8.bdKRfArYhgK-HAkPkG85J-yv4Xr3WSZIG9QuiyiKB_w&dib_tag=se&keywords=bici&qid=1779723129&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&aref=OaqTfWA1fP&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=59626a720eeaee58a3db43e048bbaaea&ref=_as_li_ss_tl"
-            }
-        ]
-    },
-    "pugilato": {
-        name: "Pugilato & Boxe",
-        tags: ["pugilato", "boxe", "guantoni", "sacco", "allenamento", "sport", "combattimento", "ring", "match", "gara", "competizione", "protezioni", "parastinchi", "casco", "dentista", "bende", "fitness", "cardio", "forza", "potenza", "velocità", "agilità", "resistenza", "colpi", "hook", "jab", "uppercut", "knockout", "campione", "champion", "titolo", "cintura", "palestra", "gym", "workout", "training"],
-        url: "/pugilato/index.html",
-        personality: "champion",
-        valueProp: "Ho selezionato l'attrezzatura professionale per campioni. Qualità, sicurezza e performance sono i fattori chiave.",
-        song: "Eye of the Tiger - Survivor",
-        songLinkSpotify: "https://open.spotify.com/track/4r9g2Z8XShl5eGZ3qF5p7k",
-        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl",
-        primaryColor: "#FFD700",
-        accentColor: "#1a1a1a",
-        secondaryColor: "#B8860B",
-        topProducts: [
-            {
-                name: "Guantoni da Boxe Professionali",
-                description: "Guantoni in pelle sintetica con imbottitura in gel, ideali per allenamento e competizione",
-                icon: "fa-boxing-glove",
-                link: "https://www.amazon.it/s?k=guantoni+boxe&tag=l0c39-21"
-            },
-            {
-                name: "Sacco da Boxe Pieghevole",
-                description: "Sacco da boxe con base riempibile, perfetto per allenamento a casa e in palestra",
-                icon: "fa-dumbbell",
-                link: "https://www.amazon.it/s?k=sacco+boxe&tag=l0c39-21"
-            },
-            {
-                name: "Parastinchi da Boxe",
-                description: "Parastinchi professionali con protezione completa per tibia e collo del piede",
-                icon: "fa-shield-alt",
-                link: "https://www.amazon.it/s?k=parastinchi+boxe&tag=l0c39-21"
-            },
-            {
-                name: "Casco da Boxe",
-                description: "Casco protettivo con visiera, per massima sicurezza durante l'allenamento",
-                icon: "fa-head-side-mask",
-                link: "https://www.amazon.it/s?k=casco+boxe&tag=l0c39-21"
-            },
-            {
-                name: "Paradenti da Boxe",
-                description: "Paradenti professionale con protezione per labbra e denti, conforme agli standard",
-                icon: "fa-tshirt",
-                link: "https://www.amazon.it/s?k=paradenti+boxe&tag=l0c39-21"
-            },
-            {
-                name: "Bende da Boxe",
-                description: "Bende elastiche professionali per proteggere polsi e mani durante l'allenamento",
-                icon: "fa-hand-rock",
-                link: "https://www.amazon.it/s?k=bende+boxe&tag=l0c39-21"
             }
         ]
     }
@@ -1841,11 +1531,6 @@ const comboMessages = {
         "Vuoi diventare un barbiere di elite? 🎩 Guarda, con {prodottoNicchia} e {prodottoAncora} hai tutto il necessario. Ti lascio i link, è l'investimento giusto!",
         "Sei appassionato di hair styling? ✨ Guarda, io uso {prodottoNicchia} e {prodottoAncora} per risultati professionali. Ti lascio i link!"
     ],
-    "pugilato": [
-        "Ehi, ti alleni come un vero campione! 🥊 Guarda, se ti alleni alla boxe come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per l'allenamento e una scorta di {prodottoAncora} per la protezione. Ti lascio qui i link a entrambi, ti assicuro che è essenziale per il ring!",
-        "Ami il pugilato? 👊 Guarda, per allenarti come un professionista servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
-        "Vuoi diventare un campione? 🏆 Guarda, io uso {prodottoNicchia} e {prodottoAncora} per il mio training. Ti lascio i link!"
-    ],
     "musica-vinili": [
         "Ehi, ami la musica analogica! 🎵 Guarda, se ascolti vinili come me, non posso fare a meno di due cose: un {prodottoNicchia} per la migliore qualità audio e una scorta di {prodottoAncora} per la mia collezione. Ti lascio qui i link a entrambi, ti assicuro che è un'esperienza unica!",
         "Ami i vinili? 🎶 Guarda, per una collezione da collezionista servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è pura magia!",
@@ -1856,16 +1541,10 @@ const comboMessages = {
         "Sei un otaku? 🎌 Guarda, per la collezione perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è imperdibile!",
         "Vuoi storie epiche? ⚔️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
     ],
-    "veicoli": [
+    "biciclette-mobilita": [
         "Ehi, ami le biciclette! 🚲 Guarda, se pedali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il mio giro e una scorta di {prodottoAncora} per la manutenzione. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
         "Ti piace andare in bici? 🚴 Guarda, per la mobilità perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
         "Vuoi muoverti in libertà? 🌳 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
-    ]
-    ,
-    "abbigliamento-ciclismo": [
-        "Ehi, ami il ciclismo! 🚴 Guarda, se pedali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il mio giro e una scorta di {prodottoAncora} per la manutenzione. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
-        "Ti piace andare in bici? 🚲 Guarda, per il ciclismo perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
-        "Vuoi pedalare in libertà? 🌳 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
     ]
 };
 
@@ -1886,11 +1565,6 @@ function getContesto() {
     const currentPath = window.location.pathname;
     const currentUrl = window.location.href.toLowerCase();
     
-    // Homepage
-    if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html')) {
-        return 'homepage';
-    }
-    
     // Controlla se siamo in una pagina specifica
     if (currentPath.includes('mare-spiaggia') || currentUrl.includes('mare') || currentUrl.includes('spiaggia')) {
         return 'mare';
@@ -1910,17 +1584,11 @@ function getContesto() {
     if (currentPath.includes('parrucchiere-barbiere') || currentUrl.includes('parrucchiere') || currentUrl.includes('barbiere') || currentUrl.includes('forbici') || currentUrl.includes('rasoio')) {
         return 'parrucchiere-barbiere';
     }
-    if (currentPath.includes('pugilato') || currentUrl.includes('pugilato') || currentUrl.includes('boxe') || currentUrl.includes('boxing') || currentUrl.includes('guantoni') || currentUrl.includes('sacco')) {
-        return 'pugilato';
-    }
     if (currentPath.includes('abbigliamento-serie-tv-film') || currentUrl.includes('abbigliamento') || currentUrl.includes('serie') || currentUrl.includes('tv') || currentUrl.includes('film')) {
         return 'abbigliamento-serie-tv-film';
-    if (currentPath.includes('abbigliamento-ciclismo') || currentUrl.includes('ciclismo') || currentUrl.includes('bici') || currentUrl.includes('bicicletta') || currentUrl.includes('mtb') || currentUrl.includes('mountain') || currentUrl.includes('bike') || currentUrl.includes('abbigliamento') || currentUrl.includes('tuta') || currentUrl.includes('pantaloncini') || currentUrl.includes('salopette')) {
-        return 'abbigliamento-ciclismo';
     }
-    }
-    if (currentPath.includes('veicoli') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
-        return 'veicoli';
+    if (currentPath.includes('biciclette-mobilita') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
+        return 'biciclette-mobilita';
     }
     if (currentPath.includes('smartphone-tech') || currentUrl.includes('smartphone') || currentUrl.includes('telefono') || currentUrl.includes('mobile')) {
         return 'smartphone';
@@ -1946,6 +1614,9 @@ function getContesto() {
     if (currentPath.includes('giochi-da-tavolo') || currentUrl.includes('giochi') || currentUrl.includes('tavolo') || currentUrl.includes('board')) {
         return 'giochi';
     }
+    if (currentPath.includes('parrucchiere-barbiere') || currentUrl.includes('parrucchiere') || currentUrl.includes('barbiere') || currentUrl.includes('salone') || currentUrl.includes('forbici') || currentUrl.includes('rasoio')) {
+        return 'parrucchiere-barbiere';
+    }
     if (currentPath.includes('libri-ereader') || currentUrl.includes('libri') || currentUrl.includes('ereader') || currentUrl.includes('lettura')) {
         return 'libri';
     }
@@ -1964,7 +1635,7 @@ function getContesto() {
     if (currentPath.includes('viaggi-vacanze') || currentUrl.includes('viaggi') || currentUrl.includes('vacanze') || currentUrl.includes('valigie')) {
         return 'viaggi';
     }
-    if (currentPath.includes('studio-fotografico') || currentUrl.includes('fotografia') || currentUrl.includes('foto') || currentUrl.includes('camera')) {
+    if (currentPath.includes('fotografia-mobile') || currentUrl.includes('fotografia') || currentUrl.includes('foto') || currentUrl.includes('camera')) {
         return 'fotografia';
     }
     if (currentPath.includes('dvd-bluray') || currentUrl.includes('dvd') || currentUrl.includes('bluray') || currentUrl.includes('film')) {
@@ -1975,9 +1646,6 @@ function getContesto() {
     }
     if (currentPath.includes('cucina-elettrodomestici') || currentUrl.includes('condizionatore') || currentUrl.includes('ventilatore')) {
         return 'caldo';
-    }
-    if (currentPath.includes('pugilato') || currentUrl.includes('pugilato') || currentUrl.includes('boxe') || currentUrl.includes('guantoni') || currentUrl.includes('sacco') || currentUrl.includes('combattimento')) {
-        return 'pugilato';
     }
     // Bibite & Bevande - ora ha proprio database entry
     if (currentPath.includes('snack-bevande') || currentUrl.includes('bibite') || currentUrl.includes('bevande')) {
@@ -2128,30 +1796,15 @@ function showUrgencyComboMessage(context) {
     addMessage(message, 'bot');
 }
 
-// Funzione per generare intervallo casuale tra 18-24 minuti (Variabilità Temporale)
-function getRandomInterval() {
-    const minTime = 18 * 60 * 1000; // 18 minuti
-    const maxTime = 24 * 60 * 1000; // 24 minuti
-    return Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
-}
-
-// Funzione per controllare se è orario dormiente (22:00-08:00)
-function isSleepTime() {
-    const now = new Date();
-    const hour = now.getHours();
-    return hour >= 22 || hour < 8;
-}
-
-// Funzione per tracciare i click sulle combos (logica amico)
+// Funzione per tracciare i click sulle combos
 function trackComboClick(context, productNumber) {
     if (!userPreferences.comboClicks) {
         userPreferences.comboClicks = {};
     }
     if (!userPreferences.comboClicks[context]) {
-        userPreferences.comboClicks[context] = { product1: 0, product2: 0, clicked: false };
+        userPreferences.comboClicks[context] = { product1: 0, product2: 0 };
     }
     userPreferences.comboClicks[context][`product${productNumber}`]++;
-    userPreferences.comboClicks[context].clicked = true;
     saveUserPreferences();
     
     // Track combo click in GA4
@@ -2165,21 +1818,6 @@ function trackComboClick(context, productNumber) {
     }
     
     console.log(`Combo click tracked: ${context} - product ${productNumber}`);
-    
-    // Logica amico: ringrazia e chiede feedback
-    setTimeout(() => {
-        addMessage("Grazie per aver dato un'occhiata! 😊 Ti piace il prodotto? Vuoi che ti mostri alternative simili?", 'bot');
-    }, 1000);
-    
-    // Stop Intelligente: ferma il timer delle combo per 2 ore (non essere molesto)
-    if (comboInterval) {
-        clearInterval(comboInterval);
-        setTimeout(() => {
-            comboInterval = setInterval(() => {
-                showComboMessage();
-            }, getRandomInterval()); // Variabilità temporale 18-24 minuti
-        }, 2 * 60 * 60 * 1000); // 2 ore
-    }
 }
 
 // Funzione per avviare il timer di urgenza (70-120 minuti)
@@ -2473,7 +2111,7 @@ function applyThemeOnLoad() {
         themeClass = 'theme-blinding-lights';
     } else if (categoryKey === 'moda-donna') {
         themeClass = 'theme-as-it-was';
-    } else if (categoryKey === 'veicoli') {
+    } else if (categoryKey === 'biciclette-mobilita') {
         themeClass = 'theme-biciclette';
     } else if (categoryKey === 'parrucchiere-barbiere') {
         themeClass = 'theme-parrucchiere';
@@ -2619,20 +2257,14 @@ function detectComboScroll() {
         // Mostra il messaggio combo subito al 50%
         showComboMessage();
         
-        // Poi mostra con variabilità temporale 18-24 minuti
+        // Poi mostra ogni 30 secondi
         comboInterval = setInterval(() => {
             showComboMessage();
-        }, getRandomInterval()); // 18-24 minuti
+        }, 30000); // 30 secondi
     }
 }
 
 function showComboMessage() {
-    // Orario Dormiente: non mostrare combo tra 22:00 e 08:00
-    if (isSleepTime()) {
-        console.log('Sleep time - no combo messages');
-        return;
-    }
-    
     // Ottieni il contesto corrente
     let context = getContesto();
     
@@ -2648,30 +2280,25 @@ function showComboMessage() {
         // Usa le combo del database
         const randomCombo = comboData.combos[Math.floor(Math.random() * comboData.combos.length)];
         
-        // Verifica che product1 e product2 esistano
-        if (!randomCombo.product1 || !randomCombo.product2 || !randomCombo.product1.link || !randomCombo.product2.link) {
-            console.log('Invalid combo data - missing products or links, using fallback');
-        } else {
-            const message = `
-                <div class="urgency-combo-message">
-                    <p>${randomCombo.message}</p>
-                    <div class="combo-container">
-                        <div class="combo-title">📦 Combo consigliata:</div>
-                        <div>
-                            <a href="${randomCombo.product1.link}" target="_blank" onclick="trackComboClick('${context}', 1)" class="combo-link">
-                                1. ${randomCombo.product1.name}
-                            </a>
-                            <a href="${randomCombo.product2.link}" target="_blank" onclick="trackComboClick('${context}', 2)" class="combo-link">
-                                2. ${randomCombo.product2.name}
-                            </a>
-                        </div>
+        const message = `
+            <div class="urgency-combo-message">
+                <p>${randomCombo.message}</p>
+                <div class="combo-container">
+                    <div class="combo-title">📦 Combo consigliata:</div>
+                    <div>
+                        <a href="${randomCombo.product1.link}" target="_blank" onclick="trackComboClick('${context}', 1)" class="combo-link">
+                            1. ${randomCombo.product1.name}
+                        </a>
+                        <a href="${randomCombo.product2.link}" target="_blank" onclick="trackComboClick('${context}', 2)" class="combo-link">
+                            2. ${randomCombo.product2.name}
+                        </a>
                     </div>
                 </div>
-            `;
-            
-            addMessage(message, 'bot');
-            return;
-        }
+            </div>
+        `;
+        
+        addMessage(message, 'bot');
+        return;
     }
     
     // Fallback: usa il sistema vecchio con catalogoProdotti
@@ -2896,7 +2523,7 @@ const macroCategories = {
     'tech-lifestyle': {
         name: 'Tech & Lifestyle',
         icon: '💻',
-        categories: ['smartphone-tech', 'tech', 'studio-fotografico', 'ufficio-produttivo']
+        categories: ['smartphone-tech', 'tech', 'fotografia-mobile', 'ufficio-produttivo']
     },
     'hobby-svago': {
         name: 'Hobby & Svago',
@@ -2947,12 +2574,12 @@ const relatedCategories = {
     'arredamento-casa': ['smart-home-domotica', 'benessere-cura-personale', 'snack-bevande'],
     'benessere-cura-personale': ['profumi-bellezza', 'arredamento-casa', 'parrucchiere-barbiere', 'snack-bevande'],
     'dvd-bluray': ['abbigliamento-serie-tv-film', 'snack-bevande'],
-    'studio-fotografico': ['tech', 'smartphone-tech', 'snack-bevande'],
+    'fotografia-mobile': ['tech', 'smartphone-tech', 'snack-bevande'],
     'giochi-da-tavolo': ['elite-gaming-gear', 'snack-bevande'],
     'libri-ereader': ['tech', 'smartphone-tech', 'manga-anime', 'snack-bevande'],
     'mare-spiaggia': ['viaggi-vacanze', 'outdoor-camping', 'snack-bevande'],
     'outdoor-camping': ['viaggi-vacanze', 'mare-spiaggia', 'snack-bevande'],
-    'veicoli': ['fitness-casa', 'outdoor-camping', 'tech', 'snack-bevande'],
+    'biciclette-mobilita': ['fitness-casa', 'outdoor-camping', 'tech', 'snack-bevande'],
     'parrucchiere-barbiere': ['benessere-cura-personale', 'moda-donna', 'moda-uomo', 'accessori-moda', 'snack-bevande'],
     'manga-anime': ['abbigliamento-serie-tv-film', 'libri-ereader', 'moda-donna', 'moda-uomo', 'elite-gaming-gear', 'snack-bevande'],
     'musica-vinili': ['abbigliamento-serie-tv-film', 'tech', 'benessere-cura-personale', 'snack-bevande'],
@@ -2974,16 +2601,16 @@ function toggleChat() {
     }
     
     if (chatWindow.classList.contains('active')) {
-        // Show feedback question when closing
+        // Show friendly closing message if user has interacted
         const chatMessages = document.getElementById('chat-messages');
-        if (chatMessages) {
-            addMessage("Hai trovato le specifiche tecniche che cercavi? Rispondi 'sì' o 'no' per aiutarci a migliorare.", 'bot');
-            // Close chat after showing feedback question
+        if (chatMessages && chatMessages.children.length > 0) {
+            addMessage(getFriendlyClosing(), 'bot');
+            // Close chat after showing closing message
             setTimeout(() => {
                 chatWindow.classList.remove('active');
                 chatButton.classList.remove('active');
                 chatOpen = false;
-            }, 3000);
+            }, 1500);
         } else {
             chatWindow.classList.remove('active');
             chatButton.classList.remove('active');
@@ -3004,10 +2631,16 @@ function toggleChat() {
 
         // Show welcome message with macro-categories on first open
         const chatMessages = document.getElementById('chat-messages');
-        
-        // Always show welcome message when chat is opened
-        if (chatMessages) {
+        if (chatMessages && chatMessages.children.length === 0) {
             showWelcomeMessage();
+        } else if (chatMessages) {
+            // If chat has messages but no categories visible, show macro-categories
+            const hasQuickReplies = chatMessages.querySelector('.quick-replies');
+            if (!hasQuickReplies) {
+                setTimeout(() => {
+                    showMacroCategories();
+                }, 300);
+            }
         }
     }
 }
@@ -3064,7 +2697,7 @@ function showWelcomeMessage() {
     
     // Show "Pausa Ristoro 🥤" immediately after welcome (Strategy: break the ice with low-cost impulse purchase)
     setTimeout(() => {
-        addMessage("<div style='padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);'><strong style='font-size: 1.1em; display: block; margin-bottom: 8px;'>✨ Pausa Smart</strong><p style='margin: 0; font-size: 0.95em; line-height: 1.5;'>Mentre esplori, i nostri clienti più fedeli scelgono questi must-have per ricaricare le energie:</p><div style='margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;'><a href='https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>⚡ Powerade</a><a href='https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl' target='_blank' style='background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; color: white; text-decoration: none; font-weight: 500; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;'>🥤 Pepsi Max</a></div></div>", 'bot');
+        addMessage("Ti stai godendo la navigazione? 😊 Ecco i prodotti preferiti degli altri utenti per una pausa veloce mentre esplori le altre categorie. La sessione si fa intensa? Recupera le energie con i nostri must-have per la pausa! <a href='https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl' target='_blank' style='color: #007bff; text-decoration: none;'>⚡ Powerade Sport Drink</a> | <a href='https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl' target='_blank' style='color: #007bff; text-decoration: none;'>🥤 Pepsi Max</a>", 'bot');
     }, 400);
     
     // Check for seasonal occasion (no personal occasions like birthdays)
@@ -3290,7 +2923,7 @@ function applyBotTheme(categoryKey) {
         themeClass = 'theme-blinding-lights';
     } else if (categoryKey === 'moda-donna') {
         themeClass = 'theme-as-it-was';
-    } else if (categoryKey === 'veicoli') {
+    } else if (categoryKey === 'biciclette-mobilita') {
         themeClass = 'theme-biciclette';
     } else if (categoryKey === 'parrucchiere-barbiere') {
         themeClass = 'theme-parrucchiere';
@@ -3378,23 +3011,8 @@ async function sendMessage() {
     
     if (!chatInput || !chatMessages) return;
     
-    const message = chatInput.value.trim().toLowerCase();
+    const message = chatInput.value.trim();
     if (!message) return;
-    
-    // Check for feedback responses
-    if (message === 'sì' || message === 'si' || message === 'yes') {
-        addMessage(message, 'user');
-        chatInput.value = '';
-        addMessage("Grazie per il feedback! Ci aiuta a migliorare le nostre selezioni tecniche.", 'bot');
-        return;
-    }
-    
-    if (message === 'no') {
-        addMessage(message, 'user');
-        chatInput.value = '';
-        addMessage("Ci dispiace. Cosa stavi cercando specificamente? Ti aiuteremo a trovarlo.", 'bot');
-        return;
-    }
     
     // Track user message in GA4
     if (typeof gtag !== 'undefined') {
@@ -3409,9 +3027,6 @@ async function sendMessage() {
     addMessage(message, 'user');
     chatInput.value = '';
     
-    // Show typing indicator
-    showTypingIndicator();
-    
     // Reset abandonment timer on user interaction
     resetAbandonmentTimer();
     
@@ -3423,9 +3038,6 @@ async function sendMessage() {
     
     // Remove loading indicator
     removeLoadingIndicator();
-    
-    // Hide typing indicator
-    hideTypingIndicator();
     
     setTimeout(async () => {
         if (category) {
@@ -3549,27 +3161,6 @@ function addMessage(text, sender) {
     // Track conversation for learning
     if (sender === 'user') {
         trackUserInteraction(text);
-    }
-}
-
-// Show typing indicator
-function showTypingIndicator() {
-    const chatMessages = document.getElementById('chat-messages');
-    if (!chatMessages) return;
-    
-    const typingDiv = document.createElement('div');
-    typingDiv.className = 'chat-message bot loading';
-    typingDiv.id = 'typing-indicator';
-    typingDiv.innerHTML = '<div class="typing-indicator"><span style="animation: typing 0.6s infinite">●</span><span style="animation: typing 0.6s 0.2s infinite">●</span><span style="animation: typing 0.6s 0.4s infinite">●</span></div>';
-    chatMessages.appendChild(typingDiv);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-
-// Hide typing indicator
-function hideTypingIndicator() {
-    const typingIndicator = document.getElementById('typing-indicator');
-    if (typingIndicator) {
-        typingIndicator.remove();
     }
 }
 
@@ -4175,9 +3766,9 @@ document.addEventListener('DOMContentLoaded', function() {
     //     startUrgencyTimer();
     // }, 2000);
     
-    // Disable scroll detection for combo messages
+    // Add scroll detection
     window.addEventListener('scroll', detectScroll);
-    // window.addEventListener('scroll', detectComboScroll);
+    window.addEventListener('scroll', detectComboScroll);
     
     // Add click outside to close proactive bubble
     document.addEventListener('click', function(event) {

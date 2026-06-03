@@ -1,9 +1,0 @@
-__pycache__/
-.vercel
-.env*.local
-
-# Local Netlify folder
-.netlify
-
-# Private analytics dashboard
-analytics.html

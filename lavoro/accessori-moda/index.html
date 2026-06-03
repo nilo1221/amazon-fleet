@@ -19,7 +19,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="moda.css">
     <!-- AI Chat CSS -->
     <style>
         :root {
@@ -139,8 +138,8 @@
             <!-- Primo Prodotto -->
             <div class="row mt-4">
                 <div class="col-lg-8 mx-auto">
-                    <div class="bento-product-card card">
-                        <div class="card-body p-5">
+                    <div class="product-card product-card-accessori card">
+                        <div class="card-body p-4">
                             <span class="category-badge">
                                 <i class="fas fa-glasses me-1"></i>Occhiali da Sole
                             </span>
@@ -155,7 +154,7 @@
                                 </div>
                             </div>
                             
-                            <p class="card-text text-dark mb-4">
+                            <p class="card-text text-muted mb-4">
                                 Occhiali da sole geometrici ZENOTTIC con lenti polarizzate. Montatura leggera e resistente, 
                                 protezione UV400 perfetta per uomo e donna. Design moderno e versatile.
                             </p>
@@ -226,8 +225,8 @@
             <!-- Secondo Prodotto -->
             <div class="row mt-4">
                 <div class="col-lg-8 mx-auto">
-                    <div class="bento-product-card card">
-                        <div class="card-body p-5">
+                    <div class="product-card product-card-accessori card">
+                        <div class="card-body p-4">
                             <span class="category-badge">
                                 <i class="fas fa-ring me-1"></i>Cintura Donna
                             </span>
@@ -243,7 +242,7 @@
                                 </div>
                             </div>
                             
-                            <p class="card-text text-dark mb-4">
+                            <p class="card-text text-muted mb-4">
                                 Cintura donna in pelle marrone VONMELLI, regolabile e classica. 
                                 Perfetta per completare qualsiasi outfit, elegante e versatile per uso quotidiano.
                             </p>
@@ -314,8 +313,8 @@
             <!-- Terzo Prodotto -->
             <div class="row mt-4">
                 <div class="col-lg-8 mx-auto">
-                    <div class="bento-product-card card">
-                        <div class="card-body p-5">
+                    <div class="product-card product-card-accessori card">
+                        <div class="card-body p-4">
                             <span class="category-badge">
                                 <i class="fas fa-gem me-1"></i>Bracciale Unisex
                             </span>
@@ -331,7 +330,7 @@
                                 </div>
                             </div>
                             
-                            <p class="card-text text-dark mb-4">
+                            <p class="card-text text-muted mb-4">
                                 Bracciale a catena FaithHeart in acciaio inossidabile, antiruggine e antiallergico. 
                                 Design elegante e resistente, perfetto per uomo e donna. Lunghezza regolabile.
                             </p>
@@ -402,8 +401,8 @@
             <!-- Quarto Prodotto -->
             <div class="row mt-4">
                 <div class="col-lg-8 mx-auto">
-                    <div class="bento-product-card card">
-                        <div class="card-body p-5">
+                    <div class="product-card product-card-accessori card">
+                        <div class="card-body p-4">
                             <span class="category-badge">
                                 <i class="fas fa-ring me-1"></i>Anello Unisex
                             </span>
@@ -419,7 +418,7 @@
                                 </div>
                             </div>
                             
-                            <p class="card-text text-dark mb-4">
+                            <p class="card-text text-muted mb-4">
                                 Anello sigillo personalizzabile in acciaio inossidabile, antiallergico e resistente. 
                                 Design elegante e moderno, perfetto per uomo e donna. Personalizzabile con incisione.
                             </p>
@@ -490,8 +489,8 @@
             <!-- Quinto Prodotto -->
             <div class="row mt-4">
                 <div class="col-lg-8 mx-auto">
-                    <div class="bento-product-card card">
-                        <div class="card-body p-5">
+                    <div class="product-card product-card-accessori card">
+                        <div class="card-body p-4">
                             <span class="category-badge">
                                 <i class="fas fa-clock me-1"></i>Orologio Unisex
                             </span>
@@ -507,7 +506,7 @@
                                 </div>
                             </div>
                             
-                            <p class="card-text text-dark mb-4">
+                            <p class="card-text text-muted mb-4">
                                 Orologio militare analogico con design robusto e cinturino in pelle. 
                                 Impermeabile 5ATM, quadrante grande e numeri ben visibili. Perfetto per attività all'aperto e uso quotidiano.
                             </p>
@@ -584,7 +583,7 @@
                 <i class="fas fa-shopping-cart me-2"></i>
                 Smart Choices Guide - La tua guida per acquisti intelligenti
             </p>
-            <p class="mb-0 text-dark small">
+            <p class="mb-0 text-muted small">
                 Partecipiamo al Programma Affiliazione Amazon EU. Quando acquisti tramite i nostri link, potremmo guadagnare una commissione.
             </p>
         </div>
@@ -595,11 +594,9 @@
         <!-- Bot AI Script - Must load combo-database before ai-chat-simple -->
     <script src="../bot/combo-database.js"></script>
     <script src="../bot/ai-chat-simple.js"></script>
-    <!-- Tracking Globale GA4 -->
-    <script src="../js/tracking-globale.js"></script>
     <!-- AI Chat Button -->
     <div id="ai-chat-button" onclick="toggleChat()">
-        <img src="../images/logo.png" alt="Smart Choices Guide" class="chat-button-logo">
+        <img src="../logo/logo.png" alt="Smart Choices Guide" class="chat-button-logo">
     </div>
     
     <!-- AI Chat Window -->
@@ -607,7 +604,7 @@
         <!-- Chat Header -->
         <div class="chat-header">
             <div class="header-content">
-                <img src="../images/logo.png" alt="Smart Choices Guide Logo" class="chat-bot-logo">
+                <img src="../logo/logo.png" alt="Smart Choices Guide Logo" class="chat-bot-logo">
                 <div>
                     <h5>Assistente Smart</h5>
                     <small>Online</small>
@@ -620,6 +617,7 @@
 
         <!-- Chat Messages -->
         <div id="chat-messages" class="chat-messages">
+            <!-- Messages will be loaded dynamically via JavaScript -->
         </div>
 
         <!-- Chat Input -->
@@ -631,7 +629,5 @@
         </div>
     </div>
 
-    <!-- Tracking Globale GA4 -->
-    <script src="../../js/tracking-globale.js"></script>
 </body>
 </html>
