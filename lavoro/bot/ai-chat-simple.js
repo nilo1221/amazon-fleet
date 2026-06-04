@@ -1227,84 +1227,84 @@ const catalogoProdotti = {
         categoria: "pc",
         descrizione: "Cuffie gaming comode con audio cristallino, perfette per lunghe sessioni.",
         link: "https://www.amazon.it/HyperX-Cloud-Cuffie-Gaming-Mobile/dp/B00SAYCVTQ?mcid=c659dba90f523f5ca09a82b25c56a3e6&hvadid=700813659493&hvpos=&hvnetw=g&hvrand=12981572348516290815&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-381707145357&hvocijid=12981572348516290815-B00SAYCXWG-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=4e8af65a5e14abb66fa2f74389a0d44c&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma io odio fermarmi a cercare bar o macchinette quando sono in concentrazione. Per questo mi porto dietro le cuffie HyperX Cloud: con queste ho risolto il problema concentrazione. Se ti va te le lascio qui:"
+        messaggio: "Lavoro concentrato? 🔥 Cuffie HyperX Cloud per non fermarti."
     },
     "cuffie_hyperx_ii": {
         nome: "HyperX Cloud II",
         categoria: "pc",
         descrizione: "Cuffie gaming 7.1 surround, audio cristallino, microfono rimovibile.",
         link: "https://www.amazon.it/HyperX-Cloud-Cuffie-Gaming-Mobile/dp/B00SAYCVTQ?mcid=c659dba90f523f5ca09a82b25c56a3e6&hvadid=700813659493&hvpos=&hvnetw=g&hvrand=12981572348516290815&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-381707145357&hvocijid=12981572348516290815-B00SAYCXWG-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=4e8af65a5e14abb66fa2f74389a0d44c&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma per gaming serio ho bisogno di cuffie 7.1 surround. Io uso queste HyperX Cloud II e mi trovo benissimo. Se ti va te le lascio qui:"
+        messaggio: "Gaming serio? 🔥 Cuffie 7.1 surround per audio immersivo."
     },
     "cuffie_razer_kraken": {
         nome: "Razer Kraken",
         categoria: "pc",
         descrizione: "Cuffie gaming 7.1 surround, audio potente, microfono cardioide.",
         link: "https://www.amazon.it/Razer-Kraken-microfono-cardioide-pieghevole/dp/B07RMSM477?th=1&linkCode=ll2&tag=l0c39-21&linkId=f02d101053afc051b80846a206ae3efd&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma per gaming serio ho bisogno di cuffie potenti. Io uso queste Razer Kraken e mi trovo benissimo. Se ti va te le lascio qui:"
+        messaggio: "Audio potente? 🔥 Razer Kraken per gaming immersivo."
     },
     "tastiera_logitech_g213": {
         nome: "Logitech G213 Prodigy Gaming",
         categoria: "pc",
         descrizione: "Tastiera gaming RGB impermeabile, perfetta per sessioni intense.",
         link: "https://www.amazon.it/Logitech-G213-Prodigy-Gaming-Keyboard/dp/B07W6GVS5C?dib=eyJ2IjoiMSJ9.P33rwpHtFStYlAmcuq8ohun-ifDR614PvwSIDIBQh0oAgru1yKp0Y4ZeLT0XvsiPQ8P0cX7o_6qWrVGgiDNnYWBzviSh0VAOnh4-JzWaNoZKw2iuoeZQTSAhK4uVjeH8nUlyVepU037eJKT-F2aRfcq_Xjrvek-MIaiGBQsBiYfqVmewz7FwpLcwa-hdKZjDXsi7adEsvJJi0N7-AogDKggo0z65WzIFrZQgOJ3M7I4.vvKiLH37KeEnrNxQv--zsVwioSFq2UVmqzvwau-htSc&dib_tag=se&qid=1778017873&refinements=p_36%3A490263031&s=videogames&sr=1-1&th=1&linkCode=ll2&tag=l0c39-21&linkId=99d86bc1745391ffca7e2205753338ef&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma per gaming serio ho bisogno di una tastiera RGB. Io uso questa Logitech G213 e mi trovo benissimo. Se ti va te la lascio qui:"
+        messaggio: "Tastiera RGB? 🔥 Logitech G213 per sessioni intense."
     },
     "tastiera_gxtrust": {
         nome: "GXTrust 871 Zora Meccanica",
         categoria: "pc",
         descrizione: "Tastiera meccanica gaming, retroilluminata e anti-ghosting.",
         link: "https://www.amazon.it/Trust-Tastiera-Meccanica-Retroilluminata-Anti-Ghosting/dp/B0DQVHP2WH?dib=eyJ2IjoiMSJ9.P33rwpHtFStYlAmcuq8ohun-ifDR614PvwSIDIBQh0oAgru1yKp0Y4ZeLT0XvsiPQ8P0cX7o_6qWrVGgiDNnYWBzviSh0VAOnh4-JzWaNoZKw2iuoeZQTSAhK4uVjeH8nUlyVepU037eJKT-F2aRfcq_Xjrvek-MIaiGBQsBiYfqVmewz7FwpLcwa-hdKZjDXsi7adEsvJJi0N7-AogDKggo0z65WzIFrZQgOJ3M7I4.vvKiLH37KeEnrNxQv--zsVwioSFq2UVmqzvwau-htSc&dib_tag=se&qid=1778017873&refinements=p_36%3A490263031&s=videogames&sr=1-3&th=1&linkCode=ll2&tag=l0c39-21&linkId=5a23551f7f06e758fe81a2f48323b9c2&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma per gaming serio ho bisogno di una tastiera meccanica. Io uso questa GXTrust e mi trovo benissimo. Se ti va te la lascio qui:"
+        messaggio: "Tastiera meccanica? 🔥 GXTrust per gaming serio."
     },
     "mouse_logitech_g502": {
         nome: "Logitech G502 Lightspeed Wireless",
         categoria: "pc",
         descrizione: "Mouse gaming wireless HERO 25K, 25.600 DPI, 11 pulsanti.",
         link: "https://www.amazon.it/Logitech-G502-Lightspeed-Wireless-Lightsync/dp/B07QKC4WWD?mcid=9805ea97ad553d298b869eafe699dd3d&hvadid=700813659358&hvpos=&hvnetw=g&hvrand=17366854546323660876&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-749874961600&hvocijid=17366854546323660876-B07QKC4WWD-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=53bc5a82916d77f9c8f0f70b400cbf3d&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma per gaming serio ho bisogno di un mouse wireless preciso. Io uso questo Logitech G502 e mi trovo benissimo. Se ti va te lo lascio qui:"
+        messaggio: "Mouse wireless preciso? 🔥 Logitech G502 per gaming."
     },
     "mouse_razer_deathadder": {
         nome: "Razer DeathAdder Essential",
         categoria: "pc",
         descrizione: "Mouse gaming 6.400 DPI, 5 pulsanti, ergonomico e preciso.",
         link: "https://www.amazon.it/Razer-DeathAdder-Essential-essenziale-sensore/dp/B092R5MCB3?mcid=b339f1fa54c632069402bc15331fe6e4&hvadid=700790378073&hvpos=&hvnetw=g&hvrand=17152808515394588193&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1363770907123&hvocijid=17152808515394588193-B092R5MCB3-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=1b32d94d6fc3b1cc750a1b8b4d8f4ca1&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma per gaming serio ho bisogno di un mouse ergonomico. Io uso questo Razer DeathAdder e mi trovo benissimo. Se ti va te lo lascio qui:"
+        messaggio: "Mouse ergonomico? 🔥 Razer DeathAdder per gaming."
     },
     "ssd_samsung": {
         nome: "Samsung 970 EVO Plus SSD 1TB NVMe M.2",
         categoria: "pc",
         descrizione: "SSD NVMe 1TB, velocità 3.500 MB/s lettura, perfetto per gaming.",
         link: "https://www.amazon.it/Samsung-MZ-V7S1T0BW-Unit%C3%A0-PLUS-Arancione/dp/B07MBQPQ62?th=1&linkCode=ll2&tag=l0c39-21&linkId=b763f6eb809741631bebb537d1af0782&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma per gaming serio ho bisogno di un SSD veloce. Io uso questo Samsung 970 EVO e mi trovo benissimo. Se ti va te lo lascio qui:"
+        messaggio: "SSD veloce? 🔥 Samsung 970 EVO per gaming."
     },
     "ssd_wd_black": {
         nome: "WD Black SN850X SSD 1TB NVMe M.2",
         categoria: "pc",
         descrizione: "SSD NVMe Gen 4 1TB, 7.300 MB/s lettura, per PS5 e PC gaming.",
         link: "https://www.amazon.it/WD_BLACK-Interno-velocit%C3%A0-scrittura-Prestazioni/dp/B0B7CKVCCV?mcid=888d8b4ce8b03986ab3849d66f1062e7&hvadid=700902625141&hvpos=&hvnetw=g&hvrand=10457417852729816499&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1729729168453&hvocijid=10457417852729816499-B0B7CKVCCV-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=345694116578e5d6a86f5071dafa4eff&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma per gaming serio ho bisogno di un SSD ultra veloce. Io uso questo WD Black SN850X e mi trovo benissimo. Se ti va te lo lascio qui:"
+        messaggio: "SSD ultra veloce? 🔥 WD Black SN850X per PS5 e PC."
     },
     "router_asus": {
         nome: "ASUS GT-AXE11000",
         categoria: "pc",
         descrizione: "Router gaming tri-band 11000 Mbps, WiFi 6E, senza lag.",
         link: "https://www.amazon.it/ASUS-GT-AXE11000-Ethernet-Sicurezza-Dispositivi/dp/B09Q67CYMC?mcid=621c1ee6a4033ed5bb2b31db55a5e9ba&hvadid=700813659490&hvpos=&hvnetw=g&hvrand=3222656381519133428&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1627260007868&hvocijid=3222656381519133428-B09Q67CYMC-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=9e0f061013ba7c4c032be94ad458d3d1&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma per gaming serio ho bisogno di un router senza lag. Io uso questo ASUS GT-AXE11000 e mi trovo benissimo. Se ti va te lo lascio qui:"
+        messaggio: "Router senza lag? 🔥 ASUS GT-AXE11000 per gaming."
     },
     "monitor_asus_freesync": {
         nome: "ASUS FreeSync",
         categoria: "pc",
         descrizione: "Monitor 27\" 1440p 240Hz, FreeSync Premium, per gaming competitivo.",
         link: "https://www.amazon.it/ASUS-FreeSync-Overdrive-variabile-DisplayHDR/dp/B0BXY85B9F?th=1&linkCode=ll2&tag=l0c39-21&linkId=5dcd7bed07961bba92290e9f07ada8d2&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma per gaming competitivo ho bisogno di un monitor 240Hz. Io uso questo ASUS FreeSync e mi trovo benissimo. Se ti va te lo lascio qui:"
+        messaggio: "Monitor 240Hz? 🔥 ASUS FreeSync per gaming competitivo."
     },
     "monitor_lg_ultagear": {
         nome: "LG UltraGear",
         categoria: "pc",
         descrizione: "Monitor 27\" 1440p 165Hz, G-Sync Compatible, IPS perfetto.",
         link: "https://www.amazon.it/LG-UltraGear-2560x1440-Compatible-FreeSync/dp/B0CZ3KVP23?mcid=acf44f5271d63fb68c4a82171d39808c&hvadid=700813659487&hvpos=&hvnetw=g&hvrand=7332863540818994681&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2362347970506&hvocijid=7332863540818994681-B0CZ3KVP23-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=f715360a17aa11adfadda1ccbf2ac3f4&ref=_as_li_ss_tl",
-        messaggio: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma per gaming serio ho bisogno di un monitor IPS. Io uso questo LG UltraGear e mi trovo benissimo. Se ti va te lo lascio qui:"
+        messaggio: "Monitor IPS? 🔥 LG UltraGear per gaming."
     },
     // OUTDOOR
     "power_bank_nestout": {
@@ -1312,77 +1312,77 @@ const catalogoProdotti = {
         categoria: "outdoor",
         descrizione: "Power bank outdoor waterproof e shockproof, perfetto per avventure.",
         link: "https://www.amazon.it/NESTOUT-Portable-Charging-Waterproof-Shockproof/dp/B0CVN9Y1BF?crid=27OTJENPHN7S1&dib=eyJ2IjoiMSJ9.2Ko-s3mEQFXxZLkNpOB--f2j4GJNKhavBVb1i0-xpi9Aj5kiJVbcIH3GVzZvUlw_t8ziUz5ECm0yYAw8cl9PXnRr-7iCY-ZZJvQTUWPkYOZ3XcypoL8HmROz3re_m4gESN-SG2an3YJoeoTZJ5siMmhcVhW_9E02T4YiYDGBlzc79VnJLpOikOo_NrFJBNmsg9EXOoD8aL4tz9P2kVjjQIXl9sYDw0SbAJQaHXqYKXbCb5r8QYfW39u2DZksg2YP7muRg-dvZJw9hQnrVJNMvECfqRpYqRXokBwr5l1_nQM.V_ZKxZgZQAYezySRzfxL-_RDZBC937cofno97LCKNug&dib_tag=se&keywords=outdoor&qid=1777984536&sprefix=outdo%2Caps%2C331&sr=8-3-spons&aref=WtJzpiaozM&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=95f4519ecc67b60cf166ac6e1a0ed1ce&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio avere sempre batteria. Io uso questo power bank e mi trovo benissimo. Se ti va te lo lascio qui:"
+        messaggio: "Campeggio? 🌲 Power bank waterproof per avventure."
     },
     "gilet_multitasca": {
         nome: "Cexiakong Gilett da Uomo Multitasca",
         categoria: "outdoor",
         descrizione: "Gilet multitasca traspirante, perfetto per attività all'aperto.",
         link: "https://www.amazon.it/Cexiakong-attivit%C3%A0-allaperto-traspirante-multi-tasca/dp/B0DKBLPWM2?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2KRSG8RTIX75I&dib=eyJ2IjoiMSJ9.hlx1tAzqG-EBtszNA8zKT5W31Mi_GxzyZkEY6vlCTi3uXfcsQlJj5IAAqbaq6k0JA9HoPvm3poY6SY5_B8vTxRlV1uYePg0efO3dgV6afXHIuzupA0CQQU3WMlsbBqYz1Gy3v8IlwXG46EQeeMdpm8fBtVs-WLtyydQ9QK4uve1Dt43mm3uCw12y0Fz-FWczA9GUwyhlzzyIaECa1QpU10ruVWPwPWgzxBtDfw_1tMm0j-AsdWeRxxq2vt4RXx5HAdzklPaFtQucESvXPaX3tpF468OshrJa4PB_wfo3aMg.TwuT6qKsuzwQGEuD7T03KQ51w_K-M_jGo4BJPH7jfEU&dib_tag=se&keywords=Il%2BGilet%2BMultitasche%2Belegante&qid=1778012360&sprefix=il%2Bgilet%2Bmultitasche%2Belegante%2Caps%2C129&sr=8-27&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=3761583359212b50ac2b9b721b655189&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio avere tutto a portata di mano. Io uso questo gilet e mi trovo benissimo. Se ti va te lo lascio qui:"
+        messaggio: "Tutto a portata di mano? 🌲 Gilet multitasca per outdoor."
     },
     "antizanzare": {
         nome: "Antizanzare Elettrica per Uccisione",
         categoria: "outdoor",
         descrizione: "Antizanzare elettrica, elimina zanzare senza prodotti chimici.",
         link: "https://www.amazon.it/Antizanzare-Elettrica-Uccisione-Repellente-repellente/dp/B0GS5CVTLK?pd_rd_w=JvxwP&content-id=amzn1.sym.bf16da9e-571e-4ac0-b567-e688486f9ff2&pf_rd_p=bf16da9e-571e-4ac0-b567-e688486f9ff2&pf_rd_r=SYPDDR78EZ01RZK482XP&pd_rd_wg=MgY5W&pd_rd_r=bf979260-1ed0-44e0-980e-667fc4259a47&pd_rd_i=B0GS5CVTLK&psc=1&linkCode=ll2&tag=l0c39-21&linkId=dacaa8bb5da82c4ddfc776b580a06fe4&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura odio le zanzare. Io uso questo antizanzare e mi trovo benissimo. Se ti va te lo lascio qui:"
+        messaggio: "Zanzare fastidiose? 🌲 Antizanzare elettrica senza prodotti chimici."
     },
     "tenda_fe_active": {
         nome: "FE Active Tenda Campeggio con Zanzariera",
         categoria: "outdoor",
         descrizione: "Tenda campeggio con zanzariera, impermeabile e resistente.",
         link: "https://www.amazon.it/FE-Active-zanzariera-Impermeabile-Escursionismo/dp/B07QV3MQTT?&linkCode=ll2&tag=l0c39-21&linkId=aab7aeba98e2fe34f5bbfd458b27fb66&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio dormire senza zanzare. Io uso questa tenda e mi trovo benissimo. Se ti va te la lascio qui:"
+        messaggio: "Dormire senza zanzare? 🌲 Tenda con zanzariera per campeggio."
     },
     "tenda_outsunny": {
         nome: "Outsunny Tenda Campeggio Impermeabile",
         categoria: "outdoor",
         descrizione: "Tenda campeggio impermeabile 100x100x185cm, ingresso poliestere.",
         link: "https://www.amazon.it/Outsunny-Impermeabile-Ingresso-Poliestere-100x100x185/dp/B0DZ5PWRJC?dib=eyJ2IjoiMSJ9.eJXW-mMKMgt9Dz0AtNkpAHiP5C6H5var-kkGjzsXf0CBwupWgqCKnSQ6GTdAV-9sDZflnoWnwUuW0pHRSHvgezX8-CSt1IL5g18kT8hoOHpMBVnxSX2lnoyKrUunZfRb-t3ZJp9GEA27ag7p0pmHUvdjeatzzdSUQUyl8ygDQpiPmyNUQDppvvHXbOSOLv6hmq6tbC8SQbxdmLgrVBcUsgc_6IRBy8MhMoaQ-ChkhxUaMtOTzw3XZdh3MOe4xjlz6QZMczle07BDlLftj0bveZqHcPiM9ZqDa8fXaYZ4ZWs.a4Fofu3z5Rz4g2SB1oUX0ersit5nAvMZiqtTjSnX6rE&dib_tag=se&qid=1778016285&refinements=p_36%3A490263031&s=sports&sr=1-4&th=1&linkCode=ll2&tag=l0c39-21&linkId=19a5b5c1001c7f4e7d11da63bb29cf14&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio una tenda impermeabile. Io uso questa tenda e mi trovo benissimo. Se ti va te la lascio qui:"
+        messaggio: "Tenda impermeabile? 🌲 Outsunny per campeggio sicuro."
     },
     "tenda_trizand": {
         nome: "TRIZAND Tenda Spiaggia Impermeabile",
         categoria: "outdoor",
         descrizione: "Tenda spiaggia impermeabile, facile trasporto e montaggio.",
         link: "https://www.amazon.it/TRIZAND-spiaggia-trasporto-impermeabile-23492/dp/B0CTPTR99X?pd_rd_w=metuQ&content-id=amzn1.sym.3a84fb8b-d4d6-4483-8fd7-0000cb59ea5a&pf_rd_p=3a84fb8b-d4d6-4483-8fd7-0000cb59ea5a&pf_rd_r=GGEPG1FNR1KN3JY8PSWJ&pd_rd_wg=I3y7l&pd_rd_r=22330237-b6e0-4094-8318-91b0a5a9328f&pd_rd_i=B0CTPTR99X&linkCode=ll2&tag=l0c39-21&linkId=4940199de276b89a5b47db92baef10dd&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio una tenda facile da montare. Io uso questa tenda e mi trovo benissimo. Se ti va te la lascio qui:"
+        messaggio: "Facile da montare? 🌲 Tenda TRIZAND per spiaggia."
     },
     "tenda_doccia": {
         nome: "Tenda Doccia Solare Portatile",
         categoria: "outdoor",
         descrizione: "Tenda doccia solare portatile, impermeabile e antivento.",
         link: "https://www.amazon.it/portatile-impermeabile-antivento-resistente-giardino/dp/B0G4VNFR3B?pd_rd_w=metuQ&content-id=amzn1.sym.3a84fb8b-d4d6-4483-8fd7-0000cb59ea5a&pf_rd_p=3a84fb8b-d4d6-4483-8fd7-0000cb59ea5a&pf_rd_r=GGEPG1FNR1KN3JY8PSWJ&pd_rd_wg=I3y7l&pd_rd_r=22330237-b6e0-4094-8318-91b0a5a9328f&pd_rd_i=B0G4VNFR3B&linkCode=ll2&tag=l0c39-21&linkId=dcc9659e50ea29cef8af6c01833e8f22&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio privacy per la doccia. Io uso questa tenda e mi trovo benissimo. Se ti va te la lascio qui:"
+        messaggio: "Privacy per la doccia? 🌲 Tenda solare portatile."
     },
     "tenda_camping": {
         nome: "Brunner Tenda Campeggio 3000",
         categoria: "outdoor",
         descrizione: "Tenda robusta per il campeggio, resiste a ogni avventura.",
         link: "https://www.amazon.it/Brunner-Tenda-adatta-Camping-3000/dp/B07NZSV33G?pd_rd_w=SrERZ&content-id=amzn1.sym.424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_p=424a711c-7818-425a-9fb0-9a3d8996ff54&pf_rd_r=GGEPG1FNR1KN3JY8PSWJ&pd_rd_wg=I3y7l&pd_rd_r=22330237-b6e0-4094-8318-91b0a5a9328f&pd_rd_i=B07NZSV33G&linkCode=ll2&tag=l0c39-21&linkId=e8c40ee5fe6fd040865a21fd39e20126&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio avere tutto pronto. Io uso questa tenda Brunner e mi trovo benissimo. Se ti va te la lascio qui:"
+        messaggio: "Tutto pronto per l'avventura? 🌲 Tenda Brunner robusta."
     },
     "scarponi_columbia": {
         nome: "Columbia Crestwood Mid Waterproof Scarponi da Trekking Uomo",
         categoria: "outdoor",
         descrizione: "Scarponi trekking waterproof Columbia, suola aderente per terreni difficili.",
         link: "https://www.amazon.it/dp/B0CLW1SNHJ?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=f2a6c60efc871ba73272061aa2dd784c&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio scarpe resistenti. Io uso questi scarponi e mi trovo benissimo. Se ti va te li lascio qui:"
+        messaggio: "Scarpe resistenti? 🌲 Scarponi Columbia per trekking."
     },
     "tenda_fe_beach": {
         nome: "FE Active Beach Tent Family Beach Parasol",
         categoria: "outdoor",
         descrizione: "Tenda spiaggia family con zanzariera, perfetta per la spiaggia.",
         link: "https://www.amazon.it/FE-Active-zanzariera-Impermeabile-Escursionismo/dp/B084TR7CGR?th=1&linkCode=ll2&tag=l0c39-21&linkId=70ef843e99c19a5acc6b77aed0e3f833&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio protezione dal sole. Io uso questa tenda e mi trovo benissimo. Se ti va te la lascio qui:"
+        messaggio: "Protezione dal sole? 🌲 Tenda spiaggia FE Active."
     },
     "barbecue_auauraintt": {
         nome: "Auauraintt Portable Charcoal BBQ Folding",
         categoria: "outdoor",
         descrizione: "Barbecue portatile pieghevole, perfetto per campeggio.",
         link: "https://www.amazon.it/Auauraintt-Barbecue-Portatile-pieghevole-campeggio/dp/B0D5CM7NR8?&linkCode=ll2&tag=l0c39-21&linkId=5642e8c53d343f3cfa433e868b6cbe3b&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai in campeggio! 🌲 Non so tu, ma quando vado in natura voglio cucinare all'aperto. Io uso questo barbecue e mi trovo benissimo. Se ti va te lo lascio qui:"
+        messaggio: "Cucinare all'aperto? 🌲 Barbecue portatile Auauraintt."
     },
     // CALDO (Condizionatori e Ventilatori)
     "condizionatore_portatile": {
@@ -1390,35 +1390,35 @@ const catalogoProdotti = {
         categoria: "caldo",
         descrizione: "Condizionatore portatile 3-in-1 con raffreddamento, ventilatore e umidificatore.",
         link: "https://www.amazon.it/dp/B0D3PP64JS?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=HPJ8v9XaEK&linkCode=ll2&tag=l0c39-21&linkId=9f8aac727b8af31fe8eb8ae08e38ba65&ref=_as_li_ss_tl",
-        messaggio: "Che giornata calda! ❄️ Non so tu, ma io odio sudare quando è così caldo. Per questo uso il condizionatore portatile 3-in-1: con questo ho risolto il problema temperatura. Se ti va te lo lascio qui, è una vera salvezza in questi giorni."
+        messaggio: "Caldo insopportabile? ❄️ Condizionatore portatile 3-in-1."
     },
     "condizionatore_evaporativo": {
         nome: "Condizionatore Portatile Evaporativo 4-in-1",
         categoria: "caldo",
         descrizione: "Condizionatore portatile evaporativo 4-in-1 con raffreddamento a ghiaccio.",
         link: "https://www.amazon.it/dp/B0D2GPMDTL?psc=1&aref=XLhMSgF8DX&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk&linkCode=ll2&tag=l0c39-21&linkId=55fd5b24fbbdba1151431f468264766f&ref=_as_li_ss_tl",
-        messaggio: "Che giornata calda! ❄️ Non so tu, ma io odio sudare quando è così caldo. Per questo uso il condizionatore evaporativo: con questo ho risolto il problema temperatura. Se ti va te lo lascio qui, è una vera salvezza in questi giorni."
+        messaggio: "Raffreddamento evaporativo? ❄️ Condizionatore 4-in-1 con ghiaccio."
     },
     "ventilatore_tavolo_silenzioso": {
         nome: "Ventilatore da Tavolo Silenzioso Ricaricabile",
         categoria: "caldo",
         descrizione: "Ventilatore da tavolo silenzioso ricaricabile, pieghevole con telecomando.",
         link: "https://www.amazon.it/Ventilatore-Silenzioso-Ricaricabile-Pieghevole-Telecomando/dp/B0DZ5ZB59N?th=1&linkCode=ll2&tag=l0c39-21&linkId=e5e746f4698bf8950b8c872ed5e18a5f&ref=_as_li_ss_tl",
-        messaggio: "Che giornata calda! ❄️ Non so tu, ma io odio sudare quando è così caldo. Per questo uso questo ventilatore silenzioso: con questo ho risolto il problema temperatura. Se ti va te lo lascio qui, è una vera salvezza in questi giorni."
+        messaggio: "Ventilatore silenzioso? ❄️ Pieghevole con telecomando."
     },
     "ventilatore_tavolo_4vel": {
         nome: "Ventilatore da Tavolo 4 Velocità Rotazione 330°",
         categoria: "caldo",
         descrizione: "Ventilatore da tavolo 4 velocità con rotazione 330°, ricaricabile.",
         link: "https://www.amazon.it/Ventilator-Silenzioso-Ventilatori-Ricaricabile-Rotazione/dp/B0CP27G3V5?th=1&linkCode=ll2&tag=l0c39-21&linkId=d36fd176303a9&ref=_as_li_ss_tl",
-        messaggio: "Che giornata calda! ❄️ Non so tu, ma io odio sudare quando è così caldo. Per questo uso questo ventilatore 4 velocità: con questo ho risolto il problema temperatura. Se ti va te lo lascio qui, è una vera salvezza in questi giorni."
+        messaggio: "Ventilatore 4 velocità? ❄️ Rotazione 330° ricaricabile."
     },
     "ventilatore_tavolo_ocoopa": {
         nome: "Ventilatore da Tavolo OCOOPA USB",
         categoria: "caldo",
         descrizione: "Ventilatore da tavolo OCOOPA USB, silenzioso con rotazione automatica.",
         link: "https://www.amazon.it/Ventilator-silenzioso-ventilatore-regolabile-automatica/dp/B0BTGXCQ2Y?&linkCode=ll2&tag=l0c39-21&linkId=f3332b76d1e8539b8d1563ac8609d0b4&ref=_as_li_ss_tl",
-        messaggio: "Che giornata calda! ❄️ Non so tu, ma io odio sudare quando è così caldo. Per questo uso questo ventilatore USB: con questo ho risolto il problema temperatura. Se ti va te lo lascio qui, è una vera salvezza in questi giorni."
+        messaggio: "Ventilatore USB? ❄️ Silenzioso con rotazione automatica."
     }
 };
 
@@ -2723,7 +2723,7 @@ function showWelcomeMessage() {
     
     // Show "Pausa Ristoro 🥤" immediately after welcome (Strategy: break the ice with low-cost impulse purchase)
     setTimeout(() => {
-        addMessage("Ti stai godendo la navigazione? 😊 Ecco i prodotti preferiti degli altri utenti per una pausa veloce mentre esplori le altre categorie. La sessione si fa intensa? Recupera le energie con i nostri must-have per la pausa! <a href='https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl' target='_blank' style='color: #007bff; text-decoration: none;'>⚡ Powerade Sport Drink</a> | <a href='https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl' target='_blank' style='color: #007bff; text-decoration: none;'>🥤 Pepsi Max</a>", 'bot');
+        addMessage("Pausa veloce? 😊 <a href='https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl' target='_blank' style='color: #007bff; text-decoration: none;'>⚡ Powerade</a> | <a href='https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl' target='_blank' style='color: #007bff; text-decoration: none;'>🥤 Pepsi Max</a>", 'bot');
     }, 400);
     
     // Check for seasonal occasion (no personal occasions like birthdays)
