@@ -1,6 +1,55 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <style>
+        /* Amazon Disclaimer Banner Styles */
+        .amazon-disclaimer-banner {
+            background: linear-gradient(135deg, #FF9900 0%, #FFAD33 100%);
+            color: #000;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            border-bottom: 3px solid #E88B00;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1000;
+        }
+
+        .disclaimer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .disclaimer-icon {
+            font-size: 18px;
+            color: #000;
+        }
+
+        .disclaimer-text {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .amazon-disclaimer-banner {
+                padding: 10px 15px;
+                font-size: 12px;
+            }
+
+            .disclaimer-content {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .disclaimer-icon {
+                font-size: 16px;
+            }
+        }
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy & Cookie Policy - Smart Choices Guide | Protezione Dati Personali</title>
@@ -33,6 +82,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Navigazione principale">
         <div class="container">
@@ -270,7 +320,14 @@
             <p class="text-muted small mt-3 mb-0">
                 © 2026 Smart Choices Guide. Tutti i diritti riservati.
             </p>
-        </div>
+                    
+            <!-- Amazon Affiliate Disclaimer -->
+            <div class="mt-3">
+                <div class="amazon-disclaimer bg-dark bg-opacity-50 p-3 rounded border border-secondary">
+                    <p class="mb-2 text-warning fw-bold"><i class="fab fa-amazon me-2"></i>Disclaimer Amazon Associates</p>
+                    <p class="text-white-50 mb-0">In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche. Qualsiasi prezzo e informazioni sulla disponibilità visualizzati sul sito Amazon al momento dell'acquisto si applicheranno all'acquisto di questo prodotto. Questo sito è partecipante al Programma Affiliazione Amazon EU, un programma di affiliazione che permette ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.</p>
+                </div>
+            </div></div>
     </footer>
 
     <!-- Bootstrap JS -->

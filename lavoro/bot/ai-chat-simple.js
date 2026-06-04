@@ -57,11 +57,11 @@ function getPersonalizedGreeting() {
     const totalVisits = Object.values(userPreferences.visits || {}).reduce((a, b) => a + b, 0);
     
     if (totalVisits === 0) {
-        return 'Ehi ciao! 👋 Stavo giusto guardando questi prodotti su Amazon, ci sono un sacco di cose interessanti. Dimmi, cosa ti serve oggi? Se mi dici cosa stai cercando, ti faccio vedere quello che secondo me vale la pena.';
+        return '👋 Ciao! Dimmi cosa cerchi, ti aiuto a trovare i prodotti migliori.';
     } else if (totalVisits < 3) {
-        return 'Ehi bentornato! 👋 È bello rivederti. Vuoi continuare a guardare dove avevi lasciato o cerchi qualcosa di nuovo oggi?';
+        return '👋 Bentornato! Cerchi qualcosa di nuovo?';
     } else {
-        return 'Ehi bentornato! 👋 Ti conosco già fammi indovinare... vuoi vedere i prodotti che ti hanno interessato di più l\'altra volta?';
+        return '👋 Bentornato! Vuoi vedere i prodotti che ti hanno interessato?';
     }
 }
 
@@ -628,6 +628,42 @@ const NicheDatabase = {
                 link: "https://www.amazon.it/IBK-Bicicletta-Mountain-Alluminio-Ammortizzata/dp/B08HWGW7SG?dib=eyJ2IjoiMSJ9.qDw6yrJXU1txWqQl1ewOnWLXIasRXObMGYNw4OLmadyFuZBqskI6X3xnEoMd80oT2RpkWO5IN_fIk0Hn5OEREkXDIw4jhCEeLObcZLlEIybXRjt06fitE7vByulRW82xT1N9YHSl-kpJPE6TEJi0nwcF_Y2vQK8F-1Ht7iMIuYxXE1cagiKEKcDxyaQolowqpnV20GtPo57I77oqju7VC8qO1ikICc2lOXH8alnfe0Mp80jT0U5oxcgQ8Xbih1hn5l0Zf-C1-77mr4gK9bjrNrSmTnWjZuxr2OrW1nC3XD8.bdKRfArYhgK-HAkPkG85J-yv4Xr3WSZIG9QuiyiKB_w&dib_tag=se&keywords=bici&qid=1779723129&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&aref=OaqTfWA1fP&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=59626a720eeaee58a3db43e048bbaaea&ref=_as_li_ss_tl"
             }
         ]
+    },
+    "abiti-ciclismo": {
+        name: "Abiti Ciclismo",
+        tags: ["ciclismo", "abbigliamento ciclismo", "maglia ciclismo", "tuta ciclismo", "pantaloni ciclismo", "salopette", "mtb", "bici", "bicicletta", "pedalare", "corsa", "abbigliamento sportivo", "maglia", "pantaloncini", "gel", "imbottito", "traspirante", "asciugatura rapida", "lycra", "polsini", "compressione", "anatomica", "stampa digitale", "3d", "cotone", "casual"],
+        url: "/abiti-ciclismo/index.html",
+        personality: "sporty",
+        valueProp: "Ho selezionato i migliori abbigliamenti per il ciclismo. Tessuti traspiranti, vestibilità anatomica e comfort sono i fattori chiave per le tue pedalate.",
+        song: "Born to Be Wild - Steppenwolf",
+        songLinkSpotify: "https://open.spotify.com/track/6RdPqkMv8qDqDqDqDqDqDq",
+        songLinkAmazon: "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl",
+        topProducts: [
+            {
+                name: "Tuta da ciclismo estiva da uomo",
+                description: "Tuta estiva con maglia e pantaloncini imbottiti in gel, abbigliamento sportivo ad asciugatura rapida",
+                icon: "fa-tshirt",
+                link: "https://www.amazon.it/Ciclismo-Abbigliamento-Pantaloni-Salopette-Asciugatura/dp/B09162QDBK?&linkCode=ll2&tag=l0c39-21&linkId=1d338d4295de711afa26fff4ee54bc8f&ref_=as_li_ss_tl"
+            },
+            {
+                name: "Maglia da ciclismo polsini Lycra",
+                description: "Maglia da ciclismo da uomo a maniche corte con polsini in Lycra, tessuto traspirante",
+                icon: "fa-tshirt",
+                link: "https://www.amazon.it/Maglia-ciclismo-maniche-corte-polsini/dp/B085M8X5GX?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=27efc0182ae1dfe38346ee64f2e99c28&ref_=as_li_ss_tl"
+            },
+            {
+                name: "Topactive Maglia Ciclismo",
+                description: "Maglia ciclismo uomo manica corta, abbigliamento ciclismo compressione traspirante",
+                icon: "fa-tshirt",
+                link: "https://www.amazon.it/Topactive-Maglia-Ciclismo-Mailote-Abbigliamento/dp/B09N1QH53N?&linkCode=ll2&tag=l0c39-21&linkId=7e269ea0c53ff540b05fb43ebe95e68f&ref_=as_li_ss_tl"
+            },
+            {
+                name: "Maglia stampa digitale 3D",
+                description: "Maglia ciclismo estivo uomo donna, stampa digitale 3D, cotone traspirante casual",
+                icon: "fa-tshirt",
+                link: "https://www.amazon.it/Maglia-ciclismo-maniche-estivo-digitale/dp/B0C5C977WP?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=e61651086f1ca6fd7fae0975833d18f2&ref_=as_li_ss_tl"
+            }
+        ]
     }
 };
 
@@ -656,98 +692,98 @@ const catalogoProdotti = {
         categoria: "mare",
         descrizione: "Maschera snorkeling di qualità per esplorare il fondo marino.",
         link: "https://www.amazon.it/dp/B0CTTXVDR4?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=9ba3aa7428a5fffd241eadd36ac7c20b&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia amo fare snorkeling. Io uso questa maschera e mi trovo benissimo. Se ti va te la passo:"
+        messaggio: "🌊 Maschera snorkeling consigliata:"
     },
     "ombrellone_mare": {
         nome: "Joy Summer Ombrellone Spiaggia Cabina Ø 200 BLU",
         categoria: "mare",
         descrizione: "Ombrellone cabina perfetto per il mare, ti protegge dal sole con stile.",
         link: "https://www.amazon.it/Joy-Summer-Ombrellone-Spiaggia-Cabina/dp/B00W1KAQWY?&linkCode=ll2&tag=l0c39-21&linkId=94666e812e9a7fa1ccb012eb0fd999cc&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio stare all'ombra senza problemi. Io uso questo ombrellone e mi trovo benissimo. Se ti va te lo passo:"
+        messaggio: "🌊 Ombrellone consigliato:"
     },
     "ombrellone_bakaji": {
         nome: "BAKAJI Ombrellone da Mare Spiaggia Giardino 210 cm",
         categoria: "mare",
         descrizione: "Ombrellone robusto in alluminio, perfetto per mare e giardino.",
         link: "https://www.amazon.it/BAKAJI-Ombrellone-Spiaggia-Alluminio-Rivestimento/dp/B07N3Z9S2J?th=1&linkCode=ll2&tag=l0c39-21&linkId=366952ed004011d96d82936721059d2a&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio stare all'ombra senza problemi. Io uso questo ombrellone e mi trovo benissimo. Se ti va te lo passo:"
+        messaggio: "🌊 Ombrellone consigliato:"
     },
     "ombrellone_inclinabile": {
         nome: "Ombrellone da Spiaggia Inclinabile & Altezza Regolabile",
         categoria: "mare",
         descrizione: "Ombrellone inclinabile con altezza regolabile, massima protezione solare.",
         link: "https://www.amazon.it/Ombrellone-Inclinabile-Regolabile-Protezione-Traspirante/dp/B09BKWTXYV?th=1&linkCode=ll2&tag=l0c39-21&linkId=4e755d1cc26cecdb3f762174a95f670a&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio stare all'ombra senza problemi. Io uso questo ombrellone e mi trovo benissimo. Se ti va te lo passo:"
+        messaggio: "🌊 Ombrellone consigliato:"
     },
     "telo_mare_fitflip": {
         nome: "Fit-Flip Telo Mare Microfibra Marino Bianco",
         categoria: "mare",
         descrizione: "Telo mare in microfibra, asciuga velocemente e non trattiene sabbia.",
         link: "https://www.amazon.it/Fit-Flip-Telo-Mare-microfibra-marino-bianco/dp/B09KNMTKPS?th=1&linkCode=ll2&tag=l0c39-21&linkId=b2c56b41c9500ff261d9cde21e931b3f&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio un telo che asciuga in fretta. Io uso questo e mi trovo benissimo. Se ti va te lo passo:"
+        messaggio: "🌊 Telo mare consigliato:"
     },
     "telo_mare_lumisyne": {
         nome: "LumiSyne UPF50+ Microfibre Beach Towel",
         categoria: "mare",
         descrizione: "Telo mare UPF50+ in microfibra reversibile, protezione solare massima.",
         link: "https://www.amazon.it/LumiSyne-Microfibra-Reversibile-Asciugamano-Asciugatura/dp/B0B6FF14YK?th=1&linkCode=ll2&tag=l0c39-21&linkId=791f763589045a9d2044c05162e4f69e&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio un telo che asciuga in fretta. Io uso questo e mi trovo benissimo. Se ti va te lo passo:"
+        messaggio: "🌊 Telo mare consigliato:"
     },
     "telo_mare_sandproof": {
         nome: "Microfibre Beach Towel Sand Proof",
         categoria: "mare",
         descrizione: "Telo mare antisabbia in microfibra, ultraleggero e asciuga subito.",
         link: "https://www.amazon.it/Microfibra-Antisabbia-Asciugatura-Ultraleggero-Asciugamano/dp/B0C3GWH7QV?&linkCode=ll2&tag=l0c39-21&linkId=1305caaaed850ca077a8c6bd6c86890e&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio un telo che asciuga in fretta. Io uso questo e mi trovo benissimo. Se ti va te lo passo:"
+        messaggio: "🌊 Telo mare consigliato:"
     },
     "scarpe_acqua_water": {
         nome: "Water Shoes Beach Barefoot Aqua Sneakers Quick-Dry",
         categoria: "mare",
         descrizione: "Scarpe acqua barefoot, asciugano veloce e proteggono i piedi.",
         link: "https://www.amazon.it/Spiaggia-Escursione-Quick-Dry-Camminare-Arrampicare/dp/B0C5BZV1DC?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=2cc1af0df4347a31aa8e6851691157bd&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio scarpe comode per camminare sugli scogli. Io uso queste e mi trovo benissimo. Se ti va te le passo:"
+        messaggio: "🌊 Scarpe acqua consigliate:"
     },
     "scarpe_acqua_cressi": {
         nome: "Cressi Water Shoes Scarpette Acquatiche",
         categoria: "mare",
         descrizione: "Scarpette acquatiche Cressi, perfette per spiaggia e piscina.",
         link: "https://www.amazon.it/Cressi-Scarpette-Acquatici-Bambini-Transparente/dp/B000O6AJNI?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=c9803e478a795e32eb84c529bfd188c2&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio scarpe comode per camminare sugli scogli. Io uso queste e mi trovo benissimo. Se ti va te le passo:"
+        messaggio: "🌊 Scarpe acqua consigliate:"
     },
     "scarpe_acqua_seac": {
         nome: "Seac Reef Water Shoes Scarpe da Scoglio",
         categoria: "mare",
         descrizione: "Scarpe da scoglio Seac, asciugatura rapida per spiaggia e piscina.",
         link: "https://www.amazon.it/Scoglio-Bambini-Asciugatura-Spiaggia-Piscina/dp/B0G24PM5CT?th=1&linkCode=ll2&tag=l0c39-21&linkId=ba6a2b18969424bda9c4c44f9219f4d5&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio scarpe comode per camminare sugli scogli. Io uso queste e mi trovo benissimo. Se ti va te le passo:"
+        messaggio: "🌊 Scarpe acqua consigliate:"
     },
     "speaker_waterproof": {
         nome: "HAISSKY Bluetooth Waterproof Shower Speaker",
         categoria: "mare",
         descrizione: "Speaker Bluetooth impermeabile, perfetto per doccia e spiaggia.",
         link: "https://www.amazon.it/Altoparlante-Impermeabile-Doccia-Wireless-vivavoce-portatile-Compatabile/dp/B01MCUMFQ5?&linkCode=ll2&tag=l0c39-21&linkId=2bf3e3490b4bdd952365c8ea0d77529a&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio musica senza preoccuparmi dell'acqua. Io uso questo speaker e mi trovo benissimo. Se ti va te lo passo:"
+        messaggio: "🌊 Speaker waterproof consigliato:"
     },
     "cooler_bag_cool": {
         nome: "Cool Factory 240355 Uniflame Cooler Bag 22 Litres",
         categoria: "mare",
         descrizione: "Borsa termica 22 litri, mantiene le bevande fresche tutto il giorno.",
         link: "https://www.amazon.it/Borsa-factory-240355-uniflame-termica/dp/B07QL72X6M?&linkCode=ll2&tag=l0c39-21&linkId=c3ac151db98d04af5bc6874c774243f0&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio le bevande fredde. Io uso questa borsa termica e mi trovo benissimo. Se ti va te la passo:"
+        messaggio: "🌊 Borsa termica consigliata:"
     },
     "cooler_bag_lifewit": {
         nome: "Lifewit Thermal Backpack 24L Cooler Bag",
         categoria: "mare",
         descrizione: "Zaino termico 24L, perfetto per mantenere cibo e bevande fresche.",
         link: "https://www.amazon.it/Lifewit-Isoterma-Mantenere-Allaperto-Campeggio/dp/B07B8GRWMC?th=1&linkCode=ll2&tag=l0c39-21&linkId=6da080a3ea1160b13fb9fa05a8927e7d&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio le bevande fredde. Io uso questo zaino termico e mi trovo benissimo. Se ti va te lo passo:"
+        messaggio: "🌊 Zaino termico consigliato:"
     },
     "borsa_impermeabile": {
         nome: "LEMESO Borsa Impermeabile Mare",
         categoria: "mare",
         descrizione: "Borsa impermeabile per mare, protegge telefono e portafoglio.",
         link: "https://www.amazon.it/LEMESO-Impermeabile-Protezione-portafoglio-Canottaggio/dp/B0B36Y9X1D?&linkCode=ll2&tag=l0c39-21&linkId=45f185ea5a7992c2d208e7f435dcfac3&ref=_as_li_ss_tl",
-        messaggio: "Che bello, vai al mare! 🌊 Non so tu, ma quando vado alla spiaggia voglio proteggere il telefono dall'acqua. Io uso questa borsa e mi trovo benissimo. Se ti va te la passo:"
+        messaggio: "🌊 Borsa impermeabile consigliata:"
     },
     // BIBITE - PRODOTTI ANCORA PER TUTTE LE COMBO (rotazione)
     "coca_cola_zero": {
@@ -756,7 +792,7 @@ const catalogoProdotti = {
         tag: ["senza zucchero", "rinfrescante", "classica", "analcolica"],
         descrizione: "Rinfrescante senza zuccheri, perfetta per idratarsi in ogni situazione.",
         link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl",
-        messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Coca-Cola Zero per rinfrescarmi, se le vuoi ti do il link."
+        messaggio: "🥤 Bevanda consigliata:"
     },
     "pepsi_max": {
         nome: "Pepsi Max",
@@ -764,7 +800,7 @@ const catalogoProdotti = {
         tag: ["senza zucchero", "rinfrescante", "classica", "analcolica"],
         descrizione: "Rinfrescante senza zuccheri, perfetta per idratarsi in ogni situazione.",
         link: "https://www.amazon.it/Pepsi-Max-Bevanda-Analcolica-Zucchero/dp/B08VVTS94X?&linkCode=ll2&tag=l0c39-21&linkId=3b6054372f292480c97d501dcdb834b6&ref=_as_li_ss_tl",
-        messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Pepsi Max per rinfrescarmi, se le vuoi ti do il link."
+        messaggio: "🥤 Bevanda consigliata:"
     },
     "oransoda_zero": {
         nome: "Oransoda Zero",
@@ -772,7 +808,7 @@ const catalogoProdotti = {
         tag: ["senza zucchero", "rinfrescante", "aranciata", "analcolica"],
         descrizione: "Bevanda gassata all'arancia senza zuccheri, con succo di arance siciliane e senza coloranti.",
         link: "https://www.amazon.it/allArancia-Loriginale-Aranciata-Siciliane-Coloranti/dp/B0CX6RN9NL?pd_rd_w=2yHUJ&content-id=amzn1.sym.bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_p=bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_r=PFFA4DDBKXSVN2FC1H25&pd_rd_wg=D1XOt&pd_rd_r=50121f40-c47e-4f48-985d-f0021d428a7e&pd_rd_i=B0CX6HFND3&th=1&linkCode=ll2&tag=l0c39-21&linkId=d713fc75412235936992a0b962276211&ref=_as_li_ss_tl",
-        messaggio: "Tipo che giornata calda, ci vorrebbe proprio un'aranciata fresca. E poi io uso la Oransoda Zero per rinfrescarmi, è l'originale aranciata italiana con succo di arance siciliane, se la vuoi ti do il link."
+        messaggio: "🥤 Bevanda consigliata:"
     },
     "estathe_limone": {
         nome: "Estathé Limone",
@@ -780,7 +816,7 @@ const catalogoProdotti = {
         tag: ["rinfrescante", "the freddo", "senza glutine", "analcolica"],
         descrizione: "The freddo con vero infuso di foglie di the e succo di limone, bevanda analcolica senza glutine.",
         link: "https://www.amazon.it/Estath%C3%A9-Limone-Bevanda-Analcolica-Bottiglie/dp/B01FSBKG86?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2M2BPCA8TOUV7&dib=eyJ2IjoiMSJ9.FiNkIUSC2dwiAjBv-vwb_T3iFcvkm0npGXqMDbFNVPHWAcA1wkohMXDWHejOQDZWyh70zaxkQ2MOcFmC69W-fBS02NXayRXQ0e05HcnY1lpndp8Km8d3wjj_r1RbAbSGRRuvelDnV5XzWh4HerpW2finqRUXql6XNIlDWxMLwqzfUSODU8Zl8pXJeDp-q552nnxXc7RRrEi9cyMbCbaBAeacsaEavHwkOVnYwOPF5CgR1xrsXM8MgbIythzF2UHCbEK6EsPn8hFo9C3Jd5vp6Ozy04zf2QYV2oljYBBrr-4.EwmWYge8TR116AjrwsL1YWZOEEZvDZqtRxDEMg5qWZs&dib_tag=se&keywords=bevande&qid=1779666721&rdc=1&sprefix=bevande%2Caps%2C191&sr=8-6&th=1&linkCode=ll2&tag=l0c39-21&linkId=d38ff5ede0fca7fc29fe28063906cdf9&ref=_as_li_ss_tl",
-        messaggio: "Tipo che giornata calda, ci vorrebbe proprio un the freddo. E poi io uso la Estathé Limone, è il the freddo con vero infuso di foglie di the e succo di limone, se lo vuoi ti do il link."
+        messaggio: "🥤 Bevanda consigliata:"
     },
     "hipro_drink": {
         nome: "HiPRO Drink Liquido",
@@ -788,7 +824,7 @@ const catalogoProdotti = {
         tag: ["proteica", "sportiva", "senza zuccheri", "analcolica"],
         descrizione: "Bevanda proteica liquida con 25g di proteine al gusto fragola e lampone, senza lattosio e senza zuccheri aggiunti.",
         link: "https://www.amazon.it/dp/B07Z42P2RG?ie=UTF8&psc=1&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=KZBA5VTTAYAD8EHRAXN5&pd_rd_wg=CdEOt&pd_rd_w=8BYvX&pd_rd_r=32878f6d-474d-43e9-99c1-9a4d9f2163bd&fpw=alm&almBrandId=QW1hem9uIEZyZXNo&aref=D92tQNMbIG&linkCode=ll2&tag=l0c39-21&linkId=11a56cb96b04f077bf5b107363f96f01&ref=_as_li_ss_tl",
-        messaggio: "Tipo che ti alleni forte! 💪 Hai bisogno di proteine per il recupero. E poi io uso la HiPRO Drink Liquido, ha 25g di proteine al gusto fragola e lampone, senza zuccheri, se la vuoi ti do il link."
+        messaggio: "💪 Bevanda sportiva consigliata:"
     },
     "red_bull": {
         nome: "Red Bull Energy Drink, 250 ml (24 Lattine)",
@@ -796,7 +832,7 @@ const catalogoProdotti = {
         tag: ["energetica", "sportiva", "caffeina", "analcolica"],
         descrizione: "Bevanda energetica per sportivi, perfetta per allenamenti intensi.",
         link: "https://www.amazon.it/Red-Bull-Energy-Cartone-Lattine/dp/B01G7F3UGC?th=1&linkCode=ll2&tag=l0c39-21&linkId=5d2abd95aeb04ce933f0f60e9aeab00f&ref=_as_li_ss_tl",
-        messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di energia. Io uso Red Bull per avere la carica giusta, se la vuoi ti do il link."
+        messaggio: "💪 Bevanda energetica consigliata:"
     },
     "enervit_isotonic": {
         nome: "Enervit Isotonic Drink Limone",
@@ -804,7 +840,7 @@ const catalogoProdotti = {
         tag: ["isotonica", "sportiva", "sali minerali", "analcolica"],
         descrizione: "Bevanda isotonica con sali minerali, ideale per idratazione durante sport.",
         link: "https://www.amazon.it/Enervit-Spa-Isotonic-Drink-Limone/dp/B07DTBVP4T?th=1&linkCode=ll2&tag=l0c39-21&linkId=70e15dc5129cb5e69e8fb461ec37e8b6&ref=_as_li_ss_tl",
-        messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di idratarmi bene. Io uso Enervit Isotonic per i sali minerali, se la vuoi ti do il link."
+        messaggio: "💪 Bevanda isotonica consigliata:"
     },
     "powerbar_isoactive": {
         nome: "PowerBar Isoactive Red Fruit",
@@ -812,7 +848,7 @@ const catalogoProdotti = {
         tag: ["isotonica", "sportiva", "elettroliti", "analcolica"],
         descrizione: "Bevanda isotonica con 5 elettroliti, perfetta per allenamenti intensi.",
         link: "https://www.amazon.it/PowerBar-Boisson-IsoActive-Fruit-Punch/dp/B078K1VM3M?th=1&linkCode=ll2&tag=l0c39-21&linkId=0e28cc439dc7186dd0fccfa8ef38c2c2&ref=_as_li_ss_tl",
-        messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di elettroliti. Io uso PowerBar Isoactive per il recupero, se la vuoi ti do il link."
+        messaggio: "💪 Bevanda sportiva consigliata:"
     },
     "gomo_energy": {
         nome: "GoMo ENERGY Isotonic Sport Drink",
@@ -820,7 +856,7 @@ const catalogoProdotti = {
         tag: ["isotonica", "senza zucchero", "sportiva", "analcolica"],
         descrizione: "Bevanda isotonica senza zucchero, ideale per idratazione sportiva.",
         link: "https://www.amazon.it/GoMo-ENERGY%C2%AE-Isotonic-Sport-Drink/dp/B072KSBLR6?th=1&linkCode=ll2&tag=l0c39-21&linkId=7ff99045649298642b63799c295ddf41&ref=_as_li_ss_tl",
-        messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport voglio una bevanda leggera. Io uso GoMo ENERGY senza zucchero, se la vuoi ti do il link."
+        messaggio: "💪 Bevanda sportiva consigliata:"
     },
     "gatorade_sport": {
         nome: "Gatorade Sport Drink",
@@ -828,7 +864,7 @@ const catalogoProdotti = {
         tag: ["sportiva", "elettroliti", "idratazione", "analcolica"],
         descrizione: "Bevanda sportiva con elettroliti, perfetta per idratazione durante allenamento.",
         link: "https://www.amazon.it/dp/B0D2Y3PZTR?ie=UTF8&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=HAB68W7XNMNKX1NHE4AT&pd_rd_wg=avtw4&pd_rd_w=z072w&pd_rd_r=c153241b-2ce3-4a61-8ded-8bc8f3e2bed6&aref=Xu76ZS3xYo&th=1&linkCode=ll2&tag=l0c39-21&linkId=4821d146bb6000dae4f6f957628343ea&ref=_as_li_ss_tl",
-        messaggio: "Tipo che ti alleni forte! 💪 Non so tu, ma quando faccio sport ho bisogno di elettroliti. Io uso Gatorade per l'idratazione, se la vuoi ti do il link."
+        messaggio: "💪 Bevanda sportiva consigliata:"
     },
     "fanta_original": {
         nome: "Fanta Original",
@@ -836,7 +872,7 @@ const catalogoProdotti = {
         tag: ["rinfrescante", "frizzante", "classica", "analcolica"],
         descrizione: "Rinfrescante con conservanti riciclabili, perfetta per idratarsi.",
         link: "https://www.amazon.it/Fanta-Original-Conservanti-riciclabile-Rinfrescante/dp/B0F94MN626?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite%2Bpacchi&qid=1779582795&rdc=1&sprefix=bibite%2Bpacchi%2Caps%2C139&sr=8-4-spons&aref=7rIRpk3FXE&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=5caf24d3ef7761336f39c4485f57268b&ref=_as_li_ss_tl",
-        messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Fanta Original per rinfrescarmi, se le vuoi ti do il link."
+        messaggio: "🥤 Bevanda consigliata:"
     },
     "l_angelica_waterstick": {
         nome: "L'Angelica Waterstick Drenante",
@@ -844,7 +880,7 @@ const catalogoProdotti = {
         tag: ["drenante", "naturale", "detox", "analcolica"],
         descrizione: "Waterstick drenante contro stanchezza e affaticamento.",
         link: "https://www.amazon.it/LAngelica-Waterstick-Drenante-Stanchezza-Affaticamento/dp/B0D46F19MB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite%2Bpacchi&qid=1779582795&rdc=1&sprefix=bibite%2Bpacchi%2Caps%2C139&sr=8-8&th=1&linkCode=ll2&tag=l0c39-21&linkId=96869b71eb53e48236d136535ae799a8&ref=_as_li_ss_tl",
-        messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso l'Angelica Waterstick per rinfrescarmi, se le vuoi ti do il link."
+        messaggio: "🥤 Bevanda consigliata:"
     },
     "jamaica_zenzero": {
         nome: "Jamaica Bibita Analcolica Zenzero",
@@ -852,7 +888,7 @@ const catalogoProdotti = {
         tag: ["naturale", "zenzero", "analcolica", "rinfrescante"],
         descrizione: "Bibita analcolica allo zenzero, rinfrescante e naturale.",
         link: "https://www.amazon.it/Jamaica-Bibita-analcolica-zenzero-lattine/dp/B006R638VY?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HR7JN29WYCBX&dib=eyJ2IjoiMSJ9.ket8bDGPzYBVQ0VBune4Cmai9z_JdmDC0eSOFhL9VO-7sgCUeaslCtLfuKvyo7fno3YeMbEZJmY10LFSWBnJJyJVzvDcltSVpj6-Y2UlsYMzb89ySIeACW709mMjlx5PtN6tJTIDeISGt_8tYa3GS-890-Tu0SyPGcJltnYdFVgBHsg17aunaKJft4cPG19uLsLUW8VqqW2Ew75rUZER1fL4wdYd-2viAbj8aFztI9ejczJ5iLbvkjZEeKNsag5JmMzJWgQsVSpe_zLN4ghWHtU7zy8ElbF0Fnj6CIel_mg.FcwOWAqJqxLwbDhxDkb2drp-4cqdADSo0au0eZyobQs&dib_tag=se&keywords=bibite+pacchi&qid=1779582795&sprefix=bibite+pacchi%2Caps%2C139&sr=8-9&linkCode=ll2&tag=l0c39-21&linkId=c08e0e25f8bb7282d7653fdca0c2e473&ref=_as_li_ss_tl",
-        messaggio: "Tipo che giornata calda, ci vorrebbe proprio una bevanda fresca. E poi io uso la Jamaica allo zenzero per rinfrescarmi, se le vuoi ti do il link."
+        messaggio: "🥤 Bevanda consigliata:"
     },
     // FITNESS CASA
     "namedsport_proteinbar": {
@@ -860,14 +896,14 @@ const catalogoProdotti = {
         categoria: "fitness",
         descrizione: "Barretta energetica con 35% di proteine, ideale come spuntino o post workout.",
         link: "https://www.amazon.it/dp/B088CBGH2Y?ascsubtag=srctok-03e71a251493ad36&btn_ref=srctok-03e71a251493ad36&th=1&linkCode=ll2&tag=l0c39-21&linkId=e182e40481fe0812ca7512c0fde7f20b&ref=_as_li_ss_tl",
-        messaggio: "Barretta proteica di alta qualità per il tuo allenamento."
+        messaggio: "💪 Barretta proteica consigliata:"
     },
     "optimum_creatina": {
         nome: "Optimum Nutrition Creatina Monoidrata",
         categoria: "fitness",
         descrizione: "Creatina micronizzata al 100% per migliorare forza e performance muscolare.",
         link: "https://www.amazon.it/dp/B00T7L20AQ?th=1&linkCode=ll2&tag=l0c39-21&linkId=425913cbbff678f4faae0baf8f6c7bb4&ref=_as_li_ss_tl",
-        messaggio: "Creatina pura per massimizzare forza e recupero muscolare."
+        messaggio: "💪 Creatina consigliata:"
     },
     "optimum_preworkout": {
         nome: "Optimum Nutrition Gold Standard Pre-Workout",
@@ -875,7 +911,7 @@ const catalogoProdotti = {
         tag: ["pre-workout", "energetica", "caffeina", "fitness"],
         descrizione: "Pre-workout con creatina e caffeina per massimizzare performance e forza.",
         link: "https://www.amazon.it/Optimum-Nutrition-Standard-allenamento-ingredienti/dp/B00TFB0YTM?th=1&linkCode=ll2&tag=l0c39-21&linkId=0d889a2ab529400f6f01a4e005947cae&ref=_as_li_ss_tl",
-        messaggio: "Pre-workout per avere energia e carica prima dell'allenamento."
+        messaggio: "💪 Pre-workout consigliato:"
     },
     "gg4lab_preworkout": {
         nome: "GG4Lab Preworkout con Creatina, Citrullina, Beta Alanine",
@@ -883,7 +919,7 @@ const catalogoProdotti = {
         tag: ["pre-workout", "creatina", "citrullina", "fitness"],
         descrizione: "Pre-workout con creatina, citrullina e beta alanine per carica istantanea.",
         link: "https://www.amazon.it/GG4Lab-Preworkout-Muscolare-Creatina-Citrullina/dp/B0DQ1WMP29?&linkCode=ll2&tag=l0c39-21&linkId=270653c4a896968edcccf97deff3762b&ref=_as_li_ss_tl",
-        messaggio: "Pre-workout completo per spingere l'allenamento al limite."
+        messaggio: "💪 Pre-workout consigliato:"
     },
     "bandini_creatina": {
         nome: "Bandini Creatine Monohydrate 100% Pure",
@@ -891,7 +927,7 @@ const catalogoProdotti = {
         tag: ["creatina", "fitness", "pura", "vegan"],
         descrizione: "Creatina monoidrata 100% pura per training e sport, con dosatore incluso.",
         link: "https://www.amazon.it/Creatina-Micronizzata-Monoidrata-Polvere-grammi/dp/B09X5YJQLV?&linkCode=ll2&tag=l0c39-21&linkId=3f36198678a2403420afda6fd31a2007&ref=_as_li_ss_tl",
-        messaggio: "Creatina pura per migliorare performance in allenamenti intensi."
+        messaggio: "💪 Creatina consigliata:"
     },
     // SMART HOME DOMOTICA
     "philips_hue": {
@@ -899,49 +935,49 @@ const catalogoProdotti = {
         categoria: "smart-home",
         descrizione: "Kit illuminazione intelligente con 2 lampadine Smart, Hue Bridge e telecomando Smart Button inclusi, Bluetooth.",
         link: "https://www.amazon.it/Lampadina-Lampadine-Telecomando-Dimmerabili-Bluetooth/dp/B099NRLRG3?th=1&linkCode=ll2&tag=l0c39-21&linkId=219c8455668c9752a083f2fba067000b&ref=_as_li_ss_tl",
-        messaggio: "Illuminazione smart per la tua casa."
+        messaggio: "💡 Illuminazione smart consigliata:"
     },
     "tapo_presa_smart": {
         nome: "Tapo Presa Smart con Monitoraggio Consumo",
         categoria: "smart-home",
         descrizione: "Presa intelligente WiFi compatibile con Alexa e Google Home. Controllo remoto, programmazione oraria, monitoraggio consumo.",
         link: "https://www.amazon.it/Tapo-Monitoraggio-Intelligente-Compatibile-Preselezione/dp/B0CHFJ7V3J?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2OJTEON8O297M&dib=eyJ2IjoiMSJ9.dWtkMjCLn9aCjl0wCvqQXgrHNqmwuu1ikYJCky2J2kdM1V_OJiW8EWQ3ceEBY1MC1S7EWkMx6UdbKc6MpdoYxs7IYVfYKTBgJ5v9i-DTzlUFu3njz0ZNHz9wm1oatuNN4WETv5ath3X0JxkjtuFrwfTOD2ldbI3_aaT35Rqjur7UYf4kB22ONLfXaK6UjDyJtulRvvt4tipYSPj3VAfcDnpGuc5BrL_ZnC5lpGClQ44mLoDxA7X68wEKQWZ6b3vQhKw12cLH3WZmY7AaUYlPLZN4YdGjMCYCUtH-2AZaGAA.-AB66Zbc9avjnlaPJy3eTR-q7yLclHOBAgq3YpyeBbA&dib_tag=se&keywords=smart&qid=1777897538&sprefix=smart%2B%2Caps%2C166&sr=8-6&th=1&linkCode=ll2&tag=l0c39-21&linkId=c150503bd157e5c4f2b5b32caf1e9058&ref=_as_li_ss_tl",
-        messaggio: "Presa smart per controllo remoto e monitoraggio consumo."
+        messaggio: "🔌 Presa smart consigliata:"
     },
     "amazon_basics_presa": {
         nome: "Amazon Basics Presa Intelligente Singola",
         categoria: "smart-home",
         descrizione: "Presa smart WiFi per Alexa senza hub. Ingombro limitato, controllo remoto, routine giornaliere.",
         link: "https://www.amazon.it/Amazon-Basics-intelligente-singola-confezione/dp/B0CMXNWCVP?mcid=9e2aa91a1c8d3bcbaef8d22ed1555743&hvadid=705743448845&hvpos=&hvnetw=g&hvrand=3521815141531840554&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-2347766460617&hvocijid=3521815141531840554-B0CMXNWCVP-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=e9d8c1168729535c8e5f367cfbc39448&ref=_as_li_ss_tl",
-        messaggio: "Presa smart Amazon Basics compatibile Alexa."
+        messaggio: "🔌 Presa smart consigliata:"
     },
     "tp_link_p105": {
         nome: "TP-Link Tapo P105 Presa Smart Italiana",
         categoria: "smart-home",
         descrizione: "Presa WiFi intelligente compatibile Google Home e Amazon Alexa. Modalità assenza, timer programmazione.",
         link: "https://www.amazon.it/TP-Link-Intelligente-Compatibile-Controllo-tramite/dp/B07Z5JD3T4?pd_rd_w=e2dzD&content-id=amzn1.sym.1f3c1772-ccf5-4aa2-abc0-5bb5851fb447&pf_rd_p=1f3c1772-ccf5-4aa2-abc0-5bb5851fb447&pf_rd_r=F4ATCRT21RHMY22PYNGP&pd_rd_wg=zWCfO&pd_rd_r=6b4f6f0e-40f4-4bc2-ae48-0d834bc5e132&pd_rd_i=B07Z5JD3T4&th=1&linkCode=ll2&tag=l0c39-21&linkId=e4dd22dc612200b8b487d3965d6fb599&ref=_as_li_ss_tl",
-        messaggio: "Presa smart TP-Link compatibile tutte le spine italiane."
+        messaggio: "🔌 Presa smart consigliata:"
     },
     "echo_dot_max": {
         nome: "Echo Dot Max Alexa",
         categoria: "smart-home",
         descrizione: "Altoparlante intelligente con assistente vocale Alexa. Audio premium, hub casa intelligente integrato.",
         link: "https://www.amazon.it/echo-dot-max/dp/B0DKLDMHYB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=VGVLPWDE291C&dib=eyJ2IjoiMSJ9.zYeRUCSdJcAUhnVXvl4Poxnjo4taik9-sEWyw5aw3gBoMG-HoGA6vqR7pBWK_5FdZw2hBzxSrolbrS9VW-XaHdXxN9l0Zv6wFdQyXdlrbj2D6AC2NzrwV_Xhfooioc_kYDZKBWC1MtunEV7a2lXifq9SeAkvSCSNtM-17EIAqtN8odNJ4K5HT5VJoP-uvxxyGLECMo5c8a1idko1GzcEbSIMvvB98cVIiXbWiN3ka1Jb6d8hjsOTkrULiJGl13Rpj0H57D0sJb9M1qtTW_uqFDi669VgMKQ-8HMA89bk8oY.QiN_0D7vxwblphZpC_HwFr7q1Gfg4cFicZIShfXPxKI&dib_tag=se&keywords=alexa&qid=1777897593&sprefix=alexa%2Caps%2C155&sr=8-11&ufe=app_do%3Aamzn1.fos.7cf526d8-b33c-4cc8-8e05-b9df5480d46b&th=1&linkCode=ll2&tag=l0c39-21&linkId=8dfeb0081aa8558b0fb4e680bad53dde&ref=_as_li_ss_tl",
-        messaggio: "Echo Dot con Alexa per controllo vocale e musica."
+        messaggio: "🔊 Alexa consigliata:"
     },
     "broadlink_telecomando": {
         nome: "Broadlink Telecomando Universale Infrarossi",
         categoria: "smart-home",
         descrizione: "Telecomando universale per TV, ventilatori. Controllo vocale Alexa/Google, compatibile 80.000+ dispositivi.",
         link: "https://www.amazon.it/Broadlink-Telecomando-Universale-Infrarossi-Ventilatori/dp/B0F8Q9MRHM?dib=eyJ2IjoiMSJ9.Dx7C1e0JYqrvymxrTkk1DdPXopxEbaELZWfriTBEhJX39rfM3be8-Y63a0sjxrzTxYXt-XN52ylfn-vu_U4FUFG9f27CGQ52VeNVwCzR6yoGAiJC5xRaTPsGCvgMo6SemRoEm5VOIthUcsZKrBDFZhtf73LYrMD_VIDGF_9p0ISb2XIqjnB7FmPQyMCaqgSJ4jdd-5uZAlcT40ZdC-sImnhCj7KVaQpoQoPVL-LdTV4FmKyL2lUWq9DpVRs-SQpR5xIbBTArOD8DqnaN46XnM06M5Ts1FHihKayXJkGKf3g.ltB2Oe3U9hcN12g3Nj5pc9tFdB8Q52CB4QLY5u8T_QI&dib_tag=se&keywords=smart%2Bhome&qid=1778008692&sr=8-2-spons&aref=sl8qYRQp9L&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=9ba47a905d8237d3baa2483ebf79d805&ref=_as_li_ss_tl",
-        messaggio: "Telecomando universale per controllo dispositivi IR."
+        messaggio: "📺 Telecomando consigliato:"
     },
     "telecomando_condizionatore": {
         nome: "Telecomando Universale Infrarossi Condizionatore",
         categoria: "smart-home",
         descrizione: "Telecomando universale per condizionatori. Compatibile tutte le marche, controllo vocale app.",
         link: "https://www.amazon.it/Telecomando-Universale-Infrarossi-Condizionatore-Utilizzando/dp/B0CW1NHM2W?dib=eyJ2IjoiMSJ9.Dx7C1e0JYqrvymxrTkk1DdPXopxEbaELZWfriTBEhJX39rfM3be8-Y63a0sjxrzTxYXt-XN52ylfn-vu_U4FUFG9f27CGQ52VeNVwCzR6yoGAiJC5xRaTPsGCvgMo6SemRoEm5VOIthUcsZKrBDFZhtf73LYrMD_VIDGF_9p0ISb2XIqjnB7FmPQyMCaqgSJ4jdd-5uZAlcT40ZdC-sImnhCj7KVaQpoQoPVL-LdTV4FmKyL2lUWq9DpVRs-SQpR5xIbBTArOD8DqnaN46XnM06M5Ts1FHihKayXJkGKf3g.ltB2Oe3U9hcN12g3Nj5pc9tFdB8Q52CB4QLY5u8T_QI&dib_tag=se&keywords=smart+home&qid=1778008692&sr=8-4-spons&aref=xNvPc26oEh&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=l0c39-21&linkId=1c50041c3d94a94ab36563340b658a09&ref=_as_li_ss_tl",
-        messaggio: "Telecomando universale per condizionatori."
+        messaggio: "📺 Telecomando consigliato:"
     },
     // PET CARE INTELLIGENTE
     "petkit_pura": {
@@ -949,14 +985,14 @@ const catalogoProdotti = {
         categoria: "pet-care",
         descrizione: "Lettiera autopulente con controllo app e design moderno.",
         link: "https://www.amazon.it/PETKIT-Autopulente-Automatica-Antiodore-Controllo/dp/B0D9QJZ7FG?&linkCode=ll2&tag=l0c39-21&linkId=2db071e67a1cd179da498fe5a20b50a3&ref=_as_li_ss_tl",
-        messaggio: "Lettiera autopulente per il comfort del tuo gatto."
+        messaggio: "🐱 Lettiera consigliata:"
     },
     "fockety_mangiatoia": {
         nome: "Fockety Mangiatoia Automatica per Gatti",
         categoria: "pet-care",
         descrizione: "Mangiatoia automatica con timer per alimentazione programmata.",
         link: "https://www.amazon.it/dp/B0D6WBXY8M?&linkCode=ll2&tag=l0c39-21&linkId=7ebc2a8ea2ea3e0228163422202800a8&ref=_as_li_ss_tl",
-        messaggio: "Mangiatoia automatica per l'alimentazione regolare."
+        messaggio: "🐱 Mangiatoia consigliata:"
     },
     // CINEMA TV
     "samsung_qled": {
@@ -964,7 +1000,7 @@ const catalogoProdotti = {
         categoria: "cinema",
         descrizione: "Proiettore 4K con correzione keystone e compatibilità smartphone.",
         link: "https://www.amazon.it/Proiettore-Videoproiettore-TOPTRO-Smartphone-Correzione/dp/B0CKRPTF4L?&linkCode=ll2&tag=l0c39-21&linkId=f77e39ffd9666af65f40632c408f8e8f&ref=_as_li_ss_tl",
-        messaggio: "Proiettore 4K per la migliore esperienza home cinema."
+        messaggio: "🎬 Proiettore consigliato:"
     },
     // SMARTPHONE TECH
     "iphone_15": {
@@ -972,7 +1008,7 @@ const catalogoProdotti = {
         categoria: "cinema",
         descrizione: "Cofanetto gioielli elegante con collana, anello e orecchini.",
         link: "https://www.amazon.it/Cofanetto-Orologio-gioielli-Collana-Anello-Orecchini/dp/B07795PQDW?&linkCode=ll2&tag=l0c39-21&linkId=d7b42d25253d1f8f15e6f5ac077c9b2b&ref=_as_li_ss_tl",
-        messaggio: "Cofanetto gioielli per completare il tuo stile."
+        messaggio: "💎 Gioielli consigliati:"
     },
     // TECH
     "airpods_pro": {
@@ -980,7 +1016,7 @@ const catalogoProdotti = {
         categoria: "tech",
         descrizione: "Cuffie gaming wireless con cancellazione rumore attiva.",
         link: "https://www.amazon.it/HyperX-Cloud-Cuffie-Gaming-Mobile/dp/B00SAYCVTQ?mcid=c659dba90f523f5ca09a82b25c56a3e6&hvadid=700813659493&hvpos=&hvnetw=g&hvrand=12981572348516290815&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-381707145357&hvocijid=12981572348516290815-B00SAYCXWG-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=4e8af65a5e14abb66fa2f74389a0d44c&ref=_as_li_ss_tl",
-        messaggio: "Cuffie gaming premium per audio di qualità."
+        messaggio: "🎧 Cuffie consigliate:"
     },
     // MODA DONNA
     "borsa_michael_kors": {
@@ -988,7 +1024,7 @@ const catalogoProdotti = {
         categoria: "moda-donna",
         descrizione: "Mocassino elegante con platform e mascherina.",
         link: "https://www.amazon.it/Tods-Donna-Mocassino-Platform-Mascherina/dp/B0C3VZRYSG?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=d51d2c599eb07e84ba1c51057afbfd9b&ref=_as_li_ss_tl",
-        messaggio: "Mocassino elegante per completare il tuo look."
+        messaggio: "👠 Scarpe consigliate:"
     },
     // MODA UOMO
     "cintura_hugo_boss": {
@@ -996,7 +1032,7 @@ const catalogoProdotti = {
         categoria: "moda-uomo",
         descrizione: "Smanicato invernale in pile per la stagione fredda.",
         link: "https://www.amazon.it/Smanicato-Invernale-Pullover-Maglione-Autunnale/dp/B0FNX784MK?&linkCode=ll2&tag=l0c39-21&linkId=048b7f63ab1f4a17764d337ef7f27e89&ref=_as_li_ss_tl",
-        messaggio: "Smanicato elegante per lo stile maschile."
+        messaggio: "🧥 Abbigliamento consigliato:"
     },
     // ARREDAMENTO CASA
     "tavolo_extensible": {
@@ -1389,162 +1425,149 @@ const catalogoProdotti = {
 // comboMessages - Array di messaggi per ogni contesto con placeholder
 const comboMessages = {
     "mare": [
-        "Ehi, vedo che ti stai preparando per la spiaggia! 🌊 Guarda, se passi una giornata al mare come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per godermi il relax e una scorta di {prodottoAncora} per non dover correre al bar. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
-        "Che bella giornata per il mare! 🏖️ Guarda, se vai al mare come me, non puoi fare a meno di due cose: un {prodottoNicchia} per il comfort e una {prodottoAncora} per rinfrescarti. Ecco i link, fidati!",
-        "Ti piace il mare? 🌊 Guarda, per una giornata perfetta al mare servono due cose: un {prodottoNicchia} e una {prodottoAncora}. Ti lascio i link, è fantastico!"
+        "🌊 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "pc": [
-        "Ehi, ma ti stai preparando per lavorare? 🔥 Guarda, se passi lunghe sessioni come me, non posso fare a meno di due cose: delle {prodottoNicchia} per concentrarmi e una scorta di {prodottoAncora} per non dover fermarmi quando ho sete. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
-        "Lavori al computer? 💻 Guarda, per sessioni produttive servono due cose: {prodottoNicchia} e {prodottoAncora}. Ecco i link, ti assicuro che è essenziale!",
-        "Ti serve energia per il lavoro? ⚡ Guarda, io uso {prodottoNicchia} e {prodottoAncora} per rimanere concentrato. Ti lascio i link!"
+        "💻 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "outdoor": [
-        "Che bello, vai in campeggio! 🌲 Guarda, se vai in natura come me, non posso fare a meno di due cose: una buona {prodottoNicchia} per dormire bene e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una bella comodità!",
-        "Ami l'outdoor? 🏕️ Guarda, per avventure all'aria aperta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
-        "Ti piace la natura? 🌿 Guarda, io porto sempre {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🌲 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "caldo": [
-        "Che giornata calda! ❄️ Guarda, se anche tu soffri il caldo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per rinfrescarmi e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è una vera salvezza in questi giorni!",
-        "Fa caldo oggi? 🥵 Guarda, per sopravvivere al caldo servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è una salvezza!",
-        "Ti serve rinfrescarsi? ❄️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "❄️ Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "fitness": [
-        "Ehi, vedo che ti alleni! 💪 Guarda, se ti alleni come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per l'allenamento e una scorta di {prodottoAncora} per idratarmi durante l'workout. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale per i risultati!",
-        "Ti alleni? 🏋️ Guarda, per workout perfetti servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fondamentale!",
-        "Vuoi risultati? 💪 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "💪 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "smart-home": [
-        "Ehi, rendi la tua casa intelligente! 🏠 Guarda, se vuoi automatizzare la casa come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il controllo smart e una scorta di {prodottoAncora} per rilassarmi. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
-        "Ami la domotica? 🏠 Guarda, per una casa smart servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fantastico!",
-        "Vuoi automatizzare la casa? 🤖 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🏠 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "parrucchiere-barbiere": [
-        "Ehi, vuoi attrezzature professionali! 💇 Guarda, se hai un salone come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il taglio perfetto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
-        "Sei un parrucchiere? ✂️ Guarda, per il tuo salone servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
-        "Vuoi strumenti professionali? 💈 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "💇 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "manga-anime": [
-        "Sei un otaku? 🎌 Guarda, se ami i manga come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la collezione e una scorta di {prodottoAncora} per le maratone di lettura. Ti lascio qui i link a entrambi, ti assicuro che è imperdibile!",
-        "Ti piace il manga? 📚 Guarda, per la collezione perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è imperdibile!",
-        "Vuoi collezionare? 🎌 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🎌 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "snack-bevande": [
-        "Vuoi rinfrescarti? 🥤 Guarda, se vuoi bevande come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per l'energia e una scorta di {prodottoAncora} per la leggerezza. Ti lascio qui i link a entrambi, ti assicuro che è la combo ideale!",
-        "Ti piace le bevande? 🍹 Guarda, per la scorta perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è ideale!",
-        "Vuoi idratarti? 💧 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🥤 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "pet-care": [
-        "Ehi, ti prendi cura del tuo pet! 🐾 Guarda, se ami i tuoi animali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il loro comfort e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
-        "Hai animali? 🐱 Guarda, per il loro comfort servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fondamentale!",
-        "Ti prendi cura del tuo pet? 🐕 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🐾 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "cinema": [
-        "Ehi, vuoi goderti un film a casa! 🎬 Guarda, se ami il cinema come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la migliore esperienza e una scorta di {prodottoAncora} per lo snack perfetto. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
-        "Ami i film? 🎥 Guarda, per l'esperienza perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fantastico!",
-        "Vuoi guardare un film? 🎬 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🎬 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "smartphone": [
-        "Ehi, sei sempre connesso! 📱 Guarda, se usi il telefono come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per migliorare l'esperienza e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
-        "Usi sempre il telefono? 📲 Guarda, per la migliore esperienza servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
-        "Vuoi migliorare il tuo telefono? 📱 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "📱 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "tech": [
-        "Ehi, ami la tecnologia! 🔧 Guarda, se usi gadget come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il mio setup e una scorta di {prodottoAncora} per non fermarmi. Ti lascio qui i link a entrambi, ti assicuro che è comodissimo!",
-        "Ami la tecnologia? 💻 Guarda, per il setup perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è comodissimo!",
-        "Vuoi gadget tech? 🔧 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🔧 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "moda-donna": [
-        "Ehi, vuoi essere alla moda! 👗 Guarda, se curi il tuo stile come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per completare il look e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
-        "Vuoi essere elegante? 👠 Guarda, per il look perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
-        "Ti piace la moda? 💃 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "👗 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "moda-uomo": [
-        "Ehi, vuoi uno stile unico! 👔 Guarda, se curi il tuo look come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per distinguerti e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
-        "Vuoi stile maschile? 🤵 Guarda, per distinguerti servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
-        "Ti piace lo stile? 👔 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "👔 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "arredamento": [
-        "Ehi, arredi la tua casa! 🏡 Guarda, se vuoi una casa bella come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per lo stile e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
-        "Vuoi arredare casa? 🛋️ Guarda, per lo stile perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
-        "Ti piace l'arredamento? 🏠 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🏡 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "accessori": [
-        "Ehi, completi il tuo look! 👜 Guarda, se ami gli accessori come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il dettaglio perfetto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
-        "Vuoi accessori? 👒 Guarda, per il dettaglio perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fondamentale!",
-        "Ti piace gli accessori? 💼 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "👜 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "benessere": [
-        "Ehi, ti prendi cura di te! 💆 Guarda, se curi il tuo benessere come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la routine e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
-        "Vuoi benessere? 🧴 Guarda, per la routine perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
-        "Ti piace la cura personale? 💆 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "💆 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "giochi": [
-        "Ehi, vuoi divertirti! 🎲 Guarda, se ami i giochi come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per serate divertenti e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
-        "Ami i giochi? 🎮 Guarda, per serate divertenti servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
-        "Vuoi divertirti? 🎲 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🎲 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "libri": [
-        "Ehi, ami leggere! 📚 Guarda, se leggi come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per leggere ovunque e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
-        "Ami leggere? 📖 Guarda, per leggere ovunque servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fantastico!",
-        "Vuoi leggere? 📚 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "📚 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "profumi": [
-        "Ehi, vuoi lasciare un'impressione! 🌸 Guarda, se curi il tuo profumo come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il tuo stile e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
-        "Vuoi profumi? 💐 Guarda, per il tuo stile servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
-        "Ti piace il profumo? 🌸 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🌸 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "lavoro": [
-        "Ehi, lavori con stile! 👷 Guarda, se curi il tuo abbigliamento da lavoro come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la sicurezza e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
-        "Lavori? 👔 Guarda, per la sicurezza servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fondamentale!",
-        "Vuoi sicurezza al lavoro? 👷 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "👷 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "sostenibilita": [
-        "Ehi, vuoi essere eco-friendly! 🌱 Guarda, se curi l'ambiente come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per ridurre l'impatto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è importante!",
-        "Vuoi essere eco-friendly? ♻️ Guarda, per ridurre l'impatto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è importante!",
-        "Ti piace l'ambiente? 🌱 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🌱 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "ufficio": [
-        "Ehi, lavori in ufficio! 💼 Guarda, se vuoi produttività come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per lavorare meglio e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è essenziale!",
-        "Lavori in ufficio? 🖥️ Guarda, per la produttività servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
-        "Vuoi produttività? 💼 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "💼 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "viaggi": [
-        "Ehi, vuoi viaggiare! ✈️ Guarda, se ami viaggiare come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il viaggio e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è comodissimo!",
-        "Ami viaggiare? 🧳 Guarda, per viaggiare servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è comodissimo!",
-        "Vuoi viaggiare? ✈️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "✈️ Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "fotografia": [
-        "Ehi, ami la fotografia! 📷 Guarda, se scatti foto come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per scatti migliori e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è perfetto!",
-        "Ami la fotografia? 📸 Guarda, per scatti migliori servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è perfetto!",
-        "Vuoi scattare foto? 📷 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "📷 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "dvd": [
-        "Ehi, vuoi guardare film! 🎞️ Guarda, se ami il cinema come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per la collezione e una scorta di {prodottoAncora} per lo snack. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
-        "Ami i DVD? 📀 Guarda, per la collezione servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fantastico!",
-        "Vuoi collezionare? 🎞️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
-    ],
-    "parrucchiere-barbiere": [
-        "Ehi, vuoi attrezzature professionali! 💇 Guarda, se hai un salone come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il taglio perfetto e una scorta di {prodottoAncora} per idratarmi. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
-        "Sei parrucchiere o barbiere? ✂️ Guarda, per il salone perfetto servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è fondamentale!",
-        "Vuoi strumenti professionali? 💇 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!",
-        "Sei pronto per il salone perfetto? 💈 Guarda, per un lavoro di qualità ti servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, i tuoi clienti ti ringrazieranno!",
-        "Vuoi diventare un barbiere di elite? 🎩 Guarda, con {prodottoNicchia} e {prodottoAncora} hai tutto il necessario. Ti lascio i link, è l'investimento giusto!",
-        "Sei appassionato di hair styling? ✨ Guarda, io uso {prodottoNicchia} e {prodottoAncora} per risultati professionali. Ti lascio i link!"
+        "🎞️ Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "musica-vinili": [
-        "Ehi, ami la musica analogica! 🎵 Guarda, se ascolti vinili come me, non posso fare a meno di due cose: un {prodottoNicchia} per la migliore qualità audio e una scorta di {prodottoAncora} per la mia collezione. Ti lascio qui i link a entrambi, ti assicuro che è un'esperienza unica!",
-        "Ami i vinili? 🎶 Guarda, per una collezione da collezionista servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è pura magia!",
-        "Vuoi il suono perfetto? 🎧 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
-    ],
-    "manga-anime": [
-        "Ehi, ami manga e anime! 📖 Guarda, se leggi come me, non posso fare a meno di due cose: un {prodottoNicchia} per la mia collezione e una scorta di {prodottoAncora} per non fermarmi. Ti lascio qui i link a entrambi, ti assicuro che è fantastico!",
-        "Sei un otaku? 🎌 Guarda, per la collezione perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è imperdibile!",
-        "Vuoi storie epiche? ⚔️ Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🎵 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ],
     "biciclette-mobilita": [
-        "Ehi, ami le biciclette! 🚲 Guarda, se pedali come me, non posso fare a meno di due cose: un buon {prodottoNicchia} per il mio giro e una scorta di {prodottoAncora} per la manutenzione. Ti lascio qui i link a entrambi, ti assicuro che è fondamentale!",
-        "Ti piace andare in bici? 🚴 Guarda, per la mobilità perfetta servono {prodottoNicchia} e {prodottoAncora}. Ecco i link, è essenziale!",
-        "Vuoi muoverti in libertà? 🌳 Guarda, io uso {prodottoNicchia} e {prodottoAncora}. Ti lascio i link!"
+        "🚲 Combo consigliata: {prodottoNicchia} + {prodottoAncora}",
+        "Ecco i prodotti: {prodottoNicchia} e {prodottoAncora}",
+        "Prodotti consigliati: {prodottoNicchia}, {prodottoAncora}"
     ]
 };
 
@@ -1590,13 +1613,16 @@ function getContesto() {
     if (currentPath.includes('biciclette-mobilita') || currentUrl.includes('bicicletta') || currentUrl.includes('bici') || currentUrl.includes('bike') || currentUrl.includes('mtb') || currentUrl.includes('e-bike') || currentUrl.includes('ebike') || currentUrl.includes('mobilita') || currentUrl.includes('mobilità')) {
         return 'biciclette-mobilita';
     }
+    if (currentPath.includes('abiti-ciclismo') || currentUrl.includes('ciclismo') || currentUrl.includes('bicicletta') || currentUrl.includes('abbigliamento') || currentUrl.includes('ciclismo') || currentUrl.includes('mtb') || currentUrl.includes('bici')) {
+        return 'abiti-ciclismo';
+    }
     if (currentPath.includes('smartphone-tech') || currentUrl.includes('smartphone') || currentUrl.includes('telefono') || currentUrl.includes('mobile')) {
         return 'smartphone';
     }
     if (currentPath.includes('tech') || currentUrl.includes('tecnologia') || currentUrl.includes('gadget')) {
         return 'tech';
     }
-    if (currentPath.includes('moda-donna') || currentUrl.includes('moda') || currentUrl.includes('donna') || currentUrl.includes('femminile')) {
+    if (currentPath.includes('moda-donna') || currentUrl.includes('donna') || currentUrl.includes('femminile')) {
         return 'moda-donna';
     }
     if (currentPath.includes('moda-uomo') || currentUrl.includes('uomo') || currentUrl.includes('maschile')) {

@@ -51,10 +51,10 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/Joy-Summer-Ombrellone-Spiaggia-Cabina/dp/B00W1KAQWY?&linkCode=ll2&tag=l0c39-21&linkId=94666e812e9a7fa1ccb012eb0fd999cc&ref=_as_li_ss_tl"
                 },
                 product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                    name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
+                    link: "https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
                 },
-                message: "Una giornata di sole fantastica, vero? 🌊 Per goderti il mare senza pensieri, ho unito l'ombrellone perfetto alla Coca-Cola Zero: è la combo ideale per restare idratato sotto il sole senza dover correre al bar. Comoda, pratica e pensata per il tuo relax."
+                message: "Una giornata di sole fantastica, vero? 🌊 Per goderti il mare senza pensieri, ho unito l'ombrellone perfetto a Powerade: è la combo ideale per restare idratato sotto il sole senza dover correre al bar. Comoda, pratica e pensata per il tuo relax."
             },
             {
                 product1: {
@@ -62,10 +62,10 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/Fit-Flip-Telo-Mare-microfibra-marino-bianco/dp/B09KNMTKPS?th=1&linkCode=ll2&tag=l0c39-21&linkId=b2c56b41c9500ff261d9cde21e931b3f&ref=_as_li_ss_tl"
                 },
                 product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                    name: "ALPRO SENZA ZUCCHERI, Bevanda alla MANDORLA",
+                    link: "https://www.amazon.it/ZUCCHERI-MANDORLA-vegetale-vitamine-confezioni/dp/B0DTYZX9NJ?&linkCode=ll2&tag=l0c39-21&linkId=06cd1283271cb70c174cc9964578baa7&ref=_as_li_ss_tl"
                 },
-                message: "Ti piace la spiaggia? 🏖️ Guarda, con questo telo microfibra e Coca-Cola Zero hai tutto per il relax. Ecco i link!"
+                message: "Ti piace la spiaggia? 🏖️ Guarda, con questo telo microfibra e bevanda vegetale hai tutto per il relax leggero. Ecco i link!"
             },
             {
                 product1: {
@@ -76,7 +76,7 @@ const ComboDatabase = {
                     name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
                     link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
                 },
-                message: "Vuoi esplorare il mare? 🤿 Guarda, con questa maschera snorkeling e Coca-Cola Zero hai tutto per le avventure. Ecco i link!"
+                message: "Vuoi esplorare il mare? 🤿 Guarda, con queste scarpette acquatiche e Coca-Cola Zero hai tutto per le avventure. Ecco i link!"
             }
         ]
     },
@@ -90,10 +90,10 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/HyperX-Cloud-Cuffie-Gaming-Mobile/dp/B00SAYCVTQ?mcid=c659dba90f523f5ca09a82b25c56a3e6&hvadid=700813659493&hvpos=&hvnetw=g&hvrand=12981572348516290815&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-381707145357&hvocijid=12981572348516290815-B00SAYCXWG-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=4e8af65a5e14abb66fa2f74389a0d44c&ref=_as_li_ss_tl"
                 },
                 product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                    name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
+                    link: "https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
                 },
-                message: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma io odio fermarmi a cercare bar o macchinette quando sono in concentrazione. Per questo mi porto dietro le cuffie HyperX Cloud e la Coca-Cola Zero: con questa combo ho risolto il problema concentrazione e idratazione per tutta la sessione. Se ti va te la lascio qui, è una bella comodità."
+                message: "Ehi, ma ti stai preparando per lavorare? 🔥 Non so tu, ma io odio fermarmi a cercare bar o macchinette quando sono in concentrazione. Per questo mi porto dietro le cuffie HyperX Cloud e Powerade: con questa combo ho risolto il problema concentrazione e idratazione per tutta la sessione. Se ti va te la lascio qui, è una bella comodità."
             },
             {
                 product1: {
@@ -101,10 +101,10 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/Razer-DeathAdder-Essential-essenziale-sensore/dp/B092R5MCB3?mcid=b339f1fa54c632069402bc15331fe6e4&hvadid=700790378073&hvpos=&hvnetw=g&hvrand=17152808515394588193&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1363770907123&hvocijid=17152808515394588193-B092R5MCB3-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=1b32d94d6fc3b1cc750a1b8b4d8f4ca1&ref=_as_li_ss_tl"
                 },
                 product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                    name: "ALPRO SENZA ZUCCHERI, Bevanda alla MANDORLA",
+                    link: "https://www.amazon.it/ZUCCHERI-MANDORLA-vegetale-vitamine-confezioni/dp/B0DTYZX9NJ?&linkCode=ll2&tag=l0c39-21&linkId=06cd1283271cb70c174cc9964578baa7&ref=_as_li_ss_tl"
                 },
-                message: "Sei un gamer? 🎮 Guarda, con questo mouse wireless e Coca-Cola Zero hai tutto per le sessioni. Ecco i link!"
+                message: "Sei un gamer? 🎮 Guarda, con questo mouse wireless e bevanda vegetale hai tutto per sessioni leggere. Ecco i link!"
             },
             {
                 product1: {
@@ -267,10 +267,10 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/RE-manubri-regolabili-Chiusure-collegamento/dp/B09773F9BL?th=1&linkCode=ll2&tag=l0c39-21&linkId=a44d9f6049a02d0fe4b53915e085269f&ref=_as_li_ss_tl"
                 },
                 product2: {
-                    name: "Coca-Cola Zero Sugars - 6 x 1.5 Litre Bottles",
-                    link: "https://www.amazon.it/dp/B07169TL6S?&linkCode=ll2&tag=l0c39-21&linkId=fee7f8828d1c6533484601a142d62f49&ref=_as_li_ss_tl"
+                    name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
+                    link: "https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
                 },
-                message: "Ehi, ti alleni! 💪 Guarda, per l'allenamento perfetto servono manubri regolabili e una bevanda rinfrescante. Ecco i link, è fondamentale!"
+                message: "Ehi, ti alleni! 💪 Guarda, per l'allenamento perfetto servono manubri regolabili e Powerade per l'energia. Ecco i link, è fondamentale!"
             },
             {
                 product1: {
@@ -278,10 +278,77 @@ const ComboDatabase = {
                     link: "https://www.amazon.it/Tappetino-Spessore-Antiscivolo-KG-Qualit%C3%A0/dp/B01N67BRCF?th=1&linkCode=ll2&tag=l0c39-21&linkId=bb90c8bac4dbb7272f7d8192a73c4759&ref=_as_li_ss_tl"
                 },
                 product2: {
+                    name: "ALPRO SENZA ZUCCHERI, Bevanda alla MANDORLA",
+                    link: "https://www.amazon.it/ZUCCHERI-MANDORLA-vegetale-vitamine-confezioni/dp/B0DTYZX9NJ?&linkCode=ll2&tag=l0c39-21&linkId=06cd1283271cb70c174cc9964578baa7&ref=_as_li_ss_tl"
+                },
+                message: "Fai yoga? 🧘 Guarda, per la pratica perfetta servono un tappetino antiscivolo e bevanda vegetale senza zuccheri. Ecco i link, è essenziale!"
+            },
+            {
+                product1: {
+                    name: "Cintura Palestra per Sollevamento Pesi",
+                    link: "https://www.amazon.it/dp/B08X4Z7Z7Y?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Guanti Palestra Antiscivolo",
+                    link: "https://www.amazon.it/dp/B09Y8X7Z7Y?th=1&linkCode=ll2&tag=l0c39-21&linkId=def456&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi sollevare pesi in sicurezza? 🏋️ Con la cintura e i guanti antiscivolo hai tutto per allenarti senza rischi. Ecco i link!"
+            }
+        ]
+    },
+    "abiti-ciclismo": {
+        name: "Abiti Ciclismo",
+        triggerKeywords: ["ciclismo", "abbigliamento ciclismo", "maglia ciclismo", "tuta ciclismo", "pantaloni ciclismo", "salopette", "mtb", "bici", "bicicletta", "pedalare", "corsa"],
+        combos: [
+            {
+                product1: {
+                    name: "Tuta da ciclismo estiva da uomo",
+                    link: "https://www.amazon.it/Ciclismo-Abbigliamento-Pantaloni-Salopette-Asciugatura/dp/B09162QDBK?&linkCode=ll2&tag=l0c39-21&linkId=1d338d4295de711afa26fff4ee54bc8f&ref_=as_li_ss_tl"
+                },
+                product2: {
                     name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
                     link: "https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
                 },
-                message: "Fai yoga? 🧘 Guarda, per la pratica perfetta servono un tappetino antiscivolo e Powerade per idratarti. Ecco i link, è essenziale!"
+                message: "Ti piace pedalare? 🚴 Con la tuta ciclismo estiva e Powerade hai tutto per pedalare in comfort e idratarti. Ecco i link!"
+            },
+            {
+                product1: {
+                    name: "Maglia da ciclismo polsini Lycra",
+                    link: "https://www.amazon.it/Maglia-ciclismo-maniche-corte-polsini/dp/B085M8X5GX?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=27efc0182ae1dfe38346ee64f2e99c28&ref_=as_li_ss_tl"
+                },
+                product2: {
+                    name: "ALPRO SENZA ZUCCHERI, Bevanda alla MANDORLA",
+                    link: "https://www.amazon.it/ZUCCHERI-MANDORLA-vegetale-vitamine-confezioni/dp/B0DTYZX9NJ?&linkCode=ll2&tag=l0c39-21&linkId=06cd1283271cb70c174cc9964578baa7&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi pedalare in leggerezza? 🚵 Con la maglia polsini Lycra e bevanda vegetale hai tutto per sessioni leggere. Ecco i link!"
+            }
+        ]
+    },
+    "elite-gaming-gear": {
+        name: "Elite Gaming Gear",
+        triggerKeywords: ["gaming", "pc", "monitor", "cuffie", "mouse", "tastiera", "videogioco", "game", "gamer", "esport"],
+        combos: [
+            {
+                product1: {
+                    name: "HyperX Cloud II Cuffie Gaming",
+                    link: "https://www.amazon.it/HyperX-Cloud-Cuffie-Gaming-Mobile/dp/B00SAYCVTQ?mcid=c659dba90f523f5ca09a82b25c56a3e6&hvadid=700813659493&hvpos=&hvnetw=g&hvrand=12981572348516290815&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-381707145357&hvocijid=12981572348516290815-B00SAYCXWG-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=4e8af65a5e14abb66fa2f74389a0d44c&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Logitech G502 Lightspeed Wireless",
+                    link: "https://www.amazon.it/Logitech-G502-Lightspeed-Wireless-Lightsync/dp/B07QKC4WWD?mcid=9805ea97ad553d298b869eafe699dd3d&hvadid=700813659358&hvpos=&hvnetw=g&hvrand=17366854546323660876&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-749874961600&hvocijid=17366854546323660876-B07QKC4WWD-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=53bc5a82916d77f9c8f0f70b400cbf3d&ref=_as_li_ss_tl"
+                },
+                message: "Sei un gamer pro? 🎮 Con le cuffie HyperX Cloud II e il mouse G502 hai tutto per dominare le sessioni. Ecco i link!"
+            },
+            {
+                product1: {
+                    name: "ASUS GT-AXE11000 Router Gaming",
+                    link: "https://www.amazon.it/ASUS-GT-AXE11000-Ethernet-Sicurezza-Dispositivi/dp/B09Q67CYMC?mcid=621c1ee6a4033ed5bb2b31db55a5e9ba&hvadid=700813659490&hvpos=&hvnetw=g&hvrand=3222656381519133428&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1627260007868&hvocijid=3222656381519133428-B09Q67CYMC-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=9e0f061013ba7c4c032be94ad458d3d1&ref=_as_li_ss_tl"
+                },
+                product2: {
+                    name: "Powerade Orange Sport Drink – 12 Bottiglie da 500 ml",
+                    link: "https://www.amazon.it/dp/B00Y8D9P6K?&linkCode=ll2&tag=l0c39-21&linkId=e8af102093795fae01900556a8432f07&ref=_as_li_ss_tl"
+                },
+                message: "Vuoi gaming senza lag? 🚀 Con il router ASUS GT-AXE11000 e Powerade hai tutto per sessioni fluide. Ecco i link!"
             }
         ]
     },
