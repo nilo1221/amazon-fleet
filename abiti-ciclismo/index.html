@@ -81,6 +81,7 @@
             box-shadow: 0 2px 8px rgba(0, 200, 83, 0.3);
         }
     </style>
+    <link rel="stylesheet" href="bot/ai-chat-minimal.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -268,5 +269,31 @@
         </div>
     </div>
 
+    <script src="bot/ai-chat-minimal.js"></script>
+    <!-- AI Chat Button -->
+    <div id="ai-chat-button" onclick="toggleChat()" title="Apri chat assistente">
+        <img src="logo/logo.png" alt="Smart Choices Guide" class="chat-button-logo">
+    </div>
+
+    <!-- AI Chat Window -->
+    <div id="ai-chat-window">
+        <div class="chat-header">
+            <div>
+                <h5>Assistente Smart</h5>
+                <small>Online</small>
+            </div>
+            <button class="close-btn" onclick="toggleChat()" title="Chiudi chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Scrivi il tuo messaggio...">
+            <button onclick="sendMessage()" title="Invia messaggio">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
