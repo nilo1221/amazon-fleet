@@ -644,19 +644,19 @@ const relatedCategories = {
 function toggleChat() {
     const chatWindow = document.getElementById('ai-chat-window');
     const chatButton = document.getElementById('ai-chat-button');
-    
+
     if (!chatWindow || !chatButton) {
         console.error('Chat elements not found');
         return;
     }
-    
+
     if (chatWindow.classList.contains('active')) {
         chatWindow.classList.remove('active');
         chatButton.classList.remove('active');
     } else {
         chatWindow.classList.add('active');
         chatButton.classList.add('active');
-        
+
         // Show welcome message with macro-categories on first open
         const chatMessages = document.getElementById('chat-messages');
         if (chatMessages && chatMessages.children.length === 0) {
@@ -664,6 +664,24 @@ function toggleChat() {
         }
     }
 }
+
+// Open chat via URL trigger
+function openChatViaTrigger() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const hash = window.location.hash;
+
+    // Check for ?chat=open or #chat trigger
+    if (urlParams.get('chat') === 'open' || hash === '#chat') {
+        setTimeout(() => {
+            toggleChat();
+        }, 500); // Small delay to ensure elements are loaded
+    }
+}
+
+// Check for chat trigger on page load
+document.addEventListener('DOMContentLoaded', () => {
+    openChatViaTrigger();
+});
 
 // Show welcome message with macro-categories
 function showWelcomeMessage() {
