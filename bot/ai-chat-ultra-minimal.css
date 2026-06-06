@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 100000;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
     transition: transform 0.3s ease;
     color: white;
@@ -37,7 +37,7 @@
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     display: none;
     flex-direction: column;
-    z-index: 9998;
+    z-index: 100000;
 }
 
 .chat-header {
