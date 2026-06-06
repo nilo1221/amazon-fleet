@@ -201,6 +201,39 @@
     }
 }
 
+/* Mobile Responsive per Dynamic Comparison Carousel */
+@media (max-width: 768px) {
+    .comparison-side-by-side {
+        padding: 15px;
+    }
+
+    .comparison-side-by-side .card-body {
+        padding: 15px !important;
+    }
+
+    .comparison-side-by-side .display-5 {
+        font-size: 1.8rem;
+    }
+
+    .comparison-side-by-side .mb-4 {
+        margin-bottom: 1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .comparison-side-by-side {
+        padding: 10px;
+    }
+
+    .comparison-side-by-side .card-body {
+        padding: 10px !important;
+    }
+
+    .comparison-side-by-side .display-5 {
+        font-size: 1.5rem;
+    }
+}
+
 /* Masonry Card Gradients */
 .masonry-card-gradient-cucina {
     background: linear-gradient(135deg, #7B241C 0%, #C0392B 50%, #D35400 100%);
@@ -490,6 +523,11 @@
 
 /* Mobile Responsive per Comparison */
 @media (max-width: 991px) {
+    .comparison-side-by-side {
+        padding: 20px;
+        margin-top: 15px;
+    }
+
     .comparison-header {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -564,6 +602,127 @@
     .comparison-cell .fa-trophy {
         font-size: 0.9rem;
         padding: 3px;
+    }
+}
+
+/* Mobile Responsive per Trust Section */
+@media (max-width: 768px) {
+    .container.my-5 .col-lg-10 {
+        max-width: 100%;
+    }
+
+    .container.my-5 .p-4 {
+        padding: 20px !important;
+    }
+
+    .container.my-5 .fa-2x {
+        font-size: 1.5rem;
+    }
+
+    .container.my-5 h3 {
+        font-size: 1.3rem;
+    }
+
+    .container.my-5 .lead {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container.my-5 .p-4 {
+        padding: 15px !important;
+    }
+
+    .container.my-5 h3 {
+        font-size: 1.1rem;
+    }
+
+    .container.my-5 .lead {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile Responsive per Other Categories Section */
+@media (max-width: 768px) {
+    .site-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .site-card {
+        padding: 15px;
+    }
+
+    .site-card h5 {
+        font-size: 0.95rem;
+    }
+
+    .site-card p {
+        font-size: 0.8rem;
+    }
+
+    .site-card i {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .site-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .site-card {
+        padding: 12px;
+    }
+
+    .site-card h5 {
+        font-size: 0.9rem;
+    }
+
+    .site-card p {
+        font-size: 0.75rem;
+    }
+
+    .site-card i {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile Responsive per Features Section */
+@media (max-width: 768px) {
+    .feature-box {
+        padding: 20px;
+    }
+
+    .feature-box h4 {
+        font-size: 1.1rem;
+    }
+
+    .feature-box p {
+        font-size: 0.9rem;
+    }
+
+    .feature-box i {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-box {
+        padding: 15px;
+    }
+
+    .feature-box h4 {
+        font-size: 1rem;
+    }
+
+    .feature-box p {
+        font-size: 0.85rem;
+    }
+
+    .feature-box i {
+        font-size: 1.5rem;
     }
 }
 
