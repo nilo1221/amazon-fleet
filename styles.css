@@ -210,6 +210,40 @@
     overflow: hidden;
 }
 
+/* Mobile Responsive per Hero Section */
+@media (max-width: 768px) {
+    .hero-section-animated {
+        min-height: 50vh;
+        background-size: contain;
+        background-position: center;
+    }
+    
+    .hero-glassmorphism {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+    
+    .hero-glassmorphism h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-glassmorphism p {
+        font-size: 1rem;
+    }
+    
+    .hero-icon-wrapper {
+        display: none;
+    }
+    
+    .hero-section-animated > .container > .row {
+        justify-content: center;
+    }
+    
+    .hero-section-animated > .container > .row > .col-lg-7 {
+        max-width: 100%;
+    }
+}
+
 .hero-section-animated::before {
     content: '';
     position: absolute;
