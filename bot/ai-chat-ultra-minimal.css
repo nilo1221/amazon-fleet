@@ -14,16 +14,16 @@
     z-index: 9999;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
     transition: transform 0.3s ease;
+    color: white;
+    font-size: 28px;
 }
 
 #ai-chat-button:hover {
     transform: scale(1.1);
 }
 
-#ai-chat-button img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+#ai-chat-button i {
+    color: white;
 }
 
 #ai-chat-window {
