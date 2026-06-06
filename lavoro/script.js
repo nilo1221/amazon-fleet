@@ -9,142 +9,6 @@ function showLoading() {
     }
 }
 
-// Dynamic Product Carousel
-let allProducts = [];
-let currentPage = 0;
-const productsPerPage = 4; // Show 4 products per page (2x2 grid)
-
-// Load products from products.json
-async function loadProducts() {
-    try {
-        const response = await fetch('products.json');
-        allProducts = await response.json();
-        renderProducts();
-        updateProductCount();
-    } catch (error) {
-        console.error('Error loading products:', error);
-    }
-}
-
-// Render products for current page
-function renderProducts() {
-    const container = document.getElementById('featured-products');
-    if (!container) return;
-
-    container.innerHTML = '';
-
-    const startIndex = currentPage * productsPerPage;
-    const endIndex = startIndex + productsPerPage;
-    const productsToShow = allProducts.slice(startIndex, endIndex);
-
-    productsToShow.forEach(product => {
-        const productCard = createProductCard(product);
-        container.appendChild(productCard);
-    });
-
-    // Update navigation buttons visibility
-    updateNavigationButtons();
-}
-
-// Create product card HTML
-function createProductCard(product) {
-    const col = document.createElement('div');
-    col.className = 'col-md-6';
-
-    const card = document.createElement('div');
-    card.className = 'card h-100 border-0 shadow-sm';
-
-    const cardBody = document.createElement('div');
-    cardBody.className = 'card-body p-4 text-center';
-
-    const iconDiv = document.createElement('div');
-    iconDiv.className = 'text-primary mb-3';
-    iconDiv.innerHTML = `<i class="fas ${product.icon || 'fa-box'} fa-3x"></i>`;
-
-    const title = document.createElement('h5');
-    title.className = 'card-title fw-bold';
-    title.textContent = product.name;
-
-    const category = document.createElement('p');
-    category.className = 'card-text text-muted small';
-    category.textContent = product.category;
-
-    const link = document.createElement('a');
-    link.href = product.link;
-    link.target = '_blank';
-    link.rel = 'nofollow noopener';
-    link.className = 'btn btn-warning fw-bold mt-3';
-    link.innerHTML = '<i class="fab fa-amazon me-2"></i>Vedi su Amazon';
-
-    cardBody.appendChild(iconDiv);
-    cardBody.appendChild(title);
-    cardBody.appendChild(category);
-    cardBody.appendChild(link);
-
-    card.appendChild(cardBody);
-    col.appendChild(card);
-
-    return col;
-}
-
-// Update navigation buttons
-function updateNavigationButtons() {
-    const prevBtn = document.getElementById('prev-products');
-    const nextBtn = document.getElementById('next-products');
-
-    if (prevBtn) {
-        prevBtn.disabled = currentPage === 0;
-        prevBtn.style.opacity = currentPage === 0 ? '0.5' : '1';
-    }
-
-    if (nextBtn) {
-        const maxPage = Math.ceil(allProducts.length / productsPerPage) - 1;
-        nextBtn.disabled = currentPage >= maxPage;
-        nextBtn.style.opacity = currentPage >= maxPage ? '0.5' : '1';
-    }
-}
-
-// Navigation handlers
-function goToNextPage() {
-    const maxPage = Math.ceil(allProducts.length / productsPerPage) - 1;
-    if (currentPage < maxPage) {
-        currentPage++;
-        renderProducts();
-    }
-}
-
-function goToPrevPage() {
-    if (currentPage > 0) {
-        currentPage--;
-        renderProducts();
-    }
-}
-
-// Update product count display
-function updateProductCount() {
-    const countElements = document.querySelectorAll('.product-count');
-    countElements.forEach(el => {
-        el.textContent = allProducts.length;
-    });
-}
-
-// Initialize carousel on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', function() {
-    loadProducts();
-
-    // Navigation button listeners
-    const prevBtn = document.getElementById('prev-products');
-    const nextBtn = document.getElementById('next-products');
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', goToPrevPage);
-    }
-
-    if (nextBtn) {
-        nextBtn.addEventListener('click', goToNextPage);
-    }
-});
-
 // Bootstrap 5 Dropdown Submenu Support
 document.addEventListener('DOMContentLoaded', function() {
     // Enable dropdown submenus in Bootstrap 5
@@ -174,6 +38,111 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!submenu.contains(e.target)) {
                 menu.classList.remove('show');
             }
+        });
+    });
+});
+
+// Category Menu Interactive
+const categoriesData = {
+    casa: {
+        color: '#FF9900',
+        niches: [
+            {name: 'Cucina Tech', path: 'cucina-elettrodomestici', icon: 'fa-utensils', count: 28},
+            {name: 'Smart Home', path: 'smart-home-domotica', icon: 'fa-box', count: 12},
+            {name: 'Arredamento', path: 'arredamento-casa', icon: 'fa-couch', count: 15}
+        ]
+    },
+    tech: {
+        color: '#3498DB',
+        niches: [
+            {name: 'Gaming Gear', path: 'elite-gaming-gear', icon: 'fa-gamepad', count: 28},
+            {name: 'Smartphone', path: 'smartphone-tech', icon: 'fa-mobile-alt', count: 20},
+            {name: 'Tech', path: 'tech', icon: 'fa-microchip', count: 25},
+            {name: 'Fotografia', path: 'fotografia-mobile', icon: 'fa-camera', count: 18}
+        ]
+    },
+    moda: {
+        color: '#E74C3C',
+        niches: [
+            {name: 'Moda Donna', path: 'moda-donna', icon: 'fa-female', count: 22},
+            {name: 'Moda Uomo', path: 'moda-uomo', icon: 'fa-male', count: 18},
+            {name: 'Accessori', path: 'accessori-moda', icon: 'fa-gem', count: 15},
+            {name: 'Profumi', path: 'profumi-bellezza', icon: 'fa-spray-can', count: 12},
+            {name: 'Benessere', path: 'benessere-cura-personale', icon: 'fa-spa', count: 20},
+            {name: 'Cinema & TV', path: 'cinema-tv', icon: 'fa-film', count: 38},
+            {name: 'Hair Styling', path: 'hair-styling-barber-shop', icon: 'fa-cut', count: 15}
+        ]
+    },
+    sport: {
+        color: '#27AE60',
+        niches: [
+            {name: 'Fitness', path: 'fitness-casa', icon: 'fa-dumbbell', count: 25},
+            {name: 'Outdoor', path: 'outdoor-camping', icon: 'fa-campground', count: 18},
+            {name: 'Mare & Spiaggia', path: 'mare-spiaggia', icon: 'fa-umbrella-beach', count: 15},
+            {name: 'Softair', path: 'softair', icon: 'fa-crosshairs', count: 20}
+        ]
+    },
+    intrattenimento: {
+        color: '#9B59B6',
+        niches: [
+            {name: 'Giochi da Tavolo', path: 'giochi-da-tavolo', icon: 'fa-dice', count: 16},
+            {name: 'DVD & Blu-ray', path: 'dvd-bluray', icon: 'fa-compact-disc', count: 14},
+            {name: 'Libri & E-reader', path: 'libri-ereader', icon: 'fa-book', count: 20},
+            {name: 'Manga & Anime', path: 'manga-anime', icon: 'fa-star', count: 25}
+        ]
+    },
+    altro: {
+        color: '#95A5A6',
+        niches: [
+            {name: 'Viaggi', path: 'viaggi-vacanze', icon: 'fa-plane', count: 18},
+            {name: 'Ufficio', path: 'ufficio-produttivo', icon: 'fa-briefcase', count: 15},
+            {name: 'Pet Care', path: 'pet-care-intelligente', icon: 'fa-paw', count: 12},
+            {name: 'Sostenibilità', path: 'sostenibilita-eco-friendly', icon: 'fa-leaf', count: 10},
+            {name: 'Abbigliamento Lavoro', path: 'abbigliamento-lavoro', icon: 'fa-hard-hat', count: 8}
+        ]
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const nichesDisplay = document.getElementById('nichesDisplay');
+    
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            const categoryData = categoriesData[category];
+            
+            // Remove active class from all buttons
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Update CSS variable for color
+            nichesDisplay.style.setProperty('--category-color', categoryData.color);
+            
+            // Generate niches HTML
+            let nichesHTML = '<div class="niches-grid">';
+            categoryData.niches.forEach(niche => {
+                nichesHTML += `
+                    <a href="${niche.path}/index.html" class="niche-card-modern">
+                        <div class="niche-icon-modern">
+                            <i class="fas ${niche.icon}"></i>
+                        </div>
+                        <div class="niche-info-modern">
+                            <div class="niche-name-modern">${niche.name}</div>
+                            <div class="niche-count-modern">${niche.count} prodotti</div>
+                        </div>
+                        <div class="niche-arrow-modern">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                `;
+            });
+            nichesHTML += '</div>';
+            
+            // Update display with animation
+            nichesDisplay.innerHTML = nichesHTML;
         });
     });
 });

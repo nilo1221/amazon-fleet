@@ -11,6 +11,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../bot/ai-chat-simple.css">
+    <script src="../bot/ai-chat-simple.js"></script>
     
     <style>
         :root {
@@ -1523,24 +1525,119 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-2">
-                <i class="fas fa-shopping-cart me-2"></i>
-                Smart Choices Guide - La tua guida per acquisti intelligenti
-            </p>
-            <p class="text-muted small">
-                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
-            </p>
-            <div class="mt-3">
-                <a href="../index.html" class="text-white me-3">
-                    <i class="fas fa-home me-1"></i>Torna alla Home
-                </a>
+    <footer class="bg-dark text-white py-5" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-4">
+                    <h5 class="fw-bold mb-3 text-center"><i class="fas fa-shopping-cart me-2" aria-hidden="true"></i>Smart Choices Guide</h5>
+                    <p class="text-white-50 text-center">La tua guida per acquisti intelligenti. Recensioni, confronti e offerte esclusive per ogni categoria di prodotti.</p>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            <div class="row">
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3 text-info">Categorie Popolari</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../cucina-elettrodomestici/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-fire-burner me-2" aria-hidden="true"></i>Cucina & Elettrodomestici</a></li>
+                        <li class="mb-2"><a href="../cinema-tv/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-film me-2" aria-hidden="true"></i>Cinema & TV</a></li>
+                        <li class="mb-2"><a href="../elite-gaming-gear/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-gamepad me-2" aria-hidden="true"></i>Gaming Gear</a></li>
+                        <li class="mb-2"><a href="../sostenibilita-eco-friendly/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-leaf me-2" aria-hidden="true"></i>Sostenibilità</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3 text-info">Altre Categorie</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../smart-home-domotica/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-box me-2" aria-hidden="true"></i>Smart Home</a></li>
+                        <li class="mb-2"><a href="../fitness-casa/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-dumbbell me-2" aria-hidden="true"></i>Fitness Casa</a></li>
+                        <li class="mb-2"><a href="../libri-ereader/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-book me-2" aria-hidden="true"></i>Libri & E-Reader</a></li>
+                        <li class="mb-2"><a href="../arredamento-casa/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-couch me-2" aria-hidden="true"></i>Arredamento</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3 text-info">Link Utili</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-home me-2" aria-hidden="true"></i>Home</a></li>
+                        <li class="mb-2"><a href="../index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-info-circle me-2" aria-hidden="true"></i>Chi Siamo</a></li>
+                        <li class="mb-2"><a href="../index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-exclamation-triangle me-2" aria-hidden="true"></i>Disclaimer</a></li>
+                        <li class="mb-2"><a href="../index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-shield-alt me-2" aria-hidden="true"></i>Privacy</a></li>
+                        <li class="mb-2"><a href="../index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-envelope me-2" aria-hidden="true"></i>Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="amazon-disclaimer bg-dark bg-opacity-50 p-3 rounded border border-secondary">
+                        <p class="mb-2 text-warning fw-bold"><i class="fab fa-amazon me-2" aria-hidden="true"></i>Disclaimer Amazon Associates</p>
+                        <p class="text-white-50 mb-0">In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche. Qualsiasi prezzo e informazioni sulla disponibilità visualizzati sul sito Amazon al momento dell'acquisto si applicheranno all'acquisto di questo prodotto. Questo sito è partecipante al Programma Affiliazione Amazon EU, un programma di affiliazione che permette ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-2 text-white">
+                        <i class="fas fa-shopping-cart me-2" aria-hidden="true"></i>
+                        Smart Choices Guide - La tua guida per acquisti intelligenti
+                    </p>
+                    <p class="text-white-50 mb-3">
+                        Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale | © 2026 Tutti i diritti riservati
+                    </p>
+                    <div class="mt-3">
+                        <a href="../index.html" class="btn btn-outline-warning btn-sm me-2">
+                            <i class="fas fa-home me-2" aria-hidden="true"></i>Home
+                        </a>
+                        <a href="../index.html" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-th-large me-2" aria-hidden="true"></i>Tutte le Categorie
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AI Chat Button -->
+    <div id="ai-chat-button" onclick="toggleChat()">
+        <img src="../images/logo.png" alt="Smart Choices Guide" class="chat-button-logo" loading="lazy">
+    </div>
+
+    <!-- AI Chat Window -->
+    <div id="ai-chat-window">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="header-content">
+                <img src="../images/logo.png" alt="Smart Choices Guide Logo" class="chat-bot-logo" loading="lazy">
+                <div>
+                    <h5>Assistente Smart</h5>
+                    <small>Online</small>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()" title="Chiudi chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Chat Messages -->
+        <div id="chat-messages" class="chat-messages">
+            <!-- Messages will be loaded dynamically via JavaScript -->
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <button id="mic-button" onclick="toggleVoiceRecognition()" title="Parla con l'assistente">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <input type="text" id="chat-input" placeholder="Scrivi il tuo messaggio...">
+            <button onclick="sendMessage()" title="Invia messaggio">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
