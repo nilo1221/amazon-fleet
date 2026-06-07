@@ -313,6 +313,11 @@
 
     .hero-section-animated > .container > .row > .col-lg-7 {
         max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .hero-section-animated > .container > .row > .col-lg-5 {
+        display: none;
     }
 
     .hero-glassmorphism .badge {
@@ -323,6 +328,18 @@
     .hero-glassmorphism .btn {
         font-size: 0.9rem;
         padding: 10px 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .hero-section-animated > .container > .row > .col-lg-7 {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+
+    .hero-section-animated > .container > .row > .col-lg-5 {
+        flex: 0 0 30%;
+        max-width: 30%;
     }
 }
 
