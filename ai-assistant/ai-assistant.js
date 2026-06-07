@@ -198,25 +198,9 @@
                         </button>
                     </div>
                     <div class="${this.config.cssPrefix}modal-body">
-                        <div class="${this.config.cssPrefix}combo-panel">
-                            <div class="${this.config.cssPrefix}combo-section">
-                                <div class="${this.config.cssPrefix}loading">
-                                    <div class="${this.config.cssPrefix}spinner"></div>
-                                    Caricamento combo...
-                                </div>
-                            </div>
-                        </div>
-                        <div class="${this.config.cssPrefix}chat-panel">
-                            <div class="${this.config.cssPrefix}greeting-section">
-                                <div class="${this.config.cssPrefix}loading">
-                                    <div class="${this.config.cssPrefix}spinner"></div>
-                                    Caricamento...
-                                </div>
-                            </div>
-                            <div class="${this.config.cssPrefix}categories-section">
-                            </div>
-                            <div class="${this.config.cssPrefix}links-section">
-                            </div>
+                        <div class="${this.config.cssPrefix}loading">
+                            <div class="${this.config.cssPrefix}spinner"></div>
+                            Caricamento...
                         </div>
                     </div>
                 </div>
@@ -484,22 +468,11 @@
         // ========== GENERAZIONE CONTENUTO MODAL ==========
         generateModalContent: function() {
             try {
-                const greetingSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'greeting-section');
-                const categoriesSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-section');
-                const comboSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'combo-section');
-                const linksSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'links-section');
-                
-                // Mostra loading
-                greetingSection.innerHTML = `
+                const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
+                body.innerHTML = `
                     <div class="${this.config.cssPrefix}loading">
                         <div class="${this.config.cssPrefix}spinner"></div>
                         Caricamento...
-                    </div>
-                `;
-                comboSection.innerHTML = `
-                    <div class="${this.config.cssPrefix}loading">
-                        <div class="${this.config.cssPrefix}spinner"></div>
-                        Caricamento combo...
                     </div>
                 `;
                 
@@ -509,18 +482,13 @@
                     const niches = this.getSuggestedNiches();
                     const combo = this.getThemedCombo();
                     
-                    // Sinistra: Chat panel
-                    greetingSection.innerHTML = greeting;
-                    categoriesSection.innerHTML = niches;
-                    linksSection.innerHTML = `
+                    body.innerHTML = `
+                        ${greeting}
+                        ${niches}
+                        ${combo}
                         ${this.getMusicLinks()}
                         ${this.getBountyLink()}
                     `;
-                    
-                    // Destra: Combo panel
-                    if (combo) {
-                        comboSection.innerHTML = combo;
-                    }
                 }, 500);
                 
             } catch (error) {
@@ -668,11 +636,8 @@
         
         // ========== RIGENERA CONTENUTO ==========
         regenerateContent: function() {
-            const greetingSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'greeting-section');
-            const categoriesSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-section');
-            const comboSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'combo-section');
-            const linksSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'links-section');
-            if (!greetingSection || !categoriesSection || !comboSection || !linksSection) {
+            const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
+            if (!body) {
                 return;
             }
             
@@ -680,27 +645,19 @@
             const niches = this.getSuggestedNiches();
             const combo = this.getRandomCombo();
             
-            // Sinistra: Chat panel
-            greetingSection.innerHTML = greeting;
-            categoriesSection.innerHTML = niches;
-            linksSection.innerHTML = `
+            body.innerHTML = `
+                ${greeting}
+                ${niches}
+                ${combo}
                 ${this.getMusicLinks()}
                 ${this.getBountyLink()}
             `;
-            
-            // Destra: Combo panel
-            if (combo) {
-                comboSection.innerHTML = combo;
-            }
         },
         
         // ========== MOSTRA LINK NICCHIA ==========
         showNicheLinks: function(niche, nicheUrl) {
-            const greetingSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'greeting-section');
-            const categoriesSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-section');
-            const comboSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'combo-section');
-            const linksSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'links-section');
-            if (!greetingSection || !categoriesSection || !comboSection || !linksSection) {
+            const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
+            if (!body) {
                 return;
             }
             
@@ -756,16 +713,15 @@
             // Genera Pitch se la nicchia ha selling_point
             const pitchHTML = this.renderPitch(niche);
             
-            // Sinistra: Chat panel
-            greetingSection.innerHTML = this.getGreeting();
-            categoriesSection.innerHTML = pitchHTML;
-            linksSection.innerHTML = linksHTML;
-            
-            // Destra: Combo panel
+            // Combo dinamica (se presente)
             const combo = this.getThemedCombo();
-            if (combo) {
-                comboSection.innerHTML = combo;
-            }
+            
+            body.innerHTML = `
+                ${this.getGreeting()}
+                ${pitchHTML}
+                ${linksHTML}
+                ${combo}
+            `;
         },
         
         // ========== RENDER PITCH ==========
@@ -1096,8 +1052,8 @@
         // ========== ADD NEW COMBO ==========
         addNewCombo: function() {
             try {
-                const comboSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'combo-section');
-                if (!comboSection) {
+                const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
+                if (!body) {
                     return;
                 }
                 
@@ -1105,15 +1061,15 @@
                 const combo = this.getComboWithPriority();
                 
                 if (combo) {
-                    // Appendi nuova combo (Split Screen: più combo visibili)
+                    // Appendi nuova combo (chat singola: più combo visibili)
                     const comboDiv = document.createElement('div');
                     comboDiv.innerHTML = combo;
                     comboDiv.style.animation = 'fadeIn 0.5s ease';
                     comboDiv.style.marginBottom = '15px';
-                    comboSection.appendChild(comboDiv);
+                    body.appendChild(comboDiv);
                     
                     // Scroll automatico all'ultima combo
-                    comboSection.scrollTop = comboSection.scrollHeight;
+                    body.scrollTop = body.scrollHeight;
                     
                     this.log('Nuova combo aggiunta');
                 }
@@ -1247,9 +1203,9 @@
         
         // ========== SHOW ERROR ==========
         showError: function(message) {
-            const greetingSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'greeting-section');
-            if (greetingSection) {
-                greetingSection.innerHTML = `
+            const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
+            if (body) {
+                body.innerHTML = `
                     <div class="${this.config.cssPrefix}error">
                         <i class="fas fa-exclamation-triangle"></i>
                         ${message}

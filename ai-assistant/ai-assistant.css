@@ -222,52 +222,6 @@
     overflow-y: auto;
 }
 
-/* ========== COMBO PANEL (Alto - Destra) ========== */
-.sc-ai-combo-panel {
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e9ecef;
-    max-height: 40vh;
-    overflow-y: auto;
-}
-
-/* ========== CHAT PANEL (Basso - Sinistra) ========== */
-.sc-ai-chat-panel {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    padding-top: 15px;
-    overflow-y: auto;
-}
-
-/* ========== GREETING SECTION ========== */
-.sc-ai-greeting-section {
-    flex: 0 0 auto;
-    padding-bottom: 15px;
-}
-
-/* ========== CATEGORIES SECTION ========== */
-.sc-ai-categories-section {
-    flex: 1 1 auto;
-    padding: 15px 0;
-    overflow-y: auto;
-}
-
-/* ========== COMBO SECTION ========== */
-.sc-ai-combo-section {
-    flex: 1 1 auto;
-    min-height: 100%;
-}
-
-/* ========== LINKS SECTION ========== */
-.sc-ai-links-section {
-    flex: 0 0 auto;
-    padding-top: 15px;
-    border-top: 1px solid #e9ecef;
-}
-
 /* ========== MESSAGGIO SALUTO ========== */
 .sc-ai-greeting {
     font-size: 1.1rem;
