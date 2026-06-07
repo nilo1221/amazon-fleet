@@ -36,6 +36,66 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #ffffff;
         }
+
+        /* ========== BANNER VERTICALE COMBO LATO SINISTRO ========== */
+        .combo-sidebar {
+            position: fixed;
+            left: 0;
+            top: 56px;
+            width: 250px;
+            height: calc(100vh - 56px);
+            background: linear-gradient(180deg, #A0522D 0%, #DAA520 100%);
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .combo-sidebar-header {
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .combo-sidebar-item {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .combo-sidebar-item h4 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .combo-sidebar-item .product-name {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .combo-sidebar-item .cta-button {
+            display: inline-block;
+            background: #A0522D;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .container {
+            margin-left: 250px;
+            padding: 20px;
+        }
         
         .hero-section {
             background: linear-gradient(135deg, #A0522D 0%, #E8E4C9 50%, #DAA520 100%);
@@ -125,6 +185,20 @@
     
     <!-- Niche Identity Bar -->
     <div class="niche-identity-bar"></div>
+
+    <!-- Banner Verticale Combo Lato Sinistro -->
+    <div class="combo-sidebar">
+        <div class="combo-sidebar-header">
+            <i class="fas fa-fire"></i>
+            <span>Combo del Momento</span>
+        </div>
+        <div id="combo-sidebar-content">
+            <div class="loading">
+                <div class="spinner"></div>
+                Caricamento combo...
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-section">

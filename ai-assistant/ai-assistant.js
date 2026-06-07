@@ -56,6 +56,9 @@
                 // Carica prodotti dalla pagina corrente
                 this.loadPageProducts();
                 
+                // Genera contenuto banner sidebar combo
+                this.generateSidebarComboContent();
+                
                 // Crea bottone flottante
                 this.createFloatButton();
                 
@@ -79,6 +82,9 @@
                 
                 // Inizializza timer aiuto proattivo
                 this.initProactiveHelp();
+                
+                // Avvia timer combo periodiche
+                this.startComboTimer();
                 
                 this.isInitialized = true;
                 this.log('Inizializzazione completata');
@@ -462,6 +468,28 @@
                 this.state.toast.classList.remove(this.config.cssPrefix + 'show');
             } catch (error) {
                 this.error('Errore nascondi toast:', error);
+            }
+        },
+        
+        // ========== GENERAZIONE CONTENUTO SIDEBAR COMBO ==========
+        generateSidebarComboContent: function() {
+            try {
+                const sidebarContent = document.getElementById('combo-sidebar-content');
+                if (!sidebarContent) {
+                    this.log('Elemento sidebar combo non trovato');
+                    return;
+                }
+                
+                // Simula caricamento
+                setTimeout(() => {
+                    const combo = this.getThemedCombo();
+                    if (combo) {
+                        sidebarContent.innerHTML = combo;
+                    }
+                    this.log('Contenuto sidebar combo generato');
+                }, 500);
+            } catch (error) {
+                this.error('Errore generazione contenuto sidebar combo:', error);
             }
         },
         
@@ -1052,8 +1080,8 @@
         // ========== ADD NEW COMBO ==========
         addNewCombo: function() {
             try {
-                const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
-                if (!body) {
+                const sidebarContent = document.getElementById('combo-sidebar-content');
+                if (!sidebarContent) {
                     return;
                 }
                 
@@ -1061,17 +1089,11 @@
                 const combo = this.getComboWithPriority();
                 
                 if (combo) {
-                    // Appendi nuova combo (chat singola: più combo visibili)
-                    const comboDiv = document.createElement('div');
-                    comboDiv.innerHTML = combo;
-                    comboDiv.style.animation = 'fadeIn 0.5s ease';
-                    comboDiv.style.marginBottom = '15px';
-                    body.appendChild(comboDiv);
+                    // Sostituisci combo esistente (sidebar: una combo alla volta)
+                    sidebarContent.innerHTML = combo;
+                    sidebarContent.style.animation = 'fadeIn 0.5s ease';
                     
-                    // Scroll automatico all'ultima combo
-                    body.scrollTop = body.scrollHeight;
-                    
-                    this.log('Nuova combo aggiunta');
+                    this.log('Nuova combo aggiunta al sidebar');
                 }
             } catch (error) {
                 this.error('Errore aggiunta combo:', error);
