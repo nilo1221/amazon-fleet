@@ -11,7 +11,11 @@
       "primaryColor": "#5D6D7E",
       "accentColor": "#2C3E50",
       "macroCategory": "moda",
-      "url": "moda/abbigliamento-lavoro/index.html"
+      "url": "moda/abbigliamento-lavoro/index.html",
+      "song": "Workout & Focus",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX76Wlfdnj7AP",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "accessori-moda",
@@ -24,7 +28,11 @@
       "primaryColor": "#7A1B9A",
       "accentColor": "#4A148C",
       "macroCategory": "moda",
-      "url": "moda/accessori-moda/index.html"
+      "url": "moda/accessori-moda/index.html",
+      "song": "Fashion & Style",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "moda-donna",
@@ -37,7 +45,11 @@
       "primaryColor": "#E91E63",
       "accentColor": "#8E44AD",
       "macroCategory": "moda",
-      "url": "moda/moda-donna/index.html"
+      "url": "moda/moda-donna/index.html",
+      "song": "Women's Hits",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "moda-uomo",
@@ -50,7 +62,11 @@
       "primaryColor": "#3F51B5",
       "accentColor": "#1A237E",
       "macroCategory": "moda",
-      "url": "moda/moda-uomo/index.html"
+      "url": "moda/moda-uomo/index.html",
+      "song": "Men's Hits",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4OzukJlX6mO",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "abbigliamento-cinema-tv",
@@ -63,7 +79,11 @@
       "primaryColor": "#4A148C",
       "accentColor": "#0D47A1",
       "macroCategory": "moda",
-      "url": "moda/abbigliamento-cinema-tv/index.html"
+      "url": "moda/abbigliamento-cinema-tv/index.html",
+      "song": "Movie Soundtracks",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX5E1ilKI8s7F",
+      "amazonServiceType": "prime-video",
+      "amazonServiceLink": "https://www.primevideo.com/?tag=l0c39-21"
     },
     {
       "id": "gadget-tech",
@@ -76,7 +96,11 @@
       "primaryColor": "#008B8B",
       "accentColor": "#708090",
       "macroCategory": "tech",
-      "url": "tech/gadget-tech/index.html"
+      "url": "tech/gadget-tech/index.html",
+      "song": "Tech & Electronic",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4JQHpD7jL9K",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "smartphone",
@@ -89,7 +113,11 @@
       "primaryColor": "#000000",
       "accentColor": "#808080",
       "macroCategory": "tech",
-      "url": "tech/smartphone-tech/index.html"
+      "url": "tech/smartphone-tech/index.html",
+      "song": "Pop Hits",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX1lVhptIYR7u",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "smart-home-domotica",
@@ -102,7 +130,11 @@
       "primaryColor": "#0097A7",
       "accentColor": "#1A5276",
       "macroCategory": "tech",
-      "url": "tech/smart-home-domotica/index.html"
+      "url": "tech/smart-home-domotica/index.html",
+      "song": "Chill & Relax",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "fotografia-mobile",
@@ -115,7 +147,11 @@
       "primaryColor": "#3949AB",
       "accentColor": "#1A237E",
       "macroCategory": "tech",
-      "url": "tech/fotografia-mobile/index.html"
+      "url": "tech/fotografia-mobile/index.html",
+      "song": "Creative Focus",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX76Wlfdnj7AP",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "elite-gaming-gear",
@@ -128,7 +164,11 @@
       "primaryColor": "#6A1B9A",
       "accentColor": "#D35400",
       "macroCategory": "tech",
-      "url": "tech/elite-gaming-gear/index.html"
+      "url": "tech/elite-gaming-gear/index.html",
+      "song": "Gaming Music",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "arredamento-casa",
@@ -141,7 +181,11 @@
       "primaryColor": "#8D6E63",
       "accentColor": "#5D4037",
       "macroCategory": "casa",
-      "url": "casa/arredamento-casa/index.html"
+      "url": "casa/arredamento-casa/index.html",
+      "song": "Home & Living",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "cucina-elettrodomestici",
@@ -154,7 +198,11 @@
       "primaryColor": "#C0392B",
       "accentColor": "#D35400",
       "macroCategory": "casa",
-      "url": "casa/cucina-elettrodomestici/index.html"
+      "url": "casa/cucina-elettrodomestici/index.html",
+      "song": "Cooking Vibes",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "ufficio-produttivo",
@@ -167,7 +215,11 @@
       "primaryColor": "#546E7A",
       "accentColor": "#37474F",
       "macroCategory": "casa",
-      "url": "casa/ufficio-produttivo/index.html"
+      "url": "casa/ufficio-produttivo/index.html",
+      "song": "Work Focus",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX76Wlfdnj7AP",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "benessere-cura-personale",
@@ -180,7 +232,11 @@
       "primaryColor": "#43A047",
       "accentColor": "#1B5E20",
       "macroCategory": "benessere",
-      "url": "benessere/benessere-cura-personale/index.html"
+      "url": "benessere/benessere-cura-personale/index.html",
+      "song": "Spa & Relax",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "fitness-casa",
@@ -193,7 +249,11 @@
       "primaryColor": "#E67E22",
       "accentColor": "#F39C12",
       "macroCategory": "benessere",
-      "url": "benessere/fitness-casa/index.html"
+      "url": "benessere/fitness-casa/index.html",
+      "song": "Workout Mix",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX76Wlfdnj7AP",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "profumi-bellezza",
@@ -206,7 +266,11 @@
       "primaryColor": "#C2185B",
       "accentColor": "#880E4F",
       "macroCategory": "benessere",
-      "url": "benessere/profumi-bellezza/index.html"
+      "url": "benessere/profumi-bellezza/index.html",
+      "song": "Beauty & Glam",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "viaggi-vacanze",
@@ -219,7 +283,11 @@
       "primaryColor": "#1976D2",
       "accentColor": "#0D47A1",
       "macroCategory": "lifestyle",
-      "url": "lifestyle/viaggi-vacanze/index.html"
+      "url": "lifestyle/viaggi-vacanze/index.html",
+      "song": "Travel Vibes",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "outdoor-camping",
@@ -232,7 +300,11 @@
       "primaryColor": "#558B2F",
       "accentColor": "#33691E",
       "macroCategory": "lifestyle",
-      "url": "lifestyle/outdoor-camping/index.html"
+      "url": "lifestyle/outdoor-camping/index.html",
+      "song": "Nature & Outdoors",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "mare-spiaggia",
@@ -245,7 +317,11 @@
       "primaryColor": "#0288D1",
       "accentColor": "#01579B",
       "macroCategory": "lifestyle",
-      "url": "lifestyle/mare-spiaggia/index.html"
+      "url": "lifestyle/mare-spiaggia/index.html",
+      "song": "Summer Beach",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "pet-care-intelligente",
@@ -258,7 +334,11 @@
       "primaryColor": "#F57C00",
       "accentColor": "#E65100",
       "macroCategory": "lifestyle",
-      "url": "lifestyle/pet-care-intelligente/index.html"
+      "url": "lifestyle/pet-care-intelligente/index.html",
+      "song": "Pet Friendly",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "sostenibilita-eco-friendly",
@@ -271,7 +351,11 @@
       "primaryColor": "#388E3C",
       "accentColor": "#1B5E20",
       "macroCategory": "lifestyle",
-      "url": "lifestyle/sostenibilita-eco-friendly/index.html"
+      "url": "lifestyle/sostenibilita-eco-friendly/index.html",
+      "song": "Eco Vibes",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     },
     {
       "id": "film-dvd-bluray",
@@ -284,7 +368,11 @@
       "primaryColor": "#00CED1",
       "accentColor": "#BA55D3",
       "macroCategory": "intrattenimento",
-      "url": "intrattenimento/film-dvd-bluray/index.html"
+      "url": "intrattenimento/film-dvd-bluray/index.html",
+      "song": "Cinema Classics",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX5E1ilKI8s7F",
+      "amazonServiceType": "prime-video",
+      "amazonServiceLink": "https://www.primevideo.com/?tag=l0c39-21"
     },
     {
       "id": "libri-ereader",
@@ -297,7 +385,11 @@
       "primaryColor": "#6D4C41",
       "accentColor": "#4E342E",
       "macroCategory": "intrattenimento",
-      "url": "intrattenimento/libri-ereader/index.html"
+      "url": "intrattenimento/libri-ereader/index.html",
+      "song": "Reading Focus",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "kindle",
+      "amazonServiceLink": "https://www.amazon.it/kindle-dbs/ku/ku-subscription?&linkCode=ll2&tag=l0c39-21&linkId=placeholder&ref_=as_li_ss_tl"
     },
     {
       "id": "giochi-da-tavolo",
@@ -310,7 +402,11 @@
       "primaryColor": "#C62828",
       "accentColor": "#B71C1C",
       "macroCategory": "intrattenimento",
-      "url": "intrattenimento/giochi-da-tavolo/index.html"
+      "url": "intrattenimento/giochi-da-tavolo/index.html",
+      "song": "Board Games Music",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
     }
   ]
 }

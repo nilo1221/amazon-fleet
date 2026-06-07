@@ -31,7 +31,8 @@
             nichesData: null,
             combosData: null,
             pathDepth: 0,
-            currentPageProducts: []
+            currentPageProducts: [],
+            selectedMacroCategory: null
         },
         
         // ========== FUNZIONE DI INIZIALIZZAZIONE ==========
@@ -237,6 +238,37 @@
                 this.error('Errore fetch nicchie:', error);
                 this.state.nichesData = this.getDefaultNiches();
             }
+        },
+        
+        // ========== ESTRAZIONE MACRO-CATEGORIE UNICHE ==========
+        getMacroCategories: function() {
+            if (!this.state.nichesData) {
+                return [];
+            }
+            
+            // Estrai macro-categorie uniche
+            const macroCategories = new Set();
+            this.state.nichesData.forEach(category => {
+                if (category.macroCategory) {
+                    macroCategories.add(category.macroCategory);
+                }
+            });
+            
+            // Converti in array e mappa con icone
+            const macroCategoryMap = {
+                'moda': { name: 'Moda', icon: 'fa-tshirt' },
+                'tech': { name: 'Tech', icon: 'fa-laptop' },
+                'casa': { name: 'Casa', icon: 'fa-home' },
+                'benessere': { name: 'Benessere', icon: 'fa-heart' },
+                'lifestyle': { name: 'Lifestyle', icon: 'fa-umbrella-beach' },
+                'intrattenimento': { name: 'Intrattenimento', icon: 'fa-film' }
+            };
+            
+            return Array.from(macroCategories).map(macro => ({
+                id: macro,
+                name: macroCategoryMap[macro]?.name || macro,
+                icon: macroCategoryMap[macro]?.icon || 'fa-folder'
+            }));
         },
         
         // ========== CARICAMENTO DATI COMBO ==========
@@ -454,24 +486,72 @@
             `;
         },
         
-        // ========== SUGGERIMENTO NICCHIE ==========
+        // ========== SUGGERIMENTO MACRO-CATEGORIE ==========
         getSuggestedNiches: function() {
+            // Se nessuna macro-categoria è selezionata, mostra le macro-categorie
+            if (!this.state.selectedMacroCategory) {
+                return this.getMacroCategoriesSection();
+            }
+            
+            // Se una macro-categoria è selezionata, mostra le nicchie di quella categoria
+            return this.getNichesByMacroCategory(this.state.selectedMacroCategory);
+        },
+        
+        // ========== SEZIONE MACRO-CATEGORIE ==========
+        getMacroCategoriesSection: function() {
+            const macroCategories = this.getMacroCategories();
+            
+            if (macroCategories.length === 0) {
+                return '';
+            }
+            
+            const macroHTML = macroCategories.map(macro => `
+                <div class="${this.config.cssPrefix}niche-card" onclick="SmartChoicesAI.selectMacroCategory('${macro.id}')">
+                    <div class="${this.config.cssPrefix}niche-name">
+                        <i class="fas ${macro.icon}"></i>
+                        ${macro.name}
+                    </div>
+                </div>
+            `).join('');
+            
+            return `
+                <div class="${this.config.cssPrefix}niches-section">
+                    <div class="${this.config.cssPrefix}section-title">
+                        <i class="fas fa-th-large"></i>
+                        Categorie
+                    </div>
+                    ${macroHTML}
+                </div>
+            `;
+        },
+        
+        // ========== SELEZIONE MACRO-CATEGORIA ==========
+        selectMacroCategory: function(macroCategoryId) {
+            this.state.selectedMacroCategory = macroCategoryId;
+            this.regenerateContent();
+        },
+        
+        // ========== NICCHIE PER MACRO-CATEGORIA ==========
+        getNichesByMacroCategory: function(macroCategoryId) {
             if (!this.state.nichesData || this.state.nichesData.length === 0) {
                 return '';
             }
             
             const rootPath = this.getRootPath();
             
-            // Seleziona 3 nicchie casuali
-            const shuffled = [...this.state.nichesData].sort(() => 0.5 - Math.random());
-            const selected = shuffled.slice(0, 3);
+            // Filtra le nicchie per la macro-categoria selezionata
+            const filteredNiches = this.state.nichesData.filter(niche => 
+                niche.macroCategory === macroCategoryId
+            );
             
-            const nichesHTML = selected.map(niche => {
-                // Se siamo alla root, usa l'URL come-is
-                // Se siamo a profondità > 0, prependi ../ per ogni livello
+            if (filteredNiches.length === 0) {
+                return '';
+            }
+            
+            const nichesHTML = filteredNiches.map(niche => {
                 const fullPath = this.state.pathDepth === 0 ? niche.url : rootPath + niche.url;
                 return `
-                <div class="${this.config.cssPrefix}niche-card" onclick="SmartChoicesAI.trackNicheClick('${niche.id}', '${niche.name}', '${fullPath}')">
+                <div class="${this.config.cssPrefix}niche-card" onclick="SmartChoicesAI.selectNiche('${niche.id}', '${niche.name}', '${fullPath}')">
                     <div class="${this.config.cssPrefix}niche-name">
                         <i class="fas ${niche.icon}"></i>
                         ${niche.name}
@@ -483,12 +563,140 @@
             return `
                 <div class="${this.config.cssPrefix}niches-section">
                     <div class="${this.config.cssPrefix}section-title">
-                        <i class="fas fa-star"></i>
-                        Nicchie Consigliate
+                        <i class="fas fa-arrow-left" onclick="SmartChoicesAI.backToCategories()" style="cursor: pointer; margin-right: 10px;"></i>
+                        Nicchie
                     </div>
                     ${nichesHTML}
                 </div>
             `;
+        },
+        
+        // ========== TORNA INDIETRO ALLE CATEGORIE ==========
+        backToCategories: function() {
+            this.state.selectedMacroCategory = null;
+            this.regenerateContent();
+        },
+        
+        // ========== SELEZIONE NICCHIA ==========
+        selectNiche: function(nicheId, nicheName, nicheUrl) {
+            // Trova la nicchia nei dati
+            const niche = this.state.nichesData.find(n => n.id === nicheId);
+            if (!niche) {
+                return;
+            }
+            
+            // Mostra i link della nicchia
+            this.showNicheLinks(niche, nicheUrl);
+        },
+        
+        // ========== RIGENERA CONTENUTO ==========
+        regenerateContent: function() {
+            const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
+            if (!body) {
+                return;
+            }
+            
+            const greeting = this.getGreeting();
+            const niches = this.getSuggestedNiches();
+            const combo = this.getRandomCombo();
+            
+            body.innerHTML = `
+                ${greeting}
+                ${niches}
+                ${combo}
+                ${this.getMusicLinks()}
+                ${this.getBountyLink()}
+            `;
+        },
+        
+        // ========== MOSTRA LINK NICCHIA ==========
+        showNicheLinks: function(niche, nicheUrl) {
+            const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
+            if (!body) {
+                return;
+            }
+            
+            // Genera link contestuali
+            let contextualLinks = '';
+            
+            // Link Spotify
+            if (niche.song && niche.songLinkSpotify) {
+                contextualLinks += `
+                    <div class="${this.config.cssPrefix}niche-link-card">
+                        <a href="${niche.songLinkSpotify}" target="_blank" class="${this.config.cssPrefix}niche-link-btn" style="background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%);">
+                            <i class="fab fa-spotify"></i>
+                            Ascolta: ${niche.song}
+                        </a>
+                    </div>
+                `;
+            }
+            
+            // Link Amazon (contestuale al tipo di servizio)
+            if (niche.amazonServiceLink) {
+                const amazonServiceIcon = this.getAmazonServiceIcon(niche.amazonServiceType);
+                const amazonServiceName = this.getAmazonServiceName(niche.amazonServiceType);
+                contextualLinks += `
+                    <div class="${this.config.cssPrefix}niche-link-card">
+                        <a href="${niche.amazonServiceLink}" target="_blank" class="${this.config.cssPrefix}niche-link-btn" style="background: linear-gradient(135deg, #ff9900 0%, #ffad33 100%);">
+                            <i class="${amazonServiceIcon}"></i>
+                            ${amazonServiceName}
+                        </a>
+                    </div>
+                `;
+            }
+            
+            const linksHTML = `
+                <div class="${this.config.cssPrefix}niche-links-section">
+                    <div class="${this.config.cssPrefix}section-title">
+                        <i class="fas fa-link"></i>
+                        Link per ${niche.name}
+                    </div>
+                    <div class="${this.config.cssPrefix}niche-link-card">
+                        <a href="${nicheUrl}" target="_blank" class="${this.config.cssPrefix}niche-link-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            Vedi ${niche.name}
+                        </a>
+                    </div>
+                    ${contextualLinks}
+                    <div class="${this.config.cssPrefix}back-btn" onclick="SmartChoicesAI.backToCategories()">
+                        <i class="fas fa-arrow-left"></i>
+                        Torna alle categorie
+                    </div>
+                </div>
+            `;
+            
+            body.innerHTML = `
+                ${this.getGreeting()}
+                ${linksHTML}
+            `;
+        },
+        
+        // ========== GET AMAZON SERVICE ICON ==========
+        getAmazonServiceIcon: function(serviceType) {
+            const icons = {
+                'music': 'fab fa-amazon',
+                'prime-video': 'fab fa-amazon',
+                'kindle': 'fab fa-amazon',
+                'audible': 'fab fa-amazon',
+                'prime-student': 'fab fa-amazon',
+                'wedding': 'fab fa-amazon',
+                'baby-registry': 'fab fa-amazon'
+            };
+            return icons[serviceType] || 'fab fa-amazon';
+        },
+        
+        // ========== GET AMAZON SERVICE NAME ==========
+        getAmazonServiceName: function(serviceType) {
+            const names = {
+                'music': 'Amazon Music Unlimited',
+                'prime-video': 'Prime Video',
+                'kindle': 'Kindle Unlimited',
+                'audible': 'Audible',
+                'prime-student': 'Prime Student',
+                'wedding': 'Amazon Wedding',
+                'baby-registry': 'Amazon Baby Registry'
+            };
+            return names[serviceType] || 'Amazon';
         },
         
         // ========== COMBO DINAMICA DAI PRODOTTI DELLA PAGINA ==========

@@ -399,6 +399,60 @@
     to { transform: rotate(360deg); }
 }
 
+/* ========== NICHE LINKS SECTION ========== */
+.sc-ai-niche-links-section {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.sc-ai-niche-link-card {
+    margin: 10px 0;
+    padding: 12px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.sc-ai-niche-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.sc-ai-niche-link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.sc-ai-back-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #6c757d;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.sc-ai-back-btn:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
     .sc-ai-float-button {
