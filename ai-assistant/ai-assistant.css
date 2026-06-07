@@ -217,27 +217,28 @@
 .sc-ai-modal-body {
     padding: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     max-height: 80vh;
     overflow-y: auto;
 }
 
-/* ========== CHAT PANEL (Sinistra 40%) ========== */
-.sc-ai-chat-panel {
-    flex: 0 0 40%;
+/* ========== COMBO PANEL (Alto - Destra) ========== */
+.sc-ai-combo-panel {
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
-    padding-right: 15px;
-    border-right: 1px solid #e9ecef;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+    max-height: 40vh;
     overflow-y: auto;
 }
 
-/* ========== COMBO PANEL (Destra 60%) ========== */
-.sc-ai-combo-panel {
-    flex: 0 0 60%;
+/* ========== CHAT PANEL (Basso - Sinistra) ========== */
+.sc-ai-chat-panel {
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    padding-left: 15px;
+    padding-top: 15px;
     overflow-y: auto;
 }
 

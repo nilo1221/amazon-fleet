@@ -198,6 +198,14 @@
                         </button>
                     </div>
                     <div class="${this.config.cssPrefix}modal-body">
+                        <div class="${this.config.cssPrefix}combo-panel">
+                            <div class="${this.config.cssPrefix}combo-section">
+                                <div class="${this.config.cssPrefix}loading">
+                                    <div class="${this.config.cssPrefix}spinner"></div>
+                                    Caricamento combo...
+                                </div>
+                            </div>
+                        </div>
                         <div class="${this.config.cssPrefix}chat-panel">
                             <div class="${this.config.cssPrefix}greeting-section">
                                 <div class="${this.config.cssPrefix}loading">
@@ -208,14 +216,6 @@
                             <div class="${this.config.cssPrefix}categories-section">
                             </div>
                             <div class="${this.config.cssPrefix}links-section">
-                            </div>
-                        </div>
-                        <div class="${this.config.cssPrefix}combo-panel">
-                            <div class="${this.config.cssPrefix}combo-section">
-                                <div class="${this.config.cssPrefix}loading">
-                                    <div class="${this.config.cssPrefix}spinner"></div>
-                                    Caricamento combo...
-                                </div>
                             </div>
                         </div>
                     </div>
