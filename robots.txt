@@ -4,7 +4,7 @@ Disallow: /sites/
 Disallow: /analytics.html
 Disallow: /.well-known/
 
-Sitemap: https://amazon-fleet.vercel.app/sitemap.xml
+Sitemap: https://smart-choices-guide.vercel.app/sitemap.xml
 
 # Amazon Affiliate Bot
 User-agent: Amazonbot
