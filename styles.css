@@ -276,8 +276,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('/images/logo.png') center center no-repeat;
-    background-size: cover;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
     overflow: hidden;
 }
@@ -286,8 +285,6 @@
 @media (max-width: 768px) {
     .hero-section-animated {
         min-height: 50vh;
-        background-size: contain;
-        background-position: center;
     }
 
     .hero-glassmorphism {
