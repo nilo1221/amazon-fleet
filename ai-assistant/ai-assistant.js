@@ -241,8 +241,14 @@
                 fetch('ai-assistant/product-combos.json')
                     .then(response => response.json())
                     .then(data => {
-                        this.state.combosData = data;
-                        this.log('Combo caricate:', Object.keys(data).length);
+                        // Salva le combo dalla nuova struttura
+                        this.state.combosData = data.combos || data;
+                        this.log('Combo caricate:', Object.keys(this.state.combosData).length);
+                        
+                        // Log metadata se disponibili
+                        if (data._metadata) {
+                            this.log('Combo metadata:', data._metadata);
+                        }
                     })
                     .catch(error => {
                         this.error('Errore caricamento combo:', error);
