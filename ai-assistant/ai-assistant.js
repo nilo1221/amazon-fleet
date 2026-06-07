@@ -46,6 +46,9 @@
                 // Calcola profondità directory corrente
                 this.calculatePathDepth();
                 
+                // Inizializza tracking Analytics
+                this.initAnalytics();
+                
                 // Crea bottone flottante
                 this.createFloatButton();
                 
@@ -107,6 +110,49 @@
             } else {
                 return Array(this.state.pathDepth).fill('../').join('');
             }
+        },
+        
+        // ========== INIZIALIZZA ANALYTICS ==========
+        initAnalytics: function() {
+            // Verifica se gtag è disponibile (caricato dalle pagine)
+            if (typeof gtag === 'function') {
+                this.log('Google Analytics disponibile');
+                this.state.analyticsEnabled = true;
+                
+                // Traccia inizializzazione bot
+                this.trackEvent('bot_initialized', {
+                    page: window.location.pathname,
+                    version: this.version
+                });
+            } else {
+                this.log('Google Analytics non disponibile');
+                this.state.analyticsEnabled = false;
+            }
+        },
+        
+        // ========== TRACCIA EVENTO ANALYTICS ==========
+        trackEvent: function(eventName, parameters) {
+            if (this.state.analyticsEnabled && typeof gtag === 'function') {
+                try {
+                    gtag('event', eventName, parameters);
+                    this.log('Analytics event:', eventName, parameters);
+                } catch (error) {
+                    this.error('Errore tracking evento:', error);
+                }
+            }
+        },
+        
+        // ========== TRACCIA CLICK NICCHIA ==========
+        trackNicheClick: function(nicheId, nicheName, nicheUrl) {
+            // Traccia evento
+            this.trackEvent('bot_niche_clicked', {
+                niche_id: nicheId,
+                niche_name: nicheName,
+                page: window.location.pathname
+            });
+            
+            // Naviga alla nicchia
+            window.location.href = nicheUrl;
         },
         
         // ========== CREAZIONE BOTTONE FLOTTANTE ==========
@@ -255,6 +301,11 @@
                 // Nascondi toast se aperto
                 this.hideToast();
                 
+                // Traccia apertura modal
+                this.trackEvent('bot_modal_opened', {
+                    page: window.location.pathname
+                });
+                
                 // Genera contenuto
                 this.generateModalContent();
                 
@@ -268,6 +319,11 @@
             try {
                 this.state.modalOpen = false;
                 this.state.modal.classList.remove(this.config.cssPrefix + 'open');
+                
+                // Traccia chiusura modal
+                this.trackEvent('bot_modal_closed', {
+                    page: window.location.pathname
+                });
             } catch (error) {
                 this.error('Errore chiusura modal:', error);
             }
@@ -365,7 +421,7 @@
                 // Se siamo a profondità > 0, prependi ../ per ogni livello
                 const fullPath = this.state.pathDepth === 0 ? niche.url : rootPath + niche.url;
                 return `
-                <div class="${this.config.cssPrefix}niche-card" onclick="window.location.href='${fullPath}'">
+                <div class="${this.config.cssPrefix}niche-card" onclick="SmartChoicesAI.trackNicheClick('${niche.id}', '${niche.name}', '${fullPath}')">
                     <div class="${this.config.cssPrefix}niche-name">
                         <i class="fas ${niche.icon}"></i>
                         ${niche.name}
