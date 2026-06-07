@@ -217,40 +217,54 @@
 .sc-ai-modal-body {
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     max-height: 80vh;
     overflow-y: auto;
 }
 
-/* ========== GREETING SECTION (Top compatto) ========== */
+/* ========== CHAT PANEL (Sinistra 40%) ========== */
+.sc-ai-chat-panel {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+    border-right: 1px solid #e9ecef;
+    overflow-y: auto;
+}
+
+/* ========== COMBO PANEL (Destra 60%) ========== */
+.sc-ai-combo-panel {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    overflow-y: auto;
+}
+
+/* ========== GREETING SECTION ========== */
 .sc-ai-greeting-section {
     flex: 0 0 auto;
     padding-bottom: 15px;
-    border-bottom: 1px solid #e9ecef;
 }
 
-/* ========== CATEGORIES GRID (Middle griglia 2x3) ========== */
-.sc-ai-categories-grid {
-    flex: 0 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 15px 0;
-    border-bottom: 1px solid #e9ecef;
-}
-
-/* ========== COMBO SECTION (Bottom combo del momento) ========== */
-.sc-ai-combo-section {
+/* ========== CATEGORIES SECTION ========== */
+.sc-ai-categories-section {
     flex: 1 1 auto;
     padding: 15px 0;
-    border-bottom: 1px solid #e9ecef;
-    min-height: 120px;
+    overflow-y: auto;
 }
 
-/* ========== LINKS SECTION (Footer) ========== */
+/* ========== COMBO SECTION ========== */
+.sc-ai-combo-section {
+    flex: 1 1 auto;
+    min-height: 100%;
+}
+
+/* ========== LINKS SECTION ========== */
 .sc-ai-links-section {
     flex: 0 0 auto;
     padding-top: 15px;
+    border-top: 1px solid #e9ecef;
 }
 
 /* ========== MESSAGGIO SALUTO ========== */

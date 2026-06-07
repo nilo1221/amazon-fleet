@@ -198,17 +198,25 @@
                         </button>
                     </div>
                     <div class="${this.config.cssPrefix}modal-body">
-                        <div class="${this.config.cssPrefix}greeting-section">
-                            <div class="${this.config.cssPrefix}loading">
-                                <div class="${this.config.cssPrefix}spinner"></div>
-                                Caricamento...
+                        <div class="${this.config.cssPrefix}chat-panel">
+                            <div class="${this.config.cssPrefix}greeting-section">
+                                <div class="${this.config.cssPrefix}loading">
+                                    <div class="${this.config.cssPrefix}spinner"></div>
+                                    Caricamento...
+                                </div>
+                            </div>
+                            <div class="${this.config.cssPrefix}categories-section">
+                            </div>
+                            <div class="${this.config.cssPrefix}links-section">
                             </div>
                         </div>
-                        <div class="${this.config.cssPrefix}categories-grid">
-                        </div>
-                        <div class="${this.config.cssPrefix}combo-section">
-                        </div>
-                        <div class="${this.config.cssPrefix}links-section">
+                        <div class="${this.config.cssPrefix}combo-panel">
+                            <div class="${this.config.cssPrefix}combo-section">
+                                <div class="${this.config.cssPrefix}loading">
+                                    <div class="${this.config.cssPrefix}spinner"></div>
+                                    Caricamento combo...
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -477,7 +485,7 @@
         generateModalContent: function() {
             try {
                 const greetingSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'greeting-section');
-                const categoriesGrid = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-grid');
+                const categoriesSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-section');
                 const comboSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'combo-section');
                 const linksSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'links-section');
                 
@@ -488,6 +496,12 @@
                         Caricamento...
                     </div>
                 `;
+                comboSection.innerHTML = `
+                    <div class="${this.config.cssPrefix}loading">
+                        <div class="${this.config.cssPrefix}spinner"></div>
+                        Caricamento combo...
+                    </div>
+                `;
                 
                 // Simula caricamento
                 setTimeout(() => {
@@ -495,22 +509,18 @@
                     const niches = this.getSuggestedNiches();
                     const combo = this.getThemedCombo();
                     
-                    // Top: Saluto compatto
+                    // Sinistra: Chat panel
                     greetingSection.innerHTML = greeting;
-                    
-                    // Middle: Griglia categorie 2x3
-                    categoriesGrid.innerHTML = niches;
-                    
-                    // Bottom: Combo del momento
-                    if (combo) {
-                        comboSection.innerHTML = combo;
-                    }
-                    
-                    // Footer: Link musicali e bounty
+                    categoriesSection.innerHTML = niches;
                     linksSection.innerHTML = `
                         ${this.getMusicLinks()}
                         ${this.getBountyLink()}
                     `;
+                    
+                    // Destra: Combo panel
+                    if (combo) {
+                        comboSection.innerHTML = combo;
+                    }
                 }, 500);
                 
             } catch (error) {
@@ -659,10 +669,10 @@
         // ========== RIGENERA CONTENUTO ==========
         regenerateContent: function() {
             const greetingSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'greeting-section');
-            const categoriesGrid = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-grid');
+            const categoriesSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-section');
             const comboSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'combo-section');
             const linksSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'links-section');
-            if (!greetingSection || !categoriesGrid || !comboSection || !linksSection) {
+            if (!greetingSection || !categoriesSection || !comboSection || !linksSection) {
                 return;
             }
             
@@ -670,26 +680,27 @@
             const niches = this.getSuggestedNiches();
             const combo = this.getRandomCombo();
             
+            // Sinistra: Chat panel
             greetingSection.innerHTML = greeting;
-            categoriesGrid.innerHTML = niches;
-            
-            if (combo) {
-                comboSection.innerHTML = combo;
-            }
-            
+            categoriesSection.innerHTML = niches;
             linksSection.innerHTML = `
                 ${this.getMusicLinks()}
                 ${this.getBountyLink()}
             `;
+            
+            // Destra: Combo panel
+            if (combo) {
+                comboSection.innerHTML = combo;
+            }
         },
         
         // ========== MOSTRA LINK NICCHIA ==========
         showNicheLinks: function(niche, nicheUrl) {
             const greetingSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'greeting-section');
-            const categoriesGrid = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-grid');
+            const categoriesSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-section');
             const comboSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'combo-section');
             const linksSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'links-section');
-            if (!greetingSection || !categoriesGrid || !comboSection || !linksSection) {
+            if (!greetingSection || !categoriesSection || !comboSection || !linksSection) {
                 return;
             }
             
@@ -745,11 +756,12 @@
             // Genera Pitch se la nicchia ha selling_point
             const pitchHTML = this.renderPitch(niche);
             
+            // Sinistra: Chat panel
             greetingSection.innerHTML = this.getGreeting();
-            categoriesGrid.innerHTML = pitchHTML;
+            categoriesSection.innerHTML = pitchHTML;
             linksSection.innerHTML = linksHTML;
             
-            // Combo dinamica (se presente)
+            // Destra: Combo panel
             const combo = this.getThemedCombo();
             if (combo) {
                 comboSection.innerHTML = combo;
@@ -1093,11 +1105,17 @@
                 const combo = this.getComboWithPriority();
                 
                 if (combo) {
-                    // Sostituisci combo esistente (Vertical Flow: una combo alla volta)
-                    comboSection.innerHTML = combo;
-                    comboSection.style.animation = 'fadeIn 0.5s ease';
+                    // Appendi nuova combo (Split Screen: più combo visibili)
+                    const comboDiv = document.createElement('div');
+                    comboDiv.innerHTML = combo;
+                    comboDiv.style.animation = 'fadeIn 0.5s ease';
+                    comboDiv.style.marginBottom = '15px';
+                    comboSection.appendChild(comboDiv);
                     
-                    this.log('Nuova combo sostituita');
+                    // Scroll automatico all'ultima combo
+                    comboSection.scrollTop = comboSection.scrollHeight;
+                    
+                    this.log('Nuova combo aggiunta');
                 }
             } catch (error) {
                 this.error('Errore aggiunta combo:', error);
