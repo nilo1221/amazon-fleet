@@ -331,18 +331,6 @@
     }
 }
 
-@media (min-width: 769px) and (max-width: 991px) {
-    .hero-section-animated > .container > .row > .col-lg-7 {
-        flex: 0 0 70%;
-        max-width: 70%;
-    }
-
-    .hero-section-animated > .container > .row > .col-lg-5 {
-        flex: 0 0 30%;
-        max-width: 30%;
-    }
-}
-
 @media (max-width: 576px) {
     .hero-section-animated {
         min-height: 60vh;
