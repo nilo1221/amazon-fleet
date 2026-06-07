@@ -198,13 +198,17 @@
                         </button>
                     </div>
                     <div class="${this.config.cssPrefix}modal-body">
-                        <div class="${this.config.cssPrefix}fixed-messages">
+                        <div class="${this.config.cssPrefix}greeting-section">
                             <div class="${this.config.cssPrefix}loading">
                                 <div class="${this.config.cssPrefix}spinner"></div>
                                 Caricamento...
                             </div>
                         </div>
-                        <div class="${this.config.cssPrefix}dynamic-combos">
+                        <div class="${this.config.cssPrefix}categories-grid">
+                        </div>
+                        <div class="${this.config.cssPrefix}combo-section">
+                        </div>
+                        <div class="${this.config.cssPrefix}links-section">
                         </div>
                     </div>
                 </div>
@@ -472,11 +476,13 @@
         // ========== GENERAZIONE CONTENUTO MODAL ==========
         generateModalContent: function() {
             try {
-                const fixedMessages = this.state.modal.querySelector('.' + this.config.cssPrefix + 'fixed-messages');
-                const dynamicCombos = this.state.modal.querySelector('.' + this.config.cssPrefix + 'dynamic-combos');
+                const greetingSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'greeting-section');
+                const categoriesGrid = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-grid');
+                const comboSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'combo-section');
+                const linksSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'links-section');
                 
                 // Mostra loading
-                fixedMessages.innerHTML = `
+                greetingSection.innerHTML = `
                     <div class="${this.config.cssPrefix}loading">
                         <div class="${this.config.cssPrefix}spinner"></div>
                         Caricamento...
@@ -489,18 +495,22 @@
                     const niches = this.getSuggestedNiches();
                     const combo = this.getThemedCombo();
                     
-                    // Messaggi fissi
-                    fixedMessages.innerHTML = `
-                        ${greeting}
-                        ${niches}
+                    // Top: Saluto compatto
+                    greetingSection.innerHTML = greeting;
+                    
+                    // Middle: Griglia categorie 2x3
+                    categoriesGrid.innerHTML = niches;
+                    
+                    // Bottom: Combo del momento
+                    if (combo) {
+                        comboSection.innerHTML = combo;
+                    }
+                    
+                    // Footer: Link musicali e bounty
+                    linksSection.innerHTML = `
                         ${this.getMusicLinks()}
                         ${this.getBountyLink()}
                     `;
-                    
-                    // Combo dinamica (se presente)
-                    if (combo) {
-                        dynamicCombos.innerHTML = combo;
-                    }
                 }, 500);
                 
             } catch (error) {
@@ -648,9 +658,11 @@
         
         // ========== RIGENERA CONTENUTO ==========
         regenerateContent: function() {
-            const fixedMessages = this.state.modal.querySelector('.' + this.config.cssPrefix + 'fixed-messages');
-            const dynamicCombos = this.state.modal.querySelector('.' + this.config.cssPrefix + 'dynamic-combos');
-            if (!fixedMessages || !dynamicCombos) {
+            const greetingSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'greeting-section');
+            const categoriesGrid = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-grid');
+            const comboSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'combo-section');
+            const linksSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'links-section');
+            if (!greetingSection || !categoriesGrid || !comboSection || !linksSection) {
                 return;
             }
             
@@ -658,23 +670,26 @@
             const niches = this.getSuggestedNiches();
             const combo = this.getRandomCombo();
             
-            fixedMessages.innerHTML = `
-                ${greeting}
-                ${niches}
+            greetingSection.innerHTML = greeting;
+            categoriesGrid.innerHTML = niches;
+            
+            if (combo) {
+                comboSection.innerHTML = combo;
+            }
+            
+            linksSection.innerHTML = `
                 ${this.getMusicLinks()}
                 ${this.getBountyLink()}
             `;
-            
-            if (combo) {
-                dynamicCombos.innerHTML = combo;
-            }
         },
         
         // ========== MOSTRA LINK NICCHIA ==========
         showNicheLinks: function(niche, nicheUrl) {
-            const fixedMessages = this.state.modal.querySelector('.' + this.config.cssPrefix + 'fixed-messages');
-            const dynamicCombos = this.state.modal.querySelector('.' + this.config.cssPrefix + 'dynamic-combos');
-            if (!fixedMessages || !dynamicCombos) {
+            const greetingSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'greeting-section');
+            const categoriesGrid = this.state.modal.querySelector('.' + this.config.cssPrefix + 'categories-grid');
+            const comboSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'combo-section');
+            const linksSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'links-section');
+            if (!greetingSection || !categoriesGrid || !comboSection || !linksSection) {
                 return;
             }
             
@@ -730,16 +745,14 @@
             // Genera Pitch se la nicchia ha selling_point
             const pitchHTML = this.renderPitch(niche);
             
-            fixedMessages.innerHTML = `
-                ${this.getGreeting()}
-                ${pitchHTML}
-                ${linksHTML}
-            `;
+            greetingSection.innerHTML = this.getGreeting();
+            categoriesGrid.innerHTML = pitchHTML;
+            linksSection.innerHTML = linksHTML;
             
             // Combo dinamica (se presente)
             const combo = this.getThemedCombo();
             if (combo) {
-                dynamicCombos.innerHTML = combo;
+                comboSection.innerHTML = combo;
             }
         },
         
@@ -1071,8 +1084,8 @@
         // ========== ADD NEW COMBO ==========
         addNewCombo: function() {
             try {
-                const dynamicCombos = this.state.modal.querySelector('.' + this.config.cssPrefix + 'dynamic-combos');
-                if (!dynamicCombos) {
+                const comboSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'combo-section');
+                if (!comboSection) {
                     return;
                 }
                 
@@ -1080,16 +1093,11 @@
                 const combo = this.getComboWithPriority();
                 
                 if (combo) {
-                    // Appendi nuova combo
-                    const comboDiv = document.createElement('div');
-                    comboDiv.innerHTML = combo;
-                    comboDiv.style.animation = 'fadeIn 0.5s ease';
-                    dynamicCombos.appendChild(comboDiv);
+                    // Sostituisci combo esistente (Vertical Flow: una combo alla volta)
+                    comboSection.innerHTML = combo;
+                    comboSection.style.animation = 'fadeIn 0.5s ease';
                     
-                    // Scroll automatico all'ultima combo
-                    dynamicCombos.scrollTop = dynamicCombos.scrollHeight;
-                    
-                    this.log('Nuova combo aggiunta');
+                    this.log('Nuova combo sostituita');
                 }
             } catch (error) {
                 this.error('Errore aggiunta combo:', error);
@@ -1221,9 +1229,9 @@
         
         // ========== SHOW ERROR ==========
         showError: function(message) {
-            const fixedMessages = this.state.modal.querySelector('.' + this.config.cssPrefix + 'fixed-messages');
-            if (fixedMessages) {
-                fixedMessages.innerHTML = `
+            const greetingSection = this.state.modal.querySelector('.' + this.config.cssPrefix + 'greeting-section');
+            if (greetingSection) {
+                greetingSection.innerHTML = `
                     <div class="${this.config.cssPrefix}error">
                         <i class="fas fa-exclamation-triangle"></i>
                         ${message}
