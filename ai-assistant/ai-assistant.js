@@ -30,7 +30,8 @@
             modalOpen: false,
             nichesData: null,
             combosData: null,
-            pathDepth: 0
+            pathDepth: 0,
+            currentPageProducts: []
         },
         
         // ========== FUNZIONE DI INIZIALIZZAZIONE ==========
@@ -48,6 +49,9 @@
                 
                 // Inizializza tracking Analytics
                 this.initAnalytics();
+                
+                // Carica prodotti dalla pagina corrente
+                this.loadPageProducts();
                 
                 // Crea bottone flottante
                 this.createFloatButton();
@@ -260,6 +264,46 @@
             }
         },
         
+        // ========== CARICAMENTO PRODOTTI DALLA PAGINA ==========
+        loadPageProducts: function() {
+            try {
+                // Cerca tutti i link Amazon nella pagina
+                const amazonLinks = document.querySelectorAll('a[href*="amazon.it"]');
+                const products = [];
+                
+                amazonLinks.forEach(link => {
+                    const linkText = link.textContent.trim();
+                    // Evita link vuoti o duplicati
+                    if (linkText && linkText !== 'Vedi su Amazon' && linkText !== 'Acquista su Amazon') {
+                        // Estrai il nome del prodotto dal testo vicino al link
+                        const card = link.closest('.product-card, .guida-scelta-product');
+                        if (card) {
+                            const titleElement = card.querySelector('h3, h4, h5, .product-title, .guida-scelta-product-title');
+                            if (titleElement) {
+                                const productName = titleElement.textContent.trim();
+                                const href = link.href;
+                                
+                                // Verifica che il link abbia il tag affiliate
+                                if (href.includes('tag=l0c39-21')) {
+                                    products.push({
+                                        name: productName,
+                                        link: href
+                                    });
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                this.state.currentPageProducts = products;
+                this.log('Prodotti caricati dalla pagina:', products.length);
+                
+            } catch (error) {
+                this.error('Errore caricamento prodotti pagina:', error);
+                this.state.currentPageProducts = [];
+            }
+        },
+        
         // ========== EVENT LISTENERS ==========
         initEventListeners: function() {
             try {
@@ -447,19 +491,20 @@
             `;
         },
         
-        // ========== COMBO CASUALE CON JOLLY ==========
+        // ========== COMBO DINAMICA DAI PRODOTTI DELLA PAGINA ==========
         getRandomCombo: function() {
-            if (!this.state.combosData) {
+            // Usa i prodotti caricati dalla pagina corrente
+            if (!this.state.currentPageProducts || this.state.currentPageProducts.length === 0) {
                 return '';
             }
             
-            const comboKeys = Object.keys(this.state.combosData);
-            if (comboKeys.length === 0) {
+            // Seleziona 3 prodotti casuali dalla pagina
+            const shuffled = [...this.state.currentPageProducts].sort(() => 0.5 - Math.random());
+            const selectedProducts = shuffled.slice(0, Math.min(3, shuffled.length));
+            
+            if (selectedProducts.length === 0) {
                 return '';
             }
-            
-            const randomKey = comboKeys[Math.floor(Math.random() * comboKeys.length)];
-            const combo = this.state.combosData[randomKey];
             
             // Aggiungi jolly (bevanda o snack)
             const jollies = [
@@ -471,9 +516,10 @@
             ];
             const jolly = jollies[Math.floor(Math.random() * jollies.length)];
             
-            const itemsHTML = combo.products.map(product => `
+            // Genera HTML per i prodotti selezionati
+            const itemsHTML = selectedProducts.map(product => `
                 <span class="${this.config.cssPrefix}combo-item">
-                    <i class="fas ${product.icon}"></i>
+                    <i class="fas fa-box"></i>
                     ${product.name}
                 </span>
             `).join('');
