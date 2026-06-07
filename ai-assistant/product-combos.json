@@ -1,0 +1,140 @@
+{
+  "fitness-casa-elettrostimolatore-jenylu": {
+    "reason": "Per un allenamento addominale completo a casa, combina l'elettrostimolatore con altri strumenti per massimizzare i risultati",
+    "products": [
+      {
+        "name": "Smartwatch Fitness Tracker",
+        "category": "Fitness",
+        "icon": "fa-dumbbell",
+        "link": "https://www.amazon.it/dp/B08NCRXYTK?ie=UTF8&pf_rd_p=79495992-24b1-4ab4-b453-790923215720&pf_rd_r=AAF1DRKRXSKF1C7FYBNT&pd_rd_wg=ISvGx&pd_rd_w=4Z9Ee&pd_rd_r=4d1a794e-dfea-4751-9084-a49a0cc26a10&aref=wI1fGuLEoo&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=e39c802451d6a8080a933439831ae3d0&ref_=as_li_ss_tl"
+      },
+      {
+        "name": "Tapis Roulant Pieghevole",
+        "category": "Fitness",
+        "icon": "fa-running",
+        "link": "#"
+      },
+      {
+        "name": "Bottiglia Acqua Sport",
+        "category": "Fitness",
+        "icon": "fa-tint",
+        "link": "#"
+      }
+    ]
+  },
+  "fitness-casa-elettrostimolatore-aluminio": {
+    "reason": "Per un setup fitness professionale a casa, unisci questo elettrostimolatore premium con strumenti di qualità",
+    "products": [
+      {
+        "name": "Set Pesi Regolabili",
+        "category": "Fitness",
+        "icon": "fa-dumbbell",
+        "link": "#"
+      },
+      {
+        "name": "Cyclette Resistenza",
+        "category": "Fitness",
+        "icon": "fa-bicycle",
+        "link": "#"
+      },
+      {
+        "name": "Tappetino Yoga Premium",
+        "category": "Fitness",
+        "icon": "fa-spa",
+        "link": "#"
+      }
+    ]
+  },
+  "fitness-casa-smartwatch": {
+    "reason": "Per monitorare completamente i tuoi progressi, abbina lo smartwatch con strumenti di allenamento",
+    "products": [
+      {
+        "name": "Elettrostimolatore Addominali",
+        "category": "Fitness",
+        "icon": "fa-bolt",
+        "link": "#"
+      },
+      {
+        "name": "Cuffie Bluetooth Sport",
+        "category": "Tech",
+        "icon": "fa-headphones",
+        "link": "#"
+      },
+      {
+        "name": "Braccialetto Fitness Extra",
+        "category": "Fitness",
+        "icon": "fa-clock",
+        "link": "#"
+      }
+    ]
+  },
+  "fitness-casa-tapis-roulant": {
+    "reason": "Per un home gym completo, il tapis roulant si abbina perfettamente con altri attrezzi cardio",
+    "products": [
+      {
+        "name": "Cyclette Indoor",
+        "category": "Fitness",
+        "icon": "fa-bicycle",
+        "link": "#"
+      },
+      {
+        "name": "Smartwatch Cardio",
+        "category": "Fitness",
+        "icon": "fa-heartbeat",
+        "link": "#"
+      },
+      {
+        "name": "Ventilatore da Palestra",
+        "category": "Casa",
+        "icon": "fa-fan",
+        "link": "#"
+      }
+    ]
+  },
+  "fitness-casa-cyclette": {
+    "reason": "Per variare il cardio a casa, combina la cyclette con altri strumenti a basso impatto",
+    "products": [
+      {
+        "name": "Tapis Roulant Leggero",
+        "category": "Fitness",
+        "icon": "fa-running",
+        "link": "#"
+      },
+      {
+        "name": "Elettrostimolatore Gambe",
+        "category": "Fitness",
+        "icon": "fa-bolt",
+        "link": "#"
+      },
+      {
+        "name": "Sella Ergonomica",
+        "category": "Fitness",
+        "icon": "fa-chair",
+        "link": "#"
+      }
+    ]
+  },
+  "fitness-casa-pesi": {
+    "reason": "Per un allenamento forza completo, i pesi si combinano con altri strumenti di resistenza",
+    "products": [
+      {
+        "name": "Bande Elastiche Set",
+        "category": "Fitness",
+        "icon": "fa-expand",
+        "link": "#"
+      },
+      {
+        "name": "Panca Pieghevole",
+        "category": "Fitness",
+        "icon": "fa-bed",
+        "link": "#"
+      },
+      {
+        "name": "Guanti Palestra",
+        "category": "Fitness",
+        "icon": "fa-hand-sparkles",
+        "link": "#"
+      }
+    ]
+  }
+}
