@@ -32,7 +32,9 @@
             combosData: null,
             pathDepth: 0,
             currentPageProducts: [],
-            selectedMacroCategory: null
+            selectedMacroCategory: null,
+            comboTimer: null,
+            proactiveTimer: null
         },
         
         // ========== FUNZIONE DI INIZIALIZZAZIONE ==========
@@ -74,6 +76,9 @@
                 
                 // Inizializza event listeners
                 this.initEventListeners();
+                
+                // Inizializza timer aiuto proattivo
+                this.initProactiveHelp();
                 
                 this.isInitialized = true;
                 this.log('Inizializzazione completata');
@@ -156,8 +161,11 @@
                 page: window.location.pathname
             });
             
+            // Correggi il percorso per navigazione corretta
+            const correctedUrl = this.getCorrectedPath(nicheUrl);
+            
             // Naviga alla nicchia
-            window.location.href = nicheUrl;
+            window.location.href = correctedUrl;
         },
         
         // ========== CREAZIONE BOTTONE FLOTTANTE ==========
@@ -190,9 +198,13 @@
                         </button>
                     </div>
                     <div class="${this.config.cssPrefix}modal-body">
-                        <div class="${this.config.cssPrefix}loading">
-                            <div class="${this.config.cssPrefix}spinner"></div>
-                            Caricamento...
+                        <div class="${this.config.cssPrefix}fixed-messages">
+                            <div class="${this.config.cssPrefix}loading">
+                                <div class="${this.config.cssPrefix}spinner"></div>
+                                Caricamento...
+                            </div>
+                        </div>
+                        <div class="${this.config.cssPrefix}dynamic-combos">
                         </div>
                     </div>
                 </div>
@@ -224,11 +236,22 @@
         // ========== CARICAMENTO DATI NICCHIE ==========
         loadNiches: function() {
             try {
-                fetch('data/categories.json')
+                const categoriesPath = this.getRootPath() + 'data/categories.json';
+                this.log('Caricamento nicchie da:', categoriesPath);
+                
+                fetch(categoriesPath)
                     .then(response => response.json())
                     .then(data => {
                         this.state.nichesData = data.categories;
                         this.log('Nicchie caricate:', this.state.nichesData.length);
+                        
+                        // Tracking GA4
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'niches_loaded', {
+                                count: this.state.nichesData.length,
+                                path: categoriesPath
+                            });
+                        }
                     })
                     .catch(error => {
                         this.error('Errore caricamento nicchie:', error);
@@ -274,7 +297,10 @@
         // ========== CARICAMENTO DATI COMBO ==========
         loadCombos: function() {
             try {
-                fetch('ai-assistant/product-combos.json')
+                const combosPath = this.getRootPath() + 'ai-assistant/product-combos.json';
+                this.log('Caricamento combo da:', combosPath);
+                
+                fetch(combosPath)
                     .then(response => response.json())
                     .then(data => {
                         // Salva le combo dalla nuova struttura
@@ -284,6 +310,14 @@
                         // Log metadata se disponibili
                         if (data._metadata) {
                             this.log('Combo metadata:', data._metadata);
+                        }
+                        
+                        // Tracking GA4
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'combos_loaded', {
+                                count: Object.keys(this.state.combosData).length,
+                                path: combosPath
+                            });
                         }
                     })
                     .catch(error => {
@@ -391,6 +425,9 @@
                 // Genera contenuto
                 this.generateModalContent();
                 
+                // Avvia timer combo periodiche (30-60 secondi)
+                this.startComboTimer();
+                
             } catch (error) {
                 this.error('Errore apertura modal:', error);
             }
@@ -401,6 +438,9 @@
             try {
                 this.state.modalOpen = false;
                 this.state.modal.classList.remove(this.config.cssPrefix + 'open');
+                
+                // Ferma timer combo periodiche
+                this.stopComboTimer();
                 
                 // Traccia chiusura modal
                 this.trackEvent('bot_modal_closed', {
@@ -432,10 +472,11 @@
         // ========== GENERAZIONE CONTENUTO MODAL ==========
         generateModalContent: function() {
             try {
-                const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
+                const fixedMessages = this.state.modal.querySelector('.' + this.config.cssPrefix + 'fixed-messages');
+                const dynamicCombos = this.state.modal.querySelector('.' + this.config.cssPrefix + 'dynamic-combos');
                 
                 // Mostra loading
-                body.innerHTML = `
+                fixedMessages.innerHTML = `
                     <div class="${this.config.cssPrefix}loading">
                         <div class="${this.config.cssPrefix}spinner"></div>
                         Caricamento...
@@ -446,15 +487,20 @@
                 setTimeout(() => {
                     const greeting = this.getGreeting();
                     const niches = this.getSuggestedNiches();
-                    const combo = this.getRandomCombo();
+                    const combo = this.getThemedCombo();
                     
-                    body.innerHTML = `
+                    // Messaggi fissi
+                    fixedMessages.innerHTML = `
                         ${greeting}
                         ${niches}
-                        ${combo}
                         ${this.getMusicLinks()}
                         ${this.getBountyLink()}
                     `;
+                    
+                    // Combo dinamica (se presente)
+                    if (combo) {
+                        dynamicCombos.innerHTML = combo;
+                    }
                 }, 500);
                 
             } catch (error) {
@@ -469,19 +515,19 @@
             let greeting = '';
             
             if (hour >= 5 && hour < 12) {
-                greeting = 'Buongiorno! ☀️';
+                greeting = 'Buongiorno.';
             } else if (hour >= 12 && hour < 18) {
-                greeting = 'Buon pomeriggio! 🌤️';
+                greeting = 'Buon pomeriggio.';
             } else if (hour >= 18 && hour < 22) {
-                greeting = 'Buonasera! 🌙';
+                greeting = 'Buonasera.';
             } else {
-                greeting = 'Buonanotte! 🌃';
+                greeting = 'Buonanotte.';
             }
             
             return `
                 <div class="${this.config.cssPrefix}greeting">
                     <strong>${greeting}</strong><br>
-                    Sono la tua IA Smart Choices. Posso aiutarti a trovare i prodotti perfetti per te!
+                    Cosa ti serve oggi? Ho selezionato il meglio per la tua categoria.
                 </div>
             `;
         },
@@ -585,14 +631,26 @@
                 return;
             }
             
+            // Correggi il percorso per navigazione corretta
+            const correctedUrl = this.getCorrectedPath(nicheUrl);
+            
             // Mostra i link della nicchia
-            this.showNicheLinks(niche, nicheUrl);
+            this.showNicheLinks(niche, correctedUrl);
+        },
+        
+        // ========== GET CORRECTED PATH ==========
+        getCorrectedPath: function(relativePath) {
+            const rootPath = this.getRootPath();
+            // Rimuovi slash iniziale se presente nel percorso relativo
+            const cleanPath = relativePath.startsWith('/') ? relativePath.substring(1) : relativePath;
+            return rootPath + cleanPath;
         },
         
         // ========== RIGENERA CONTENUTO ==========
         regenerateContent: function() {
-            const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
-            if (!body) {
+            const fixedMessages = this.state.modal.querySelector('.' + this.config.cssPrefix + 'fixed-messages');
+            const dynamicCombos = this.state.modal.querySelector('.' + this.config.cssPrefix + 'dynamic-combos');
+            if (!fixedMessages || !dynamicCombos) {
                 return;
             }
             
@@ -600,19 +658,23 @@
             const niches = this.getSuggestedNiches();
             const combo = this.getRandomCombo();
             
-            body.innerHTML = `
+            fixedMessages.innerHTML = `
                 ${greeting}
                 ${niches}
-                ${combo}
                 ${this.getMusicLinks()}
                 ${this.getBountyLink()}
             `;
+            
+            if (combo) {
+                dynamicCombos.innerHTML = combo;
+            }
         },
         
         // ========== MOSTRA LINK NICCHIA ==========
         showNicheLinks: function(niche, nicheUrl) {
-            const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
-            if (!body) {
+            const fixedMessages = this.state.modal.querySelector('.' + this.config.cssPrefix + 'fixed-messages');
+            const dynamicCombos = this.state.modal.querySelector('.' + this.config.cssPrefix + 'dynamic-combos');
+            if (!fixedMessages || !dynamicCombos) {
                 return;
             }
             
@@ -665,9 +727,68 @@
                 </div>
             `;
             
-            body.innerHTML = `
+            // Genera Pitch se la nicchia ha selling_point
+            const pitchHTML = this.renderPitch(niche);
+            
+            fixedMessages.innerHTML = `
                 ${this.getGreeting()}
+                ${pitchHTML}
                 ${linksHTML}
+            `;
+            
+            // Combo dinamica (se presente)
+            const combo = this.getThemedCombo();
+            if (combo) {
+                dynamicCombos.innerHTML = combo;
+            }
+        },
+        
+        // ========== RENDER PITCH ==========
+        renderPitch: function(niche) {
+            // Se la nicchia non ha selling_point, non mostrare il Pitch
+            if (!niche.selling_point || niche.selling_point.length === 0) {
+                return '';
+            }
+            
+            // Genera lista di selling points
+            const sellingPointsHTML = niche.selling_point.map(point => `
+                <div class="${this.config.cssPrefix}pitch-point">
+                    <i class="fas fa-check"></i>
+                    ${point}
+                </div>
+            `).join('');
+            
+            // Genera social proof se presente
+            const socialProofHTML = niche.social_proof ? `
+                <div class="${this.config.cssPrefix}pitch-social-proof">
+                    <i class="fas fa-users"></i>
+                    ${niche.social_proof}
+                </div>
+            ` : '';
+            
+            // Genera bottone CTA
+            const ctaHTML = `
+                <a href="${niche.url}" target="_blank" class="${this.config.cssPrefix}pitch-cta">
+                    VEDI LA SELEZIONE SU AMAZON
+                </a>
+            `;
+            
+            // Applica colore dinamico alla card
+            const nicheColor = niche.color || '#667eea';
+            const cardStyle = `border-left: 4px solid ${nicheColor};`;
+            
+            return `
+                <div class="${this.config.cssPrefix}pitch-card" style="${cardStyle}">
+                    <div class="${this.config.cssPrefix}pitch-header">
+                        <i class="fas fa-bullseye"></i>
+                        Consiglio dell'esperto
+                    </div>
+                    ${socialProofHTML}
+                    <div class="${this.config.cssPrefix}pitch-points">
+                        ${sellingPointsHTML}
+                    </div>
+                    ${ctaHTML}
+                </div>
             `;
         },
         
@@ -700,10 +821,298 @@
         },
         
         // ========== COMBO DINAMICA DAI PRODOTTI DELLA PAGINA ==========
+        // ========== GET COMBO TEMATICA ==========
+        getThemedCombo: function() {
+            // Usa i prodotti caricati dalla pagina corrente
+            if (!this.state.currentPageProducts || this.state.currentPageProducts.length === 0) {
+                return '';
+            }
+            
+            // Identifica la nicchia corrente dal pathname
+            const currentPath = window.location.pathname;
+            const currentNiche = this.state.nichesData?.find(n => currentPath.includes(n.url));
+            
+            // Se la nicchia non ha combos, usa fallback random
+            if (!currentNiche || !currentNiche.combos || currentNiche.combos.length === 0) {
+                return this.getRandomCombo();
+            }
+            
+            // Seleziona una combo casuale tra quelle definite
+            const selectedCombo = currentNiche.combos[Math.floor(Math.random() * currentNiche.combos.length)];
+            
+            // Tracking GA4
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'combo_themed_view', {
+                    niche_id: currentNiche.id,
+                    niche_name: currentNiche.name,
+                    combo_id: selectedCombo.id,
+                    combo_theme: selectedCombo.nome_tema
+                });
+            }
+            
+            // Mappa product_ids ai prodotti reali dalla pagina
+            const selectedProducts = selectedCombo.product_ids.map(id => {
+                // Per ora, usiamo i prodotti dalla pagina in ordine
+                // In futuro, quando avremo product_ids reali, mapperemo correttamente
+                const index = parseInt(id.replace('prod_', '')) - 1;
+                return this.state.currentPageProducts[index] || this.state.currentPageProducts[0];
+            }).filter(p => p);
+            
+            if (selectedProducts.length === 0) {
+                return this.getRandomCombo();
+            }
+            
+            // Aggiungi jolly (bevanda o snack)
+            const jollies = [
+                { name: 'Acqua', icon: 'fa-tint' },
+                { name: 'Tè', icon: 'fa-mug-hot' },
+                { name: 'Caffè', icon: 'fa-coffee' },
+                { name: 'Snack', icon: 'fa-cookie' },
+                { name: 'Frutta', icon: 'fa-apple-alt' }
+            ];
+            const jolly = jollies[Math.floor(Math.random() * jollies.length)];
+            
+            // Genera HTML per i prodotti selezionati con selling point
+            const itemsHTML = selectedProducts.map(product => {
+                const sellingPoint = currentNiche?.selling_point?.[Math.floor(Math.random() * (currentNiche.selling_point?.length || 1))] || '';
+                return `
+                <span class="${this.config.cssPrefix}combo-item">
+                    <i class="fas fa-box"></i>
+                    ${product.name}
+                    ${sellingPoint ? `<small class="${this.config.cssPrefix}selling-point">${sellingPoint}</small>` : ''}
+                </span>
+            `}).join('');
+            
+            const jollyHTML = `
+                <span class="${this.config.cssPrefix}combo-item jolly">
+                    <i class="fas ${jolly.icon}"></i>
+                    ${jolly.name} (Jolly)
+                </span>
+            `;
+            
+            // Social proof
+            const socialProofHTML = currentNiche?.social_proof ? `
+                <div class="${this.config.cssPrefix}social-proof">
+                    <i class="fas fa-users"></i>
+                    ${currentNiche.social_proof}
+                </div>
+            ` : '';
+            
+            // Urgency message specifico della combo
+            const urgencyHTML = `
+                <div class="${this.config.cssPrefix}urgency-message">
+                    <i class="fas fa-clock"></i>
+                    ${selectedCombo.urgency_message}
+                </div>
+            `;
+            
+            return `
+                <div class="${this.config.cssPrefix}combo-section">
+                    <div class="${this.config.cssPrefix}combo-card">
+                        <div class="${this.config.cssPrefix}combo-title">
+                            <i class="fas fa-boxes"></i>
+                            ${selectedCombo.nome_tema}
+                        </div>
+                        ${socialProofHTML}
+                        <div class="${this.config.cssPrefix}combo-items">
+                            ${itemsHTML}
+                            ${jollyHTML}
+                        </div>
+                        ${urgencyHTML}
+                    </div>
+                </div>
+            `;
+        },
+        
+        // ========== GET COMBO CON PRIORITÀ 80/20 ==========
+        getComboWithPriority: function() {
+            // 80% nicchia corrente, 20% cross-nicchia
+            const useCurrentNiche = Math.random() < 0.8;
+            
+            if (useCurrentNiche) {
+                return this.getThemedCombo();
+            } else {
+                return this.getCrossNicheCombo();
+            }
+        },
+        
+        // ========== GET CROSS NICHE COMBO ==========
+        getCrossNicheCombo: function() {
+            // Usa i prodotti caricati dalla pagina corrente
+            if (!this.state.currentPageProducts || this.state.currentPageProducts.length === 0) {
+                return '';
+            }
+            
+            // Identifica la nicchia corrente
+            const currentPath = window.location.pathname;
+            const currentNiche = this.state.nichesData?.find(n => currentPath.includes(n.url));
+            
+            // Seleziona una nicchia diversa dalla corrente
+            const otherNiches = this.state.nichesData?.filter(n => n.id !== currentNiche?.id) || [];
+            if (otherNiches.length === 0) {
+                return this.getThemedCombo();
+            }
+            
+            const randomNiche = otherNiches[Math.floor(Math.random() * otherNiches.length)];
+            
+            // Se la nicchia selezionata non ha combos, usa fallback random
+            if (!randomNiche.combos || randomNiche.combos.length === 0) {
+                return this.getRandomCombo();
+            }
+            
+            // Seleziona una combo casuale dalla nicchia cross
+            const selectedCombo = randomNiche.combos[Math.floor(Math.random() * randomNiche.combos.length)];
+            
+            // Tracking GA4
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'combo_cross_niche_view', {
+                    current_niche_id: currentNiche?.id || 'unknown',
+                    current_niche_name: currentNiche?.name || 'unknown',
+                    cross_niche_id: randomNiche.id,
+                    cross_niche_name: randomNiche.name,
+                    combo_id: selectedCombo.id,
+                    combo_theme: selectedCombo.nome_tema
+                });
+            }
+            
+            // Usa prodotti della pagina corrente (per semplicità)
+            const shuffled = [...this.state.currentPageProducts].sort(() => 0.5 - Math.random());
+            const selectedProducts = shuffled.slice(0, Math.min(3, shuffled.length));
+            
+            if (selectedProducts.length === 0) {
+                return this.getRandomCombo();
+            }
+            
+            // Aggiungi jolly
+            const jollies = [
+                { name: 'Acqua', icon: 'fa-tint' },
+                { name: 'Tè', icon: 'fa-mug-hot' },
+                { name: 'Caffè', icon: 'fa-coffee' },
+                { name: 'Snack', icon: 'fa-cookie' },
+                { name: 'Frutta', icon: 'fa-apple-alt' }
+            ];
+            const jolly = jollies[Math.floor(Math.random() * jollies.length)];
+            
+            // Genera HTML
+            const itemsHTML = selectedProducts.map(product => {
+                const sellingPoint = randomNiche?.selling_point?.[Math.floor(Math.random() * (randomNiche.selling_point?.length || 1))] || '';
+                return `
+                <span class="${this.config.cssPrefix}combo-item">
+                    <i class="fas fa-box"></i>
+                    ${product.name}
+                    ${sellingPoint ? `<small class="${this.config.cssPrefix}selling-point">${sellingPoint}</small>` : ''}
+                </span>
+            `}).join('');
+            
+            const jollyHTML = `
+                <span class="${this.config.cssPrefix}combo-item jolly">
+                    <i class="fas ${jolly.icon}"></i>
+                    ${jolly.name} (Jolly)
+                </span>
+            `;
+            
+            const socialProofHTML = randomNiche?.social_proof ? `
+                <div class="${this.config.cssPrefix}social-proof">
+                    <i class="fas fa-users"></i>
+                    ${randomNiche.social_proof}
+                </div>
+            ` : '';
+            
+            const urgencyHTML = `
+                <div class="${this.config.cssPrefix}urgency-message">
+                    <i class="fas fa-clock"></i>
+                    ${selectedCombo.urgency_message}
+                </div>
+            `;
+            
+            return `
+                <div class="${this.config.cssPrefix}combo-section">
+                    <div class="${this.config.cssPrefix}combo-card">
+                        <div class="${this.config.cssPrefix}combo-title">
+                            <i class="fas fa-boxes"></i>
+                            ${selectedCombo.nome_tema}
+                            <small style="color: #667eea; margin-left: 10px;">(${randomNiche.name})</small>
+                        </div>
+                        ${socialProofHTML}
+                        <div class="${this.config.cssPrefix}combo-items">
+                            ${itemsHTML}
+                            ${jollyHTML}
+                        </div>
+                        ${urgencyHTML}
+                    </div>
+                </div>
+            `;
+        },
+        
+        // ========== START COMBO TIMER ==========
+        startComboTimer: function() {
+            // Ferma timer esistente se presente
+            this.stopComboTimer();
+            
+            // Avvia nuovo timer (30-60 secondi)
+            const interval = 30000 + Math.random() * 30000; // 30-60 secondi
+            
+            this.state.comboTimer = setInterval(() => {
+                this.addNewCombo();
+            }, interval);
+            
+            this.log('Timer combo avviato:', Math.round(interval / 1000), 'secondi');
+        },
+        
+        // ========== STOP COMBO TIMER ==========
+        stopComboTimer: function() {
+            if (this.state.comboTimer) {
+                clearInterval(this.state.comboTimer);
+                this.state.comboTimer = null;
+                this.log('Timer combo fermato');
+            }
+        },
+        
+        // ========== ADD NEW COMBO ==========
+        addNewCombo: function() {
+            try {
+                const dynamicCombos = this.state.modal.querySelector('.' + this.config.cssPrefix + 'dynamic-combos');
+                if (!dynamicCombos) {
+                    return;
+                }
+                
+                // Genera nuova combo con priorità 80/20
+                const combo = this.getComboWithPriority();
+                
+                if (combo) {
+                    // Appendi nuova combo
+                    const comboDiv = document.createElement('div');
+                    comboDiv.innerHTML = combo;
+                    comboDiv.style.animation = 'fadeIn 0.5s ease';
+                    dynamicCombos.appendChild(comboDiv);
+                    
+                    // Scroll automatico all'ultima combo
+                    dynamicCombos.scrollTop = dynamicCombos.scrollHeight;
+                    
+                    this.log('Nuova combo aggiunta');
+                }
+            } catch (error) {
+                this.error('Errore aggiunta combo:', error);
+            }
+        },
+        
+        // ========== GET RANDOM COMBO (FALLBACK) ==========
         getRandomCombo: function() {
             // Usa i prodotti caricati dalla pagina corrente
             if (!this.state.currentPageProducts || this.state.currentPageProducts.length === 0) {
                 return '';
+            }
+            
+            // Identifica la nicchia corrente dal pathname
+            const currentPath = window.location.pathname;
+            const currentNiche = this.state.nichesData?.find(n => currentPath.includes(n.url));
+            
+            // Tracking GA4
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'combo_random_view', {
+                    niche_id: currentNiche?.id || 'unknown',
+                    niche_name: currentNiche?.name || 'unknown'
+                });
             }
             
             // Seleziona 3 prodotti casuali dalla pagina
@@ -724,19 +1133,38 @@
             ];
             const jolly = jollies[Math.floor(Math.random() * jollies.length)];
             
-            // Genera HTML per i prodotti selezionati
-            const itemsHTML = selectedProducts.map(product => `
+            // Genera HTML per i prodotti selezionati con selling point
+            const itemsHTML = selectedProducts.map(product => {
+                const sellingPoint = currentNiche?.selling_point?.[Math.floor(Math.random() * (currentNiche.selling_point?.length || 1))] || '';
+                return `
                 <span class="${this.config.cssPrefix}combo-item">
                     <i class="fas fa-box"></i>
                     ${product.name}
+                    ${sellingPoint ? `<small class="${this.config.cssPrefix}selling-point">${sellingPoint}</small>` : ''}
                 </span>
-            `).join('');
+            `}).join('');
             
             const jollyHTML = `
                 <span class="${this.config.cssPrefix}combo-item jolly">
                     <i class="fas ${jolly.icon}"></i>
                     ${jolly.name} (Jolly)
                 </span>
+            `;
+            
+            // Social proof
+            const socialProofHTML = currentNiche?.social_proof ? `
+                <div class="${this.config.cssPrefix}social-proof">
+                    <i class="fas fa-users"></i>
+                    ${currentNiche.social_proof}
+                </div>
+            ` : '';
+            
+            // Urgency message
+            const urgencyHTML = `
+                <div class="${this.config.cssPrefix}urgency-message">
+                    <i class="fas fa-clock"></i>
+                    La combinazione preferita dagli utenti oggi.
+                </div>
             `;
             
             return `
@@ -746,10 +1174,12 @@
                             <i class="fas fa-boxes"></i>
                             Combo del Momento
                         </div>
+                        ${socialProofHTML}
                         <div class="${this.config.cssPrefix}combo-items">
                             ${itemsHTML}
                             ${jollyHTML}
                         </div>
+                        ${urgencyHTML}
                     </div>
                 </div>
             `;
@@ -791,9 +1221,9 @@
         
         // ========== SHOW ERROR ==========
         showError: function(message) {
-            const body = this.state.modal.querySelector('.' + this.config.cssPrefix + 'modal-body');
-            if (body) {
-                body.innerHTML = `
+            const fixedMessages = this.state.modal.querySelector('.' + this.config.cssPrefix + 'fixed-messages');
+            if (fixedMessages) {
+                fixedMessages.innerHTML = `
                     <div class="${this.config.cssPrefix}error">
                         <i class="fas fa-exclamation-triangle"></i>
                         ${message}
@@ -807,6 +1237,45 @@
             if (this.state.floatButton) this.state.floatButton.style.display = 'none';
             if (this.state.modal) this.state.modal.style.display = 'none';
             if (this.state.toast) this.state.toast.style.display = 'none';
+        },
+        
+        // ========== AIUTO PROATTIVO ==========
+        initProactiveHelp: function() {
+            let inactiveTime = 0;
+            const INACTIVE_THRESHOLD = 30; // secondi
+            
+            // Reset timer quando l'utente interagisce
+            const resetInactiveTimer = () => {
+                inactiveTime = 0;
+            };
+            
+            // Reset timer su click o scroll
+            document.addEventListener('click', resetInactiveTimer);
+            document.addEventListener('scroll', resetInactiveTimer);
+            document.addEventListener('keydown', resetInactiveTimer);
+            
+            // Reset timer quando modal è aperto
+            this.state.modal.addEventListener('click', resetInactiveTimer);
+            
+            // Timer che controlla l'inattività ogni secondo
+            setInterval(() => {
+                if (!this.state.modalOpen) {
+                    inactiveTime++;
+                    
+                    if (inactiveTime === INACTIVE_THRESHOLD) {
+                        this.showProactiveHelp();
+                    }
+                } else {
+                    inactiveTime = 0;
+                }
+            }, 1000);
+        },
+        
+        showProactiveHelp: function() {
+            const message = "Il catalogo è vasto, ma la scelta migliore è sotto i tuoi occhi. Ti serve un consiglio su quale prodotto chiude meglio la tua selezione?";
+            
+            this.state.toast.querySelector(`.${this.config.cssPrefix}toast-message`).textContent = message;
+            this.showToast();
         },
         
         // ========== DEFAULT NICHES ==========
