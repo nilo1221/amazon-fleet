@@ -402,7 +402,7 @@
 }
 
 .hero-glassmorphism h1 {
-    color: #2c3e50;
+    color: #1E293B;
     text-shadow: none;
     font-weight: 300;
     animation: textReveal 1s ease-out;
@@ -420,8 +420,16 @@
 }
 
 .hero-glassmorphism p {
-    color: rgba(44, 62, 80, 0.85);
+    color: #1E293B;
     font-weight: 300;
+}
+
+.hero-btn-primary {
+    min-width: 250px;
+}
+
+.hero-btn-secondary {
+    min-width: 250px;
 }
 
 .btn-hero-cta-animated {
