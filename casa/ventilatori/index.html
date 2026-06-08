@@ -252,20 +252,23 @@
     </section>
 
     <!-- AI Assistant Button -->
-    <button id="ai-assistant-toggle" class="ai-assistant-toggle">
-        <i class="fas fa-robot"></i>
+    <button id="ai-assistant-toggle" class="sc-ai-float-button">
+        <i class="fas fa-robot sc-ai-float-icon"></i>
     </button>
 
     <!-- AI Assistant Window -->
-    <div id="ai-assistant-window" class="ai-assistant-window">
-        <div class="ai-assistant-header">
-            <h5><i class="fas fa-robot me-2"></i>Assistente Smart Choices</h5>
-            <button id="ai-assistant-close" class="ai-assistant-close">&times;</button>
-        </div>
-        <div id="ai-assistant-messages" class="ai-assistant-messages"></div>
-        <div class="ai-assistant-input">
-            <input type="text" id="ai-assistant-user-input" placeholder="Scrivi un messaggio...">
-            <button id="ai-assistant-send"><i class="fas fa-paper-plane"></i></button>
+    <div id="ai-assistant-window" class="sc-ai-modal-container">
+        <div class="sc-ai-modal-content">
+            <div class="sc-ai-modal-header">
+                <div class="sc-ai-modal-title">
+                    <div class="sc-ai-phoenix-logo">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <span>Assistente Smart Choices</span>
+                </div>
+                <button id="ai-assistant-close" class="sc-ai-close-button">&times;</button>
+            </div>
+            <div id="ai-assistant-messages" class="sc-ai-modal-body"></div>
         </div>
     </div>
 
