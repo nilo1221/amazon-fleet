@@ -471,22 +471,22 @@
             }
         },
         
-        // ========== GENERAZIONE CONTENUTO SIDEBAR COMBO ==========
+        // ========== GENERAZIONE CONTENUTO WIDGET COMBO ==========
         generateSidebarComboContent: function() {
             try {
-                const sidebarContent = document.getElementById('combo-sidebar-content');
-                if (!sidebarContent) {
-                    this.log('Elemento sidebar combo non trovato');
+                const widgetContent = document.getElementById('combo-widget-content');
+                if (!widgetContent) {
+                    this.log('Elemento widget combo non trovato');
                     return;
                 }
-                
+
                 // Simula caricamento
                 setTimeout(() => {
                     const combo = this.getThemedCombo();
                     if (combo) {
-                        sidebarContent.innerHTML = combo;
+                        widgetContent.innerHTML = combo;
                     }
-                    this.log('Contenuto sidebar combo generato');
+                    this.log('Contenuto widget combo generato');
                 }, 500);
             } catch (error) {
                 this.error('Errore generazione contenuto sidebar combo:', error);
@@ -1080,18 +1080,18 @@
         // ========== ADD NEW COMBO ==========
         addNewCombo: function() {
             try {
-                const sidebarContent = document.getElementById('combo-sidebar-content');
-                if (!sidebarContent) {
+                const widgetContent = document.getElementById('combo-widget-content');
+                if (!widgetContent) {
                     return;
                 }
-                
+
                 // Genera nuova combo con priorità 80/20
                 const combo = this.getComboWithPriority();
-                
+
                 if (combo) {
-                    // Sostituisci combo esistente (sidebar: una combo alla volta)
-                    sidebarContent.innerHTML = combo;
-                    sidebarContent.style.animation = 'fadeIn 0.5s ease';
+                    // Sostituisci combo esistente (widget: una combo alla volta)
+                    widgetContent.innerHTML = combo;
+                    widgetContent.style.animation = 'fadeIn 0.5s ease';
                     
                     this.log('Nuova combo aggiunta al sidebar');
                 }
