@@ -755,96 +755,219 @@
                                 </small>
                             </div>
                         </div>
-                        <div class="row g-3 category-grid">
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="casa/arredamento-casa/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-gem text-warning me-2"></i>Casa & Decorazione
-                                    </a>
+                        <div class="accordion" id="categoryAccordion">
+                            <!-- Casa Category -->
+                            <div class="accordion-item border-0 mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#casaCategory" aria-expanded="true" aria-controls="casaCategory">
+                                        <i class="fas fa-home text-warning me-2"></i>Casa
+                                    </button>
+                                </h2>
+                                <div id="casaCategory" class="accordion-collapse collapse show" data-bs-parent="#categoryAccordion">
+                                    <div class="accordion-body p-2">
+                                        <div class="row g-2">
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="casa/cucina-elettrodomestici/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-fire-burner text-warning me-2"></i>Cucina & Elettrodomestici
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="casa/arredamento-casa/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-gem text-warning me-2"></i>Arredamento Casa
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="casa/ufficio-produttivo/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-briefcase text-warning me-2"></i>Ufficio Produttivo
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="casa/ventilatori/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-wind text-warning me-2"></i>Ventilatori
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="casa/snack-bevande/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-cookie-bite text-warning me-2"></i>Snack e Bevande
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="moda/moda-donna/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-female text-primary me-2"></i>Moda Donna
-                                    </a>
+                            </div>
+                            
+                            <!-- Tech Category -->
+                            <div class="accordion-item border-0 mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#techCategory" aria-expanded="false" aria-controls="techCategory">
+                                        <i class="fas fa-laptop text-primary me-2"></i>Tech
+                                    </button>
+                                </h2>
+                                <div id="techCategory" class="accordion-collapse collapse" data-bs-parent="#categoryAccordion">
+                                    <div class="accordion-body p-2">
+                                        <div class="row g-2">
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="tech/smart-home-domotica/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-box text-primary me-2"></i>Smart Home & Domotica
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="tech/smartphone-tech/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-mobile-alt text-primary me-2"></i>Smartphone & Tech
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="tech/gadget-tech/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-laptop text-primary me-2"></i>Gadget Tech
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="tech/fotografia-mobile/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-camera text-primary me-2"></i>Fotografia Mobile
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="tech/elite-gaming-gear/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-gamepad text-primary me-2"></i>Elite Gaming Gear
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="moda/moda-uomo/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-male text-primary me-2"></i>Moda Uomo
-                                    </a>
+                            </div>
+                            
+                            <!-- Moda Category -->
+                            <div class="accordion-item border-0 mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#modaCategory" aria-expanded="false" aria-controls="modaCategory">
+                                        <i class="fas fa-tshirt text-secondary me-2"></i>Moda
+                                    </button>
+                                </h2>
+                                <div id="modaCategory" class="accordion-collapse collapse" data-bs-parent="#categoryAccordion">
+                                    <div class="accordion-body p-2">
+                                        <div class="row g-2">
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="moda/moda-uomo/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-male text-secondary me-2"></i>Moda Uomo
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="moda/moda-donna/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-female text-secondary me-2"></i>Moda Donna
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="moda/accessori-moda/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-glasses text-secondary me-2"></i>Accessori Moda
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="moda/abbigliamento-cinema-tv/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-film text-secondary me-2"></i>Abbigliamento Cinema & TV
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="moda/accessori-moda/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-glasses text-secondary me-2"></i>Accessori Moda
-                                    </a>
+                            </div>
+                            
+                            <!-- Benessere Category -->
+                            <div class="accordion-item border-0 mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#benessereCategory" aria-expanded="false" aria-controls="benessereCategory">
+                                        <i class="fas fa-heart text-danger me-2"></i>Benessere
+                                    </button>
+                                </h2>
+                                <div id="benessereCategory" class="accordion-collapse collapse" data-bs-parent="#categoryAccordion">
+                                    <div class="accordion-body p-2">
+                                        <div class="row g-2">
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="benessere/fitness-casa/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-dumbbell text-danger me-2"></i>Fitness Casa
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="benessere/benessere-cura-personale/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-spa text-danger me-2"></i>Benessere & Cura Personale
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="benessere/profumi-bellezza/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-spray-can text-danger me-2"></i>Profumi & Bellezza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="tech/smartphone-tech/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-mobile-alt text-info me-2"></i>Smartphone & Tech
-                                    </a>
+                            </div>
+                            
+                            <!-- Lifestyle Category -->
+                            <div class="accordion-item border-0 mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#lifestyleCategory" aria-expanded="false" aria-controls="lifestyleCategory">
+                                        <i class="fas fa-leaf text-success me-2"></i>Lifestyle
+                                    </button>
+                                </h2>
+                                <div id="lifestyleCategory" class="accordion-collapse collapse" data-bs-parent="#categoryAccordion">
+                                    <div class="accordion-body p-2">
+                                        <div class="row g-2">
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="lifestyle/pet-care-intelligente/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-paw text-success me-2"></i>Pet Care Intelligente
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="lifestyle/viaggi-vacanze/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-plane text-success me-2"></i>Viaggi & Vacanze
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="lifestyle/outdoor-camping/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-campground text-success me-2"></i>Outdoor & Camping
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="lifestyle/mare-spiaggia/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-umbrella-beach text-success me-2"></i>Mare & Spiaggia
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="lifestyle/sostenibilita-eco-friendly/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-leaf text-success me-2"></i>Sostenibilità & Eco-Friendly
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="tech/gadget-tech/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-laptop text-dark me-2"></i>Tech
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="lifestyle/pet-care-intelligente/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-paw text-success me-2"></i>Pet Care Intelligente
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="lifestyle/viaggi-vacanze/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-plane text-primary me-2"></i>Viaggi & Vacanze
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="lifestyle/mare-spiaggia/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-umbrella-beach text-warning me-2"></i>Mare & Spiaggia
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="lifestyle/outdoor-camping/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-campground text-success me-2"></i>Outdoor & Camping
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="intrattenimento/giochi-da-tavolo/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-dice-d20 text-danger me-2"></i>Giochi da Tavolo
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="intrattenimento/libri-ereader/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-book text-info me-2"></i>Libri & E-Reader
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="tech/fotografia-mobile/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-camera text-dark me-2"></i>Fotografia Mobile
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="benessere/profumi-bellezza/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-spray-can text-pink me-2"></i>Profumi & Bellezza
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="benessere/benessere-cura-personale/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-spa text-success me-2"></i>Benessere & Cura Personale
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="lifestyle/sostenibilita-eco-friendly/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-leaf text-success me-2"></i>Sostenibilità & Eco-Friendly
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="casa/ufficio-produttivo/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-briefcase text-secondary me-2"></i>Ufficio Produttivo
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="intrattenimento/film-dvd-bluray/index.html" class="d-block p-3 bg-white rounded border hover-lift text-decoration-none">
-                                        <i class="fas fa-compact-disc text-dark me-2"></i>DVD & Blu-ray
-                                    </a>
+                            </div>
+                            
+                            <!-- Intrattenimento Category -->
+                            <div class="accordion-item border-0 mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#intrattenimentoCategory" aria-expanded="false" aria-controls="intrattenimentoCategory">
+                                        <i class="fas fa-film text-info me-2"></i>Intrattenimento
+                                    </button>
+                                </h2>
+                                <div id="intrattenimentoCategory" class="accordion-collapse collapse" data-bs-parent="#categoryAccordion">
+                                    <div class="accordion-body p-2">
+                                        <div class="row g-2">
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="intrattenimento/giochi-da-tavolo/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-dice-d20 text-info me-2"></i>Giochi da Tavolo
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="intrattenimento/libri-ereader/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-book text-info me-2"></i>Libri & E-Reader
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <a href="intrattenimento/film-dvd-bluray/index.html" class="d-block p-2 bg-white rounded border hover-lift text-decoration-none">
+                                                    <i class="fas fa-compact-disc text-info me-2"></i>DVD & Blu-ray
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
