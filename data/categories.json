@@ -504,6 +504,23 @@
       "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
       "amazonServiceType": "music",
       "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl"
+    },
+    {
+      "id": "ventilatori",
+      "name": "Ventilatori & Aria Condizionata",
+      "icon": "fa-wind",
+      "color": "#00BCD4",
+      "productCount": 7,
+      "description": "Ventilatori da tavolo, da soffitto, portatili e aria condizionata",
+      "headerGradient": "linear-gradient(135deg, #006064 0%, #00BCD4 50%, #4DD0E1 100%)",
+      "primaryColor": "#00BCD4",
+      "accentColor": "#006064",
+      "macroCategory": "casa",
+      "url": "casa/ventilatori/index.html",
+      "song": "Summer Breeze",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl"
     }
   ]
 }
