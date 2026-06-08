@@ -534,10 +534,8 @@
                 greeting = 'Buongiorno.';
             } else if (hour >= 12 && hour < 18) {
                 greeting = 'Buon pomeriggio.';
-            } else if (hour >= 18 && hour < 22) {
-                greeting = 'Buonasera.';
             } else {
-                greeting = 'Buonanotte.';
+                greeting = 'Buonasera.';
             }
             
             return `
