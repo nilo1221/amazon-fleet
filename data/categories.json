@@ -214,13 +214,21 @@
         {
           "id": "cucina-veloce",
           "nome_tema": "Cucina per chi ha 20 minuti",
-          "product_ids": ["prod_001", "prod_005", "prod_009"],
+          "product_ids": [
+            "prod_001",
+            "prod_005",
+            "prod_009"
+          ],
           "urgency_message": "Soluzione perfetta per chi ha poco tempo."
         },
         {
           "id": "cucina-pro",
           "nome_tema": "Chef di Precisione",
-          "product_ids": ["prod_002", "prod_007", "prod_012"],
+          "product_ids": [
+            "prod_002",
+            "prod_007",
+            "prod_012"
+          ],
           "urgency_message": "Kit professionale ad alta rotazione."
         }
       ]
@@ -428,6 +436,74 @@
       "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
       "amazonServiceType": "music",
       "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref_=as_li_ss_tl"
+    },
+    {
+      "id": "detersivi",
+      "name": "Detersivi",
+      "icon": "fa-pump-soap",
+      "color": "#66BB6A",
+      "productCount": 2,
+      "description": "Detersivi per lavatrice, Bio Presto, Fairy",
+      "headerGradient": "linear-gradient(135deg, #2E7D32 0%, #66BB6A 50%, #81C784 100%)",
+      "primaryColor": "#66BB6A",
+      "accentColor": "#2E7D32",
+      "macroCategory": "casa",
+      "url": "lavoro/detersivi/index.html",
+      "song": "Fresh Clean",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl"
+    },
+    {
+      "id": "detersivo-lavastoviglie",
+      "name": "Detersivo Lavastoviglie",
+      "icon": "fa-sparkles",
+      "color": "#42A5F5",
+      "productCount": 2,
+      "description": "Pastiglie lavastoviglie, Finish Ultimate",
+      "headerGradient": "linear-gradient(135deg, #1565C0 0%, #42A5F5 50%, #64B5F6 100%)",
+      "primaryColor": "#42A5F5",
+      "accentColor": "#1565C0",
+      "macroCategory": "casa",
+      "url": "lavoro/detersivo-lavastoviglie/index.html",
+      "song": "Clean Vibes",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl"
+    },
+    {
+      "id": "vino-spumante",
+      "name": "Vino & Spumante",
+      "icon": "fa-wine-glass",
+      "color": "#AB47BC",
+      "productCount": 1,
+      "description": "Vino, Prosecco, Spumante, Sant'Orsola",
+      "headerGradient": "linear-gradient(135deg, #6A1B9A 0%, #AB47BC 50%, #CE93D8 100%)",
+      "primaryColor": "#AB47BC",
+      "accentColor": "#6A1B9A",
+      "macroCategory": "casa",
+      "url": "lavoro/vino-spumante/index.html",
+      "song": "Wine Tasting",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl"
+    },
+    {
+      "id": "snack-bevande",
+      "name": "Snack e Bevande",
+      "icon": "fa-cookie-bite",
+      "color": "#FF9800",
+      "productCount": 2,
+      "description": "Snack, Bevande, Ringo Cacao, Coca-Cola Zero",
+      "headerGradient": "linear-gradient(135deg, #E65100 0%, #FF9800 50%, #FFB74D 100%)",
+      "primaryColor": "#FF9800",
+      "accentColor": "#E65100",
+      "macroCategory": "casa",
+      "url": "casa/snack-bevande/index.html",
+      "song": "Snack Time",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl"
     }
   ]
 }
