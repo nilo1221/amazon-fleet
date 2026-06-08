@@ -101,6 +101,25 @@
             color: var(--primary-color);
             margin-bottom: 20px;
         }
+        
+        .category-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: var(--accent-color) !important;
+        }
+        
+        .category-card h6 {
+            color: #333;
+        }
+        
+        .category-card:hover h6 {
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -154,6 +173,168 @@
                         <span class="category-badge">
                             <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
                         </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorie Navigation Section -->
+    <section class="container mt-4">
+        <div class="text-center mb-4">
+            <h3 class="fw-bold mb-3">Cosa stai cercando?</h3>
+            <p class="text-muted">Naviga tra le categorie per trovare il prodotto perfetto per il tuo setup gaming</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#monitor" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-desktop fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Monitor</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#tastiere" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-keyboard fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold">Tastiere</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#mouse" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-mouse fa-2x text-info mb-2"></i>
+                        <h6 class="fw-bold">Mouse</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#cuffie" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-headphones fa-2x text-secondary mb-2"></i>
+                        <h6 class="fw-bold">Cuffie</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guida Rapida Section -->
+    <section class="container mt-5">
+        <div class="bg-light rounded p-4">
+            <h4 class="fw-bold mb-3 text-center"><i class="fas fa-lightbulb text-warning me-2"></i>Come scegliere il prodotto giusto</h4>
+            <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-gamepad fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold">Per Gaming</h6>
+                        <p class="small text-muted">Hardware ottimizzato per prestazioni e reattività massima</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-desktop fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Per Streaming</h6>
+                        <p class="small text-muted">Monitor e accessori per streaming di alta qualità</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-trophy fa-2x text-warning mb-2"></i>
+                        <h6 class="fw-bold">Per Competitivo</h6>
+                        <p class="small text-muted">Gear professionale per gaming competitivo e tornei</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Choice Products Section -->
+    <section class="container mt-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold"><i class="fas fa-star text-warning me-2"></i>Top Choice - I Più Consigliati</h2>
+            <p class="text-muted">I prodotti migliori selezionati per qualità e rapporto qualità-prezzo</p>
+        </div>
+        <div class="row">
+            <!-- Top Choice 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100 border-warning border-2">
+                    <div class="card-body p-3">
+                        <div class="text-center mb-2">
+                            <span class="badge bg-warning mb-2">TOP CHOICE</span>
+                            <i class="fas fa-desktop fa-3x text-success"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block" style="font-size: 0.8em;">
+                            Monitor
+                        </span>
+                        <h3 class="card-title fw-bold mb-2" style="font-size: 1rem;">MSI Monitor Gaming G255F</h3>
+                        <p class="card-text text-muted small">24.5" Full HD 1920x1080, 170Hz refresh rate, 1ms response time.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B08ZL3JQK3?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Top Choice 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100 border-warning border-2">
+                    <div class="card-body p-3">
+                        <div class="text-center mb-2">
+                            <span class="badge bg-warning mb-2">TOP CHOICE</span>
+                            <i class="fas fa-keyboard fa-3x text-primary"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block" style="font-size: 0.8em;">
+                            Tastiere
+                        </span>
+                        <h3 class="card-title fw-bold mb-2" style="font-size: 1rem;">Tastiera Meccanica RGB</h3>
+                        <p class="card-text text-muted small">Tastiera meccanica con illuminazione RGB per gaming.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B08ZL3JQK3?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Top Choice 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100 border-warning border-2">
+                    <div class="card-body p-3">
+                        <div class="text-center mb-2">
+                            <span class="badge bg-warning mb-2">TOP CHOICE</span>
+                            <i class="fas fa-headphones fa-3x text-info"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block" style="font-size: 0.8em;">
+                            Cuffie
+                        </span>
+                        <h3 class="card-title fw-bold mb-2" style="font-size: 1rem;">Cuffie Gaming 7.1</h3>
+                        <p class="card-text text-muted small">Cuffie gaming surround 7.1 con microfono.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B08ZL3JQK3?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
