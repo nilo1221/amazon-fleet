@@ -101,6 +101,25 @@
             color: var(--primary-color);
             margin-bottom: 20px;
         }
+        
+        .category-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: var(--accent-color) !important;
+        }
+        
+        .category-card h6 {
+            color: #333;
+        }
+        
+        .category-card:hover h6 {
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -154,6 +173,176 @@
                         <span class="category-badge">
                             <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
                         </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorie Navigation Section -->
+    <section class="container mt-4">
+        <div class="text-center mb-4">
+            <h3 class="fw-bold mb-3">Cosa stai cercando?</h3>
+            <p class="text-muted">Naviga tra le categorie per trovare il prodotto perfetto per la tua casa</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#supporti-tv" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-tv fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Supporti TV</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#pulizia" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-spray-can fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold">Pulizia</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#elettrodomestici" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-tshirt fa-2x text-info mb-2"></i>
+                        <h6 class="fw-bold">Elettrodomestici</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#protezione" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-bed fa-2x text-secondary mb-2"></i>
+                        <h6 class="fw-bold">Protezione</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#esterno" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-sun fa-2x text-warning mb-2"></i>
+                        <h6 class="fw-bold">Esterno</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guida Rapida Section -->
+    <section class="container mt-5">
+        <div class="bg-light rounded p-4">
+            <h4 class="fw-bold mb-3 text-center"><i class="fas fa-lightbulb text-warning me-2"></i>Come scegliere il prodotto giusto</h4>
+            <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-home fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold">Per Interni</h6>
+                        <p class="small text-muted">Prodotti per arredare e proteggere gli ambienti interni</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-sun fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Per Esterni</h6>
+                        <p class="small text-muted">Mobili e accessori per giardino, terrazza e piscina</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-cogs fa-2x text-warning mb-2"></i>
+                        <h6 class="fw-bold">Pulizia</h6>
+                        <p class="small text-muted">Detersivi e prodotti per mantenere la casa pulita</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Choice Products Section -->
+    <section class="container mt-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold"><i class="fas fa-star text-warning me-2"></i>Top Choice - I Più Consigliati</h2>
+            <p class="text-muted">I prodotti migliori selezionati per qualità e rapporto qualità-prezzo</p>
+        </div>
+        <div class="row">
+            <!-- Top Choice 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100 border-warning border-2">
+                    <div class="card-body p-3">
+                        <div class="text-center mb-2">
+                            <span class="badge bg-warning mb-2">TOP CHOICE</span>
+                            <i class="fas fa-tv fa-3x text-success"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block" style="font-size: 0.8em;">
+                            Supporto TV
+                        </span>
+                        <h3 class="card-title fw-bold mb-2" style="font-size: 1rem;">Supporto Girevole Estendibile</h3>
+                        <p class="card-text text-muted small">Supporto TV girevole ed estendibile, compatibile con TV da 32-70 pollici.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Perlegear-Supporto-Girevole-Estendibile-Resistente/dp/B01MZ6ZYU1?pd_rd_w=O9WRF&content-id=amzn1.sym.4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_p=4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_r=S05ZYPPE66GT7JD4NYZM&pd_rd_wg=C8AM8&pd_rd_r=afffc529-d17d-45ba-98a3-3d6933c44ffc&pd_rd_i=B01MZ6ZYU1&th=1&linkCode=ll2&tag=l0c39-21&linkId=8865dfefe07014d9be278973c30f2f08&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Top Choice 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100 border-warning border-2">
+                    <div class="card-body p-3">
+                        <div class="text-center mb-2">
+                            <span class="badge bg-warning mb-2">TOP CHOICE</span>
+                            <i class="fas fa-spray-can fa-3x text-primary"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block" style="font-size: 0.8em;">
+                            Pulizia
+                        </span>
+                        <h3 class="card-title fw-bold mb-2" style="font-size: 1rem;">Maxi Scorta Mastro Lindo</h3>
+                        <p class="card-text text-muted small">12 confezioni da 930ml, detersivo multiuso per pavimenti.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B0BG2XMTFC?m=a11il2pnwyju7h&th=1&linkCode=ll2&tag=l0c39-21&linkId=e3cfafbc4de7c7c16cdc1c09b4e2380a&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Top Choice 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100 border-warning border-2">
+                    <div class="card-body p-3">
+                        <div class="text-center mb-2">
+                            <span class="badge bg-warning mb-2">TOP CHOICE</span>
+                            <i class="fas fa-bed fa-3x text-info"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block" style="font-size: 0.8em;">
+                            Protezione
+                        </span>
+                        <h3 class="card-title fw-bold mb-2" style="font-size: 1rem;">Protettore Impermeabile</h3>
+                        <p class="card-text text-muted small">Protettore materasso impermeabile e ipoallergenico.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/Utopia-Bedding-Protettore-Impermeabile-Ipoallergenico/dp/B0BRCRFP3L?pd_rd_w=O9WRF&content-id=amzn1.sym.4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_p=4dca35fa-dfa3-4fcb-9ffe-1a5b1a54acf3&pf_rd_r=S05ZYPPE66GT7JD4NYZM&pd_rd_wg=C8AM8&pd_rd_r=afffc529-d17d-45ba-98a3-3d6933c44ffc&pd_rd_i=B0BRCRFP3L&th=1&linkCode=ll2&tag=l0c39-21&linkId=40b4254033ca96dc729cf1731c7d81d9&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1087,28 +1276,151 @@
     </div>
 </div>
 
-<!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-2">
-                <i class="fas fa-shopping-cart me-2"></i>
-                Smart Choices Guide - La tua guida per acquisti intelligenti
-            </p>
-            <p class="text-muted small">
-                Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale
-            </p>
-            <div class="amazon-disclaimer bg-dark bg-opacity-50 p-3 rounded border border-secondary mt-3">
-                <p class="mb-2 text-warning fw-bold"><i class="fab fa-amazon me-2" aria-hidden="true"></i>Disclaimer Amazon Associates</p>
-                <p class="text-white-50 mb-0">In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche. Qualsiasi prezzo e informazioni sulla disponibilità visualizzati sul sito Amazon al momento dell'acquisto si applicheranno all'acquisto di questo prodotto. Questo sito è partecipante al Programma Affiliazione Amazon EU, un programma di affiliazione che permette ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.</p>
+    <!-- Guida all'Acquisto Section -->
+    <section class="guida-scelta-section py-5 mt-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="guida-scelta-title" style="font-size: 2.5rem; font-weight: bold; color: #1a1a2e; margin-bottom: 1rem;">
+                    <i class="fas fa-lightbulb me-3" style="color: #FF6B35;"></i>Guida all'Acquisto
+                </h2>
+                <p class="lead text-muted">Come scegliere i prodotti giusti per la tua casa</p>
             </div>
-            </p>
-            <div class="mt-3">
-                <a href="../../index.html" class="text-white me-3">
-                    <i class="fas fa-home me-1"></i>Torna alla Home
-                </a>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-home fa-3x text-success"></i>
+                            </div>
+                            <h5 class="fw-bold text-center mb-3">Stile</h5>
+                            <p class="text-muted small text-center">Scegli prodotti che si integrano con il tuo stile d'arredo: moderno, classico, rustico o minimalista.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-ruler-combined fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="fw-bold text-center mb-3">Dimensioni</h5>
+                            <p class="text-muted small text-center">Misura gli spazi disponibili prima di acquistare per assicurarti che il prodotto si adatti perfettamente.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-shield-alt fa-3x text-warning"></i>
+                            </div>
+                            <h5 class="fw-bold text-center mb-3">Qualità</h5>
+                            <p class="text-muted small text-center">Controlla i materiali, la durata e le recensioni degli utenti per prodotti resistenti nel tempo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5 text-center">
+                <div class="alert alert-info d-inline-block">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Consiglio:</strong> Tutti i prodotti sono disponibili su Amazon con spedizione gratuita e garanzia inclusa.
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-gem fa-2x me-3" style="color: var(--primary-color);"></i>
+                        <h5 class="fw-bold mb-0">Arredamento Casa</h5>
+                    </div>
+                    <p class="small text-muted">Mobili, accessori e complementi d'arredo per rendere la tua casa accogliente e stilosa.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-link fa-2x me-3" style="color: var(--accent-color);"></i>
+                        <h5 class="fw-bold mb-0">Link Utili</h5>
+                    </div>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="../../index.html" class="text-white text-decoration-none hover-accent"><i class="fas fa-home me-2"></i>Home</a></li>
+                        <li class="mb-2"><a href="../../tutte-le-categorie.html" class="text-white text-decoration-none hover-accent"><i class="fas fa-list me-2"></i>Tutte le Categorie</a></li>
+                        <li class="mb-2"><a href="#supporti-tv" class="text-white text-decoration-none hover-accent"><i class="fas fa-tv me-2"></i>Supporti TV</a></li>
+                        <li class="mb-2"><a href="#pulizia" class="text-white text-decoration-none hover-accent"><i class="fas fa-spray-can me-2"></i>Pulizia</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-share-alt fa-2x me-3" style="color: #6c757d;"></i>
+                        <h5 class="fw-bold mb-0">Seguici</h5>
+                    </div>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-youtube fa-2x"></i>
+                        </a>
+                    </div>
+                    <p class="small text-muted">Seguici sui social per offerte esclusive e consigli di arredo!</p>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="amazon-disclaimer bg-dark bg-opacity-50 p-3 rounded border border-secondary">
+                        <p class="mb-2 text-warning fw-bold"><i class="fab fa-amazon me-2"></i>Disclaimer Amazon Associates</p>
+                        <p class="text-white-50 mb-0">In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche. Qualsiasi prezzo e informazioni sulla disponibilità visualizzati sul sito Amazon al momento dell'acquisto si applicheranno all'acquisto di questo prodotto. Questo sito è partecipante al Programma Affiliazione Amazon EU, un programma di affiliazione che permette ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="small text-muted mb-0">
+                        © 2024 Smart Choices Guide. Tutti i diritti riservati.
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
+    
+    <style>
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            color: var(--primary-color) !important;
+        }
+        
+        .hover-accent {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-accent:hover {
+            color: var(--accent-color) !important;
+            padding-left: 5px;
+        }
+    </style>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
