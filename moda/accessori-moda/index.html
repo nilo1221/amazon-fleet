@@ -82,6 +82,25 @@
             box-shadow: 0 6px 20px rgba(139, 0, 139, 0.4);
             color: white;
         }
+        
+        .category-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: var(--accent-color) !important;
+        }
+        
+        .category-card h6 {
+            color: #333;
+        }
+        
+        .category-card:hover h6 {
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -135,6 +154,168 @@
                         <span class="category-badge">
                             <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
                         </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorie Navigation Section -->
+    <section class="container mt-4">
+        <div class="text-center mb-4">
+            <h3 class="fw-bold mb-3">Cosa stai cercando?</h3>
+            <p class="text-muted">Naviga tra le categorie per trovare l'accessorio perfetto per il tuo stile</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#occhiali" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-glasses fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Occhiali</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#cinture" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-ring fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold">Cinture</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#gioielli" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-gem fa-2x text-info mb-2"></i>
+                        <h6 class="fw-bold">Gioielli</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#borse" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-shopping-bag fa-2x text-secondary mb-2"></i>
+                        <h6 class="fw-bold">Borse</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guida Rapida Section -->
+    <section class="container mt-5">
+        <div class="bg-light rounded p-4">
+            <h4 class="fw-bold mb-3 text-center"><i class="fas fa-lightbulb text-warning me-2"></i>Come scegliere il prodotto giusto</h4>
+            <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-palette fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold">Stile</h6>
+                        <p class="small text-muted">Scegli accessori che completano il tuo look</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-star fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Qualità</h6>
+                        <p class="small text-muted">Priorità a materiali premium e duraturi</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-heart fa-2x text-warning mb-2"></i>
+                        <h6 class="fw-bold">Versatilità</h6>
+                        <p class="small text-muted">Accessori adatti a più occasioni</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Choice Products Section -->
+    <section class="container mt-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold"><i class="fas fa-star text-warning me-2"></i>Top Choice - I Più Consigliati</h2>
+            <p class="text-muted">I prodotti migliori selezionati per qualità e rapporto qualità-prezzo</p>
+        </div>
+        <div class="row">
+            <!-- Top Choice 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100 border-warning border-2">
+                    <div class="card-body p-3">
+                        <div class="text-center mb-2">
+                            <span class="badge bg-warning mb-2">TOP CHOICE</span>
+                            <i class="fas fa-glasses fa-3x text-success"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block" style="font-size: 0.8em;">
+                            Occhiali
+                        </span>
+                        <h3 class="card-title fw-bold mb-2" style="font-size: 1rem;">Occhiali da Sole Retro</h3>
+                        <p class="card-text text-muted small">Occhiali da sole stile retrò per look elegante.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B08ZL3JQK3?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Top Choice 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100 border-warning border-2">
+                    <div class="card-body p-3">
+                        <div class="text-center mb-2">
+                            <span class="badge bg-warning mb-2">TOP CHOICE</span>
+                            <i class="fas fa-ring fa-3x text-primary"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block" style="font-size: 0.8em;">
+                            Cinture
+                        </span>
+                        <h3 class="card-title fw-bold mb-2" style="font-size: 1rem;">Cintura in Pelle</h3>
+                        <p class="card-text text-muted small">Cintura elegante in pelle vera per uomo.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B08ZL3JQK3?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Top Choice 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100 border-warning border-2">
+                    <div class="card-body p-3">
+                        <div class="text-center mb-2">
+                            <span class="badge bg-warning mb-2">TOP CHOICE</span>
+                            <i class="fas fa-gem fa-3x text-info"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block" style="font-size: 0.8em;">
+                            Gioielli
+                        </span>
+                        <h3 class="card-title fw-bold mb-2" style="font-size: 1rem;">Collana Elegante</h3>
+                        <p class="card-text text-muted small">Collana elegante in acciaio inossidabile.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B08ZL3JQK3?th=1&linkCode=ll2&tag=l0c39-21&linkId=abc123&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -585,22 +766,151 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-2">
-                <i class="fas fa-shopping-cart me-2"></i>
-                Smart Choices Guide - La tua guida per acquisti intelligenti
-            </p>
-            <p class="mb-0 text-muted small">
-                Partecipiamo al Programma Affiliazione Amazon EU. Quando acquisti tramite i nostri link, potremmo guadagnare una commissione.
-            </p>
-        </div>
-            <div class="amazon-disclaimer bg-dark bg-opacity-50 p-3 rounded border border-secondary mt-3">
-                <p class="mb-2 text-warning fw-bold"><i class="fab fa-amazon me-2" aria-hidden="true"></i>Disclaimer Amazon Associates</p>
-                <p class="text-white-50 mb-0">In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche. Qualsiasi prezzo e informazioni sulla disponibilità visualizzati sul sito Amazon al momento dell'acquisto si applicheranno all'acquisto di questo prodotto. Questo sito è partecipante al Programma Affiliazione Amazon EU, un programma di affiliazione che permette ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.</p>
+    <!-- Guida all'Acquisto Section -->
+    <section class="guida-scelta-section py-5 mt-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="guida-scelta-title" style="font-size: 2.5rem; font-weight: bold; color: #1a1a2e; margin-bottom: 1rem;">
+                    <i class="fas fa-lightbulb me-3" style="color: #FF6B35;"></i>Guida all'Acquisto
+                </h2>
+                <p class="lead text-muted">Come scegliere gli accessori giusti per il tuo stile</p>
             </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-palette fa-3x text-success"></i>
+                            </div>
+                            <h5 class="fw-bold text-center mb-3">Stile</h5>
+                            <p class="text-muted small text-center">Scegli accessori che completano il tuo look.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-star fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="fw-bold text-center mb-3">Qualità</h5>
+                            <p class="text-muted small text-center">Priorità a materiali premium e duraturi.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-heart fa-3x text-warning"></i>
+                            </div>
+                            <h5 class="fw-bold text-center mb-3">Versatilità</h5>
+                            <p class="text-muted small text-center">Accessori adatti a più occasioni.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5 text-center">
+                <div class="alert alert-info d-inline-block">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Consiglio:</strong> Tutti i prodotti sono disponibili su Amazon con spedizione gratuita e garanzia inclusa.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-gem fa-2x me-3" style="color: var(--primary-color);"></i>
+                        <h5 class="fw-bold mb-0">Accessori Moda</h5>
+                    </div>
+                    <p class="small text-muted">I migliori accessori moda uomo e donna a prezzi accessibili.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-link fa-2x me-3" style="color: var(--accent-color);"></i>
+                        <h5 class="fw-bold mb-0">Link Utili</h5>
+                    </div>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="../../index.html" class="text-white text-decoration-none hover-accent"><i class="fas fa-home me-2"></i>Home</a></li>
+                        <li class="mb-2"><a href="../../tutte-le-categorie.html" class="text-white text-decoration-none hover-accent"><i class="fas fa-list me-2"></i>Tutte le Categorie</a></li>
+                        <li class="mb-2"><a href="#occhiali" class="text-white text-decoration-none hover-accent"><i class="fas fa-glasses me-2"></i>Occhiali</a></li>
+                        <li class="mb-2"><a href="#cinture" class="text-white text-decoration-none hover-accent"><i class="fas fa-ring me-2"></i>Cinture</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-share-alt fa-2x me-3" style="color: #6c757d;"></i>
+                        <h5 class="fw-bold mb-0">Seguici</h5>
+                    </div>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-youtube fa-2x"></i>
+                        </a>
+                    </div>
+                    <p class="small text-muted">Seguici sui social per offerte esclusive e consigli di stile!</p>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="amazon-disclaimer bg-dark bg-opacity-50 p-3 rounded border border-secondary">
+                        <p class="mb-2 text-warning fw-bold"><i class="fab fa-amazon me-2"></i>Disclaimer Amazon Associates</p>
+                        <p class="text-white-50 mb-0">In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche. Qualsiasi prezzo e informazioni sulla disponibilità visualizzati sul sito Amazon al momento dell'acquisto si applicheranno all'acquisto di questo prodotto. Questo sito è partecipante al Programma Affiliazione Amazon EU, un programma di affiliazione che permette ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="small text-muted mb-0">
+                        © 2024 Smart Choices Guide. Tutti i diritti riservati.
+                    </p>
+                </div>
+            </div>
+        </div>
     </footer>
+    
+    <style>
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            color: var(--primary-color) !important;
+        }
+        
+        .hover-accent {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-accent:hover {
+            color: var(--accent-color) !important;
+            padding-left: 5px;
+        }
+    </style>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
