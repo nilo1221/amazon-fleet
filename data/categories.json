@@ -472,6 +472,23 @@
       "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl"
     },
     {
+      "id": "vino-spumante",
+      "name": "Vino & Spumante",
+      "icon": "fa-wine-glass",
+      "color": "#AB47BC",
+      "productCount": 1,
+      "description": "Vino, Prosecco, Spumante, Sant'Orsola",
+      "headerGradient": "linear-gradient(135deg, #6A1B9A 0%, #AB47BC 50%, #CE93D8 100%)",
+      "primaryColor": "#AB47BC",
+      "accentColor": "#6A1B9A",
+      "macroCategory": "casa",
+      "url": "lavoro/vino-spumante/index.html",
+      "song": "Wine Tasting",
+      "songLinkSpotify": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned",
+      "amazonServiceType": "music",
+      "amazonServiceLink": "https://www.amazon.it/music/unlimited?&linkCode=ll2&tag=l0c39-21&linkId=539024401ce086052ad4fdbce6c0004b&ref=_as_li_ss_tl"
+    },
+    {
       "id": "snack-bevande",
       "name": "Snack e Bevande",
       "icon": "fa-cookie-bite",

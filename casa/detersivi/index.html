@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detersivi - Smart Choices Guide</title>
+    <meta name="description" content="I migliori detersivi per la tua casa a prezzi accessibili.">
+    
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYTD10EV8T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CYTD10EV8T');
+    </script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- AI Assistant CSS -->
+    <link rel="stylesheet" href="../../ai-assistant/ai-assistant.css">
+    
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #f8f9fa;
+            --accent-color: #FF9900;
+            --success-color: #764ba2;
+            --warm-color: #667eea;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            padding: 20px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #FF9900 100%);
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 30px rgba(102, 126, 234, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 153, 0, 0.1) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .product-card {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #FF9900 0%, #FF7700 100%) !important;
+            border: none !important;
+            color: white !important;
+            padding: 18px 45px !important;
+            border-radius: 30px !important;
+            font-weight: bold !important;
+            font-size: 1.2em !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 6px 20px rgba(255, 153, 0, 0.5) !important;
+        }
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #FF7700 0%, #FF5500 100%) !important;
+            transform: scale(1.1) !important;
+            box-shadow: 0 8px 25px rgba(255, 119, 0, 0.7) !important;
+            color: white !important;
+        }
+        .btn-amazon:active {
+            transform: translateY(-1px) !important;
+            box-shadow: 0 2px 10px rgba(255, 119, 0, 0.4) !important;
+        }
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
+        }
+        .category-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        .category-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+        
+        .category-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .category-card:hover .category-icon {
+            transform: scale(1.2);
+        }
+        
+        .rating-stars {
+            color: #FFD700;
+            font-size: 0.9rem;
+        }
+        
+        .fade-in-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html"><i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Categorie
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#lavatrice">Lavatrice</a></li>
+                            <li><a class="dropdown-item" href="#lavastoviglie">Lavastoviglie</a></li>
+                            <li><a class="dropdown-item" href="#cucina">Cucina</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h1 class="hero-title">🧴 Detersivi</h1>
+                    <p class="hero-subtitle">I migliori detersivi per la tua casa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorie Section -->
+    <section class="container mt-5 fade-in-scroll" id="categorie">
+        <div class="text-center mb-5">
+            <h3 class="fw-bold mb-3">Cosa stai cercando?</h3>
+            <p class="text-muted">Naviga tra le categorie per trovare il prodotto perfetto per la tua casa</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="category-card text-center p-4" id="lavatrice">
+                    <div class="category-icon mb-3">
+                        <i class="fas fa-tshirt fa-3x" style="color: #667eea;"></i>
+                    </div>
+                    <h4 class="fw-bold">Lavatrice</h4>
+                    <p class="text-muted small">Detersivi per lavatrice</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="category-card text-center p-4" id="lavastoviglie">
+                    <div class="category-icon mb-3">
+                        <i class="fas fa-sink fa-3x" style="color: #764ba2;"></i>
+                    </div>
+                    <h4 class="fw-bold">Lavastoviglie</h4>
+                    <p class="text-muted small">Pastiglie e detersivi</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="category-card text-center p-4" id="cucina">
+                    <div class="category-icon mb-3">
+                        <i class="fas fa-utensils fa-3x" style="color: #FF9900;"></i>
+                    </div>
+                    <h4 class="fw-bold">Cucina</h4>
+                    <p class="text-muted small">Detersivi cucina</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutti i Prodotti Section -->
+    <section class="container mt-5 fade-in-scroll">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold"><i class="fas fa-spray-can text-warning me-2"></i>Tutti i Prodotti</h2>
+            <p class="text-muted">La nostra selezione completa di detersivi per casa</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card card h-100">
+                    <div class="card-body p-3">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h3 class="card-title fw-bold mb-0" style="font-size: 1rem;">Bio Presto 62 mis powder</h3>
+                            <i class="fas fa-tshirt fa-lg" style="color: #667eea;"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block">
+                            Detersivi
+                        </span>
+                        <p class="card-text text-muted small">Detersivo in polvere per lavatrice. 62 lavaggi. Formula ecologica ed efficace.</p>
+                        
+                        <div class="rating-stars mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B0C62QTBJQ?&linkCode=ll2&tag=l0c39-21&linkId=30a528684b2562add6b4629d00e671b1&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card card h-100">
+                    <div class="card-body p-3">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h3 class="card-title fw-bold mb-0" style="font-size: 1rem;">Fairy Platinum Detersivo Pastiglie Lavastoviglie</h3>
+                            <i class="fas fa-utensils fa-lg" style="color: #FF9900;"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block">
+                            Detersivi Cucina
+                        </span>
+                        <p class="card-text text-muted small">Formula avanzata per stoviglie brillanti. Azione potente contro grasso e incrostazioni.</p>
+                        
+                        <div class="rating-stars mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B0C8GRMMQ6?th=1&linkCode=ll2&tag=l0c39-21&linkId=3494430d7116f097ec6672173201896c&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card card h-100">
+                    <div class="card-body p-3">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h3 class="card-title fw-bold mb-0" style="font-size: 1rem;">Finish Ultimate PLUS Infinity Shine Pastiglie</h3>
+                            <i class="fas fa-sink fa-lg" style="color: #764ba2;"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block">
+                            Lavastoviglie
+                        </span>
+                        <p class="card-text text-muted small">146 capsule. Formula avanzata Infinity Shine per stoviglie brillanti. Contro sporco e residui incrostati.</p>
+                        
+                        <div class="rating-stars mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B0C8GRMMQ6?th=1&linkCode=ll2&tag=l0c39-21&linkId=3494430d7116f097ec6672173201896c&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card card h-100">
+                    <div class="card-body p-3">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h3 class="card-title fw-bold mb-0" style="font-size: 1rem;">Finish Ultimate Infinity Shine Pastiglie</h3>
+                            <i class="fas fa-sink fa-lg" style="color: #764ba2;"></i>
+                        </div>
+                        <span class="category-badge mb-2 d-inline-block">
+                            Lavastoviglie
+                        </span>
+                        <p class="card-text text-muted small">160 capsule al limone. Contro sporco e residui incrostati. Risultati brillanti.</p>
+                        
+                        <div class="rating-stars mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <i class="fas fa-check-circle text-success me-1"></i>
+                                <span class="text-success small">Disponibile</span>
+                            </div>
+                            <a href="https://www.amazon.it/dp/B09HV58YR5?th=1&linkCode=ll2&tag=l0c39-21&linkId=0684acb07b1156024bc2e752aa2f3014&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon btn-sm">
+                                <i class="fab fa-amazon me-1"></i>Vedi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide</h5>
+                    <p class="text-white-50">La tua guida per scelte intelligenti e prodotti di qualità a prezzi accessibili.</p>
+                    <div class="mt-3">
+                        <a href="../../index.html" class="text-white me-3 social-icon"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-3 social-icon"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" class="text-white me-3 social-icon"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold mb-3">Link Utili</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../../index.html" class="text-white-50 text-decoration-none hover-accent"><i class="fas fa-home me-2"></i>Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-accent"><i class="fas fa-info-circle me-2"></i>Chi Siamo</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-accent"><i class="fas fa-envelope me-2"></i>Contatti</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-accent"><i class="fas fa-file-alt me-2"></i>Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold mb-3">Categorie</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-accent"><i class="fas fa-spray-can me-2"></i>Detersivi</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-accent"><i class="fas fa-home me-2"></i>Casa</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-accent"><i class="fas fa-tshirt me-2"></i>Moda</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-accent"><i class="fas fa-paw me-2"></i>Animali</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-white-50 small">Iscriviti per ricevere le migliori offerte e novità.</p>
+                    <form class="mt-2">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="La tua email">
+                            <button class="btn btn-warning" type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="amazon-disclaimer bg-dark bg-opacity-50 p-3 rounded border border-secondary">
+                        <p class="mb-2 text-warning fw-bold"><i class="fab fa-amazon me-2"></i>Disclaimer Amazon Associates</p>
+                        <p class="text-white-50 mb-0">In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche. Qualsiasi prezzo e informazioni sulla disponibilità visualizzati sul sito Amazon al momento dell'acquisto si applicheranno all'acquisto di questo prodotto. Questo sito è partecipante al Programma Affiliazione Amazon EU, un programma di affiliazione che permette ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <p class="small text-muted mb-0">
+                        © 2026 Smart Choices Guide. Tutti i diritti riservati.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <style>
+        .social-icon {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.3) translateY(-5px);
+            color: #667eea !important;
+            text-shadow: 0 0 20px rgba(102, 126, 234, 0.8), 0 0 40px rgba(102, 126, 234, 0.4), 0 0 60px rgba(102, 126, 234, 0.2);
+        }
+        
+        .social-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+        
+        .social-icon:hover::after {
+            transform: translate(-50%, -50%) scale(2);
+        }
+        
+        .hover-accent {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-accent:hover {
+            color: var(--accent-color) !important;
+            padding-left: 5px;
+        }
+    </style>
+
+    <!-- AI Assistant Button -->
+    <button id="ai-assistant-toggle" class="sc-ai-float-button">
+        <i class="fas fa-robot sc-ai-float-icon"></i>
+    </button>
+
+    <!-- AI Assistant Window -->
+    <div id="ai-assistant-window" class="sc-ai-modal-container">
+        <div class="sc-ai-modal-content">
+            <div class="sc-ai-modal-header">
+                <div class="sc-ai-modal-title">
+                    <i class="fas fa-robot me-2"></i>Assistente Smart
+                </div>
+                <button class="sc-ai-close-btn" onclick="document.getElementById('ai-assistant-window').classList.remove('active')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="ai-assistant-messages" class="sc-ai-messages">
+            </div>
+            <div class="sc-ai-input-container">
+                <input type="text" id="ai-assistant-input" placeholder="Scrivi il tuo messaggio...">
+                <button onclick="aiAssistantSendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AI Assistant JS -->
+    <script src="../../ai-assistant/ai-assistant.js"></script>
+    
+    <!-- Scroll Animations & Category Filter JavaScript -->
+    <script>
+        // Scroll Animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+        
+        // Category Filter
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const categoryId = this.id;
+                const productCards = document.querySelectorAll('.product-card');
+                
+                productCards.forEach(productCard => {
+                    const badge = productCard.querySelector('.category-badge').textContent.toLowerCase();
+                    const categoryNames = {
+                        'lavatrice': ['detersivi'],
+                        'lavastoviglie': ['lavastoviglie'],
+                        'cucina': ['cucina']
+                    };
+                    
+                    if (categoryNames[categoryId] && categoryNames[categoryId].some(cat => badge.includes(cat))) {
+                        productCard.closest('.col-md-4').style.display = 'block';
+                    } else {
+                        productCard.closest('.col-md-4').style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
