@@ -180,27 +180,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Category Filter Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.btn-filter');
-    const siteCards = document.querySelectorAll('.site-card');
-    
-    // Add data-category to site cards based on badge-category
-    siteCards.forEach(card => {
-        const badge = card.querySelector('.badge-category');
-        if (badge) {
-            const category = badge.textContent.trim();
-            // Map categories to filter groups
-            let filterGroup = 'all';
-            if (category === 'Sport') filterGroup = 'Sport';
-            else if (category === 'Tech' || category === 'Gaming' || category === 'Foto' || category === 'Kindle' || category === 'Illuminazione') filterGroup = 'Tech';
-            else if (category === 'Elettrodomestici' || category === 'Caffè & Tè' || category === 'Casa & Decorazione') filterGroup = 'Casa';
-            else if (category === 'Cinema & TV' || category === 'Abbigliamento Lusso' || category === 'Moda Maschile' || category === 'Accessori' || category === 'Skincare') filterGroup = 'Moda';
-            else if (category === 'Viaggi' || category === 'Viaggi Low-Cost') filterGroup = 'Viaggi';
-            else if (category === 'Benessere' || category === 'Outdoor' || category === 'Giardino' || category === 'Animali') filterGroup = 'Benessere';
-            else if (category === 'Ufficio') filterGroup = 'Ufficio';
-            
-            card.setAttribute('data-category', filterGroup);
-        }
-    });
+    const filterButtons = document.querySelectorAll('.category-filter');
+    const siteCards = document.querySelectorAll('.category-item');
     
     // Filter button click handlers
     filterButtons.forEach(button => {
