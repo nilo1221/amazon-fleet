@@ -269,6 +269,13 @@
     --icon-color-hover: #fed6e3;
 }
 
+.category-card[data-category="sport"] {
+    --border-color: #FF6B6B;
+    --border-color-light: #EE5A5A;
+    --icon-color: #FF6B6B;
+    --icon-color-hover: #EE5A5A;
+}
+
 .category-card[data-category="all"] {
     --border-color: #667eea;
     --border-color-light: #764ba2;
