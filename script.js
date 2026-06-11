@@ -12,7 +12,7 @@ function showLoading() {
 // Dynamic Product Carousel
 let allProducts = [];
 let currentPage = 0;
-const productsPerPage = 4; // Show 4 products per page (2x2 grid)
+const productsPerPage = 6; // Show 6 products per page (3x2 grid)
 
 // Load products from products.json
 async function loadProducts() {
@@ -200,13 +200,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show/hide site cards based on filter
             siteCards.forEach(card => {
                 if (filterValue === 'all') {
-                    card.classList.remove('hidden');
+                    card.style.display = '';
                 } else {
                     const cardCategory = card.getAttribute('data-category');
                     if (cardCategory === filterValue) {
-                        card.classList.remove('hidden');
+                        card.style.display = '';
                     } else {
-                        card.classList.add('hidden');
+                        card.style.display = 'none';
                     }
                 }
             });

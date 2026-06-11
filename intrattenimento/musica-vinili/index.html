@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYTD10EV8T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CYTD10EV8T');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musica & Vinili - Smart Choices Guide</title>
+    <meta name="description" content="Scopri i migliori box set di vinili e collezioni musicali. Dai classici rock alle edizioni limitate premium.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../bot/ai-chat-simple.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="musica.css">
+    
+    <style>
+        :root {
+            --primary-color: #d4af37;
+            --secondary-color: #1a1a1a;
+            --accent-color: #b8860b;
+            --success-color: #4caf50;
+            --vinyl-color: #d4af37;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #d4af37 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.5);
+        }
+        
+        .product-card-musica {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .product-card-musica:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #b8860b 0%, #d4af37 100%);
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.7);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+        }
+    </style>
+    <link rel="stylesheet" href="../bot/ai-chat-simple.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Musica & Vinili</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Musica & Vinili</h1>
+            <p class="lead mb-4">Box set premium e collezioni musicali in vinile.</p>
+            
+            <!-- Trust Banner -->
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorie Navigation Section -->
+    <section class="container mt-4">
+        <div class="text-center mb-4">
+            <h3 class="fw-bold mb-3">Cosa stai cercando?</h3>
+            <p class="text-muted">Naviga tra le categorie per trovare il prodotto perfetto per la tua collezione</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#box-set" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-box fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Box Set</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#anniversario" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-birthday-cake fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold">Anniversario</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#giradischi" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-record-vinyl fa-2x text-info mb-2"></i>
+                        <h6 class="fw-bold">Giradischi</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#greatest-hits" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-star fa-2x text-warning mb-2"></i>
+                        <h6 class="fw-bold">Greatest Hits</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section py-5">
+        <div class="container">
+            
+            <!-- Oasis Complete Studio Album Collection -->
+            <div class="row mt-4" id="box-set">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Box Set Premium
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">💿 Oasis - Complete Studio Album Collection (Gold Vinyl Box Set)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Complete Studio Album Collection (Amazon Exclusive Gold Vinyl Box Set) [VINYL]. <strong>Edizione esclusiva Amazon in vinile oro.</strong> Cofanetto completo con tutti gli album in studio degli Oasis. Vinile 180g, edizione limitata gold, cofanetto premium. Il regalo perfetto per i fan della band britannica.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Edizione:</strong> Amazon Exclusive Gold Vinyl
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Contenuto:</strong> Tutti gli album in studio
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Qualità:</strong> Vinile 180g
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Confezione:</strong> Box set premium
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Complete-Studio-Collection-Amazon-Exclusive/dp/B0F99ZJ52F?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683180&sprefix=set+vinili%2Caps%2C131&sr=8-4&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=14945c94044fd23f187315fd3cd6ad00&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metallica The Black Album 30th Anniversary -->
+            <div class="row mt-4" id="anniversario">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Edizione Anniversario
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🎸 Metallica - The Black Album (30Th Anniversary Ltd)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                The Black Album (30Th Anniversary Ltd) con libro. <strong>Edizione limitata 30° anniversario.</strong> Cofanetto LP con libro commemorativo. Vinile premium, edizione limitata per celebrare l'iconico album dei Metallica. Include contenuti esclusivi e artwork raro.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Edizione:</strong> 30th Anniversary Limited
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Contenuto:</strong> LP + Libro commemorativo
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Qualità:</strong> Vinile premium
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Esclusività:</strong> Contenuti esclusivi
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Black-Album-30Th-Anniversary-Libro/dp/B097NP5HXH?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-9&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=a091a665e57f1afbdd3aa256f99c69a3&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bruce Springsteen Vinyl Collection Vol 2 -->
+            <div class="row mt-4" id="box-set">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Box Set Classico
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🎤 Bruce Springsteen - Album Collection 2: 1987-1996</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Bruce Springsteen Vinyl Collection Vol 2 Box Set. <strong>Album Collection 2: 1987-1996.</strong> Cofanetto vinile 150g con gli album dal 1987 al 1996. Include Tunnel of Love, Human Touch, Lucky Town, The Ghost of Tom Joad e altro ancora. Edizione premium per collezionisti.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Periodo:</strong> 1987-1996
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Qualità:</strong> Vinile 150g
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Album inclusi:</strong> Tunnel of Love, Human Touch, Lucky Town, The Ghost of Tom Joad
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Confezione:</strong> Box set premium
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Vinyl-Collection-Vol-Box-Set/dp/B07BLJDYVK?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-7&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=7065fcd6ca74db5092d17fa989951364&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Queen II Collector's Edition -->
+            <div class="row mt-4" id="box-set">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Collector's Edition
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">👑 Queen - Queen II Collector's Edition (5 CD/180g 2 LP Box Set)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Queen II [Collector's Edition] [5 CD/180g 2 LP Box Set]. <strong>Edizione collezionista premium.</strong> Box set con 5 CD e 2 LP in vinile 180g. Include versioni remix, demo inedite e contenuti esclusivi. L'edizione definitiva dell'album classico dei Queen.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Contenuto:</strong> 5 CD + 2 LP 180g
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Edizione:</strong> Collector's Edition
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Extra:</strong> Remix, demo inedite
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Confezione:</strong> Box set premium
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Queen-Collectors-180g-Box-Set/dp/B0GH289G14?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-8&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=78e3c0f662db588f4628417f861b1dd2&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linkin Park Hybrid Theory 20th Anniversary -->
+            <div class="row mt-4" id="anniversario">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Edizione Anniversario
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🎵 Linkin Park - Hybrid Theory 20Th Anniversary Vinyl</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Linkin Park Hybrid Theory 20Th Anniversary Vinyl. <strong>Edizione 20° anniversario in vinile.</strong> L'album debutto leggendario dei Linkin Park in edizione anniversary. Include tracce bonus, artwork raro e contenuti esclusivi. Un must per i fan del nu-metal.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Edizione:</strong> 20th Anniversary
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Extra:</strong> Tracce bonus, artwork raro
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> Vinile premium
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Album:</strong> Hybrid Theory debutto
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Hybrid-Theory-20Th-Anniversary-Vinyl/dp/B08FJQBDR4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-11&linkCode=ll2&tag=l0c39-21&linkId=e7acf988a6b15572e946f58e0a289d5f&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emerson, Lake & Palmer Singles Box -->
+            <div class="row mt-4" id="box-set">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Box Set Classico
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🎹 Emerson, Lake & Palmer - Singles (Box 12 X Single)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Emerson, Lake & Palmer Singles (Box 12 X Single / LP, CD singolo). <strong>Box set con 12 singoli in vinile e CD.</strong> Edizione remasterata dei singoli più iconici del trio progressive rock. Include LP, CD singolo e contenuti esclusivi. Un must per i fan del progressive rock classico.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Contenuto:</strong> 12 singoli in box set
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> LP + CD singolo
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Edizione:</strong> Remasterata
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Genere:</strong> Progressive Rock
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Singles-Box-Single-Vinyl-Remaster/dp/B09ZYTB74H?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-12&ufe=app_do%3Aamzn1.fos.fca66a76-6518-40f2-959f-2dca30e9c5d1&linkCode=ll2&tag=l0c39-21&linkId=8f6a288dde16be581d1dfa98c6e5645c&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VOKSUN Giradischi Vinile -->
+            <div class="row mt-4" id="giradischi">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-record-vinyl me-1"></i>Giradischi
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🎵 VOKSUN Giradischi Portatile Vintage con Altoparlanti Incorporati</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Giradischi Vinile, VOKSUN Giradischi Portatile Vintage con Altoparlanti Incorporati, Bluetooth In/Out Lettore LP Vinile con 3 Velocità, Valigia USB, In AUX, Linea RCA, Jack Cuffia, Auto-Stop. <strong>Giradischi vintage portatile completo.</strong> 3 velocità (33/45/78 RPM), Bluetooth in/out per streaming, altoparlanti incorporati, USB per conversione digitale, AUX, RCA e jack cuffie. Design retrò moderno con funzionalità complete.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Velocità:</strong> 33/45/78 RPM
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Connettività:</strong> Bluetooth In/Out, USB, AUX, RCA
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Audio:</strong> Altoparlanti incorporati + Jack cuffie
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Extra:</strong> Auto-Stop, conversione digitale USB
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/gp/aw/d/B0DSW5X2F7?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=19d5399670bf2c91b59011195ffb3297&hsa_cr_id=0&qid=1779683227&sr=1-1-1ee1b2e4-01d1-4cd0-b737-4c27ebfc8105&aref=Qnrse9oJtK&pd_rd_w=O8TcV&content-id=amzn1.sym.0372d96f-3871-4b23-b69f-450b14810943%3Aamzn1.sym.0372d96f-3871-4b23-b69f-450b14810943&pf_rd_p=0372d96f-3871-4b23-b69f-450b14810943&pf_rd_r=SM9GZV97JPWJQQKZT22E&pd_rd_wg=Ezhve&pd_rd_r=b3d45f86-dfcf-442b-9560-692230ba6d26&th=1&linkCode=ll2&tag=l0c39-21&linkId=5eea5d921e744aca065d05e63acfbe32&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Queen - Greatest Hits II -->
+            <div class="row mt-4" id="greatest-hits">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Greatest Hits
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">👑 Queen - Greatest Hits II (Doppio Vinile)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Queen - Greatest Hits II. <strong>Doppio vinile con i più grandi successi di Queen.</strong> La seconda raccolta dei successi della band leggendaria, con i brani più iconici dal 1982 al 1991. Include classici come "Under Pressure", "Radio Ga Ga", "I Want to Break Free" e molti altri. Edizione in doppio vinile per gli appassionati.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> Doppio vinile
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Periodo:</strong> 1982-1991
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Brani:</strong> Successi iconici
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Artista:</strong> Queen
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Greatest-Hits-II-Queen/dp/B01MDLOAIJ?pd_rd_w=hx6MA&content-id=amzn1.sym.c7f03045-0d57-47e8-bdf5-af4617bbe2e3&pf_rd_p=c7f03045-0d57-47e8-bdf5-af4617bbe2e3&pf_rd_r=9403SCFSP18CH9PB6P72&pd_rd_wg=E6sGH&pd_rd_r=47b60484-55b1-4d50-b37a-1c3bcfd0bd6c&pd_rd_i=B01MDLOAIJ&psc=1&linkCode=ll2&tag=l0c39-21&linkId=fdc5511aa0ce5368657abc8e073cc044&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crosby, Stills, Nash & Young Box Set -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Box Set
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🎸 Crosby, Stills, Nash & Young - Box Set</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Box set di Crosby, Stills, Nash & Young. <strong>Box set con gli album classici del supergruppo folk-rock.</strong> La leggendaria band composta da David Crosby, Stephen Stills, Graham Nash e Neil Young, pionieri del folk-rock e del rock psichedelico. Include i loro album più iconici in un cofanetto da collezione per gli appassionati di musica classica.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> Box set
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Artisti:</strong> Crosby, Stills, Nash & Young
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Genere:</strong> Folk-rock / Rock psichedelico
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Epoca:</strong> Classici anni '60-'70
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/box-stlls-nash-young-crosby/dp/B0CNVRTHXR?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-15&linkCode=ll2&tag=l0c39-21&linkId=0c52648ad962f488c559551a078c21da&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KOMFOTTEU Supporto per Giradischi -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-archive me-1"></i>Supporto
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🗄️ KOMFOTTEU Supporto per Giradischi in Vinile (300 Album)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                KOMFOTTEU Supporto per Giradischi in Vinile Fino a 300 Album, Espositore per Dischi a 3 Ripiani con 3 Divisori Rimovibili, Mobile Giradischi in Legno e Metallo per Soggiorno, Camera da Letto (Marrone). <strong>Mobile espositore per giradischi con capacità fino a 300 vinili.</strong> 3 ripiani con 3 divisori rimovibili per organizzare la collezione. Struttura in legno e metallo, design elegante per soggiorno e camera da letto. Perfetto per i collezionisti di vinili.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Capacità:</strong> Fino a 300 album
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Struttura:</strong> 3 ripiani + 3 divisori rimovibili
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Materiali:</strong> Legno e metallo
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Colore:</strong> Marrone
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/KOMFOTTEU-Giradischi-Espositore-Rimovibili-Soggiorno/dp/B0F8W5LZ3B?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set%2Bvinili&qid=1779683227&sprefix=set%2Bvinili%2Caps%2C131&sr=8-17-spons&aref=UuVUpMRUcL&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1&linkCode=ll2&tag=l0c39-21&linkId=c35c8cf6c1a4272c542cf78803b39609&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linkin Park - Meteora 4-LP Deluxe Vinyl -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Album
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🎤 Linkin Park - Meteora (4-LP Deluxe Vinyl Edition)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Meteora (4 LP Deluxe Vinyl Edition) - Linkin Park. <strong>Edizione deluxe a 4 dischi del leggendario album Meteora.</strong> Il secondo album in studio dei Linkin Park, uno dei più influenti album nu-metal/alternative rock della storia. Edizione deluxe in vinile con 4 LP, include brani iconici come "Somewhere I Belong", "Faint", "Numb" e "Breaking the Habit". Un must per i fan e i collezionisti.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> 4 LP Deluxe Vinyl
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Artista:</strong> Linkin Park
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Album:</strong> Meteora (2003)
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Genere:</strong> Nu-metal / Alternative Rock
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Meteora-4-LP-Deluxe-Vinyl/dp/B0BV6ZDRSG?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K93EB4BTG8WC&dib=eyJ2IjoiMSJ9.C9GVKYRm83lJx9uzztSc3ygtd1JzfEuDNhxkR3_u1vuD-t3kdzfqHOj3ZokReYGfRfOEIO6dv0bSfYt_DPYk-dBk2ikg_tziCHOWDX-hgRFFp7OkGPIYmyzSDaeISgd1UFThXQNZuR3YB1t5VXjW5gxOQn6yL9_5FoKgnGsJILUguAVDWDpKUcSuzzfrVB6CPZGc9cXY9H2d6nYE09rvJFaS4UxOWtoniZN3l4t8mwy-wVYI0lYex3qLLbzyqr-D9vjLjx79uEgcSRydaMWZBxpgEscqj703IPmMtUen6GU.X5ujq0h5Kax9Af7hBNutpxroTLJMJ0R0eqHYbr_nVwc&dib_tag=se&keywords=set+vinili&qid=1779683227&sprefix=set+vinili%2Caps%2C131&sr=8-24&linkCode=ll2&tag=l0c39-21&linkId=72e8e2944b9838d5f4bfbf667de121ea&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sisters Of Mercy - Vision Thing Era -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Box Set
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🎸 Sisters Of Mercy - Vision Thing Era (4-LP Vinyl Boxset)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Vision Thing Era (4lp Vinyl Boxset) - Sisters Of Mercy. <strong>Box set a 4 LP dell'era Vision Thing dei Sisters Of Mercy.</strong> La band gothic rock britannica iconica, pioniera del genere. Edizione cofanetto con 4 dischi in vinile, include i brani classici dell'album Vision Thing e versioni alternative. Un must per i fan del gothic rock e della dark wave.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> 4-LP Vinyl Boxset
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Artista:</strong> Sisters Of Mercy
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Album:</strong> Vision Thing Era
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Genere:</strong> Gothic Rock / Dark Wave
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Vision-Thing-Vinyl-Box-Set/dp/B01FWV7JLY?&linkCode=ll2&tag=l0c39-21&linkId=c6cba0292ddd8b6426f6af1343051f6e&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AC/DC - Vinyl Box Set -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Box Set
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">⚡ AC/DC - Vinyl Box Set (Rimasterizzato)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                AC/DC Vinyl Box Set. <strong>Box set rimasterizzato della leggendaria band hard rock AC/DC.</strong> Cofanetto con i classici album della band australiana, rimasterizzati per una qualità audio superiore. Include i brani iconici come "Back in Black", "Highway to Hell" e "Thunderstruck". Edizione import per i collezionisti.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> Box Set Rimasterizzato
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Artista:</strong> AC/DC
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Genere:</strong> Hard Rock
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Edizione:</strong> Import
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Vinyl-Box-Set-Ac/dp/B0000CF35Q?&linkCode=ll2&tag=l0c39-21&linkId=94cd034030cf2b9b3a67f42c411e533c&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AC/DC - Collectors Box -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Box Set
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">⚡ AC/DC - Collectors Box (2008-11-11)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Collectors Box by Ac/Dc (2008-11-11). <strong>Box set collezionista degli AC/DC.</strong> Edizione speciale per collezionisti con cofanetto elegante. Include i classici album della band hard rock più famosa al mondo. Perfetto per i fan che vogliono completare la propria collezione AC/DC con un'edizione da collezione.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> Collectors Box
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Artista:</strong> AC/DC
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Genere:</strong> Hard Rock
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Edizione:</strong> Import
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Collectors-Box-Ac-Dc-2008-11-11/dp/B01G9AFH02?&linkCode=ll2&tag=l0c39-21&linkId=bdefd5ca1422a749072d8862cf252142&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marracash - Vinyl Box Collection -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Box Set
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🎤 Marracash - Vinyl Box Collection (10 Vinili)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Marracash Vinyl Box Collection. <strong>Box set con 10 vinili del rapper italiano Marracash.</strong> La collezione completa dei migliori album del trapper italiano più influente. Include 10 dischi in vinile con i classici del rap italiano. Un must per i fan del rap italiano e di Marracash.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> 10 Vinili
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Artista:</strong> Marracash
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Genere:</strong> Rap / Trap Italiano
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Contenuto:</strong> Box Collection
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Vinyl-Box-Collection-10-Vinili/dp/B07DL8NKX2?&linkCode=ll2&tag=l0c39-21&linkId=d611935d055e52c0bad685aa4a151587&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rammstein - XXI Vinyl Box Set -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Box Set
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🔥 Rammstein - XXI Vinyl Box Set (Limited)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Rammstein Xxi Vinyl Box Set -Ltd-. <strong>Box set limitato dei Rammstein per celebrare i 21 anni.</strong> La band industrial metal tedesca iconica con un cofanetto speciale edizione limitata. Include i brani classici come "Du Hast", "Sonne" e "Ich Will". Un must per i fan del metal industriale e dei Rammstein.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> Vinyl Box Set Limited
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Artista:</strong> Rammstein
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Genere:</strong> Industrial Metal
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Edizione:</strong> Limited / Cofanetto
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/XXI-The-Vinyl-Box-Set/dp/B016EAZ6DK?&linkCode=ll2&tag=l0c39-21&linkId=090df39e15b0b2f3db96b5a66aaa87b7&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Verdi - Alzira 2 LP Box-Set -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Box Set
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🎼 Verdi - Alzira (2 LP Box-Set)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Verdi: Alzira [Vinile record] [2 LP Box-Set]. <strong>Box set a 2 LP dell'opera lirica Alzira di Giuseppe Verdi.</strong> L'opera del maestro italiano Giuseppe Verdi con Ileana Cotrubas, Francisco Araiza, Renato Bruson e la direzione di Lamberto Gardelli. Edizione in vinile per gli appassionati di opera lirica e musica classica.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> 2 LP Box-Set
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Compositore:</strong> Giuseppe Verdi
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Genere:</strong> Opera Lirica / Classica
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Interpreti:</strong> Cotrubas, Araiza, Bruson
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/Verdi-Alzira-Vinile-record-Box-Set/dp/B00MSOPW40?&linkCode=ll2&tag=l0c39-21&linkId=9971bb8cfbf00d321c4a6445cba186bb&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GAS - BOX SET LTD -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="product-card product-card-musica card">
+                        <div class="card-body p-4">
+                            <span class="category-badge">
+                                <i class="fas fa-compact-disc me-1"></i>Box Set
+                            </span>
+                            <h3 class="card-title fw-bold mb-3">🎹 GAS - BOX SET (Limited)</h3>
+                            
+                            <p class="card-text text-muted mb-4">
+                                GAS BOX SET -LTD-. <strong>Box set limitato del progetto ambient/electronic GAS.</strong> L'artista electronic tedesco Wolfgang Voigt con il suo progetto GAS, pioniere dell'ambient techno. Edizione limitata in cofanetto per i collezionisti di musica elettronica e ambient. Un must per gli appassionati del genere.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Formato:</strong> Box Set Limited
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Artista:</strong> GAS (Wolfgang Voigt)
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Genere:</strong> Ambient / Electronic
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Edizione:</strong> Limited / Cofanetto
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shipping-fast text-success me-2"></i>
+                                        <span>Spedizione Gratuita Prime</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Garanzia Amazon</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <span>Disponibile su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.amazon.it/BOX-SET-LTD-GAS/dp/B01L2SVXAY?&linkCode=ll2&tag=l0c39-21&linkId=b41a7a518588d3a2c81e2585afe40d5c&ref=_as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-4">
+                    <h5 class="fw-bold mb-3 text-center"><i class="fas fa-shopping-cart me-2" aria-hidden="true"></i>Smart Choices Guide</h5>
+                    <p class="text-white-50 text-center">La tua guida per acquisti intelligenti. Recensioni, confronti e offerte esclusive per ogni categoria di prodotti.</p>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3 text-info">Categorie</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../casa/snack-bevande/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-cookie-bite me-2" aria-hidden="true"></i>Snack & Bevande</a></li>
+                        <li class="mb-2"><a href="../casa/parrucchiere_barbiere/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-cut me-2" aria-hidden="true"></i>Parrucchiere & Barbiere</a></li>
+                        <li class="mb-2"><a href="../casa/caffe-capsule/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-mug-hot me-2" aria-hidden="true"></i>Caffè & Capsule</a></li>
+                        <li class="mb-2"><a href="../tech/elite-gaming-gear/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-gamepad me-2" aria-hidden="true"></i>Elite Gaming Gear</a></li>
+                        <li class="mb-2"><a href="../intrattenimento/musica-vinili/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-compact-disc me-2" aria-hidden="true"></i>Musica & Vinili</a></li>
+                        <li class="mb-2"><a href="../intrattenimento/manga-anime/index.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-book-open me-2" aria-hidden="true"></i>Manga & Anime</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3 text-info">Link Utili</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../bounty.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-gift me-2" aria-hidden="true"></i>Servizi Amazon</a></li>
+                        <li class="mb-2"><a href="../about.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-info-circle me-2" aria-hidden="true"></i>Chi Siamo</a></li>
+                        <li class="mb-2"><a href="../disclaimer.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-exclamation-triangle me-2" aria-hidden="true"></i>Disclaimer</a></li>
+                        <li class="mb-2"><a href="../privacy.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-shield-alt me-2" aria-hidden="true"></i>Privacy</a></li>
+                        <li class="mb-2"><a href="../contact.html" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-envelope me-2" aria-hidden="true"></i>Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3 text-info">Seguici sui Social</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white"><i class="fab fa-facebook me-2" aria-hidden="true"></i>Facebook</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white"><i class="fab fa-instagram me-2" aria-hidden="true"></i>Instagram</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white"><i class="fab fa-twitter me-2" aria-hidden="true"></i>Twitter/X</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white"><i class="fab fa-youtube me-2" aria-hidden="true"></i>YouTube</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white"><i class="fab fa-tiktok me-2" aria-hidden="true"></i>TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="amazon-disclaimer bg-dark bg-opacity-50 p-3 rounded border border-secondary">
+                        <p class="mb-2 text-warning fw-bold"><i class="fab fa-amazon me-2" aria-hidden="true"></i>Disclaimer Amazon Associates</p>
+                        <p class="text-white-50 mb-0">In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche. Qualsiasi prezzo e informazioni sulla disponibilità visualizzati sul sito Amazon al momento dell'acquisto si applicheranno all'acquisto di questo prodotto. Questo sito è partecipante al Programma Affiliazione Amazon EU, un programma di affiliazione che permette ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-2 text-white">
+                        <i class="fas fa-shopping-cart me-2" aria-hidden="true"></i>
+                        Smart Choices Guide - La tua guida per acquisti intelligenti
+                    </p>
+                    <p class="text-white-50 mb-3">
+                        Partner affiliato Amazon | Prezzi e disponibilità aggiornati in tempo reale | © 2026 Tutti i diritti riservati
+                    </p>
+                    <div class="mt-3">
+                        <a href="../index.html" class="btn btn-outline-warning btn-sm me-2">
+                            <i class="fas fa-home me-2" aria-hidden="true"></i>Torna alla Home
+                        </a>
+                        <a href="../bounty.html" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-gift me-2" aria-hidden="true"></i>Servizi Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../niche-tracking.js"></script>
+    <!-- Bot AI Script - Must load combo-database before ai-chat-simple -->
+    <script src="../bot/combo-database.js"></script>
+    <script src="../bot/ai-chat-simple.js"></script>
+    <!-- Tracking Globale GA4 -->
+    <script src="../js/tracking-globale.js"></script>
+    <!-- AI Chat Button -->
+    <div id="ai-chat-button" onclick="toggleChat()">
+        <img src="../images/logo.png" alt="Smart Choices Guide" class="chat-button-logo">
+    </div>
+    
+    <!-- AI Chat Window -->
+    <div id="ai-chat-window">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="header-content">
+                <img src="../images/logo.png" alt="Smart Choices Guide Logo" class="chat-bot-logo">
+                <div>
+                    <h5>Assistente Smart</h5>
+                    <small>Online</small>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()" title="Chiudi chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Chat Messages -->
+        <div id="chat-messages" class="chat-messages">
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Scrivi il tuo messaggio...">
+            <button onclick="sendMessage()" title="Invia messaggio">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    <!-- Tracking Globale GA4 -->
+    <script src="../../js/tracking-globale.js"></script>
+</body>
+</html>
