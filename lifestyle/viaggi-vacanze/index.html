@@ -49,7 +49,44 @@
             box-shadow: 0 4px 20px rgba(139, 69, 19, 0.3);
         }
         
+        .tahiti-banner-section {
+            position: relative;
+            background-image: url('https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 100px 0;
+            margin-bottom: 40px;
+            min-height: 400px;
+        }
         
+        .tahiti-banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 100, 150, 0.7) 0%, rgba(0, 50, 100, 0.8) 100%);
+        }
+        
+        .tahiti-banner-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+        
+        .tahiti-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
         
         
         
@@ -148,6 +185,29 @@
     
     <!-- Niche Identity Bar -->
     <div class="niche-identity-bar"></div>
+
+    <!-- Tahiti Banner Section -->
+    <section class="tahiti-banner-section">
+        <div class="tahiti-banner-overlay"></div>
+        <div class="container text-center position-relative">
+            <div class="tahiti-banner-content">
+                <span class="badge bg-warning text-dark mb-3">Destinazione Top 2026</span>
+                <h2 class="display-5 fw-bold mb-3">Tahiti - Il Mana dell'Oceano</h2>
+                <p class="lead mb-4">Dove spiritualità e natura si fondono in un'unica energia vitale. Rallenta, ascolta il respiro dell'oceano e lasciati trasformare dall'incontro con queste terre lontane.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <span class="tahiti-badge">
+                        <i class="fas fa-water me-2"></i>Spiritualità
+                    </span>
+                    <span class="tahiti-badge">
+                        <i class="fas fa-mountain me-2"></i>Natura
+                    </span>
+                    <span class="tahiti-badge">
+                        <i class="fas fa-heart me-2"></i>Mana
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Hero Section -->
     <section class="hero-section">
