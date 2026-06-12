@@ -2065,6 +2065,8 @@ body {
 footer {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%) !important;
     border-top: 4px solid #FF9900;
+    position: relative;
+    z-index: 1;
 }
 
 footer h6 {

@@ -59,6 +59,9 @@
     color: white;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
     transition: transform 0.3s var(--sc-ai-ease-elastic);
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
 }
 
 .sc-ai-float-button:hover .sc-ai-float-icon {
