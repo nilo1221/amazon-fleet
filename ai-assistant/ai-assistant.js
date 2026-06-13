@@ -1286,7 +1286,8 @@
                 { name: 'Fitness Casa', icon: 'fa-dumbbell', description: 'Allenati a casa', url: 'benessere/fitness-casa/index.html' },
                 { name: 'Cucina Moderna', icon: 'fa-fire-burner', description: 'Elettrodomestici smart', url: 'casa/cucina-elettrodomestici/index.html' },
                 { name: 'Ventilatori', icon: 'fa-wind', description: 'Raffreddamento per la casa', url: 'casa/ventilatori/index.html' },
-                { name: 'Tech Gadgets', icon: 'fa-microchip', description: 'Ultima tecnologia', url: 'tech/gadget-tech/index.html' }
+                { name: 'Tech Gadgets', icon: 'fa-microchip', description: 'Ultima tecnologia', url: 'tech/gadget-tech/index.html' },
+                { name: 'Peluche & Giocattoli', icon: 'fa-heart', description: 'Peluche morbidi e divertenti', url: 'casa/peluche-giocattoli/index.html' }
             ];
         },
         
