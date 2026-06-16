@@ -84,7 +84,8 @@
                 this.initProactiveHelp();
                 
                 // Avvia timer combo periodiche
-                this.startComboTimer();
+                // Combo disabilitate - non avviare il timer
+                // this.startComboTimer();
                 
                 this.isInitialized = true;
                 this.log('Inizializzazione completata');
@@ -428,7 +429,8 @@
                 this.generateModalContent();
                 
                 // Avvia timer combo periodiche (30-60 secondi)
-                this.startComboTimer();
+                // Combo disabilitate - non avviare il timer
+                // this.startComboTimer();
                 
             } catch (error) {
                 this.error('Errore apertura modal:', error);
@@ -482,10 +484,7 @@
 
                 // Simula caricamento
                 setTimeout(() => {
-                    const combo = this.getThemedCombo();
-                    if (combo) {
-                        widgetContent.innerHTML = combo;
-                    }
+                    widgetContent.innerHTML = '';
                     this.log('Contenuto widget combo generato');
                 }, 500);
             } catch (error) {
@@ -508,12 +507,10 @@
                 setTimeout(() => {
                     const greeting = this.getGreeting();
                     const niches = this.getSuggestedNiches();
-                    const combo = this.getThemedCombo();
                     
                     body.innerHTML = `
                         ${greeting}
                         ${niches}
-                        ${combo}
                         ${this.getMusicLinks()}
                         ${this.getBountyLink()}
                     `;
@@ -669,12 +666,10 @@
             
             const greeting = this.getGreeting();
             const niches = this.getSuggestedNiches();
-            const combo = this.getRandomCombo();
             
             body.innerHTML = `
                 ${greeting}
                 ${niches}
-                ${combo}
                 ${this.getMusicLinks()}
                 ${this.getBountyLink()}
             `;
@@ -739,14 +734,10 @@
             // Genera Pitch se la nicchia ha selling_point
             const pitchHTML = this.renderPitch(niche);
             
-            // Combo dinamica (se presente)
-            const combo = this.getThemedCombo();
-            
             body.innerHTML = `
                 ${this.getGreeting()}
                 ${pitchHTML}
                 ${linksHTML}
-                ${combo}
             `;
         },
         
