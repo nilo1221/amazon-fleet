@@ -830,40 +830,47 @@
         // ========== COMBO DINAMICA DAI PRODOTTI DELLA PAGINA ==========
         // ========== GET COMBO TEMATICA ==========
         getThemedCombo: function() {
-            // Usa i prodotti caricati dalla pagina corrente
-            if (!this.state.currentPageProducts || this.state.currentPageProducts.length === 0) {
-                return '';
+            // Usa le combo dal file product-combos.json
+            if (!this.state.combosData || Object.keys(this.state.combosData).length === 0) {
+                return this.getRandomCombo();
             }
             
             // Identifica la nicchia corrente dal pathname
             const currentPath = window.location.pathname;
-            const currentNiche = this.state.nichesData?.find(n => currentPath.includes(n.url));
             
-            // Se la nicchia non ha combos, usa fallback random
-            if (!currentNiche || !currentNiche.combos || currentNiche.combos.length === 0) {
+            // Trova combo che corrispondono alla nicchia corrente
+            const comboKeys = Object.keys(this.state.combosData);
+            const relevantCombos = comboKeys.filter(key => {
+                const combo = this.state.combosData[key];
+                const mainProduct = combo.mainProduct?.toLowerCase() || '';
+                // Cerca combo che contengono parole chiave della nicchia corrente
+                if (currentPath.includes('caffe') || currentPath.includes('capsule')) {
+                    return key.includes('caffe');
+                }
+                if (currentPath.includes('fitness') || currentPath.includes('sport')) {
+                    return key.includes('fitness');
+                }
+                return false;
+            });
+            
+            if (relevantCombos.length === 0) {
                 return this.getRandomCombo();
             }
             
-            // Seleziona una combo casuale tra quelle definite
-            const selectedCombo = currentNiche.combos[Math.floor(Math.random() * currentNiche.combos.length)];
+            // Seleziona una combo casuale tra quelle rilevanti
+            const selectedComboKey = relevantCombos[Math.floor(Math.random() * relevantCombos.length)];
+            const selectedCombo = this.state.combosData[selectedComboKey];
             
             // Tracking GA4
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'combo_themed_view', {
-                    niche_id: currentNiche.id,
-                    niche_name: currentNiche.name,
-                    combo_id: selectedCombo.id,
-                    combo_theme: selectedCombo.nome_tema
+                    combo_id: selectedComboKey,
+                    main_product: selectedCombo.mainProduct
                 });
             }
             
-            // Mappa product_ids ai prodotti reali dalla pagina
-            const selectedProducts = selectedCombo.product_ids.map(id => {
-                // Per ora, usiamo i prodotti dalla pagina in ordine
-                // In futuro, quando avremo product_ids reali, mapperemo correttamente
-                const index = parseInt(id.replace('prod_', '')) - 1;
-                return this.state.currentPageProducts[index] || this.state.currentPageProducts[0];
-            }).filter(p => p);
+            // Usa i prodotti dalla combo con i loro link
+            const selectedProducts = selectedCombo.products || [];
             
             if (selectedProducts.length === 0) {
                 return this.getRandomCombo();
@@ -879,15 +886,14 @@
             ];
             const jolly = jollies[Math.floor(Math.random() * jollies.length)];
             
-            // Genera HTML per i prodotti selezionati con selling point
+            // Genera HTML per i prodotti selezionati con link cliccabili
             const itemsHTML = selectedProducts.map(product => {
-                const sellingPoint = currentNiche?.selling_point?.[Math.floor(Math.random() * (currentNiche.selling_point?.length || 1))] || '';
+                const link = product.link && product.link !== '#' ? product.link : '#';
                 return `
-                <span class="${this.config.cssPrefix}combo-item">
-                    <i class="fas fa-box"></i>
+                <a href="${link}" target="_blank" class="${this.config.cssPrefix}combo-item" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-${product.icon || 'fa-box'}"></i>
                     ${product.name}
-                    ${sellingPoint ? `<small class="${this.config.cssPrefix}selling-point">${sellingPoint}</small>` : ''}
-                </span>
+                </a>
             `}).join('');
             
             const jollyHTML = `
@@ -898,18 +904,18 @@
             `;
             
             // Social proof
-            const socialProofHTML = currentNiche?.social_proof ? `
+            const socialProofHTML = selectedCombo.reason ? `
                 <div class="${this.config.cssPrefix}social-proof">
-                    <i class="fas fa-users"></i>
-                    ${currentNiche.social_proof}
+                    <i class="fas fa-info-circle"></i>
+                    ${selectedCombo.reason}
                 </div>
             ` : '';
             
-            // Urgency message specifico della combo
+            // Urgency message
             const urgencyHTML = `
                 <div class="${this.config.cssPrefix}urgency-message">
                     <i class="fas fa-clock"></i>
-                    ${selectedCombo.urgency_message}
+                    La combinazione preferita dagli utenti oggi.
                 </div>
             `;
             
@@ -918,7 +924,7 @@
                     <div class="${this.config.cssPrefix}combo-card">
                         <div class="${this.config.cssPrefix}combo-title">
                             <i class="fas fa-boxes"></i>
-                            ${selectedCombo.nome_tema}
+                            ${selectedCombo.mainProduct || 'Combo del Momento'}
                         </div>
                         ${socialProofHTML}
                         <div class="${this.config.cssPrefix}combo-items">
