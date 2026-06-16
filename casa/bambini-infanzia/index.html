@@ -73,15 +73,50 @@
             font-weight: 600;
             box-shadow: 0 2px 8px rgba(255, 105, 180, 0.3);
         }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            color: var(--primary-color) !important;
+        }
+        
+        .hover-accent {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-accent:hover {
+            color: var(--accent-color) !important;
+            padding-left: 5px;
+        }
+        
+        .category-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: var(--accent-color) !important;
+        }
+        
+        .category-card h6 {
+            color: #333;
+        }
+        
+        .category-card:hover h6 {
+            color: #000;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="../../index.html">
-                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
-            </a>
+            <a class="navbar-brand" href="../../index.html"><i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -89,6 +124,12 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../tutte-le-categorie.html">Tutte le Categorie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Bambini & Infanzia</a>
                     </li>
                 </ul>
             </div>
@@ -101,10 +142,30 @@
     <!-- Hero Section -->
     <section class="hero-section bg-primary text-white py-5">
         <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-3">
-                <i class="fas fa-baby me-3"></i>Bambini & Infanzia
-            </h1>
+            <h1 class="display-4 fw-bold mb-3">Bambini & Infanzia</h1>
             <p class="lead">Scopri i migliori prodotti per i tuoi bambini</p>
+
+            <!-- Trust Banner -->
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -196,6 +257,36 @@
                         <h6 class="fw-bold">Cura</h6>
                     </div>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guida Rapida Section -->
+    <section class="container mt-5">
+        <div class="bg-light rounded p-4">
+            <h4 class="fw-bold mb-3 text-center"><i class="fas fa-lightbulb text-warning me-2"></i>Come scegliere il prodotto giusto</h4>
+            <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-ruler fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold">Età</h6>
+                        <p class="small text-muted">Scegli prodotti adatti all'età del bambino</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-palette fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Materiale</h6>
+                        <p class="small text-muted">Priorità a materiali sicuri e certificati</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-star fa-2x text-warning mb-2"></i>
+                        <h6 class="fw-bold">Sicurezza</h6>
+                        <p class="small text-muted">Verifica le certificazioni di sicurezza</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -393,10 +484,24 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="d-flex align-items-center mb-3">
-                        <i class="fas fa-info-circle fa-2x me-3" style="color: var(--success-color);"></i>
-                        <h5 class="fw-bold mb-0">Informazioni</h5>
+                        <i class="fas fa-share-alt fa-2x me-3" style="color: #6c757d;"></i>
+                        <h5 class="fw-bold mb-0">Seguici</h5>
                     </div>
-                    <p class="small text-muted">Tutti i prodotti sono disponibili su Amazon. I prezzi possono variare. Verifica sempre le condizioni attuali prima dell'acquisto.</p>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none social-icon">
+                            <i class="fab fa-youtube fa-2x"></i>
+                        </a>
+                    </div>
+                    <p class="small text-muted">Seguici sui social per offerte esclusive e consigli per bambini!</p>
                 </div>
             </div>
             <hr class="my-4">
