@@ -110,6 +110,49 @@
         .category-card:hover h6 {
             color: #000;
         }
+        
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .category-filter {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .category-filter:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .category-filter.active {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .product-category {
+            transition: all 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -296,10 +339,51 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-12">
+                <div class="card shadow-sm border-0 bg-light">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div>
+                                <h4 class="fw-bold mb-0">
+                                    <i class="fas fa-compass me-2 text-primary" aria-hidden="true"></i>Trova la categoria perfetta per te
+                                </h4>
+                                <small class="text-muted">
+                                    <i class="fas fa-star text-warning me-1" aria-hidden="true"></i>Scegli la categoria e scopri i prodotti ideali
+                                </small>
+                            </div>
+                        </div>
+                        
+                        <!-- Category Filters -->
+                        <div class="category-filters mb-4">
+                            <button class="category-filter active" data-filter="all" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <span>Tutte</span>
+                            </button>
+                            <button class="category-filter" data-filter="salviette" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <span>Salviette</span>
+                            </button>
+                            <button class="category-filter" data-filter="pannolini" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <span>Pannolini</span>
+                            </button>
+                            <button class="category-filter" data-filter="passeggini" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                <span>Passeggini</span>
+                            </button>
+                            <button class="category-filter" data-filter="accessori" style="background: linear-gradient(135deg, #FF6B6B 0%, #EE5A5A 100%);">
+                                <span>Accessori</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-12">
                 <h2 class="text-center mb-4">I Nostri Prodotti</h2>
                 
                 <!-- Salviette Category -->
-                <div class="mb-5">
+                <div class="mb-5 product-category" data-category="salviette">
                     <h4 class="fw-bold mb-3 text-primary"><i class="fas fa-tint me-2"></i>Salviette per Neonati</h4>
                     <div class="row g-3">
                         <div class="col-md-4">
@@ -339,7 +423,7 @@
                 </div>
                 
                 <!-- Pannolini Category -->
-                <div class="mb-5">
+                <div class="mb-5 product-category" data-category="pannolini">
                     <h4 class="fw-bold mb-3 text-success"><i class="fas fa-baby me-2"></i>Pannolini</h4>
                     <div class="row g-3">
                         <div class="col-md-6">
@@ -368,7 +452,7 @@
                 </div>
 
                 <!-- Passeggini Category -->
-                <div class="mb-5">
+                <div class="mb-5 product-category" data-category="passeggini">
                     <h4 class="fw-bold mb-3 text-info"><i class="fas fa-baby-carriage me-2"></i>Passeggini</h4>
                     <div class="row g-3">
                         <div class="col-md-6">
@@ -419,7 +503,7 @@
                 </div>
 
                 <!-- Accessori Passeggino Category -->
-                <div class="mb-5">
+                <div class="mb-5 product-category" data-category="accessori">
                     <h4 class="fw-bold mb-3 text-warning"><i class="fas fa-umbrella me-2"></i>Accessori Passeggino</h4>
                     <div class="row g-3">
                         <div class="col-md-6">
@@ -556,5 +640,35 @@
     
     <!-- GA4 Product Tracking -->
     <script src="../../js/analytics-tracking.js"></script>
+    
+    <!-- Category Filters Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-filter');
+            const productCategories = document.querySelectorAll('.product-category');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    productCategories.forEach(category => {
+                        const categoryValue = category.getAttribute('data-category');
+                        
+                        if (filterValue === 'all' || categoryValue === filterValue) {
+                            category.style.display = 'block';
+                            category.style.animation = 'fadeIn 0.5s ease';
+                        } else {
+                            category.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
