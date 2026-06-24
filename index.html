@@ -412,34 +412,6 @@
                             </div>
                         </div>
                         
-                        <!-- Category Filters -->
-                        <div class="category-filters mb-4">
-                            <button class="category-filter active" data-filter="all" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                                <span>Tutte</span>
-                            </button>
-                            <button class="category-filter" data-filter="casa" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                                <span>Casa</span>
-                            </button>
-                            <button class="category-filter" data-filter="tech" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                                <span>Tech</span>
-                            </button>
-                            <button class="category-filter" data-filter="benessere" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-                                <span>Benessere</span>
-                            </button>
-                            <button class="category-filter" data-filter="sport" style="background: linear-gradient(135deg, #FF6B6B 0%, #EE5A5A 100%);">
-                                <span>Sport</span>
-                            </button>
-                            <button class="category-filter" data-filter="lifestyle" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                                <span>Lifestyle</span>
-                            </button>
-                            <button class="category-filter" data-filter="intrattenimento" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
-                                <span>Intrattenimento</span>
-                            </button>
-                            <button class="category-filter" data-filter="lavoro" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                                <span>Lavoro</span>
-                            </button>
-                        </div>
-                        
                         <div class="row g-3" id="categoriesGrid">
                             <!-- Casa -->
                             <div class="col-md-4 col-sm-6 category-item" data-category="casa">
@@ -1325,34 +1297,6 @@
                 }, 500);
             }
         }
-
-        // Category Filter Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.category-filter');
-            const categoryItems = document.querySelectorAll('.category-item');
-
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Add active class to clicked button
-                    this.classList.add('active');
-
-                    const filterValue = this.getAttribute('data-filter');
-
-                    categoryItems.forEach(item => {
-                        const itemCategory = item.getAttribute('data-category');
-                        
-                        if (filterValue === 'all' || itemCategory === filterValue) {
-                            item.style.display = 'block';
-                            item.style.animation = 'fadeIn 0.5s ease';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
     </script>
     
     
