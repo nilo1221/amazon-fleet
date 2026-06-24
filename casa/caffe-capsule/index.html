@@ -85,6 +85,26 @@
             background: linear-gradient(135deg, #FFAD33 0%, #FF9900 100%);
             color: white;
         }
+        
+        /* Category Card Styles */
+        .category-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: var(--accent-color) !important;
+        }
+        
+        .category-card h6 {
+            color: #333;
+        }
+        
+        .category-card:hover h6 {
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -140,6 +160,64 @@
                         </span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorie Navigation Section -->
+    <section class="container mt-4">
+        <div class="text-center mb-4">
+            <h3 class="fw-bold mb-3">Cosa stai cercando?</h3>
+            <p class="text-muted">Naviga tra le categorie per trovare il prodotto perfetto per il tuo caffè</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#macchine" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-coffee fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Macchine Caffè</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#capsule" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-capsules fa-2x text-info mb-2"></i>
+                        <h6 class="fw-bold">Capsule</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#cialde" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-circle fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold">Cialde</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#caffe" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-mug-hot fa-2x text-warning mb-2"></i>
+                        <h6 class="fw-bold">Caffè</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#accessori" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-spoon fa-2x text-secondary mb-2"></i>
+                        <h6 class="fw-bold">Accessori</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#bollitori" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-fire fa-2x text-danger mb-2"></i>
+                        <h6 class="fw-bold">Bollitori</h6>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
