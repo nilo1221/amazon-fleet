@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giochi da Tavolo - Smart Choices Guide</title>
+    <meta name="description" content="I migliori giochi da tavolo, giochi di ruolo e giochi di società per divertirti con amici e famiglia.">
+    
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PLE2THHMT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7PLE2THHMT');
+    </script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <!-- AI Assistant CSS -->
+    <link rel="stylesheet" href="../ai-assistant/ai-assistant.css">
+    
+    <style>
+        :root {
+            --primary-color: #8B0000;
+            --secondary-color: #DC143C;
+            --bg-color: #f8f9fa;
+            --accent-color: #FF6347;
+            --success-color: #FFFFFF;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            padding: 20px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #8B0000 0%, #DC143C 50%, #FF6347 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(139, 0, 0, 0.3);
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(139, 0, 0, 0.5);
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #DC143C 0%, #FF6347 100%);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(220, 20, 60, 0.7);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../raccomandazioni/index.html">Raccomandazioni</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">
+                        <i class="fas fa-dice-d20 me-3"></i>Giochi da Tavolo
+                    </h1>
+                    <p class="lead mb-4">
+                        I migliori giochi da tavolo, giochi di ruolo e giochi di società per divertirti con amici e famiglia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container mb-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="fw-bold mb-4 text-center">Prodotti Selezionati</h2>
+                
+                <!-- I prodotti verranno aggiunti qui -->
+                <div class="alert alert-info text-center">
+                    <i class="fas fa-info-circle me-2"></i>
+                    I prodotti verranno aggiunti a breve.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant -->
+    <div id="ai-assistant-container"></div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Smart Choices Guide</h5>
+                    <p class="text-muted">La tua guida per gli acquisti intelligenti su Amazon.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Link Utili</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-decoration-none text-muted">Home</a></li>
+                        <li><a href="../tutte-le-categorie.html" class="text-decoration-none text-muted">Categorie</a></li>
+                        <li><a href="../about.html" class="text-decoration-none text-muted">Chi Siamo</a></li>
+                        <li><a href="../contact.html" class="text-decoration-none text-muted">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Legale</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../privacy.html" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                        <li><a href="../disclaimer.html" class="text-decoration-none text-muted">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="text-muted mb-0">In qualità di Affiliato Amazon, ricevo un guadagno per ciascun acquisto idoneo.</p>
+                <p class="text-muted small mb-0">&copy; 2026 Smart Choices Guide. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AI Assistant JS -->
+    <script src="../ai-assistant/ai-assistant.js"></script>
+</body>
+</html>

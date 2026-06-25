@@ -151,12 +151,6 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://smart-choices-guide.vercel.app/casa/detersivi/index.html</loc>
-        <lastmod>2026-06-12</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://smart-choices-guide.vercel.app/casa/snack-bevande/index.html</loc>
         <lastmod>2026-06-12</lastmod>
         <changefreq>weekly</changefreq>
@@ -301,8 +295,8 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://smart-choices-guide.vercel.app/lifestyle/sostenibilita-eco-friendly/index.html</loc>
-        <lastmod>2026-06-12</lastmod>
+        <loc>https://smart-choices-guide.vercel.app/sport/abbigliamento-sportivo/index.html</loc>
+        <lastmod>2026-06-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -325,8 +319,8 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://smart-choices-guide.vercel.app/intrattenimento/manga-anime/index.html</loc>
-        <lastmod>2026-06-12</lastmod>
+        <loc>https://smart-choices-guide.vercel.app/manga-anime/index.html</loc>
+        <lastmod>2026-06-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
