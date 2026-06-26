@@ -1233,86 +1233,53 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white mt-5 py-5">
+    <footer class="footer-v4 py-4" role="contentinfo">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="d-flex align-items-center mb-3">
-                        <i class="fas fa-utensils fa-2x me-3" style="color: var(--primary-color);"></i>
-                        <h5 class="fw-bold mb-0">Cucina & Elettrodomestici</h5>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-4">
+                        <h5 class="fw-bold mb-2">Smart Choices Guide</h5>
+                        <div class="d-flex justify-content-center gap-4 mb-3">
+                            <a href="../../about.html" class="text-white-50 text-decoration-none small"><i class="fas fa-info-circle me-1" aria-hidden="true"></i>Chi Siamo</a>
+                            <a href="../../contact.html" class="text-white-50 text-decoration-none small"><i class="fas fa-envelope me-1" aria-hidden="true"></i>Email</a>
+                            <a href="../../disclaimer.html" class="text-white-50 text-decoration-none small"><i class="fas fa-exclamation-triangle me-1" aria-hidden="true"></i>Disclaimer</a>
+                        </div>
+                        <div class="social-bar-v4 mb-3">
+                            <a href="#" class="text-white-50 me-3" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-white-50 me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white-50 me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white-50" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
                     </div>
-                    <p class="small text-muted">I migliori prodotti per la tua cucina, dalle friggitrici ai coltelli professionali. Qualità garantita e prezzi competitivi.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="d-flex align-items-center mb-3">
-                        <i class="fas fa-link fa-2x me-3" style="color: var(--accent-color);"></i>
-                        <h5 class="fw-bold mb-0">Link Utili</h5>
+                    <div class="amazon-disclaimer-v4 p-4 rounded-3 mb-3">
+                        <p class="mb-2 text-warning fw-bold text-center">
+                            <i class="fab fa-amazon me-2 fa-lg" aria-hidden="true"></i>Disclaimer Amazon Associates
+                        </p>
+                        <p class="text-white mb-0 small text-center">
+                            In qualità di Affiliato Amazon ricevo un guadagno dagli acquisti idonei.
+                        </p>
                     </div>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="/" class="text-white text-decoration-none hover-accent"><i class="fas fa-home me-2"></i>Home</a></li>
-                        <li class="mb-2"><a href="/casa/" class="text-white text-decoration-none hover-accent"><i class="fas fa-home me-2"></i>Casa</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="d-flex align-items-center mb-3">
-                        <i class="fas fa-share-alt fa-2x me-3" style="color: #6c757d;"></i>
-                        <h5 class="fw-bold mb-0">Seguici</h5>
-                    </div>
-                    <div class="d-flex gap-3 mb-3">
-                        <a href="#" class="text-white text-decoration-none social-icon">
-                            <i class="fab fa-facebook fa-2x"></i>
-                        </a>
-                        <a href="#" class="text-white text-decoration-none social-icon">
-                            <i class="fab fa-instagram fa-2x"></i>
-                        </a>
-                        <a href="#" class="text-white text-decoration-none social-icon">
-                            <i class="fab fa-twitter fa-2x"></i>
-                        </a>
-                        <a href="#" class="text-white text-decoration-none social-icon">
-                            <i class="fab fa-youtube fa-2x"></i>
-                        </a>
-                    </div>
-                    <p class="small text-muted">Seguici sui social per offerte esclusive e consigli di cucina!</p>
-                </div>
-            </div>
-            
-            <hr class="my-4 border-secondary">
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="amazon-disclaimer bg-dark bg-opacity-50 p-3 rounded border border-secondary">
-                        <p class="mb-2 text-warning fw-bold"><i class="fab fa-amazon me-2"></i>Disclaimer Amazon Associates</p>
-                        <p class="text-white-50 mb-0">In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche. Qualsiasi prezzo e informazioni sulla disponibilità visualizzati sul sito Amazon al momento dell'acquisto si applicheranno all'acquisto di questo prodotto. Questo sito è partecipante al Programma Affiliazione Amazon EU, un programma di affiliazione che permette ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <hr class="my-4 border-secondary">
-            
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p class="small text-muted mb-0">
-                        © 2024 Smart Choices Guide. Tutti i diritti riservati.
-                    </p>
+                    <p class="text-white-50 small text-center mb-0">© 2026 Smart Choices Guide</p>
                 </div>
             </div>
         </div>
     </footer>
-    
+
     <style>
-        .social-icon {
-            transition: all 0.3s ease;
+        .footer-v4 {
+            background: rgba(10, 10, 10, 0.95);
+            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
-        .social-icon:hover {
-            transform: translateY(-3px);
-            color: var(--primary-color) !important;
+        .amazon-disclaimer-v4 {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.25) 0%, rgba(255, 152, 0, 0.25) 100%);
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
         }
-        
-        .hover-accent {
-            transition: all 0.3s ease;
+        .footer-v4 a:hover {
+            color: #fbbf24 !important;
         }
-        
         .hover-accent:hover {
             color: var(--accent-color) !important;
             padding-left: 5px;
