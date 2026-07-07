@@ -122,16 +122,25 @@ def get_most_sent_links(limit=10):
         for row in results
     ]
 
-def was_sent_recently(asin, hours=24):
-    """Controlla se un link è stato inviato nelle ultime N ore."""
+def was_sent_recently(asin, hours=None):
+    """Controlla se un link è stato inviato (permanentemente, non solo ultime N ore)."""
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     
-    cursor.execute('''
-        SELECT COUNT(*)
-        FROM sent_links
-        WHERE asin = ? AND sent_at >= datetime('now', '-' || ? || ' hours')
-    ''', (asin, hours))
+    if hours:
+        # Controllo temporale (se specificato)
+        cursor.execute('''
+            SELECT COUNT(*)
+            FROM sent_links
+            WHERE asin = ? AND sent_at >= datetime('now', '-' || ? || ' hours')
+        ''', (asin, hours))
+    else:
+        # Controllo permanente (se non specificato)
+        cursor.execute('''
+            SELECT COUNT(*)
+            FROM sent_links
+            WHERE asin = ?
+        ''', (asin,))
     
     count = cursor.fetchone()[0]
     conn.close()

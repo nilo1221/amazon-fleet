@@ -56,9 +56,9 @@ async def send_product_to_telegram(product, bot):
     """Invia un prodotto su Telegram se sotto soglia di prezzo (0-40€)."""
     logger.info(f"⏳ Controllo {product['asin']}...")
     
-    # Controlla se già inviato recentemente (24 ore)
-    if was_sent_recently(product['asin'], hours=24):
-        logger.info(f"⏸️ Già inviato nelle ultime 24 ore (skip)")
+    # Controlla se già inviato (permanentemente)
+    if was_sent_recently(product['asin']):
+        logger.info(f"⏸️ Già inviato in passato (skip)")
         return
     
     # Controlla prezzo
@@ -172,9 +172,9 @@ async def run_bot():
     
     logger.info("🚀 Bot avviato!")
     logger.info(f"� Soglia prezzo Telegram: €{TELEGRAM_PRICE_THRESHOLD}")
-    logger.info(f"�🛡️ Minimo tra post: {MIN_POST_INTERVAL_HOURS} ore")
+    logger.info(f"��️ Minimo tra post: {MIN_POST_INTERVAL_HOURS} ore")
     logger.info(f"🔄 Estrazione prodotti dal sito: ogni {WEBSITE_SCAN_INTERVAL_HOURS} ore")
-    logger.info(f"📊 Controllo duplicati: 24 ore")
+    logger.info(f"📊 Controllo duplicati: permanente (mai inviare stesso link)")
     
     last_website_scan = 0
     website_scan_interval_seconds = WEBSITE_SCAN_INTERVAL_HOURS * 3600
