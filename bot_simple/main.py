@@ -8,6 +8,7 @@ from config import (TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID, MIN_POST_INTERVAL_H
 from db import init_db, get_all_products, can_post, update_last_posted, add_product
 from scraper import get_product_data
 from extract_products import extract_products_from_html
+from telegram_links_db import add_sent_link, init_telegram_links_db
 import os
 import logging
 from datetime import datetime
@@ -120,6 +121,18 @@ async def check_product(product, bot):
                         )
                     
                     update_last_posted(product['id'])
+                    
+                    # Traccia il link inviato nel database
+                    message_type = 'photo' if img_url else 'text'
+                    add_sent_link(
+                        asin=product['asin'],
+                        product_name=product['nome'],
+                        affiliate_link=product['link'],
+                        message_type=message_type,
+                        channel_id=TELEGRAM_CHANNEL_ID,
+                        price=price
+                    )
+                    
                     logger.info(f"     📤 Inviato su Telegram!")
                 except TelegramError as e:
                     logger.error(f"     ❌ Errore invio: {e}")
@@ -161,7 +174,20 @@ async def check_product(product, bot):
                                 text=msg_plain,
                                 reply_markup=keyboard_plain
                             )
+                        
                         update_last_posted(product['id'])
+                        
+                        # Traccia il link inviato nel database (fallback)
+                        message_type = 'photo' if img_url else 'text'
+                        add_sent_link(
+                            asin=product['asin'],
+                            product_name=product['nome'],
+                            affiliate_link=product['link'],
+                            message_type=message_type,
+                            channel_id=TELEGRAM_CHANNEL_ID,
+                            price=price
+                        )
+                        
                         logger.info(f"     📤 Inviato su Telegram (fallback)!")
                     except TelegramError as e2:
                         logger.error(f"     ❌ Errore invio fallback: {e2}")
@@ -176,6 +202,7 @@ async def run_bot():
     """Loop principale del bot con sistema di priorità."""
     # Inizializza database
     init_db()
+    init_telegram_links_db()
     
     # Crea bot Telegram
     bot = Bot(token=TELEGRAM_BOT_TOKEN)
