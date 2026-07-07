@@ -7,7 +7,7 @@ from config import (TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID, MIN_POST_INTERVAL_H
                     WEBSITE_SCAN_INTERVAL_HOURS, LOG_FILE, TELEGRAM_PRICE_THRESHOLD)
 from telegram_links_db import add_sent_link, init_telegram_links_db, was_sent_recently
 from extract_products import extract_all_affiliate_links
-from scraper import get_product_price
+from scraper import get_product_data
 import os
 import logging
 from datetime import datetime
@@ -61,14 +61,15 @@ async def send_product_to_telegram(product, bot):
         logger.info(f"⏸️ Già inviato in passato (skip)")
         return
     
-    # Controlla prezzo
-    price = get_product_price(product['link'])
+    # Controlla prezzo e immagine
+    price, img_url = get_product_data(product['link'])
     
     if price is None:
         logger.info(f"❌ Prezzo non trovato (skip)")
         return
     
     logger.info(f"💰 Prezzo: €{price:.2f}")
+    logger.info(f"🖼️ Immagine: {img_url[:50] if img_url else 'N/A'}...")
     
     # Invia solo se sotto soglia (0-40€)
     if price > TELEGRAM_PRICE_THRESHOLD:
@@ -77,11 +78,11 @@ async def send_product_to_telegram(product, bot):
     
     logger.info(f"✅ SOTTO SOGLIA TELEGRAM (€{TELEGRAM_PRICE_THRESHOLD})!")
     
-    # Formatta messaggio con prezzo
+    # Formatta caption
     safe_nome = escape_markdown(product['nome'])
     nome_breve = safe_nome[:60] + "..." if len(safe_nome) > 60 else safe_nome
     
-    msg = (
+    caption = (
         f"🔥 **SUPER OFFERTA DEL GIORNO**\n\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
         f"📦 *{nome_breve}*\n"
@@ -89,34 +90,46 @@ async def send_product_to_telegram(product, bot):
         f"💰 **Prezzo:** *€{price:.2f}*\n"
         f"⚡ **Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!*\n\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"🌐 **Vuoi vedere più prodotti?**\n"
-        f"👉 smart-choices-guide.vercel.app\n\n"
         f"✅ Spedizione Prime Gratuita\n"
         f"✅ Reso gratuito 30 giorni\n"
         f"✅ Pagamenti sicuri\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"📢 *Smart Choices Guide partecipa al Programma Affiliati Amazon EU. Quando acquisti tramite i nostri link, paghi lo stesso prezzo senza costi aggiuntivi, e noi riceviamo una piccola commissione che ci aiuta a mantenere il sito operativo.*"
+        f"📢 *Smart Choices Guide partecipa al Programma Affiliati Amazon EU.*"
     )
     
-    # Crea pulsante inline per Amazon
+    # Crea pulsanti inline
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("🛒 Vedi su Amazon", url=product['link'])]
+        [InlineKeyboardButton("🛒 Vedi su Amazon", url=product['link'])],
+        [InlineKeyboardButton("🌐 Scopri il nostro sito", url="https://smart-choices-guide.vercel.app")]
     ])
     
     try:
-        await bot.send_message(
-            chat_id=TELEGRAM_CHANNEL_ID,
-            text=msg,
-            parse_mode='Markdown',
-            reply_markup=keyboard
-        )
+        if img_url:
+            # Invia foto con caption
+            await bot.send_photo(
+                chat_id=TELEGRAM_CHANNEL_ID,
+                photo=img_url,
+                caption=caption,
+                parse_mode='Markdown',
+                reply_markup=keyboard
+            )
+            message_type = 'photo'
+        else:
+            # Fallback a testo semplice se non c'è immagine
+            await bot.send_message(
+                chat_id=TELEGRAM_CHANNEL_ID,
+                text=caption,
+                parse_mode='Markdown',
+                reply_markup=keyboard
+            )
+            message_type = 'text'
         
         # Traccia il link inviato nel database
         add_sent_link(
             asin=product['asin'],
             product_name=product['nome'],
             affiliate_link=product['link'],
-            message_type='text',
+            message_type=message_type,
             channel_id=TELEGRAM_CHANNEL_ID,
             price=price
         )
@@ -126,7 +139,7 @@ async def send_product_to_telegram(product, bot):
         logger.error(f"❌ Errore invio: {e}")
         # Fallback a testo semplice
         try:
-            msg_plain = (
+            caption_plain = (
                 f"🔥 SUPER OFFERTA DEL GIORNO\n\n"
                 f"━━━━━━━━━━━━━━━━━━━━━━\n"
                 f"📦 {nome_breve}\n"
@@ -134,18 +147,16 @@ async def send_product_to_telegram(product, bot):
                 f"💰 Prezzo: €{price:.2f}\n"
                 f"⚡ Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!\n\n"
                 f"━━━━━━━━━━━━━━━━━━━━━━\n"
-                f"🌐 Vuoi vedere più prodotti?\n"
-                f"👉 smart-choices-guide.vercel.app\n\n"
                 f"✅ Spedizione Prime Gratuita\n"
                 f"✅ Reso gratuito 30 giorni\n"
                 f"✅ Pagamenti sicuri\n"
                 f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-                f"📢 Smart Choices Guide partecipa al Programma Affiliati Amazon EU. Quando acquisti tramite i nostri link, paghi lo stesso prezzo senza costi aggiuntivi, e noi riceviamo una piccola commissione che ci aiuta a mantenere il sito operativo."
+                f"📢 Smart Choices Guide partecipa al Programma Affiliati Amazon EU."
             )
             
             await bot.send_message(
                 chat_id=TELEGRAM_CHANNEL_ID,
-                text=msg_plain,
+                text=caption_plain,
                 reply_markup=keyboard
             )
             

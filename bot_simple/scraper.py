@@ -18,15 +18,15 @@ def clean_affiliate_params(url):
     
     return url
 
-def get_product_price(url):
+def get_product_data(url):
     """
-    Recupera solo il prezzo da una pagina Amazon (senza generare click falsi).
+    Recupera prezzo e immagine da una pagina Amazon (senza generare click falsi).
     
     Args:
         url: URL del prodotto Amazon (con o senza tag affiliato)
         
     Returns:
-        float: Prezzo o None se errore
+        tuple: (prezzo, url_immagine) o (None, None) se errore
     """
     # Pulisci URL rimuovendo parametri affiliati
     clean_url = clean_affiliate_params(url)
@@ -51,7 +51,7 @@ def get_product_price(url):
                     continue
                 else:
                     print(f"❌ Errore HTTP {response.status_code}")
-                    return None
+                    return None, None
             
             soup = BeautifulSoup(response.content, 'html.parser')
             
@@ -72,7 +72,22 @@ def get_product_price(url):
                     if price:
                         break
             
-            return price
+            # Recupero immagine
+            img_url = None
+            img_selectors = [
+                '#landingImage',
+                '#imgBlkFront',
+                '#main-image',
+                '.a-dynamic-image',
+            ]
+            
+            for selector in img_selectors:
+                img_tag = soup.select_one(selector)
+                if img_tag and img_tag.get('src'):
+                    img_url = img_tag['src']
+                    break
+            
+            return price, img_url
             
         except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
             if attempt < MAX_RETRIES - 1:
@@ -81,12 +96,12 @@ def get_product_price(url):
                 continue
             else:
                 print(f"❌ Errore scraping: {e}")
-                return None
+                return None, None
         except Exception as e:
             print(f"❌ Errore scraping: {e}")
-            return None
+            return None, None
     
-    return None
+    return None, None
 
 def parse_price(price_text):
     """Converte testo prezzo in float."""
