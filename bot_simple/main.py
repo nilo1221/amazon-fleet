@@ -4,9 +4,10 @@ import random
 from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.error import TelegramError
 from config import (TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID, MIN_POST_INTERVAL_HOURS, 
-                    WEBSITE_SCAN_INTERVAL_HOURS, LOG_FILE)
+                    WEBSITE_SCAN_INTERVAL_HOURS, LOG_FILE, TELEGRAM_PRICE_THRESHOLD)
 from telegram_links_db import add_sent_link, init_telegram_links_db, was_sent_recently
 from extract_products import extract_all_affiliate_links
+from scraper import get_product_price
 import os
 import logging
 from datetime import datetime
@@ -52,7 +53,7 @@ def extract_products_from_website():
     return all_products
 
 async def send_product_to_telegram(product, bot):
-    """Invia un prodotto su Telegram."""
+    """Invia un prodotto su Telegram se sotto soglia di prezzo (0-40€)."""
     logger.info(f"⏳ Controllo {product['asin']}...")
     
     # Controlla se già inviato recentemente (24 ore)
@@ -60,15 +61,34 @@ async def send_product_to_telegram(product, bot):
         logger.info(f"⏸️ Già inviato nelle ultime 24 ore (skip)")
         return
     
-    # Formatta messaggio semplice
+    # Controlla prezzo
+    price = get_product_price(product['link'])
+    
+    if price is None:
+        logger.info(f"❌ Prezzo non trovato (skip)")
+        return
+    
+    logger.info(f"💰 Prezzo: €{price:.2f}")
+    
+    # Invia solo se sotto soglia (0-40€)
+    if price > TELEGRAM_PRICE_THRESHOLD:
+        logger.info(f"❌ Sopra soglia Telegram (€{TELEGRAM_PRICE_THRESHOLD}) - skip")
+        return
+    
+    logger.info(f"✅ SOTTO SOGLIA TELEGRAM (€{TELEGRAM_PRICE_THRESHOLD})!")
+    
+    # Formatta messaggio con prezzo
     safe_nome = escape_markdown(product['nome'])
     nome_breve = safe_nome[:60] + "..." if len(safe_nome) > 60 else safe_nome
     
     msg = (
-        f"🔥 **Nuovo Prodotto Scelto dalla Redazione**\n\n"
+        f"🔥 **SUPER OFFERTA DEL GIORNO**\n\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
         f"📦 *{nome_breve}*\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        f"💰 **Prezzo:** *€{price:.2f}*\n"
+        f"⚡ **Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!*\n\n"
+        f"━━━━━━━━━━━━━━━━━━━━━━\n"
         f"🌐 **Vuoi vedere più prodotti?**\n"
         f"👉 smart-choices-guide.vercel.app\n\n"
         f"✅ Spedizione Prime Gratuita\n"
@@ -98,7 +118,7 @@ async def send_product_to_telegram(product, bot):
             affiliate_link=product['link'],
             message_type='text',
             channel_id=TELEGRAM_CHANNEL_ID,
-            price=None
+            price=price
         )
         
         logger.info(f"📤 Inviato su Telegram!")
@@ -107,10 +127,13 @@ async def send_product_to_telegram(product, bot):
         # Fallback a testo semplice
         try:
             msg_plain = (
-                f"🔥 Nuovo Prodotto Scelto dalla Redazione\n\n"
+                f"🔥 SUPER OFFERTA DEL GIORNO\n\n"
                 f"━━━━━━━━━━━━━━━━━━━━━━\n"
                 f"📦 {nome_breve}\n"
                 f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                f"💰 Prezzo: €{price:.2f}\n"
+                f"⚡ Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!\n\n"
+                f"━━━━━━━━━━━━━━━━━━━━━━\n"
                 f"🌐 Vuoi vedere più prodotti?\n"
                 f"👉 smart-choices-guide.vercel.app\n\n"
                 f"✅ Spedizione Prime Gratuita\n"
@@ -132,7 +155,7 @@ async def send_product_to_telegram(product, bot):
                 affiliate_link=product['link'],
                 message_type='text',
                 channel_id=TELEGRAM_CHANNEL_ID,
-                price=None
+                price=price
             )
             
             logger.info(f"📤 Inviato su Telegram (fallback)!")
@@ -148,9 +171,10 @@ async def run_bot():
     bot = Bot(token=TELEGRAM_BOT_TOKEN)
     
     logger.info("🚀 Bot avviato!")
-    logger.info(f"🛡️ Minimo tra post: {MIN_POST_INTERVAL_HOURS} ore")
+    logger.info(f"� Soglia prezzo Telegram: €{TELEGRAM_PRICE_THRESHOLD}")
+    logger.info(f"�🛡️ Minimo tra post: {MIN_POST_INTERVAL_HOURS} ore")
     logger.info(f"🔄 Estrazione prodotti dal sito: ogni {WEBSITE_SCAN_INTERVAL_HOURS} ore")
-    logger.info(f"� Controllo duplicati: 24 ore")
+    logger.info(f"📊 Controllo duplicati: 24 ore")
     
     last_website_scan = 0
     website_scan_interval_seconds = WEBSITE_SCAN_INTERVAL_HOURS * 3600
