@@ -63,11 +63,11 @@ def extract_all_affiliate_links(html_file):
         
         # Se ancora vuoto, usa nome generico
         if not nome:
-            nome = f"Prodotto {identifier}"
+            nome = f"Prodotto {asin}"
         
         if link:
             products.append({
-                'asin': identifier,
+                'asin': asin,
                 'nome': nome[:200],  # Limita lunghezza nome
                 'link': link
             })
