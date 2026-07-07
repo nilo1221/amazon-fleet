@@ -40,26 +40,47 @@ def extract_all_affiliate_links(html_file):
         # Cerca nome vicino al link (h3, h4, h5, title, alt)
         nome = None
         
-        # Cerca in elementi vicini
+        # Cerca in elementi vicini (più profondo)
         parent = a_tag.parent
         if parent:
-            h3 = parent.find('h3')
-            h4 = parent.find('h4')
-            h5 = parent.find('h5')
-            title = parent.find(class_=re.compile(r'title|name'))
-            
-            if h3:
-                nome = h3.get_text(strip=True)
-            elif h4:
-                nome = h4.get_text(strip=True)
-            elif h5:
-                nome = h5.get_text(strip=True)
-            elif title:
-                nome = title.get_text(strip=True)
+            # Cerca nei parent superiori
+            for i in range(5):  # Cerca fino a 5 livelli sopra
+                if not parent:
+                    break
+                
+                h3 = parent.find('h3')
+                h4 = parent.find('h4')
+                h5 = parent.find('h5')
+                h6 = parent.find('h6')
+                title = parent.find(class_=re.compile(r'title|name'))
+                card_title = parent.find(class_=re.compile(r'card-title|product-title'))
+                
+                if h3:
+                    nome = h3.get_text(strip=True)
+                    break
+                elif h4:
+                    nome = h4.get_text(strip=True)
+                    break
+                elif h5:
+                    nome = h5.get_text(strip=True)
+                    break
+                elif h6:
+                    nome = h6.get_text(strip=True)
+                    break
+                elif title:
+                    nome = title.get_text(strip=True)
+                    break
+                elif card_title:
+                    nome = card_title.get_text(strip=True)
+                    break
+                
+                parent = parent.parent
         
-        # Se non trova nome, usa testo del link
+        # Se non trova nome, usa testo del link (ma escludi testo generico)
         if not nome:
-            nome = a_tag.get_text(strip=True)
+            link_text = a_tag.get_text(strip=True)
+            if link_text and link_text.lower() not in ['vedi', 'vai', 'clicca', 'vedi su amazon', 'acquista']:
+                nome = link_text
         
         # Se ancora vuoto, usa nome generico
         if not nome:

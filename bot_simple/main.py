@@ -78,23 +78,71 @@ async def send_product_to_telegram(product, bot):
     
     logger.info(f"✅ SOTTO SOGLIA TELEGRAM (€{TELEGRAM_PRICE_THRESHOLD})!")
     
-    # Formatta caption (senza Markdown per evitare errori di parsing)
+    # Formatta caption con template random
     nome_breve = product['nome'][:60] + "..." if len(product['nome']) > 60 else product['nome']
     
-    caption = (
-        f"🔥 SUPER OFFERTA DEL GIORNO\n\n"
-        f"━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"📦 {nome_breve}\n"
-        f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"💰 Prezzo: €{price:.2f}\n"
-        f"⚡ Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!\n\n"
-        f"━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"✅ Spedizione Prime Gratuita\n"
-        f"✅ Reso gratuito 30 giorni\n"
-        f"✅ Pagamenti sicuri\n"
-        f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"📢 Smart Choices Guide partecipa al Programma Affiliati Amazon EU."
-    )
+    # 4 template diversi
+    templates = [
+        # Template 1: Super Offerta
+        (
+            f"🔥 SUPER OFFERTA DEL GIORNO\n\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n"
+            f"📦 {nome_breve}\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"💰 Prezzo: €{price:.2f}\n"
+            f"⚡ Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!\n\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n"
+            f"✅ Spedizione Prime Gratuita\n"
+            f"✅ Reso gratuito 30 giorni\n"
+            f"✅ Pagamenti sicuri\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"📢 Smart Choices Guide partecipa al Programma Affiliati Amazon EU."
+        ),
+        # Template 2: Scelta Redazione
+        (
+            f"⭐ SCELTO DALLA REDAZIONE\n\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n"
+            f"📦 {nome_breve}\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"💰 Solo €{price:.2f}\n"
+            f"🎯 Ottimo rapporto qualità/prezzo\n\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n"
+            f"✅ Spedizione Prime Gratuita\n"
+            f"✅ Reso gratuito 30 giorni\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"📢 Affiliazione Amazon EU"
+        ),
+        # Template 3: Best Seller
+        (
+            f"🏆 BEST SELLER DEL MOMENTO\n\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n"
+            f"📦 {nome_breve}\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"💰 Prezzo: €{price:.2f}\n"
+            f"🔥 Molto richiesto!\n\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n"
+            f"✅ Prime Gratuita\n"
+            f"✅ Reso 30 giorni\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"📢 Smart Choices Guide"
+        ),
+        # Template 4: Consigliato
+        (
+            f"💎 CONSIGLIATO PER TE\n\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n"
+            f"📦 {nome_breve}\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"💰 €{price:.2f}\n"
+            f"⭐ Ottimo prodotto\n\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n"
+            f"✅ Prime Gratuita\n"
+            f"✅ Reso gratuito\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"📢 Affiliazione Amazon"
+        )
+    ]
+    
+    caption = random.choice(templates)
     
     # Crea pulsanti inline
     keyboard = InlineKeyboardMarkup([
