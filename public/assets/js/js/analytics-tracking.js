@@ -101,6 +101,80 @@
         productCards.forEach(card => observer.observe(card));
     }
 
+    // Tracking scroll depth
+    function trackScrollDepth() {
+        let maxScroll = 0;
+        const scrollThresholds = [25, 50, 75, 90];
+        const trackedThresholds = new Set();
+
+        window.addEventListener('scroll', () => {
+            const scrollPercent = Math.round(
+                (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+            );
+
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+            }
+
+            scrollThresholds.forEach(threshold => {
+                if (scrollPercent >= threshold && !trackedThresholds.has(threshold)) {
+                    trackedThresholds.add(threshold);
+                    gtag('event', 'scroll', {
+                        percent_scrolled: threshold,
+                        page_title: document.title,
+                        page_location: window.location.href
+                    });
+                }
+            });
+        });
+    }
+
+    // Tracking tempo sulla pagina (engagement)
+    function trackEngagementTime() {
+        const timeThresholds = [30, 60, 120, 300]; // 30s, 1m, 2m, 5m
+        const trackedTimes = new Set();
+        let timeOnPage = 0;
+
+        setInterval(() => {
+            timeOnPage += 10; // Aggiorna ogni 10 secondi
+
+            timeThresholds.forEach(threshold => {
+                if (timeOnPage >= threshold && !trackedTimes.has(threshold)) {
+                    trackedTimes.add(threshold);
+                    gtag('event', 'engagement', {
+                        time_on_page: threshold,
+                        page_title: document.title,
+                        page_location: window.location.href
+                    });
+                }
+            });
+        }, 10000);
+    }
+
+    // Tracking click su nicchie/categorie
+    function trackNicheClick(event) {
+        const link = event.currentTarget;
+        const nicheName = link.textContent.trim() || link.getAttribute('data-niche') || 'Sconosciuta';
+        
+        gtag('event', 'niche_click', {
+            niche_name: nicheName,
+            page_title: document.title,
+            page_location: window.location.href
+        });
+    }
+
+    // Tracking click su menu di navigazione
+    function trackNavClick(event) {
+        const link = event.currentTarget;
+        const navItem = link.textContent.trim() || link.getAttribute('aria-label') || 'Sconosciuto';
+        
+        gtag('event', 'navigation_click', {
+            nav_item: navItem,
+            page_title: document.title,
+            page_location: window.location.href
+        });
+    }
+
     // Inizializza il tracking quando il DOM è caricato
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
@@ -110,8 +184,26 @@
                 link.addEventListener('click', trackAffiliateClick);
             });
 
+            // Aggiunge listener ai link delle nicchie
+            const nicheLinks = document.querySelectorAll('a[href*="niches"], a[href*="categorie"]');
+            nicheLinks.forEach(link => {
+                link.addEventListener('click', trackNicheClick);
+            });
+
+            // Aggiunge listener al menu di navigazione
+            const navLinks = document.querySelectorAll('nav a, .navbar a, .nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', trackNavClick);
+            });
+
             // Inizia il tracking delle impressioni
             trackProductImpressions();
+
+            // Inizia il tracking dello scroll
+            trackScrollDepth();
+
+            // Inizia il tracking del tempo sulla pagina
+            trackEngagementTime();
         });
     } else {
         // DOM già caricato
@@ -120,6 +212,18 @@
             link.addEventListener('click', trackAffiliateClick);
         });
 
+        const nicheLinks = document.querySelectorAll('a[href*="niches"], a[href*="categorie"]');
+        nicheLinks.forEach(link => {
+            link.addEventListener('click', trackNicheClick);
+        });
+
+        const navLinks = document.querySelectorAll('nav a, .navbar a, .nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', trackNavClick);
+        });
+
         trackProductImpressions();
+        trackScrollDepth();
+        trackEngagementTime();
     }
 })();

@@ -276,6 +276,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="niches/outdoor-camping/index.html"><i class="fas fa-campground me-2"></i>Outdoor & Camping</a></li>
+                                    <li><a class="dropdown-item" href="niches/mare/index.html"><i class="fas fa-umbrella-beach me-2"></i>Mare & Spiaggia</a></li>
                                 </ul>
                             </li>
                             <!-- Viaggi -->
@@ -372,7 +373,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 text-center">
-                        <a href="https://www.amazon.it/stores/page/42661A8D-D56C-404D-A3B9-E71231A4E114?aref=fhFEidJVVA&linkCode=sl2&tag=l0c39-21&linkId=832221bd7e15d7739508a91f3c24a21b&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-banner btn-lg fw-bold">
+                        <a href="https://www.amazon.it/stores/page/42661A8D-D56C-404D-A3B9-E71231A4E114?aref=fhFEidJVVA&linkCode=sl2&tag=l0c39-21&linkId=832221bd7e15d7739508a91f3c24a21b&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-banner btn-lg fw-bold" title="Vedi su Amazon" aria-label="Vedi su Amazon">
                             <i class="fab fa-amazon me-2"></i>Scopri su Amazon
                         </a>
                     </div>
@@ -642,6 +643,19 @@
                     </div>
                 </div>
                 
+                <div class="col-md-4 mb-4 category-item" data-category="outdoor">
+                    <div class="card h-100 text-center p-4" style="border: none; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                        <div class="mb-3">
+                            <i class="fas fa-umbrella-beach fa-3x" style="color: #00BCD4;"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Mare & Spiaggia</h5>
+                        <p class="text-muted small mb-3">Tende da spiaggia, occhiali e accessori per il mare</p>
+                        <a href="niches/mare/index.html" class="btn btn-sm fw-bold" style="background: linear-gradient(135deg, #00BCD4 0%, #0097A7 100%); color: white; border-radius: 20px; padding: 8px 25px;">
+                            Scopri
+                        </a>
+                    </div>
+                </div>
+                
                 <!-- Viaggi Categories -->
                 <div class="col-md-4 mb-4 category-item" data-category="viaggi">
                     <div class="card h-100 text-center p-4" style="border: none; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
@@ -771,53 +785,474 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer-v4 py-4" role="contentinfo">
-        <div class="container">
+    <!-- Modern Footer with Wow Effects -->
+    <footer class="footer-modern py-5" role="contentinfo">
+        <div class="footer-gradient-bg"></div>
+        <div class="footer-particles"></div>
+        <div class="container position-relative">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center mb-4">
-                        <h5 class="fw-bold mb-2">Smart Choices Guide</h5>
-                        <div class="d-flex justify-content-center gap-4 mb-3">
-                            <a href="pages/about.html" class="text-white-50 text-decoration-none small"><i class="fas fa-info-circle me-1" aria-hidden="true"></i>Chi Siamo</a>
-                            <a href="pages/contact.html" class="text-white-50 text-decoration-none small"><i class="fas fa-envelope me-1" aria-hidden="true"></i>Email</a>
-                            <a href="pages/disclaimer.html" class="text-white-50 text-decoration-none small"><i class="fas fa-exclamation-triangle me-1" aria-hidden="true"></i>Disclaimer</a>
+                <div class="col-lg-10">
+                    <div class="footer-content">
+                        <!-- Logo Section -->
+                        <div class="footer-logo-section text-center mb-5 footer-animate">
+                            <h4 class="footer-title mb-3">
+                                <i class="fas fa-gem me-2"></i>Smart Choices Guide
+                            </h4>
+                            <p class="footer-subtitle">Le Migliori Guide d'Acquisto Amazon</p>
                         </div>
-                        <div class="social-bar-v4 mb-3">
-                            <a href="#" class="text-white-50 me-3" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="text-white-50 me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-white-50 me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="text-white-50" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+
+                        <!-- Navigation Cards -->
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-4 footer-animate">
+                                <div class="footer-card glass-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <h6 class="card-title">Chi Siamo</h6>
+                                    <p class="card-text">Scopri la nostra missione e il nostro team</p>
+                                    <a href="pages/about.html" class="card-link">Scopri di più <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 footer-animate">
+                                <div class="footer-card glass-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <h6 class="card-title">Contattaci</h6>
+                                    <p class="card-text">Scrivici per domande o collaborazioni</p>
+                                    <a href="pages/contact.html" class="card-link">Contattaci <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 footer-animate">
+                                <div class="footer-card glass-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h6 class="card-title">Disclaimer</h6>
+                                    <p class="card-text">Informazioni importanti e legali</p>
+                                    <a href="pages/disclaimer.html" class="card-link">Leggi <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Section -->
+                        <div class="social-section text-center mb-5 footer-animate">
+                            <h5 class="social-title mb-4">Seguici sui Social</h5>
+                            <div class="social-icons-wrapper">
+                                <a href="https://t.me/ilmigliorprezzo" target="_blank" rel="noopener" class="social-icon telegram-icon" aria-label="Telegram">
+                                    <i class="fab fa-telegram"></i>
+                                    <span class="icon-tooltip">Unisciti al canale</span>
+                                </a>
+                                <a href="#" class="social-icon facebook-icon" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span class="icon-tooltip">Facebook</span>
+                                </a>
+                                <a href="#" class="social-icon instagram-icon" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span class="icon-tooltip">Instagram</span>
+                                </a>
+                                <a href="#" class="social-icon twitter-icon" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                    <span class="icon-tooltip">Twitter</span>
+                                </a>
+                                <a href="#" class="social-icon linkedin-icon" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span class="icon-tooltip">LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Amazon Disclaimer -->
+                        <div class="amazon-disclaimer-modern glass-card p-4 rounded-4 mb-4 footer-animate">
+                            <div class="d-flex align-items-center justify-content-center flex-wrap gap-3">
+                                <div class="amazon-icon-wrapper">
+                                    <i class="fab fa-amazon fa-2x"></i>
+                                </div>
+                                <div class="disclaimer-text">
+                                    <p class="mb-1 disclaimer-title">Amazon Associates Disclaimer</p>
+                                    <p class="mb-0 disclaimer-content">Smart Choices Guide partecipa al Programma Affiliati Amazon EU. Quando acquisti tramite i nostri link, paghi lo stesso prezzo senza costi aggiuntivi, e noi riceviamo una piccola commissione che ci aiuta a mantenere il sito operativo. Le nostre recensioni sono indipendenti e basate sulla qualità dei prodotti.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Copyright -->
+                        <div class="copyright-section text-center footer-animate">
+                            <p class="copyright-text mb-0">
+                                © 2026 Smart Choices Guide. Tutti i diritti riservati.
+                            </p>
                         </div>
                     </div>
-                    <div class="amazon-disclaimer-v4 p-4 rounded-3 mb-3">
-                        <p class="mb-2 text-warning fw-bold text-center">
-                            <i class="fab fa-amazon me-2 fa-lg" aria-hidden="true"></i>Disclaimer Amazon Associates
-                        </p>
-                        <p class="text-white mb-0 small text-center">
-                            In qualità di Affiliato Amazon ricevo un guadagno dagli acquisti idonei.
-                        </p>
-                    </div>
-                    <p class="text-white-50 small text-center mb-0">© 2026 Smart Choices Guide</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <style>
-        .footer-v4 {
-            background: rgba(10, 10, 10, 0.95);
-            -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        /* Modern Footer with Wow Effects */
+        .footer-modern {
+            position: relative;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .amazon-disclaimer-v4 {
-            background: linear-gradient(135deg, rgba(255, 193, 7, 0.25) 0%, rgba(255, 152, 0, 0.25) 100%);
-            border: 2px solid rgba(255, 193, 7, 0.5);
-            box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+
+        /* Animated Gradient Background */
+        .footer-gradient-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(59, 130, 246, 0.1), 
+                rgba(16, 185, 129, 0.1), 
+                rgba(139, 92, 246, 0.1), 
+                rgba(236, 72, 153, 0.1));
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            z-index: 0;
         }
-        .footer-v4 a:hover {
-            color: #fbbf24 !important;
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Particles Effect */
+        .footer-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.3), transparent),
+                radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.2), transparent),
+                radial-gradient(1px 1px at 160px 120px, rgba(255,255,255,0.3), transparent);
+            background-size: 200px 200px;
+            animation: particlesMove 20s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes particlesMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-200px); }
+        }
+
+        /* Glass Card Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .glass-card:hover::before {
+            left: 100%;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                        0 0 30px rgba(59, 130, 246, 0.2);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Footer Cards */
+        .footer-card {
+            text-align: center;
+            height: 100%;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .footer-card:hover .card-icon {
+            transform: rotate(360deg) scale(1.1);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.4), rgba(139, 92, 246, 0.4));
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+
+        .card-title {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .card-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .card-link {
+            color: #60a5fa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-link:hover {
+            color: #fff;
+            transform: translateX(5px);
+        }
+
+        /* Logo Section */
+        .footer-title {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+
+        .footer-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* Social Icons */
+        .social-title {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .social-icons-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: all 0.4s ease;
+        }
+
+        .social-icon:hover::before {
+            width: 200%;
+            height: 200%;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-8px) scale(1.1);
+        }
+
+        .telegram-icon {
+            background: linear-gradient(135deg, #0088cc, #00a8e8);
+            box-shadow: 0 5px 20px rgba(0, 136, 204, 0.4);
+        }
+
+        .telegram-icon:hover {
+            box-shadow: 0 10px 30px rgba(0, 136, 204, 0.6), 0 0 40px rgba(0, 136, 204, 0.4);
+        }
+
+        .facebook-icon {
+            background: linear-gradient(135deg, #1877f2, #42b72a);
+            box-shadow: 0 5px 20px rgba(24, 119, 242, 0.4);
+        }
+
+        .facebook-icon:hover {
+            box-shadow: 0 10px 30px rgba(24, 119, 242, 0.6), 0 0 40px rgba(24, 119, 242, 0.4);
+        }
+
+        .instagram-icon {
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+            box-shadow: 0 5px 20px rgba(131, 58, 180, 0.4);
+        }
+
+        .instagram-icon:hover {
+            box-shadow: 0 10px 30px rgba(131, 58, 180, 0.6), 0 0 40px rgba(131, 58, 180, 0.4);
+        }
+
+        .twitter-icon {
+            background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+            box-shadow: 0 5px 20px rgba(29, 161, 242, 0.4);
+        }
+
+        .twitter-icon:hover {
+            box-shadow: 0 10px 30px rgba(29, 161, 242, 0.6), 0 0 40px rgba(29, 161, 242, 0.4);
+        }
+
+        .linkedin-icon {
+            background: linear-gradient(135deg, #0077b5, #00a0dc);
+            box-shadow: 0 5px 20px rgba(0, 119, 181, 0.4);
+        }
+
+        .linkedin-icon:hover {
+            box-shadow: 0 10px 30px rgba(0, 119, 181, 0.6), 0 0 40px rgba(0, 119, 181, 0.4);
+        }
+
+        .icon-tooltip {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover .icon-tooltip {
+            opacity: 1;
+            visibility: visible;
+            bottom: -35px;
+        }
+
+        /* Amazon Disclaimer Modern */
+        .amazon-disclaimer-modern {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.15));
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+        }
+
+        .amazon-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.3), rgba(255, 152, 0, 0.3));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffc107;
+            animation: amazonPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes amazonPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255, 193, 7, 0); }
+        }
+
+        .disclaimer-title {
+            color: #ffc107;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .disclaimer-content {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        /* Copyright */
+        .copyright-text {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        /* Scroll Reveal Animations */
+        .footer-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .footer-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger animation delays */
+        .footer-animate:nth-child(1) { transition-delay: 0.1s; }
+        .footer-animate:nth-child(2) { transition-delay: 0.2s; }
+        .footer-animate:nth-child(3) { transition-delay: 0.3s; }
+        .footer-animate:nth-child(4) { transition-delay: 0.4s; }
+        .footer-animate:nth-child(5) { transition-delay: 0.5s; }
+        .footer-animate:nth-child(6) { transition-delay: 0.6s; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .footer-title {
+                font-size: 1.5rem;
+            }
+            
+            .social-icons-wrapper {
+                gap: 15px;
+            }
+            
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            .footer-card {
+                margin-bottom: 20px;
+            }
         }
     </style>
 
@@ -828,6 +1263,29 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    
+    <!-- Footer Scroll Reveal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll reveal animation for footer elements
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            const footerElements = document.querySelectorAll('.footer-animate');
+            footerElements.forEach(el => observer.observe(el));
+        });
+    </script>
     
     <!-- Custom JS -->
     <script src="assets/js/script.js" defer></script>
