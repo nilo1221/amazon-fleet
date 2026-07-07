@@ -47,7 +47,7 @@ async def auto_scan_website():
     
     for html_file in html_files:
         try:
-            products = extract_products_from_html(html_file)
+            products = extract_all_affiliate_links(html_file)  # Usa funzione con deduplicazione
             
             for product in products:
                 if add_product(product['asin'], product['nome'], product['link']):

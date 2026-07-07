@@ -11,6 +11,7 @@ def extract_asin_from_url(url):
 def extract_all_affiliate_links(html_file):
     """Estrae TUTTI i link affiliati da un file HTML."""
     products = []
+    seen_asins = set()  # Per evitare duplicati
     
     with open(html_file, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -25,6 +26,11 @@ def extract_all_affiliate_links(html_file):
         
         # Se non c'è ASIN, usa l'URL come identificatore
         identifier = asin if asin else link[:100]
+        
+        # Salta se già visto (deduplicazione)
+        if identifier in seen_asins:
+            continue
+        seen_asins.add(identifier)
         
         # Cerca nome vicino al link (h3, h4, h5, title, alt)
         nome = None
