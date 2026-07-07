@@ -569,7 +569,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('images/logo.png') center center no-repeat;
+    background: url('../assets/images/hero-background.png') center center no-repeat;
     background-size: cover;
     position: relative;
     overflow: hidden;
