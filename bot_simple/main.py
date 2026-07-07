@@ -1,6 +1,6 @@
 import time
 import asyncio
-from telegram import Bot
+from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.error import TelegramError
 from config import (TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID, MIN_POST_INTERVAL_HOURS, 
                     WEBSITE_SCAN_INTERVAL_HOURS, LOG_FILE, TELEGRAM_PRICE_THRESHOLD,
@@ -87,11 +87,9 @@ async def check_product(product, bot):
                     f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
                     f"💰 **Prezzo:** *€{price:.2f}*\n"
                     f"⚡ **Sconto:** Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!\n\n"
-                    f"🛒 **Acquista ora su Amazon:**\n"
-                    f"{product['link']}\n\n"
                     f"━━━━━━━━━━━━━━━━━━━━━━\n"
                     f"🌐 **Vuoi vedere più prodotti?**\n"
-                    f"Visita il nostro sito: https://smart-choices-guide.vercel.app/\n\n"
+                    f"👉 smart-choices-guide.vercel.app\n\n"
                     f"✅ Spedizione Prime Gratuita\n"
                     f"✅ Reso gratuito 30 giorni\n"
                     f"✅ Pagamenti sicuri\n"
@@ -99,19 +97,26 @@ async def check_product(product, bot):
                     f"📢 *Smart Choices Guide partecipa al Programma Affiliati Amazon EU. Quando acquisti tramite i nostri link, paghi lo stesso prezzo senza costi aggiuntivi, e noi riceviamo una piccola commissione che ci aiuta a mantenere il sito operativo.*"
                 )
                 
+                # Crea pulsante inline per Amazon
+                keyboard = InlineKeyboardMarkup([
+                    [InlineKeyboardButton("🛒 Vedi su Amazon", url=product['link'])]
+                ])
+                
                 try:
                     if img_url:
                         await bot.send_photo(
                             chat_id=TELEGRAM_CHANNEL_ID,
                             photo=img_url,
                             caption=msg,
-                            parse_mode='Markdown'
+                            parse_mode='Markdown',
+                            reply_markup=keyboard
                         )
                     else:
                         await bot.send_message(
                             chat_id=TELEGRAM_CHANNEL_ID,
                             text=msg,
-                            parse_mode='Markdown'
+                            parse_mode='Markdown',
+                            reply_markup=keyboard
                         )
                     
                     update_last_posted(product['id'])
@@ -128,27 +133,33 @@ async def check_product(product, bot):
                             f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
                             f"💰 Prezzo: €{price:.2f}\n"
                             f"⚡ Sconto: Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!\n\n"
-                            f"🛒 Acquista ora su Amazon:\n"
-                            f"{product['link']}\n\n"
                             f"━━━━━━━━━━━━━━━━━━━━━━\n"
                             f"🌐 Vuoi vedere più prodotti?\n"
-                            f"Visita il nostro sito: https://smart-choices-guide.vercel.app/\n\n"
+                            f"👉 smart-choices-guide.vercel.app\n\n"
                             f"✅ Spedizione Prime Gratuita\n"
                             f"✅ Reso gratuito 30 giorni\n"
                             f"✅ Pagamenti sicuri\n"
                             f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
                             f"📢 Smart Choices Guide partecipa al Programma Affiliati Amazon EU. Quando acquisti tramite i nostri link, paghi lo stesso prezzo senza costi aggiuntivi, e noi riceviamo una piccola commissione che ci aiuta a mantenere il sito operativo."
                         )
+                        
+                        # Crea pulsante inline per Amazon (fallback)
+                        keyboard_plain = InlineKeyboardMarkup([
+                            [InlineKeyboardButton("🛒 Vedi su Amazon", url=product['link'])]
+                        ])
+                        
                         if img_url:
                             await bot.send_photo(
                                 chat_id=TELEGRAM_CHANNEL_ID,
                                 photo=img_url,
-                                caption=msg_plain
+                                caption=msg_plain,
+                                reply_markup=keyboard_plain
                             )
                         else:
                             await bot.send_message(
                                 chat_id=TELEGRAM_CHANNEL_ID,
-                                text=msg_plain
+                                text=msg_plain,
+                                reply_markup=keyboard_plain
                             )
                         update_last_posted(product['id'])
                         logger.info(f"     📤 Inviato su Telegram (fallback)!")
