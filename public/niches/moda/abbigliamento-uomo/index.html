@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abbigliamento Uomo - Smart Choices Guide</title>
+    <meta name="description" content="Abbigliamento uomo: camicie, pantaloni, giacche, casual e formale. Prodotti selezionati per stile e qualità.">
+    
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PLE2THHMT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7PLE2THHMT');
+    </script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- AI Assistant CSS -->
+    
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --secondary-color: #f8f9fa;
+            --accent-color: #42A5F5;
+            --success-color: #32CD32;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            padding: 20px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #2196F3 0%, #42A5F5 50%, #64B5F6 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(33, 150, 243, 0.3);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #2196F3 0%, #42A5F5 100%);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #42A5F5 0%, #64B5F6 100%);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(66, 165, 245, 0.4);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            color: #1565C0;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
+        }
+        
+        .no-products {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .no-products i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../raccomandazioni/index.html">Raccomandazioni</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">
+                        <i class="fas fa-male me-3"></i>Abbigliamento Uomo
+                    </h1>
+                    <p class="lead mb-4">
+                        Camicie, pantaloni, giacche, casual e formale. Prodotti selezionati per stile, qualità e comfort.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorie Navigation Section -->
+    <section class="container mt-4">
+        <div class="text-center mb-4">
+            <h3 class="fw-bold mb-3">Cosa stai cercando?</h3>
+            <p class="text-muted">Naviga tra le categorie per trovare l'abbigliamento perfetto per il tuo stile</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#camicie" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-tshirt fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Camicie</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#pantaloni" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-socks fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold">Pantaloni</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#giacche" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-vest fa-2x text-info mb-2"></i>
+                        <h6 class="fw-bold">Giacche</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#casual" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-user-tie fa-2x text-warning mb-2"></i>
+                        <h6 class="fw-bold">Casual</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .category-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .hover-effect:hover {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+    </style>
+
+    <!-- Products Section -->
+    <section class="container mb-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="fw-bold mb-4 text-center">Prodotti Selezionati</h2>
+                
+                <!-- Casual -->
+                <h3 class="fw-bold mb-3 text-center" id="casual"><i class="fas fa-user-tie me-2 text-warning"></i>Casual</h3>
+                
+                <!-- Product 1: JACK & JONES T-shirt -->
+                <div class="row mb-4">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="product-card card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-tshirt fa-4x text-primary"></i>
+                                </div>
+                                <h3 class="card-title fw-bold">JACK & JONES JJEORGANIC BASIC TEE SS O-NECK NOOS</h3>
+                                <span class="category-badge mb-3 d-inline-block">T-shirt - Casual</span>
+                                <p class="card-text text-muted">Maglietta da uomo della marca danese Jack & Jones. Puro cotone biologico con colletto a costine sottili. Vestibilità classica ideale per l'uso quotidiano e informale.</p>
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Marchio:</strong> JACK & JONES</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Materiale:</strong> 100% cotone biologico</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Vestibilità:</strong> Classic</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Collo:</strong> Girocollo con costine</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Maniche:</strong> Corte</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Stagione:</strong> Primavera/Estate</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success">Prodotto disponibile</span></div>
+                                    <a href="https://www.amazon.it/dp/B07S2XJ9CM?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=36c366fbf6474ec35cf4e91dd88a505e&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Levi's T-shirt -->
+                <div class="row mb-4">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="product-card card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-tshirt fa-4x text-primary"></i>
+                                </div>
+                                <h3 class="card-title fw-bold">Levi's SS Original Housemark Tee</h3>
+                                <span class="category-badge mb-3 d-inline-block">T-shirt - Casual</span>
+                                <p class="card-text text-muted">T-shirt Levi's in cotone con patch iconico. Vestibilità regular e collo girocollo. Il capo essenziale per ogni guardaroba casual, perfetto per l'uso quotidiano.</p>
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Marchio:</strong> Levi's</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Materiale:</strong> 100% cotone</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Vestibilità:</strong> Regular</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Collo:</strong> Girocollo</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Maniche:</strong> Corte</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Dettaglio:</strong> Patch Levi's sul petto</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success">Prodotto disponibile</span></div>
+                                    <a href="https://www.amazon.it/Levis-Original-T-Shirt-Cotton-Patch/dp/B07K7465K3?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=388f5a4d68346c4d16112e7f92b988f5&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: JACK & JONES Polo -->
+                <div class="row mb-4">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="product-card card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-user-tie fa-4x text-warning"></i>
+                                </div>
+                                <h3 class="card-title fw-bold">JACK & JONES Jjepaulos Polo Ss Noos</h3>
+                                <span class="category-badge mb-3 d-inline-block">Polo - Casual</span>
+                                <p class="card-text text-muted">Polo da uomo JACK & JONES in 100% cotone piqué. Colletto classico con abbottonatura corta, maniche corte e vestibilità slim. Logo ricamato sul petto a sinistra.</p>
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Marchio:</strong> JACK & JONES</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Materiale:</strong> 100% cotone piqué</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Vestibilità:</strong> Slim</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Colletto:</strong> Polo con bottoni</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Maniche:</strong> Corte</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Dettaglio:</strong> Logo ricamato</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success">Prodotto disponibile</span></div>
+                                    <a href="https://www.amazon.it/dp/B08VNTNBRZ?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=10cd74a2b4cc954615aa16d9029a2475&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Casual Products Grid -->
+                <div class="row g-4 mt-4">
+                    <!-- Product 4: Completo Casual -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-user-tie fa-3x text-warning mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">Completo Casual da Uomo</h5>
+                                <p class="text-muted small text-center mb-3">Due pezzi: camicia a maniche lunghe e pantaloni. Tessuto di qualità, vestibilità sartoriale. Perfetto per occasioni casual e semi-formali.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-warning mb-2">Completo</span>
+                                    <a href="https://www.amazon.it/dp/B0FP1RPLZD?th=1&linkCode=ll2&tag=l0c39-21&linkId=3fa1a4cacaccf3555e5f992d0718e49f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5: T-shirt Basic -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-tshirt fa-3x text-warning mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">T-shirt Basic Uomo</h5>
+                                <p class="text-muted small text-center mb-3">T-shirt in cotone per look semplici e cool. Girocollo, maniche corte. Versatile per uso quotidiano.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-warning mb-2">Basic</span>
+                                    <a href="https://www.amazon.it/dp/B0FP1RPLZD?th=1&linkCode=ll2&tag=l0c39-21&linkId=3fa1a4cacaccf3555e5f992d0718e49f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6: Polo Club -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-user-tie fa-3x text-warning mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">Polo Club Men's Basic</h5>
+                                <p class="text-muted small text-center mb-3">T-shirt polo in cotone con logo ricamato. Girocollo a coste, maniche corte. Comfort classico.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-warning mb-2">Polo</span>
+                                    <a href="https://www.amazon.it/dp/B0D7PTZMFJ/?psc=1&linkCode=ll2&tag=l0c39-21&linkId=3fa1a4cacaccf3555e5f992d0718e49f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camicie Section -->
+                <h3 class="fw-bold mb-3 text-center" id="camicie"><i class="fas fa-user-tie me-2 text-warning"></i>Camicie</h3>
+                
+                <!-- Product 1: B&C Camicia Classica -->
+                <div class="row mb-4">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="product-card card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-user-tie fa-4x text-primary"></i>
+                                </div>
+                                <h3 class="card-title fw-bold">B&C - Camicia Classica Manica Corta - Uomo</h3>
+                                <span class="category-badge mb-3 d-inline-block">Camicia - Classica</span>
+                                <p class="card-text text-muted">Camicia classica da uomo manica corta, ideale per occasioni casual e business. Vestibilità comoda e tessuto di qualità.</p>
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Marchio:</strong> B&C</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Maniche:</strong> Corte</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Stile:</strong> Classico</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Vestibilità:</strong> Regolare</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Occasione:</strong> Casual e Business</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success">Prodotto disponibile</span></div>
+                                    <a href="https://www.amazon.it/Camicia-Classica-Manica-Corta-Uomo/dp/B00NFGVNVQ?tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pantaloni Section -->
+                <h3 class="fw-bold mb-3 text-center" id="pantaloni"><i class="fas fa-user-tie me-2 text-warning"></i>Pantaloni</h3>
+                
+                <!-- Product 1: Navigare Pantalone -->
+                <div class="row mb-4">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="product-card card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-user-tie fa-4x text-primary"></i>
+                                </div>
+                                <h3 class="card-title fw-bold">Navigare Pantalone Uomo Cotone Elasticizzato Chino</h3>
+                                <span class="category-badge mb-3 d-inline-block">Pantalone - Chino</span>
+                                <p class="card-text text-muted">Pantalone uomo Navigare in cotone stretch smerigliato chino gabardina. Design moderno e confortevole, perfetto per lavoro e tempo libero.</p>
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Marchio:</strong> Navigare</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Materiale:</strong> Cotone elasticizzato</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Stile:</strong> Chino</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Finitura:</strong> Smerigliata</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Occasione:</strong> Lavoro e Casual</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success">Prodotto disponibile</span></div>
+                                    <a href="https://www.amazon.it/Navigare-Pantalone-Cotone-Elasticizzato-Art-NV55197/dp/B08LHFVLCF?tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giacche Section -->
+                <h3 class="fw-bold mb-3 text-center" id="giacche"><i class="fas fa-user-tie me-2 text-warning"></i>Giacche</h3>
+                
+                <!-- Product 1: Amazon Essentials Piumino -->
+                <div class="row mb-4">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="product-card card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-user-tie fa-4x text-primary"></i>
+                                </div>
+                                <h3 class="card-title fw-bold">Amazon Essentials Piumino Leggero con Cappuccio Impermeabile e Ripiegabile Uomo</h3>
+                                <span class="category-badge mb-3 d-inline-block">Giacca - Piumino</span>
+                                <p class="card-text text-muted">Piumino leggero da uomo con cappuccio, impermeabile e ripiegabile. Classic fit, nylon esterno e poliestere interno. Ideale per tutte le stagioni.</p>
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Marchio:</strong> Amazon Essentials</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Esterno:</strong> 100% Nylon</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Interno:</strong> 100% Poliestere</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Caratteristiche:</strong> Impermeabile, ripiegabile</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Vestibilità:</strong> Classic</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success">Prodotto disponibile</span></div>
+                                    <a href="https://www.amazon.it/dp/B08SS9KC24?tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Timberland Giacca -->
+                <div class="row mb-4">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="product-card card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-user-tie fa-4x text-primary"></i>
+                                </div>
+                                <h3 class="card-title fw-bold">Timberland - Giacca Uomo Leggera in Cotone</h3>
+                                <span class="category-badge mb-3 d-inline-block">Giacca - Leggera</span>
+                                <p class="card-text text-muted">Giacca uomo leggera in cotone, 98% cotone e 2% elastan. Design classico Timberland, perfetta per primavera e autunno.</p>
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Marchio:</strong> Timberland</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Materiale:</strong> 98% Cotone, 2% Elastan</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Chiusura:</strong> Cerniera</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Stagione:</strong> Primavera/Autunno</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Stile:</strong> Classico</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success">Prodotto disponibile</span></div>
+                                    <a href="https://www.amazon.it/Timberland-Giacca-Uomo-Leggera-Cotone/dp/B0GQTFGSK2?tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant -->
+
+    <!-- Footer -->
+    <footer class="footer-v4 py-4" role="contentinfo">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-4">
+                        <h5 class="fw-bold mb-2">Smart Choices Guide</h5>
+                        <div class="d-flex justify-content-center gap-4 mb-3">
+                            <a href="../../about.html" class="text-white-50 text-decoration-none small"><i class="fas fa-info-circle me-1" aria-hidden="true"></i>Chi Siamo</a>
+                            <a href="../../contact.html" class="text-white-50 text-decoration-none small"><i class="fas fa-envelope me-1" aria-hidden="true"></i>Email</a>
+                            <a href="../../disclaimer.html" class="text-white-50 text-decoration-none small"><i class="fas fa-exclamation-triangle me-1" aria-hidden="true"></i>Disclaimer</a>
+                        </div>
+                        <div class="social-bar-v4 mb-3">
+                            <a href="#" class="text-white-50 me-3" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-white-50 me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white-50 me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white-50" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="amazon-disclaimer-v4 p-4 rounded-3 mb-3">
+                        <p class="mb-2 text-warning fw-bold text-center">
+                            <i class="fab fa-amazon me-2 fa-lg" aria-hidden="true"></i>Disclaimer Amazon Associates
+                        </p>
+                        <p class="text-white mb-0 small text-center">
+                            In qualità di Affiliato Amazon ricevo un guadagno dagli acquisti idonei.
+                        </p>
+                    </div>
+                    <p class="text-white-50 small text-center mb-0">© 2026 Smart Choices Guide</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .footer-v4 {
+            background: rgba(10, 10, 10, 0.95);
+            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .amazon-disclaimer-v4 {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.25) 0%, rgba(255, 152, 0, 0.25) 100%);
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+        }
+        .footer-v4 a:hover {
+            color: #fbbf24 !important;
+        }
+    </style>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AI Assistant JS -->
+</body>
+</html>

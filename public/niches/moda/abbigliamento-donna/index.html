@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abbigliamento Donna - Smart Choices Guide</title>
+    <meta name="description" content="Abbigliamento donna: vestiti, bluse, pantaloni, accessori e moda. Prodotti selezionati per stile e qualità.">
+    
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PLE2THHMT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7PLE2THHMT');
+    </script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- AI Assistant CSS -->
+    
+    <style>
+        :root {
+            --primary-color: #E91E63;
+            --secondary-color: #f8f9fa;
+            --accent-color: #F48FB1;
+            --success-color: #32CD32;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            padding: 20px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #E91E63 0%, #F48FB1 50%, #F8BBD0 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(233, 30, 99, 0.3);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #E91E63 0%, #F48FB1 100%);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(233, 30, 99, 0.3);
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #F48FB1 0%, #F8BBD0 100%);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(244, 143, 177, 0.4);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%);
+            color: #C2185B;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
+        }
+        
+        .no-products {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .no-products i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../raccomandazioni/index.html">Raccomandazioni</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">
+                        <i class="fas fa-female me-3"></i>Abbigliamento Donna
+                    </h1>
+                    <p class="lead mb-4">
+                        Vestiti, bluse, pantaloni, accessori e moda. Prodotti selezionati per stile, eleganza e qualità.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorie Navigation Section -->
+    <section class="container mt-4">
+        <div class="text-center mb-4">
+            <h3 class="fw-bold mb-3">Cosa stai cercando?</h3>
+            <p class="text-muted">Naviga tra le categorie per trovare l'abbigliamento perfetto per il tuo stile</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#vestiti" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-female fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Vestiti</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#bluse" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-tshirt fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold">Bluse</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#camicie" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-tshirt fa-2x text-primary mb-2"></i>
+                        <h6 class="fw-bold">Camicie</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#pantaloni" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-socks fa-2x text-info mb-2"></i>
+                        <h6 class="fw-bold">Pantaloni</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#giacche" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-vest fa-2x text-secondary mb-2"></i>
+                        <h6 class="fw-bold">Giacche</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="#accessori" class="text-decoration-none">
+                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
+                        <i class="fas fa-gem fa-2x text-warning mb-2"></i>
+                        <h6 class="fw-bold">Accessori</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .category-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .hover-effect:hover {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+    </style>
+
+    <!-- Products Section -->
+    <section class="container mb-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="fw-bold mb-4 text-center">Prodotti Selezionati</h2>
+                
+                <!-- Bluse -->
+                <h3 class="fw-bold mb-3 text-center" id="bluse"><i class="fas fa-tshirt me-2 text-success"></i>Bluse</h3>
+                
+                <!-- Product 1: T-Shirt Social Crazy -->
+                <div class="row mb-4">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="product-card card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-tshirt fa-4x text-success"></i>
+                                </div>
+                                <h3 class="card-title fw-bold">T-Shirt Donna Cotone Basic Super vestibilità Top qualità - B. Chimica</h3>
+                                <span class="category-badge mb-3 d-inline-block">T-shirt - Bluse</span>
+                                <p class="card-text text-muted">T-shirt donna in cotone con super vestibilità. Design divertente "B. Chimica" Made in Italy. Perfetta per l'uso quotidiano e casual.</p>
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Marchio:</strong> Social Crazy</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Materiale:</strong> Cotone</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Vestibilità:</strong> Super vestibilità</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Stile:</strong> Divertente Humor</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Origine:</strong> Made in Italy</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Maniche:</strong> Corte</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success">Prodotto disponibile</span></div>
+                                    <a href="https://www.amazon.it/T-Shirt-Donna-Cotone-vestibilit%C3%A0-qualit%C3%A0/dp/B08W1STC34?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=5bd8b8f9a385002f109b15312079f5e0&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Golden Lady Canottiera -->
+                <div class="row mb-4">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="product-card card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-tshirt fa-4x text-success"></i>
+                                </div>
+                                <h3 class="card-title fw-bold">Golden Lady - Maglietta Manici Cotone Biologico</h3>
+                                <span class="category-badge mb-3 d-inline-block">Canottiera - Bluse</span>
+                                <p class="card-text text-muted">Canottiera Golden Lady in cotone biologico con manici. Tessuto selezionato per comfort e qualità. Certificata OEKO-TEX STANDARD 100.</p>
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3">Caratteristiche Principali:</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Marchio:</strong> Golden Lady</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Materiale:</strong> Cotone biologico</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Stile:</strong> Manici</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Certificazione:</strong> OEKO-TEX STANDARD 100</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Sostenibilità:</strong> Climate Pledge Friendly</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i><strong>Comfort:</strong> Tessuto selezionato</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <div><i class="fas fa-check-circle text-success me-2"></i><span class="text-success">Prodotto disponibile</span></div>
+                                    <a href="https://www.amazon.it/Golden-Lady-T-shirt-Manici-organico/dp/B09V1FLBJ6?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=0e7873e05017a8b307ae95dffded7de4&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon"><i class="fab fa-amazon me-2"></i>Vedi su Amazon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Bluse Products Grid -->
+                <div class="row g-4">
+                    <!-- Product 3: XIANO Camicia -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-tshirt fa-3x text-success mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">XIANO Camicia Donna</h5>
+                                <p class="text-muted small text-center mb-3">Camicetta elegante scollo a V con bottoni. In cotone e poliammide, morbida e traspirante. Per ogni occasione.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-success mb-2">Elegante</span>
+                                    <a href="https://www.amazon.it/XIANO-Camicetta-Elegante-Magliette-Cardigan/dp/B0C9YC3LZ3?th=1&linkCode=ll2&tag=l0c39-21&linkId=3fa1a4cacaccf3555e5f992d0718e49f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vestiti -->
+                <h3 class="fw-bold mb-3 text-center mt-5" id="vestiti"><i class="fas fa-female me-2 text-primary"></i>Vestiti</h3>
+                
+                <div class="row g-4">
+                    <!-- Product 1: Minetom Vestito Elegante -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-female fa-3x text-primary mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">Minetom Vestito Elegante</h5>
+                                <p class="text-muted small text-center mb-3">Vestito elegante donna blazer dress corto bicolore. Maniche lunghe, paillettes oro. Perfetto per serate speciali.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-primary mb-2">Elegante</span>
+                                    <a href="https://www.amazon.it/s?k=minetom+vestito+elegante+donna&linkCode=ll2&tag=l0c39-21&linkId=3fa1a4cacaccf3555e5f992d0718e49f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: Amazon Essentials Abito -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-female fa-3x text-primary mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">Amazon Essentials Abito</h5>
+                                <p class="text-muted small text-center mb-3">Abito comodo in cotone e spandex. Disponibile in molti colori floreali. Perfetto per uso quotidiano.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-primary mb-2">Casual</span>
+                                    <a href="https://www.amazon.it/s?k=amazon+essentials+vestito+donna&linkCode=ll2&tag=l0c39-21&linkId=3fa1a4cacaccf3555e5f992d0718e49f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: Abito Estivo -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-female fa-3x text-primary mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">Abito Estivo Donna</h5>
+                                <p class="text-muted small text-center mb-3">Abito estivo a trapezio con scollo a V. Spalline sottili regolabili. Fresco e casual per l'estate.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-primary mb-2">Estivo</span>
+                                    <a href="https://www.amazon.it/s?k=vestito+estivo+donna+economico&linkCode=ll2&tag=l0c39-21&linkId=3fa1a4cacaccf3555e5f992d0718e49f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camicie -->
+                <h3 class="fw-bold mb-3 text-center mt-5" id="camicie"><i class="fas fa-tshirt me-2 text-primary"></i>Camicie</h3>
+                
+                <div class="row g-4">
+                    <!-- Product 1: QKEPCY Camicia Chiffon -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-tshirt fa-3x text-primary mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">QKEPCY Camicia Chiffon</h5>
+                                <p class="text-muted small text-center mb-3">Camicetta in chiffon a maniche corte con scollo a V. Tessuto leggero e traspirante. Perfetta per lavoro e tempo libero.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-primary mb-2">Chiffon</span>
+                                    <a href="https://www.amazon.it/QKEPCY-Camicia-Maglietta-Camicetta-Elegante/dp/B0C6QJ85TP?th=1&linkCode=ll2&tag=l0c39-21&linkId=3fa1a4cacaccf3555e5f992d0718e49f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: XIANO Camicia Donna -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-tshirt fa-3x text-primary mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">XIANO Camicia Donna</h5>
+                                <p class="text-muted small text-center mb-3">Camicetta elegante scollo a V con bottoni. In cotone e poliammide, morbida e traspirante. Per ogni occasione.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-primary mb-2">Elegante</span>
+                                    <a href="https://www.amazon.it/XIANO-Camicetta-Elegante-Magliette-Cardigan/dp/B0C9YC3LZ3?th=1&linkCode=ll2&tag=l0c39-21&linkId=3fa1a4cacaccf3555e5f992d0718e49f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pantaloni -->
+                <h3 class="fw-bold mb-3 text-center mt-5" id="pantaloni"><i class="fas fa-socks me-2 text-info"></i>Pantaloni</h3>
+                
+                <div class="row g-4">
+                    <!-- Product 1: SINOPHANT Leggings -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-socks fa-3x text-info mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">SINOPHANT Leggins Vita Alta</h5>
+                                <p class="text-muted small text-center mb-3">Leggings vita alta con controllo della pancia. Tessuto opaco, elastico e morbido. Certificato OEKO-TEX STANDARD 100.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-info mb-2">Leggings</span>
+                                    <a href="https://www.amazon.it/SINOPHANT-Leggings-Super-Morbidi-opachi/dp/B07Q33Z5X1?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=a915de83f06e3865905a8d73cc722803&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giacche -->
+                <h3 class="fw-bold mb-3 text-center mt-5" id="giacche"><i class="fas fa-vest fa-2x text-secondary me-2"></i>Giacche</h3>
+                
+                <div class="row g-4">
+                    <!-- Product 1: Generisch Gilet -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-vest fa-3x text-secondary mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">Generisch Gilet Trapuntato</h5>
+                                <p class="text-muted small text-center mb-3">Gilet trapuntato leggero con motivo a onde. Senza maniche con bottoni e tasche. Pratico scaldacollo per mezze stagioni.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-secondary mb-2">Gilet</span>
+                                    <a href="https://www.amazon.it/Generisch-trapuntato-leggero-scaldacollo-stagioni/dp/B0FT1WHVNR?th=1&linkCode=ll2&tag=l0c39-21&linkId=3fa1a4cacaccf3555e5f992d0718e49f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessori -->
+                <h3 class="fw-bold mb-3 text-center mt-5" id="accessori"><i class="fas fa-gem me-2 text-warning"></i>Accessori</h3>
+                
+                <div class="row g-4">
+                    <!-- Product 1: CORHAD Catena Borsa -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-gem fa-3x text-warning mb-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">CORHAD Catena Decorativa Borsa</h5>
+                                <p class="text-muted small text-center mb-3">Catena decorativa per borsa in acrilico durevole. Estensione per tracolla elegante e brillante. Accessorio leggero.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-warning mb-2">Catena</span>
+                                    <a href="https://www.amazon.it/CORHAD-Decorativa-Acrilico-Durevole-Accessorio/dp/B0GPLL4DH8?linkCode=ll2&tag=l0c39-21&linkId=3fa1a4cacaccf3555e5f992d0718e49f&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon d-block">
+                                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant -->
+
+    <!-- Footer -->
+    <footer class="footer-v4 py-4" role="contentinfo">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-4">
+                        <h5 class="fw-bold mb-2">Smart Choices Guide</h5>
+                        <div class="d-flex justify-content-center gap-4 mb-3">
+                            <a href="../../about.html" class="text-white-50 text-decoration-none small"><i class="fas fa-info-circle me-1" aria-hidden="true"></i>Chi Siamo</a>
+                            <a href="../../contact.html" class="text-white-50 text-decoration-none small"><i class="fas fa-envelope me-1" aria-hidden="true"></i>Email</a>
+                            <a href="../../disclaimer.html" class="text-white-50 text-decoration-none small"><i class="fas fa-exclamation-triangle me-1" aria-hidden="true"></i>Disclaimer</a>
+                        </div>
+                        <div class="social-bar-v4 mb-3">
+                            <a href="#" class="text-white-50 me-3" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-white-50 me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white-50 me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white-50" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="amazon-disclaimer-v4 p-4 rounded-3 mb-3">
+                        <p class="mb-2 text-warning fw-bold text-center">
+                            <i class="fab fa-amazon me-2 fa-lg" aria-hidden="true"></i>Disclaimer Amazon Associates
+                        </p>
+                        <p class="text-white mb-0 small text-center">
+                            In qualità di Affiliato Amazon ricevo un guadagno dagli acquisti idonei.
+                        </p>
+                    </div>
+                    <p class="text-white-50 small text-center mb-0">© 2026 Smart Choices Guide</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .footer-v4 {
+            background: rgba(10, 10, 10, 0.95);
+            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .amazon-disclaimer-v4 {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.25) 0%, rgba(255, 152, 0, 0.25) 100%);
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+        }
+        .footer-v4 a:hover {
+            color: #fbbf24 !important;
+        }
+    </style>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AI Assistant JS -->
+</body>
+</html>
