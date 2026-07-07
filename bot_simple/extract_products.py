@@ -1,7 +1,6 @@
 import os
 import re
 from bs4 import BeautifulSoup
-from db import init_db, add_product
 
 def extract_asin_from_url(url):
     """Estrae ASIN da URL Amazon."""
@@ -103,44 +102,8 @@ def extract_products_from_html(html_file):
     
     return products
 
-def main():
-    """Funzione principale - estrae TUTTI i link affiliati."""
-    init_db()
-    
-    # Percorso base del sito
-    base_path = '/home/lollo/amazon/public/niches'
-    
-    # Trova tutti i file HTML nelle nicchie
-    html_files = []
-    for root, dirs, files in os.walk(base_path):
-        for file in files:
-            if file == 'index.html':
-                html_files.append(os.path.join(root, file))
-    
-    print(f"🔍 Trovati {len(html_files)} file HTML nelle nicchie")
-    
-    total_products = 0
-    added_products = 0
-    duplicate_products = 0
-    
-    for html_file in html_files:
-        print(f"\n📁 Elaborazione: {html_file}")
-        products = extract_all_affiliate_links(html_file)
-        print(f"   📦 Trovati {len(products)} link affiliati")
-        
-        for product in products:
-            total_products += 1
-            if add_product(product['asin'], product['nome'], product['link']):
-                added_products += 1
-            else:
-                duplicate_products += 1
-    
-    print(f"\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    print(f"📊 RIEPILOGO:")
-    print(f"   Totale link affiliati trovati: {total_products}")
-    print(f"   ✅ Prodotti aggiunti: {added_products}")
-    print(f"   ⚠️ Prodotti duplicati: {duplicate_products}")
-    print(f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-
 if __name__ == "__main__":
-    main()
+    # Legacy main function removed - no longer uses old database
+    print("⚠️ Questo file è solo per l'estrazione di link dal sito web.")
+    print("⚠️ Il database vecchio è stato rimosso.")
+    print("⚠️ Usa main.py per il bot Telegram.")
