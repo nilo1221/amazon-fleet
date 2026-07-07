@@ -78,23 +78,22 @@ async def send_product_to_telegram(product, bot):
     
     logger.info(f"✅ SOTTO SOGLIA TELEGRAM (€{TELEGRAM_PRICE_THRESHOLD})!")
     
-    # Formatta caption
-    safe_nome = escape_markdown(product['nome'])
-    nome_breve = safe_nome[:60] + "..." if len(safe_nome) > 60 else safe_nome
+    # Formatta caption (senza Markdown per evitare errori di parsing)
+    nome_breve = product['nome'][:60] + "..." if len(product['nome']) > 60 else product['nome']
     
     caption = (
-        f"🔥 **SUPER OFFERTA DEL GIORNO**\n\n"
+        f"🔥 SUPER OFFERTA DEL GIORNO\n\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"📦 *{nome_breve}*\n"
+        f"📦 {nome_breve}\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"💰 **Prezzo:** *€{price:.2f}*\n"
-        f"⚡ **Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!*\n\n"
+        f"💰 Prezzo: €{price:.2f}\n"
+        f"⚡ Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!\n\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
         f"✅ Spedizione Prime Gratuita\n"
         f"✅ Reso gratuito 30 giorni\n"
         f"✅ Pagamenti sicuri\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"📢 *Smart Choices Guide partecipa al Programma Affiliati Amazon EU.*"
+        f"📢 Smart Choices Guide partecipa al Programma Affiliati Amazon EU."
     )
     
     # Crea pulsanti inline
@@ -110,7 +109,6 @@ async def send_product_to_telegram(product, bot):
                 chat_id=TELEGRAM_CHANNEL_ID,
                 photo=img_url,
                 caption=caption,
-                parse_mode='Markdown',
                 reply_markup=keyboard
             )
             message_type = 'photo'
@@ -119,7 +117,6 @@ async def send_product_to_telegram(product, bot):
             await bot.send_message(
                 chat_id=TELEGRAM_CHANNEL_ID,
                 text=caption,
-                parse_mode='Markdown',
                 reply_markup=keyboard
             )
             message_type = 'text'

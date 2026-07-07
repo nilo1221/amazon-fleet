@@ -21,15 +21,21 @@ def extract_all_affiliate_links(html_file):
     
     for a_tag in all_links:
         link = a_tag.get('href', '')
+        
+        # Salta link di ricerca Amazon (senza ASIN)
+        if '/s?' in link or '/gp/search' in link:
+            continue
+        
         asin = extract_asin_from_url(link)
         
-        # Se non c'è ASIN, usa l'URL come identificatore
-        identifier = asin if asin else link[:100]
+        # Salta se non c'è ASIN (non è un prodotto specifico)
+        if not asin:
+            continue
         
         # Salta se già visto (deduplicazione)
-        if identifier in seen_asins:
+        if asin in seen_asins:
             continue
-        seen_asins.add(identifier)
+        seen_asins.add(asin)
         
         # Cerca nome vicino al link (h3, h4, h5, title, alt)
         nome = None
