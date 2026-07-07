@@ -1,14 +1,12 @@
 import time
 import asyncio
+import random
 from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.error import TelegramError
 from config import (TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID, MIN_POST_INTERVAL_HOURS, 
-                    WEBSITE_SCAN_INTERVAL_HOURS, LOG_FILE, TELEGRAM_PRICE_THRESHOLD,
-                    CHECK_INTERVAL_HIGH_PRIORITY, CHECK_INTERVAL_MEDIUM_PRIORITY, CHECK_INTERVAL_LOW_PRIORITY)
-from db import init_db, get_all_products, can_post, update_last_posted, add_product
-from scraper import get_product_data
-from extract_products import extract_products_from_html
-from telegram_links_db import add_sent_link, init_telegram_links_db
+                    WEBSITE_SCAN_INTERVAL_HOURS, LOG_FILE)
+from telegram_links_db import add_sent_link, init_telegram_links_db, was_sent_recently
+from extract_products import extract_all_affiliate_links
 import os
 import logging
 from datetime import datetime
@@ -31,8 +29,8 @@ def escape_markdown(text):
     escape_chars = r'_*[]()~`>#+-=|{}.!'
     return re.sub(f'([{re.escape(escape_chars)}])', r'\\\1', text)
 
-async def auto_scan_website():
-    """Scansiona automaticamente il sito web per nuovi prodotti."""
+def extract_products_from_website():
+    """Estrae tutti i prodotti dal sito web."""
     base_path = '/home/lollo/amazon/public/niches'
     
     # Trova tutti i file HTML nelle nicchie
@@ -42,188 +40,119 @@ async def auto_scan_website():
             if file == 'index.html':
                 html_files.append(os.path.join(root, file))
     
-    logger.info(f"🔍 Auto-scan: {len(html_files)} file HTML da scansionare")
-    
-    new_products_count = 0
+    all_products = []
     
     for html_file in html_files:
         try:
-            products = extract_all_affiliate_links(html_file)  # Usa funzione con deduplicazione
-            
-            for product in products:
-                if add_product(product['asin'], product['nome'], product['link']):
-                    new_products_count += 1
-                    logger.info(f"  ✅ Nuovo prodotto: {product['asin']}")
+            products = extract_all_affiliate_links(html_file)
+            all_products.extend(products)
         except Exception as e:
-            logger.error(f"  ❌ Errore scan {html_file}: {e}")
+            logger.error(f"❌ Errore estrazione {html_file}: {e}")
     
-    if new_products_count > 0:
-        logger.info(f"🎉 Auto-scan: {new_products_count} nuovi prodotti aggiunti!")
-    else:
-        logger.info(f"✅ Auto-scan: Nessun nuovo prodotto")
+    return all_products
 
-async def check_product(product, bot):
-    """Controlla un singolo prodotto e invia su Telegram se sotto soglia (0-40€)."""
-    logger.info(f"  ⏳ Controllo {product['asin']}...")
-    price, img_url = get_product_data(product['link'])
+async def send_product_to_telegram(product, bot):
+    """Invia un prodotto su Telegram."""
+    logger.info(f"⏳ Controllo {product['asin']}...")
     
-    if price:
-        logger.info(f"     💰 Prezzo: €{price:.2f}")
+    # Controlla se già inviato recentemente (24 ore)
+    if was_sent_recently(product['asin'], hours=24):
+        logger.info(f"⏸️ Già inviato nelle ultime 24 ore (skip)")
+        return
+    
+    # Formatta messaggio semplice
+    safe_nome = escape_markdown(product['nome'])
+    nome_breve = safe_nome[:60] + "..." if len(safe_nome) > 60 else safe_nome
+    
+    msg = (
+        f"🔥 **Nuovo Prodotto Scelto dalla Redazione**\n\n"
+        f"━━━━━━━━━━━━━━━━━━━━━━\n"
+        f"📦 *{nome_breve}*\n"
+        f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        f"🌐 **Vuoi vedere più prodotti?**\n"
+        f"👉 smart-choices-guide.vercel.app\n\n"
+        f"✅ Spedizione Prime Gratuita\n"
+        f"✅ Reso gratuito 30 giorni\n"
+        f"✅ Pagamenti sicuri\n"
+        f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        f"📢 *Smart Choices Guide partecipa al Programma Affiliati Amazon EU. Quando acquisti tramite i nostri link, paghi lo stesso prezzo senza costi aggiuntivi, e noi riceviamo una piccola commissione che ci aiuta a mantenere il sito operativo.*"
+    )
+    
+    # Crea pulsante inline per Amazon
+    keyboard = InlineKeyboardMarkup([
+        [InlineKeyboardButton("🛒 Vedi su Amazon", url=product['link'])]
+    ])
+    
+    try:
+        await bot.send_message(
+            chat_id=TELEGRAM_CHANNEL_ID,
+            text=msg,
+            parse_mode='Markdown',
+            reply_markup=keyboard
+        )
         
-        # Invia su Telegram solo se sotto soglia (0-40€)
-        if price <= TELEGRAM_PRICE_THRESHOLD:
-            logger.info(f"     ✅ SOTTO SOGLIA TELEGRAM (€{TELEGRAM_PRICE_THRESHOLD})!")
+        # Traccia il link inviato nel database
+        add_sent_link(
+            asin=product['asin'],
+            product_name=product['nome'],
+            affiliate_link=product['link'],
+            message_type='text',
+            channel_id=TELEGRAM_CHANNEL_ID,
+            price=None
+        )
+        
+        logger.info(f"📤 Inviato su Telegram!")
+    except TelegramError as e:
+        logger.error(f"❌ Errore invio: {e}")
+        # Fallback a testo semplice
+        try:
+            msg_plain = (
+                f"🔥 Nuovo Prodotto Scelto dalla Redazione\n\n"
+                f"━━━━━━━━━━━━━━━━━━━━━━\n"
+                f"📦 {nome_breve}\n"
+                f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                f"🌐 Vuoi vedere più prodotti?\n"
+                f"👉 smart-choices-guide.vercel.app\n\n"
+                f"✅ Spedizione Prime Gratuita\n"
+                f"✅ Reso gratuito 30 giorni\n"
+                f"✅ Pagamenti sicuri\n"
+                f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                f"📢 Smart Choices Guide partecipa al Programma Affiliati Amazon EU. Quando acquisti tramite i nostri link, paghi lo stesso prezzo senza costi aggiuntivi, e noi riceviamo una piccola commissione che ci aiuta a mantenere il sito operativo."
+            )
             
-            if can_post(product['id'], MIN_POST_INTERVAL_HOURS):
-                # Formatta messaggio migliorato con escape Markdown
-                safe_nome = escape_markdown(product['nome'])
-                
-                # Crea nome breve per il titolo (max 50 caratteri)
-                nome_breve = safe_nome[:50] + "..." if len(safe_nome) > 50 else safe_nome
-                
-                msg = (
-                    f"🔥 **SUPER OFFERTA DEL GIORNO**\n\n"
-                    f"━━━━━━━━━━━━━━━━━━━━━━\n"
-                    f"📦 *{nome_breve}*\n"
-                    f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-                    f"💰 **Prezzo:** *€{price:.2f}*\n"
-                    f"⚡ **Sconto:** Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!\n\n"
-                    f"━━━━━━━━━━━━━━━━━━━━━━\n"
-                    f"🌐 **Vuoi vedere più prodotti?**\n"
-                    f"👉 smart-choices-guide.vercel.app\n\n"
-                    f"✅ Spedizione Prime Gratuita\n"
-                    f"✅ Reso gratuito 30 giorni\n"
-                    f"✅ Pagamenti sicuri\n"
-                    f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-                    f"📢 *Smart Choices Guide partecipa al Programma Affiliati Amazon EU. Quando acquisti tramite i nostri link, paghi lo stesso prezzo senza costi aggiuntivi, e noi riceviamo una piccola commissione che ci aiuta a mantenere il sito operativo.*"
-                )
-                
-                # Crea pulsante inline per Amazon
-                keyboard = InlineKeyboardMarkup([
-                    [InlineKeyboardButton("🛒 Vedi su Amazon", url=product['link'])]
-                ])
-                
-                try:
-                    if img_url:
-                        await bot.send_photo(
-                            chat_id=TELEGRAM_CHANNEL_ID,
-                            photo=img_url,
-                            caption=msg,
-                            parse_mode='Markdown',
-                            reply_markup=keyboard
-                        )
-                    else:
-                        await bot.send_message(
-                            chat_id=TELEGRAM_CHANNEL_ID,
-                            text=msg,
-                            parse_mode='Markdown',
-                            reply_markup=keyboard
-                        )
-                    
-                    update_last_posted(product['id'])
-                    
-                    # Traccia il link inviato nel database
-                    message_type = 'photo' if img_url else 'text'
-                    add_sent_link(
-                        asin=product['asin'],
-                        product_name=product['nome'],
-                        affiliate_link=product['link'],
-                        message_type=message_type,
-                        channel_id=TELEGRAM_CHANNEL_ID,
-                        price=price
-                    )
-                    
-                    logger.info(f"     📤 Inviato su Telegram!")
-                except TelegramError as e:
-                    logger.error(f"     ❌ Errore invio: {e}")
-                    # Fallback a testo semplice se Markdown fallisce
-                    try:
-                        nome_breve_plain = product['nome'][:50] + "..." if len(product['nome']) > 50 else product['nome']
-                        msg_plain = (
-                            f"🔥 SUPER OFFERTA DEL GIORNO\n\n"
-                            f"━━━━━━━━━━━━━━━━━━━━━━\n"
-                            f"📦 {nome_breve_plain}\n"
-                            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-                            f"💰 Prezzo: €{price:.2f}\n"
-                            f"⚡ Sconto: Sotto la soglia di €{TELEGRAM_PRICE_THRESHOLD}!\n\n"
-                            f"━━━━━━━━━━━━━━━━━━━━━━\n"
-                            f"🌐 Vuoi vedere più prodotti?\n"
-                            f"👉 smart-choices-guide.vercel.app\n\n"
-                            f"✅ Spedizione Prime Gratuita\n"
-                            f"✅ Reso gratuito 30 giorni\n"
-                            f"✅ Pagamenti sicuri\n"
-                            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-                            f"📢 Smart Choices Guide partecipa al Programma Affiliati Amazon EU. Quando acquisti tramite i nostri link, paghi lo stesso prezzo senza costi aggiuntivi, e noi riceviamo una piccola commissione che ci aiuta a mantenere il sito operativo."
-                        )
-                        
-                        # Crea pulsante inline per Amazon (fallback)
-                        keyboard_plain = InlineKeyboardMarkup([
-                            [InlineKeyboardButton("🛒 Vedi su Amazon", url=product['link'])]
-                        ])
-                        
-                        if img_url:
-                            await bot.send_photo(
-                                chat_id=TELEGRAM_CHANNEL_ID,
-                                photo=img_url,
-                                caption=msg_plain,
-                                reply_markup=keyboard_plain
-                            )
-                        else:
-                            await bot.send_message(
-                                chat_id=TELEGRAM_CHANNEL_ID,
-                                text=msg_plain,
-                                reply_markup=keyboard_plain
-                            )
-                        
-                        update_last_posted(product['id'])
-                        
-                        # Traccia il link inviato nel database (fallback)
-                        message_type = 'photo' if img_url else 'text'
-                        add_sent_link(
-                            asin=product['asin'],
-                            product_name=product['nome'],
-                            affiliate_link=product['link'],
-                            message_type=message_type,
-                            channel_id=TELEGRAM_CHANNEL_ID,
-                            price=price
-                        )
-                        
-                        logger.info(f"     📤 Inviato su Telegram (fallback)!")
-                    except TelegramError as e2:
-                        logger.error(f"     ❌ Errore invio fallback: {e2}")
-            else:
-                logger.info(f"     ⏸️ Già postato di recente (skip)")
-        else:
-            logger.info(f"     ❌ Sopra soglia Telegram (€{TELEGRAM_PRICE_THRESHOLD}) - skip")
-    else:
-        logger.info(f"     ❌ Prezzo non trovato (skip)")
+            await bot.send_message(
+                chat_id=TELEGRAM_CHANNEL_ID,
+                text=msg_plain,
+                reply_markup=keyboard
+            )
+            
+            add_sent_link(
+                asin=product['asin'],
+                product_name=product['nome'],
+                affiliate_link=product['link'],
+                message_type='text',
+                channel_id=TELEGRAM_CHANNEL_ID,
+                price=None
+            )
+            
+            logger.info(f"📤 Inviato su Telegram (fallback)!")
+        except TelegramError as e2:
+            logger.error(f"❌ Errore invio fallback: {e2}")
 
 async def run_bot():
-    """Loop principale del bot con sistema di priorità."""
+    """Loop principale del bot - estrae link dal sito e invia su Telegram."""
     # Inizializza database
-    init_db()
     init_telegram_links_db()
     
     # Crea bot Telegram
     bot = Bot(token=TELEGRAM_BOT_TOKEN)
     
     logger.info("🚀 Bot avviato!")
-    logger.info(f"📊 Monitoraggio prodotti con soglia Telegram: €{TELEGRAM_PRICE_THRESHOLD}")
-    logger.info(f"⏰ Check alta priorità (0-20€): {CHECK_INTERVAL_HIGH_PRIORITY/60} minuti")
-    logger.info(f"⏰ Check media priorità (20-40€): {CHECK_INTERVAL_MEDIUM_PRIORITY/60} minuti")
-    logger.info(f"⏰ Check bassa priorità (>40€): {CHECK_INTERVAL_LOW_PRIORITY/60} minuti")
     logger.info(f"🛡️ Minimo tra post: {MIN_POST_INTERVAL_HOURS} ore")
-    logger.info(f"🔄 Auto-scan sito: ogni {WEBSITE_SCAN_INTERVAL_HOURS} ore")
+    logger.info(f"🔄 Estrazione prodotti dal sito: ogni {WEBSITE_SCAN_INTERVAL_HOURS} ore")
+    logger.info(f"� Controllo duplicati: 24 ore")
     
-    # Auto-scan iniziale
-    logger.info("\n🔄 Auto-scan iniziale del sito...")
-    await auto_scan_website()
-    
-    # Variabili per tracciare ultimi check per priorità
-    last_high_priority_check = 0
-    last_medium_priority_check = 0
-    last_low_priority_check = 0
-    last_website_scan = time.time()
+    last_website_scan = 0
     website_scan_interval_seconds = WEBSITE_SCAN_INTERVAL_HOURS * 3600
     
     while True:
@@ -232,74 +161,23 @@ async def run_bot():
             
             # Controlla se è ora di scansionare il sito
             if current_time - last_website_scan >= website_scan_interval_seconds:
-                logger.info(f"\n🔄 Auto-scan periodico del sito...")
-                await auto_scan_website()
+                logger.info(f"\n🔄 Estrazione prodotti dal sito...")
+                products = extract_products_from_website()
+                logger.info(f"� Trovati {len(products)} prodotti totali")
+                
+                # Seleziona prodotti casuali da inviare (max 5 per ciclo)
+                if products:
+                    products_to_send = random.sample(products, min(5, len(products)))
+                    logger.info(f"🎯 Selezionati {len(products_to_send)} prodotti da inviare")
+                    
+                    for product in products_to_send:
+                        await send_product_to_telegram(product, bot)
+                        time.sleep(random.uniform(30, 60))  # Delay casuale tra invii
+                
                 last_website_scan = current_time
             
-            products = get_all_products()
-            
-            # Dividi prodotti per priorità basata sul prezzo
-            high_priority = []  # 0-20€
-            medium_priority = []  # 20-40€
-            low_priority = []  # >40€
-            
-            for p in products:
-                price, _ = get_product_data(p['link'])
-                if price:
-                    if price <= 20:
-                        high_priority.append(p)
-                    elif price <= 40:
-                        medium_priority.append(p)
-                    else:
-                        low_priority.append(p)
-            
-            # Check alta priorità (0-20€) - ogni 15 minuti
-            if current_time - last_high_priority_check >= CHECK_INTERVAL_HIGH_PRIORITY:
-                if high_priority:
-                    logger.info(f"\n🔍 Check ALTA priorità (0-20€): {len(high_priority)} prodotti")
-                    tasks = []
-                    for p in high_priority:
-                        task = check_product(p, bot)
-                        tasks.append(task)
-                        if len(tasks) >= 5:
-                            await asyncio.gather(*tasks)
-                            tasks = []
-                    if tasks:
-                        await asyncio.gather(*tasks)
-                last_high_priority_check = current_time
-            
-            # Check media priorità (20-40€) - ogni 30 minuti
-            if current_time - last_medium_priority_check >= CHECK_INTERVAL_MEDIUM_PRIORITY:
-                if medium_priority:
-                    logger.info(f"\n🔍 Check MEDIA priorità (20-40€): {len(medium_priority)} prodotti")
-                    tasks = []
-                    for p in medium_priority:
-                        task = check_product(p, bot)
-                        tasks.append(task)
-                        if len(tasks) >= 5:
-                            await asyncio.gather(*tasks)
-                            tasks = []
-                    if tasks:
-                        await asyncio.gather(*tasks)
-                last_medium_priority_check = current_time
-            
-            # Check bassa priorità (>40€) - ogni 2 ore
-            if current_time - last_low_priority_check >= CHECK_INTERVAL_LOW_PRIORITY:
-                if low_priority:
-                    logger.info(f"\n🔍 Check BASSA priorità (>40€): {len(low_priority)} prodotti")
-                    tasks = []
-                    for p in low_priority:
-                        task = check_product(p, bot)
-                        tasks.append(task)
-                        if len(tasks) >= 5:
-                            await asyncio.gather(*tasks)
-                            tasks = []
-                    if tasks:
-                        await asyncio.gather(*tasks)
-                last_low_priority_check = current_time
-            
             # Attendi prima del prossimo ciclo
-            time.sleep(60)  # Controlla ogni minuto se è ora di fare check
+            time.sleep(60)  # Controlla ogni minuto se è ora di fare scan
             
         except KeyboardInterrupt:
             logger.info("\n👋 Arresto del bot...")
