@@ -41,6 +41,49 @@ function extractASIN(url) {
     return match ? match[1] : null;
 }
 
+// Estrae prezzo e immagine dalla pagina Amazon
+async function extractProductData(asin) {
+    try {
+        const url = `https://www.amazon.it/dp/${asin}`;
+        const response = await axios.get(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'Accept-Language': 'it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7'
+            }
+        });
+        
+        const $ = cheerio.load(response.data);
+        
+        // Estrae prezzo
+        let price = null;
+        const priceWhole = $('#priceblock_ourprice_row .a-price-whole').first().text().trim();
+        const priceFraction = $('#priceblock_ourprice_row .a-price-fraction').first().text().trim();
+        
+        if (priceWhole && priceFraction) {
+            price = parseFloat(`${priceWhole.replace(',', '.')}.${priceFraction}`);
+        } else {
+            // Alternativa per altri formati di prezzo
+            const priceText = $('.a-price .a-offscreen').first().text().trim();
+            const priceMatch = priceText.match(/[\d,]+\.?\d*/);
+            if (priceMatch) {
+                price = parseFloat(priceMatch[0].replace(',', '.'));
+            }
+        }
+        
+        // Estrae immagine principale
+        let image = null;
+        const imgTag = $('#landingImage').first();
+        if (imgTag.length > 0) {
+            image = imgTag.attr('data-old-hires') || imgTag.attr('src');
+        }
+        
+        return { price, image };
+    } catch (error) {
+        console.error(`Errore estrazione dati per ${asin}:`, error.message);
+        return { price: null, image: null };
+    }
+}
+
 // Estrae prodotti da un file HTML della nicchia
 function extractProductsFromHTML(html, nichePath) {
     const $ = cheerio.load(html);
@@ -78,9 +121,12 @@ async function sendToTelegram(product) {
         return false;
     }
     
-    const caption = `🔥 <b>${product.title}</b>\n\n💰 <i>${product.description}</i>\n\n📦 <b>Acquista ora su Amazon</b>`;
+    // Crea caption con prezzo se disponibile
+    const priceText = product.price ? `💰 Prezzo: ${product.price.toFixed(2)}€\n\n` : '';
+    const caption = `🔥 <b>${product.title}</b>\n\n${priceText}${product.description}\n\n📦 <b>Acquista ora su Amazon</b>`;
     
     try {
+        // Se c'è immagine, invia foto
         if (product.image) {
             await axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, {
                 chat_id: TELEGRAM_CHAT_ID,
@@ -95,10 +141,12 @@ async function sendToTelegram(product) {
                 }
             });
         } else {
+            // Altrimenti invia solo testo
             await axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
                 chat_id: TELEGRAM_CHAT_ID,
                 text: caption,
                 parse_mode: 'HTML',
+                disable_web_page_preview: false,
                 reply_markup: {
                     inline_keyboard: [
                         [{ text: "🛒 Acquista su Amazon", url: product.link }],
@@ -107,9 +155,14 @@ async function sendToTelegram(product) {
                 }
             });
         }
+        
+        console.log('✅ Messaggio inviato con successo');
         return true;
     } catch (error) {
-        console.error('Errore invio Telegram:', error.message);
+        console.error('❌ Errore invio Telegram:', error.response?.data || error.message);
+        if (error.response?.data) {
+            console.error('Dettagli errore:', JSON.stringify(error.response.data, null, 2));
+        }
         return false;
     }
 }
@@ -135,13 +188,33 @@ async function main() {
                 if (!sentAsins.has(product.asin)) {
                     console.log(`Nuovo prodotto: ${product.title} (${product.asin})`);
                     
+                    // Estrae prezzo e immagine da Amazon
+                    console.log(`  → Estrazione dati da Amazon...`);
+                    const productData = await extractProductData(product.asin);
+                    
+                    // Aggiunge dati al prodotto
+                    product.price = productData.price;
+                    product.image = productData.image;
+                    
+                    // Filtra solo prodotti 0-40€
+                    if (product.price && (product.price < 0 || product.price > 40)) {
+                        console.log(`  ⏭️  Prezzo ${product.price.toFixed(2)}€ fuori range 0-40€, saltato`);
+                        continue;
+                    }
+                    
+                    if (product.price) {
+                        console.log(`  💰 Prezzo: ${product.price.toFixed(2)}€`);
+                    } else {
+                        console.log(`  ⚠️  Prezzo non trovato, invio comunque`);
+                    }
+                    
                     const sent = await sendToTelegram(product);
                     if (sent) {
                         sentAsins.add(product.asin);
                         newProductsCount++;
                         
                         // Pausa tra invii per evitare rate limiting
-                        await new Promise(resolve => setTimeout(resolve, 2000));
+                        await new Promise(resolve => setTimeout(resolve, 3000));
                     }
                 }
             }
