@@ -45,7 +45,7 @@ function filterProducts(database) {
         }
         
         // Filter already published products (keep unpublished or published > 24h ago)
-        if (product.published) {
+        if (product.published && product.publishedAt) {
             const publishedDate = new Date(product.publishedAt);
             if (publishedDate > oneDayAgo) {
                 return false;
