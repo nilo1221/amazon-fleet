@@ -8,11 +8,24 @@ const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '8912118097:AAE1JSO
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '@ilmigliorprezzo';
 const SITE_URL = process.env.SITE_URL || 'https://iltuosito.it';
 
-// Nicchie da controllare (solo quelle specificate)
+// Nicchie da controllare (solo nicchie esistenti)
 const NICCHIE_DA_CONTROLLARE = [
     'moda/abbigliamento-lavoro',
     'moda/abbigliamento-bambino',
-    'tech/smartphone-tech'
+    'moda/abbigliamento-donna',
+    'moda/abbigliamento-uomo',
+    'moda/serie-tv-cinema',
+    'tech/smartphone-tech',
+    'tech/elite-gaming-gear',
+    'casa/arredamento-casa',
+    'casa/cucina-elettrodomestici',
+    'casa/caffe-capsule',
+    'casa/climatizzazione',
+    'giochi-tavolo',
+    'manga-anime',
+    'outdoor-camping',
+    'sport/abbigliamento-sportivo',
+    'viaggi-vacanze'
 ];
 
 // Percorsi dei file
@@ -54,27 +67,58 @@ async function extractProductData(asin) {
         
         const $ = cheerio.load(response.data);
         
-        // Estrae prezzo
+        // Estrae prezzo con molteplici selettori
         let price = null;
-        const priceWhole = $('#priceblock_ourprice_row .a-price-whole').first().text().trim();
-        const priceFraction = $('#priceblock_ourprice_row .a-price-fraction').first().text().trim();
+        
+        // Metodo 1: Prezzo standard con parte intera e frazionaria
+        const priceWhole = $('#priceblock_ourprice_row .a-price-whole, #priceblock_dealprice_row .a-price-whole').first().text().trim();
+        const priceFraction = $('#priceblock_ourprice_row .a-price-fraction, #priceblock_dealprice_row .a-price-fraction').first().text().trim();
         
         if (priceWhole && priceFraction) {
-            price = parseFloat(`${priceWhole.replace(',', '.')}.${priceFraction}`);
-        } else {
-            // Alternativa per altri formati di prezzo
+            price = parseFloat(`${priceWhole.replace(/\./g, '').replace(',', '.')}.${priceFraction}`);
+        }
+        
+        // Metodo 2: Prezzo in formato offscreen (standard Amazon)
+        if (!price) {
             const priceText = $('.a-price .a-offscreen').first().text().trim();
-            const priceMatch = priceText.match(/[\d,]+\.?\d*/);
+            const priceMatch = priceText.match(/[\d.,]+/);
             if (priceMatch) {
-                price = parseFloat(priceMatch[0].replace(',', '.'));
+                price = parseFloat(priceMatch[0].replace(/\./g, '').replace(',', '.'));
             }
         }
         
-        // Estrae immagine principale
+        // Metodo 3: Prezzo nel buybox
+        if (!price) {
+            const buyboxPrice = $('#price_inside_buybox, #buyBoxPrice').first().text().trim();
+            const buyboxMatch = buyboxPrice.match(/[\d.,]+/);
+            if (buyboxMatch) {
+                price = parseFloat(buyboxMatch[0].replace(/\./g, '').replace(',', '.'));
+            }
+        }
+        
+        // Metodo 4: Prezzo in formato testo generico
+        if (!price) {
+            const allText = $('body').text();
+            const priceMatches = allText.match(/€\s*[\d.,]+/g);
+            if (priceMatches && priceMatches.length > 0) {
+                const firstPrice = priceMatches[0].replace(/[^\d.,]/g, '');
+                price = parseFloat(firstPrice.replace(/\./g, '').replace(',', '.'));
+            }
+        }
+        
+        // Estrae immagine principale con molteplici selettori
         let image = null;
-        const imgTag = $('#landingImage').first();
+        const imgTag = $('#landingImage, #imgBlkFront, #main-image, .imgTagWrapper img').first();
         if (imgTag.length > 0) {
-            image = imgTag.attr('data-old-hires') || imgTag.attr('src');
+            image = imgTag.attr('data-old-hires') || imgTag.attr('src') || imgTag.attr('data-src');
+        }
+        
+        // Fallback per immagine
+        if (!image) {
+            const anyImage = $('img').first();
+            if (anyImage.length > 0) {
+                image = anyImage.attr('src');
+            }
         }
         
         return { price, image };
