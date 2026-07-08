@@ -188,7 +188,7 @@ function markProductsAsPublished(database, products) {
     saveProductsDatabase(database);
 }
 
-// Main bot function
+// Main bot function (single execution for Vercel)
 async function runBot() {
     console.log('🚀 Bot Telegram avviato!');
     console.log(`📊 Filtro prezzo: 0-${MAX_PRICE}€`);

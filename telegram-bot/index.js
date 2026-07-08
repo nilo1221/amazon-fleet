@@ -190,49 +190,59 @@ function markProductsAsPublished(database, products) {
 
 // Main bot function
 async function runBot() {
-    console.log('🚀 Bot Telegram avviato!');
+    console.log('🚀 Bot Telegram avviato in modalità continua!');
     console.log(`📊 Filtro prezzo: 0-${MAX_PRICE}€`);
     console.log(`🎯 Prodotti per ciclo: ${PRODUCTS_PER_CYCLE}`);
+    console.log(`⏱️  Controllo continuo ogni 5 minuti`);
     
-    try {
-        // Load database
-        const database = loadProductsDatabase();
-        console.log(`📦 Database caricato: ${database.products.length} prodotti totali`);
-        
-        // Filter products
-        const availableProducts = filterProducts(database);
-        console.log(`✅ Prodotti disponibili: ${availableProducts.length}`);
-        
-        if (availableProducts.length === 0) {
-            console.log('⚠️ Nessun prodotto disponibile da inviare');
-            return;
-        }
-        
-        // Select smart products
-        const productsToSend = selectSmartProducts(availableProducts, PRODUCTS_PER_CYCLE);
-        console.log(`🎯 Selezionati ${productsToSend.length} prodotti da inviare (smart selection)`);
-        
-        // Send products
-        const sentProducts = [];
-        for (const product of productsToSend) {
-            const success = await sendProductToTelegram(product);
-            if (success) {
-                sentProducts.push(product);
+    while (true) {
+        try {
+            // Load database
+            const database = loadProductsDatabase();
+            console.log(`📦 Database caricato: ${database.products.length} prodotti totali`);
+            
+            // Filter products
+            const availableProducts = filterProducts(database);
+            console.log(`✅ Prodotti disponibili: ${availableProducts.length}`);
+            
+            if (availableProducts.length === 0) {
+                console.log('⏸️  Nessun prodotto disponibile, attendo 5 minuti...');
+                await new Promise(resolve => setTimeout(resolve, 5 * 60 * 1000));
+                continue;
             }
             
-            // Random delay between messages (30-60 seconds)
-            const delay = Math.floor(Math.random() * 30000) + 30000;
-            await new Promise(resolve => setTimeout(resolve, delay));
+            // Select smart products
+            const productsToSend = selectSmartProducts(availableProducts, PRODUCTS_PER_CYCLE);
+            console.log(`🎯 Selezionati ${productsToSend.length} prodotti da inviare (smart selection)`);
+            
+            // Send products
+            const sentProducts = [];
+            for (const product of productsToSend) {
+                const success = await sendProductToTelegram(product);
+                if (success) {
+                    sentProducts.push(product);
+                }
+                
+                // Random delay between messages (30-60 seconds)
+                const delay = Math.floor(Math.random() * 30000) + 30000;
+                await new Promise(resolve => setTimeout(resolve, delay));
+            }
+            
+            // Mark as published
+            if (sentProducts.length > 0) {
+                markProductsAsPublished(database, sentProducts);
+                console.log(`✅ ${sentProducts.length} prodotti marcati come pubblicati`);
+            }
+            
+            // Wait 5 minutes before next cycle
+            console.log(`⏸️  Ciclo completato, attendo 5 minuti prima del prossimo controllo...`);
+            await new Promise(resolve => setTimeout(resolve, 5 * 60 * 1000));
+            
+        } catch (error) {
+            console.error('❌ Errore bot:', error);
+            console.log('⏸️  Attendo 5 minuti prima di riprovare...');
+            await new Promise(resolve => setTimeout(resolve, 5 * 60 * 1000));
         }
-        
-        // Mark as published
-        if (sentProducts.length > 0) {
-            markProductsAsPublished(database, sentProducts);
-            console.log(`✅ ${sentProducts.length} prodotti marcati come pubblicati`);
-        }
-        
-    } catch (error) {
-        console.error('❌ Errore bot:', error);
     }
 }
 
