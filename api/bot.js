@@ -70,30 +70,45 @@ async function extractProductData(asin) {
         // Estrae prezzo con molteplici selettori
         let price = null;
         
+        // Funzione helper per convertire prezzo italiano in numero
+        function parseItalianPrice(priceStr) {
+            if (!priceStr) return null;
+            // Rimuovi spazi e caratteri non numerici eccetto . e ,
+            const cleaned = priceStr.replace(/[^\d.,]/g, '');
+            if (!cleaned) return null;
+            
+            // Formato italiano: 1.234,56 (punto migliaia, virgola decimali)
+            // Converti in formato JavaScript: 1234.56
+            const parts = cleaned.split(',');
+            if (parts.length === 2) {
+                // Ha decimali
+                const whole = parts[0].replace(/\./g, ''); // Rimuovi punti migliaia
+                const decimal = parts[1];
+                return parseFloat(`${whole}.${decimal}`);
+            } else {
+                // Solo parte intera
+                return parseFloat(cleaned.replace(/\./g, ''));
+            }
+        }
+        
         // Metodo 1: Prezzo standard con parte intera e frazionaria
         const priceWhole = $('#priceblock_ourprice_row .a-price-whole, #priceblock_dealprice_row .a-price-whole').first().text().trim();
         const priceFraction = $('#priceblock_ourprice_row .a-price-fraction, #priceblock_dealprice_row .a-price-fraction').first().text().trim();
         
         if (priceWhole && priceFraction) {
-            price = parseFloat(`${priceWhole.replace(/\./g, '').replace(',', '.')}.${priceFraction}`);
+            price = parseItalianPrice(`${priceWhole},${priceFraction}`);
         }
         
         // Metodo 2: Prezzo in formato offscreen (standard Amazon)
         if (!price) {
             const priceText = $('.a-price .a-offscreen').first().text().trim();
-            const priceMatch = priceText.match(/[\d.,]+/);
-            if (priceMatch) {
-                price = parseFloat(priceMatch[0].replace(/\./g, '').replace(',', '.'));
-            }
+            price = parseItalianPrice(priceText);
         }
         
         // Metodo 3: Prezzo nel buybox
         if (!price) {
             const buyboxPrice = $('#price_inside_buybox, #buyBoxPrice').first().text().trim();
-            const buyboxMatch = buyboxPrice.match(/[\d.,]+/);
-            if (buyboxMatch) {
-                price = parseFloat(buyboxMatch[0].replace(/\./g, '').replace(',', '.'));
-            }
+            price = parseItalianPrice(buyboxPrice);
         }
         
         // Metodo 4: Prezzo in formato testo generico
@@ -101,8 +116,7 @@ async function extractProductData(asin) {
             const allText = $('body').text();
             const priceMatches = allText.match(/€\s*[\d.,]+/g);
             if (priceMatches && priceMatches.length > 0) {
-                const firstPrice = priceMatches[0].replace(/[^\d.,]/g, '');
-                price = parseFloat(firstPrice.replace(/\./g, '').replace(',', '.'));
+                price = parseItalianPrice(priceMatches[0]);
             }
         }
         
