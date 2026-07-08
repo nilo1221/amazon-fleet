@@ -96,6 +96,20 @@
             color: var(--primary-color);
             margin-bottom: 20px;
         }
+        
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(156, 39, 176, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -205,11 +219,28 @@
                 <!-- Neonati -->
                 <h3 class="fw-bold mb-3 text-center" id="neonati"><i class="fas fa-baby me-2 text-primary"></i>Neonati</h3>
                 <div class="row mb-5">
-                    <div class="col-12">
-                        <div class="no-products">
-                            <i class="fas fa-baby"></i>
-                            <h3 class="fw-bold mb-3">Prodotti in arrivo</h3>
-                            <p class="text-muted">Stiamo selezionando i migliori prodotti per neonati. Torna presto per scoprire la nostra collezione!</p>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/I/81qZx7q9aPL._AC_UL1500_.jpg" class="product-image" alt="Chicco Giubbino">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Chicco Giubbino Neonata</h5>
+                                <p class="card-text text-muted small">Giubbotto caldo e morbido per neonati 0-24 mesi, Designed in Italy</p>
+                                <a href="https://www.amazon.it/Chicco-09101960000000-Giubbino/dp/B0F8W2GZ7G?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=085a1bcda70bbe14a94f4d92b806c041&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/I/81K5v3V9pL._AC_UL1500_.jpg" class="product-image" alt="Levi's Bodysuit">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Levi's Kids Classic Batwing Bodysuit</h5>
+                                <p class="card-text text-muted small">Body classico per neonati, 100% cotone, qualità premium</p>
+                                <a href="https://www.amazon.it/Levis-Kids-Classic-Batwing-Bodysuit/dp/B082L94X82?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=8f03bf6bfee48582fafdd422a0ab803d&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -229,11 +260,16 @@
                 <!-- Ragazzi -->
                 <h3 class="fw-bold mb-3 text-center" id="ragazzi"><i class="fas fa-user-graduate me-2 text-info"></i>Ragazzi</h3>
                 <div class="row mb-5">
-                    <div class="col-12">
-                        <div class="no-products">
-                            <i class="fas fa-user-graduate"></i>
-                            <h3 class="fw-bold mb-3">Prodotti in arrivo</h3>
-                            <p class="text-muted">Stiamo selezionando i migliori prodotti per ragazzi. Torna presto per scoprire la nostra collezione!</p>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/I/71l5Vf3V9pL._AC_UL1500_.jpg" class="product-image" alt="Levi's Hoodie">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Levi's Kids Batwing Screenprint Hoodie</h5>
+                                <p class="card-text text-muted small">Felpa con cappuccio per ragazzi, stampa screenprint, comfort premium</p>
+                                <a href="https://www.amazon.it/Levis-Kids-Batwing-Screenprint-Hoodie/dp/B07YCNT3GP?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=bdefa72137c2d3a2c8e6cbedd858bdf1&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
