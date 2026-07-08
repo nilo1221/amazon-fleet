@@ -56,24 +56,68 @@ function filterProducts(database) {
     });
 }
 
-// Select random products
-function selectRandomProducts(products, count) {
-    const shuffled = products.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, Math.min(count, products.length));
+// Select smart products with scoring
+function selectSmartProducts(products, count) {
+    // Score each product
+    const scoredProducts = products.map(product => {
+        let score = 0;
+        
+        // Prefer products with images
+        if (product.image) score += 10;
+        
+        // Prefer products with lower prices (better deals)
+        if (product.price !== null) {
+            score += Math.max(0, 40 - product.price) / 2; // More points for lower prices
+        }
+        
+        // Prefer products that haven't been published recently
+        if (!product.published) score += 5;
+        
+        return { ...product, score };
+    });
+    
+    // Sort by score (highest first)
+    scoredProducts.sort((a, b) => b.score - a.score);
+    
+    // Select top products with niche diversity
+    const selected = [];
+    const usedNiches = new Set();
+    
+    for (const product of scoredProducts) {
+        if (selected.length >= count) break;
+        
+        // Prefer products from different niches
+        if (!usedNiches.has(product.niche) || selected.length < count - 1) {
+            selected.push(product);
+            usedNiches.add(product.niche);
+        }
+    }
+    
+    // If we need more products, add from remaining
+    if (selected.length < count) {
+        const remaining = scoredProducts.filter(p => !selected.includes(p));
+        const needed = count - selected.length;
+        selected.push(...remaining.slice(0, needed));
+    }
+    
+    return selected;
 }
+
+// Message templates for variety
+const messageTemplates = [
+    (name, price) => `🔥 OFFERTA DEL GIORNO\n\n🏷 ${name}\n${price ? `💰 Prezzo: €${price.toFixed(2)}` : ''}\n\n✅ Prime Gratuita\n✅ Reso 30 giorni`,
+    (name, price) => `⚡ SUPER OFFERTA\n\n📦 ${name}\n${price ? `💵 Solo €${price.toFixed(2)}` : ''}\n\n🚀 Spedizione Gratuita\n🔄 Reso facile`,
+    (name, price) => `🎯 DEAL DEL MOMENTO\n\n🏷 ${name}\n${price ? `💰 Prezzo: €${price.toFixed(2)}` : ''}\n\n✅ Prime\n✅ 30 giorni reso`,
+    (name, price) => `💎 SCONTO ESCLUSIVO\n\n📦 ${name}\n${price ? `💵 €${price.toFixed(2)}` : ''}\n\n🚀 Prime Gratis\n🔄 Reso 30gg`
+];
 
 // Send product to Telegram
 async function sendProductToTelegram(product) {
     const nameShort = product.name.length > 60 ? product.name.substring(0, 60) + '...' : product.name;
     
-    // Build caption with available data
-    let caption = `🔥 OFFERTA DEL GIORNO\n\n🏷 ${nameShort}`;
-    
-    if (product.price !== null && product.price > 0) {
-        caption += `\n💰 Prezzo: €${product.price.toFixed(2)}`;
-    }
-    
-    caption += `\n\n✅ Prime Gratuita\n✅ Reso 30 giorni`;
+    // Random message template
+    const templateIndex = Math.floor(Math.random() * messageTemplates.length);
+    const caption = messageTemplates[templateIndex](nameShort, product.price);
     
     const keyboard = {
         inline_keyboard: [
@@ -164,9 +208,9 @@ async function runBot() {
             return;
         }
         
-        // Select random products
-        const productsToSend = selectRandomProducts(availableProducts, PRODUCTS_PER_CYCLE);
-        console.log(`🎯 Selezionati ${productsToSend.length} prodotti da inviare`);
+        // Select smart products
+        const productsToSend = selectSmartProducts(availableProducts, PRODUCTS_PER_CYCLE);
+        console.log(`🎯 Selezionati ${productsToSend.length} prodotti da inviare (smart selection)`);
         
         // Send products
         const sentProducts = [];
