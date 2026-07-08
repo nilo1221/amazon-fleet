@@ -3,11 +3,11 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '8912118097:AAE1JSOfr51ZA7NyBOMRAaocK74qSKaWZOI';
-const TELEGRAM_CHANNEL_ID = process.env.TELEGRAM_CHANNEL_ID || '-1004386515041';
+const TELEGRAM_BOT_TOKEN = '8912118097:AAE1JSOfr51ZA7NyBOMRAaocK74qSKaWZOI';
+const TELEGRAM_CHANNEL_ID = '-1004386515041';
 const PRODUCTS_JSON_PATH = path.join(__dirname, '../../public/products.json');
 const MAX_PRICE = 40;
-const PRODUCTS_PER_CYCLE = 5;
+const PRODUCTS_PER_CYCLE = 15;
 
 // Initialize bot
 const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: false });
@@ -220,8 +220,8 @@ async function runBot() {
                 sentProducts.push(product);
             }
             
-            // Random delay between messages (2-5 minutes)
-            const delay = Math.floor(Math.random() * 180000) + 120000;
+            // Random delay between messages (30-60 seconds)
+            const delay = Math.floor(Math.random() * 30000) + 30000;
             await new Promise(resolve => setTimeout(resolve, delay));
         }
         
