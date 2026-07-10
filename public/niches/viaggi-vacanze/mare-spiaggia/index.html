@@ -269,6 +269,49 @@
         .footer-v4 .instagram-icon:hover {
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
         }
+
+        .navbar-logo-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 206, 209, 0.4);
+            transition: all 0.3s ease;
+            background: white;
+            padding: 5px;
+        }
+
+        .navbar-logo-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 206, 209, 0.6);
+        }
+
+        .navbar-logo-block {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-logo-block:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(0, 206, 209, 0.4);
+        }
+
+        .navbar-logo-title {
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-logo-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.75rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
     </style>
     
 </head>
@@ -278,7 +321,7 @@
         <div class="container d-flex align-items-center">
             <!-- Logo Block (Left) -->
             <a class="navbar-logo-block d-flex align-items-center text-decoration-none" href="/index.html" aria-label="Smart Choices Guide - Home">
-                <img src="..//images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon" loading="lazy">
+                <img src="/images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon" loading="lazy">
                 <div class="navbar-logo-text">
                     <div class="navbar-logo-title">SMART CHOICES GUIDE</div>
                     <div class="navbar-logo-subtitle">Migliori Guide d'Acquisto Amazon | Recensioni e Offerte</div>
