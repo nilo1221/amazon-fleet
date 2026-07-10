@@ -43,6 +43,7 @@ const NICCHIE_DA_CONTROLLARE = [
     'giochi-tavolo',
     'manga-anime',
     'outdoor-camping',
+    'pet-care',
     'sport/abbigliamento-sportivo',
     'viaggi-vacanze',
     'viaggi-vacanze/mare-spiaggia'

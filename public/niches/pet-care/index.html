@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care - Smart Choices Guide</title>
+    <meta name="description" content="Tutto per i tuoi amici a quattro zampe. Cibo, accessori, cura e tecnologia per cani, gatti e piccoli animali.">
+    
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PLE2THHMT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7PLE2THHMT');
+    </script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="../css/navbar-modern.css">
+    
+    <style>
+        :root {
+            --primary-color: #FF6B6B;
+            --secondary-color: #4ECDC4;
+            --accent-color: #FFE66D;
+            --success-color: #95E1D3;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            padding: 20px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 50%, #95E1D3 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(50px, 50px); }
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary-color);
+        }
+        
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .category-card:hover .category-icon {
+            transform: scale(1.1) rotate(10deg);
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .category-description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .category-products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .product-tag {
+            background: linear-gradient(135deg, var(--secondary-color), var(--success-color));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .card-text {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #FF9900, #FFAD33);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #FFAD33, #FF9900);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 153, 0, 0.4);
+        }
+        
+        .footer-effects {
+            background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-radius: 20px 20px 0 0;
+        }
+        .footer-effects h5, .footer-effects p, .footer-effects a {
+            color: white;
+        }
+        .footer-effects a:hover {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+        
+        .footer-effects .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .footer-effects .glass-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .footer-effects .glass-card.info-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(218, 165, 32, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        .footer-effects .glass-card.info-card h5 {
+            color: #FFD700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        .footer-effects .glass-card.info-card h5 i {
+            color: #FFD700;
+        }
+        .footer-effects .social-icon {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+        .footer-effects .social-icon:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        .footer-effects .social-icon.telegram {
+            background: #0088cc;
+            color: white;
+        }
+        .footer-effects .social-icon.telegram:hover {
+            background: #006699;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+        }
+        .footer-effects .social-icon.facebook:hover {
+            background: #1877F2;
+            color: white;
+        }
+        .footer-effects .social-icon.instagram:hover {
+            background: #E4405F;
+            color: white;
+        }
+        .footer-effects .social-icon.twitter:hover {
+            background: #1DA1F2;
+            color: white;
+        }
+        .footer-effects .amazon-disclaimer {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.25) 0%, rgba(255, 152, 0, 0.25) 100%);
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-modern" role="navigation" aria-label="Navigazione principale">
+        <div class="container d-flex align-items-center">
+            <!-- Logo Block (Left) -->
+            <a class="navbar-logo-block d-flex align-items-center text-decoration-none" href="/index.html" aria-label="Smart Choices Guide - Home">
+                <img src="/images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon">
+                <div class="navbar-logo-text">
+                    <div class="navbar-logo-title">SMART CHOICES GUIDE</div>
+                    <div class="navbar-logo-subtitle">Migliori Guide d'Acquisto Amazon | Recensioni e Offerte</div>
+                </div>
+            </a>
+
+            <!-- Spacer (Center) -->
+            <div class="flex-grow-1"></div>
+
+            <!-- Search Bar (Right) -->
+            <div class="navbar-search-container d-none d-lg-block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cerca per categoria...">
+                    <button class="btn btn-primary" type="button" aria-label="Cerca">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../niches/raccomandazioni/index.html">
+                            <i class="fas fa-star me-1"></i>Raccomandazioni
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Niche Identity Bar -->
+    <div class="niche-identity-bar"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">
+                <i class="fas fa-paw me-3"></i>Pet Care
+            </h1>
+            <p class="lead mb-4">
+                Tutto per i tuoi amici a quattro zampe. Scopri i migliori prodotti per cani, gatti e piccoli animali selezionati dai nostri esperti.
+            </p>
+            
+            <!-- Trust Banner -->
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-flex gap-3 justify-content-center mt-4">
+                <a href="#categorie" class="btn btn-light btn-lg">Esplora Categorie</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categorie" class="container">
+        <h2 class="text-center mb-5">Categorie Pet Care</h2>
+        
+        <div class="row">
+            <!-- Cani -->
+            <div class="col-md-6 col-lg-3">
+                <div class="category-card text-center">
+                    <div class="category-icon">
+                        <i class="fas fa-dog"></i>
+                    </div>
+                    <h3 class="category-title">Cani</h3>
+                    <p class="category-description">Cibo, accessori, cura e molto altro per il tuo cane</p>
+                    <div class="category-products">
+                        <span class="product-tag">Cibo</span>
+                        <span class="product-tag">Guinzagli</span>
+                        <span class="product-tag">Cucce</span>
+                        <span class="product-tag">Giocattoli</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gatti -->
+            <div class="col-md-6 col-lg-3">
+                <div class="category-card text-center">
+                    <div class="category-icon">
+                        <i class="fas fa-cat"></i>
+                    </div>
+                    <h3 class="category-title">Gatti</h3>
+                    <p class="category-description">Lettiere, tiragraffi, cibo e accessori per gatti</p>
+                    <div class="category-products">
+                        <span class="product-tag">Cibo</span>
+                        <span class="product-tag">Lettiere</span>
+                        <span class="product-tag">Tiragraffi</span>
+                        <span class="product-tag">Ciotole</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Piccoli Animali -->
+            <div class="col-md-6 col-lg-3">
+                <div class="category-card text-center">
+                    <div class="category-icon">
+                        <i class="fas fa-feather"></i>
+                    </div>
+                    <h3 class="category-title">Piccoli Animali</h3>
+                    <p class="category-description">Prodotti per conigli, criceti, uccelli e rettili</p>
+                    <div class="category-products">
+                        <span class="product-tag">Conigli</span>
+                        <span class="product-tag">Criceti</span>
+                        <span class="product-tag">Uccelli</span>
+                        <span class="product-tag">Gabbie</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tecnologia -->
+            <div class="col-md-6 col-lg-3">
+                <div class="category-card text-center">
+                    <div class="category-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="category-title">Tecnologia</h3>
+                    <p class="category-description">Prodotti smart e tecnologici per i tuoi animali</p>
+                    <div class="category-products">
+                        <span class="product-tag">Ciotole Smart</span>
+                        <span class="product-tag">Fontanelle</span>
+                        <span class="product-tag">GPS</span>
+                        <span class="product-tag">Telecamere</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container mt-5">
+        <h2 class="text-center mb-5">Prodotti Consigliati</h2>
+        
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card product-card">
+                    <h5 class="card-title">PETKIT Pura Max 2 Lettiera Gatto Autopulente</h5>
+                    <p class="card-text">Lettiera intelligente con autopulizia, controllo odori e app per monitoraggio</p>
+                    <a href="https://www.amazon.it/PETKIT-Autopulente-Automatica-Antiodore-Controllo/dp/B0D9QJZ7FG?&linkCode=ll2&tag=l0c39-21&linkId=2db071e67a1cd179da498fe5a20b50a3&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card product-card">
+                    <h5 class="card-title">Fockety Mangiatoia Automatica per Gatti</h5>
+                    <p class="card-text">Distributore automatico di cibo con timer, ideale per gatti e cani di piccola taglia</p>
+                    <a href="https://www.amazon.it/dp/B0D6WBXY8M?psc=1&pf_rd_p=27357f71-bd5d-4a5b-ba8c-4ad04b414c62&pf_rd_r=Y2NACT2TWENDWSBC07RD&pd_rd_wg=sfO0w&pd_rd_w=EQ2vT&content-id=amzn1.sym.27357f71-bd5d-4a5b-ba8c-4ad04b414c62&pd_rd_r=30393f36-0713-4292-86d2-1fc45ba4da13&aref=A1RvNmGpXN&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&linkCode=ll2&tag=l0c39-21&linkId=7ebc2a8ea2ea3e0228163422202800a8&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card product-card">
+                    <h5 class="card-title">PORTENTUM Spazzola Togli Peli</h5>
+                    <p class="card-text">Spazzola autolimpante per rimuovere peli da cani e gatti, riutilizzabile ed efficace</p>
+                    <a href="https://www.amazon.it/PORTENTUM-Spazzola-Rimozione-Riutilizzabile-Pelliccia/dp/B0DDTKHD13?dib=eyJ2IjoiMSJ9.Sv5YTnYmM2vCN1cgolfCEhnRucGYIBlFwXnx8ht4zzk3cqCnWZPC4Fzzgc9RXW-TGpL4UOt90wT0bg4J2RzrgXyus2OHrlnhv3cxBUz9DFaB_MwzC8NFys7QFPg-8AmZUQroGBKcjpmnINwDCQO9Kxfs7MJMqfpZnAUTLKzUKGarVPZaIhQ6nctztWXFx3dZ0X_IC5Z7UWpVlxBSWCMA0gK5W-pUc3VThl2DiQBQF0syxOImdyMqnyOIltkoF5FKaXy3gbK6SeEjKlRsA9GHGD4sQrp0MoHa6Xkqp7CryTM.ckcupQYx1SQW_aFBLER89RCX36k92DV3kOy2clUEJHc&dib_tag=se&keywords=animali&qid=1778505921&sr=8-7&linkCode=ll2&tag=l0c39-21&linkId=98875e9ead9d737fd24154f2704cd262&ref_=as_li_ss_tl" target="_blank" class="btn btn-amazon">
+                        <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-effects py-5" role="contentinfo">
+        
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="row g-4">
+                <!-- Brand & Info Card -->
+                <div class="col-lg-4">
+                    <div class="glass-card">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
+                        </h5>
+                        <p class="mb-3" style="opacity: 0.9;">
+                            La tua guida completa per i migliori prodotti Amazon. Recensioni, offerte e consigli per acquisti intelligenti.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="/index.html" class="text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-home me-1"></i>Home
+                            </a>
+                            <a href="/tutte-le-categorie.html" class="text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-th-large me-1"></i>Categorie
+                            </a>
+                            <a href="/raccomandazioni/index.html" class="text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-star me-1"></i>Raccomandazioni
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Card -->
+                <div class="col-lg-4">
+                    <div class="glass-card text-center">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-share-alt me-2"></i>Seguici
+                        </h5>
+                        <div class="d-flex justify-content-center gap-3 mb-3">
+                            <a href="https://t.me/ilmigliorprezzo" class="social-icon telegram" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="social-icon facebook" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon instagram" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon twitter" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <p class="small mb-0" style="opacity: 0.8;">
+                            Unisciti al nostro gruppo Telegram per offerte esclusive!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Legal & Contact Card -->
+                <div class="col-lg-4">
+                    <div class="glass-card info-card">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-info-circle me-2"></i>Info & Contatti
+                        </h5>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="/about.html" class="text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-user me-2"></i>Chi Siamo
+                            </a>
+                            <a href="/contact.html" class="text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-envelope me-2"></i>Contatti
+                            </a>
+                            <a href="/privacy.html" class="text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-shield-alt me-2"></i>Privacy Policy
+                            </a>
+                            <a href="/disclaimer.html" class="text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-exclamation-triangle me-2"></i>Disclaimer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Amazon Disclaimer -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="amazon-disclaimer">
+                        <p class="mb-2 text-warning fw-bold text-center">
+                            <i class="fab fa-amazon me-2 fa-lg"></i>Disclaimer Amazon Associates
+                        </p>
+                        <p class="mb-0 small text-center" style="opacity: 0.9;">
+                            In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Search JS -->
+    <script src="../js/search.js" defer></script>
+
+</body>
+</html>

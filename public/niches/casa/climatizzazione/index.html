@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Climatizzazione - Smart Choices Guide</title>
-    <meta name="description" content="Ventilatori, umidificatori, deumidificatori e riscaldatori per il comfort della tua casa. Prodotti selezionati per qualità e efficienza.">
+    <meta name="description" content="Tutto per il comfort della tua casa. Ventilatori, umidificatori, deumidificatori e riscaldatori selezionati dai nostri esperti.">
     
     <!-- Google Analytics GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PLE2THHMT"></script>
@@ -22,11 +22,173 @@
     <link rel="stylesheet" href="/styles.css">
     
     <style>
+        /* Modern Navbar Styles - Inline */
+        .navbar-modern {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(124, 58, 237, 0.9) 50%, rgba(6, 182, 212, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-modern:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-logo-block {
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-logo-block:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar-logo-icon {
+            animation: logo-pulse 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+        }
+
+        @keyframes logo-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .navbar-logo-title {
+            background: linear-gradient(90deg, #ffffff, #e0e7ff, #ffffff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s linear infinite;
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .navbar-logo-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar-modern .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar-modern .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ffffff, #e0e7ff);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar-modern .nav-link:hover {
+            color: #ffffff !important;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-modern .nav-link:hover::before {
+            width: 80%;
+        }
+
+        .navbar-modern .nav-link.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff !important;
+        }
+
+        .navbar-modern .nav-link.active::before {
+            width: 80%;
+        }
+
+        .navbar-modern .navbar-toggler {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 0.5rem 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-modern .navbar-toggler:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: rotate(5deg);
+        }
+
+        .navbar-modern .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar-modern .navbar-search-container .form-control {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            border-radius: 25px 0 0 25px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-modern .navbar-search-container .form-control:focus {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar-modern .navbar-search-container .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .navbar-modern .navbar-search-container .btn-primary {
+            background: linear-gradient(135deg, #7c3aed, #06b6d4);
+            border: none;
+            border-radius: 0 25px 25px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-modern .navbar-search-container .btn-primary:hover {
+            background: linear-gradient(135deg, #6d28d9, #0891b2);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+        }
+
+        @media (max-width: 991px) {
+            .navbar-modern .navbar-collapse {
+                background: rgba(37, 99, 235, 0.98);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-radius: 0 0 16px 16px;
+                margin-top: 1rem;
+                padding: 1.5rem;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            }
+            
+            .navbar-modern .nav-link {
+                padding: 0.75rem 1rem;
+                border-radius: 8px;
+            }
+        }
+        
         :root {
             --primary-color: #4A90E2;
-            --secondary-color: #f8f9fa;
-            --accent-color: #50C878;
-            --success-color: #32CD32;
+            --secondary-color: #50C878;
+            --accent-color: #32CD32;
+            --success-color: #2E8B57;
         }
         
         body {
@@ -41,259 +203,400 @@
         .hero-section {
             background: linear-gradient(135deg, #4A90E2 0%, #50C878 50%, #32CD32 100%);
             color: white;
-            padding: 80px 0;
+            padding: 60px 0;
             margin-bottom: 40px;
-            box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
         }
         
-        .product-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px 15px 0 0;
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
         }
         
-        .btn-amazon {
-            background: linear-gradient(135deg, #4A90E2 0%, #50C878 100%);
-            color: white;
-            border: none;
-            padding: 18px 45px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.2em;
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(50px, 50px); }
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.3);
+            cursor: pointer;
+            border: 2px solid transparent;
         }
         
-        .btn-amazon:hover {
-            background: linear-gradient(135deg, #50C878 0%, #32CD32 100%);
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(80, 200, 120, 0.4);
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary-color);
+        }
+        
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .category-card:hover .category-icon {
+            transform: scale(1.1) rotate(10deg);
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .category-description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .category-products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .product-tag {
+            background: linear-gradient(135deg, var(--secondary-color), var(--success-color));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
         }
         
         .category-badge {
-            background: linear-gradient(135deg, #E3F2FD 0%, #E8F5E9 100%);
-            color: #1976D2;
-            padding: 6px 18px;
+            background: linear-gradient(135deg, #4A90E2, #50C878);
+            color: white;
+            padding: 5px 15px;
             border-radius: 20px;
-            font-size: 0.9em;
+            font-size: 0.85rem;
             font-weight: 600;
-            box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
         }
         
-        .no-products {
-            text-align: center;
-            padding: 60px 20px;
+        .product-card {
             background: white;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
         
-        .no-products i {
-            font-size: 4rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
-    </style>
-    <style>
-    .footer-effects {
-        background: linear-gradient(135deg, #4A90E2 0%, #2c72c4 50%, #68aeff 100%);
-        position: relative;
-        overflow: hidden;
-    }
-    .footer-effects .glass-card {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        border: 1px solid rgba(74, 144, 226, 0.3);
-        border-radius: 12px;
-        padding: 30px;
-        transition: all 0.3s ease;
-        position: relative;
-        z-index: 1;
-    }
-    .footer-effects .glass-card:hover {
-        transform: translateY(-3px);
-        background: rgba(255, 255, 255, 0.2);
-    }
-    .footer-effects .glass-card.info-card {
-        background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(218, 165, 32, 0.1));
-        border: 1px solid rgba(255, 215, 0, 0.3);
-    }
-    .footer-effects .glass-card.info-card h5 {
-        color: #FFD700;
-        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-    }
-    .footer-effects .glass-card.info-card h5 i {
-        color: #FFD700;
-    }
-    .footer-effects .social-icon {
-        width: 50px;
-        height: 50px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(255, 255, 255, 0.15);
-        border-radius: 50%;
-        color: white;
-        font-size: 1.3rem;
-        transition: all 0.3s ease;
-    }
-    .footer-effects .social-icon:hover {
-        transform: translateY(-3px);
-        background: rgba(255, 255, 255, 0.25);
-    }
-    .footer-effects .social-icon.telegram {
-        background: #0088cc;
-        color: white;
-    }
-    .footer-effects .social-icon.telegram:hover {
-        background: #006699;
-        box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
-    }
-    .footer-effects .social-icon.facebook:hover {
-        background: #1877F2;
-        color: white;
-    }
-    .footer-effects .social-icon.instagram:hover {
-        background: linear-gradient(45deg, #C13584, #833AB4, #FCAF45);
-        color: white;
-    }
-    .footer-effects .social-icon.twitter:hover {
-        background: #1DA1F2;
-        color: white;
-    }
-    .footer-effects .amazon-disclaimer {
-        background: linear-gradient(135deg, rgba(74, 144, 226, 0.12), rgba(74, 144, 226, 0.08));
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 215, 0, 0.3);
-        border-radius: 12px;
-        padding: 25px;
-        position: relative;
-        z-index: 1;
-    }
-    .footer-effects .amazon-disclaimer::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background: linear-gradient(90deg, transparent, #FFD700, transparent);
-        border-radius: 2px;
-    }
-    .footer-effects h5, .footer-effects p, .footer-effects a {
-        color: white;
-    }
-    .footer-effects a:hover {
-        color: rgba(255, 255, 255, 0.85) !important;
-    }
+        
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .card-text {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .btn-amazon {
+            background: linear-gradient(135deg, #FF9900, #FFAD33);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #FFAD33, #FF9900);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 153, 0, 0.4);
+        }
+        
+        .footer-effects {
+            background: linear-gradient(135deg, #4A90E2, #50C878);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-radius: 20px 20px 0 0;
+        }
+        .footer-effects h5, .footer-effects p, .footer-effects a {
+            color: white;
+        }
+        .footer-effects a:hover {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+        
+        .footer-effects .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(74, 144, 226, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .footer-effects .glass-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .footer-effects .glass-card.info-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(218, 165, 32, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        .footer-effects .glass-card.info-card h5 {
+            color: #FFD700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        .footer-effects .glass-card.info-card h5 i {
+            color: #FFD700;
+        }
+        .footer-effects .social-icon {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+        .footer-effects .social-icon:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        .footer-effects .social-icon.telegram {
+            background: #0088cc;
+            color: white;
+        }
+        .footer-effects .social-icon.telegram:hover {
+            background: #006699;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+        }
+        .footer-effects .social-icon.facebook:hover {
+            background: #1877F2;
+            color: white;
+        }
+        .footer-effects .social-icon.instagram:hover {
+            background: #E4405F;
+            color: white;
+        }
+        .footer-effects .social-icon.twitter:hover {
+            background: #1DA1F2;
+            color: white;
+        }
+        .footer-effects .amazon-disclaimer {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.25) 0%, rgba(255, 152, 0, 0.25) 100%);
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
     </style>
 
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-modern" role="navigation" aria-label="Navigazione principale">
         <div class="container d-flex align-items-center">
+            <!-- Logo Block (Left) -->
             <a class="navbar-logo-block d-flex align-items-center text-decoration-none" href="/index.html" aria-label="Smart Choices Guide - Home">
-                <img src="/images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon" loading="lazy">
+                <img src="/images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon">
                 <div class="navbar-logo-text">
                     <div class="navbar-logo-title">SMART CHOICES GUIDE</div>
                     <div class="navbar-logo-subtitle">Migliori Guide d'Acquisto Amazon | Recensioni e Offerte</div>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+            <!-- Spacer (Center) -->
+            <div class="flex-grow-1"></div>
+
+            <!-- Search Bar (Right) -->
+            <div class="navbar-search-container d-none d-lg-block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cerca per categoria...">
+                    <button class="btn btn-primary" type="button" aria-label="Cerca">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/raccomandazioni/index.html">Raccomandazioni</a>
+                        <a class="nav-link" href="/niches/raccomandazioni/index.html">
+                            <i class="fas fa-star me-1"></i>Raccomandazioni
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Niche Identity Bar -->
+    <div class="niche-identity-bar"></div>
+
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="display-4 fw-bold mb-4">
-                        <i class="fas fa-wind me-3"></i>Climatizzazione
-                    </h1>
-                    <p class="lead mb-4">
-                        Ventilatori, umidificatori, deumidificatori e riscaldatori per il comfort della tua casa. Prodotti selezionati per qualità, efficienza e risparmio energetico.
-                    </p>
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">
+                <i class="fas fa-snowflake me-3"></i>Climatizzazione
+            </h1>
+            <p class="lead mb-4">
+                Tutto per il comfort della tua casa. Scopri i migliori prodotti per climatizzazione, riscaldamento e qualità dell'aria selezionati dai nostri esperti.
+            </p>
+            
+            <!-- Trust Banner -->
+            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                <i class="fab fa-amazon fa-lg me-2"></i>
+                <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                <i class="fas fa-shield-alt ms-2"></i>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <span class="category-badge">
+                            <i class="fas fa-star me-1"></i>Prodotti Selezionati
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-truck me-1"></i>Spedizione Gratuita
+                        </span>
+                        <span class="category-badge">
+                            <i class="fas fa-shield-alt me-1"></i>Garanzia Amazon
+                        </span>
+                    </div>
                 </div>
             </div>
+            
+            <div class="d-flex gap-3 justify-content-center mt-4">
+                <a href="#categorie" class="btn btn-light btn-lg">Esplora Categorie</a>
+            </div>
         </div>
     </section>
 
-    <!-- Categorie Navigation Section -->
-    <section class="container mt-4">
-        <div class="text-center mb-4">
-            <h3 class="fw-bold mb-3">Cosa stai cercando?</h3>
-            <p class="text-muted">Naviga tra le categorie per trovare il prodotto perfetto per il comfort della tua casa</p>
-        </div>
-        <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-3">
+    <!-- Categories Section -->
+    <section id="categorie" class="container">
+        <h2 class="text-center mb-5">Categorie Climatizzazione</h2>
+        
+        <div class="row">
+            <!-- Ventilatori -->
+            <div class="col-md-6 col-lg-3">
                 <a href="#ventilatori" class="text-decoration-none">
-                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
-                        <i class="fas fa-fan fa-2x text-primary mb-2"></i>
-                        <h6 class="fw-bold">Ventilatori</h6>
+                    <div class="category-card text-center">
+                        <div class="category-icon">
+                            <i class="fas fa-fan"></i>
+                        </div>
+                        <h3 class="category-title">Ventilatori</h3>
+                        <p class="category-description">Ventilatori a piantana, da tavolo e a soffitto per rinfrescare</p>
+                        <div class="category-products">
+                            <span class="product-tag">Piantana</span>
+                            <span class="product-tag">Tavolo</span>
+                            <span class="product-tag">Soffitto</span>
+                            <span class="product-tag">Colonnari</span>
+                        </div>
                     </div>
                 </a>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            
+            <!-- Umidificatori -->
+            <div class="col-md-6 col-lg-3">
                 <a href="#umidificatori" class="text-decoration-none">
-                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
-                        <i class="fas fa-tint fa-2x text-success mb-2"></i>
-                        <h6 class="fw-bold">Umidificatori</h6>
+                    <div class="category-card text-center">
+                        <div class="category-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3 class="category-title">Umidificatori</h3>
+                        <p class="category-description">Umidificatori per migliorare la qualità dell'aria in casa</p>
+                        <div class="category-products">
+                            <span class="product-tag">Ultrasonici</span>
+                            <span class="product-tag">A Vapore</span>
+                            <span class="product-tag">Smart</span>
+                            <span class="product-tag">Portatili</span>
+                        </div>
                     </div>
                 </a>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            
+            <!-- Deumidificatori -->
+            <div class="col-md-6 col-lg-3">
                 <a href="#deumidificatori" class="text-decoration-none">
-                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
-                        <i class="fas fa-cloud-rain fa-2x text-info mb-2"></i>
-                        <h6 class="fw-bold">Deumidificatori</h6>
+                    <div class="category-card text-center">
+                        <div class="category-icon">
+                            <i class="fas fa-cloud-rain"></i>
+                        </div>
+                        <h3 class="category-title">Deumidificatori</h3>
+                        <p class="category-description">Deumidificatori per eliminare umidità e muffa</p>
+                        <div class="category-products">
+                            <span class="product-tag">Compressore</span>
+                            <span class="product-tag">Termoelettrici</span>
+                            <span class="product-tag">Portatili</span>
+                            <span class="product-tag">Industriali</span>
+                        </div>
                     </div>
                 </a>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            
+            <!-- Riscaldatori -->
+            <div class="col-md-6 col-lg-3">
                 <a href="#riscaldatori" class="text-decoration-none">
-                    <div class="category-card text-center p-3 rounded bg-light hover-effect">
-                        <i class="fas fa-fire fa-2x text-danger mb-2"></i>
-                        <h6 class="fw-bold">Riscaldatori</h6>
+                    <div class="category-card text-center">
+                        <div class="category-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3 class="category-title">Riscaldatori</h3>
+                        <p class="category-description">Riscaldatori elettrici e a gas per il comfort invernale</p>
+                        <div class="category-products">
+                            <span class="product-tag">Elettrici</span>
+                            <span class="product-tag">A Gas</span>
+                            <span class="product-tag">Infrarossi</span>
+                            <span class="product-tag">Termoventilatori</span>
+                        </div>
                     </div>
                 </a>
             </div>
         </div>
     </section>
-
-    <style>
-        .category-card {
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-color: var(--primary-color);
-        }
-        
-        .hover-effect:hover {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-    </style>
 
     <!-- Products Section -->
     <section class="container mb-5">
@@ -348,7 +651,7 @@
                                         <i class="fas fa-check-circle text-success me-1"></i>
                                         <span class="text-success small">Disponibile</span>
                                     </div>
-                                    <a href="https://www.amazon.it/gp/product/B096VN8LY6?th=1&linkCode=ll2&tag=l0c39-21&linkId=5ac29bfa29bd5f504aca5161ea6eb515&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
+                                    <a href="https://www.amazon.it/dp/B09KQ5J7YJ?th=1&linkCode=ll2&tag=l0c39-21&linkId=8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c&ref=_as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="btn btn-amazon">
                                         <i class="fab fa-amazon me-1"></i>Vedi
                                     </a>
                                 </div>
@@ -607,7 +910,7 @@
     </section>
 
     <!-- Footer -->
-        <footer class="footer-effects py-5" role="contentinfo">
+    <footer class="footer-effects py-5" role="contentinfo">
         
         <div class="container" style="position: relative; z-index: 1;">
             <div class="row g-4">
@@ -624,10 +927,10 @@
                             <a href="/index.html" class="text-decoration-none" style="opacity: 0.8;">
                                 <i class="fas fa-home me-1"></i>Home
                             </a>
-                            <a href="../../../tutte-le-categorie.html" class="text-decoration-none" style="opacity: 0.8;">
+                            <a href="/tutte-le-categorie.html" class="text-decoration-none" style="opacity: 0.8;">
                                 <i class="fas fa-th-large me-1"></i>Categorie
                             </a>
-                            <a href="../../../raccomandazioni/index.html" class="text-decoration-none" style="opacity: 0.8;">
+                            <a href="/niches/raccomandazioni/index.html" class="text-decoration-none" style="opacity: 0.8;">
                                 <i class="fas fa-star me-1"></i>Raccomandazioni
                             </a>
                         </div>
@@ -667,16 +970,16 @@
                             <i class="fas fa-info-circle me-2"></i>Info & Contatti
                         </h5>
                         <div class="d-flex flex-column gap-2">
-                            <a href="../../../about.html" class="text-decoration-none" style="opacity: 0.8;">
+                            <a href="/about.html" class="text-decoration-none" style="opacity: 0.8;">
                                 <i class="fas fa-user me-2"></i>Chi Siamo
                             </a>
-                            <a href="../../../contact.html" class="text-decoration-none" style="opacity: 0.8;">
+                            <a href="/contact.html" class="text-decoration-none" style="opacity: 0.8;">
                                 <i class="fas fa-envelope me-2"></i>Contatti
                             </a>
-                            <a href="../../../privacy.html" class="text-decoration-none" style="opacity: 0.8;">
+                            <a href="/privacy.html" class="text-decoration-none" style="opacity: 0.8;">
                                 <i class="fas fa-shield-alt me-2"></i>Privacy Policy
                             </a>
-                            <a href="../../../disclaimer.html" class="text-decoration-none" style="opacity: 0.8;">
+                            <a href="/disclaimer.html" class="text-decoration-none" style="opacity: 0.8;">
                                 <i class="fas fa-exclamation-triangle me-2"></i>Disclaimer
                             </a>
                         </div>
@@ -697,41 +1000,13 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Copyright -->
-            <div class="text-center mt-4">
-                <p class="mb-0" style="opacity: 0.8;">
-                    © 2026 Smart Choices Guide. Tutti i diritti riservati.
-                </p>
-            </div>
-        </div>
-    </footer>
-
-
-    <style>
-        .footer-v4 {
-            background: rgba(10, 10, 10, 0.95);
-            -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .amazon-disclaimer-v4 {
-            background: linear-gradient(135deg, rgba(255, 193, 7, 0.25) 0%, rgba(255, 152, 0, 0.25) 100%);
-            border: 2px solid rgba(255, 193, 7, 0.5);
-            box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
-        }
-        .footer-v4 a:hover {
-            color: #fbbf24 !important;
-        }
-    </style>
-                </div>
-            </div>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- Search JS -->
+    <script src="/js/search.js" defer></script>
 
 </body>
 </html>

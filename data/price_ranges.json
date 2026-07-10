@@ -13,5 +13,9 @@
   "casa/climatizzazione": { "min": 0, "max": 50 },
   "giochi-tavolo": { "min": 0, "max": 50 },
   "manga-anime": { "min": 0, "max": 30 },
+  "outdoor-camping": { "min": 0, "max": 100 },
+  "pet-care": { "min": 0, "max": 70 },
+  "sport/abbigliamento-sportivo": { "min": 0, "max": 50 },
+  "viaggi-vacanze": { "min": 0, "max": 100 },
   "viaggi-vacanze/mare-spiaggia": { "min": 0, "max": 35 }
 }

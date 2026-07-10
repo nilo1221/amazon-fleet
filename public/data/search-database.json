@@ -1,0 +1,131 @@
+{
+  "niches": [
+    {
+      "name": "Arredamento Casa",
+      "url": "niches/casa/arredamento-casa/index.html",
+      "icon": "fa-couch",
+      "keywords": ["arredamento", "casa", "mobili", "decor", "interni"]
+    },
+    {
+      "name": "Caffè e Capsule",
+      "url": "niches/casa/caffe-capsule/index.html",
+      "icon": "fa-coffee",
+      "keywords": ["caffe", "capsule", "macchina caffe", "espresso", "nespresso"]
+    },
+    {
+      "name": "Climatizzazione",
+      "url": "niches/casa/climatizzazione/index.html",
+      "icon": "fa-snowflake",
+      "keywords": ["clima", "aria condizionata", "ventilatore", "riscaldamento", "deumidificatore"]
+    },
+    {
+      "name": "Cucina Elettrodomestici",
+      "url": "niches/casa/cucina-elettrodomestici/index.html",
+      "icon": "fa-blender",
+      "keywords": ["cucina", "elettrodomestici", "frullatore", "robot", "pentole"]
+    },
+    {
+      "name": "Giochi da Tavolo",
+      "url": "niches/giochi-tavolo/index.html",
+      "icon": "fa-chess",
+      "keywords": ["giochi", "tavolo", "board games", "carte", "dadi"]
+    },
+    {
+      "name": "Manga e Anime",
+      "url": "niches/manga-anime/index.html",
+      "icon": "fa-book",
+      "keywords": ["manga", "anime", "fumetti", "giapponese", "naruto"]
+    },
+    {
+      "name": "Abbigliamento Bambino",
+      "url": "niches/moda/abbigliamento-bambino/index.html",
+      "icon": "fa-child",
+      "keywords": ["bambino", "bambina", "infanzia", "kids", "neonato"]
+    },
+    {
+      "name": "Abbigliamento Donna",
+      "url": "niches/moda/abbigliamento-donna/index.html",
+      "icon": "fa-female",
+      "keywords": ["donna", "femminile", "dress", "vestiti", "fashion"]
+    },
+    {
+      "name": "Abbigliamento Lavoro",
+      "url": "niches/moda/abbigliamento-lavoro/index.html",
+      "icon": "fa-hard-hat",
+      "keywords": ["lavoro", "uniforme", "professionale", "sicurezza", "operativo"]
+    },
+    {
+      "name": "Abbigliamento Serie TV Cinema",
+      "url": "niches/moda/abbigliamento-serie-tv-cinema/index.html",
+      "icon": "fa-film",
+      "keywords": ["serie tv", "cinema", "film", "merchandise", "costume"]
+    },
+    {
+      "name": "Abbigliamento Uomo",
+      "url": "niches/moda/abbigliamento-uomo/index.html",
+      "icon": "fa-male",
+      "keywords": ["uomo", "maschile", "men", "fashion", "style"]
+    },
+    {
+      "name": "Serie TV Cinema",
+      "url": "niches/moda/serie-tv-cinema/index.html",
+      "icon": "fa-tv",
+      "keywords": ["serie tv", "cinema", "film", "show", "netflix"]
+    },
+    {
+      "name": "Outdoor Camping",
+      "url": "niches/outdoor-camping/index.html",
+      "icon": "fa-campground",
+      "keywords": ["outdoor", "camping", "tend", "escursionismo", "natura"]
+    },
+    {
+      "name": "Raccomandazioni",
+      "url": "niches/raccomandazioni/index.html",
+      "icon": "fa-star",
+      "keywords": ["raccomandazioni", "migliori", "top", "consigli", "scelte"]
+    },
+    {
+      "name": "Abbigliamento Sportivo",
+      "url": "niches/sport/abbigliamento-sportivo/index.html",
+      "icon": "fa-running",
+      "keywords": ["sport", "fitness", "abbigliamento sportivo", "gym", "ciclismo"]
+    },
+    {
+      "name": "Elite Gaming Gear",
+      "url": "niches/tech/elite-gaming-gear/index.html",
+      "icon": "fa-gamepad",
+      "keywords": ["gaming", "pc", "videogiochi", "periferiche", "rtx"]
+    },
+    {
+      "name": "Tech",
+      "url": "niches/tech/index.html",
+      "icon": "fa-microchip",
+      "keywords": ["tecnologia", "tech", "gadget", "elettronica", "innovazione"]
+    },
+    {
+      "name": "Smartphone Tech",
+      "url": "niches/tech/smartphone-tech/index.html",
+      "icon": "fa-mobile-alt",
+      "keywords": ["smartphone", "telefono", "mobile", "iphone", "android"]
+    },
+    {
+      "name": "Viaggi Vacanze",
+      "url": "niches/viaggi-vacanze/index.html",
+      "icon": "fa-plane",
+      "keywords": ["viaggi", "vacanze", "turismo", "mare", "montagna"]
+    },
+    {
+      "name": "Mare Spiaggia",
+      "url": "niches/viaggi-vacanze/mare-spiaggia/index.html",
+      "icon": "fa-umbrella-beach",
+      "keywords": ["mare", "spiaggia", "estivo", "ombrellone", "costume"]
+    },
+    {
+      "name": "Pet Care",
+      "url": "niches/pet-care/index.html",
+      "icon": "fa-paw",
+      "keywords": ["pet", "animali", "cane", "gatto", "cani", "gatti", "animali domestici", "zampa", "cibo animali", "accessori animali"]
+    }
+  ],
+  "products": []
+}

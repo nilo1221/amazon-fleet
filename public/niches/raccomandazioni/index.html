@@ -348,25 +348,40 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-modern" role="navigation" aria-label="Navigazione principale">
+        <div class="container d-flex align-items-center">
+            <!-- Logo Block (Left) -->
             <a class="navbar-logo-block d-flex align-items-center text-decoration-none" href="/index.html" aria-label="Smart Choices Guide - Home">
-                <img src="/images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon" loading="lazy">
+                <img src="/images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon">
                 <div class="navbar-logo-text">
                     <div class="navbar-logo-title">SMART CHOICES GUIDE</div>
                     <div class="navbar-logo-subtitle">Migliori Guide d'Acquisto Amazon | Recensioni e Offerte</div>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+            <!-- Spacer (Center) -->
+            <div class="flex-grow-1"></div>
+
+            <!-- Search Bar (Right) -->
+            <div class="navbar-search-container d-none d-lg-block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cerca per categoria...">
+                    <button class="btn btn-primary" type="button" aria-label="Cerca">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../tutte-le-categorie.html">Tutte le Categorie</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Raccomandazioni</a>

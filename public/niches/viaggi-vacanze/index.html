@@ -20,8 +20,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/styles.css">
-    <!-- AI Assistant CSS -->
-    <link rel="stylesheet" href="../ai-assistant/ai-assistant.css">
     
     <style>
         :root {
@@ -217,25 +215,45 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-modern" role="navigation" aria-label="Navigazione principale">
+        <div class="container d-flex align-items-center">
+            <!-- Logo Block (Left) -->
             <a class="navbar-logo-block d-flex align-items-center text-decoration-none" href="/index.html" aria-label="Smart Choices Guide - Home">
-                <img src="/images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon" loading="lazy">
+                <img src="/images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon">
                 <div class="navbar-logo-text">
                     <div class="navbar-logo-title">SMART CHOICES GUIDE</div>
                     <div class="navbar-logo-subtitle">Migliori Guide d'Acquisto Amazon | Recensioni e Offerte</div>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+            <!-- Spacer (Center) -->
+            <div class="flex-grow-1"></div>
+
+            <!-- Search Bar (Right) -->
+            <div class="navbar-search-container d-none d-lg-block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cerca per categoria...">
+                    <button class="btn btn-primary" type="button" aria-label="Cerca">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../niches/raccomandazioni/index.html">Raccomandazioni</a>
+                        <a class="nav-link" href="../niches/raccomandazioni/index.html">
+                            <i class="fas fa-star me-1"></i>Raccomandazioni
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -329,7 +347,7 @@
                     
                     <!-- GUJOIN Zaino Tattico -->
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card product-card h-100 shadow-sm">
                             <div class="card-body p-4">
                                 <span class="badge bg-success mb-2">Escursionismo</span>
                                 <h5 class="card-title fw-bold mb-3">🎒 GUJOIN Zaino Tattico 50L Impermeabile</h5>
@@ -350,7 +368,7 @@
 
                     <!-- VANKEV Zaino Ryanair -->
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card product-card h-100 shadow-sm">
                             <div class="card-body p-4">
                                 <span class="badge bg-primary mb-2">Volo Aereo</span>
                                 <h5 class="card-title fw-bold mb-3">✈️ VANKEV Zaino Ryanair 40x20x25 Bagaglio a Mano</h5>
@@ -371,7 +389,7 @@
 
                     <!-- Aerolite Zaino Ryanair -->
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card product-card h-100 shadow-sm">
                             <div class="card-body p-4">
                                 <span class="badge bg-primary mb-2">Volo Aereo</span>
                                 <h5 class="card-title fw-bold mb-3">✈️ Aerolite Zaino Ryanair 40x20x25 Bagaglio Massimo</h5>
@@ -397,7 +415,7 @@
                     
                     <!-- Shavont Valigia Silenziosa -->
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card product-card h-100 shadow-sm">
                             <div class="card-body p-4">
                                 <span class="badge bg-warning mb-2">Valigie da Viaggio</span>
                                 <h5 class="card-title fw-bold mb-3">🧳 Shavont Valigia Silenziosa con Serratura</h5>
@@ -423,7 +441,7 @@
                     
                     <!-- roba Seggiolino Gonfiabile -->
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card product-card h-100 shadow-sm">
                             <div class="card-body p-4">
                                 <span class="badge bg-info mb-2">Viaggi Bambini</span>
                                 <h5 class="card-title fw-bold mb-3">👶 roba Seggiolino Gonfiabile per Bambini Booster Seat</h5>
@@ -444,7 +462,7 @@
 
                     <!-- Adattatore Universale -->
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card product-card h-100 shadow-sm">
                             <div class="card-body p-4">
                                 <span class="badge bg-secondary mb-2">Accessori Viaggio</span>
                                 <h5 class="card-title fw-bold mb-3">🔌 Adattatore Universale Worldwide</h5>
@@ -465,7 +483,7 @@
 
                     <!-- FAVIAN Organizer Elettronico -->
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card product-card h-100 shadow-sm">
                             <div class="card-body p-4">
                                 <span class="badge bg-secondary mb-2">Organizzazione Viaggio</span>
                                 <h5 class="card-title fw-bold mb-3">💼 FAVIAN Organizer Elettronico Viaggio</h5>
@@ -486,7 +504,7 @@
 
                     <!-- Cirorld Cuscino Cervicale -->
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card product-card h-100 shadow-sm">
                             <div class="card-body p-4">
                                 <span class="badge bg-secondary mb-2">Comfort Viaggio</span>
                                 <h5 class="card-title fw-bold mb-3">😴 Cirorld Cuscino Cervicale Regolabile</h5>
@@ -507,7 +525,7 @@
 
                     <!-- Ventilatore Regolabile Ricaricabile -->
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card product-card h-100 shadow-sm">
                             <div class="card-body p-4">
                                 <span class="badge bg-secondary mb-2">Comfort Viaggio</span>
                                 <h5 class="card-title fw-bold mb-3">🌡️ Ventilatore Regolabile Ricaricabile</h5>
@@ -528,7 +546,7 @@
 
                     <!-- Sacchetti Sottovuoto Professionali -->
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card product-card h-100 shadow-sm">
                             <div class="card-body p-4">
                                 <span class="badge bg-secondary mb-2">Organizzazione Bagaglio</span>
                                 <h5 class="card-title fw-bold mb-3">📦 Sacchetti Sottovuoto Professionali</h5>
@@ -554,7 +572,7 @@
                     
                     <!-- SMARTBOX Cofanetto -->
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card product-card h-100 shadow-sm">
                             <div class="card-body p-4">
                                 <span class="badge bg-danger mb-2">Esperienze di Viaggio</span>
                                 <h5 class="card-title fw-bold mb-3">🎁 SMARTBOX Cofanetto Originale Esperienze</h5>
@@ -576,9 +594,6 @@
             </div>
         </div>
     </section>
-
-    <!-- AI Assistant -->
-    <div id="ai-assistant-container"></div>
 
     <!-- Footer -->
         <footer class="footer-effects py-5" role="contentinfo">
@@ -701,8 +716,6 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AI Assistant JS -->
-    <script src="../ai-assistant/ai-assistant.js"></script>
 
 
 </body>
