@@ -278,7 +278,7 @@
         <div class="container d-flex align-items-center">
             <!-- Logo Block (Left) -->
             <a class="navbar-logo-block d-flex align-items-center text-decoration-none" href="../../../index.html" aria-label="Smart Choices Guide - Home">
-                <img src="../../assets/images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon" loading="lazy">
+                <img src="../../../assets/images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon" loading="lazy">
                 <div class="navbar-logo-text">
                     <div class="navbar-logo-title">SMART CHOICES GUIDE</div>
                     <div class="navbar-logo-subtitle">Migliori Guide d'Acquisto Amazon | Recensioni e Offerte</div>
@@ -315,7 +315,7 @@
                 </a>
                 <a href="#occhiali-sole" class="text-decoration-none">
                     <div class="category-card">
-                        <i class="fas fa-glasses text-mare-gold"></i>
+                        <i class="fas fa-glasses text-mare-turquoise"></i>
                         <h6 class="fw-bold">Occhiali da Sole</h6>
                     </div>
                 </a>
@@ -333,13 +333,13 @@
                 </a>
                 <a href="#borse-mare" class="text-decoration-none">
                     <div class="category-card">
-                        <i class="fas fa-suitcase text-mare-gold"></i>
+                        <i class="fas fa-suitcase text-mare-turquoise"></i>
                         <h6 class="fw-bold">Borse Mare</h6>
                     </div>
                 </a>
                 <a href="#accessori-estate" class="text-decoration-none">
                     <div class="category-card">
-                        <i class="fas fa-sun text-mare-gold"></i>
+                        <i class="fas fa-sun text-mare-turquoise"></i>
                         <h6 class="fw-bold">Accessori Estate</h6>
                     </div>
                 </a>
@@ -444,7 +444,7 @@
     </section>
 
     <!-- Footer -->
-    <footer role="contentinfo">
+    <footer class="footer-effects py-5" role="contentinfo">
         <div class="container">
             <div class="row g-4">
                 <!-- Brand & Info Card -->
@@ -477,7 +477,7 @@
                             <i class="fas fa-share-alt me-2"></i>Seguici
                         </h5>
                         <div class="d-flex justify-content-center gap-3 mb-3">
-                            <a href="https://t.me/ilmigliorprezzo" class="social-icon telegram-icon" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                            <a href="https://t.me/ilmigliorprezzo" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
                                 <i class="fab fa-telegram"></i>
                             </a>
                             <a href="#" class="social-icon" aria-label="Facebook">
@@ -542,6 +542,65 @@
             </div>
         </div>
     </footer>
+
+    <style>
+    .footer-effects {
+        background: var(--primary-color);
+        position: relative;
+    }
+    .footer-effects .glass-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        padding: 30px;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+    }
+    .footer-effects .glass-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.25);
+    }
+    .footer-effects .social-icon {
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        color: white;
+        font-size: 1.3rem;
+        transition: all 0.3s ease;
+    }
+    .footer-effects .social-icon:hover {
+        transform: translateY(-5px) rotate(360deg);
+        background: rgba(255, 255, 255, 0.4);
+    }
+    .footer-effects .amazon-disclaimer {
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 193, 7, 0.3);
+        border-radius: 15px;
+        padding: 20px;
+        animation: pulse 3s ease-in-out infinite;
+        position: relative;
+        z-index: 1;
+    }
+    @keyframes pulse {
+        0%, 100% { box-shadow: 0 0 20px rgba(255, 193, 7, 0.2); }
+        50% { box-shadow: 0 0 40px rgba(255, 193, 7, 0.4); }
+    }
+    .footer-effects h5, .footer-effects p, .footer-effects a {
+        color: white;
+    }
+    .footer-effects a:hover {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+    </style>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
