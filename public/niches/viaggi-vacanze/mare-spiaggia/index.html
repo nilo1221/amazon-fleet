@@ -445,7 +445,8 @@
 
     <!-- Footer -->
     <footer class="footer-effects py-5" role="contentinfo">
-        <div class="container">
+        <canvas id="waveCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
+        <div class="container" style="position: relative; z-index: 1;">
             <div class="row g-4">
                 <!-- Brand & Info Card -->
                 <div class="col-lg-4">
@@ -477,16 +478,16 @@
                             <i class="fas fa-share-alt me-2"></i>Seguici
                         </h5>
                         <div class="d-flex justify-content-center gap-3 mb-3">
-                            <a href="https://t.me/ilmigliorprezzo" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                            <a href="https://t.me/ilmigliorprezzo" class="social-icon telegram" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
                                 <i class="fab fa-telegram"></i>
                             </a>
-                            <a href="#" class="social-icon" aria-label="Facebook">
+                            <a href="#" class="social-icon facebook" aria-label="Facebook">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="social-icon" aria-label="Instagram">
+                            <a href="#" class="social-icon instagram" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" class="social-icon" aria-label="Twitter">
+                            <a href="#" class="social-icon twitter" aria-label="Twitter">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </div>
@@ -498,7 +499,7 @@
 
                 <!-- Legal & Contact Card -->
                 <div class="col-lg-4">
-                    <div class="glass-card">
+                    <div class="glass-card info-card">
                         <h5 class="fw-bold mb-3">
                             <i class="fas fa-info-circle me-2"></i>Info & Contatti
                         </h5>
@@ -545,23 +546,35 @@
 
     <style>
     .footer-effects {
-        background: var(--primary-color);
+        background: linear-gradient(135deg, #00CED1 0%, #20B2AA 50%, #008B8B 100%);
         position: relative;
+        overflow: hidden;
     }
     .footer-effects .glass-card {
         background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 20px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(0, 206, 209, 0.3);
+        border-radius: 12px;
         padding: 30px;
         transition: all 0.3s ease;
         position: relative;
         z-index: 1;
     }
     .footer-effects .glass-card:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-3px);
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .footer-effects .glass-card.info-card {
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(218, 165, 32, 0.1));
+        border: 1px solid rgba(255, 215, 0, 0.3);
+    }
+    .footer-effects .glass-card.info-card h5 {
+        color: #FFD700;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    .footer-effects .glass-card.info-card h5 i {
+        color: #FFD700;
     }
     .footer-effects .social-icon {
         width: 50px;
@@ -569,36 +582,62 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.15);
         border-radius: 50%;
         color: white;
         font-size: 1.3rem;
         transition: all 0.3s ease;
     }
     .footer-effects .social-icon:hover {
-        transform: translateY(-5px) rotate(360deg);
-        background: rgba(255, 255, 255, 0.4);
+        transform: translateY(-3px);
+        background: rgba(255, 255, 255, 0.25);
+    }
+    .footer-effects .social-icon.telegram {
+        background: #0088cc;
+        color: white;
+    }
+    .footer-effects .social-icon.telegram:hover {
+        background: #006699;
+        box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+    }
+    .footer-effects .social-icon.facebook:hover {
+        background: #1877F2;
+        color: white;
+    }
+    .footer-effects .social-icon.instagram:hover {
+        background: linear-gradient(45deg, #C13584, #833AB4, #FCAF45);
+        color: white;
+    }
+    .footer-effects .social-icon.twitter:hover {
+        background: #1DA1F2;
+        color: white;
     }
     .footer-effects .amazon-disclaimer {
-        background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 193, 7, 0.3);
-        border-radius: 15px;
-        padding: 20px;
-        animation: pulse 3s ease-in-out infinite;
+        background: linear-gradient(135deg, rgba(0, 206, 209, 0.12), rgba(0, 139, 139, 0.08));
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        border-radius: 12px;
+        padding: 25px;
         position: relative;
         z-index: 1;
     }
-    @keyframes pulse {
-        0%, 100% { box-shadow: 0 0 20px rgba(255, 193, 7, 0.2); }
-        50% { box-shadow: 0 0 40px rgba(255, 193, 7, 0.4); }
+    .footer-effects .amazon-disclaimer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #FFD700, transparent);
+        border-radius: 2px;
     }
     .footer-effects h5, .footer-effects p, .footer-effects a {
         color: white;
     }
     .footer-effects a:hover {
-        color: rgba(255, 255, 255, 0.8) !important;
+        color: rgba(255, 255, 255, 0.85) !important;
     }
     </style>
 
