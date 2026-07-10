@@ -1,0 +1,17 @@
+{
+  "moda/abbigliamento-lavoro": { "min": 0, "max": 90 },
+  "moda/abbigliamento-bambino": { "min": 0, "max": 30 },
+  "moda/abbigliamento-donna": { "min": 0, "max": 20 },
+  "moda/abbigliamento-uomo": { "min": 0, "max": 35 },
+  "moda/serie-tv-cinema": { "min": 0, "max": 50 },
+  "moda/abbigliamento-serie-tv-cinema": { "min": 0, "max": 100 },
+  "tech/smartphone-tech": { "min": 0, "max": 50 },
+  "tech/elite-gaming-gear": { "min": 0, "max": 500 },
+  "casa/arredamento-casa": { "min": 0, "max": 100 },
+  "casa/cucina-elettrodomestici": { "min": 0, "max": 300 },
+  "casa/caffe-capsule": { "min": 0, "max": 30 },
+  "casa/climatizzazione": { "min": 0, "max": 50 },
+  "giochi-tavolo": { "min": 0, "max": 50 },
+  "manga-anime": { "min": 0, "max": 30 },
+  "viaggi-vacanze/mare-spiaggia": { "min": 0, "max": 35 }
+}

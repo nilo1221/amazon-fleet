@@ -1,0 +1,29 @@
+# Environment Variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Node Modules
+node_modules/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build Files
+dist/
+build/
+
+# Data files (except price_ranges.json)
+data/price_analysis.json
+data/sent_products.json
+data/queue.json
+
+# API scripts
+api/run_bot.py
