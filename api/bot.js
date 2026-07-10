@@ -15,6 +15,7 @@ const NICCHIE_DA_CONTROLLARE = [
     'moda/abbigliamento-donna',
     'moda/abbigliamento-uomo',
     'moda/serie-tv-cinema',
+    'moda/abbigliamento-serie-tv-cinema',
     'tech/smartphone-tech',
     'tech/elite-gaming-gear',
     'casa/arredamento-casa',
@@ -25,7 +26,8 @@ const NICCHIE_DA_CONTROLLARE = [
     'manga-anime',
     'outdoor-camping',
     'sport/abbigliamento-sportivo',
-    'viaggi-vacanze'
+    'viaggi-vacanze',
+    'viaggi-vacanze/mare-spiaggia'
 ];
 
 // Percorsi dei file
