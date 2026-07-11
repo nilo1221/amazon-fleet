@@ -137,6 +137,16 @@
     .footer-effects .social-icon.telegram:hover {
         background: rgba(0, 136, 204, 0.3);
     }
+    .footer-effects .amazon-disclaimer {
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(255, 215, 0, 0.08));
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        border-radius: 12px;
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+    }
     </style>
 </head>
 <body>
@@ -394,11 +404,33 @@
                         <h5 class="fw-bold mb-3">
                             <i class="fas fa-info-circle me-2"></i>Info & Contatti
                         </h5>
-                        <p class="mb-2" style="opacity: 0.8;">
-                            <i class="fas fa-envelope me-2"></i>info@smartchoicesguide.com
+                        <div class="d-flex flex-column gap-2">
+                            <a href="../../../about.html" class="text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-user me-2"></i>Chi Siamo
+                            </a>
+                            <a href="../../../contact.html" class="text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-envelope me-2"></i>Contatti
+                            </a>
+                            <a href="../../../privacy.html" class="text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-shield-alt me-2"></i>Privacy Policy
+                            </a>
+                            <a href="../../../disclaimer.html" class="text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-exclamation-triangle me-2"></i>Disclaimer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Amazon Disclaimer -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="amazon-disclaimer">
+                        <p class="mb-2 text-warning fw-bold text-center">
+                            <i class="fab fa-amazon me-2 fa-lg"></i>Disclaimer Amazon Associates
                         </p>
-                        <p class="small" style="opacity: 0.7;">
-                            © 2026 Smart Choices Guide. Tutti i diritti riservati.
+                        <p class="small text-center" style="opacity: 0.8;">
+                            In qualità di Affiliato Amazon, riceviamo un compenso per gli acquisti idonei effettuati tramite i nostri link. Questo non influisce sul prezzo per te.
                         </p>
                     </div>
                 </div>
