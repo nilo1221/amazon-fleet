@@ -37,7 +37,6 @@ const NICCHIE_DA_CONTROLLARE = [
     'moda/abbigliamento-serie-tv-cinema',
     'tech/smartphone-tech',
     'tech/elite-gaming-gear',
-    'tech/smartwatch',
     'casa/arredamento-casa',
     'casa/cucina-elettrodomestici',
     'casa/caffe-capsule',
