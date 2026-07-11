@@ -288,6 +288,16 @@ async function sendToTelegram(product) {
                     `✨ <b>Non perdere questa offerta!</b>${hashtags}`;
     
     try {
+        // Genera parametri UTM per tracking GA4
+        const utmSource = 'telegram';
+        const utmMedium = 'bot';
+        const utmCampaign = `smartwatch_${new Date().toISOString().split('T')[0]}`;
+        const utmContent = product.title.replace(/\s+/g, '_').toLowerCase().substring(0, 50);
+        
+        const amazonLinkWithTracking = `${product.link}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&utm_content=${utmContent}`;
+        const channelLinkWithTracking = `${TELEGRAM_CHANNEL_URL}?utm_source=${utmSource}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&utm_content=channel`;
+        const pageLinkWithTracking = `${SITE_URL}/niches/${product.niche}/index.html?utm_source=${utmSource}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&utm_content=page`;
+        
         // Se c'è immagine, invia foto
         if (product.image) {
             await axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, {
@@ -298,11 +308,11 @@ async function sendToTelegram(product) {
                 reply_markup: {
                     inline_keyboard: [
                         [
-                            { text: "🛒 Acquista su Amazon", url: product.link },
-                            { text: "📱 Unisciti al nostro canale", url: TELEGRAM_CHANNEL_URL }
+                            { text: "🛒 Acquista su Amazon", url: amazonLinkWithTracking },
+                            { text: "📱 Unisciti al nostro canale", url: channelLinkWithTracking }
                         ],
                         [
-                            { text: "🌐 Vedi tutti i prodotti", url: `${SITE_URL}/niches/${product.niche}/index.html` }
+                            { text: "🌐 Vedi tutti i prodotti", url: pageLinkWithTracking }
                         ]
                     ]
                 }
@@ -317,11 +327,11 @@ async function sendToTelegram(product) {
                 reply_markup: {
                     inline_keyboard: [
                         [
-                            { text: "🛒 Acquista su Amazon", url: product.link },
-                            { text: "📱 Unisciti al nostro canale", url: TELEGRAM_CHANNEL_URL }
+                            { text: "🛒 Acquista su Amazon", url: amazonLinkWithTracking },
+                            { text: "📱 Unisciti al nostro canale", url: channelLinkWithTracking }
                         ],
                         [
-                            { text: "🌐 Vedi tutti i prodotti", url: `${SITE_URL}/niches/${product.niche}/index.html` }
+                            { text: "🌐 Vedi tutti i prodotti", url: pageLinkWithTracking }
                         ]
                     ]
                 }
