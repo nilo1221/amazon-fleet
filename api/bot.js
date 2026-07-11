@@ -26,6 +26,7 @@ const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const SITE_URL = process.env.SITE_URL;
 const TELEGRAM_CHANNEL_URL = process.env.TELEGRAM_CHANNEL_URL || 'https://t.me/ilmigliorprezzo';
+const INSTAGRAM_URL = process.env.INSTAGRAM_URL || 'https://www.instagram.com/smartchoiceguideamazon/';
 
 // Nicchie da controllare (solo nicchie esistenti)
 const NICCHIE_DA_CONTROLLARE = [
@@ -295,7 +296,7 @@ async function sendToTelegram(product) {
         const utmContent = product.title.replace(/\s+/g, '_').toLowerCase().substring(0, 50);
         
         const amazonLinkWithTracking = `${product.link}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&utm_content=${utmContent}`;
-        const channelLinkWithTracking = `${TELEGRAM_CHANNEL_URL}?utm_source=${utmSource}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&utm_content=channel`;
+        const instagramLinkWithTracking = `${INSTAGRAM_URL}?utm_source=${utmSource}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&utm_content=instagram`;
         const pageLinkWithTracking = `${SITE_URL}/niches/${product.niche}/index.html?utm_source=${utmSource}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&utm_content=page`;
         
         // Se c'è immagine, invia foto
@@ -309,7 +310,7 @@ async function sendToTelegram(product) {
                     inline_keyboard: [
                         [
                             { text: "🛒 Acquista su Amazon", url: amazonLinkWithTracking },
-                            { text: "📱 Unisciti al nostro canale", url: channelLinkWithTracking }
+                            { text: "� Seguici su Instagram", url: instagramLinkWithTracking }
                         ],
                         [
                             { text: "🌐 Vedi tutti i prodotti", url: pageLinkWithTracking }
@@ -328,7 +329,7 @@ async function sendToTelegram(product) {
                     inline_keyboard: [
                         [
                             { text: "🛒 Acquista su Amazon", url: amazonLinkWithTracking },
-                            { text: "📱 Unisciti al nostro canale", url: channelLinkWithTracking }
+                            { text: "� Seguici su Instagram", url: instagramLinkWithTracking }
                         ],
                         [
                             { text: "🌐 Vedi tutti i prodotti", url: pageLinkWithTracking }
