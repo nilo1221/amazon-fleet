@@ -45,6 +45,7 @@ const NICCHIE_DA_CONTROLLARE = [
     'outdoor-camping',
     'pet-care',
     'sport/abbigliamento-sportivo',
+    'sport/integratori-pre-workout',
     'viaggi-vacanze',
     'viaggi-vacanze/mare-spiaggia'
 ];
@@ -212,7 +213,8 @@ function extractProductsFromHTML(html, nichePath) {
     const $ = cheerio.load(html);
     const products = [];
     
-    $('.product-card').each((index, element) => {
+    // Cerca prodotti con classe product-card o card con link Amazon
+    $('.product-card, .card').each((index, element) => {
         const $card = $(element);
         const title = $card.find('.card-title').text().trim();
         const description = $card.find('.card-text').text().trim();
@@ -244,9 +246,13 @@ async function sendToTelegram(product) {
         return false;
     }
     
-    // Crea caption con prezzo se disponibile
-    const priceText = product.price ? `💰 Prezzo: ${product.price.toFixed(2)}€\n\n` : '';
-    const caption = `🔥 <b>${product.title}</b>\n\n${priceText}${product.description}\n\n📦 <b>Acquista ora su Amazon</b>`;
+    // Crea caption migliorato con prezzo se disponibile
+    const priceText = product.price ? `💰 <b>Prezzo:</b> ${product.price.toFixed(2)}€\n\n` : '';
+    const caption = `🔥 <b>NUOVO PRODOTTO SCOPERTO!</b>\n\n` +
+                    `📦 <b>${product.title}</b>\n\n` +
+                    `${priceText}` +
+                    `📝 ${product.description}\n\n` +
+                    `✨ <b>Non perdere questa offerta!</b>`;
     
     try {
         // Se c'è immagine, invia foto
@@ -258,8 +264,13 @@ async function sendToTelegram(product) {
                 parse_mode: 'HTML',
                 reply_markup: {
                     inline_keyboard: [
-                        [{ text: "🛒 Acquista su Amazon", url: product.link }],
-                        [{ text: "🌐 Vedi tutti i prodotti", url: `${SITE_URL}/niches/${product.niche}/index.html` }]
+                        [
+                            { text: "🛒 Acquista su Amazon", url: product.link },
+                            { text: "📱 Unisciti al nostro canale", url: "https://t.me/ilmigliorprezzo" }
+                        ],
+                        [
+                            { text: "🌐 Vedi tutti i prodotti", url: `${SITE_URL}/niches/${product.niche}/index.html` }
+                        ]
                     ]
                 }
             });
@@ -272,8 +283,13 @@ async function sendToTelegram(product) {
                 disable_web_page_preview: false,
                 reply_markup: {
                     inline_keyboard: [
-                        [{ text: "🛒 Acquista su Amazon", url: product.link }],
-                        [{ text: "🌐 Vedi tutti i prodotti", url: `${SITE_URL}/niches/${product.niche}/index.html` }]
+                        [
+                            { text: "🛒 Acquista su Amazon", url: product.link },
+                            { text: "📱 Unisciti al nostro canale", url: "https://t.me/ilmigliorprezzo" }
+                        ],
+                        [
+                            { text: "🌐 Vedi tutti i prodotti", url: `${SITE_URL}/niches/${product.niche}/index.html` }
+                        ]
                     ]
                 }
             });
