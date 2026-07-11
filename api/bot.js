@@ -240,6 +240,32 @@ function extractProductsFromHTML(html, nichePath) {
     return products;
 }
 
+// Genera hashtag basati sulla nicchia
+function getNicheHashtags(niche) {
+    const hashtagMap = {
+        'tech/smartphone-tech': '#smartwatch #smartwatchbluetooth #smartwatchAI #fitnesswatch #orologiointelligente #tech #smartphonetech',
+        'sport/integratori-pre-workout': '#preworkout #integratori #fitness #bodybuilding #sport #palestra #energia',
+        'casa/arredamento-casa': '#arredamento #casa #decorazione #design #home #interior',
+        'default': '#offerte #amazon #shopping #sconti'
+    };
+    return hashtagMap[niche] || hashtagMap['default'];
+}
+
+// Genera hashtag basati sul prodotto
+function getProductHashtags(title, description) {
+    const text = `${title} ${description}`.toLowerCase();
+    const keywords = [
+        'chiamate', 'bluetooth', 'ai', 'assistente', 'vocale',
+        'sport', 'fitness', 'corsa', 'gym', 'palestra',
+        'impermeabile', 'waterproof', 'gps',
+        'cardio', 'frequenza', 'cardiaca', 'sonno',
+        'economico', 'prezzo', 'sconto', 'offerta'
+    ];
+    
+    const foundHashtags = keywords.filter(keyword => text.includes(keyword));
+    return foundHashtags.map(h => `#${h}`).join(' ');
+}
+
 // Invia messaggio a Telegram
 async function sendToTelegram(product) {
     if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
@@ -249,11 +275,17 @@ async function sendToTelegram(product) {
     
     // Crea caption migliorato con prezzo se disponibile
     const priceText = product.price ? `💰 <b>Prezzo:</b> ${product.price.toFixed(2)}€\n\n` : '';
+    
+    // Genera hashtag pertinenti basati sulla nicchia e sul prodotto
+    const nicheHashtags = getNicheHashtags(product.niche);
+    const productHashtags = getProductHashtags(product.title, product.description);
+    const hashtags = `\n\n${nicheHashtags} ${productHashtags}`;
+    
     const caption = `🔥 <b>NUOVO PRODOTTO SCOPERTO!</b>\n\n` +
                     `📦 <b>${product.title}</b>\n\n` +
                     `${priceText}` +
                     `📝 ${product.description}\n\n` +
-                    `✨ <b>Non perdere questa offerta!</b>`;
+                    `✨ <b>Non perdere questa offerta!</b>${hashtags}`;
     
     try {
         // Se c'è immagine, invia foto
