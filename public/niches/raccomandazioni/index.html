@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raccomandazioni - Smart Choices Guide</title>
-    <meta name="description" content="I migliori setup consigliati dai nostri esperti. Tactical Wear, Fitness Casa, Gaming, Smart Home, Viaggi & Camping, Fotografia.">
+    <title>Prodotti Strani ma Utili - Smart Choices Guide</title>
+    <meta name="description" content="Prodotti curiosi, strani ma incredibilmente utili. Scopri gadget innovativi e accessori insoliti su Amazon.">
     
     <!-- Google Analytics GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PLE2THHMT"></script>
@@ -20,11 +20,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/styles.css">
-    <!-- AI Assistant CSS -->
     
     <style>
         :root {
-            --primary-color: #2C3E50;
+            --primary-color: #9B59B6;
             --secondary-color: #f8f9fa;
             --accent-color: #E74C3C;
             --success-color: #27AE60;
@@ -40,217 +39,55 @@
         }
         
         .hero-section {
-            background: linear-gradient(135deg, #2C3E50 0%, #E74C3C 50%, #27AE60 100%);
+            background: linear-gradient(135deg, #9B59B6 0%, #3498DB 50%, #E74C3C 100%);
             color: white;
             padding: 80px 0;
             margin-bottom: 40px;
-            box-shadow: 0 4px 20px rgba(44, 62, 80, 0.3);
+            box-shadow: 0 4px 20px rgba(155, 89, 182, 0.3);
         }
         
-        .setup-card {
-            border: 2px solid #e0e0e0;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            background: white;
-        }
-        
-        .setup-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-color: var(--accent-color);
-        }
-        
-        .setup-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        
-        .setup-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-        
-        .setup-description {
-            color: #666;
-            margin-bottom: 20px;
-        }
-        
-        .product-item {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--accent-color);
-        }
-        
-        .product-name {
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-        
-        .product-category {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 10px;
-        }
-        
-        /* Gaming Setup Card Effects */
-        .gaming-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .gaming-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.5) !important;
-        }
-        
-        .gaming-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .gaming-card:hover::before {
-            left: 100%;
-        }
-        
-        /* Button Glow Effects */
-        .btn-glow {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-glow:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
-        }
-        
-        .btn-glow:active {
-            transform: scale(0.98);
-        }
-        
-        /* Fade-in Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease forwards;
-            opacity: 0;
-        }
-        
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
-        .delay-5 { animation-delay: 0.5s; }
-        .delay-6 { animation-delay: 0.6s; }
-        
-        /* Enhanced Glass Morphism */
-        .glass-enhanced {
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        }
-        
-        /* Pulse Animation for Setup Base */
-        @keyframes pulse-glow {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
-            }
-            50% {
-                box-shadow: 0 0 40px rgba(0, 191, 255, 0.8);
-            }
-        }
-        
-        .pulse-highlight {
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
-        
-        /* Icon Animation */
-        @keyframes icon-bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-        
-        .icon-animate:hover {
-            animation: icon-bounce 0.5s ease-in-out;
-        }
-        
-        .btn-amazon {
-            background: linear-gradient(135deg, #1C2833 0%, #E67E22 100%);
-            color: white;
+        .product-card {
             border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-weight: bold;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(28, 40, 51, 0.3);
+            height: 100%;
         }
         
-        .btn-amazon:hover {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(155, 89, 182, 0.3);
         }
         
         .category-badge {
-            background: linear-gradient(135deg, #3498DB 0%, #00BCD4 100%);
+            background: linear-gradient(135deg, #9B59B6, #3498DB);
             color: white;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
             font-weight: 600;
         }
         
-        .problem-solution {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-left: 4px solid #27AE60;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
+        .btn-amazon {
+            background: linear-gradient(135deg, #9B59B6 0%, #3498DB 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
         }
         
-        .problem-solution .problem {
-            color: #E74C3C;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        
-        .problem-solution .solution {
-            color: #27AE60;
-            font-weight: 600;
-        }
-        
-        .problem-solution i {
-            margin-right: 8px;
+        .btn-amazon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(155, 89, 182, 0.6);
         }
     </style>
     <style>
     .footer-effects {
-        background: linear-gradient(135deg, #2C3E50 0%, #0e2032 50%, #4a5c6e 100%);
+        background: linear-gradient(135deg, #9B59B6 0%, #3498DB 50%, #E74C3C 100%);
         position: relative;
         overflow: hidden;
     }
@@ -258,7 +95,7 @@
         background: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
-        border: 1px solid rgba(44, 62, 80, 0.3);
+        border: 1px solid rgba(155, 89, 182, 0.3);
         border-radius: 12px;
         padding: 30px;
         transition: all 0.3s ease;
@@ -268,17 +105,6 @@
     .footer-effects .glass-card:hover {
         transform: translateY(-3px);
         background: rgba(255, 255, 255, 0.2);
-    }
-    .footer-effects .glass-card.info-card {
-        background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(218, 165, 32, 0.1));
-        border: 1px solid rgba(255, 215, 0, 0.3);
-    }
-    .footer-effects .glass-card.info-card h5 {
-        color: #FFD700;
-        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-    }
-    .footer-effects .glass-card.info-card h5 i {
-        color: #FFD700;
     }
     .footer-effects .social-icon {
         width: 50px;
@@ -304,39 +130,6 @@
         background: #006699;
         box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
     }
-    .footer-effects .social-icon.facebook:hover {
-        background: #1877F2;
-        color: white;
-    }
-    .footer-effects .social-icon.instagram:hover {
-        background: linear-gradient(45deg, #C13584, #833AB4, #FCAF45);
-        color: white;
-    }
-    .footer-effects .social-icon.twitter:hover {
-        background: #1DA1F2;
-        color: white;
-    }
-    .footer-effects .amazon-disclaimer {
-        background: linear-gradient(135deg, rgba(44, 62, 80, 0.12), rgba(44, 62, 80, 0.08));
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 215, 0, 0.3);
-        border-radius: 12px;
-        padding: 25px;
-        position: relative;
-        z-index: 1;
-    }
-    .footer-effects .amazon-disclaimer::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background: linear-gradient(90deg, transparent, #FFD700, transparent);
-        border-radius: 2px;
-    }
     .footer-effects h5, .footer-effects p, .footer-effects a {
         color: white;
     }
@@ -344,13 +137,11 @@
         color: rgba(255, 255, 255, 0.85) !important;
     }
     </style>
-
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-modern" role="navigation" aria-label="Navigazione principale">
         <div class="container d-flex align-items-center">
-            <!-- Logo Block (Left) -->
             <a class="navbar-logo-block d-flex align-items-center text-decoration-none" href="/index.html" aria-label="Smart Choices Guide - Home">
                 <img src="/images/logo.png" alt="Smart Choices Guide Logo" class="navbar-logo-icon">
                 <div class="navbar-logo-text">
@@ -358,33 +149,17 @@
                     <div class="navbar-logo-subtitle">Migliori Guide d'Acquisto Amazon | Recensioni e Offerte</div>
                 </div>
             </a>
-
-            <!-- Spacer (Center) -->
             <div class="flex-grow-1"></div>
-
-            <!-- Search Bar (Right) -->
-            <div class="navbar-search-container d-none d-lg-block">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Cerca per categoria...">
-                    <button class="btn btn-primary" type="button" aria-label="Cerca">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Menu Toggle -->
             <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Raccomandazioni</a>
+                        <a class="nav-link active" href="#">Prodotti Strani</a>
                     </li>
                 </ul>
             </div>
@@ -393,721 +168,176 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-4">
-                <i class="fas fa-star me-3"></i>Raccomandazioni
-            </h1>
-            <p class="lead mb-4">I migliori setup consigliati dai nostri esperti. Prodotti selezionati per qualità e performance.</p>
-            <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 d-inline-block">
-                <i class="fas fa-user-tie me-2"></i>
-                <span class="fw-bold">Consigliati da Esperti del Settore</span>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Prodotti Strani ma Utili</h1>
+                    <p class="lead mb-4">Gadget curiosi, innovativi e incredibilmente utili.</p>
+                    <div class="bg-white bg-opacity-10 rounded-pill py-2 px-4 mb-4 d-inline-block">
+                        <i class="fab fa-amazon fa-lg me-2"></i>
+                        <span class="fw-bold">Tutti i prodotti disponibili su Amazon</span>
+                    </div>
+                    <a href="#products" class="btn btn-light btn-lg mt-3">Scopri i Prodotti</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="fas fa-lightbulb fa-10x mb-4"></i>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ULTIMATE GAMING SETUP - DREAM MACHINE -->
-    <section class="py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);">
-        <div class="container position-relative z-2">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold text-white mb-3" style="text-shadow: 0 0 30px rgba(255, 0, 128, 0.5);">
-                    <i class="fas fa-crown me-3" style="color: #FFD700;"></i>ULTIMATE GAMING SETUP
-                </h2>
-                <p class="lead text-white-50 mb-4">Il setup da sogno che ogni gamer desidera. Prestazioni da NASA, design da leggenda.</p>
-                <div class="bg-danger bg-opacity-20 rounded-pill py-2 px-4 d-inline-block border border-danger">
-                    <i class="fas fa-fire me-2 text-white"></i>
-                    <span class="fw-bold text-white">LIMITED EDITION - DREAM MACHINE</span>
-                </div>
-            </div>
-
-            <!-- Griglia Orizzontale Prodotti -->
-            <div class="row g-4">
-                <!-- CPU -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-secondary glass-enhanced gaming-card fade-in-up delay-1" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-microchip fa-3x text-info mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">Intel Core i9-14900</h5>
-                                <span class="badge bg-info">CPU BEAST</span>
+    <!-- Products Section -->
+    <section class="container mb-5" id="products">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="fw-bold mb-4 text-center">Prodotti Selezionati</h2>
+                
+                <!-- Fotografia Istantanea -->
+                <h3 class="fw-bold mb-3 text-center" id="fotografia"><i class="fas fa-camera me-2 text-primary"></i>Fotografia Istantanea</h3>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Fujifilm Instax mini Link 3</h5>
+                                <p class="card-text text-muted small">Stampante istantanea per smartphone. Stampa foto in 15 secondi, effetti AR e modalità collage.</p>
+                                <a href="https://www.amazon.it/dp/B0DB8SQSRH?tag=l0c39-21&linkCode=ll2" target="_blank" rel="noopener" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
                             </div>
-                            <p class="card-text text-white-50 small text-center">
-                                24 Core • 5.8 GHz Boost • 14th Gen<br>
-                                Processore desktop 8 P-core + 16 E-core per gaming estremo.
-                            </p>
-                            <a href="https://www.amazon.it/Intel-Core-i9-14900K-2-2GHz-sk1700/dp/B0CQ2ZKDKB?th=1&linkCode=ll2&tag=l0c39-21&linkId=bb9ab282db7aa4b6d11acec3d483fd77&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-outline-info w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- GPU -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-danger glass-enhanced gaming-card fade-in-up delay-2" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-tv fa-3x text-danger mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">ASUS ROG Astral RTX 5090</h5>
-                                <span class="badge bg-danger">GPU LEGEND</span>
+                <!-- Illuminazione -->
+                <h3 class="fw-bold mb-3 text-center" id="illuminazione"><i class="fas fa-lightbulb me-2 text-warning"></i>Illuminazione</h3>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Ring Light 10" RGB con Treppiede</h5>
+                                <p class="card-text text-muted small">Luce ad anello RGB con 40 modalità colori, treppiede e telecomando Bluetooth per selfie e video.</p>
+                                <a href="https://www.amazon.it/dp/B082XNZPF7?tag=l0c39-21&linkCode=ll2" target="_blank" rel="noopener" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
                             </div>
-                            <p class="card-text text-white-50 small text-center">
-                                32GB GDDR7 • 512-bit • PCIe 5.0<br>
-                                Scheda grafica NVIDIA con 4 ventole assiali e GPU Tweak III.
-                            </p>
-                            <a href="https://www.amazon.it/ASUS-GeForce-Grafica-DisplayPort-ROG-ASTRAL-RTX5090-O32G-GAMING/dp/B0DTHV8THW?th=1&linkCode=ll2&tag=l0c39-21&linkId=526a5a3d1c42eaca3d87424c6f5a10f9&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-outline-danger w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
                         </div>
                     </div>
-                </div>
-
-                <!-- RAM -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-warning glass-enhanced gaming-card fade-in-up delay-3" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-memory fa-3x text-warning mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">CORSAIR VENGEANCE RGB DDR5</h5>
-                                <span class="badge bg-warning">MEMORY POWER</span>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Doukesh Lampada Proiettore Tramonto</h5>
+                                <p class="card-text text-muted small">Lampada proiettore 16 colori con rotazione 360°. Crea atmosfera tramonto o aurora boreale in camera.</p>
+                                <a href="https://www.amazon.it/dp/B0D791QGSZ?tag=l0c39-21&linkCode=ll2" target="_blank" rel="noopener" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
                             </div>
-                            <p class="card-text text-white-50 small text-center">
-                                64GB (2x32GB) • 6000MHz • CL40<br>
-                                Compatibile AMD EXPO e Intel XMP 3.0 per prestazioni alte.
-                            </p>
-                            <a href="https://www.amazon.it/CORSAIR-VENGEANCE-6000MHz-Memoria-Prestazioni/dp/B0FV3JVZTJ?&linkCode=ll2&tag=l0c39-21&linkId=adb67ff8be8366a47ac22e1ead760978&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-outline-warning w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- SSD -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-success glass-enhanced gaming-card fade-in-up delay-4" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-hdd fa-3x text-success mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">Lexar ARES SSD 4TB</h5>
-                                <span class="badge bg-success">SPEED DEMON</span>
+                <!-- Cavi & Accessori -->
+                <h3 class="fw-bold mb-3 text-center" id="cavi"><i class="fas fa-plug me-2 text-success"></i>Cavi & Accessori</h3>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Magtame Cavo USB-C Magnetico a Spirale</h5>
+                                <p class="card-text text-muted small">Cavo di ricarica magnetico anti-nodi che si arrotola da solo. Ideale per scrivania e auto.</p>
+                                <a href="https://www.amazon.it/dp/B0CW294JYY?tag=l0c39-21&linkCode=ll2" target="_blank" rel="noopener" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
                             </div>
-                            <p class="card-text text-white-50 small text-center">
-                                4TB • 7400MB/s lettura • 6500MB/s scrittura<br>
-                                PCIe Gen4x4 NVMe per PS5, PC e laptop.
-                            </p>
-                            <a href="https://www.amazon.it/dp/B0GFVZ1BYG?aref=V8CSnrly0O&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=l0c39-21&linkId=59d7280f6594b7d30320f7ce3ba9f93f&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-outline-success w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Monitor -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-primary glass-enhanced gaming-card fade-in-up delay-5" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-desktop fa-3x text-primary mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">LG Ultragear OLED 4K</h5>
-                                <span class="badge bg-primary">VISUAL MASTERPIECE</span>
+                <!-- Proiettori -->
+                <h3 class="fw-bold mb-3 text-center" id="proiettori"><i class="fas fa-film me-2 text-info"></i>Proiettori</h3>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">YOTON Y3 Mini Proiettore Portatile</h5>
+                                <p class="card-text text-muted small">Mini proiettore 15000 lumen, supporta 1080p, schermo fino a 180", perfetto per home cinema e viaggi.</p>
+                                <a href="https://www.amazon.it/dp/B09DCKJBCH?tag=l0c39-21&linkCode=ll2" target="_blank" rel="noopener" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
                             </div>
-                            <p class="card-text text-white-50 small text-center">
-                                32" • 4K UHD • 240Hz • 0.03ms<br>
-                                Doppia modalità con FreeSync Premium Pro e DisplayHDR True Black 400.
-                            </p>
-                            <a href="https://www.amazon.it/LG-32GX870A-B-Ultragear-modalit%C3%A0-DisplayHDR/dp/B0F14PFFPS?th=1&linkCode=ll2&tag=l0c39-21&linkId=66e989f0fa4293c72899b39b0f040c76&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Router -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-secondary glass-enhanced gaming-card fade-in-up delay-6" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-wifi fa-3x text-secondary mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">ASUS GT-AXE11000</h5>
-                                <span class="badge bg-secondary">NETWORK BEAST</span>
+                <!-- Smart Wearable -->
+                <h3 class="fw-bold mb-3 text-center" id="wearable"><i class="fas fa-ring me-2 text-danger"></i>Smart Wearable</h3>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Gloring Smart Ring</h5>
+                                <p class="card-text text-muted small">Anello intelligente per monitorare fitness, sonno e frequenza cardiaca. Compatibile iOS e Android.</p>
+                                <a href="https://www.amazon.it/dp/B0D5765ZYS?tag=l0c39-21&linkCode=ll2" target="_blank" rel="noopener" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
                             </div>
-                            <p class="card-text text-white-50 small text-center">
-                                11000 Mbps • WiFi 6E • 10G Ethernet<br>
-                                Router gaming per lag zero e velocità estrema.
-                            </p>
-                            <a href="https://www.amazon.it/ASUS-GT-AXE11000-Ethernet-Sicurezza-Dispositivi/dp/B09Q67CYMC?mcid=621c1ee6a4033ed5bb2b31db55a5e9ba&hvadid=700813659490&hvpos=&hvnetw=g&hvrand=3222656381519133428&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1627260007868&hvocijid=3222656381519133428-B09Q67CYMC-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=9e0f061013ba7c4c032be94ad458d3d1&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-outline-secondary w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Problema-Soluzione Gola -->
-            <div class="mt-5 p-4 rounded-3" style="background: linear-gradient(135deg, rgba(255,0,128,0.1) 0%, rgba(255,215,0,0.1) 100%); border: 2px solid rgba(255,0,128,0.3);">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="text-danger fw-bold mb-2">
-                            <i class="fas fa-exclamation-triangle me-2"></i>Problema: Vuoi il setup definitivo ma sembra irraggiungibile.
-                        </div>
-                        <div class="text-success fw-bold">
-                            <i class="fas fa-check-circle me-2"></i>Soluzione: Questo è il setup dei sogni. Ogni componente è il migliore della sua categoria. Un investimento per l'eccellenza.
+                <!-- Salute Visiva -->
+                <h3 class="fw-bold mb-3 text-center" id="salute"><i class="fas fa-eye me-2 text-secondary"></i>Salute Visiva</h3>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Horus X Occhiali Anti Luce Blu</h5>
+                                <p class="card-text text-muted small">Occhiali per schermi che riducono affaticamento visivo e mal di testa da luce blu.</p>
+                                <a href="https://www.amazon.it/dp/B0784GX9FM?tag=l0c39-21&linkCode=ll2" target="_blank" rel="noopener" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 text-center mt-3 mt-md-0">
-                        <div class="display-6 fw-bold text-white">
-                            <i class="fas fa-gem me-2" style="color: #FFD700;"></i>DREAM MACHINE
+                </div>
+
+                <!-- Umidificatori -->
+                <h3 class="fw-bold mb-3 text-center" id="umidificatori"><i class="fas fa-tint me-2 text-primary"></i>Umidificatori</h3>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Wisdom Line Umidificatore Luna 3D</h5>
+                                <p class="card-text text-muted small">Mini umidificatore USB a forma di luna con luce notturna e 3 modalità di illuminazione.</p>
+                                <a href="https://www.amazon.it/dp/B0DBLNM6LH?tag=l0c39-21&linkCode=ll2" target="_blank" rel="noopener" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
+                            </div>
                         </div>
-                        <p class="text-white-50 small">Prestazioni che nessun altro può eguagliare</p>
+                    </div>
+                </div>
+
+                <!-- Pulizia -->
+                <h3 class="fw-bold mb-3 text-center" id="pulizia"><i class="fas fa-broom me-2 text-success"></i>Pulizia</h3>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">SERVOMASTER Mini Aspirabriciole Senza Fili</h5>
+                                <p class="card-text text-muted small">Mini aspirapolvere portatile con filtro HEPA lavabile. Perfetto per scrivania, tastiera e auto.</p>
+                                <a href="https://www.amazon.it/dp/B0C5T6RTV1?tag=l0c39-21&linkCode=ll2" target="_blank" rel="noopener" class="btn btn-amazon w-100">
+                                    <i class="fab fa-amazon me-2"></i>Acquista su Amazon
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Glass morphism overlay -->
-        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(3px); z-index: 1;"></div>
     </section>
-
-    <!-- SETUP MEDIO PC -->
-    <section class="py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);">
-        <div class="container position-relative z-2">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold text-white mb-3" style="text-shadow: 0 0 20px rgba(255, 165, 0, 0.5);">
-                    <i class="fas fa-balance-scale me-3" style="color: #FFA500;"></i>SETUP MEDIO PC
-                </h2>
-                <p class="lead text-white-50 mb-4">Il perfetto equilibrio tra prestazioni e prezzo. AMD Ryzen per massima efficienza.</p>
-                <div class="bg-warning bg-opacity-20 rounded-pill py-2 px-4 d-inline-block border border-warning">
-                    <i class="fas fa-star me-2 text-white"></i>
-                    <span class="fw-bold text-white">EQUILIBRIO PERFETTO</span>
-                </div>
-            </div>
-
-            <!-- Griglia Orizzontale Prodotti -->
-            <div class="row g-4">
-                <!-- CPU -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-info glass-enhanced gaming-card fade-in-up delay-1" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-microchip fa-3x text-info mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">AMD Ryzen 5 7600X</h5>
-                                <span class="badge bg-info">AMD ZEN 4</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                6 cores/12 threads • 5.3 GHz boost<br>
-                                Architettura Zen 4, supporto DDR5 e PCIe 5.0.
-                            </p>
-                            <a href="https://www.amazon.it/s?k=amd+ryzen+5+7600x&tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-outline-info w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- GPU -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-danger glass-enhanced gaming-card fade-in-up delay-2" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-tv fa-3x text-danger mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">Gigabyte RTX 3050</h5>
-                                <span class="badge bg-danger">GAMING ENTRY</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                6GB GDDR6 • 96-bit • PCIe 4.0<br>
-                                1477MHz core clock, 2x DP 1.4, 2x HDMI 2.1.
-                            </p>
-                            <a href="https://www.amazon.it/s?k=rtx+3050&tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-outline-danger w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RAM -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-warning glass-enhanced gaming-card fade-in-up delay-3" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-memory fa-3x text-warning mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">Kingston FURY Beast</h5>
-                                <span class="badge bg-warning">DDR4 CL16</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                16GB • 3200MHz • CL16<br>
-                                Intel XMP-ready, AMD Ryzen compatibile.
-                            </p>
-                            <a href="https://www.amazon.it/s?k=kingston+fury+beast+ddr4&tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-outline-warning w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SSD -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-success glass-enhanced gaming-card fade-in-up delay-4" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-hdd fa-3x text-success mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">Crucial T500 SSD</h5>
-                                <span class="badge bg-success">NVMe GEN4</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                1TB • 7300 MB/s • PCIe Gen4<br>
-                                Compatibile PS5, TLC NAND, dissipatore incluso.
-                            </p>
-                            <a href="https://www.amazon.it/WD_BLACK-Interno-velocit%C3%A0-scrittura-Prestazioni/dp/B0B7CKVCCV?mcid=888d8b4ce8b03986ab3849d66f1062e7&hvadid=700902625141&hvpos=&hvnetw=g&hvrand=10457417852729816499&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190900&hvtargid=pla-1729729168453&hvocijid=10457417852729816499-B0B7CKVCCV-&hvexpln=0&th=1&linkCode=ll2&tag=l0c39-21&linkId=345694116578e5d6a86f5071dafa4eff&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-outline-success w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Monitor -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-primary glass-enhanced gaming-card fade-in-up delay-5" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-desktop fa-3x text-primary mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">KTC Monitor 32" Curvo</h5>
-                                <span class="badge bg-primary">QHD CURVO</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                32" QHD • 185Hz • 1ms • HVA<br>
-                                Curvatura 1500R, HDR10, 96% DCI-P3.
-                            </p>
-                            <a href="https://www.amazon.it/s?k=ktc+monitor+32+curvo&tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Router -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-secondary glass-enhanced gaming-card fade-in-up delay-6" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-wifi fa-3x text-secondary mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">TP-Link Archer AX72 Pro</h5>
-                                <span class="badge bg-secondary">WIFI 6</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                5400 Mbps • Dual-band • WiFi 6<br>
-                                Gaming prioritization, stabile e affidabile.
-                            </p>
-                            <a href="https://www.amazon.it/s?k=tp-link+archer+ax72+pro&tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-outline-secondary w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Problema-Soluzione -->
-            <div class="mt-5 p-4 rounded-3" style="background: linear-gradient(135deg, rgba(255,165,0,0.1) 0%, rgba(255,255,255,0.1) 100%); border: 2px solid rgba(255,165,0,0.3);">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="text-danger fw-bold mb-2">
-                            <i class="fas fa-exclamation-triangle me-2"></i>Problema: Vuoi prestazioni migliori del setup base ma non vuoi spendere troppo.
-                        </div>
-                        <div class="text-success fw-bold">
-                            <i class="fas fa-check-circle me-2"></i>Soluzione: Questo setup medio offre AMD Ryzen e componenti equilibrati. Il perfetto compromesso.
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-center mt-3 mt-md-0">
-                        <div class="display-6 fw-bold text-white">
-                            <i class="fas fa-balance-scale me-2" style="color: #FFA500;"></i>BALANCED
-                        </div>
-                        <p class="text-white-50 small">Equilibrio perfetto prestazioni-prezzo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Glass morphism overlay -->
-        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(3px); z-index: 1;"></div>
-    </section>
-
-    <!-- SETUP BASE PC ECONOMICO -->
-    <section class="py-5 position-relative overflow-hidden pulse-highlight" style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a7b 50%, #1e3a5f 100%);">
-        <div class="container position-relative z-2">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold text-white mb-3" style="text-shadow: 0 0 20px rgba(0, 150, 255, 0.5);">
-                    <i class="fas fa-laptop me-3" style="color: #00BFFF;"></i>SETUP BASE PC
-                </h2>
-                <p class="lead text-white-50 mb-4">L'alternativa accessibile per iniziare a giocare. Qualità senza spendere un patrimonio.</p>
-                <div class="bg-success bg-opacity-20 rounded-pill py-2 px-4 d-inline-block border border-success">
-                    <i class="fas fa-check-circle me-2 text-white"></i>
-                    <span class="fw-bold text-white">OTTIMO RAPPORTO QUALITÀ-PREZZO</span>
-                </div>
-            </div>
-
-            <!-- Griglia Orizzontale Prodotti -->
-            <div class="row g-4">
-                <!-- PC -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-info glass-enhanced gaming-card fade-in-up delay-1" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-desktop fa-3x text-info mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">Vibox Gaming PC Ryzen</h5>
-                                <span class="badge bg-info">PC COMPLETO</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                AMD Ryzen • 16GB RAM DDR4 • SSD<br>
-                                Case gaming RGB, Windows 10 incluso.
-                            </p>
-                            <a href="https://www.amazon.it/s?k=vibox+gaming+pc+ryzen&tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-outline-info w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Monitor -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-primary glass-enhanced gaming-card fade-in-up delay-2" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-tv fa-3x text-primary mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">MSI Monitor G255F</h5>
-                                <span class="badge bg-primary">DISPLAY FLUIDO</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                24.5" Full HD • 170Hz • 1ms<br>
-                                Pannello IPS con Adaptive Sync per gaming fluido.
-                            </p>
-                            <a href="https://www.amazon.it/s?k=msi+g255f&tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mouse -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-warning glass-enhanced gaming-card fade-in-up delay-3" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-mouse fa-3x text-warning mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">Mouse Gaming RGB</h5>
-                                <span class="badge bg-warning">PRECISIONE</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                2.400 DPI • 6 pulsanti • RGB<br>
-                                Design compatto, perfetto per iniziare.
-                            </p>
-                            <a href="https://www.amazon.it/Gaming-Programmabili-Illuminazione-Multicolore-Portatile/dp/B0F63Y63B4?th=1&linkCode=ll2&tag=l0c39-21&linkId=af90e2b97eb7d51e3183643bcaff9524&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-outline-warning w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cuffie -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-secondary glass-enhanced gaming-card fade-in-up delay-4" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-headphones fa-3x text-secondary mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">Trust Gaming</h5>
-                                <span class="badge bg-secondary">AUDIO CHIARO</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                Stereo • Microfono • Over-ear<br>
-                                Illuminazione LED, economico e affidabile.
-                            </p>
-                            <a href="https://www.amazon.it/s?k=trust+gaming+headset&tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-outline-secondary w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Router -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-success glass-enhanced gaming-card fade-in-up delay-5" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-wifi fa-3x text-success mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">TP-Link AC1200</h5>
-                                <span class="badge bg-success">CONNESSIONE STABILE</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                1200 Mbps • Dual-band • Economico<br>
-                                Perfetto per gaming base e streaming.
-                            </p>
-                            <a href="https://www.amazon.it/s?k=tp-link+archer+c6+ac1200&tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-outline-success w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tastiera -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 bg-dark bg-opacity-50 border border-danger glass-enhanced gaming-card fade-in-up delay-6" style="backdrop-filter: blur(10px);">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-keyboard fa-3x text-danger mb-2 icon-animate"></i>
-                                <h5 class="card-title fw-bold text-white">Redragon Meccanica</h5>
-                                <span class="badge bg-danger">RESPONSIVA</span>
-                            </div>
-                            <p class="card-text text-white-50 small text-center">
-                                Meccanica Bluetooth • RGB • Compatta<br>
-                                Interruttori cellulari, economica e solida.
-                            </p>
-                            <a href="https://www.amazon.it/s?k=redragon+meccanica+bluetooth&tag=l0c39-21" target="_blank" rel="noopener" class="btn btn-outline-danger w-100 btn-glow">
-                                <i class="fab fa-amazon me-2"></i>👉 Clicca qui per vedere il prezzo aggiornato su Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Problema-Soluzione -->
-            <div class="mt-5 p-4 rounded-3" style="background: linear-gradient(135deg, rgba(0,150,255,0.1) 0%, rgba(0,255,150,0.1) 100%); border: 2px solid rgba(0,150,255,0.3);">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="text-danger fw-bold mb-2">
-                            <i class="fas fa-exclamation-triangle me-2"></i>Problema: Vuoi il Dream Machine ma costa troppo.
-                        </div>
-                        <div class="text-success fw-bold">
-                            <i class="fas fa-check-circle me-2"></i>Soluzione: Questo setup base ti offre qualità solida a un prezzo accessibile. Perfetto per iniziare.
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-center mt-3 mt-md-0">
-                        <div class="display-6 fw-bold text-white">
-                            <i class="fas fa-thumbs-up me-2" style="color: #00BFFF;"></i>SMART CHOICE
-                        </div>
-                        <p class="text-white-50 small">Qualità senza spendere un patrimonio</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Glass morphism overlay -->
-        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(3px); z-index: 1;"></div>
-    </section>
-
-    <!-- Setup Sections -->
-    <section class="container">
-        
-        <!-- Tactical & Urban Gear Setup -->
-        <div class="setup-card">
-            <div class="row">
-                <div class="col-md-2 text-center">
-                    <i class="fas fa-shield-alt setup-icon" style="color: #FF6B6B;"></i>
-                </div>
-                <div class="col-md-10">
-                    <h3 class="setup-title">Tactical & Urban Gear Setup</h3>
-                    <p class="setup-description">Abbigliamento tecnico e protezione per attività outdoor. Equipaggiamento professionale per escursioni e sport di squadra.</p>
-                    
-                    <div class="product-item">
-                        <div class="product-name">Generic Set Tute da Combattimento Impermeabili Esercito</div>
-                        <div class="product-category"><span class="category-badge">Uniforme</span></div>
-                        <p class="small text-muted">Tuta da combattimento dell'esercito per protezione completa. Include giacca tattica e pantaloni in soft shell impermeabile.</p>
-                        <a href="https://www.amazon.it/Generic-combattimento-impermeabile-pantaloni-softshell/dp/B0CX94QH2Q?adgrpid=61362295191&dib=eyJ2IjoiMSJ9.4uGiC8sT1GGxdq2UWkZ17Zox4z4rRx4JL5i-vtr1Sgl3nuz1drRUQJMq1CRoMj2HBqd9DIZgSG90QJLhIc98l5Gz3qOjUfFnZFB6HRYN9GUj9QM6bQhASe6L7_JJJn5fsJLcQAaGzK9jpo9KU82jhWAkv2zMGFRd48I0KYSMDKs9ioZa6_rva_CnfRUNlexBCLuJhXkJZ_A7NaGPkFRfBlVdu9ZNClHz8sE1gtEu0LE1qzg0llFvw62hVlTJrvQXqG7aFcn587TkGTl15A4byOKyBd4JNVt-I5IyVjTXuJs.wB0dRRxG-fphYya_padA3lmFUXKnhMK4KILTx5OUu3s&dib_tag=se&hvadid=605942766361&hvdev=c&hvexpln=0&hvlocphy=9181217&hvnetw=g&hvocijid=1219904264717626248--&hvqmt=b&hvrand=1219904264717626248&hvtargid=kwd-400225355996&hydadcr=25390_2695042&keywords=attrezzatura%2Bairsoft&mcid=e1f2c5c07c8c36948275d8fdedf872c9&qid=1780004932&sr=8-6&th=1&linkCode=ll2&tag=l0c39-21&linkId=34c8c35cae51c61403fa23f4603e773e&ref=_as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon btn-sm">
-                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                        </a>
-                    </div>
-                    
-                    <div class="problem-solution">
-                        <div class="problem"><i class="fas fa-exclamation-triangle"></i>Problema: Hai bisogno di protezione durante attività outdoor ma non vuoi sacrificare comfort.</div>
-                        <div class="solution"><i class="fas fa-check-circle"></i>Soluzione: Questa tuta impermeabile soft shell offre protezione completa mantenendo traspirabilità.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Fitness Casa Setup -->
-        <div class="setup-card">
-            <div class="row">
-                <div class="col-md-2 text-center">
-                    <i class="fas fa-dumbbell setup-icon" style="color: #3CB371;"></i>
-                </div>
-                <div class="col-md-10">
-                    <h3 class="setup-title">Fitness Casa Setup</h3>
-                    <p class="setup-description">Allenati come un professionale a casa tua. Abbigliamento tecnico e integratori per performance ottimali.</p>
-                    
-                    <div class="product-item">
-                        <div class="product-name">LEONE Rashguard Legionarivs</div>
-                        <div class="product-category"><span class="category-badge">Abbigliamento Fitness</span></div>
-                        <p class="small text-muted">Rashguard professionale LEONE con design Legionarivs, perfetta per Crossfit, MMA, grappling e allenamenti intensi.</p>
-                        <a href="https://www.amazon.it/LEONE-Rashguard-Legionarivs-Crossfit-Grappling/dp/B081TCBGZJ?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&content-id=amzn1.sym.69bcbf4e-9f5f-4f78-ae2b-ceac62d1d26b%3Aamzn1.sym.69bcbf4e-9f5f-4f78-ae2b-ceac62d1d26b&crid=ZE816KX5HHF1&cv_ct_cx=abbigliamento&keywords=abbigliamento&pd_rd_i=B081TCBGZJ&pd_rd_r=37bcf570-6c32-4036-b35c-dcf683df9946&pd_rd_w=Ek3ja&pd_rd_wg=8BzOH&pf_rd_p=69bcbf4e-9f5f-4f78-ae2b-ceac62d1d26b&pf_rd_r=78YGFC531DJGAVFFC5XK&qid=1777909639&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=abbigliamento%2Caps%2C286&sr=1-1-ca22f3c3-0606-4173-afab-fb32ddc038f9-spons&aref=SH16nXjdQt&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=2b1996e1d6ba30f48dc01ce5355b7738&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon btn-sm">
-                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                        </a>
-                    </div>
-                    
-                    <div class="product-item">
-                        <div class="product-name">Optimum Nutrition Creatina Monoidrata</div>
-                        <div class="product-category"><span class="category-badge">Integratori Fitness</span></div>
-                        <p class="small text-muted">Creatina micronizzata di alta qualità per massimizzare forza, potenza e recupero muscolare.</p>
-                        <a href="https://www.amazon.it/dp/B00T7L20AQ?th=1&linkCode=ll2&tag=l0c39-21&linkId=425913cbbff678f4faae0baf8f6c7bb4&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon btn-sm">
-                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                        </a>
-                    </div>
-                    
-                    <div class="problem-solution">
-                        <div class="problem"><i class="fas fa-exclamation-triangle"></i>Problema: Vuoi allenarti come un professionale a casa ma manca l'abbigliamento e gli integratori giusti.</div>
-                        <div class="solution"><i class="fas fa-check-circle"></i>Soluzione: La rashguard LEONE e la creatina Optimum Nutrition ti danno tutto il necessario per performance ottimali.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Gaming Setup -->
-        <div class="setup-card">
-            <div class="row">
-                <div class="col-md-2 text-center">
-                    <i class="fas fa-gamepad setup-icon" style="color: #ff0033;"></i>
-                </div>
-                <div class="col-md-10">
-                    <h3 class="setup-title">Gaming Setup</h3>
-                    <p class="setup-description">Il setup perfetto per gaming competitivo. Monitor ad alta frequenza e PC potente per prestazioni massime.</p>
-                    
-                    <div class="product-item">
-                        <div class="product-name">MSI Monitor Gaming G255F</div>
-                        <div class="product-category"><span class="category-badge">Gaming Monitor</span></div>
-                        <p class="small text-muted">24.5" Full HD 1920x1080, 170Hz refresh rate, 1ms response time. Pannello IPS con Adaptive Sync.</p>
-                        <a href="https://www.amazon.it/MSI-G255F-1920x1080-Adaptive-Anti-flickr/dp/B0CPM45WF7?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=35WKNR5X9VQ1C&dib=eyJ2IjoiMSJ9.CEYKvsqfqUt9qe9oCFHNWJchYnc0IwRFWfZLLfZ2gHBvIbGFx2NwJ_hFy7My9Tb91cLLE7E_3wwp3pzRc3MW7QyLxslJK_mwNRWD4L4E7GlU0vnoxREvdFy59QUytBf1XwEBRXjG4XqC4ZubUi_zPa8VcHdWssrcXLEyYfApJ8tyFSgJR7MROTAMjGCMb7wakqHSvd2qK7kjod3vZ4_ONOBmIuugeKI4O3ChiZpGKPuNyLX6z4BPu2A3WVyVHLry_GQxpm1qZdPDP2gHxC9vtOIQf4slRG0s5KSAtYNh6ek.zVySrRolhqMb3_WkXh4zVPEc_eAVd72whNXgE3fnjlM&dib_tag=se&keywords=gaming+pc&qid=1777897756&sprefix=gaming+pc%2Caps%2C268&sr=8-58&linkCode=ll2&tag=l0c39-21&linkId=a0070679f86d991fd56e052f851d04a8&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon btn-sm">
-                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                        </a>
-                    </div>
-                    
-                    <div class="product-item">
-                        <div class="product-name">Vibox Gaming PC Ryzen</div>
-                        <div class="product-category"><span class="category-badge">Gaming PC</span></div>
-                        <p class="small text-muted">Processore AMD Ryzen, scheda grafica dedicata, 16GB RAM DDR4, SSD veloce. Case gaming con illuminazione RGB.</p>
-                        <a href="https://www.amazon.it/Vibox-Gaming-Ryzen-Windows-Bianco/dp/B0F3JFPYPB?content-id=amzn1.sym.7b21bc1e-c34e-4c30-a298-61b1155df26d%3Aamzn1.sym.7b21bc1e-c34e-4c30-a298-61b1155df26d&dib=eyJ2IjoiMSJ9.zFPQtsCUu7oCCVyk1KsqdLRngA3qVib1W2CQ2-MpbVSumCQtpC87coe-lcOXvvAiffYwoPXX1sZhQ02tYYv-DVGgCS4nzntlgH3jAiFmU5T9D7JT_M47TZi3FzlxPv-iyQy-YVRlsn9iXXbQFzoaRAvlxt3e-Fj054fXRhsf1V2varqou8p7M5OAwSPh-m5J7kSpwFY9XeAs30lWy2_hVqvcYCw6QEhz51neZYuQGrLa5aXLIDVo85dpeKXxedlAZ3j91LjA_a-Dv0Kb_RuRjNjMUZK0jyMyI1RgriGfKk0.0xVLX__vDuxsLOLQZJfGY0mUzPn3XjSmlCvu50NCQQE&dib_tag=se&keywords=pc%2Bgaming&pd_rd_r=ac71ae8d-2abd-4022-b553-4a3c50b71c69&pd_rd_w=bTnhQ&pd_rd_wg=rEwcg&qid=1777897860&sr=8-9&ufe=app_do%3Aamzn1.fos.49a700e5-ae68-4d96-966a-89ca65497504&th=1&linkCode=ll2&tag=l0c39-21&linkId=a7b5e3e24dc98972d68cdfc5f1367040&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon btn-sm">
-                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                        </a>
-                    </div>
-                    
-                    <div class="problem-solution">
-                        <div class="problem"><i class="fas fa-exclamation-triangle"></i>Problema: Vuoi gaming competitivo ma il tuo setup non regge il passo.</div>
-                        <div class="solution"><i class="fas fa-check-circle"></i>Soluzione: Monitor 170Hz e PC Ryzen ti danno prestazioni massime per dominare la competizione.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Smart Home Setup -->
-        <div class="setup-card">
-            <div class="row">
-                <div class="col-md-2 text-center">
-                    <i class="fas fa-home setup-icon" style="color: #708090;"></i>
-                </div>
-                <div class="col-md-10">
-                    <h3 class="setup-title">Smart Home Setup</h3>
-                    <p class="setup-description">Rendi la tua casa intelligente. Controllo vocale e domotica per comfort e sicurezza.</p>
-                    
-                    <div class="product-item">
-                        <div class="product-name">Tapo Presa Smart con Monitoraggio</div>
-                        <div class="product-category"><span class="category-badge">Domotica</span></div>
-                        <p class="small text-muted">Presa intelligente WiFi compatibile con Alexa e Google Home. Controllo remoto, programmazione oraria, monitoraggio consumo.</p>
-                        <a href="https://www.amazon.it/Tapo-Monitoraggio-Intelligente-Compatibile-Preselezione/dp/B0CHFJ7V3J?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2OJTEON8O297M&dib=eyJ2IjoiMSJ9.dWtkMjCLn9aCjl0wCvqQXgrHNqmwuu1ikYJCky2J2kdM1V_OJiW8EWQ3ceEBY1MC1S7EWkMx6UdbKc6MpdoYxs7IYVfYKTBgJ5v9i-DTzlUFu3njz0ZNHz9wm1oatuNN4WETv5ath3X0JxkjtuFrwfTOD2ldbI3_aaT35Rqjur7UYf4kB22ONLfXaK6UjDyJtulRvvt4tipYSPj3VAfcDnpGuc5BrL_ZnC5lpGClQ44mLoDxA7X68wEKQWZ6b3vQhKw12cLH3WZmY7AaUYlPLZN4YdGjMCYCUtH-2AZaGAA.-AB66Zbc9avjnlaPJy3eTR-q7yLclHOBAgq3YpyeBbA&dib_tag=se&keywords=smart&qid=1777897538&sprefix=smart%2B%2Caps%2C166&sr=8-6&th=1&linkCode=ll2&tag=l0c39-21&linkId=c150503bd157e5c4f2b5b32caf1e9058&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon btn-sm">
-                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                        </a>
-                    </div>
-                    
-                    <div class="product-item">
-                        <div class="product-name">Echo Dot Max Alexa</div>
-                        <div class="product-category"><span class="category-badge">Assistente Vocale</span></div>
-                        <p class="small text-muted">Altoparlante intelligente con assistente vocale Alexa. Audio premium con bassi profondi, hub casa intelligente integrato.</p>
-                        <a href="https://www.amazon.it/echo-dot-max/dp/B0DKLDMHYB?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=VGVLPWDE291C&dib=eyJ2IjoiMSJ9.zYeRUCSdJcAUhnVXvl4Poxnjo4taik9-sEWyw5aw3gBoMG-HoGA6vqR7pBWK_5FdZw2hBzxSrolbrS9VW-XaHdXxN9l0Zv6wFdQyXdlrbj2D6AC2NzrwV_Xhfooioc_kYDZKBWC1MtunEV7a2lXifq9SeAkvSCSNtM-17EIAqtN8odNJ4K5HT5VJoP-uvxxyGLECMo5c8a1idko1GzcEbSIMvvB98cVIiXbWiN3ka1Jb6d8hjsOTkrULiJGl13Rpj0H57D0sJb9M1qtTW_uqFDi669VgMKQ-8HMA89bk8oY.QiN_0D7vxwblphZpC_HwFrq1Lfg4cFicZIShfXPxKI&dib_tag=se&keywords=alexa&qid=1777897593&sprefix=alexa%2Caps%2C155&sr=8-11&ufe=app_do%3Aamzn1.fos.7cf526d8-b33c-4cc8-8e05-b9df5480d46b&th=1&linkCode=ll2&tag=l0c39-21&linkId=8dfeb0081aa8558b0fb4e680bad53dde&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon btn-sm">
-                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                        </a>
-                    </div>
-                    
-                    <div class="problem-solution">
-                        <div class="problem"><i class="fas fa-exclamation-triangle"></i>Problema: Vuoi automatizzare la tua casa ma non sai da dove iniziare.</div>
-                        <div class="solution"><i class="fas fa-check-circle"></i>Soluzione: Presa smart Tapo e Echo Dot Max sono il punto di partenza perfetto per la domotica.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Viaggi & Camping Setup -->
-        <div class="setup-card">
-            <div class="row">
-                <div class="col-md-2 text-center">
-                    <i class="fas fa-campground setup-icon" style="color: #228B22;"></i>
-                </div>
-                <div class="col-md-10">
-                    <h3 class="setup-title">Viaggi & Camping Setup</h3>
-                    <p class="setup-description">Equipaggiamento completo per avventure outdoor. Tenda resistente e scarponi affidabili per escursioni.</p>
-                    
-                    <div class="product-item">
-                        <div class="product-name">FE Active Tenda Campeggio con Zanzariera</div>
-                        <div class="product-category"><span class="category-badge">Tenda Escursionismo</span></div>
-                        <p class="small text-muted">Tenda da campeggio con zanzariera integrata, impermeabile e resistente. Ideale per escursionismo e campeggio leggero.</p>
-                        <a href="https://www.amazon.it/FE-Active-zanzariera-Impermeabile-Escursionismo/dp/B07QV3MQTT?&linkCode=ll2&tag=l0c39-21&linkId=aab7aeba98e2fe34f5bbfd458b27fb66&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon btn-sm">
-                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                        </a>
-                    </div>
-                    
-                    <div class="product-item">
-                        <div class="product-name">Columbia Crestwood Mid Waterproof Scarponi da Trekking</div>
-                        <div class="product-category"><span class="category-badge">Scarponi da Trekking</span></div>
-                        <p class="small text-muted">Scarponi da trekking ed escursionismo impermeabili a vita media uomo. Design robusto con tecnologia impermeabile.</p>
-                        <a href="https://www.amazon.it/dp/B0CLW1SNHJ?th=1&psc=1&linkCode=ll2&tag=l0c39-21&linkId=f2a6c60efc871ba73272061aa2dd784c&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon btn-sm">
-                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                        </a>
-                    </div>
-                    
-                    <div class="problem-solution">
-                        <div class="problem"><i class="fas fa-exclamation-triangle"></i>Problema: Vuoi avventure outdoor ma l'attrezzatura non è affidabile.</div>
-                        <div class="solution"><i class="fas fa-check-circle"></i>Soluzione: Tenda FE Active e scarponi Columbia ti garantiscono sicurezza e comfort in ogni escursione.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Fotografia Setup -->
-        <div class="setup-card">
-            <div class="row">
-                <div class="col-md-2 text-center">
-                    <i class="fas fa-camera setup-icon" style="color: #4682B4;"></i>
-                </div>
-                <div class="col-md-10">
-                    <h3 class="setup-title">Fotografia Setup</h3>
-                    <p class="setup-description">Scatta foto professionali. Camera digitale e treppiede per contenuti di alta qualità.</p>
-                    
-                    <div class="product-item">
-                        <div class="product-name">Macchina Fotografica Digitale per Principianti</div>
-                        <div class="product-category"><span class="category-badge">Fotografia Digitale</span></div>
-                        <p class="small text-muted">Macchina fotografica digitale ultra compatta per principianti. 48MP, video 4K, zoom 16x, schermo LCD rotabile.</p>
-                        <a href="https://www.amazon.it/Macchina-Fotografica-Digitale-Ultra-Principianti/dp/B0F9L7GSBM?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3JTIA589HR93M&dib=eyJ2IjoiMSJ9.Dvn-78K6HUyQ6RcFfkM15rNeXfs0toAUBT9ZQEsts_aGXgxwb4GZsGm8DMvk7ncyu0x3RjwOodgqj2HU7dqPfTB3pWnHLrePXESopMz1DMRWBOYw0J2UxPNyDyyybcA4V44TSew8IZ1lY5KROD239jsQKYZBTaxDIz1C9nVqtPwnSjGI00a1-c-K8F6UER74e99_RTVsGIJD2CYq1ksvEbFz4iG383j7WKGz8JJowwrkfcFJgvnSdBaVl4xiXPXq_8pvlCqHlCYPJWtDHj0yGpOSlVRqE7dnx7fG0bPZ2ac.AD4eH72_RZNnLmT0ie5q1-bpIZZYoD1klN8V7Nwh-M8&dib_tag=se&keywords=fotografia&qid=1777990121&sprefix=fotografia%2Caps%2C179&sr=8-10&th=1&linkCode=ll2&tag=l0c39-21&linkId=73702d9ab539382b507d9cd7ce42ea0d&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon btn-sm">
-                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                        </a>
-                    </div>
-                    
-                    <div class="product-item">
-                        <div class="product-name">RISEOFLE Treppiede Smartphone con Telecomando</div>
-                        <div class="product-category"><span class="category-badge">Treppiede Smartphone</span></div>
-                        <p class="small text-muted">Treppiede smartphone estensibile con telecomando wireless. Altezza regolabile fino a 180cm, compatibile con tutti gli smartphone.</p>
-                        <a href="https://www.amazon.it/RISEOFLE-Smartphone-Telecomando-Estensibile-Compatibile/dp/B0DXF4CDWQ?psc=1&linkCode=ll2&tag=l0c39-21&linkId=ed57654b59f5c3f9f54ecb0df48412e6&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn btn-amazon btn-sm">
-                            <i class="fab fa-amazon me-2"></i>Vedi su Amazon
-                        </a>
-                    </div>
-                    
-                    <div class="problem-solution">
-                        <div class="problem"><i class="fas fa-exclamation-triangle"></i>Problema: Vuoi creare contenuti di alta qualità ma non hai l'attrezzatura giusta.</div>
-                        <div class="solution"><i class="fas fa-check-circle"></i>Soluzione: Camera digitale e treppiede estensibile ti permettono di scattare foto e girare video professionali.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- AI Assistant -->
 
     <!-- Footer -->
-        <footer class="footer-effects py-5" role="contentinfo">
-        
+    <footer class="footer-effects py-5" role="contentinfo">
         <div class="container" style="position: relative; z-index: 1;">
             <div class="row g-4">
-                <!-- Brand & Info Card -->
                 <div class="col-lg-4">
                     <div class="glass-card">
                         <h5 class="fw-bold mb-3">
@@ -1120,17 +350,9 @@
                             <a href="/index.html" class="text-decoration-none" style="opacity: 0.8;">
                                 <i class="fas fa-home me-1"></i>Home
                             </a>
-                            <a href="/tutte-le-categorie.html" class="text-decoration-none" style="opacity: 0.8;">
-                                <i class="fas fa-th-large me-1"></i>Categorie
-                            </a>
-                            <a href="/raccomandazioni/index.html" class="text-decoration-none" style="opacity: 0.8;">
-                                <i class="fas fa-star me-1"></i>Raccomandazioni
-                            </a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Social Media Card -->
                 <div class="col-lg-4">
                     <div class="glass-card text-center">
                         <h5 class="fw-bold mb-3">
@@ -1140,76 +362,30 @@
                             <a href="https://t.me/ilmigliorprezzo" class="social-icon telegram" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
                                 <i class="fab fa-telegram"></i>
                             </a>
-                            <a href="#" class="social-icon facebook" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-icon instagram" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="social-icon twitter" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
                         </div>
                         <p class="small mb-0" style="opacity: 0.8;">
                             Unisciti al nostro gruppo Telegram per offerte esclusive!
                         </p>
                     </div>
                 </div>
-
-                <!-- Legal & Contact Card -->
                 <div class="col-lg-4">
-                    <div class="glass-card info-card">
+                    <div class="glass-card">
                         <h5 class="fw-bold mb-3">
                             <i class="fas fa-info-circle me-2"></i>Info & Contatti
                         </h5>
-                        <div class="d-flex flex-column gap-2">
-                            <a href="/about.html" class="text-decoration-none" style="opacity: 0.8;">
-                                <i class="fas fa-user me-2"></i>Chi Siamo
-                            </a>
-                            <a href="/contact.html" class="text-decoration-none" style="opacity: 0.8;">
-                                <i class="fas fa-envelope me-2"></i>Contatti
-                            </a>
-                            <a href="/privacy.html" class="text-decoration-none" style="opacity: 0.8;">
-                                <i class="fas fa-shield-alt me-2"></i>Privacy Policy
-                            </a>
-                            <a href="/disclaimer.html" class="text-decoration-none" style="opacity: 0.8;">
-                                <i class="fas fa-exclamation-triangle me-2"></i>Disclaimer
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Amazon Disclaimer -->
-            <div class="row mt-4">
-                <div class="col-12">
-                    <div class="amazon-disclaimer">
-                        <p class="mb-2 text-warning fw-bold text-center">
-                            <i class="fab fa-amazon me-2 fa-lg"></i>Disclaimer Amazon Associates
+                        <p class="mb-2" style="opacity: 0.8;">
+                            <i class="fas fa-envelope me-2"></i>info@smartchoicesguide.com
                         </p>
-                        <p class="mb-0 small text-center" style="opacity: 0.9;">
-                            In qualità di Associato Amazon, guadagniamo da acquisti idonei. I prezzi e la disponibilità dei prodotti sono accurati alla data/ora indicata e sono soggetti a modifiche.
+                        <p class="small" style="opacity: 0.7;">
+                            © 2026 Smart Choices Guide. Tutti i diritti riservati.
                         </p>
                     </div>
                 </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="text-center mt-4">
-                <p class="mb-0" style="opacity: 0.8;">
-                    © 2026 Smart Choices Guide. Tutti i diritti riservati.
-                </p>
             </div>
         </div>
     </footer>
 
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AI Assistant JS -->
-    <!-- GA4 Product Tracking -->
-    <script src="../js/analytics-tracking.js"></script>
-
-
 </body>
 </html>
