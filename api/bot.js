@@ -25,6 +25,7 @@ const logger = winston.createLogger({
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const SITE_URL = process.env.SITE_URL;
+const TELEGRAM_CHANNEL_URL = process.env.TELEGRAM_CHANNEL_URL || 'https://t.me/ilmigliorprezzo';
 
 // Nicchie da controllare (solo nicchie esistenti)
 const NICCHIE_DA_CONTROLLARE = [
@@ -266,7 +267,7 @@ async function sendToTelegram(product) {
                     inline_keyboard: [
                         [
                             { text: "🛒 Acquista su Amazon", url: product.link },
-                            { text: "📱 Unisciti al nostro canale", url: "https://t.me/ilmigliorprezzo" }
+                            { text: "📱 Unisciti al nostro canale", url: TELEGRAM_CHANNEL_URL }
                         ],
                         [
                             { text: "🌐 Vedi tutti i prodotti", url: `${SITE_URL}/niches/${product.niche}/index.html` }
@@ -285,7 +286,7 @@ async function sendToTelegram(product) {
                     inline_keyboard: [
                         [
                             { text: "🛒 Acquista su Amazon", url: product.link },
-                            { text: "📱 Unisciti al nostro canale", url: "https://t.me/ilmigliorprezzo" }
+                            { text: "📱 Unisciti al nostro canale", url: TELEGRAM_CHANNEL_URL }
                         ],
                         [
                             { text: "🌐 Vedi tutti i prodotti", url: `${SITE_URL}/niches/${product.niche}/index.html` }
