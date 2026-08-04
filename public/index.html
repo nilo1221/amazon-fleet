@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Choices Guide - Le Migliori Guide di Acquisto Amazon | Recensioni e Offerte</title>
+    <title>Smart Choices Guide - Guide Acquisto Amazon</title>
     <meta name="description" content="Smart Choices Guide: Le migliori guide di acquisto Amazon per ogni categoria. Recensioni, confronti e offerte esclusive su Cucina, Tech, Moda, Sport, Viaggi e molto altro. Scopri i prodotti migliori selezionati dai nostri esperti.">
     <meta name="keywords" content="guide acquisto, recensioni prodotti, Amazon, offerte, confronti prezzi, cucina, tecnologia, moda, sport, viaggi, smart home, fitness, migliori prodotti, consigli acquisto">
     <meta name="author" content="Smart Choices Guide">
@@ -281,6 +281,58 @@
     .footer-effects a:hover {
         color: rgba(255, 255, 255, 0.85) !important;
     }
+    
+    /* Telegram Floating Button */
+    .telegram-float-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #0088cc 0%, #00a8e8 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 28px;
+        box-shadow: 0 4px 20px rgba(0, 136, 204, 0.4);
+        z-index: 9999;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .telegram-float-btn:hover {
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0 6px 30px rgba(0, 136, 204, 0.6);
+    }
+    
+    .telegram-float-btn::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+    
+    .telegram-float-btn i {
+        position: relative;
+        z-index: 1;
+    }
     </style>
 
 </head>
@@ -327,13 +379,13 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                             <i class="fas fa-th-large me-1" aria-hidden="true"></i>Categorie
                         </a>
                         <ul class="dropdown-menu" aria-label="Menu categorie">
                             <!-- Tech -->
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="dropdown-item dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-microchip me-2 text-info"></i>Tech
                                 </a>
                                 <ul class="dropdown-menu">
@@ -343,7 +395,7 @@
                             </li>
                             <!-- Casa -->
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="dropdown-item dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-home me-2 text-warning"></i>Casa
                                 </a>
                                 <ul class="dropdown-menu">
@@ -355,7 +407,7 @@
                             </li>
                             <!-- Moda -->
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="dropdown-item dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-tshirt me-2 text-danger"></i>Moda
                                 </a>
                                 <ul class="dropdown-menu">
@@ -369,7 +421,7 @@
                             </li>
                             <!-- Outdoor & Camping -->
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="dropdown-item dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-campground me-2 text-success"></i>Outdoor & Camping
                                 </a>
                                 <ul class="dropdown-menu">
@@ -378,17 +430,18 @@
                             </li>
                             <!-- Sport -->
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="dropdown-item dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-dumbbell me-2 text-danger"></i>Sport
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/niches/sport/abbigliamento-sportivo/index.html"><i class="fas fa-running me-2"></i>Abbigliamento Sportivo</a></li>
+                                    <li><a class="dropdown-item" href="/niches/sport/home-fitness/index.html"><i class="fas fa-dumbbell me-2"></i>Home Fitness</a></li>
                                     <li><a class="dropdown-item" href="/niches/sport/integratori-pre-workout/index.html"><i class="fas fa-pills me-2"></i>Integratori Pre-Workout</a></li>
                                 </ul>
                             </li>
                             <!-- Fai da Te -->
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="dropdown-item dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-tools me-2 text-primary"></i>Fai da Te
                                 </a>
                                 <ul class="dropdown-menu">
@@ -397,7 +450,7 @@
                             </li>
                             <!-- Viaggi -->
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="dropdown-item dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-plane me-2 text-info"></i>Viaggi
                                 </a>
                                 <ul class="dropdown-menu">
@@ -406,7 +459,7 @@
                             </li>
                             <!-- Giochi da Tavolo -->
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="dropdown-item dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-dice-d20 me-2 text-danger"></i>Giochi da Tavolo
                                 </a>
                                 <ul class="dropdown-menu">
@@ -415,7 +468,7 @@
                             </li>
                             <!-- Manga & Anime -->
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="dropdown-item dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-book-open me-2" style="color: #9400D3;"></i>Manga & Anime
                                 </a>
                                 <ul class="dropdown-menu">
@@ -583,7 +636,7 @@
                         <div class="mb-3">
                             <i class="fas fa-mobile-alt fa-3x" style="color: #0984e3;"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">Smartphone & Tech</h5>
+                        <h3 class="fw-bold mb-3">Smartphone & Tech</h3>
                         <p class="text-muted small mb-3">Smartphone, accessori e tecnologia mobile</p>
                         <a href="niches/tech/smartphone-tech/index.html" class="btn btn-sm fw-bold" style="background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%); color: white; border-radius: 20px; padding: 8px 25px;">
                             Scopri
@@ -627,6 +680,19 @@
                         <h5 class="fw-bold mb-3">Abbigliamento Sportivo</h5>
                         <p class="text-muted small mb-3">Abbigliamento tecnico per sport e fitness</p>
                         <a href="niches/sport/abbigliamento-sportivo/index.html" class="btn btn-sm fw-bold" style="background: linear-gradient(135deg, #FF4500 0%, #FF6347 100%); color: white; border-radius: 20px; padding: 8px 25px;">
+                            Scopri
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4 category-item" data-category="sport">
+                    <div class="card h-100 text-center p-4" style="border: none; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                        <div class="mb-3">
+                            <i class="fas fa-dumbbell fa-3x" style="color: #FF4500;"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Home Fitness</h5>
+                        <p class="text-muted small mb-3">Attrezzi e accessori per allenarti a casa</p>
+                        <a href="niches/sport/home-fitness/index.html" class="btn btn-sm fw-bold" style="background: linear-gradient(135deg, #FF4500 0%, #FF6347 100%); color: white; border-radius: 20px; padding: 8px 25px;">
                             Scopri
                         </a>
                     </div>
@@ -680,6 +746,20 @@
                         <h5 class="fw-bold mb-3">Climatizzazione</h5>
                         <p class="text-muted small mb-3">Ventilatori, umidificatori e riscaldatori</p>
                         <a href="niches/casa/climatizzazione/index.html" class="btn btn-sm fw-bold" style="background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%); color: white; border-radius: 20px; padding: 8px 25px;">
+                            Scopri
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Fai da Te Category -->
+                <div class="col-md-4 mb-4 category-item" data-category="fai-da-te">
+                    <div class="card h-100 text-center p-4" style="border: none; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                        <div class="mb-3">
+                            <i class="fas fa-tools fa-3x" style="color: #FF6B35;"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Fai da Te</h5>
+                        <p class="text-muted small mb-3">Utensili, attrezzature e gadget per bricolage</p>
+                        <a href="niches/fai-da-te/index.html" class="btn btn-sm fw-bold" style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: white; border-radius: 20px; padding: 8px 25px;">
                             Scopri
                         </a>
                     </div>
@@ -847,6 +927,20 @@
                         </a>
                     </div>
                 </div>
+                
+                <!-- Bambini & Regali Categories -->
+                <div class="col-md-4 mb-4 category-item" data-category="bambini-regali">
+                    <div class="card h-100 text-center p-4" style="border: none; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                        <div class="mb-3">
+                            <i class="fas fa-gift fa-3x" style="color: #FF6B9D;"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Peluche & Regali</h5>
+                        <p class="text-muted small mb-3">Peluche virali, personaggi Disney, Pokémon e idee regalo</p>
+                        <a href="niches/bambini-regali/index.html" class="btn btn-sm fw-bold" style="background: linear-gradient(135deg, #FF6B9D 0%, #FFB6C1 100%); color: white; border-radius: 20px; padding: 8px 25px;">
+                            Scopri
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -929,9 +1023,9 @@
                 <!-- Brand & Info Card -->
                 <div class="col-lg-4">
                     <div class="glass-card">
-                        <h5 class="fw-bold mb-3">
+                        <h3 class="fw-bold mb-3">
                             <i class="fas fa-shopping-cart me-2"></i>Smart Choices Guide
-                        </h5>
+                        </h3>
                         <p class="mb-3" style="opacity: 0.9;">
                             La tua guida completa per i migliori prodotti Amazon. Recensioni, offerte e consigli per acquisti intelligenti.
                         </p>
@@ -1220,6 +1314,10 @@
     <script src="assets/js/categories-loader.js"></script>
     <!-- AI Assistant JS -->
 
+    <!-- Telegram Floating Button -->
+    <a href="https://t.me/ilmigliorprezzo" class="telegram-float-btn" target="_blank" rel="noopener noreferrer" aria-label="Unisciti al canale Telegram">
+        <i class="fab fa-telegram"></i>
+    </a>
 
 </body>
 </html>
