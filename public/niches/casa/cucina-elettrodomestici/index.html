@@ -166,6 +166,72 @@
             font-size: 0.85rem;
             font-weight: 500;
         }
+
+        /* Responsive Category Navigation */
+        @media (max-width: 768px) {
+            .category-nav-container {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                gap: 15px;
+                padding: 10px 5px;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
+                scrollbar-color: var(--primary-color) #f0f0f0;
+            }
+
+            .category-nav-container::-webkit-scrollbar {
+                height: 6px;
+            }
+
+            .category-nav-container::-webkit-scrollbar-track {
+                background: #f0f0f0;
+                border-radius: 3px;
+            }
+
+            .category-nav-container::-webkit-scrollbar-thumb {
+                background: var(--primary-color);
+                border-radius: 3px;
+            }
+
+            .category-nav-item {
+                flex: 0 0 auto;
+                width: 140px;
+                scroll-snap-align: start;
+            }
+
+            .category-card {
+                padding: 20px 15px;
+                margin-bottom: 0;
+                min-height: 160px;
+            }
+
+            .category-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                margin-bottom: 12px;
+            }
+
+            .category-title {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+
+            .category-description,
+            .category-products {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .category-nav-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+        }
     </style>
     <style>
     .footer-effects {
@@ -352,8 +418,8 @@
             <h2 class="fw-bold mb-3">Cosa stai cercando?</h2>
             <p class="text-muted">Naviga tra le categorie per trovare il prodotto perfetto per la tua cucina</p>
         </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
+        <div class="category-nav-container">
+            <div class="category-nav-item">
                 <a href="#macchine-pasta" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -369,7 +435,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#frullatori" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -385,7 +451,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#sbattitori" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -401,7 +467,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#bilance" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -417,7 +483,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#coltelli" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -433,7 +499,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#taglieri" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -449,7 +515,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#caffe" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -465,7 +531,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#robot" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -481,7 +547,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#accessori" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -497,7 +563,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#tostapane" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -513,7 +579,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#padelle" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -529,7 +595,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#timer" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -545,7 +611,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#spezie" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -561,7 +627,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#coperchi" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
@@ -577,7 +643,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="category-nav-item">
                 <a href="#friggitrici" class="text-decoration-none">
                     <div class="category-card text-center">
                         <div class="category-icon">
